@@ -7,5 +7,7 @@
     copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>worldreservesystem.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Worldreservesystem" disposableProviderFactory="true" ecorePackage="worldreservesystem.ecore#/"/>
+  <genPackages prefix="Worldreservesystem" disposableProviderFactory="true" ecorePackage="worldreservesystem.ecore#/">
+    <genClasses ecoreClass="worldreservesystem.ecore#//WRS"/>
+  </genPackages>
 </genmodel:GenModel>
