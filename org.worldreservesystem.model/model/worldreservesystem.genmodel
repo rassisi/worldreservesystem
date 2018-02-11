@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/worldreservesystem/src-gen" creationIcons="false"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/worldreservesystem/src-gen" creationIcons="false"
     editDirectory="/worldreservesystem.edit/src-gen" editorDirectory="/worldreservesystem.editor/src-gen"
     modelPluginID="worldreservesystem" modelName="Worldreservesystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
@@ -8,6 +9,82 @@
   <foreignModel>worldreservesystem.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Worldreservesystem" disposableProviderFactory="true" ecorePackage="worldreservesystem.ecore#/">
-    <genClasses ecoreClass="worldreservesystem.ecore#//WRS"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="worldreservesystem.ecore#//AssetType">
+      <genEnumLiterals ecoreEnumLiteral="worldreservesystem.ecore#//AssetType/GOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="worldreservesystem.ecore#//AssetType/SILVER"/>
+      <genEnumLiterals ecoreEnumLiteral="worldreservesystem.ecore#//AssetType/CRYPTO"/>
+      <genEnumLiterals ecoreEnumLiteral="worldreservesystem.ecore#//AssetType/UDOLLAR"/>
+      <genEnumLiterals ecoreEnumLiteral="worldreservesystem.ecore#//AssetType/MATERIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="worldreservesystem.ecore#//AssetType/INTELLECTUAL_PROPERTY"/>
+    </genEnums>
+    <genClasses ecoreClass="worldreservesystem.ecore#//WorldReserveSystem">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldReserveSystem/transfervaults"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldReserveSystem/mainvault"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldReserveSystem/identities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldReserveSystem/supplycontrol"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldReserveSystem/wallets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldReserveSystem/registeredasstets"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//MainVault"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//TransferVault"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//TransferVaults">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//TransferVaults/children"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Genesis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Genesis/mainvault"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Asset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute worldreservesystem.ecore#//Asset/assetType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Asset/materials"/>
+      <genOperations ecoreOperation="worldreservesystem.ecore#//Asset/register"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//WorldEconomy">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//WorldEconomy/nationaleconomies"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//NationalEconomies">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//NationalEconomies/children"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Nation">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Nation/fiatcurrency"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//FiatCurrency"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Accountants">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Accountants/children"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Accountant"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Identity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute worldreservesystem.ecore#//Identity/UUID"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Material">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Material/belongsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Individual"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//LegalEntity"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//NewEClass17"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Identities">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Identities/children"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Wallet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute worldreservesystem.ecore#//Wallet/publicKey"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Wallet/belongsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//SupplyControl">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//SupplyControl/genesis"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Wallets">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Wallets/children"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//Transaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Transaction/assets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Transaction/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Transaction/to"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//RegisteredAsstets">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//RegisteredAsstets/children"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//AbstractVault">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//AbstractVault/assets"/>
+    </genClasses>
+    <genClasses ecoreClass="worldreservesystem.ecore#//TransactionCollection"/>
   </genPackages>
 </genmodel:GenModel>
