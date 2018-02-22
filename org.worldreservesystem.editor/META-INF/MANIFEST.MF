@@ -8,8 +8,7 @@ Bundle-Activator: org.worldreservesystem.presentation.WorldreservesystemEditorPl
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.worldreservesystem.presentation,
- worldreservesystem.presentation
+Export-Package: org.worldreservesystem.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.worldreservesystem.edit;visibility:=reexport,

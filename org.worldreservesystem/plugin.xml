@@ -11,7 +11,7 @@
       <!-- @generated worldreservesystem -->
       <package
             uri="http://org.worldreservesystem"
-            class="worldreservesystem.WorldreservesystemPackage"/>
+            class="org.worldreservesystem.WorldreservesystemPackage"/>
    </extension>
 
 </plugin>

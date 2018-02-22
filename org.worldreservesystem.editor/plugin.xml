@@ -13,9 +13,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="worldreservesystem.presentation.WorldreservesystemModelWizardID"
+            id="org.worldreservesystem.presentation.WorldreservesystemModelWizardID"
             name="%_UI_WorldreservesystemModelWizard_label"
-            class="worldreservesystem.presentation.WorldreservesystemModelWizard"
+            class="org.worldreservesystem.presentation.WorldreservesystemModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/WorldreservesystemModelFile.gif">
          <description>%_UI_WorldreservesystemModelWizard_description</description>
@@ -26,12 +26,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated worldreservesystem -->
       <editor
-            id="worldreservesystem.presentation.WorldreservesystemEditorID"
+            id="org.worldreservesystem.presentation.WorldreservesystemEditorID"
             name="%_UI_WorldreservesystemEditor_label"
             icon="icons/full/obj16/WorldreservesystemModelFile.gif"
             extensions="worldreservesystem"
-            class="worldreservesystem.presentation.WorldreservesystemEditor"
-            contributorClass="worldreservesystem.presentation.WorldreservesystemActionBarContributor">
+            class="org.worldreservesystem.presentation.WorldreservesystemEditor"
+            contributorClass="org.worldreservesystem.presentation.WorldreservesystemActionBarContributor">
       </editor>
    </extension>
 
