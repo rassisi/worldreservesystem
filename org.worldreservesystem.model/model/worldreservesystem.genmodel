@@ -5,11 +5,14 @@
     creationIcons="false" editDirectory="/org.worldreservesystem.edit/src-gen" editorDirectory="/org.worldreservesystem.editor/src-gen"
     modelPluginID="worldreservesystem" modelName="Worldreservesystem" editPluginClass="org.worldreservesystem.provider.WorldreservesystemEditPlugin"
     editorPluginClass="org.worldreservesystem.presentation.WorldreservesystemEditorPlugin"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
-    testSuiteClass="org.worldreservesystem.tests.WorldreservesystemAllTests" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" editPluginID="org.worldreservesystem.edit"
-    editorPluginID="org.worldreservesystem.editor" operationReflection="true" importOrganizing="true">
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" codeFormatting="true" testSuiteClass="org.worldreservesystem.tests.WorldreservesystemAllTests"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="8.0"
+    copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
+    editPluginID="org.worldreservesystem.edit" editorPluginID="org.worldreservesystem.editor"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>worldreservesystem.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Worldreservesystem" disposableProviderFactory="true" ecorePackage="worldreservesystem.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="worldreservesystem.ecore#//AssetType">
