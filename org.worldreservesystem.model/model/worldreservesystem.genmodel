@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/worldreservesystem/src-gen" creationIcons="false"
-    editDirectory="/worldreservesystem.edit/src-gen" editorDirectory="/worldreservesystem.editor/src-gen"
-    modelPluginID="worldreservesystem" modelName="Worldreservesystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    copyrightText="(c) 2018 World Resource Systems, Ramin Assisi" modelDirectory="/org.worldreservesystem/src-gen"
+    creationIcons="false" editDirectory="/org.worldreservesystem.edit/src-gen" editorDirectory="/org.worldreservesystem.editor/src-gen"
+    modelPluginID="worldreservesystem" modelName="Worldreservesystem" editPluginClass="org.worldreservesystem.provider.WorldreservesystemEditPlugin"
+    editorPluginClass="org.worldreservesystem.presentation.WorldreservesystemEditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    testSuiteClass="org.worldreservesystem.tests.WorldreservesystemAllTests" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" editPluginID="org.worldreservesystem.edit"
+    editorPluginID="org.worldreservesystem.editor" operationReflection="true" importOrganizing="true">
   <foreignModel>worldreservesystem.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Worldreservesystem" disposableProviderFactory="true" ecorePackage="worldreservesystem.ecore#/">

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ (c) 2018 World Resource Systems, Ramin Assisi
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated worldreservesystem -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="worldreservesystem.presentation.WorldreservesystemModelWizardID"
+            name="%_UI_WorldreservesystemModelWizard_label"
+            class="worldreservesystem.presentation.WorldreservesystemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WorldreservesystemModelFile.gif">
+         <description>%_UI_WorldreservesystemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated worldreservesystem -->
+      <editor
+            id="worldreservesystem.presentation.WorldreservesystemEditorID"
+            name="%_UI_WorldreservesystemEditor_label"
+            icon="icons/full/obj16/WorldreservesystemModelFile.gif"
+            extensions="worldreservesystem"
+            class="worldreservesystem.presentation.WorldreservesystemEditor"
+            contributorClass="worldreservesystem.presentation.WorldreservesystemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
