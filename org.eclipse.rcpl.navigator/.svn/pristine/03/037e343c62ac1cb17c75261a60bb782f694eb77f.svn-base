@@ -1,0 +1,316 @@
+/*******************************************************************************
+ * Copyright (c) 2003 - 2014 Ramin Assisi and others.
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Common Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/cpl-v10.html
+ * 
+ * Contributors:
+ *     Ramin Assisi - initial implementation
+ *******************************************************************************/
+
+package org.eclipse.rcpl.navigator.tree.parts;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import javafx.event.EventHandler;
+import javafx.scene.control.Cell;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.TransferMode;
+
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.edit.command.DragAndDropCommand;
+import org.eclipse.emf.edit.command.DragAndDropFeedback;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.fx.emf.edit.ui.AdapterFactoryCellFactory;
+import org.eclipse.fx.emf.edit.ui.AdapterFactoryCellFactory.ICellCreationListener;
+import org.eclipse.fx.emf.edit.ui.CellUtil;
+import org.eclipse.fx.emf.edit.ui.dnd.EditingDomainCellDropAdapter.IDnDFeedbackHandler;
+import org.eclipse.fx.emf.edit.ui.dnd.LocalTransfer;
+import org.eclipse.fxrcplight.model.cdo.client.JOSession;
+import org.eclipse.fxrcplight.upload.JOUploadClient;
+import org.eclipse.rcpl.model_2_0_0.rcpl.Folder;
+import org.eclipse.rcpl.model_2_0_0.rcpl.RcplFactory;
+import org.eclipse.rcpl.model_2_0_0.rcpl.Resource;
+
+/**
+ * Allows to drop items into viewers backed by an
+ * {@link AdapterFactoryCellFactory} using a {@link LocalTransfer}.
+ */
+public class EEmfCellDropAdapter implements ICellCreationListener {
+
+	// /**
+	// * Handles the feedback to Drag &amp; Drop events by styling or otherwise
+	// * modifying the affected {@link Cell}
+	// */
+	// public interface IDnDFeedbackHandler {
+	//
+	// /**
+	// * insert before feedback
+	// *
+	// * @param cell
+	// * the cell
+	// */
+	// void onFeedbackInsertBefore(Cell<?> cell);
+	//
+	// /**
+	// * insert after feedback
+	// *
+	// * @param cell
+	// * the cell
+	// */
+	// void onFeedbackInsertAfter(Cell<?> cell);
+	//
+	// /**
+	// * select feedback
+	// *
+	// * @param cell
+	// * the cell
+	// */
+	// void onFeedbackSelect(Cell<?> cell);
+	//
+	// /**
+	// * no feedback
+	// *
+	// * @param cell
+	// * the cell
+	// */
+	// void onFeedbackNone(Cell<?> cell);
+	//
+	// }
+
+	final EditingDomain editingDomain;
+	Command dndCommand;
+
+	IDnDFeedbackHandler feedbackHandler = new DefaultFeedbackHandler();
+
+	/**
+	 * Create a new drop adapter
+	 * 
+	 * @param editingDomain
+	 *            the editing domain
+	 */
+	public EEmfCellDropAdapter(EditingDomain editingDomain) {
+		this.editingDomain = editingDomain;
+	}
+
+	/**
+	 * @return the feedback
+	 */
+	public IDnDFeedbackHandler getFeedbackHandler() {
+		return this.feedbackHandler;
+	}
+
+	/**
+	 * Setting a new feedback handler
+	 * 
+	 * @param feedbackHandler
+	 *            the handler
+	 */
+	public void setFeedbackHandler(IDnDFeedbackHandler feedbackHandler) {
+		if (feedbackHandler == null)
+			throw new IllegalArgumentException("The feeback handler cannot be null"); //$NON-NLS-1$
+
+		this.feedbackHandler = feedbackHandler;
+	}
+
+	private void handleDragOver(final Cell<?> cell, DragEvent event) {
+
+		Object item = cell.getItem();
+		Cell<?> node = CellUtil.getRowNode(cell);
+
+		double y = event.getY();
+		double height = cell.getLayoutBounds().getHeight();
+
+		float position = (float) (y / height);
+
+		Object object = LocalTransfer.INSTANCE.getObject();
+
+		List<File> files = event.getDragboard().getFiles();
+
+		if (object != null && files.isEmpty()) {
+
+			System.out.println("cell.handleDragOver# " + object.getClass().getName());
+
+			Command command = null;
+
+			try {
+
+				command = DragAndDropCommand.create(EEmfCellDropAdapter.this.editingDomain, item, position,
+						DragAndDropFeedback.DROP_MOVE | DragAndDropFeedback.DROP_LINK, DragAndDropFeedback.DROP_MOVE,
+						(Collection<?>) object);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				return;
+			}
+
+			if (command.canExecute()) {
+				EEmfCellDropAdapter.this.dndCommand = command;
+
+				if (command instanceof DragAndDropFeedback) {
+					DragAndDropFeedback dndFeedback = (DragAndDropFeedback) command;
+					int feedback = dndFeedback.getFeedback();
+
+					if ((feedback & DragAndDropFeedback.FEEDBACK_INSERT_BEFORE) != 0)
+						EEmfCellDropAdapter.this.feedbackHandler.onFeedbackInsertBefore(node);
+					else if ((feedback & DragAndDropFeedback.FEEDBACK_INSERT_AFTER) != 0)
+						EEmfCellDropAdapter.this.feedbackHandler.onFeedbackInsertAfter(node);
+					else if ((feedback & DragAndDropFeedback.FEEDBACK_SELECT) != 0)
+						EEmfCellDropAdapter.this.feedbackHandler.onFeedbackSelect(node);
+					else
+						EEmfCellDropAdapter.this.feedbackHandler.onFeedbackNone(node);
+
+					if (System.getProperties().getProperty("os.name").toLowerCase().contains("mac")) { //$NON-NLS-1$ //$NON-NLS-2$
+						event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
+					} else {
+						ArrayList<TransferMode> modes = new ArrayList<>();
+
+						if ((feedback & DragAndDropFeedback.DROP_COPY) != 0)
+							modes.add(TransferMode.COPY);
+						if ((feedback & DragAndDropFeedback.DROP_LINK) != 0)
+							modes.add(TransferMode.LINK);
+						if ((feedback & DragAndDropFeedback.DROP_MOVE) != 0)
+							modes.add(TransferMode.MOVE);
+
+						event.acceptTransferModes(modes.toArray(new TransferMode[modes.size()]));
+					}
+				}
+			}
+
+		} else {
+
+			if (!files.isEmpty()) {
+				event.acceptTransferModes(TransferMode.COPY);
+
+				EEmfCellDropAdapter.this.feedbackHandler.onFeedbackNone(node);
+				return;
+			}
+			EEmfCellDropAdapter.this.dndCommand = null;
+			EEmfCellDropAdapter.this.feedbackHandler.onFeedbackNone(node);
+		}
+
+	}
+
+	@Override
+	public void cellCreated(final Cell<?> cell) {
+
+		cell.setOnDragOver(new EventHandler<DragEvent>() {
+
+			@Override
+			public void handle(final DragEvent event) {
+				synchronized (EEmfCellDropAdapter.this) {
+					handleDragOver(cell, event);
+				}
+			}
+
+		});
+
+		cell.setOnDragExited(new EventHandler<DragEvent>() {
+
+			@Override
+			public void handle(DragEvent event) {
+				EEmfCellDropAdapter.this.feedbackHandler.onFeedbackNone(CellUtil.getRowNode(cell));
+			}
+
+		});
+
+		cell.setOnDragDropped(new EventHandler<DragEvent>() {
+			@Override
+			public void handle(DragEvent event) {
+				if ("demo".equals(JOSession.getDefault().userId)) {
+					return;
+				}
+				if (EEmfCellDropAdapter.this.dndCommand != null) {
+					EEmfCellDropAdapter.this.editingDomain.getCommandStack()
+							.execute(EEmfCellDropAdapter.this.dndCommand);
+					JOSession.getDefault().commit();
+				} else {
+					List<File> files = event.getDragboard().getFiles();
+					if (!files.isEmpty()) {
+						File file = files.get(0);
+						Object item = cell.getItem();
+
+						if (item instanceof Folder) {
+							Folder folder = (Folder) item;
+							String path = getPath(folder);
+							Resource doc = RcplFactory.eINSTANCE.createResource();
+							doc.setId(path + file.getName());
+							doc.setUri(file.getAbsolutePath());
+							folder.getResources().add(doc);
+							try {
+								new JOUploadClient().upload(JOSession.getDefault().userId, path, file);
+								JOSession.getDefault().commit();
+							} catch (MalformedURLException | FileNotFoundException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+
+						}
+
+						// Cell<?> node = CellUtil.getRowNode(cell);
+						// System. out.println("File "
+						// + files.get(0).getAbsolutePath() + " dropped!");
+
+						return;
+					}
+				}
+
+				event.setDropCompleted(true);
+				event.consume();
+			}
+		});
+	}
+
+	private String getPath(Folder folder) {
+		List<String> pathList = new ArrayList<String>();
+
+		while (folder != null) {
+			pathList.add(folder.getId());
+			if (folder.eContainer() instanceof Folder) {
+				folder = (Folder) folder.eContainer();
+			} else {
+				folder = null;
+			}
+		}
+
+		StringBuilder sb = new StringBuilder();
+		for (int i = pathList.size() - 1; i >= 0; i--) {
+			sb.append(pathList.get(i) + "/");
+		}
+		return sb.toString();
+	}
+
+	/**
+	 * This default implementation of {@link IDnDFeedbackHandler} adds a red
+	 * line where the dragged {@link Cell} can be dropped.
+	 */
+	public static class DefaultFeedbackHandler implements IDnDFeedbackHandler {
+
+		@Override
+		public void onFeedbackInsertBefore(Cell<?> cell) {
+			cell.setStyle("-fx-border-color: red transparent transparent transparent;"); //$NON-NLS-1$
+		}
+
+		@Override
+		public void onFeedbackInsertAfter(Cell<?> cell) {
+			cell.setStyle("-fx-border-color: transparent transparent red transparent;"); //$NON-NLS-1$
+		}
+
+		@Override
+		public void onFeedbackSelect(Cell<?> cell) {
+			cell.setStyle("-fx-border-color: transparent;"); //$NON-NLS-1$
+		}
+
+		@Override
+		public void onFeedbackNone(Cell<?> cell) {
+			cell.setStyle("-fx-border-color: transparent;"); //$NON-NLS-1$
+		}
+
+	}
+
+}

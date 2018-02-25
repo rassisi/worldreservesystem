@@ -1,0 +1,23 @@
+package org.eclipse.rcpl;
+
+public enum RcplToolType {
+
+	BUTTON,
+	MENUBUTTON,
+	COMBO,
+	LISTBOX,
+	CHECKBOX,
+	RADIO,
+	PUSHBUTTON,
+	SPINNER,
+	TEXTFIELD,
+	PASSWORD,
+	PASSWORD_EDITOR,
+	LABEL,
+	COLORTOOL,
+	ERRORLABEL,
+	LIST,
+	MENU,
+	MENUDIALOG;
+	
+}

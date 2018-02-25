@@ -1,0 +1,9 @@
+package org.eclipse.rcpl.navigator;
+
+import org.eclipse.fxrcplight.IRcplUic;
+
+public interface ITreePartControler extends IRcplUic {
+
+	ITreePart getTreePart();
+
+}

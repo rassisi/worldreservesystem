@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdoServer>
+
+  <!-- ============================================================== -->
+  <!-- See http://wiki.eclipse.org/CDO/Server_Configuration_Reference -->
+  <!-- ============================================================== -->
+
+  <acceptor type="tcp" listenAddr="0.0.0.0" port="2036"/>
+
+  <!-- Examples:
+  		<acceptor type="ssl" listenAddr="0.0.0.0" port="2036"/>
+	  	<acceptor type="http"/>
+  -->
+
+  <repository name="joffice_user">
+
+    <property name="overrideUUID" value=""/>
+    <property name="supportingAudits" value="true"/>
+    <property name="supportingBranches" value="true"/>
+    
+    <property name="ensureReferentialIntegrity" value="false"/>
+    
+    <property name="allowInterruptRunningQueries" value="true"/>
+    
+    
+    <property name="idGenerationLocation" value="STORE"/> <!-- Possible values: STORE | CLIENT -->
+    
+    <property name="serializeCommits" value="false"/>
+    
+    <property name="optimisticLockingTimeout" value="10000"/>
+
+
+    <property name="supportingEcore" value="true"/>
+
+
+
+
+
+
+
+	<securityManager type="default" description="/security:annotation:home(/home)" />
+
+
+    <!-- Example http://bugs.eclipse.org/302775
+			<authenticator type="file" description="_database/repo1.users"/>
+    -->
+
+    <!-- Example http://bugs.eclipse.org/345431
+			<initialPackage nsURI="http://www.eclipse.org/emf/CDO/examples/company/1.0.0"/>
+    -->
+
+    <store type="db">
+    
+      <property name="connectionKeepAlivePeriod" value="60"/>
+      <!-- Maximum number of store accessors (JDBC connections) to keep in the reader pool. The default value is 15.  -->
+      <property name="readerPoolCapacity" value="20"/>
+      <!-- Maximum number of store accessors (JDBC connections) to keep in the writer pool. The default value is 15.  -->
+      <property name="writerPoolCapacity" value="20"/>
+
+      <mappingStrategy type="horizontal"> <!-- callout -->
+        <property name="qualifiedNames" value="true"/>
+      </mappingStrategy>
+
+	  <dbAdapter name="oracle"/>
+			<dataSource class="oracle.jdbc.pool.OracleDataSource"
+				driverType="thin"
+				serverName="localhost"
+				portNumber="1521"
+				databaseName="xe"
+				user="joffice_user"
+				password="joffice"/>
+				
+    </store>
+
+  </repository>
+
+
+
+</cdoServer>

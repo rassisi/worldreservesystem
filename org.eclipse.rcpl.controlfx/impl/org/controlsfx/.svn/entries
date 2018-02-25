@@ -1,0 +1,37 @@
+10
+
+dir
+1940
+https://85.25.100.163/svn/joffice_migration_1/trunk/com.joffice.controlfx/impl/org/controlsfx
+https://85.25.100.163/svn/joffice_migration_1
+
+
+
+2013-12-24T15:41:37.590616Z
+933
+ramin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3a6ee63-3f4d-044b-95c6-077cc070cb93
+
+behavior
+dir
+
+dialog
+dir
+
+skin
+dir
+

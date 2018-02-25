@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout
+END
+OptimizableContentPane.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/OptimizableContentPane.java
+END
+GridPane.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/GridPane.java
+END
+ScalableContentPane.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/ScalableContentPane.java
+END
+DefaultOptimizationRule.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/DefaultOptimizationRule.java
+END
+OptimizationRule.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/OptimizationRule.java
+END
+GenericLayoutConstraints.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/GenericLayoutConstraints.java
+END
+VBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/VBox.java
+END
+HBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/layout/HBox.java
+END

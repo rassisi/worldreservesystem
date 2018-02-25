@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior
+END
+MagnifierBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/MagnifierBehavior.java
+END
+AgendaBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/AgendaBehavior.java
+END
+CalendarPickerBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/CalendarPickerBehavior.java
+END
+GridViewBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/GridViewBehavior.java
+END
+ListSpinnerBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/ListSpinnerBehavior.java
+END
+CalendarTimePickerBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/CalendarTimePickerBehavior.java
+END
+GridCellBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/GridCellBehavior.java
+END
+LocalDatePickerBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/LocalDatePickerBehavior.java
+END
+MatrixPanelBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/MatrixPanelBehavior.java
+END
+CalendarTimeTextFieldBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/CalendarTimeTextFieldBehavior.java
+END
+BigDecimalFieldBehaviour.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/BigDecimalFieldBehaviour.java
+END
+CalendarTextFieldBehavior.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/internal/scene/control/behavior/CalendarTextFieldBehavior.java
+END

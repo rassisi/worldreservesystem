@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control
+END
+BreadcrumbBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/BreadcrumbBar.java
+END
+CalendarTextField.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/CalendarTextField.java
+END
+CalendarPicker.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/CalendarPicker.java
+END
+Agenda.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/Agenda.java
+END
+BigDecimalField.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/BigDecimalField.java
+END
+LocalDatePicker.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/LocalDatePicker.java
+END
+NumberSpinnerThommis.css
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/NumberSpinnerThommis.css
+END
+ToggleGroupValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/ToggleGroupValue.java
+END
+NumberSpinnerSquared.css
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/NumberSpinnerSquared.css
+END
+ListView.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/ListView.java
+END
+BigDecimalLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/BigDecimalLabel.java
+END
+MiniIconButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/MiniIconButton.java
+END
+CalendarTimeTextField.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/CalendarTimeTextField.java
+END
+ListSpinnerIntegerList.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/ListSpinnerIntegerList.java
+END
+SlideLockBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/SlideLockBuilder.java
+END
+slidelock.css
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/slidelock.css
+END
+Magnifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/Magnifier.java
+END
+NumberSpinnerRounded.css
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/NumberSpinnerRounded.css
+END
+Magnifier.css
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/Magnifier.css
+END
+IntegerField.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/IntegerField.java
+END
+SlideLock.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/SlideLock.java
+END
+ListSpinner.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/ListSpinner.java
+END
+CalendarTimePicker.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/CalendarTimePicker.java
+END
+ListSpinnerBigIntegerList.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/ListSpinnerBigIntegerList.java
+END
+BreadcrumbItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/joffice_migration_1/!svn/ver/3261/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/BreadcrumbItem.java
+END
+BigDecimalFieldBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/BigDecimalFieldBuilder.java
+END

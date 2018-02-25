@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor
+END
+NumericField.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/NumericField.java
+END
+AbstractObjectField.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/AbstractObjectField.java
+END
+DefaultPropertyEditorFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/DefaultPropertyEditorFactory.java
+END
+Editors.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/Editors.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/package-info.java
+END
+AbstractPropertyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/AbstractPropertyEditor.java
+END
+PropertyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/org/controlsfx/property/editor/PropertyEditor.java
+END

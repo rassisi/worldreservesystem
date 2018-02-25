@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window
+END
+Window.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/joffice_migration_1/!svn/ver/3345/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/Window.java
+END
+icons.svg
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/icons.svg
+END
+default.css
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/default.css
+END
+WindowIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/WindowIcon.java
+END
+SelectableNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/SelectableNode.java
+END
+MinimizeIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/MinimizeIcon.java
+END
+Clipboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/Clipboard.java
+END
+RotateIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/RotateIcon.java
+END
+CloseIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/src/jfxtras/labs/scene/control/window/CloseIcon.java
+END

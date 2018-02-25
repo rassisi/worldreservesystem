@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/joffice_migration_1/!svn/ver/1518/trunk/com.joffice.controlfx
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/joffice_migration_1/!svn/ver/771/trunk/com.joffice.controlfx/build.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/joffice_migration_1/!svn/ver/3284/trunk/com.joffice.controlfx/.project
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/joffice_migration_1/!svn/ver/3341/trunk/com.joffice.controlfx/.classpath
+END
