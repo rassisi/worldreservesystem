@@ -5,11 +5,6 @@
     xmlns:rcpl="http://rcpl/1.0">
   <allPlugins>
     <children
-        name="Contacts"
-        id="USE_CASE_CONTACTS"
-        leaf="true"
-        className="org.eclipse.rcpl.ui.parts.contacts.EContactsUseCase"/>
-    <children
         name="Configure Tools"
         id="USE_CASE_TOOLS"
         leaf="true"
@@ -18,41 +13,18 @@
         name="EMF Tree Browser"
         id="USE_CASE_EMF_TREE"
         leaf="true"/>
-    <children
-        name="IT Architecture"
-        id="itTreePart"
-        leaf="true"/>
   </allPlugins>
   <allPerspectives>
     <children
-        name="WORD"
-        id="WORD">
+        name="WRS Network"
+        id="WRS_NETWORK"
+        image="network">
       <sideToolBar
           leaf="true"
-          toolGroups="//@allTools/@toolgroupChildren.0 //@allTools/@toolgroupChildren.3 //@allTools/@toolgroupChildren.4 //@allTools/@toolgroupChildren.1 //@allTools/@toolgroupChildren.5 //@allTools/@toolgroupChildren.6 //@allTools/@toolgroupChildren.7 //@allTools/@toolgroupChildren.10 //@allTools/@toolgroupChildren.8 //@allTools/@toolgroupChildren.9 //@allTools/@toolgroupChildren.11 //@allTools/@toolgroupChildren.12 //@allTools/@toolgroupChildren.13"/>
+          toolGroups="//@allTools/@toolgroupChildren.0"/>
       <topToolBar
           leaf="true"
           toolGroups="//@allTools/@toolgroupChildren.16 //@allTools/@toolgroupChildren.21 //@allTools/@toolgroupChildren.22"/>
-      <quickTools
-          leaf="true"/>
-    </children>
-    <children
-        name="SPREADSHEET"
-        id="SPREADSHEET">
-      <sideToolBar
-          leaf="true"/>
-      <topToolBar
-          leaf="true"/>
-      <quickTools
-          leaf="true"/>
-    </children>
-    <children
-        name="PRESENTATION"
-        id="PRESENTATION">
-      <sideToolBar
-          leaf="true"/>
-      <topToolBar
-          leaf="true"/>
       <quickTools
           leaf="true"/>
     </children>
@@ -3122,155 +3094,12 @@
   <allFavorites/>
   <allResources>
     <children
-        name="Documents"
-        id="documents">
+        name="Network"
+        id="NETWORK">
       <folders
-          name="Samples"
-          id="samples">
-        <folders
-            name="Word Documents"
-            id=""
-            image="">
-          <resources
-              name="Document with 2 columns"
-              id=""
-              image="word"
-              leaf="true"
-              uri="example_bach.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Functional Resume"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="writer_functional_resume.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Calendar 2009"
-              id=""
-              image="word"
-              leaf="true"
-              uri="2009 New Year Calendar4.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Functional Resume"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="writer_functional_resume.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Invoice"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="elegant_invoice.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Long Document"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="ecma_376_fundamentals_4.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Document 10 pages"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="ecma_376_fundamentals_10_pages.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Document 1 pages 1"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="ecma_376_fundamentals_1_pages_1.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Document 1 pages 2"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="ecma_376_fundamentals_1_pages_2.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="Document 10 pages"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="ecma_376_fundamentals_1_pages_1.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="test1"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="test1.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="test2"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="test2.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-          <resources
-              name="test3"
-              id=""
-              image="word"
-              toolTip=""
-              leaf="true"
-              uri="test3.docx"
-              template="true"
-              mainPerspective="//@allPerspectives/@children.0"/>
-        </folders>
-        <folders
-            name="Spreadsheet Documents"/>
-        <folders
-            name="Presentation Documents"/>
-      </folders>
-      <folders
-          name="Templates"
-          id="templates"/>
+          name="Overview"
+          id="OVERVIEW"/>
     </children>
-    <children
-        name="Downloads"
-        id="downloads"/>
-    <children
-        name="Desktop"
-        id="desktop"/>
-    <children
-        name="Pictures"
-        id="pictures"/>
-    <children
-        name="Videos"
-        id="videos"/>
-    <children
-        name="Music"
-        id="music"/>
   </allResources>
   <allPersons>
     <children>
