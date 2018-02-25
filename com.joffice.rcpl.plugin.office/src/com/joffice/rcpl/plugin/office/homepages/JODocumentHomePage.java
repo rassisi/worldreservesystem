@@ -8,8 +8,6 @@ import org.eclipse.rcpl.IRcplUic;
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.homepages.JOAbstractHomePage;
 
-import com.joffice.rcpl.plugin.office.internal.impl.JODocumentProvider;
-
 import javafx.scene.Node;
 import javafx.scene.control.Tab;
 import javafx.scene.layout.Pane;
@@ -25,8 +23,8 @@ public class JODocumentHomePage extends JOAbstractHomePage {
 			HashMap<String, String> wordReplacements, Pane controlPane) {
 		super(uic, title, image, controlPane);
 		IEditor f = Rcpl.getFactory().createEditor(new Tab(), false);
-		document = new JODocumentProvider().createTemplateDocument(documentTemplate, wordReplacements, false);
-		document.setReadOnly();
+//		document = new JODocumentProvider().createTemplateDocument(documentTemplate, wordReplacements, false);
+//		document.setReadOnly();
 		f.setDocument(document);
 		contentPane.getChildren().add(f.getMainPane());
 		document.setEditorFigure(f);

@@ -2,11 +2,8 @@ package com.joffice.rcpl.plugin.office.application;
 
 import java.io.File;
 import java.net.URL;
-import java.util.HashMap;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.rcpl.DelayedExecution;
-import org.eclipse.rcpl.EnServiceId;
 import org.eclipse.rcpl.IDocument;
 import org.eclipse.rcpl.IEditor;
 import org.eclipse.rcpl.IHomePage;
@@ -24,15 +21,6 @@ import org.eclipse.rcpl.util.JOUtil2;
 
 import com.joffice.rcpl.plugin.office.homepages.JOOfficeNewHomePage;
 import com.joffice.rcpl.plugin.office.homepages.JOOfficeSamplesHomePage;
-import com.joffice.rcpl.plugin.office.internal.JOAbstractDocument;
-import com.joffice.rcpl.plugin.office.internal.impl.JODocumentProvider;
-import com.joffice.rcpl.plugin.office.internal.services.JOColorService;
-import com.joffice.rcpl.plugin.office.internal.services.JOFontService;
-import com.joffice.rcpl.plugin.office.internal.services.JOInsertService;
-import com.joffice.rcpl.plugin.office.internal.services.JOLayoutService;
-import com.joffice.rcpl.plugin.office.internal.services.JOParagraphService;
-import com.joffice.rcpl.plugin.office.internal.services.JOPictureService;
-import com.joffice.rcpl.plugin.office.internal.services.JOTableService;
 
 import javafx.event.ActionEvent;
 import javafx.geometry.Orientation;
@@ -69,41 +57,13 @@ public class JOUic extends RcplUic implements IOfficeUIC {
 	@Override
 	public void actionAddPresentationTab() {
 
-		final Tab newTab = createNewTab("    New Presentation");
-		final IEditor f = Rcpl.getFactory().createEditor(newTab, false);
-		final IDocument document = new JODocumentProvider().createTemplateDocument("blank_presentation.pptx",
-				(HashMap<String, String>) null, false);
-		f.setDocument(document);
-		document.getRootObject(0).setDirtyLayout(true);
-		f.layoutDocument();
-		newTab.setId("presentationTab");
-		newTab.setClosable(true);
-		tabPane.getSelectionModel().select(newTab);
-		setContent(f);
-		newTab.setUserData(f);
-		updatePerspective(newTab);
-		updateButtons(false);
-		getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(), false);
+
 
 	}
 
 	public void actionAddSpreadsheetTab() {
 		IDocument document = null;
-		final Tab newTab = createNewTab("    New Spreadsheet");
-		IEditor f = Rcpl.getFactory().createEditor(newTab, false);
-		document = new JODocumentProvider().createTemplateDocument("blank_workbook.xlsx",
-				(HashMap<String, String>) null, false);
-		f.setDocument(document);
-		document.getRootObjects().get(0).setDirtyLayout(true);
-		f.layoutDocument();
-		newTab.setId("spreadsheetTab");
-		newTab.setClosable(true);
-		tabPane.getSelectionModel().select(newTab);
-		setContent(f);
-		newTab.setUserData(f);
-		updatePerspective(newTab);
-		updateButtons(false);
-		getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(), false);
+
 	}
 
 	public void actionAddWordTab() {
@@ -261,38 +221,38 @@ public class JOUic extends RcplUic implements IOfficeUIC {
 	@Override
 	public void openDocument(File file) {
 
-		Rcpl.startProgress(0, false);
-
-		Tab tab = searchTab(file, null);
-		if (tab != null) {
-			showTab(tab);
-			return;
-		}
-
-		if (file.getName().endsWith(".docx")) {
-			actionPerspectiveWord();
-		} else if (file.getName().endsWith(".pptx")) {
-			actionPerspectivePresentation();
-		} else if (file.getName().endsWith(".xlsx")) {
-			actionPerspectiveSpreadsheet();
-		}
-
-		final Tab newTab = createNewTab(file.getName());
-		final IEditor f = Rcpl.getFactory().createEditor(newTab, false);
-		IDocument doc = JOAbstractDocument.load(file, false, null, false);
-
-		f.setDocument(doc);
-		setContent(f);
-		newTab.setId("wordTab");
-		newTab.setClosable(true);
-		newTab.setUserData(f);
-		internalTabPane.getSelectionModel().select(newTab);
-		editorArea.getChildren().clear();
-		editorArea.getChildren().add(f.getMainPane());
-		updatePerspective(newTab);
-		updateButtons(false);
-		getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(), false);
-		internalTabPane.getSelectionModel().select(newTab);
+//		Rcpl.startProgress(0, false);
+//
+//		Tab tab = searchTab(file, null);
+//		if (tab != null) {
+//			showTab(tab);
+//			return;
+//		}
+//
+//		if (file.getName().endsWith(".docx")) {
+//			actionPerspectiveWord();
+//		} else if (file.getName().endsWith(".pptx")) {
+//			actionPerspectivePresentation();
+//		} else if (file.getName().endsWith(".xlsx")) {
+//			actionPerspectiveSpreadsheet();
+//		}
+//
+//		final Tab newTab = createNewTab(file.getName());
+//		final IEditor f = Rcpl.getFactory().createEditor(newTab, false);
+//		IDocument doc = JOAbstractDocument.load(file, false, null, false);
+//
+//		f.setDocument(doc);
+//		setContent(f);
+//		newTab.setId("wordTab");
+//		newTab.setClosable(true);
+//		newTab.setUserData(f);
+//		internalTabPane.getSelectionModel().select(newTab);
+//		editorArea.getChildren().clear();
+//		editorArea.getChildren().add(f.getMainPane());
+//		updatePerspective(newTab);
+//		updateButtons(false);
+//		getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(), false);
+//		internalTabPane.getSelectionModel().select(newTab);
 
 	}
 
@@ -313,125 +273,124 @@ public class JOUic extends RcplUic implements IOfficeUIC {
 	@Override
 	public void openTemplate(final String docName, String tabName) {
 
-		boolean test = false;
-
-		if (test) {
-			System.out.println();
-			printMemory("vor load document     ");
-			IDocument doc = new JODocumentProvider().createTemplateDocument(docName, (HashMap<String, String>) null,
-					false);
-
-			final Tab newTab = new Tab(tabName);
-			editor = Rcpl.getFactory().createEditor(newTab, false);
-
-			Rcpl.startProgress(0.01, false);
-
-			newTab.setUserData(editor);
-
-			// createNewTab(newTab, tabName);
-			// newTab.setId("wordTab");
-
-			doLayoutDocument(editor, new IDocument[] { doc });
-			doCompleated(editor, newTab, tabName);
-
-			updateButtons(false);
-			getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(), false);
-			getTopToolBarControl().hideAll();
-
-			editor.showPageGroup(false);
-			closeEditor(editor);
-
-			doc.save();
-			doc.dispose();
-
-			printMemory("nach doc.dispose()    ");
-
-			return;
-		}
-
-		Rcpl.startProgress(0.001, false);
-
-		try
-
-		{
-			Tab tab = searchTab(tabName);
-			if (tab != null) {
-				showTab(tab);
-				return;
-			}
-
-			final IDocument[] document = new IDocument[1];
-			final String title = tabName != null ? tabName : docName;
-			final Tab newTab = new Tab(tabName);
-
-			new DelayedExecution(500) {
-
-				@Override
-				protected void execute() {
-					editor = Rcpl.getFactory().createEditor(newTab, false);
-
-					if (docName.endsWith(".docx")) {
-						actionPerspectiveWord();
-					} else if (docName.endsWith(".pptx")) {
-						actionPerspectivePresentation();
-					} else if (docName.endsWith(".xlsx")) {
-						actionPerspectiveSpreadsheet();
-					}
-
-					newTab.setUserData(editor);
-					createNewTab(newTab, title);
-					newTab.setId("wordTab");
-
-					new Thread() {
-						@Override
-						public void run() {
-							document[0] = new JODocumentProvider().createTemplateDocument(docName,
-									(HashMap<String, String>) null, false);
-							if (document[0] == null) {
-								Rcpl.showProgress(false);
-								showMessage("Error", "Document could not be opened.");
-							} else {
-								doLayoutDocument(editor, document);
-								doCompleated(editor, newTab, title);
-							}
-
-							updateButtons(false);
-							// getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(),
-							// false);
-							getTopToolBarControl().hideAll();
-
-						};
-					}.start();
-				}
-			};
-
-			return;
-		} catch (Throwable ex) {
-			RCPLModel.logError(ex);
-		}
+//		boolean test = false;
+//
+//		if (test) {
+//			System.out.println();
+//			printMemory("vor load document     ");
+//			IDocument doc = new JODocumentProvider().createTemplateDocument(docName, (HashMap<String, String>) null,
+//					false);
+//
+//			final Tab newTab = new Tab(tabName);
+//			editor = Rcpl.getFactory().createEditor(newTab, false);
+//
+//			Rcpl.startProgress(0.01, false);
+//
+//			newTab.setUserData(editor);
+//
+//			// createNewTab(newTab, tabName);
+//			// newTab.setId("wordTab");
+//
+//			doLayoutDocument(editor, new IDocument[] { doc });
+//			doCompleated(editor, newTab, tabName);
+//
+//			updateButtons(false);
+//			getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(), false);
+//			getTopToolBarControl().hideAll();
+//
+//			editor.showPageGroup(false);
+//			closeEditor(editor);
+//
+//			doc.save();
+//			doc.dispose();
+//
+//			printMemory("nach doc.dispose()    ");
+//			return;
+//		}
+//
+//		Rcpl.startProgress(0.001, false);
+//
+//		try
+//
+//		{
+//			Tab tab = searchTab(tabName);
+//			if (tab != null) {
+//				showTab(tab);
+//				return;
+//			}
+//
+//			final IDocument[] document = new IDocument[1];
+//			final String title = tabName != null ? tabName : docName;
+//			final Tab newTab = new Tab(tabName);
+//
+//			new DelayedExecution(500) {
+//
+//				@Override
+//				protected void execute() {
+//					editor = Rcpl.getFactory().createEditor(newTab, false);
+//
+//					if (docName.endsWith(".docx")) {
+//						actionPerspectiveWord();
+//					} else if (docName.endsWith(".pptx")) {
+//						actionPerspectivePresentation();
+//					} else if (docName.endsWith(".xlsx")) {
+//						actionPerspectiveSpreadsheet();
+//					}
+//
+//					newTab.setUserData(editor);
+//					createNewTab(newTab, title);
+//					newTab.setId("wordTab");
+//
+//					new Thread() {
+//						@Override
+//						public void run() {
+//							document[0] = new JODocumentProvider().createTemplateDocument(docName,
+//									(HashMap<String, String>) null, false);
+//							if (document[0] == null) {
+//								Rcpl.showProgress(false);
+//								showMessage("Error", "Document could not be opened.");
+//							} else {
+//								doLayoutDocument(editor, document);
+//								doCompleated(editor, newTab, title);
+//							}
+//
+//							updateButtons(false);
+//							// getSideToolBarControl().showPerspective(Rcpl.UIC.getPerspective(),
+//							// false);
+//							getTopToolBarControl().hideAll();
+//
+//						};
+//					}.start();
+//				}
+//			};
+//
+//			return;
+//		} catch (Throwable ex) {
+//			RCPLModel.logError(ex);
+//		}
 
 	}
 
 	private void doLayoutDocument(final IEditor editor, final IDocument[] document) {
-		document[0].setEditorFigure(editor);
-		final JOLayoutService s = new JOLayoutService();
-		s.setEditor(editor);
-		do {
-			new WaitThread(editor) {
-				@Override
-				public void doRun() {
-					s.layout();
-				}
-			};
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-			}
-
-			if (editor.isDisposed()) {
-				break;
-			}
-		} while (!s.ld.compleated() && editor.getFirstDirtyLayoutObject() != null);
+//		document[0].setEditorFigure(editor);
+//		final JOLayoutService s = new JOLayoutService();
+//		s.setEditor(editor);
+//		do {
+//			new WaitThread(editor) {
+//				@Override
+//				public void doRun() {
+//					s.layout();
+//				}
+//			};
+//			try {
+//				Thread.sleep(10);
+//			} catch (InterruptedException e) {
+//			}
+//
+//			if (editor.isDisposed()) {
+//				break;
+//			}
+//		} while (!s.ld.compleated() && editor.getFirstDirtyLayoutObject() != null);
 
 	}
 
@@ -485,13 +444,13 @@ public class JOUic extends RcplUic implements IOfficeUIC {
 	protected void registerServices() {
 		Rcpl.progressMessage("Register Services");
 		super.registerServices();
-		Rcpl.service().registerService(EnServiceId.COLOR_SERVICE, new JOColorService());
-		Rcpl.service().registerService(EnServiceId.FONT_SERVICE, new JOFontService());
-		Rcpl.service().registerService(EnServiceId.INSERT_SERVICE, new JOInsertService());
-		Rcpl.service().registerService(EnServiceId.LAYOUT_SERVICE, new JOLayoutService());
-		Rcpl.service().registerService(EnServiceId.PARAGRAPH_SERVICE, new JOParagraphService());
-		Rcpl.service().registerService(EnServiceId.PICTURE_SERVICE, new JOPictureService());
-		Rcpl.service().registerService(EnServiceId.TABLE_SERVICE, new JOTableService());
+//		Rcpl.service().registerService(EnServiceId.COLOR_SERVICE, new JOColorService());
+//		Rcpl.service().registerService(EnServiceId.FONT_SERVICE, new JOFontService());
+//		Rcpl.service().registerService(EnServiceId.INSERT_SERVICE, new JOInsertService());
+//		Rcpl.service().registerService(EnServiceId.LAYOUT_SERVICE, new JOLayoutService());
+//		Rcpl.service().registerService(EnServiceId.PARAGRAPH_SERVICE, new JOParagraphService());
+//		Rcpl.service().registerService(EnServiceId.PICTURE_SERVICE, new JOPictureService());
+//		Rcpl.service().registerService(EnServiceId.TABLE_SERVICE, new JOTableService());
 		Rcpl.progressMessage("Services registered");
 	}
 

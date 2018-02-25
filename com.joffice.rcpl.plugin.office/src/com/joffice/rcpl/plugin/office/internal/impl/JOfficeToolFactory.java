@@ -1,6 +1,5 @@
 package com.joffice.rcpl.plugin.office.internal.impl;
 
-import org.eclipse.rcpl.EnCommandId;
 import org.eclipse.rcpl.EnCustomToolIds;
 import org.eclipse.rcpl.EnServiceId;
 import org.eclipse.rcpl.ITool;
@@ -10,11 +9,7 @@ import org.eclipse.rcpl.internal.tools.FontNameTool;
 import org.eclipse.rcpl.internal.tools.FontSizeTool;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 
-import com.joffice.rcpl.plugin.office.tools.JOSymbolsTool;
 import com.joffice.rcpl.plugin.office.tools.StyleListTool;
-import com.joffice.rcpl.plugin.office.tools.TableListTool;
-import com.joffice.rcpl.plugin.office.tools.TextStyleListTool;
-import com.joffice.rcpl.plugin.office.tools.TextboxListTool;
 
 import javafx.scene.control.Control;
 
@@ -67,30 +62,12 @@ public class JOfficeToolFactory extends RcplToolFactory {
 				tool = new CharacterStyleListTool(eTool);
 				updateNode(eTool, tool);
 				return tool;
-			} else if (EnCommandId.insertTable.getId().equals(eTool.getId())) {
-				tool = new TableListTool(eTool);
-				updateNode(eTool, tool);
-				return tool;
-			} else if (EnCommandId.insertTextbox.getId().equals(eTool.getId())) {
-				tool = new TextboxListTool(eTool);
-				updateNode(eTool, tool);
-				return tool;
 			} else {
 				return super.createTool(eTool);
 			}
 
 		case OTHER:
-			if (EnCustomToolIds.SYMBOL_TOOL.name().equals(eTool.getFormat())) {
-				tool = new JOSymbolsTool(eTool);
-				updateNode(eTool, tool);
-				return tool;
-			} else if (EnCustomToolIds.TEXT_STYLE_TOOL.name().equals(eTool.getFormat())) {
-				tool = new TextStyleListTool(eTool);
-				updateNode(eTool, tool);
-				return tool;
-			} else {
 				return super.createTool(eTool);
-			}
 		default:
 			return super.createTool(eTool);
 		}

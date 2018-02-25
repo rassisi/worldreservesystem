@@ -24,15 +24,6 @@ import org.eclipse.rcpl.model.cdo.client.JOSession;
 
 import com.joffice.rcpl.plugin.office.internal.JOfficeFactory;
 import com.joffice.rcpl.plugin.office.internal.impl.JOfficeToolFactory;
-import com.joffice.rcpl.plugin.office.internal.services.JOColorService;
-import com.joffice.rcpl.plugin.office.internal.services.JOInsertService;
-import com.joffice.rcpl.plugin.office.internal.services.JOLayoutService;
-import com.joffice.rcpl.plugin.office.internal.services.JOParagraphService;
-import com.joffice.rcpl.plugin.office.internal.services.JOPictureService;
-import com.joffice.rcpl.plugin.office.internal.services.JOTableService;
-import com.joffice.rcpl.plugin.office.internal.services.NewPRESENTATIONDocumentService;
-import com.joffice.rcpl.plugin.office.internal.services.NewSPREADSHEETDocumentService;
-import com.joffice.rcpl.plugin.office.internal.services.NewWORDDocumentService;
 
 import javafx.stage.Stage;
 
@@ -51,13 +42,8 @@ public class JOApplicationStarter extends RcplApplicationStarter {
 	public boolean start(RcplLogin login, Stage primaryStage) {
 		JOSession.getDefault("https://github.com/rassisi/worldreservesystem/raw/master/org.worldreservesystem.doc/");
 		RCPLModel.mobileProvider.appendLog("register Services");
-		getRcplApplicationProvider().registerService(JOLayoutService.class);
-		getRcplApplicationProvider().registerService(JOPictureService.class);
-		getRcplApplicationProvider().registerService(JOParagraphService.class);
 		getRcplApplicationProvider().registerService(RcplBrowserService.class);
-		getRcplApplicationProvider().registerService(JOInsertService.class);
 		getRcplApplicationProvider().registerService(RcplCommandService.class);
-		getRcplApplicationProvider().registerService(JOColorService.class);
 		getRcplApplicationProvider().registerService(RcplContextMenuGeneralService.class);
 		getRcplApplicationProvider().registerService(RcplDeleteService.class);
 		getRcplApplicationProvider().registerService(RcplDocumentService.class);
@@ -66,10 +52,6 @@ public class JOApplicationStarter extends RcplApplicationStarter {
 		getRcplApplicationProvider().registerService(RcplInfoTabService.class);
 		getRcplApplicationProvider().registerService(RcplObjectService.class);
 		getRcplApplicationProvider().registerService(RcplSetupService.class);
-		getRcplApplicationProvider().registerService(JOTableService.class);
-		getRcplApplicationProvider().registerService(NewWORDDocumentService.class);
-		getRcplApplicationProvider().registerService(NewSPREADSHEETDocumentService.class);
-		getRcplApplicationProvider().registerService(NewPRESENTATIONDocumentService.class);
 		getRcplApplicationProvider().registerService(RcplStartButtonService.class);
 
 		RCPLModel.mobileProvider.appendLog("super.start(login, primaryStage)");

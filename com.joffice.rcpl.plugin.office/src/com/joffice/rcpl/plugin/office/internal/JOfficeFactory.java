@@ -1,6 +1,5 @@
 package com.joffice.rcpl.plugin.office.internal;
 
-import java.io.File;
 import java.util.HashMap;
 
 import org.eclipse.rcpl.BasicFactory;
@@ -15,7 +14,6 @@ import org.eclipse.rcpl.ILayoutFigure;
 import org.eclipse.rcpl.IParagraph;
 import org.eclipse.rcpl.IParagraphFigure;
 import org.eclipse.rcpl.IPict;
-import org.eclipse.rcpl.IPictFigure;
 import org.eclipse.rcpl.IRcplPlugin;
 import org.eclipse.rcpl.IRcplUic;
 import org.eclipse.rcpl.ISVG;
@@ -25,15 +23,6 @@ import org.eclipse.rcpl.ITable;
 import org.eclipse.rcpl.ITextBox;
 import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroup;
 
-import com.joffice.rcpl.plugin.office.figures.word.JOParagraphFigure;
-import com.joffice.rcpl.plugin.office.fx.figures.JOFXDrawingFigure;
-import com.joffice.rcpl.plugin.office.fx.figures.JOFXPictFigure;
-import com.joffice.rcpl.plugin.office.fx.figures.JOFXShapeFigure;
-import com.joffice.rcpl.plugin.office.fx.figures.JOFXTextBoxFigure;
-import com.joffice.rcpl.plugin.office.fx.figures.JOFXTableFigure;
-import com.joffice.rcpl.plugin.office.homepages.JODocumentHomePage;
-import com.joffice.rcpl.plugin.office.internal.figures.JOEditorFigure;
-import com.joffice.rcpl.plugin.office.internal.impl.JODocumentProvider;
 import com.joffice.rcpl.plugin.office.tools.JOfficeRibbonGroup;
 
 import javafx.scene.Node;
@@ -48,7 +37,7 @@ public class JOfficeFactory extends BasicFactory implements IJOfficeFactory {
 
 	@Override
 	public IDrawingFigure createDrawing(IDrawing drawing, boolean mode) {
-		return new JOFXDrawingFigure(drawing);
+		return null;//new JOFXDrawingFigure(drawing);
 	}
 
 	@Override
@@ -58,22 +47,22 @@ public class JOfficeFactory extends BasicFactory implements IJOfficeFactory {
 
 	@Override
 	public ILayoutFigure createPictFigure(IPict lo) {
-		return new JOFXPictFigure(lo);
+		return null;//new JOFXPictFigure(lo);
 	}
 
 	@Override
 	public ILayoutFigure createPictFigure(IShape lo) {
-		return new JOFXShapeFigure(lo);
+		return null;//new JOFXShapeFigure(lo);
 	}
 
 	@Override
 	public ILayoutFigure createTextBoxFigure(ITextBox tb) {
-		return new JOFXTextBoxFigure(tb);
+		return null;//new JOFXTextBoxFigure(tb);
 	}
 
 	@Override
 	public ILayoutFigure createTableFigure(ITable ipict, double width) {
-		return new JOFXTableFigure(ipict, width);
+		return null;//new JOFXTableFigure(ipict, width);
 	}
 
 	@Override
@@ -83,38 +72,35 @@ public class JOfficeFactory extends BasicFactory implements IJOfficeFactory {
 
 	@Override
 	public IParagraphFigure createParagraphFigure(IParagraph paragraph) {
-		return new JOParagraphFigure(paragraph);
+		return null;//new JOParagraphFigure(paragraph);
 	}
 
-	@Override
-	public JOEditorFigure createEditor(File file, Tab tab, HashMap<String, String> wordReplacements, boolean onePage) {
-		return new JOEditorFigure(file, tab, wordReplacements, onePage);
-	}
+
 
 	@Override
 	public IEditor createEditor(Tab tab, boolean isBrowser) {
-		return new JOEditorFigure(tab, isBrowser);
+		return null;//new JOEditorFigure(tab, isBrowser);
 	}
 
 	@Override
 	public IHomePage createDocumentHomePage(IRcplUic uic, String title, String documentTemplate, String image,
 			HashMap<String, String> wordReplacements, Pane controlPane) {
-		return new JODocumentHomePage(uic, title, documentTemplate, image, wordReplacements, controlPane);
+		return null;//new JODocumentHomePage(uic, title, documentTemplate, image, wordReplacements, controlPane);
 	}
 
 	@Override
 	public IStyleTemplate createStyleTemplate() {
-		return new JOStyleTemplate("Default.dotx");
+		return null;//new JOStyleTemplate("Default.dotx");
 	}
 
 	@Override
 	public IDocumentProvider createDocumentProvider() {
-		return new JODocumentProvider();
+		return null;//new JODocumentProvider();
 	}
 
 	@Override
 	public IBorder createBorder() {
-		return new com.joffice.rcpl.plugin.office.databinding.types.JOBorder();
+		return null;//new com.joffice.rcpl.plugin.office.databinding.types.JOBorder();
 	}
 
 }
