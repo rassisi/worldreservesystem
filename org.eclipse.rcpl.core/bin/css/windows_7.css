@@ -1,0 +1,27 @@
+/* Main CSS-File */
+
+.root {
+	
+  
+    -fx-font-size: 8.0pt;
+  
+     /***************************************************************************
+     *                                                                         *
+     * The main color palette from which the rest of the colors are derived.   *
+     *                                                                         *
+     **************************************************************************/
+
+    /* A light grey that is the base color for objects.  Instead of using
+     * -fx-base directly, the sections in this file will typically use -fx-color.
+     */
+     
+    -fx-base: rgb(4.0,100.0,230.0);
+
+    /* A very light grey used for the background of windows.  See also
+     * -fx-text-background-color, which should be used as the -fx-text-fill
+     * value for text painted on top of backgrounds colored with -fx-background.
+     */
+
+}
+
+

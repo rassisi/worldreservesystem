@@ -70,13 +70,13 @@ public class JOUtil2 {
 
 	private static final Object[][] CP1252_ESCAPE =
 
-	{
+			{
 
-			{ Byte.valueOf((byte) 228), "&auml;" }, // 'ä',
+					{ Byte.valueOf((byte) 228), "&auml;" }, // 'ä',
 
-			{ Byte.valueOf((byte) 252), "&uuml;" }, // 'ü'
+					{ Byte.valueOf((byte) 252), "&uuml;" }, // 'ü'
 
-	};
+			};
 
 	// € 128
 	// ‚
@@ -833,7 +833,11 @@ public class JOUtil2 {
 	 */
 	public static File getUserLocalCacheDir() {
 		if (userLocalCacheDir == null) {
-			userLocalCacheDir = new File(RCPLModel.mobileProvider.getApplicationDir(), "cache"); //$NON-NLS-1$
+			if (RCPLModel.mobileProvider != null) {
+				userLocalCacheDir = new File(RCPLModel.mobileProvider.getApplicationDir(), "cache"); //$NON-NLS-1$
+			} else {
+				userLocalCacheDir = new File(System.getProperty("java.io.tmpdir"), "rcpl/cache"); //$NON-NLS-1$
+			}
 			userLocalCacheDir.mkdirs();
 		}
 		return userLocalCacheDir;

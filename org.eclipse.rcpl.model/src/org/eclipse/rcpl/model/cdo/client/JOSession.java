@@ -150,18 +150,15 @@ public class JOSession {
 
 	public final static String SWITCH_TO_PERSPECTIVE_AND_CREATE_DOCUMENT_IF_NEEDED = "SWITCH_TO_PERSPECTIVE_AND_CREATE_DOCUMENT_IF_NEEDED";
 
-	public static JOSession getDefault() {
-		if (INSTANCE == null) {
-			INSTANCE = new JOSession();
-		}
-		return INSTANCE;
-	}
+
 
 	public static void println(String msg) {
 		System.out.println(msg);
 	}
 
-	public String codeBase;
+	private static String BASE_URL = "http://joffice.eu/";
+	
+	public static String codeBase = BASE_URL;
 
 	public String CDO_SERVER;
 
@@ -237,14 +234,29 @@ public class JOSession {
 
 	private boolean reachable;
 
+	public static JOSession getDefault() {
+		return getDefault(codeBase);
+	}
+	
+	public static JOSession getDefault(String url) {
+		if (INSTANCE == null) {
+			INSTANCE = new JOSession(url);
+		}
+		return INSTANCE;
+	}
+	
+	public JOSession() throws SecurityException {
+		this(codeBase);
+	}
+	
 	/**
 	 * @param port
 	 * @param ePackage
 	 */
-	public JOSession() throws SecurityException {
+	public JOSession(String url) throws SecurityException {
 
 		INSTANCE = this;
-		this.codeBase = "http://joffice.eu/";
+		codeBase = url;
 		testReachable();
 
 		// if (!testReachable()) {

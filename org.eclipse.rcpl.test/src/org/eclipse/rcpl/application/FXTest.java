@@ -1,8 +1,10 @@
 package org.eclipse.rcpl.application;
 
 import org.eclipse.rcpl.images.RcplImage;
+import org.eclipse.rcpl.model.cdo.client.JOSession;
 
 import javafx.application.Application;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,10 +21,11 @@ public class FXTest extends Application {
 	public void start(Stage stage) throws Exception {
 		final VBox st = new VBox();
 
-		RcplImage img = new RcplImage("300/textart_20", 300,300);
-		Image image = img.getImage();
-		if (image != null) {
-			st.getChildren().add(new ImageView(image));
+		JOSession.getDefault("https://github.com/rassisi/worldreservesystem/raw/master/org.worldreservesystem.doc/");
+		RcplImage img = new RcplImage("word", 300,300);
+		Node imageView = img.getNode();
+		if (imageView != null) {
+			st.getChildren().add(imageView);
 			Scene scene = new Scene(st, 600, 850);
 			stage.setScene(scene);
 			stage.centerOnScreen();
