@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="1000"
+   width="1000"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.5 r10040"
+   version="1.0"
+   sodipodi:docname="shape_bent_up_arrow.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3591">
+      <stop
+         style="stop-color:#6eaaff;stop-opacity:1;"
+         offset="0"
+         id="stop3593" />
+      <stop
+         style="stop-color:#6eaaff;stop-opacity:0;"
+         offset="1"
+         id="stop3595" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 233.22493 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="554.03888 : 233.22493 : 1"
+       inkscape:persp3d-origin="277.01944 : 155.48329 : 1"
+       id="perspective8" />
+    <inkscape:perspective
+       id="perspective3594"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3591"
+       id="radialGradient3597"
+       cx="804.80463"
+       cy="42.155121"
+       fx="804.80463"
+       fy="42.155121"
+       r="443.15649"
+       gradientTransform="matrix(3.601657,-1.8175787e-8,1.6029968e-8,3.176448,-2093.8256,-91.748412)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       id="filter3599"
+       inkscape:label="Drop shadow"
+       width="1.5"
+       height="1.5"
+       x="-.25"
+       y="-.25">
+      <feGaussianBlur
+         id="feGaussianBlur3601"
+         in="SourceAlpha"
+         stdDeviation="20.000000"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix3603"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 " />
+      <feOffset
+         id="feOffset3605"
+         in="bluralpha"
+         dx="20.000000"
+         dy="20.000000"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge3607">
+        <feMergeNode
+           id="feMergeNode3609"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode3611"
+           in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:cx="-557.83"
+     inkscape:cy="97.058824"
+     inkscape:zoom="0.17"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="944"
+     inkscape:window-height="864"
+     inkscape:window-x="281"
+     inkscape:window-y="252"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Warstwa 1"
+     id="layer1"
+     transform="translate(-293.46701,461.31196)">
+    <path
+       style="color:#000000;fill:url(#radialGradient3597);fill-opacity:1;fill-rule:nonzero;stroke:#0164c8;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;"
+       d="m 366.64812,480.11278 0,-510.950589 c 0,0 9.04137,-225.419381 180.82719,-225.419381 171.7858,0 341.76336,0 341.76336,0 l 0,-139.54535 353.72243,242.45997 -353.72243,242.459982 0,-141.42374 -301.98138,0 c 0,0 -45.2068,-2.146852 -45.2068,64.405523 0,66.552406 0,465.866735 0,465.866735 l -175.40237,2.14685 z"
+       id="path1937" />
+  </g>
+</svg>

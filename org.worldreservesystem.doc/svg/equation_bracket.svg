@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg1"
+   viewBox="0 0 32 32"
+   version="1.0"
+   y="0"
+   x="0"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="equation_bracket.svg"
+   inkscape:export-filename="C:\data\ws\joffice_migration_1\com.joffice.client.resources\src\com\joffice\ui\resources\images\tools\equation_bracket.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1842"
+     inkscape:window-height="1051"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="8.6308571"
+     inkscape:cx="10.455956"
+     inkscape:cy="17.157665"
+     inkscape:window-x="69"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title></dc:title>
+        <dc:date>2011-01-21T16:59:09</dc:date>
+        <dc:description>Originally uploaded by Jose Hevia for OCAL 0.18</dc:description>
+        <dc:source>http://openclipart.org/detail/108655/math-brace-by-anonymous</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Anonymous</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>fix</rdf:li>
+            <rdf:li>keyword</rdf:li>
+            <rdf:li>librarians</rdf:li>
+            <rdf:li>tag</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3044">
+    <path
+       style="fill:#00ff00;stroke:#000000;stroke-width:0.56995678"
+       inkscape:connector-curvature="0"
+       d="m 15.077792,28.891256 v 2.318368 h -0.631993 c -1.639128,0 -2.738626,-0.39555 -3.298155,-1.1894 -0.552942,-0.793849 -0.829504,-2.3788 -0.829504,-4.749084 v -3.846734 c 0,-1.620386 -0.1778,-2.741663 -0.533232,-3.363832 C 9.4360434,17.438129 8.8006874,17.126907 7.8791597,17.126907 H 7.2668371 v -2.301612 h 0.6122327 c 0.9281843,0 1.5667538,-0.305728 1.915868,-0.917458 C 10.143793,13.29638 10.31822,12.185817 10.31822,10.576143 V 6.7134773 c 0,-2.3713832 0.276561,-3.9486419 0.829514,-4.7320541 0.559519,-0.7938479 1.659017,-1.19104706 3.298155,-1.19104706 h 0.631983 V 3.0919883 h -0.691144 c -0.921697,0 -1.52402,0.2362313 -1.807158,0.70842 -0.276391,0.4612026 -0.414752,1.4536513 -0.414752,2.9773463 v 3.9917694 c 0,1.684388 -0.151344,2.90785 -0.454192,3.669561 -0.296281,0.76171 -0.80642,1.27675 -1.530596,1.545121 0.730743,0.289796 1.244265,0.815548 1.540536,1.577258 0.296112,0.761987 0.444252,1.979679 0.444252,3.653629 v 3.991494 c 0,1.53386 0.138361,2.533725 0.414752,2.992455 0.283138,0.461476 0.885461,0.692214 1.807158,0.692214 h 0.691144 z"
+       id="path627" />
+    <path
+       style="fill:#00ff00;stroke:#000000;stroke-width:0.56995678"
+       inkscape:connector-curvature="0"
+       d="m 16.921326,28.893672 v 2.315622 h 0.631993 c 1.639806,0 2.738625,-0.395551 3.298155,-1.1894 0.552783,-0.793849 0.829164,-2.376054 0.829164,-4.74881 v -3.846459 c 0,-1.620386 0.178649,-2.741663 0.53425,-3.364108 0.348855,-0.622167 0.984221,-0.93339 1.904402,-0.93339 h 0.61345 v -2.301613 h -0.61345 c -0.926927,0 -1.565656,-0.305727 -1.914511,-0.917458 -0.348865,-0.611457 -0.524141,-1.722021 -0.524141,-3.331694 V 6.7136968 c 0,-2.3713832 -0.276381,-3.9486419 -0.829164,-4.7320541 C 20.291944,1.1877948 19.193125,0.79070573 17.553319,0.79070573 H 16.921326 V 3.0922078 H 17.6123 c 0.921867,0 1.523521,0.2362326 1.806659,0.7081461 0.276391,0.4614765 0.414582,1.4539253 0.414582,2.9776216 v 3.9917675 c 0,1.684388 0.151683,2.907576 0.45504,3.669561 0.296611,0.76171 0.805572,1.27675 1.530258,1.54512 -0.729736,0.289797 -1.243757,0.815549 -1.540377,1.57726 -0.296611,0.761986 -0.444921,1.979678 -0.444921,3.653629 v 3.991493 c 0,1.533311 -0.138191,2.533176 -0.414582,2.994652 -0.283138,0.461477 -0.884792,0.692214 -1.806659,0.692214 h -0.690974 z"
+       id="path626" />
+    <path
+       d="M 7.5258931,31.54892 C 5.0743274,30.167563 3.2447848,28.188935 2.037255,25.611625 0.829616,23.035447 0.22581621,19.834261 0.22581621,16.008634 c 0,-3.825912 0.59653447,-7.0103955 1.78965289,-9.5534554 1.192999,-2.5433424 3.029807,-4.5446137 5.510424,-6.00409948 V 2.4413118 C 6.3766556,3.5028069 5.5471719,5.0783489 5.0380108,7.1682195 4.5361151,9.2470521 4.2850824,12.193762 4.2850824,16.008634 c 0,3.803548 0.2510327,6.750258 0.7529284,8.84013 0.5091611,2.078832 1.3386448,3.648712 2.4878823,4.710207 v 1.989949 z"
+       id="path633"
+       inkscape:connector-curvature="0"
+       style="fill:#00ff00;stroke:#000000;stroke-width:0.44358587" />
+    <path
+       d="m 24.47392,31.5494 c 2.451376,-1.382631 4.280939,-3.361422 5.488668,-5.937997 1.207729,-2.576574 1.811599,-5.777773 1.811599,-9.603595 0,-3.825822 -0.596435,-7.0099417 -1.789923,-9.55317 C 28.791395,3.9115721 26.954407,1.9101711 24.47392,0.45060012 V 2.440939 c 1.149507,1.0614545 1.978821,2.6371668 2.487922,4.7269745 0.501676,2.0788267 0.753128,5.0254585 0.753128,8.8398945 0,3.803863 -0.251452,6.750496 -0.753128,8.84071 -0.509101,2.078825 -1.338415,3.64852 -2.487922,4.709892 v 1.99099 z"
+       id="path635"
+       inkscape:connector-curvature="0"
+       style="fill:#00ff00;stroke:#000000;stroke-width:0.44357756" />
+  </g>
+</svg>

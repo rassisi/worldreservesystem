@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg1"
+   viewBox="0 0 32 32"
+   version="1.0"
+   y="0"
+   x="0"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="equation_integral.svg"
+   inkscape:export-filename="C:\data\ws\joffice_migration_1\com.joffice.client.resources\src\com\joffice\ui\resources\images\tools\equation_integral.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1842"
+     inkscape:window-height="1051"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="8.6308571"
+     inkscape:cx="14.687017"
+     inkscape:cy="30.469135"
+     inkscape:window-x="69"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g2986"
+     transform="matrix(0.07973214,0,0,0.07973214,-2.3651298,31.367694)">
+    <path
+       style="fill:#004d00"
+       inkscape:connector-curvature="0"
+       d="m 255.97,-295.79 -54.3,18.11 v 13.99 l 36.07,2.88 c 7.53,11.11 16.25,35.8 27.75,73.66 -13.88,28.81 -30.13,49.39 -46.38,60.91 l -17.04,-21.81 c -15.86,4.11 -25.37,16.05 -25.37,29.22 0,14.4 12.69,26.74 28.14,26.74 22.6,0 43.6,-24.69 69.37,-73.66 11.09,52.68 22.98,75.72 53.5,75.72 12.29,0 29.33,-4.11 52.32,-11.52 v -16.05 c -7.92,2.06 -15.06,2.88 -21.8,2.88 -26.55,0 -32.1,-27.16 -48.75,-86.83 13.87,-30.04 28.94,-48.56 44,-55.55 l 15.46,21.81 c 16.25,-4.94 25.36,-16.88 25.36,-31.28 0,-15.23 -10.3,-26.34 -24.97,-26.34 -22.59,0 -44.79,23.87 -68.96,70.78 -12.29,-50.2 -19.43,-73.66 -41.62,-73.66 h -2.78 z"
+       id="path625" />
+    <path
+       style="fill:#00ff00;stroke:#000000;stroke-width:8.76329994"
+       inkscape:connector-curvature="0"
+       d="M 128.28,-11.69 C 124.87,-23.27 96.26,-37.29 76.861,-23.5 53.958,-7.21 100.87,6.39 128.28,2.39 c 32.48,-4.75 39.71,-27.42 42.93,-42.08 6.23,-28.42 -1.57,-57.59 -5.4,-86 -3.32,-24.65 -3.64,-49.24 -8.37,-74 -5.44,-28.49 -18.1,-56.57 -23.41,-85 -4.02,-21.567 -11.39,-41.078 -4.59,-62.996 2.87,-9.251 6.91,-19.132 22.44,-25 4.2,12.425 33.52,25.052 51.39,9.996 20.43,-17.221 -27.77,-30.451 -55.33,-24.398 -35.76,7.858 -39.75,34.486 -42.91,51.402 -4.74,25.298 2.11,50.726 3.34,75.996 2.63,54.24 18.26,107.25 30.08,161 4.31,19.58 12.19,39.18 9.54,59 -1.34,10.06 -4.2,20.98 -19.71,28 z"
+       id="path624" />
+  </g>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title></dc:title>
+        <dc:date>2011-01-21T16:59:08</dc:date>
+        <dc:description>Originally uploaded by Jose Hevia for OCAL 0.18</dc:description>
+        <dc:source>http://openclipart.org/detail/108637/math-int-by-anonymous</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Anonymous</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>fix</rdf:li>
+            <rdf:li>keyword</rdf:li>
+            <rdf:li>librarians</rdf:li>
+            <rdf:li>tag</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

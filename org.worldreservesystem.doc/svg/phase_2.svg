@@ -1,0 +1,4709 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="16"
+   width="48"
+   id="svg3954"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.4 r9939"
+   version="1.0"
+   sodipodi:docname="phase_2.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="C:\data\ws\joffice_migration_1\com.joffice.model_1_0_0.edit\icons\full\obj16\implementation.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <svg:defs
+     id="defs3956">
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3534">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3536" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3538" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3488">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3490" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3492" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3428">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3430" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3432" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3413">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3415" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3417" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient3468">
+      <svg:stop
+         style="stop-color:#d8d8d8;stop-opacity:1;"
+         offset="0"
+         id="stop3470" />
+      <svg:stop
+         id="stop3476"
+         offset="0.22455101"
+         style="stop-color:#f0f0f0;stop-opacity:1;" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.46812087"
+         id="stop3478" />
+      <svg:stop
+         id="stop3480"
+         offset="0.76308393"
+         style="stop-color:#f3f3f3;stop-opacity:1;" />
+      <svg:stop
+         style="stop-color:#d6d6d6;stop-opacity:1;"
+         offset="1"
+         id="stop3472" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient3889">
+      <svg:stop
+         id="stop3891"
+         offset="0"
+         style="stop-color:#e1b73f;stop-opacity:0.58431375;" />
+      <svg:stop
+         id="stop3893"
+         offset="1"
+         style="stop-color:#aa7d19;stop-opacity:1" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient3883">
+      <svg:stop
+         id="stop3885"
+         offset="0"
+         style="stop-color:#ffffda;stop-opacity:0.60000002" />
+      <svg:stop
+         id="stop3887"
+         offset="1"
+         style="stop-color:#c5a100;stop-opacity:0.71428573" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient12617"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       id="linearGradient6880">
+      <svg:stop
+         id="stop6882"
+         offset="0"
+         style="stop-color:#9dd2a5;stop-opacity:1;" />
+      <svg:stop
+         style="stop-color:#75bc7d;stop-opacity:0.50588238;"
+         offset="0.24538536"
+         id="stop6884" />
+      <svg:stop
+         style="stop-color:#6ab573;stop-opacity:0.34901962;"
+         offset="0.49077073"
+         id="stop6886" />
+      <svg:stop
+         id="stop6888"
+         offset="0.74538535"
+         style="stop-color:#73ad79;stop-opacity:0.27843139;" />
+      <svg:stop
+         id="stop6890"
+         offset="1"
+         style="stop-color:#7f9c85;stop-opacity:0.07058824;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient12583"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       id="linearGradient6792">
+      <svg:stop
+         style="stop-color:#9db8d2;stop-opacity:1"
+         offset="0"
+         id="stop6794" />
+      <svg:stop
+         id="stop6796"
+         offset="0.24538536"
+         style="stop-color:#7592bc;stop-opacity:0.50588238" />
+      <svg:stop
+         id="stop6798"
+         offset="0.49077073"
+         style="stop-color:#6a87b5;stop-opacity:0.34901962" />
+      <svg:stop
+         style="stop-color:#7389ad;stop-opacity:0.27843139"
+         offset="0.74538535"
+         id="stop6800" />
+      <svg:stop
+         style="stop-color:#7f8e9c;stop-opacity:0.07058824"
+         offset="1"
+         id="stop6802" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient1273">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.00000000"
+         id="stop1274" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.00000000;"
+         offset="1.0000000"
+         id="stop1275" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient1323">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.77685952;"
+         offset="0.00000000"
+         id="stop1324" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.00000000;"
+         offset="1.0000000"
+         id="stop1325" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient1218">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1.0000000;"
+         offset="0.00000000"
+         id="stop1219" />
+      <svg:stop
+         style="stop-color:#323232;stop-opacity:1.0000000;"
+         offset="0.073255815"
+         id="stop1321" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1.0000000;"
+         offset="0.65260679"
+         id="stop1320" />
+      <svg:stop
+         style="stop-color:#fff;stop-opacity:1;"
+         offset="1"
+         id="stop1220" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient1222">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.32231405;"
+         offset="0.00000000"
+         id="stop1223" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.00000000;"
+         offset="1.0000000"
+         id="stop1224" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient12549"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       id="linearGradient826">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.95294118;"
+         offset="0.00000000"
+         id="stop827" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.76078433;"
+         offset="0.36585677"
+         id="stop830" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0.52941179;"
+         offset="0.47107276"
+         id="stop847" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.00000000;"
+         offset="1.0000000"
+         id="stop828" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient6968">
+      <svg:stop
+         style="stop-color:#d29d9e;stop-opacity:1;"
+         offset="0"
+         id="stop6970" />
+      <svg:stop
+         id="stop6972"
+         offset="0.24538536"
+         style="stop-color:#bc7575;stop-opacity:0.50588238;" />
+      <svg:stop
+         id="stop6974"
+         offset="0.49077073"
+         style="stop-color:#b56b6a;stop-opacity:0.34901962;" />
+      <svg:stop
+         style="stop-color:#ad7673;stop-opacity:0.27843139;"
+         offset="0.74538535"
+         id="stop6976" />
+      <svg:stop
+         style="stop-color:#9c7f7f;stop-opacity:0.07058824;"
+         offset="1"
+         id="stop6978" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4454">
+      <svg:stop
+         id="stop4456"
+         offset="0"
+         style="stop-color:#d5d4d0;stop-opacity:1;" />
+      <svg:stop
+         style="stop-color:#f1f1f1;stop-opacity:1;"
+         offset="0.24538536"
+         id="stop4464" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.49077073"
+         id="stop4462" />
+      <svg:stop
+         id="stop4466"
+         offset="0.74538535"
+         style="stop-color:#f0f0f0;stop-opacity:1;" />
+      <svg:stop
+         id="stop4458"
+         offset="1"
+         style="stop-color:#d4d4d4;stop-opacity:1;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4240">
+      <svg:stop
+         id="stop4242"
+         offset="0"
+         style="stop-color:#eeeeed;stop-opacity:1;" />
+      <svg:stop
+         id="stop4244"
+         offset="1"
+         style="stop-color:#a6a6a6;stop-opacity:1;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3548">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3550" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3552" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3354">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3356" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3358" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3368">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3370" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3372" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3445">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3447" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3449" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient3871">
+      <svg:stop
+         style="stop-color:#d0ac44;stop-opacity:1"
+         offset="0"
+         id="stop3873" />
+      <svg:stop
+         style="stop-color:#aa7d19;stop-opacity:1"
+         offset="1"
+         id="stop3875" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient3877">
+      <svg:stop
+         id="stop3879"
+         offset="0"
+         style="stop-color:#fed51b;stop-opacity:1" />
+      <svg:stop
+         id="stop3881"
+         offset="1"
+         style="stop-color:#ffffda;stop-opacity:1" />
+    </svg:linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-50 : 600 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="700 : 600 : 1"
+       inkscape:persp3d-origin="300 : 400 : 1"
+       id="perspective3962" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3877"
+       id="linearGradient2698"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3059451,-0.02958628,0.04222916,0.3111526,-530.12905,-128.33652)"
+       x1="218.05919"
+       y1="352.40601"
+       x2="274.42526"
+       y2="77.315956" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3871"
+       id="linearGradient2700"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="46.210991"
+       y1="40.43428"
+       x2="115.25708"
+       y2="167.01372" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3445"
+       id="linearGradient2702"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.6634183,-549.10198,-146.13056)"
+       x1="79.24601"
+       y1="-126.40256"
+       x2="140.07268"
+       y2="166.59012" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3368"
+       id="linearGradient2704"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0010993,0,0,0.9771436,-428.22672,-61.489698)"
+       x1="-52.615292"
+       y1="111.33359"
+       x2="-89.16851"
+       y2="-160.22696" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3354"
+       id="linearGradient2706"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="122.18343"
+       y1="38.274925"
+       x2="50.208416"
+       y2="94.389671" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3548"
+       id="linearGradient2708"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-529.08226,-219.5891)"
+       x1="78.742409"
+       y1="77.995888"
+       x2="26.839462"
+       y2="35.082928" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2732"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240"
+       id="linearGradient2744"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6926293,0.3112578,-0.3187939,1.6982551,95.768889,-463.96272)"
+       x1="336.34567"
+       y1="336.50391"
+       x2="321.64944"
+       y2="448.71246" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4454"
+       id="linearGradient2746"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7223487,-0.02022273,0.01174754,1.726425,-42.273973,-360.10105)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="328.64807"
+       y2="448.07874" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6792"
+       id="linearGradient2748"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5928107,-0.01436386,0.010864,1.2262507,2.3253581,-176.32165)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="332.68878"
+       y2="437.68396" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2750"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2752"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2754"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0162083,0.9840503)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2756"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.017085,0.983202)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2758"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0168371,0.9834417)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2760"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0146622,0.9855497)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0190623,0.9812943)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2764"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2766"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1218"
+       id="linearGradient2768"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2401764,0,0,1.200931,780.76806,-155.55854)"
+       x1="77.599106"
+       y1="20.687101"
+       x2="53.030739"
+       y2="114.57422" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1323"
+       id="linearGradient2770"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7016168,0,0,0.8752654,780.76806,-155.55854)"
+       x1="17.696665"
+       y1="120.74315"
+       x2="94.698936"
+       y2="120.74315" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2772"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3644796,0,0,1.0915271,780.76806,-155.55854)"
+       x1="118.66497"
+       y1="45.700581"
+       x2="90.285629"
+       y2="62.49313" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2774"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6909077,0,0,1.1618746,765.70201,-167.04673)"
+       x1="11.967844"
+       y1="119.11808"
+       x2="51.413383"
+       y2="80.482086" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2776"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.632178,0,0,0.9125024,780.76806,-155.55854)"
+       x1="59.491886"
+       y1="30.563196"
+       x2="33.266399"
+       y2="58.199242" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2800"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3883"
+       id="linearGradient2812"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3145759,0.0330998,-0.03170279,0.284888,-530.57037,-223.10227)"
+       x1="664.31964"
+       y1="393.5126"
+       x2="255.13704"
+       y2="778.66467" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3889"
+       id="linearGradient2814"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="215.03511"
+       y1="74.194183"
+       x2="47.782467"
+       y2="162.96616" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3468"
+       id="linearGradient2816"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="198.59323"
+       y1="97.137428"
+       x2="58.94891"
+       y2="147.25517" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3413"
+       id="linearGradient2818"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="-75.3908"
+       y1="321.58548"
+       x2="127.22198"
+       y2="102.69514" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3428"
+       id="linearGradient2820"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="150.07268"
+       y1="69.702202"
+       x2="153.63531"
+       y2="103.83543" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3488"
+       id="linearGradient2822"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="75.485207"
+       y1="216.26877"
+       x2="150.18037"
+       y2="78.337875" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3534"
+       id="linearGradient2824"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="81.348701"
+       y1="55.91547"
+       x2="114.70522"
+       y2="140.30176" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240"
+       id="linearGradient2902"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6926293,0.3112578,-0.3187939,1.6982551,95.768889,-463.96272)"
+       x1="336.34567"
+       y1="336.50391"
+       x2="321.64944"
+       y2="448.71246" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4454"
+       id="linearGradient2904"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7223487,-0.02022273,0.01174754,1.726425,-42.273973,-360.10105)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="328.64807"
+       y2="448.07874" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6880"
+       id="linearGradient2906"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5928107,-0.01436386,0.010864,1.2262507,2.3253581,-176.32165)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="332.68878"
+       y2="437.68396" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2908"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2910"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2912"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0162083,0.9840503)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2914"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.017085,0.983202)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2916"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0168371,0.9834417)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2918"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0146622,0.9855497)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2920"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0190623,0.9812943)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2922"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2924"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1218"
+       id="linearGradient2926"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2401764,0,0,1.200931,780.76806,-155.55854)"
+       x1="77.599106"
+       y1="20.687101"
+       x2="53.030739"
+       y2="114.57422" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1323"
+       id="linearGradient2928"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7016168,0,0,0.8752654,780.76806,-155.55854)"
+       x1="17.696665"
+       y1="120.74315"
+       x2="94.698936"
+       y2="120.74315" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2930"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3644796,0,0,1.0915271,780.76806,-155.55854)"
+       x1="118.66497"
+       y1="45.700581"
+       x2="90.285629"
+       y2="62.49313" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2932"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6909077,0,0,1.1618746,765.70201,-167.04673)"
+       x1="11.967844"
+       y1="119.11808"
+       x2="51.413383"
+       y2="80.482086" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2934"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.632178,0,0,0.9125024,780.76806,-155.55854)"
+       x1="59.491886"
+       y1="30.563196"
+       x2="33.266399"
+       y2="58.199242" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240"
+       id="linearGradient2936"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6926293,0.3112578,-0.3187939,1.6982551,95.768889,-463.96272)"
+       x1="336.34567"
+       y1="336.50391"
+       x2="321.64944"
+       y2="448.71246" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4454"
+       id="linearGradient2938"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7223487,-0.02022273,0.01174754,1.726425,-42.273973,-360.10105)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="328.64807"
+       y2="448.07874" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6968"
+       id="linearGradient2940"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5928107,-0.01436386,0.010864,1.2262507,2.3253581,-176.32165)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="332.68878"
+       y2="437.68396" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2942"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2944"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2946"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0162083,0.9840503)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2948"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.017085,0.983202)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2950"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0168371,0.9834417)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2952"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0146622,0.9855497)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2954"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0190623,0.9812943)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2956"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2958"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1218"
+       id="linearGradient2960"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2401764,0,0,1.200931,780.76806,-155.55854)"
+       x1="77.599106"
+       y1="20.687101"
+       x2="53.030739"
+       y2="114.57422" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1323"
+       id="linearGradient2962"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7016168,0,0,0.8752654,780.76806,-155.55854)"
+       x1="17.696665"
+       y1="120.74315"
+       x2="94.698936"
+       y2="120.74315" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2964"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3644796,0,0,1.0915271,780.76806,-155.55854)"
+       x1="118.66497"
+       y1="45.700581"
+       x2="90.285629"
+       y2="62.49313" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2966"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6909077,0,0,1.1618746,765.70201,-167.04673)"
+       x1="11.967844"
+       y1="119.11808"
+       x2="51.413383"
+       y2="80.482086" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient2968"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.632178,0,0,0.9125024,780.76806,-155.55854)"
+       x1="59.491886"
+       y1="30.563196"
+       x2="33.266399"
+       y2="58.199242" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient2970"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6880"
+       id="linearGradient2989"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5055637,-6.9112609e-4,4.7042494e-4,0.3892158,249.32832,14.630978)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="332.68878"
+       y2="437.68396" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4454"
+       id="linearGradient2992"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5466909,-0.00223607,-4.6369263e-4,0.5479641,235.61957,-43.805519)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="328.64807"
+       y2="448.07874" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240"
+       id="linearGradient2995"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5364536,0.1028976,-0.1053031,0.5382208,279.68404,-76.434103)"
+       x1="336.34567"
+       y1="336.50391"
+       x2="321.64944"
+       y2="448.71246" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient2998"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient3000"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3002"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0162083,0.9840503)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3004"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.017085,0.983202)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3006"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0168371,0.9834417)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3008"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0146622,0.9855497)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3010"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0190623,0.9812943)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3012"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3014"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1218"
+       id="linearGradient3016"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2401764,0,0,1.200931,780.76806,-155.55854)"
+       x1="77.599106"
+       y1="20.687101"
+       x2="53.030739"
+       y2="114.57422" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1323"
+       id="linearGradient3018"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7016168,0,0,0.8752654,780.76806,-155.55854)"
+       x1="17.696665"
+       y1="120.74315"
+       x2="94.698936"
+       y2="120.74315" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3020"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3644796,0,0,1.0915271,780.76806,-155.55854)"
+       x1="118.66497"
+       y1="45.700581"
+       x2="90.285629"
+       y2="62.49313" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3022"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6909077,0,0,1.1618746,765.70201,-167.04673)"
+       x1="11.967844"
+       y1="119.11808"
+       x2="51.413383"
+       y2="80.482086" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3024"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.632178,0,0,0.9125024,780.76806,-155.55854)"
+       x1="59.491886"
+       y1="30.563196"
+       x2="33.266399"
+       y2="58.199242" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3027"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2253044,-0.01953249,0.01092004,0.125961,409.79074,158.8813)"
+       x1="59.491886"
+       y1="30.563196"
+       x2="33.266399"
+       y2="58.199242" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3030"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2334114,-0.02023532,0.01390431,0.1603841,408.00274,164.77192)"
+       x1="11.967844"
+       y1="119.11808"
+       x2="51.413383"
+       y2="80.482086" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3033"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.1883515,-0.01632891,0.01306245,0.1506734,409.79074,161.88559)"
+       x1="118.66497"
+       y1="45.700581"
+       x2="90.285629"
+       y2="62.49313" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1323"
+       id="linearGradient3036"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2348897,-0.02036348,0.01047442,0.1208208,409.79074,158.8813)"
+       x1="17.696665"
+       y1="120.74315"
+       x2="94.698936"
+       y2="120.74315" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1218"
+       id="linearGradient3039"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.1711928,-0.01484136,0.0143717,0.1657754,409.79074,158.8813)"
+       x1="77.599106"
+       y1="20.687101"
+       x2="53.030739"
+       y2="114.57422" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3051"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0162083,0.9840503)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3053"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.017085,0.983202)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3055"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0168371,0.9834417)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3057"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0146622,0.9855497)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3059"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0190623,0.9812943)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3061"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3063"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3066"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2568459,-0.02226695,0.01948685,0.224778,387.78954,161.47842)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3069"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2563292,-0.02222216,0.01952613,0.225231,387.78954,161.47842)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3072"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2552224,-0.02212621,0.0196108,0.2262077,387.78954,161.47842)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3075"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2557695,-0.02217363,0.01956886,0.2257239,387.78954,161.47842)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3078"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2558319,-0.02217904,0.01956409,0.2256688,387.78954,161.47842)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3081"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2556113,-0.02215992,0.01958097,0.2258636,387.78954,161.47842)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient3083"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient3085"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6792"
+       id="linearGradient3106"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.4210164,-0.2578852,0.1984854,0.3241572,201.85557,159.44373)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="332.68878"
+       y2="437.68396" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4454"
+       id="linearGradient3109"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.4545081,-0.2801047,0.2785025,0.4569433,160.68831,117.71625)"
+       x1="346.53009"
+       y1="351.6741"
+       x2="328.64807"
+       y2="448.07874" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240"
+       id="linearGradient3112"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.499484,-0.1872695,0.186164,0.5021812,180.80789,68.094739)"
+       x1="336.34567"
+       y1="336.50391"
+       x2="321.64944"
+       y2="448.71246" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient3115"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient826"
+       id="radialGradient3117"
+       gradientUnits="userSpaceOnUse"
+       cx="296.2963"
+       cy="281.25"
+       fx="303.7037"
+       fy="93.75"
+       r="248.40302" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3119"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0162083,0.9840503)"
+       x1="33.34417"
+       y1="164.17809"
+       x2="131.82117"
+       y2="28.775105" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3121"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.017085,0.983202)"
+       x1="31.731445"
+       y1="165.85049"
+       x2="131.57971"
+       y2="28.562063" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3123"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0168371,0.9834417)"
+       x1="35.171776"
+       y1="162.0032"
+       x2="131.82381"
+       y2="29.109512" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3125"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0146622,0.9855497)"
+       x1="37.676605"
+       y1="159.47478"
+       x2="132.33794"
+       y2="29.318235" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3127"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0190623,0.9812943)"
+       x1="29.920773"
+       y1="167.66145"
+       x2="131.16846"
+       y2="28.44886" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3129"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1222"
+       id="linearGradient3131"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0211162,0.9793205)"
+       x1="27.318817"
+       y1="170.27164"
+       x2="130.70354"
+       y2="28.120695" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1218"
+       id="linearGradient3133"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2401764,0,0,1.200931,780.76806,-155.55854)"
+       x1="77.599106"
+       y1="20.687101"
+       x2="53.030739"
+       y2="114.57422" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1323"
+       id="linearGradient3135"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7016168,0,0,0.8752654,780.76806,-155.55854)"
+       x1="17.696665"
+       y1="120.74315"
+       x2="94.698936"
+       y2="120.74315" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3137"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3644796,0,0,1.0915271,780.76806,-155.55854)"
+       x1="118.66497"
+       y1="45.700581"
+       x2="90.285629"
+       y2="62.49313" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3139"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6909077,0,0,1.1618746,765.70201,-167.04673)"
+       x1="11.967844"
+       y1="119.11808"
+       x2="51.413383"
+       y2="80.482086" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1273"
+       id="linearGradient3141"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.632178,0,0,0.9125024,780.76806,-155.55854)"
+       x1="59.491886"
+       y1="30.563196"
+       x2="33.266399"
+       y2="58.199242" />
+    <svg:radialGradient
+       r="32.259769"
+       fy="38.195114"
+       fx="26.106777"
+       cy="38.195114"
+       cx="26.106777"
+       gradientTransform="matrix(21.666417,0,2.1995263,21.343799,-20.689597,16.611392)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3340"
+       xlink:href="#linearGradient1789"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="52.625851"
+       x2="8.212224"
+       y1="18.725863"
+       x1="5.2657914"
+       gradientTransform="matrix(31.203514,0,1.4736555,14.584627,-20.689597,18.396838)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3330"
+       xlink:href="#linearGradient137"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="14.875"
+       x2="19.75"
+       y1="37.625"
+       x1="22.25"
+       gradientTransform="matrix(21.332877,0,0,21.332877,-20.689597,18.396838)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3310"
+       xlink:href="#linearGradient13842"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="37.751713"
+       fy="3.7561285"
+       fx="8.824419"
+       cy="3.7561285"
+       cx="8.824419"
+       gradientTransform="matrix(20.656049,0,0,22.328825,925.73347,-344.41502)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3307"
+       xlink:href="#linearGradient269"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="30.875"
+       x2="25.25"
+       y1="10.625"
+       x1="25.875"
+       gradientTransform="matrix(21.332877,0,0,26.427295,-20.689597,-149.71897)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3305"
+       xlink:href="#linearGradient259"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="117.14286"
+       fy="486.64789"
+       fx="605.71429"
+       cy="486.64789"
+       cx="605.71429"
+       gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4587"
+       xlink:href="#linearGradient5060"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="117.14286"
+       fy="486.64789"
+       fx="605.71429"
+       cy="486.64789"
+       cx="605.71429"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4585"
+       xlink:href="#linearGradient5060"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="609.50507"
+       x2="302.85715"
+       y1="366.64789"
+       x1="302.85715"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4583"
+       xlink:href="#linearGradient5048"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="32.259769"
+       fy="38.195114"
+       fx="26.106777"
+       cy="38.195114"
+       cx="26.106777"
+       gradientTransform="matrix(10.714541,0,1.0877163,10.554999,-717.60517,61.7435)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4539"
+       xlink:href="#linearGradient1789"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="52.625851"
+       x2="8.212224"
+       y1="18.725863"
+       x1="5.2657914"
+       gradientTransform="matrix(15.430855,0,0.7287565,7.2124331,-717.60517,62.626444)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4529"
+       xlink:href="#linearGradient137"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       gradientTransform="matrix(10.549598,0,0,10.549598,-717.60517,62.626444)"
+       y2="14.875"
+       x2="19.75"
+       y1="37.625"
+       x1="22.25"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4509"
+       xlink:href="#linearGradient13842"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="37.751713"
+       fy="3.7561285"
+       fx="8.824419"
+       cy="3.7561285"
+       cx="8.824419"
+       gradientTransform="matrix(10.214891,0,0,11.042117,-249.57721,-116.79236)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4506"
+       xlink:href="#linearGradient269"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="30.875"
+       x2="25.25"
+       y1="10.625"
+       x1="25.875"
+       gradientTransform="matrix(10.549598,0,0,13.068905,-717.60517,-20.510686)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4504"
+       xlink:href="#linearGradient259"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="51.912693"
+       x2="19.426924"
+       y1="28.946041"
+       x1="19.116116"
+       gradientTransform="matrix(14.996644,0,0,7.4212624,-717.60517,62.626444)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4492"
+       xlink:href="#linearGradient335"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="51.912693"
+       x2="19.426924"
+       y1="28.946041"
+       x1="19.116116"
+       gradientTransform="scale(1.421537,0.703464)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4485"
+       xlink:href="#linearGradient335"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="41.836895"
+       x2="22.715446"
+       y1="27.059643"
+       x1="14.899379"
+       gradientTransform="matrix(1.535299,0,0,0.651339,3.451418,2.448)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4483"
+       xlink:href="#linearGradient148"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="32.050499"
+       x2="22.065331"
+       y1="36.987999"
+       x1="22.175976"
+       gradientTransform="matrix(1,0,0,1.022118,52.05694,-1.323026)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4481"
+       xlink:href="#linearGradient9766"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="37.751713"
+       fy="3.7561285"
+       fx="8.824419"
+       cy="3.7561285"
+       cx="8.824419"
+       gradientTransform="matrix(0.968273,0,0,1.046686,44.36453,-17.00717)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4479"
+       xlink:href="#linearGradient269"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="30.875"
+       x2="25.25"
+       y1="10.625"
+       x1="25.875"
+       gradientTransform="matrix(1,0,0,1.238806,0,-7.880597)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4477"
+       xlink:href="#linearGradient259"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="14.875"
+       x2="19.75"
+       y1="37.625"
+       x1="22.25"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4475"
+       xlink:href="#linearGradient13842"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="52.625851"
+       x2="8.212224"
+       y1="18.725863"
+       x1="5.2657914"
+       gradientTransform="matrix(1.462696,0,0.06907908,0.683669,0,0)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4473"
+       xlink:href="#linearGradient137"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="117.14286"
+       fy="486.64789"
+       fx="605.71429"
+       cy="486.64789"
+       cx="605.71429"
+       gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4471"
+       xlink:href="#linearGradient5060"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="117.14286"
+       fy="486.64789"
+       fx="605.71429"
+       cy="486.64789"
+       cx="605.71429"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4469"
+       xlink:href="#linearGradient5060"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="609.50507"
+       x2="302.85715"
+       y1="366.64789"
+       x1="302.85715"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4467"
+       xlink:href="#linearGradient5048"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="32.259769"
+       fy="38.195114"
+       fx="26.106777"
+       cy="38.195114"
+       cx="26.106777"
+       gradientTransform="matrix(1.015635,0,0.103105,1.000512,0,-0.08369458)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient4465"
+       xlink:href="#linearGradient1789"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 24 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="48 : 24 : 1"
+       inkscape:persp3d-origin="24 : 16 : 1"
+       id="perspective4266" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient5031"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient5029"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <svg:linearGradient
+       id="linearGradient4276">
+      <svg:stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="0"
+         id="stop4278" />
+      <svg:stop
+         id="stop4280"
+         offset="0.5"
+         style="stop-color:black;stop-opacity:1;" />
+      <svg:stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop4282" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5048"
+       id="linearGradient5027"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
+       x1="302.85715"
+       y1="366.64789"
+       x2="302.85715"
+       y2="609.50507" />
+    <svg:linearGradient
+       id="linearGradient4285">
+      <svg:stop
+         id="stop4287"
+         offset="0.0000000"
+         style="stop-color:#a3a3a3;stop-opacity:1.0000000;" />
+      <svg:stop
+         id="stop4289"
+         offset="1.0000000"
+         style="stop-color:#4c4c4c;stop-opacity:1.0000000;" />
+    </svg:linearGradient>
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient269"
+       id="radialGradient8234"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.968273,0,0,1.046686,44.36453,-17.00717)"
+       cx="8.824419"
+       cy="3.7561285"
+       fx="8.824419"
+       fy="3.7561285"
+       r="37.751713" />
+    <svg:linearGradient
+       id="linearGradient4292">
+      <svg:stop
+         id="stop4294"
+         offset="0.0000000"
+         style="stop-color:#fafafa;stop-opacity:1.0000000;" />
+      <svg:stop
+         style="stop-color:#a8a8a8;stop-opacity:1;"
+         offset="0.5"
+         id="stop4296" />
+      <svg:stop
+         id="stop4298"
+         offset="1"
+         style="stop-color:#cdcdcd;stop-opacity:1;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient259"
+       id="linearGradient8236"
+       x1="25.875"
+       y1="10.625"
+       x2="25.25"
+       y2="30.875"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.238806,0,-7.880597)" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient13842">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop13844" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop13846" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4304">
+      <svg:stop
+         style="stop-color:#6194cb;stop-opacity:1;"
+         offset="0"
+         id="stop4306" />
+      <svg:stop
+         style="stop-color:#729fcf;stop-opacity:1;"
+         offset="1"
+         id="stop4308" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4310">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.13402061;"
+         offset="0.0000000"
+         id="stop4312" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.051546391;"
+         offset="1.0000000"
+         id="stop4314" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4316">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop4318" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop4320" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4322">
+      <svg:stop
+         style="stop-color:#a0a0a0;stop-opacity:1;"
+         offset="0"
+         id="stop4324" />
+      <svg:stop
+         style="stop-color:#a8a8a8;stop-opacity:1;"
+         offset="1"
+         id="stop4326" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4328">
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.70059878;"
+         offset="0.0000000"
+         id="stop4330" />
+      <svg:stop
+         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop4332" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient335"
+       id="linearGradient155"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.421537,0.703464)"
+       x1="19.116116"
+       y1="28.946041"
+       x2="19.426924"
+       y2="51.912693" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient148"
+       id="linearGradient156"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.535299,0,0,0.651339,3.451418,2.448)"
+       x1="14.899379"
+       y1="27.059643"
+       x2="22.715446"
+       y2="41.836895" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient137"
+       id="linearGradient158"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.462696,0,0.06907908,0.683669,0,0)"
+       x1="5.2657914"
+       y1="18.725863"
+       x2="8.212224"
+       y2="52.625851" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1789"
+       id="radialGradient159"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.015635,0,0.103105,1.000512,0,-0.08369458)"
+       cx="26.106777"
+       cy="38.195114"
+       fx="26.106777"
+       fy="38.195114"
+       r="32.259769" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient13162"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.022118,52.05694,-1.323026)"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13842"
+       id="linearGradient13848"
+       x1="22.25"
+       y1="37.625"
+       x2="19.75"
+       y2="14.875"
+       gradientUnits="userSpaceOnUse" />
+    <svg:radialGradient
+       r="37.751713"
+       fy="3.7561285"
+       fx="8.824419"
+       cy="3.7561285"
+       cx="8.824419"
+       gradientTransform="matrix(20.522683,0,0,22.184657,924.04189,-342.74662)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3941"
+       xlink:href="#linearGradient269"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="30.875"
+       x2="25.25"
+       y1="10.625"
+       x1="25.875"
+       gradientTransform="matrix(21.195141,0,0,26.256668,-16.270574,-149.30762)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3939"
+       xlink:href="#linearGradient259"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="51.912693"
+       x2="19.426924"
+       y1="28.946041"
+       x1="19.116116"
+       gradientTransform="matrix(30.129677,0,0,14.910019,-16.270574,17.722744)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3927"
+       xlink:href="#linearGradient335"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="117.14286"
+       fy="486.64789"
+       fx="605.71429"
+       cy="486.64789"
+       cx="605.71429"
+       gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3014"
+       xlink:href="#linearGradient5060"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="117.14286"
+       fy="486.64789"
+       fx="605.71429"
+       cy="486.64789"
+       cx="605.71429"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3012"
+       xlink:href="#linearGradient5060"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="609.50507"
+       x2="302.85715"
+       y1="366.64789"
+       x1="302.85715"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4185"
+       xlink:href="#linearGradient5048"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       id="linearGradient137">
+      <svg:stop
+         id="stop138"
+         offset="0.0000000"
+         style="stop-color:#ffffff;stop-opacity:0.70059878;" />
+      <svg:stop
+         id="stop139"
+         offset="1.0000000"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient1789">
+      <svg:stop
+         id="stop1790"
+         offset="0"
+         style="stop-color:#a0a0a0;stop-opacity:1;" />
+      <svg:stop
+         id="stop1791"
+         offset="1"
+         style="stop-color:#a8a8a8;stop-opacity:1;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient335">
+      <svg:stop
+         id="stop336"
+         offset="0.0000000"
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+      <svg:stop
+         id="stop337"
+         offset="1.0000000"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient148">
+      <svg:stop
+         id="stop149"
+         offset="0.0000000"
+         style="stop-color:#ffffff;stop-opacity:0.13402061;" />
+      <svg:stop
+         id="stop150"
+         offset="1.0000000"
+         style="stop-color:#ffffff;stop-opacity:0.051546391;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient9766">
+      <svg:stop
+         id="stop9768"
+         offset="0"
+         style="stop-color:#6194cb;stop-opacity:1;" />
+      <svg:stop
+         id="stop9770"
+         offset="1"
+         style="stop-color:#729fcf;stop-opacity:1;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient259">
+      <svg:stop
+         style="stop-color:#fafafa;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop260" />
+      <svg:stop
+         id="stop8238"
+         offset="0.5"
+         style="stop-color:#a8a8a8;stop-opacity:1;" />
+      <svg:stop
+         style="stop-color:#cdcdcd;stop-opacity:1;"
+         offset="1"
+         id="stop261" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient269">
+      <svg:stop
+         style="stop-color:#a3a3a3;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop270" />
+      <svg:stop
+         style="stop-color:#4c4c4c;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop271" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient5048">
+      <svg:stop
+         id="stop5050"
+         offset="0"
+         style="stop-color:black;stop-opacity:0;" />
+      <svg:stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0.5"
+         id="stop5056" />
+      <svg:stop
+         id="stop5052"
+         offset="1"
+         style="stop-color:black;stop-opacity:0;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient5060"
+       inkscape:collect="always">
+      <svg:stop
+         id="stop5062"
+         offset="0"
+         style="stop-color:black;stop-opacity:1;" />
+      <svg:stop
+         id="stop5064"
+         offset="1"
+         style="stop-color:black;stop-opacity:0;" />
+    </svg:linearGradient>
+    <inkscape:perspective
+       id="perspective90"
+       inkscape:persp3d-origin="24 : 16 : 1"
+       inkscape:vp_z="48 : 24 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 24 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1789"
+       id="radialGradient4343"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.666417,0,2.1995263,21.343799,-20.689597,16.611392)"
+       cx="26.106777"
+       cy="38.195114"
+       fx="26.106777"
+       fy="38.195114"
+       r="32.259769" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5048"
+       id="linearGradient4345"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
+       x1="302.85715"
+       y1="366.64789"
+       x2="302.85715"
+       y2="609.50507" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient4347"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient4349"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient137"
+       id="linearGradient4351"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(31.203514,0,1.4736555,14.584627,-20.689597,18.396838)"
+       x1="5.2657914"
+       y1="18.725863"
+       x2="8.212224"
+       y2="52.625851" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13842"
+       id="linearGradient4353"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.332877,0,0,21.332877,-20.689597,18.396838)"
+       x1="22.25"
+       y1="37.625"
+       x2="19.75"
+       y2="14.875" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient259"
+       id="linearGradient4355"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.332877,0,0,26.427295,-20.689597,-149.71897)"
+       x1="25.875"
+       y1="10.625"
+       x2="25.25"
+       y2="30.875" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient269"
+       id="radialGradient4357"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(20.656049,0,0,22.328825,925.73347,-344.41502)"
+       cx="8.824419"
+       cy="3.7561285"
+       fx="8.824419"
+       fy="3.7561285"
+       r="37.751713" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient259"
+       id="linearGradient4370"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.332877,0,0,26.427295,1029.4989,-15.343308)"
+       x1="25.875"
+       y1="10.625"
+       x2="25.25"
+       y2="30.875" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient269"
+       id="radialGradient4372"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(20.656049,0,0,22.328825,1975.922,-210.03936)"
+       cx="8.824419"
+       cy="3.7561285"
+       fx="8.824419"
+       fy="3.7561285"
+       r="37.751713" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13842"
+       id="linearGradient4375"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.332877,0,0,21.332877,-851.616,315.30083)"
+       x1="22.25"
+       y1="37.625"
+       x2="19.75"
+       y2="14.875" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient137"
+       id="linearGradient4395"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(31.203514,0,1.4736555,14.584627,-851.616,315.30083)"
+       x1="5.2657914"
+       y1="18.725863"
+       x2="8.212224"
+       y2="52.625851" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1789"
+       id="radialGradient4405"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.666417,0,2.1995263,21.343799,-851.616,313.51538)"
+       cx="26.106777"
+       cy="38.195114"
+       fx="26.106777"
+       fy="38.195114"
+       r="32.259769" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient259"
+       id="linearGradient4417"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.332877,0,0,26.427295,1029.4989,-15.343308)"
+       x1="25.875"
+       y1="10.625"
+       x2="25.25"
+       y2="30.875" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient269"
+       id="radialGradient4419"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(20.656049,0,0,22.328825,1975.922,-210.03936)"
+       cx="8.824419"
+       cy="3.7561285"
+       fx="8.824419"
+       fy="3.7561285"
+       r="37.751713" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3877"
+       id="linearGradient4463"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3059451,-0.02958628,0.04222916,0.3111526,-530.12905,-128.33652)"
+       x1="218.05919"
+       y1="352.40601"
+       x2="274.42526"
+       y2="77.315956" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3871"
+       id="linearGradient4465"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="46.210991"
+       y1="40.43428"
+       x2="115.25708"
+       y2="167.01372" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3445"
+       id="linearGradient4468"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.6634183,-549.10198,-146.13056)"
+       x1="79.24601"
+       y1="-126.40256"
+       x2="140.07268"
+       y2="166.59012" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3368"
+       id="linearGradient4470"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0010993,0,0,0.9771436,-428.22672,-61.489698)"
+       x1="-52.615292"
+       y1="111.33359"
+       x2="-89.16851"
+       y2="-160.22696" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3354"
+       id="linearGradient4472"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="122.18343"
+       y1="38.274925"
+       x2="50.208416"
+       y2="94.389671" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3548"
+       id="linearGradient4474"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-529.08226,-219.5891)"
+       x1="78.742409"
+       y1="77.995888"
+       x2="26.839462"
+       y2="35.082928" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3883"
+       id="linearGradient4476"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3145759,0.0330998,-0.03170279,0.284888,-530.57037,-223.10227)"
+       x1="664.31964"
+       y1="393.5126"
+       x2="255.13704"
+       y2="778.66467" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3889"
+       id="linearGradient4478"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="215.03511"
+       y1="74.194183"
+       x2="47.782467"
+       y2="162.96616" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3468"
+       id="linearGradient4480"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="198.59323"
+       y1="97.137428"
+       x2="58.94891"
+       y2="147.25517" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3413"
+       id="linearGradient4482"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="-75.3908"
+       y1="321.58548"
+       x2="127.22198"
+       y2="102.69514" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3428"
+       id="linearGradient4484"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="150.07268"
+       y1="69.702202"
+       x2="153.63531"
+       y2="103.83543" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3488"
+       id="linearGradient4486"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="75.485207"
+       y1="216.26877"
+       x2="150.18037"
+       y2="78.337875" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3534"
+       id="linearGradient4488"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="81.348701"
+       y1="55.91547"
+       x2="114.70522"
+       y2="140.30176" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3877"
+       id="linearGradient4545"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3059451,-0.02958628,0.04222916,0.3111526,-530.12905,-128.33652)"
+       x1="218.05919"
+       y1="352.40601"
+       x2="274.42526"
+       y2="77.315956" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3871"
+       id="linearGradient4547"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="46.210991"
+       y1="40.43428"
+       x2="115.25708"
+       y2="167.01372" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3445"
+       id="linearGradient4549"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.6634183,-549.10198,-146.13056)"
+       x1="79.24601"
+       y1="-126.40256"
+       x2="140.07268"
+       y2="166.59012" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3368"
+       id="linearGradient4551"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0010993,0,0,0.9771436,-428.22672,-61.489698)"
+       x1="-52.615292"
+       y1="111.33359"
+       x2="-89.16851"
+       y2="-160.22696" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3354"
+       id="linearGradient4553"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="122.18343"
+       y1="38.274925"
+       x2="50.208416"
+       y2="94.389671" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3548"
+       id="linearGradient4555"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-529.08226,-219.5891)"
+       x1="78.742409"
+       y1="77.995888"
+       x2="26.839462"
+       y2="35.082928" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient259"
+       id="linearGradient4557"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(21.332877,0,0,26.427295,1029.4989,-15.343308)"
+       x1="25.875"
+       y1="10.625"
+       x2="25.25"
+       y2="30.875" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient269"
+       id="radialGradient4559"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(20.656049,0,0,22.328825,1975.922,-210.03936)"
+       cx="8.824419"
+       cy="3.7561285"
+       fx="8.824419"
+       fy="3.7561285"
+       r="37.751713" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3883"
+       id="linearGradient4561"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3145759,0.0330998,-0.03170279,0.284888,-530.57037,-223.10227)"
+       x1="664.31964"
+       y1="393.5126"
+       x2="255.13704"
+       y2="778.66467" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3889"
+       id="linearGradient4563"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="215.03511"
+       y1="74.194183"
+       x2="47.782467"
+       y2="162.96616" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3468"
+       id="linearGradient4565"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="198.59323"
+       y1="97.137428"
+       x2="58.94891"
+       y2="147.25517" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3413"
+       id="linearGradient4567"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="-75.3908"
+       y1="321.58548"
+       x2="127.22198"
+       y2="102.69514" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3428"
+       id="linearGradient4569"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="150.07268"
+       y1="69.702202"
+       x2="153.63531"
+       y2="103.83543" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3488"
+       id="linearGradient4571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="75.485207"
+       y1="216.26877"
+       x2="150.18037"
+       y2="78.337875" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3534"
+       id="linearGradient4573"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="81.348701"
+       y1="55.91547"
+       x2="114.70522"
+       y2="140.30176" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3877"
+       id="linearGradient4622"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3059451,-0.02958628,0.04222916,0.3111526,-530.12905,-128.33652)"
+       x1="218.05919"
+       y1="352.40601"
+       x2="274.42526"
+       y2="77.315956" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3871"
+       id="linearGradient4624"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="46.210991"
+       y1="40.43428"
+       x2="115.25708"
+       y2="167.01372" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3445"
+       id="linearGradient4626"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.6634183,-549.10198,-146.13056)"
+       x1="79.24601"
+       y1="-126.40256"
+       x2="140.07268"
+       y2="166.59012" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3548"
+       id="linearGradient4632"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-529.08226,-219.5891)"
+       x1="78.742409"
+       y1="77.995888"
+       x2="26.839462"
+       y2="35.082928" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3883"
+       id="linearGradient4638"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3145759,0.0330998,-0.03170279,0.284888,-530.57037,-223.10227)"
+       x1="664.31964"
+       y1="393.5126"
+       x2="255.13704"
+       y2="778.66467" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3889"
+       id="linearGradient4640"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="215.03511"
+       y1="74.194183"
+       x2="47.782467"
+       y2="162.96616" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3468"
+       id="linearGradient4642"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="198.59323"
+       y1="97.137428"
+       x2="58.94891"
+       y2="147.25517" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3413"
+       id="linearGradient4644"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="-75.3908"
+       y1="321.58548"
+       x2="127.22198"
+       y2="102.69514" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3428"
+       id="linearGradient4646"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-549.10198,-163.20059)"
+       x1="150.07268"
+       y1="69.702202"
+       x2="153.63531"
+       y2="103.83543" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3468"
+       id="linearGradient5453"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.8858634,0.536476,-0.6993581,7.6729007,-462.79782,172.568)"
+       x1="198.59323"
+       y1="97.137428"
+       x2="58.94891"
+       y2="147.25517" />
+    <inkscape:perspective
+       id="perspective101"
+       inkscape:persp3d-origin="20 : 13.333333 : 1"
+       inkscape:vp_z="40 : 20 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 20 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <svg:radialGradient
+       cx="373.08163"
+       cy="123.36477"
+       r="184.27052"
+       fx="373.08163"
+       fy="123.36477"
+       id="radialGradient1982"
+       xlink:href="#linearGradient15386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.863204,0,16.87579)" />
+    <svg:radialGradient
+       cx="373.08163"
+       cy="123.36477"
+       r="184.27052"
+       fx="373.08163"
+       fy="123.36477"
+       id="radialGradient15392"
+       xlink:href="#linearGradient15386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.863204,0,16.87579)" />
+    <svg:linearGradient
+       id="linearGradient15386">
+      <svg:stop
+         style="stop-color:#35a5ec;stop-opacity:1"
+         offset="0"
+         id="stop15388" />
+      <svg:stop
+         style="stop-color:#2681da;stop-opacity:1"
+         offset="1"
+         id="stop15390" />
+    </svg:linearGradient>
+    <svg:radialGradient
+       cx="318.60364"
+       cy="175.1584"
+       r="164.73401"
+       fx="318.60364"
+       fy="175.1584"
+       id="radialGradient18940"
+       xlink:href="#linearGradient18934"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.014494,-13.81818,-5.80099)" />
+    <svg:linearGradient
+       id="linearGradient18934">
+      <svg:stop
+         style="stop-color:#eeeeee;stop-opacity:1"
+         offset="0"
+         id="stop18936" />
+      <svg:stop
+         style="stop-color:#d5e1fd;stop-opacity:1"
+         offset="1"
+         id="stop18938" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       x1="223.06319"
+       y1="173.16895"
+       x2="410.07242"
+       y2="173.16895"
+       id="linearGradient5577"
+       xlink:href="#linearGradient5571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,129.5808,486.4738)" />
+    <svg:linearGradient
+       id="linearGradient5571">
+      <svg:stop
+         style="stop-color:#4b9fdb;stop-opacity:1"
+         offset="0"
+         id="stop5573" />
+      <svg:stop
+         style="stop-color:#7ec9fd;stop-opacity:1"
+         offset="0.5"
+         id="stop5579" />
+      <svg:stop
+         style="stop-color:#4b9fdb;stop-opacity:1"
+         offset="1"
+         id="stop5575" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       x1="239.05807"
+       y1="175.02803"
+       x2="393.35095"
+       y2="175.02803"
+       id="linearGradient7375"
+       xlink:href="#linearGradient8262"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,127.3584,487.9698)" />
+    <svg:linearGradient
+       id="linearGradient8262">
+      <svg:stop
+         style="stop-color:#7dc1f3;stop-opacity:1"
+         offset="0"
+         id="stop8264" />
+      <svg:stop
+         style="stop-color:#aaddff;stop-opacity:1"
+         offset="0.5"
+         id="stop8268" />
+      <svg:stop
+         style="stop-color:#7dc1f3;stop-opacity:1"
+         offset="1"
+         id="stop8266" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       x1="258.18005"
+       y1="174.32866"
+       x2="374.4324"
+       y2="174.32866"
+       id="linearGradient9177"
+       xlink:href="#linearGradient9171"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,128.1595,487.3718)" />
+    <svg:linearGradient
+       id="linearGradient9171">
+      <svg:stop
+         style="stop-color:#b0ddff;stop-opacity:1"
+         offset="0"
+         id="stop9173" />
+      <svg:stop
+         style="stop-color:#cae8ff;stop-opacity:1"
+         offset="0.5"
+         id="stop9179" />
+      <svg:stop
+         style="stop-color:#b0ddff;stop-opacity:1"
+         offset="1"
+         id="stop9175" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       x1="258.18005"
+       y1="174.32866"
+       x2="374.4324"
+       y2="174.32866"
+       id="linearGradient7467"
+       xlink:href="#linearGradient9171"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,128.1595,487.3718)" />
+    <svg:linearGradient
+       x1="239.05807"
+       y1="175.02803"
+       x2="393.35095"
+       y2="175.02803"
+       id="linearGradient7469"
+       xlink:href="#linearGradient8262"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,127.3584,487.9698)" />
+    <svg:linearGradient
+       x1="223.06319"
+       y1="173.16895"
+       x2="410.07242"
+       y2="173.16895"
+       id="linearGradient7471"
+       xlink:href="#linearGradient5571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,129.5808,486.4738)" />
+    <svg:radialGradient
+       cx="318.60364"
+       cy="175.1584"
+       r="164.73401"
+       fx="318.60364"
+       fy="175.1584"
+       id="radialGradient7473"
+       xlink:href="#linearGradient18934"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.014494,-13.81818,-5.80099)" />
+    <svg:radialGradient
+       cx="373.08163"
+       cy="123.36477"
+       r="184.27052"
+       fx="373.08163"
+       fy="123.36477"
+       id="radialGradient7475"
+       xlink:href="#linearGradient15386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.863204,0,16.87579)" />
+    <svg:radialGradient
+       cx="373.08163"
+       cy="123.36477"
+       r="184.27052"
+       fx="373.08163"
+       fy="123.36477"
+       id="radialGradient7477"
+       xlink:href="#linearGradient15386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.863204,0,16.87579)" />
+    <svg:radialGradient
+       cx="373.08163"
+       cy="123.36477"
+       r="184.27052"
+       fx="373.08163"
+       fy="123.36477"
+       id="radialGradient2351"
+       xlink:href="#linearGradient15386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.863204,0,16.87579)" />
+    <svg:radialGradient
+       cx="373.08163"
+       cy="123.36477"
+       r="184.27052"
+       fx="373.08163"
+       fy="123.36477"
+       id="radialGradient2444"
+       xlink:href="#linearGradient15386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.863204,0,16.87579)" />
+    <svg:linearGradient
+       x1="223.06319"
+       y1="173.16895"
+       x2="410.07242"
+       y2="173.16895"
+       id="linearGradient2460"
+       xlink:href="#linearGradient5571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,129.5808,486.47405)" />
+    <svg:linearGradient
+       x1="239.05807"
+       y1="175.02803"
+       x2="393.35095"
+       y2="175.02803"
+       id="linearGradient2463"
+       xlink:href="#linearGradient8262"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,127.3584,487.97005)" />
+    <svg:linearGradient
+       x1="258.18005"
+       y1="174.32866"
+       x2="374.4324"
+       y2="174.32866"
+       id="linearGradient2466"
+       xlink:href="#linearGradient9171"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1,1,0,128.1595,487.37205)" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2836" />
+    <inkscape:perspective
+       id="perspective2848"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2848-1"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2987"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3017"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(0.16771266,0,0,0.18891262,54.495277,-4.6228462)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3144"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.09644477,0,0,0.05113032,48.549857,1.9706761)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3142"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(0.18997038,0,0,0.22170696,58.38146,-203.92413)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3140"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(0.16771266,0,0,0.18891262,44.972432,-4.6228462)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3138"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.09644477,0,0,0.05113032,39.027011,1.9706761)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3136"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(0.18997038,0,0,0.22170696,48.858615,-203.92413)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3134"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(0.16771266,0,0,0.18891262,54.495277,-4.6228462)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3122"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.09644477,0,0,0.05113032,48.549857,1.9706761)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3120"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(0.18997038,0,0,0.22170696,58.38146,-203.92413)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3118"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(0.16771266,0,0,0.18891262,44.972432,-4.6228462)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3116"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.09644477,0,0,0.05113032,39.027011,1.9706761)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3114"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(0.18997038,0,0,0.22170696,48.858615,-203.92413)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3112"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(0.18997038,0,0,0.22170696,58.38146,-203.92413)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3099"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.09644477,0,0,0.05113032,48.549857,1.9706761)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3096"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(0.16771266,0,0,0.18891262,54.495277,-4.6228462)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3093"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3090"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,490.85,454.15)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3088"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,543.39,-646.15)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3086"
+       xlink:href="#linearGradient4244"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(0.18997038,0,0,0.22170696,48.858615,-203.92413)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3083-8"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.09644477,0,0,0.05113032,39.027011,1.9706761)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3080"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(0.16771266,0,0,0.18891262,44.972432,-4.6228462)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3077"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="36"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3074"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="24.25"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,439.96,454.15)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3072"
+       xlink:href="#linearGradient4338"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,492.5,-646.15)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3070"
+       xlink:href="#linearGradient4240-0"
+       inkscape:collect="always" />
+    <svg:radialGradient
+       r="49.5"
+       gradientTransform="matrix(1.0152,0,0,1.1848,594.9,-645.9)"
+       cx="-122.32"
+       cy="953.13"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4243"
+       id="radialGradient5724" />
+    <svg:radialGradient
+       r="24.25"
+       gradientTransform="matrix(0.5154,0,0,0.27324,542.36,454.4)"
+       cx="-160.19"
+       cy="55.827"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4338"
+       id="radialGradient5721" />
+    <svg:radialGradient
+       r="36"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       cx="-119.59"
+       cy="30.917999"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4243"
+       id="radialGradient5717" />
+    <svg:radialGradient
+       r="49.5"
+       gradientTransform="matrix(1.0152,0,0,1.1848,543.39,-646.15)"
+       cx="-122.32"
+       cy="953.13"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4244"
+       id="radialGradient5711" />
+    <svg:radialGradient
+       r="24.25"
+       gradientTransform="matrix(0.5154,0,0,0.27324,490.85,454.15)"
+       cx="-160.19"
+       cy="55.827"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4338"
+       id="radialGradient5708" />
+    <svg:radialGradient
+       r="36"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       cx="-119.59"
+       cy="30.917999"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4244"
+       id="radialGradient5704" />
+    <svg:radialGradient
+       r="49.5"
+       gradientTransform="matrix(1.0152,0,0,1.1848,492.5,-646.15)"
+       cx="-122.32"
+       cy="953.13"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4240-0"
+       id="radialGradient5698" />
+    <svg:radialGradient
+       r="24.25"
+       gradientTransform="matrix(0.5154,0,0,0.27324,439.96,454.15)"
+       cx="-160.19"
+       cy="55.827"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4338"
+       id="radialGradient5695" />
+    <svg:radialGradient
+       r="36"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       cx="-119.59"
+       cy="30.917999"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4240-0"
+       id="radialGradient5691" />
+    <svg:radialGradient
+       r="49.5"
+       gradientTransform="matrix(1.0152,0,0,1.1848,440.53,-646.15)"
+       cx="-122.32"
+       cy="953.13"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4241"
+       id="radialGradient5685" />
+    <svg:radialGradient
+       r="24.25"
+       gradientTransform="matrix(0.5154,0,0,0.27324,387.99,454.15)"
+       cx="-160.19"
+       cy="55.827"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4338"
+       id="radialGradient5682" />
+    <svg:radialGradient
+       r="36"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       cx="-119.59"
+       cy="30.917999"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4241"
+       id="radialGradient5678" />
+    <svg:radialGradient
+       r="49.5"
+       gradientTransform="matrix(1.0152,0,0,1.1848,388.85,-646.15)"
+       cx="-122.32"
+       cy="953.13"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4242"
+       id="radialGradient5672" />
+    <svg:radialGradient
+       r="24.25"
+       gradientTransform="matrix(0.5154,0,0,0.27324,336.31,454.15)"
+       cx="-160.19"
+       cy="55.827"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4338"
+       id="radialGradient5669" />
+    <svg:radialGradient
+       r="36"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       cx="-119.59"
+       cy="30.917999"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4242"
+       id="radialGradient5665" />
+    <svg:linearGradient
+       id="linearGradient4338">
+      <svg:stop
+         offset="0"
+         stop-color="#2e3436"
+         id="stop4340" />
+      <svg:stop
+         offset="1"
+         stop-opacity="0"
+         stop-color="#2e3436"
+         id="stop4342" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4240-0">
+      <svg:stop
+         offset="0"
+         stop-color="#9ce008"
+         id="stop4242-9" />
+      <svg:stop
+         offset="1"
+         stop-color="#65a320"
+         id="stop4244-4" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4244">
+      <svg:stop
+         offset="0"
+         stop-color="#07c9df"
+         id="stop5886" />
+      <svg:stop
+         offset="1"
+         stop-color="#1f7fa1"
+         id="stop5888" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4243">
+      <svg:stop
+         offset="0"
+         stop-color="#df0775"
+         id="stop13705" />
+      <svg:stop
+         offset="1"
+         stop-color="#a11f48"
+         id="stop13707" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4242">
+      <svg:stop
+         offset="0"
+         stop-color="#df2e07"
+         id="stop15192" />
+      <svg:stop
+         offset="1"
+         stop-color="#a1241f"
+         id="stop15194" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4241">
+      <svg:stop
+         offset="0"
+         stop-color="#f7f108"
+         id="stop20934" />
+      <svg:stop
+         offset="1"
+         stop-color="#98b64a"
+         id="stop20936" />
+    </svg:linearGradient>
+    <svg:filter
+       x="-0.12375"
+       y="-0.33000001"
+       color-interpolation-filters="sRGB"
+       width="1.2474999"
+       height="1.66"
+       id="filter3927">
+      <svg:feGaussianBlur
+         stdDeviation="2.475"
+         id="feGaussianBlur3929" />
+    </svg:filter>
+    <svg:filter
+       id="filter3927-3"
+       height="1.66"
+       width="1.2474999"
+       color-interpolation-filters="sRGB"
+       y="-0.33000001"
+       x="-0.12375">
+      <svg:feGaussianBlur
+         id="feGaussianBlur3929-7"
+         stdDeviation="2.475" />
+    </svg:filter>
+    <svg:linearGradient
+       id="linearGradient4241-4">
+      <svg:stop
+         id="stop20934-9"
+         stop-color="#f7f108"
+         offset="0" />
+      <svg:stop
+         id="stop20936-6"
+         stop-color="#98b64a"
+         offset="1" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4242-6">
+      <svg:stop
+         id="stop15192-1"
+         stop-color="#df2e07"
+         offset="0" />
+      <svg:stop
+         id="stop15194-8"
+         stop-color="#a1241f"
+         offset="1" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4243-6">
+      <svg:stop
+         id="stop13705-0"
+         stop-color="#df0775"
+         offset="0" />
+      <svg:stop
+         id="stop13707-6"
+         stop-color="#a11f48"
+         offset="1" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4244-3">
+      <svg:stop
+         id="stop5886-4"
+         stop-color="#07c9df"
+         offset="0" />
+      <svg:stop
+         id="stop5888-4"
+         stop-color="#1f7fa1"
+         offset="1" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4240-3">
+      <svg:stop
+         id="stop4242-8"
+         stop-color="#9ce008"
+         offset="0" />
+      <svg:stop
+         id="stop4244-9"
+         stop-color="#65a320"
+         offset="1" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4338-0">
+      <svg:stop
+         id="stop4340-6"
+         stop-color="#2e3436"
+         offset="0" />
+      <svg:stop
+         id="stop4342-1"
+         stop-color="#2e3436"
+         stop-opacity="0"
+         offset="1" />
+    </svg:linearGradient>
+    <svg:radialGradient
+       id="radialGradient5665-0"
+       xlink:href="#linearGradient4242-6"
+       gradientUnits="userSpaceOnUse"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       r="36" />
+    <svg:radialGradient
+       id="radialGradient5669-9"
+       xlink:href="#linearGradient4338-0"
+       gradientUnits="userSpaceOnUse"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,336.31,454.15)"
+       r="24.25" />
+    <svg:radialGradient
+       id="radialGradient5672-0"
+       xlink:href="#linearGradient4242-6"
+       gradientUnits="userSpaceOnUse"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,388.85,-646.15)"
+       r="49.5" />
+    <svg:radialGradient
+       id="radialGradient5678-5"
+       xlink:href="#linearGradient4241-4"
+       gradientUnits="userSpaceOnUse"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       r="36" />
+    <svg:radialGradient
+       id="radialGradient5682-6"
+       xlink:href="#linearGradient4338-0"
+       gradientUnits="userSpaceOnUse"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,387.99,454.15)"
+       r="24.25" />
+    <svg:radialGradient
+       id="radialGradient5685-8"
+       xlink:href="#linearGradient4241-4"
+       gradientUnits="userSpaceOnUse"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,440.53,-646.15)"
+       r="49.5" />
+    <svg:radialGradient
+       id="radialGradient5691-4"
+       xlink:href="#linearGradient4240-3"
+       gradientUnits="userSpaceOnUse"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       r="36" />
+    <svg:radialGradient
+       id="radialGradient5695-2"
+       xlink:href="#linearGradient4338-0"
+       gradientUnits="userSpaceOnUse"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,439.96,454.15)"
+       r="24.25" />
+    <svg:radialGradient
+       id="radialGradient5698-0"
+       xlink:href="#linearGradient4240-3"
+       gradientUnits="userSpaceOnUse"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,492.5,-646.15)"
+       r="49.5" />
+    <svg:radialGradient
+       id="radialGradient5704-6"
+       xlink:href="#linearGradient4244-3"
+       gradientUnits="userSpaceOnUse"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       r="36" />
+    <svg:radialGradient
+       id="radialGradient5708-8"
+       xlink:href="#linearGradient4338-0"
+       gradientUnits="userSpaceOnUse"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,490.85,454.15)"
+       r="24.25" />
+    <svg:radialGradient
+       id="radialGradient5711-2"
+       xlink:href="#linearGradient4244-3"
+       gradientUnits="userSpaceOnUse"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,543.39,-646.15)"
+       r="49.5" />
+    <svg:radialGradient
+       id="radialGradient5717-0"
+       xlink:href="#linearGradient4243-6"
+       gradientUnits="userSpaceOnUse"
+       cy="30.917999"
+       cx="-119.59"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       r="36" />
+    <svg:radialGradient
+       id="radialGradient5721-5"
+       xlink:href="#linearGradient4338-0"
+       gradientUnits="userSpaceOnUse"
+       cy="55.827"
+       cx="-160.19"
+       gradientTransform="matrix(0.5154,0,0,0.27324,542.36,454.4)"
+       r="24.25" />
+    <svg:radialGradient
+       id="radialGradient5724-6"
+       xlink:href="#linearGradient4243-6"
+       gradientUnits="userSpaceOnUse"
+       cy="953.13"
+       cx="-122.32"
+       gradientTransform="matrix(1.0152,0,0,1.1848,594.9,-645.9)"
+       r="49.5" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240-3"
+       id="radialGradient3070-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0152,0,0,1.1848,492.5,-646.15)"
+       cx="-122.32"
+       cy="953.13"
+       r="49.5" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4338-0"
+       id="radialGradient3072-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5154,0,0,0.27324,439.96,454.15)"
+       cx="-160.19"
+       cy="55.827"
+       r="24.25" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240-3"
+       id="radialGradient3074-1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.973,3.8889e-8,-4.3805e-8,2.2224,122.6,-45.229)"
+       cx="-119.59"
+       cy="30.917999"
+       r="36" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240-3"
+       id="radialGradient3077-3"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15596979,0,0,0.17568539,27.764291,-3.4185523)"
+       cx="-119.59"
+       cy="30.917999"
+       r="36" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4338-0"
+       id="radialGradient3080-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.08969192,0,0,0.04755029,22.235156,2.7133062)"
+       cx="-160.19"
+       cy="55.827"
+       r="24.25" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240-3"
+       id="radialGradient3083-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.17666906,0,0,0.20618352,31.378372,-188.76519)"
+       cx="-122.32"
+       cy="953.13"
+       r="49.5" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240-3"
+       id="radialGradient3091"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.17666906,0,0,0.20618352,31.378372,-188.76519)"
+       cx="-122.32"
+       cy="953.13"
+       r="49.5" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4338-0"
+       id="radialGradient3093-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.08969192,0,0,0.04755029,22.235156,2.7133062)"
+       cx="-160.19"
+       cy="55.827"
+       r="24.25" />
+    <svg:radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4240-3"
+       id="radialGradient3095"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15596979,0,0,0.17568539,27.764291,-3.4185523)"
+       cx="-119.59"
+       cy="30.917999"
+       r="36" />
+    <svg:linearGradient
+       y2="1065.3704"
+       x2="-2.2739408"
+       y1="1036.4529"
+       x1="6.1207004"
+       gradientTransform="matrix(52.04199,0,0,56.717915,47.200937,-58694.195)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3802"
+       xlink:href="#linearGradient4448"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="1065.3704"
+       x2="-2.2739408"
+       y1="1036.4529"
+       x1="6.1207004"
+       gradientTransform="matrix(52.04199,0,0,56.717915,47.200937,-58694.195)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4614"
+       xlink:href="#linearGradient4448"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="1065.3704"
+       x2="-2.2739408"
+       y1="1036.4529"
+       x1="6.1207004"
+       gradientTransform="matrix(0.98054597,0,0,1.0174418,0.11907227,-18.358371)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4607"
+       xlink:href="#linearGradient4448"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="1065.3704"
+       x2="-2.2739408"
+       y1="1036.4529"
+       x1="6.1207004"
+       gradientTransform="matrix(0.98054597,0,0,1.0174418,0.11907227,-18.358371)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4597"
+       xlink:href="#linearGradient4448"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="1065.3704"
+       x2="-2.2739408"
+       y1="1036.4529"
+       x1="6.1207004"
+       gradientTransform="matrix(0.98054597,0,0,1.0174418,0.11907227,-18.358371)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4586"
+       xlink:href="#linearGradient4448"
+       inkscape:collect="always" />
+    <svg:linearGradient
+       y2="1065.3704"
+       x2="-2.2739408"
+       y1="1036.4529"
+       x1="6.1207004"
+       gradientTransform="matrix(0.98054597,0,0,1.0174418,0.11907227,-18.358371)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4574"
+       xlink:href="#linearGradient4448"
+       inkscape:collect="always" />
+    <svg:filter
+       color-interpolation-filters="sRGB"
+       id="filter3820"
+       inkscape:collect="always">
+      <svg:feGaussianBlur
+         id="feGaussianBlur3822"
+         stdDeviation="0.096293615"
+         inkscape:collect="always" />
+    </svg:filter>
+    <inkscape:perspective
+       id="perspective2824"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <svg:linearGradient
+       id="linearGradient3788">
+      <svg:stop
+         id="stop3790"
+         offset="0"
+         style="stop-color:#0000ff;stop-opacity:1;" />
+      <svg:stop
+         id="stop3792"
+         offset="1"
+         style="stop-color:#0000ff;stop-opacity:0;" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient4448"
+       inkscape:collect="always">
+      <svg:stop
+         id="stop4450"
+         offset="0"
+         style="stop-color:#0000ff;stop-opacity:1;" />
+      <svg:stop
+         id="stop4452"
+         offset="1"
+         style="stop-color:#0000ff;stop-opacity:0;" />
+    </svg:linearGradient>
+  </svg:defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:cx="22.326902"
+     inkscape:cy="14.476435"
+     inkscape:zoom="22.311348"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1842"
+     inkscape:window-height="1051"
+     inkscape:window-x="69"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <svg:metadata
+     id="metadata3959">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <dc:date />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier />
+        <dc:source />
+        <dc:relation />
+        <dc:language />
+        <dc:subject>
+          <rdf:Bag />
+        </dc:subject>
+        <dc:coverage />
+        <dc:description />
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:contributor>
+        <cc:license
+           rdf:resource="" />
+      </cc:Work>
+    </rdf:RDF>
+  </svg:metadata>
+  <svg:g
+     inkscape:groupmode="layer"
+     inkscape:label="Warstwa 1"
+     id="layer1"
+     transform="translate(-256,-1123.7908)">
+    <svg:g
+       id="g4870"
+       transform="matrix(0.96044884,0,0,1.3099928,27.261953,-350.84694)">
+      <svg:path
+         id="path5219"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 278.81969,1128.5264 2.43163,6.6596 c 0,0 0.7542,-0.036 1.32996,0 0.37035,0.023 0.66396,-0.1265 0.94546,-0.3835 0.36495,-0.3332 0.70208,-0.7281 0.70208,-0.7281 l 3.73553,0.048 0.007,-6.122 -3.54383,0.039 c -1.45126,-0.9622 -3.43043,-2.0593 -4.69966,-2.2356"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path3247"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 268.36347,1127.8755 3.85291,-0.01 c 0.99325,-1.1212 1.95669,-1.1422 3.08794,-1.4948 2.6686,-0.8316 4.24273,1.7173 4.93459,2.1937 0.0978,0.068 0.14863,0.1116 0.21983,0.1912 1.16611,1.3032 1.35307,1.4258 2.11627,2.2189 0.55481,0.5758 0.75062,0.6475 0.75795,1.5721 0.008,1.0351 -0.11228,2.5545 -0.11228,2.5545 -0.15895,0.4826 -0.65926,0.7589 -1.09142,0.7744 -0.44213,0.4905 -0.86442,0.5918 -1.38595,0.4327 -0.22179,0.4693 -0.65741,0.7353 -1.27027,0.7018 -0.35863,0.3193 -0.54818,0.3289 -1.10146,0.2281 -3.44212,0.2131 -5.05335,-1.5064 -6.63243,-3.2598 l -3.38269,0.042 0.007,-6.1478 z"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5211"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 271.95209,1134.8311 1.32995,-1.2307 c 0.58254,-0.1179 1.01004,0.5457 0.75431,1.0123 l -1.17115,1.3697 c -0.60928,-0.024 -1.08932,-0.6074 -0.91311,-1.1513 z"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5205"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 273.24162,1135.7622 c 0.83398,-1.1732 1.55613,-1.7317 2.39243,-2.7747 0.64915,-0.5823 1.64851,0.1319 1.24434,0.8174 -0.40417,0.6853 -2.4001,2.7116 -2.58437,2.886 -0.47488,0.2284 -1.25546,-0.2904 -1.0524,-0.9287 z"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5213"
+         style="fill:none;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 279.46248,1136.9923 c 0.0606,-0.8109 0.0914,-1.565 0.0395,-2.0332 -0.27978,-0.5053 -1.37619,-1.2756 -2.24287,-1.9169"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5207"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 274.83035,1136.4191 c 0.99542,-1.078 1.8425,-2.2907 2.8187,-3.3944 0.5949,-0.615 1.67969,0.2138 1.25056,0.8139 -0.67554,0.9445 -2.55554,3.1448 -2.89811,3.4737 -0.46969,0.1918 -1.24934,-0.2805 -1.17115,-0.8932 z"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5223"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 279.69654,1125.81 c -0.86901,0.1914 -2.1132,1.0522 -3.13216,1.5948 -0.794,2.4539 -1.39666,3.2419 -0.6352,3.434 1.14193,0.3643 2.35878,-1.4631 2.8187,-2.64 l 1.5993,0.3942"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5215"
+         style="fill:none;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 280.75273,1136.3174 0.0198,-2.5209 -2.00485,-1.8262 -0.0397,-0.2183"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5217"
+         style="fill:none;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 279.74039,1130.2434 c 0,0 0.0219,0.035 0.0396,0.1985 0.0869,0.1271 1.94543,1.8193 2.1835,2.2033 0.007,1.0851 0.0263,2.1504 0.13895,3.2355"
+         inkscape:connector-curvature="0" />
+      <svg:path
+         id="path5209"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.27868372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 276.51017,1137.1774 c 0.0719,-0.1252 1.54242,-2.0569 2.21717,-2.7353 0.55753,-0.5606 1.57143,0.3149 0.92919,1.0837 -0.80929,0.9688 -1.36895,1.6831 -2.08133,2.217 -0.45612,0.1295 -1.12185,-0.1106 -1.06503,-0.5654 z"
+         inkscape:connector-curvature="0" />
+    </svg:g>
+    <svg:g
+       id="Layer_1"
+       transform="matrix(0.0625,0,0,0.0625,256,1123.7908)">
+      <svg:g
+         id="g116">
+        <svg:linearGradient
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_11_"
+           y2="11.573135"
+           x2="128.00047"
+           y1="244.42773"
+           x1="128.00049">
+          <svg:stop
+             offset="0.005615"
+             style="stop-color:#0035ed;stop-opacity:1"
+             id="stop120" />
+          <svg:stop
+             offset="0.54494399"
+             style="stop-color:#00008d;stop-opacity:1"
+             id="stop122" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#0053bd;stop-opacity:1"
+             id="stop124" />
+          <midPointStop
+             offset="0.005615"
+             style="stop-color:#0035ED"
+             id="midPointStop126" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#0035ED"
+             id="midPointStop128" />
+          <midPointStop
+             offset="0.544944"
+             style="stop-color:#00008D"
+             id="midPointStop130" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#00008D"
+             id="midPointStop132" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#0053BD"
+             id="midPointStop134" />
+        </svg:linearGradient>
+        <svg:path
+           style="fill:url(#XMLID_11_)"
+           id="path137"
+           d="m 4.9804688,128 c 0,67.83203 55.1875002,123.02148 123.0214812,123.02148 67.83106,0 123.01758,-55.18945 123.01758,-123.02148 C 251.01953,60.166504 195.83301,4.9785156 128.00195,4.9785156 60.167969,4.9785156 4.9804688,60.166504 4.9804688,128 z"
+           inkscape:connector-curvature="0" />
+        <svg:linearGradient
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_12_"
+           y2="11.546326"
+           x2="127.9995"
+           y1="244.40723"
+           x1="127.99951">
+          <svg:stop
+             offset="0.005615"
+             style="stop-color:#428aff;stop-opacity:1"
+             id="stop141" />
+          <svg:stop
+             offset="0.57303399"
+             style="stop-color:#94caff;stop-opacity:1"
+             id="stop143" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#dcf0ff;stop-opacity:1"
+             id="stop145" />
+          <midPointStop
+             offset="0.005615"
+             style="stop-color:#428AFF"
+             id="midPointStop147" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#428AFF"
+             id="midPointStop149" />
+          <midPointStop
+             offset="0.573034"
+             style="stop-color:#94CAFF"
+             id="midPointStop151" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#94CAFF"
+             id="midPointStop153" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#DCF0FF"
+             id="midPointStop155" />
+        </svg:linearGradient>
+        <svg:path
+           style="fill:url(#XMLID_12_)"
+           id="path158"
+           d="m 12.379883,128 c 0,63.75391 51.868164,115.62109 115.622067,115.62109 63.75196,0 115.61719,-51.86718 115.61719,-115.62109 0,-63.753906 -51.86523,-115.621582 -115.61719,-115.621582 C 64.248047,12.378418 12.379883,64.246094 12.379883,128 z"
+           inkscape:connector-curvature="0" />
+        <svg:linearGradient
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_13_"
+           y2="16.285156"
+           x2="128.00243"
+           y1="239.71191"
+           x1="128.00244">
+          <svg:stop
+             offset="0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop162" />
+          <svg:stop
+             offset="0.5"
+             style="stop-color:#006dff;stop-opacity:1"
+             id="stop164" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#c9e6ff;stop-opacity:1"
+             id="stop166" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#FFFFFF"
+             id="midPointStop168" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#FFFFFF"
+             id="midPointStop170" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#006DFF"
+             id="midPointStop172" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#006DFF"
+             id="midPointStop174" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#C9E6FF"
+             id="midPointStop176" />
+        </svg:linearGradient>
+        <svg:path
+           style="fill:url(#XMLID_13_)"
+           id="path179"
+           d="m 16.285156,128 c 0,61.60352 50.119141,111.71191 111.716794,111.71191 61.60157,0 111.7168,-50.10839 111.7168,-111.71191 0,-61.597656 -50.11523,-111.715332 -111.7168,-111.715332 C 66.404297,16.284668 16.285156,66.402344 16.285156,128 z"
+           inkscape:connector-curvature="0" />
+        <svg:path
+           style="opacity:0.8;fill:#ffffff"
+           id="path181"
+           d="m 128.00195,30.241699 c -56.102536,0 -101.750973,45.638184 -101.750973,101.747561 0,56.10254 45.648437,101.73926 101.750973,101.73926 56.1045,0 101.74805,-45.63672 101.74805,-101.73926 0,-56.109377 -45.64355,-101.747561 -101.74805,-101.747561 z"
+           inkscape:connector-curvature="0" />
+        <svg:path
+           style="fill:#00008d"
+           id="path183"
+           d="m 26.250977,128 c 0,56.10645 45.648437,101.73926 101.750973,101.73926 C 184.10645,229.73926 229.75,184.10645 229.75,128 229.75,71.896973 184.10645,26.252441 128.00195,26.252441 71.899414,26.252441 26.250977,71.896973 26.250977,128 z"
+           inkscape:connector-curvature="0" />
+        <svg:radialGradient
+           gradientTransform="matrix(1.4187,0,0,1.4187,43.4252,-204.0338)"
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_14_"
+           fy="234.03906"
+           fx="59.616211"
+           r="69.963379"
+           cy="234.03906"
+           cx="59.616211">
+          <svg:stop
+             offset="0.60112399"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop187" />
+          <svg:stop
+             offset="0.87640399"
+             style="stop-color:#eaeaf0;stop-opacity:1"
+             id="stop189" />
+          <svg:stop
+             offset="0.9141686"
+             style="stop-color:#e6e6ed;stop-opacity:1"
+             id="stop191" />
+          <svg:stop
+             offset="0.94998139"
+             style="stop-color:#dbdbe5;stop-opacity:1"
+             id="stop193" />
+          <svg:stop
+             offset="0.9849053"
+             style="stop-color:#c8c8d7;stop-opacity:1"
+             id="stop195" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#bdbdcf;stop-opacity:1"
+             id="stop197" />
+          <midPointStop
+             offset="0.601124"
+             style="stop-color:#FFFFFF"
+             id="midPointStop199" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#FFFFFF"
+             id="midPointStop201" />
+          <midPointStop
+             offset="0.876404"
+             style="stop-color:#EAEAF0"
+             id="midPointStop203" />
+          <midPointStop
+             offset="0.717949"
+             style="stop-color:#EAEAF0"
+             id="midPointStop205" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#BDBDCF"
+             id="midPointStop207" />
+        </svg:radialGradient>
+        <svg:path
+           style="fill:url(#XMLID_14_)"
+           id="path210"
+           d="m 28.743164,128 c 0,54.72852 44.526367,99.25293 99.258786,99.25293 54.73145,0 99.25977,-44.52441 99.25977,-99.25293 0,-54.729004 -44.52832,-99.256836 -99.25977,-99.256836 -54.732419,0 -99.258786,44.527832 -99.258786,99.256836 z"
+           inkscape:connector-curvature="0" />
+        <svg:path
+           style="fill:#616161"
+           id="path212"
+           d="m 32.070312,124.75635 c -1.104492,0 -2,0.89551 -2,2 l 0,2.48681 c 0,1.1045 0.895508,2 2,2 l 17.441407,0 c 1.104492,0 2,-0.8955 2,-2 l 0,-2.48681 c 0,-1.10449 -0.895508,-2 -2,-2 l -17.441407,0 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect214"
+           y="126.75635"
+           x="32.070312"
+           height="2.4868164"
+           width="17.441406" />
+        <svg:path
+           style="fill:#616161"
+           id="path216"
+           d="m 206.49023,124.75635 c -1.10449,0 -2,0.89551 -2,2 l 0,2.48681 c 0,1.1045 0.89551,2 2,2 l 17.44825,0 c 1.10449,0 2,-0.8955 2,-2 l 0,-2.48681 c 0,-1.10449 -0.89551,-2 -2,-2 l -17.44825,0 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect218"
+           y="126.75635"
+           x="206.49023"
+           height="2.4868164"
+           width="17.448242" />
+        <svg:path
+           style="fill:#616161"
+           id="path220"
+           d="m 126.75586,204.49023 c -1.10449,0 -2,0.89551 -2,2 l 0,17.44141 c 0,1.10449 0.89551,2 2,2 l 2.49219,0 c 1.10449,0 2,-0.89551 2,-2 l 0,-17.44141 c 0,-1.10449 -0.89551,-2 -2,-2 l -2.49219,0 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect222"
+           y="206.49023"
+           x="126.75586"
+           height="17.441406"
+           width="2.4921875" />
+        <svg:path
+           style="fill:#616161"
+           id="path224"
+           d="m 126.75586,30.067871 c -1.10449,0 -2,0.895508 -2,2 l 0,17.441406 c 0,1.104493 0.89551,2 2,2 l 2.49219,0 c 1.10449,0 2,-0.895507 2,-2 l 0,-17.441406 c 0,-1.104492 -0.89551,-2 -2,-2 l -2.49219,0 0,0 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect226"
+           y="32.067871"
+           x="126.75586"
+           height="17.441406"
+           width="2.4921875" />
+        <svg:path
+           style="fill:#616161"
+           id="path228"
+           d="m 169.80664,197.93555 -2.15137,1.25 c -0.95312,0.55468 -1.27832,1.77539 -0.72656,2.73047 l 6.23145,10.77929 c 0.55175,0.95508 1.77246,1.28223 2.72851,0.73242 l 2.15723,-1.24023 c 0.45996,-0.26465 0.79687,-0.70117 0.93457,-1.21484 0.13769,-0.5127 0.0664,-1.05957 -0.2002,-1.51954 l -6.2373,-10.78906 c -0.26563,-0.45996 -0.7041,-0.79492 -1.2168,-0.93164 -0.51367,-0.13672 -1.06055,-0.0635 -1.51953,0.20313 z"
+           inkscape:connector-curvature="0" />
+        <svg:polygon
+           style="fill:#616161"
+           id="polygon230"
+           points="168.66016,200.91504 174.8916,211.69434 177.04883,210.4541 177.04883,210.4541 170.81152,199.66504 " />
+        <svg:path
+           style="fill:#616161"
+           id="path232"
+           d="m 80.115234,42.565918 -2.159179,1.247559 c -0.957032,0.552734 -1.28418,1.775879 -0.731446,2.732421 l 6.229493,10.783692 c 0.552734,0.956055 1.77539,1.283691 2.731445,0.731445 l 2.15625,-1.244629 c 0.956055,-0.552246 1.28418,-1.77539 0.731445,-2.731933 L 82.847656,43.297852 c -0.265625,-0.459473 -0.702148,-0.794434 -1.214843,-0.932129 -0.512696,-0.137207 -1.058594,-0.06494 -1.517579,0.200195 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect234"
+           transform="matrix(0.499934,0.866063,-0.866063,0.499934,85.15588,-46.85146)"
+           y="49.0681"
+           x="76.921539"
+           height="2.4936838"
+           width="12.454769" />
+        <svg:path
+           style="fill:#616161"
+           id="path236"
+           d="m 84.669922,197.73242 c -0.512695,0.1377 -0.950195,0.47266 -1.21582,0.93262 l -6.229493,10.78906 c -0.265625,0.45996 -0.33789,1.00684 -0.199218,1.51953 0.137695,0.5127 0.473632,0.9502 0.93457,1.21485 l 2.15918,1.24023 c 0.956054,0.54883 2.176757,0.22168 2.728515,-0.73437 l 6.225586,-10.7793 c 0.551758,-0.95508 0.225586,-2.17676 -0.728515,-2.73047 l -2.155274,-1.25 c -0.459961,-0.26562 -1.006836,-0.33887 -1.519531,-0.20215 z"
+           inkscape:connector-curvature="0" />
+        <svg:polygon
+           style="fill:#616161"
+           id="polygon238"
+           points="85.185547,199.66504 78.956055,210.4541 81.115234,211.69434 81.115234,211.69434 87.341797,200.91504 " />
+        <svg:path
+           style="fill:#616161"
+           id="path240"
+           d="m 173.15918,43.297852 -6.23145,10.790527 c -0.26464,0.459473 -0.33691,1.005371 -0.19921,1.518066 0.13769,0.512696 0.47265,0.949219 0.93261,1.214356 l 2.15137,1.240722 c 0.95605,0.55127 2.17773,0.224122 2.73047,-0.731445 l 6.2373,-10.787109 c 0.26563,-0.459473 0.33789,-1.00586 0.2002,-1.518555 -0.13672,-0.512695 -0.47266,-0.949707 -0.93262,-1.214844 l -2.15722,-1.24414 c -0.95606,-0.551758 -2.17872,-0.224121 -2.73145,0.732422 z"
+           inkscape:connector-curvature="0" />
+        <svg:polygon
+           style="fill:#616161"
+           id="polygon242"
+           points="174.8916,44.297852 168.66016,55.088379 170.81152,56.329102 170.81152,56.329102 177.04883,45.541992 " />
+        <svg:path
+           style="fill:#616161"
+           id="path244"
+           d="m 54.084961,166.9248 -10.786133,6.2334 c -0.458984,0.26563 -0.793945,0.70215 -0.930664,1.21485 -0.137695,0.51367 -0.06445,1.05957 0.201172,1.51855 l 1.24707,2.1543 c 0.552735,0.95508 1.775391,1.28223 2.731445,0.72949 l 10.786133,-6.23437 c 0.459961,-0.26563 0.794922,-0.70313 0.931641,-1.21582 0.136719,-0.5127 0.06445,-1.0586 -0.202149,-1.51758 l -1.24707,-2.15332 c -0.552734,-0.95508 -1.77539,-1.28223 -2.731445,-0.7295 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect246"
+           transform="matrix(-0.865782,0.500421,-0.500421,-0.865782,180.3773,297.3212)"
+           y="171.60591"
+           x="44.08728"
+           height="2.4883676"
+           width="12.458254" />
+        <svg:path
+           style="fill:#616161"
+           id="path248"
+           d="m 209.45703,77.222656 -10.78906,6.232422 c -0.46094,0.266114 -0.7959,0.70459 -0.93262,1.218262 -0.13672,0.513672 -0.0625,1.060547 0.2041,1.520508 l 1.25391,2.152832 c 0.55469,0.95166 1.77441,1.275879 2.72852,0.725097 l 10.78613,-6.228515 c 0.45996,-0.265625 0.7959,-0.703125 0.93262,-1.216309 0.13671,-0.513183 0.0635,-1.060058 -0.20215,-1.519043 l -1.25098,-2.156738 c -0.55371,-0.954102 -1.77539,-1.280274 -2.73047,-0.728516 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect250"
+           transform="matrix(-0.865986,0.500069,-0.500069,-0.865986,425.3929,52.29269)"
+           y="81.900574"
+           x="199.46179"
+           height="2.4932835"
+           width="12.455323" />
+        <svg:path
+           style="fill:#616161"
+           id="path252"
+           d="m 199.19336,167.64941 -1.25391,2.15332 c -0.26758,0.45997 -0.34082,1.00684 -0.2041,1.52051 0.13672,0.51367 0.47168,0.95215 0.93164,1.21778 l 10.78906,6.23437 c 0.95606,0.55273 2.17872,0.22656 2.73145,-0.72852 l 1.25098,-2.15917 c 0.2666,-0.45997 0.33886,-1.00586 0.20214,-1.51856 -0.13769,-0.51367 -0.47265,-0.95117 -0.93261,-1.2168 l -10.78614,-6.22851 c -0.9541,-0.55078 -2.17285,-0.22656 -2.72851,0.72558 z"
+           inkscape:connector-curvature="0" />
+        <svg:polygon
+           style="fill:#616161"
+           id="polygon254"
+           points="199.66797,170.80957 210.45703,177.04395 211.70801,174.88477 211.70801,174.88477 200.92188,168.65625 " />
+        <svg:rect
+           style="opacity:0.2"
+           id="rect256"
+           transform="matrix(-0.760473,-0.64937,0.64937,-0.760473,85.54559,342.2205)"
+           y="94.231461"
+           x="103.96373"
+           height="122.2031"
+           width="3.8498869" />
+        <svg:linearGradient
+           gradientTransform="matrix(0.9546,0.0532,0.0532,0.9377,-6.635652,8.097183)"
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_15_"
+           y2="149.69531"
+           x2="154.29785"
+           y1="149.69531"
+           x1="62.462891">
+          <svg:stop
+             offset="0"
+             style="stop-color:#ff6666;stop-opacity:1"
+             id="stop260-7" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#ff0000;stop-opacity:1"
+             id="stop262" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#FF6666"
+             id="midPointStop264" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#FF6666"
+             id="midPointStop266" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#FF0000"
+             id="midPointStop268" />
+        </svg:linearGradient>
+        <svg:polygon
+           style="fill:url(#XMLID_15_)"
+           id="polygon271"
+           points="145.91699,109.00537 142.98828,106.50586 63.660156,199.46094 63.660156,199.46094 66.588867,201.96094 " />
+        <svg:path
+           style="fill:#616161"
+           id="path273"
+           d="m 43.81543,77.953613 -1.247071,2.156739 c -0.265625,0.458984 -0.33789,1.005371 -0.200195,1.518066 0.136719,0.512207 0.472656,0.949707 0.931641,1.214844 l 10.786133,6.228515 c 0.956054,0.552246 2.179687,0.22461 2.731445,-0.731445 l 1.24707,-2.158203 c 0.265625,-0.459473 0.337891,-1.005371 0.201172,-1.517578 -0.137695,-0.512695 -0.472656,-0.949707 -0.932617,-1.214844 L 46.546875,77.222656 C 45.59082,76.67041 44.368164,76.997559 43.81543,77.953613 z"
+           inkscape:connector-curvature="0" />
+        <svg:rect
+           style="fill:#616161"
+           id="rect275"
+           transform="matrix(0.866037,0.49998,-0.49998,0.866037,48.31216,-14.01864)"
+           y="81.900818"
+           x="44.089111"
+           height="2.4913259"
+           width="12.454591" />
+        <svg:path
+           style="opacity:0.2"
+           id="path277"
+           d="m 189.22363,108.87109 c -0.15722,-0.58545 -0.73047,-0.94238 -1.28027,-0.79492 l -62.29004,16.68994 c -0.5498,0.14746 -0.86816,0.74219 -0.71094,1.33008 l 1.84961,6.90576 c 0.15821,0.58789 0.73047,0.94336 1.28125,0.7959 l 62.29004,-16.69092 c 0.54981,-0.14697 0.86914,-0.74218 0.71192,-1.32861 l -1.85157,-6.90723 z"
+           inkscape:connector-curvature="0" />
+        <svg:path
+           style="fill:#585868"
+           id="path279"
+           d="m 188.12402,107.771 c -0.15722,-0.58545 -0.73047,-0.9419 -1.28125,-0.79493 l -62.28906,16.68995 c -0.5498,0.14746 -0.86914,0.74267 -0.71094,1.33007 l 1.84961,6.90625 c 0.15821,0.58789 0.73047,0.94336 1.28028,0.7959 l 62.29101,-16.6914 c 0.54981,-0.14698 0.86914,-0.74219 0.71192,-1.32862 l -1.85157,-6.90722 z"
+           inkscape:connector-curvature="0" />
+        <svg:linearGradient
+           gradientTransform="matrix(0.2588,0.9659,-0.9659,0.2588,104.8109,257.7903)"
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_16_"
+           y2="-86.028809"
+           x2="-116.19824"
+           y1="-86.028809"
+           x1="-123.34863">
+          <svg:stop
+             offset="0"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop283" />
+          <svg:stop
+             offset="0.0080328"
+             style="stop-color:#656575;stop-opacity:1"
+             id="stop285" />
+          <svg:stop
+             offset="0.0341428"
+             style="stop-color:#8b8b99;stop-opacity:1"
+             id="stop287" />
+          <svg:stop
+             offset="0.0602025"
+             style="stop-color:#a8a8b6;stop-opacity:1"
+             id="stop289" />
+          <svg:stop
+             offset="0.0858713"
+             style="stop-color:#bdbdcb;stop-opacity:1"
+             id="stop291" />
+          <svg:stop
+             offset="0.1109687"
+             style="stop-color:#cacad7;stop-opacity:1"
+             id="stop293" />
+          <svg:stop
+             offset="0.134831"
+             style="stop-color:#cecedb;stop-opacity:1"
+             id="stop295" />
+          <svg:stop
+             offset="0.46629199"
+             style="stop-color:#9a9ab1;stop-opacity:1"
+             id="stop297" />
+          <svg:stop
+             offset="0.85393202"
+             style="stop-color:#7d7d99;stop-opacity:1"
+             id="stop299" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop301" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#585868"
+             id="midPointStop303" />
+          <midPointStop
+             offset="0.30303"
+             style="stop-color:#585868"
+             id="midPointStop305" />
+          <midPointStop
+             offset="0.134831"
+             style="stop-color:#CECEDB"
+             id="midPointStop307" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#CECEDB"
+             id="midPointStop309" />
+          <midPointStop
+             offset="0.466292"
+             style="stop-color:#9A9AB1"
+             id="midPointStop311" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#9A9AB1"
+             id="midPointStop313" />
+          <midPointStop
+             offset="0.853932"
+             style="stop-color:#7D7D99"
+             id="midPointStop315" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#7D7D99"
+             id="midPointStop317" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#585868"
+             id="midPointStop319" />
+        </svg:linearGradient>
+        <svg:polygon
+           style="fill:url(#XMLID_16_)"
+           id="polygon322"
+           points="126.68945,131.63477 124.83887,124.72852 187.12891,108.03857 187.12891,108.03857 188.97852,114.94482 " />
+        <svg:path
+           style="opacity:0.2"
+           id="path324"
+           d="m 145.55762,133.42871 c 0.30371,-0.52637 -0.11231,-1.33594 -0.9336,-1.80957 L 51.853516,78.058105 c -0.820313,-0.473632 -1.730469,-0.430664 -2.03418,0.0957 l -3.575195,6.191894 c -0.303711,0.526367 0.114257,1.335938 0.93457,1.810059 l 92.769529,53.560062 c 0.82031,0.47363 1.73047,0.43066 2.03418,-0.0957 l 3.5752,-6.19141 z"
+           inkscape:connector-curvature="0" />
+        <svg:path
+           style="fill:#585868"
+           id="path326"
+           d="m 144.45801,132.3291 c 0.30371,-0.52637 -0.11328,-1.33691 -0.9336,-1.81055 L 50.753906,76.958008 c -0.820312,-0.473633 -1.730468,-0.430664 -2.034179,0.0957 l -3.575196,6.191894 c -0.304687,0.526368 0.113282,1.336426 0.934571,1.810059 l 92.769528,53.560549 c 0.82032,0.47363 1.73047,0.43067 2.03418,-0.0957 l 3.5752,-6.19141 z"
+           inkscape:connector-curvature="0" />
+        <svg:linearGradient
+           gradientTransform="matrix(-0.5,0.866,-0.866,-0.5,37.93764,322.7147)"
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_17_"
+           y2="58.22168"
+           x2="-210.99219"
+           y1="58.22168"
+           x1="-218.14404">
+          <svg:stop
+             offset="0"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop330" />
+          <svg:stop
+             offset="0.191011"
+             style="stop-color:#cecedb;stop-opacity:1"
+             id="stop332" />
+          <svg:stop
+             offset="0.46629199"
+             style="stop-color:#9a9ab1;stop-opacity:1"
+             id="stop334" />
+          <svg:stop
+             offset="0.85393202"
+             style="stop-color:#7d7d99;stop-opacity:1"
+             id="stop336-4" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop338" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#585868"
+             id="midPointStop340" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#585868"
+             id="midPointStop342" />
+          <midPointStop
+             offset="0.191011"
+             style="stop-color:#CECEDB"
+             id="midPointStop344" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#CECEDB"
+             id="midPointStop346" />
+          <midPointStop
+             offset="0.466292"
+             style="stop-color:#9A9AB1"
+             id="midPointStop348" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#9A9AB1"
+             id="midPointStop350" />
+          <midPointStop
+             offset="0.853932"
+             style="stop-color:#7D7D99"
+             id="midPointStop352" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#7D7D99"
+             id="midPointStop354" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#585868"
+             id="midPointStop356" />
+        </svg:linearGradient>
+        <svg:polygon
+           style="fill:url(#XMLID_17_)"
+           id="polygon359"
+           points="46.628906,84.102539 50.204102,77.911133 142.97461,131.47168 142.97461,131.47168 139.39844,137.66309 " />
+        <svg:path
+           style="opacity:0.2"
+           id="path361"
+           d="m 117.63965,129.10156 c 0,6.31836 5.13965,11.45996 11.45801,11.45996 6.31933,0 11.46191,-5.1416 11.46191,-11.45996 0,-6.32129 -5.14258,-11.46338 -11.46191,-11.46338 -6.31836,0 -11.45801,5.14209 -11.45801,11.46338 z"
+           inkscape:connector-curvature="0" />
+        <svg:linearGradient
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_18_"
+           y2="128"
+           x2="139.45898"
+           y1="128"
+           x1="116.54004">
+          <svg:stop
+             offset="0"
+             style="stop-color:#9a9ab1;stop-opacity:1"
+             id="stop365" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop367" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#9A9AB1"
+             id="midPointStop369" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#9A9AB1"
+             id="midPointStop371" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#585868"
+             id="midPointStop373" />
+        </svg:linearGradient>
+        <svg:path
+           style="fill:url(#XMLID_18_)"
+           id="path376"
+           d="m 116.54004,128.00098 c 0,6.31933 5.13867,11.46093 11.45801,11.46093 6.31933,0 11.46093,-5.1416 11.46093,-11.46093 0,-6.32032 -5.1416,-11.46289 -11.46093,-11.46289 -6.31934,0 -11.45801,5.14257 -11.45801,11.46289 z"
+           inkscape:connector-curvature="0" />
+        <svg:radialGradient
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_19_"
+           fy="116.17529"
+           fx="126.61963"
+           r="22.186035"
+           cy="116.17529"
+           cx="126.61963">
+          <svg:stop
+             offset="0"
+             style="stop-color:#9a9ab1;stop-opacity:1"
+             id="stop380" />
+          <svg:stop
+             offset="0.58988798"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop382" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop384" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#9A9AB1"
+             id="midPointStop386" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#9A9AB1"
+             id="midPointStop388" />
+          <midPointStop
+             offset="0.589888"
+             style="stop-color:#585868"
+             id="midPointStop390" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#585868"
+             id="midPointStop392" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#FFFFFF"
+             id="midPointStop394" />
+        </svg:radialGradient>
+        <svg:path
+           style="fill:url(#XMLID_19_)"
+           id="path397"
+           d="m 117.63965,128.00098 c 0,5.71386 4.64746,10.36035 10.3584,10.36035 5.71386,0 10.36132,-4.64649 10.36132,-10.36035 0,-5.71338 -4.64746,-10.3628 -10.36132,-10.3628 -5.71094,0 -10.3584,4.64942 -10.3584,10.3628 z"
+           inkscape:connector-curvature="0" />
+        <svg:linearGradient
+           gradientUnits="userSpaceOnUse"
+           id="XMLID_20_"
+           y2="123.58594"
+           x2="137.875"
+           y1="123.58594"
+           x1="117.74365">
+          <svg:stop
+             offset="0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop401" />
+          <svg:stop
+             offset="1"
+             style="stop-color:#585868;stop-opacity:1"
+             id="stop403" />
+          <midPointStop
+             offset="0"
+             style="stop-color:#FFFFFF"
+             id="midPointStop405" />
+          <midPointStop
+             offset="0.5"
+             style="stop-color:#FFFFFF"
+             id="midPointStop407" />
+          <midPointStop
+             offset="1"
+             style="stop-color:#585868"
+             id="midPointStop409" />
+        </svg:linearGradient>
+        <svg:path
+           style="fill:url(#XMLID_20_)"
+           id="path412"
+           d="m 135.7373,125.42822 c -1.08105,-3.24267 -4.13769,-5.58984 -7.73925,-5.58984 -4.22852,0 -7.71387,3.23535 -8.11719,7.3623 5.33496,0.38477 10.73144,-0.0234 15.85644,-1.77246 z"
+           inkscape:connector-curvature="0" />
+      </svg:g>
+      <svg:polyline
+         style="fill:none"
+         points="0,256 0,0 256,0 256,256 "
+         id="_x3C_Slice_x3E_" />
+    </svg:g>
+    <svg:circle
+       d="m 230.32899,158.33 c 0,46.66199 -37.82701,84.489 -84.48899,84.489 -46.661989,0 -84.489002,-37.82701 -84.489002,-84.489 0,-46.66198 37.827013,-84.488997 84.489002,-84.488997 46.66198,0 84.48899,37.827017 84.48899,84.488997 z"
+       style="fill:url(#SVGID_2_)"
+       sodipodi:ry="84.488998"
+       sodipodi:rx="84.488998"
+       sodipodi:cy="158.33"
+       sodipodi:cx="145.84"
+       cy="158.33"
+       cx="145.84"
+       r="84.488998"
+       id="circle3577"
+       transform="matrix(0.16385067,0,0,0.16385067,262.05,1107.0778)" />
+    <svg:text
+       xml:space="preserve"
+       style="font-size:21.35894585px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#92d40d;fill-opacity:1;stroke:#000000;stroke-width:0.62909108;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans"
+       x="272.0293"
+       y="1138.0554"
+       id="text3186"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99875306,1.0012485)"><svg:tspan
+         sodipodi:role="line"
+         id="tspan3188"
+         x="272.0293"
+         y="1138.0554"
+         style="font-style:oblique;font-weight:bold;fill:#92d40d;fill-opacity:1;stroke:#000000;stroke-width:0.62909108;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;-inkscape-font-specification:Sans Bold Oblique">2</svg:tspan></svg:text>
+  </svg:g>
+</svg:svg>

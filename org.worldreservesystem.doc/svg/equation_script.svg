@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg1"
+   viewBox="0 0 32 32"
+   version="1.0"
+   y="0"
+   x="0"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="equation_script.svg"
+   inkscape:export-filename="C:\data\ws\joffice_migration_1\com.joffice.client.resources\src\com\joffice\ui\resources\images\tools\equation_script.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1842"
+     inkscape:window-height="1051"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="8.6308571"
+     inkscape:cx="15.934813"
+     inkscape:cy="21.782552"
+     inkscape:window-x="69"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g2986"
+     transform="matrix(0.81115266,0,0,0.81115266,0.72621447,9.3347039)">
+    <path
+       style="fill:#004d00"
+       inkscape:connector-curvature="0"
+       d="M 7.6207615,8.0693978 2.4005706,9.8103908 V 11.15531 l 3.4673735,0.276867 c 0.7239877,1.068053 1.5622792,3.44161 2.6672473,7.081256 -1.3335756,2.76963 -2.8958548,4.748075 -4.458134,5.855542 L 2.4386398,22.272285 C 0.91452599,22.667398 0,23.815242 0,25.081331 c 1.9226868e-7,1.384334 1.2192719,2.570632 2.7053165,2.570632 2.1719632,0 4.1914573,-2.373557 6.6681664,-7.081255 C 10.44019,25.635065 11.583227,27.85 14.517247,27.85 c 1.181491,0 2.81962,-0.395112 5.029749,-1.107468 v -1.542956 c -0.762346,0.198037 -1.447783,0.276867 -2.095729,0.276867 -2.552367,0 -3.085912,-2.611009 -4.686549,-8.347345 1.333383,-2.887875 2.781166,-4.668283 4.229911,-5.340262 l 1.485276,2.09669 c 1.562183,-0.474904 2.438928,-1.622748 2.438928,-3.007083 0,-1.4641257 -0.990184,-2.5321783 -2.400475,-2.5321783 -2.171675,0 -4.305857,2.2947263 -6.630385,6.8043883 C 10.707443,10.32471 10.021044,8.0693978 7.8874382,8.0693978 H 7.6207615 z"
+       id="path625" />
+    <path
+       style="fill:#00ff00;fill-rule:evenodd;stroke:#000000;stroke-width:0.81480587"
+       inkscape:connector-curvature="0"
+       d="M 19.226868,-11.008462 V 7.0167268 H 37.252057 V -11.008462 H 19.226868 z"
+       id="path628" />
+  </g>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title></dc:title>
+        <dc:date>2011-01-21T16:59:08</dc:date>
+        <dc:description>Originally uploaded by Jose Hevia for OCAL 0.18</dc:description>
+        <dc:source>http://openclipart.org/detail/108631/math-lsub-by-anonymous</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Anonymous</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>fix</rdf:li>
+            <rdf:li>keyword</rdf:li>
+            <rdf:li>librarians</rdf:li>
+            <rdf:li>tag</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
