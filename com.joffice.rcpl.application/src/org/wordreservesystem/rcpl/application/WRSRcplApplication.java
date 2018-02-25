@@ -8,7 +8,7 @@
  * Contributors:
  *     Ramin Assisi - initial implementation
  *******************************************************************************/
-package com.joffice.rcpl.application;
+package org.wordreservesystem.rcpl.application;
 
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.application.RcplApplicationProvider;
@@ -20,7 +20,7 @@ import javafx.stage.Stage;
  * @author ramin
  *
  */
-public class JoRcplApplication extends Application {
+public class WRSRcplApplication extends Application {
 
 	public static void main(String[] args) {
 		RcplApplicationProvider.init(args);

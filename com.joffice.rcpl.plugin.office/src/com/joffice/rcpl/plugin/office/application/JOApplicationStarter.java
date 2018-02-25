@@ -20,6 +20,7 @@ import org.eclipse.rcpl.internal.services.RcplObjectService;
 import org.eclipse.rcpl.internal.services.RcplSetupService;
 import org.eclipse.rcpl.internal.services.RcplStartButtonService;
 import org.eclipse.rcpl.model.RCPLModel;
+import org.eclipse.rcpl.model.cdo.client.JOSession;
 
 import com.joffice.rcpl.plugin.office.internal.JOfficeFactory;
 import com.joffice.rcpl.plugin.office.internal.impl.JOfficeToolFactory;
@@ -48,6 +49,7 @@ public class JOApplicationStarter extends RcplApplicationStarter {
 
 	@Override
 	public boolean start(RcplLogin login, Stage primaryStage) {
+		JOSession.getDefault("https://github.com/rassisi/worldreservesystem/raw/master/org.worldreservesystem.doc/");
 		RCPLModel.mobileProvider.appendLog("register Services");
 		getRcplApplicationProvider().registerService(JOLayoutService.class);
 		getRcplApplicationProvider().registerService(JOPictureService.class);
