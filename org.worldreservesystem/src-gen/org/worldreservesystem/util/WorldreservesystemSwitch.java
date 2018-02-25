@@ -76,11 +76,11 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WorldreservesystemPackage.MAIN_VAULT: {
-			MainVault mainVault = (MainVault) theEObject;
-			T result = caseMainVault(mainVault);
+		case WorldreservesystemPackage.TREASURY: {
+			Treasury treasury = (Treasury) theEObject;
+			T result = caseTreasury(treasury);
 			if (result == null)
-				result = caseAbstractVault(mainVault);
+				result = caseAbstractVault(treasury);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -191,13 +191,6 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WorldreservesystemPackage.NEW_ECLASS17: {
-			NewEClass17 newEClass17 = (NewEClass17) theEObject;
-			T result = caseNewEClass17(newEClass17);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case WorldreservesystemPackage.IDENTITIES: {
 			Identities identities = (Identities) theEObject;
 			T result = caseIdentities(identities);
@@ -205,11 +198,11 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WorldreservesystemPackage.WALLET: {
-			Wallet wallet = (Wallet) theEObject;
-			T result = caseWallet(wallet);
+		case WorldreservesystemPackage.ACCOUNT: {
+			Account account = (Account) theEObject;
+			T result = caseAccount(account);
 			if (result == null)
-				result = caseAbstractVault(wallet);
+				result = caseAbstractVault(account);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -221,9 +214,9 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WorldreservesystemPackage.WALLETS: {
-			Wallets wallets = (Wallets) theEObject;
-			T result = caseWallets(wallets);
+		case WorldreservesystemPackage.ACCOUNTS: {
+			Accounts accounts = (Accounts) theEObject;
+			T result = caseAccounts(accounts);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -256,6 +249,20 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case WorldreservesystemPackage.NODE: {
+			Node node = (Node) theEObject;
+			T result = caseNode(node);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorldreservesystemPackage.NETWORK_ENGINE: {
+			NetworkEngine networkEngine = (NetworkEngine) theEObject;
+			T result = caseNetworkEngine(networkEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -277,17 +284,17 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Main Vault</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Treasury</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Main Vault</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Treasury</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMainVault(MainVault object) {
+	public T caseTreasury(Treasury object) {
 		return null;
 	}
 
@@ -502,21 +509,6 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>New EClass17</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New EClass17</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNewEClass17(NewEClass17 object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Identities</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -532,17 +524,17 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wallet</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wallet</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Account</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWallet(Wallet object) {
+	public T caseAccount(Account object) {
 		return null;
 	}
 
@@ -562,17 +554,17 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wallets</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Accounts</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wallets</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Accounts</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWallets(Wallets object) {
+	public T caseAccounts(Accounts object) {
 		return null;
 	}
 
@@ -633,6 +625,36 @@ public class WorldreservesystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTransactionCollection(TransactionCollection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNode(Node object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Network Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Network Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNetworkEngine(NetworkEngine object) {
 		return null;
 	}
 

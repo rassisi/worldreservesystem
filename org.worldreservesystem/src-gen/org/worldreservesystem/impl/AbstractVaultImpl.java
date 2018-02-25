@@ -11,6 +11,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.worldreservesystem.AbstractVault;
 import org.worldreservesystem.Asset;
+import org.worldreservesystem.Transaction;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
@@ -22,6 +23,7 @@ import org.worldreservesystem.WorldreservesystemPackage;
  * </p>
  * <ul>
  *   <li>{@link org.worldreservesystem.impl.AbstractVaultImpl#getAssets <em>Assets</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.AbstractVaultImpl#getTransaction <em>Transaction</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +66,24 @@ public class AbstractVaultImpl extends CDOObjectImpl implements AbstractVault {
 	@SuppressWarnings("unchecked")
 	public EList<Asset> getAssets() {
 		return (EList<Asset>) eGet(WorldreservesystemPackage.Literals.ABSTRACT_VAULT__ASSETS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Transaction getTransaction() {
+		return (Transaction) eGet(WorldreservesystemPackage.Literals.ABSTRACT_VAULT__TRANSACTION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransaction(Transaction newTransaction) {
+		eSet(WorldreservesystemPackage.Literals.ABSTRACT_VAULT__TRANSACTION, newTransaction);
 	}
 
 } //AbstractVaultImpl

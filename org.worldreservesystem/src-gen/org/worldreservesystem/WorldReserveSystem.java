@@ -60,12 +60,12 @@ public interface WorldReserveSystem extends Identity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mainvault</em>' containment reference.
-	 * @see #setMainvault(MainVault)
+	 * @see #setMainvault(Treasury)
 	 * @see org.worldreservesystem.WorldreservesystemPackage#getWorldReserveSystem_Mainvault()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	MainVault getMainvault();
+	Treasury getMainvault();
 
 	/**
 	 * Sets the value of the '{@link org.worldreservesystem.WorldReserveSystem#getMainvault <em>Mainvault</em>}' containment reference.
@@ -75,7 +75,7 @@ public interface WorldReserveSystem extends Identity {
 	 * @see #getMainvault()
 	 * @generated
 	 */
-	void setMainvault(MainVault value);
+	void setMainvault(Treasury value);
 
 	/**
 	 * Returns the value of the '<em><b>Identities</b></em>' containment reference.
@@ -138,12 +138,12 @@ public interface WorldReserveSystem extends Identity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Wallets</em>' containment reference.
-	 * @see #setWallets(Wallets)
+	 * @see #setWallets(Accounts)
 	 * @see org.worldreservesystem.WorldreservesystemPackage#getWorldReserveSystem_Wallets()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Wallets getWallets();
+	Accounts getWallets();
 
 	/**
 	 * Sets the value of the '{@link org.worldreservesystem.WorldReserveSystem#getWallets <em>Wallets</em>}' containment reference.
@@ -153,7 +153,7 @@ public interface WorldReserveSystem extends Identity {
 	 * @see #getWallets()
 	 * @generated
 	 */
-	void setWallets(Wallets value);
+	void setWallets(Accounts value);
 
 	/**
 	 * Returns the value of the '<em><b>Registeredasstets</b></em>' reference.
@@ -180,5 +180,13 @@ public interface WorldReserveSystem extends Identity {
 	 * @generated
 	 */
 	void setRegisteredasstets(RegisteredAsstets value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void createIdentity();
 
 } // WorldReserveSystem

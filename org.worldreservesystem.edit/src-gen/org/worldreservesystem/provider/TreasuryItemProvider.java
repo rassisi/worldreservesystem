@@ -6,38 +6,25 @@ package org.worldreservesystem.provider;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
-import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
- * This is the item provider adapter for a {@link org.worldreservesystem.Genesis} object.
+ * This is the item provider adapter for a {@link org.worldreservesystem.Treasury} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class GenesisItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class TreasuryItemProvider extends AbstractVaultItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenesisItemProvider(AdapterFactory adapterFactory) {
+	public TreasuryItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -52,35 +39,19 @@ public class GenesisItemProvider extends CDOItemProviderAdapter implements IEdit
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTreasuryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Treasury feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTreasuryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Genesis_treasury_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Genesis_treasury_feature",
-								"_UI_Genesis_type"),
-						WorldreservesystemPackage.Literals.GENESIS__TREASURY, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns Genesis.gif.
+	 * This returns Treasury.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Genesis"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Treasury"));
 	}
 
 	/**
@@ -101,7 +72,7 @@ public class GenesisItemProvider extends CDOItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Genesis_type");
+		return getString("_UI_Treasury_type");
 	}
 
 	/**
@@ -127,17 +98,6 @@ public class GenesisItemProvider extends CDOItemProviderAdapter implements IEdit
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WorldreservesystemEditPlugin.INSTANCE;
 	}
 
 }

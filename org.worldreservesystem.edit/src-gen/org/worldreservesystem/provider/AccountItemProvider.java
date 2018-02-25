@@ -14,23 +14,23 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.worldreservesystem.Wallet;
+import org.worldreservesystem.Account;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
- * This is the item provider adapter for a {@link org.worldreservesystem.Wallet} object.
+ * This is the item provider adapter for a {@link org.worldreservesystem.Account} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class WalletItemProvider extends AbstractVaultItemProvider {
+public class AccountItemProvider extends AbstractVaultItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WalletItemProvider(AdapterFactory adapterFactory) {
+	public AccountItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,10 +60,10 @@ public class WalletItemProvider extends AbstractVaultItemProvider {
 	protected void addPublicKeyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Wallet_publicKey_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Wallet_publicKey_feature",
-								"_UI_Wallet_type"),
-						WorldreservesystemPackage.Literals.WALLET__PUBLIC_KEY, true, false, false,
+						getResourceLocator(), getString("_UI_Account_publicKey_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Account_publicKey_feature",
+								"_UI_Account_type"),
+						WorldreservesystemPackage.Literals.ACCOUNT__PUBLIC_KEY, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -76,21 +76,21 @@ public class WalletItemProvider extends AbstractVaultItemProvider {
 	protected void addBelongsToPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Wallet_belongsTo_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Wallet_belongsTo_feature",
-								"_UI_Wallet_type"),
-						WorldreservesystemPackage.Literals.WALLET__BELONGS_TO, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Account_belongsTo_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Account_belongsTo_feature",
+								"_UI_Account_type"),
+						WorldreservesystemPackage.Literals.ACCOUNT__BELONGS_TO, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This returns Wallet.gif.
+	 * This returns Account.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Wallet"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Account"));
 	}
 
 	/**
@@ -111,9 +111,9 @@ public class WalletItemProvider extends AbstractVaultItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Wallet) object).getPublicKey();
-		return label == null || label.length() == 0 ? getString("_UI_Wallet_type")
-				: getString("_UI_Wallet_type") + " " + label;
+		String label = ((Account) object).getPublicKey();
+		return label == null || label.length() == 0 ? getString("_UI_Account_type")
+				: getString("_UI_Account_type") + " " + label;
 	}
 
 	/**
@@ -127,8 +127,8 @@ public class WalletItemProvider extends AbstractVaultItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Wallet.class)) {
-		case WorldreservesystemPackage.WALLET__PUBLIC_KEY:
+		switch (notification.getFeatureID(Account.class)) {
+		case WorldreservesystemPackage.ACCOUNT__PUBLIC_KEY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

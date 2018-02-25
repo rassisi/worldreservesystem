@@ -4,6 +4,7 @@
 package org.worldreservesystem;
 
 import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,8 +16,8 @@ import org.eclipse.emf.cdo.CDOObject;
  * </p>
  * <ul>
  *   <li>{@link org.worldreservesystem.Transaction#getAssets <em>Assets</em>}</li>
- *   <li>{@link org.worldreservesystem.Transaction#getFrom <em>From</em>}</li>
- *   <li>{@link org.worldreservesystem.Transaction#getTo <em>To</em>}</li>
+ *   <li>{@link org.worldreservesystem.Transaction#getTransactions <em>Transactions</em>}</li>
+ *   <li>{@link org.worldreservesystem.Transaction#getData <em>Data</em>}</li>
  * </ul>
  *
  * @see org.worldreservesystem.WorldreservesystemPackage#getTransaction()
@@ -52,55 +53,46 @@ public interface Transaction extends CDOObject {
 	void setAssets(Asset value);
 
 	/**
-	 * Returns the value of the '<em><b>From</b></em>' reference.
+	 * Returns the value of the '<em><b>Transactions</b></em>' reference list.
+	 * The list contents are of type {@link org.worldreservesystem.AbstractVault}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>From</em>' reference isn't clear,
+	 * If the meaning of the '<em>Transactions</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(AbstractVault)
-	 * @see org.worldreservesystem.WorldreservesystemPackage#getTransaction_From()
+	 * @return the value of the '<em>Transactions</em>' reference list.
+	 * @see org.worldreservesystem.WorldreservesystemPackage#getTransaction_Transactions()
 	 * @model
 	 * @generated
 	 */
-	AbstractVault getFrom();
+	EList<AbstractVault> getTransactions();
 
 	/**
-	 * Sets the value of the '{@link org.worldreservesystem.Transaction#getFrom <em>From</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' reference.
-	 * @see #getFrom()
-	 * @generated
-	 */
-	void setFrom(AbstractVault value);
-
-	/**
-	 * Returns the value of the '<em><b>To</b></em>' reference.
+	 * Returns the value of the '<em><b>Data</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To</em>' reference isn't clear,
+	 * If the meaning of the '<em>Data</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(AbstractVault)
-	 * @see org.worldreservesystem.WorldreservesystemPackage#getTransaction_To()
-	 * @model
+	 * @return the value of the '<em>Data</em>' attribute.
+	 * @see #setData(String)
+	 * @see org.worldreservesystem.WorldreservesystemPackage#getTransaction_Data()
+	 * @model default=""
 	 * @generated
 	 */
-	AbstractVault getTo();
+	String getData();
 
 	/**
-	 * Sets the value of the '{@link org.worldreservesystem.Transaction#getTo <em>To</em>}' reference.
+	 * Sets the value of the '{@link org.worldreservesystem.Transaction#getData <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' reference.
-	 * @see #getTo()
+	 * @param value the new value of the '<em>Data</em>' attribute.
+	 * @see #getData()
 	 * @generated
 	 */
-	void setTo(AbstractVault value);
+	void setData(String value);
 
 } // Transaction

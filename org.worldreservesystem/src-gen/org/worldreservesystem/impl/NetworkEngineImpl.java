@@ -7,23 +7,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
-import org.worldreservesystem.NewEClass17;
+import org.worldreservesystem.NetworkEngine;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>New EClass17</b></em>'.
+ * An implementation of the model object '<em><b>Network Engine</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class NewEClass17Impl extends CDOObjectImpl implements NewEClass17 {
+public class NetworkEngineImpl extends CDOObjectImpl implements NetworkEngine {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NewEClass17Impl() {
+	protected NetworkEngineImpl() {
 		super();
 	}
 
@@ -34,7 +34,7 @@ public class NewEClass17Impl extends CDOObjectImpl implements NewEClass17 {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WorldreservesystemPackage.Literals.NEW_ECLASS17;
+		return WorldreservesystemPackage.Literals.NETWORK_ENGINE;
 	}
 
 	/**
@@ -47,4 +47,4 @@ public class NewEClass17Impl extends CDOObjectImpl implements NewEClass17 {
 		return 0;
 	}
 
-} //NewEClass17Impl
+} //NetworkEngineImpl

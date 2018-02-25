@@ -3,6 +3,7 @@
  */
 package org.worldreservesystem.impl;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
@@ -21,8 +22,8 @@ import org.worldreservesystem.WorldreservesystemPackage;
  * </p>
  * <ul>
  *   <li>{@link org.worldreservesystem.impl.TransactionImpl#getAssets <em>Assets</em>}</li>
- *   <li>{@link org.worldreservesystem.impl.TransactionImpl#getFrom <em>From</em>}</li>
- *   <li>{@link org.worldreservesystem.impl.TransactionImpl#getTo <em>To</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.TransactionImpl#getTransactions <em>Transactions</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.TransactionImpl#getData <em>Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,8 +81,9 @@ public class TransactionImpl extends CDOObjectImpl implements Transaction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractVault getFrom() {
-		return (AbstractVault) eGet(WorldreservesystemPackage.Literals.TRANSACTION__FROM, true);
+	@SuppressWarnings("unchecked")
+	public EList<AbstractVault> getTransactions() {
+		return (EList<AbstractVault>) eGet(WorldreservesystemPackage.Literals.TRANSACTION__TRANSACTIONS, true);
 	}
 
 	/**
@@ -89,8 +91,8 @@ public class TransactionImpl extends CDOObjectImpl implements Transaction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(AbstractVault newFrom) {
-		eSet(WorldreservesystemPackage.Literals.TRANSACTION__FROM, newFrom);
+	public String getData() {
+		return (String) eGet(WorldreservesystemPackage.Literals.TRANSACTION__DATA, true);
 	}
 
 	/**
@@ -98,17 +100,8 @@ public class TransactionImpl extends CDOObjectImpl implements Transaction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractVault getTo() {
-		return (AbstractVault) eGet(WorldreservesystemPackage.Literals.TRANSACTION__TO, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTo(AbstractVault newTo) {
-		eSet(WorldreservesystemPackage.Literals.TRANSACTION__TO, newTo);
+	public void setData(String newData) {
+		eSet(WorldreservesystemPackage.Literals.TRANSACTION__DATA, newData);
 	}
 
 } //TransactionImpl

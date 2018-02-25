@@ -32,13 +32,13 @@ public interface WorldreservesystemFactory extends EFactory {
 	WorldReserveSystem createWorldReserveSystem();
 
 	/**
-	 * Returns a new object of class '<em>Main Vault</em>'.
+	 * Returns a new object of class '<em>Treasury</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Main Vault</em>'.
+	 * @return a new object of class '<em>Treasury</em>'.
 	 * @generated
 	 */
-	MainVault createMainVault();
+	Treasury createTreasury();
 
 	/**
 	 * Returns a new object of class '<em>Transfer Vault</em>'.
@@ -158,15 +158,6 @@ public interface WorldreservesystemFactory extends EFactory {
 	LegalEntity createLegalEntity();
 
 	/**
-	 * Returns a new object of class '<em>New EClass17</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New EClass17</em>'.
-	 * @generated
-	 */
-	NewEClass17 createNewEClass17();
-
-	/**
 	 * Returns a new object of class '<em>Identities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -176,13 +167,13 @@ public interface WorldreservesystemFactory extends EFactory {
 	Identities createIdentities();
 
 	/**
-	 * Returns a new object of class '<em>Wallet</em>'.
+	 * Returns a new object of class '<em>Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wallet</em>'.
+	 * @return a new object of class '<em>Account</em>'.
 	 * @generated
 	 */
-	Wallet createWallet();
+	Account createAccount();
 
 	/**
 	 * Returns a new object of class '<em>Supply Control</em>'.
@@ -194,13 +185,13 @@ public interface WorldreservesystemFactory extends EFactory {
 	SupplyControl createSupplyControl();
 
 	/**
-	 * Returns a new object of class '<em>Wallets</em>'.
+	 * Returns a new object of class '<em>Accounts</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wallets</em>'.
+	 * @return a new object of class '<em>Accounts</em>'.
 	 * @generated
 	 */
-	Wallets createWallets();
+	Accounts createAccounts();
 
 	/**
 	 * Returns a new object of class '<em>Transaction</em>'.
@@ -237,6 +228,24 @@ public interface WorldreservesystemFactory extends EFactory {
 	 * @generated
 	 */
 	TransactionCollection createTransactionCollection();
+
+	/**
+	 * Returns a new object of class '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node</em>'.
+	 * @generated
+	 */
+	Node createNode();
+
+	/**
+	 * Returns a new object of class '<em>Network Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Network Engine</em>'.
+	 * @generated
+	 */
+	NetworkEngine createNetworkEngine();
 
 	/**
 	 * Returns the package supported by this factory.

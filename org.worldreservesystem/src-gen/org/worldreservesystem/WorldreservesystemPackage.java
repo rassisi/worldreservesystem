@@ -179,13 +179,22 @@ public interface WorldreservesystemPackage extends EPackage {
 	int WORLD_RESERVE_SYSTEM_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 6;
 
 	/**
+	 * The operation id for the '<em>Create Identity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_RESERVE_SYSTEM___CREATE_IDENTITY = IDENTITY_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>World Reserve System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_RESERVE_SYSTEM_OPERATION_COUNT = IDENTITY_OPERATION_COUNT + 0;
+	int WORLD_RESERVE_SYSTEM_OPERATION_COUNT = IDENTITY_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.worldreservesystem.impl.AbstractVaultImpl <em>Abstract Vault</em>}' class.
@@ -195,7 +204,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getAbstractVault()
 	 * @generated
 	 */
-	int ABSTRACT_VAULT = 23;
+	int ABSTRACT_VAULT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -207,13 +216,22 @@ public interface WorldreservesystemPackage extends EPackage {
 	int ABSTRACT_VAULT__ASSETS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Transaction</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_VAULT__TRANSACTION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Vault</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_VAULT_FEATURE_COUNT = 1;
+	int ABSTRACT_VAULT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Vault</em>' class.
@@ -225,14 +243,14 @@ public interface WorldreservesystemPackage extends EPackage {
 	int ABSTRACT_VAULT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.worldreservesystem.impl.MainVaultImpl <em>Main Vault</em>}' class.
+	 * The meta object id for the '{@link org.worldreservesystem.impl.TreasuryImpl <em>Treasury</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.worldreservesystem.impl.MainVaultImpl
-	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getMainVault()
+	 * @see org.worldreservesystem.impl.TreasuryImpl
+	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getTreasury()
 	 * @generated
 	 */
-	int MAIN_VAULT = 1;
+	int TREASURY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -241,25 +259,34 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAIN_VAULT__ASSETS = ABSTRACT_VAULT__ASSETS;
+	int TREASURY__ASSETS = ABSTRACT_VAULT__ASSETS;
 
 	/**
-	 * The number of structural features of the '<em>Main Vault</em>' class.
+	 * The feature id for the '<em><b>Transaction</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAIN_VAULT_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 0;
+	int TREASURY__TRANSACTION = ABSTRACT_VAULT__TRANSACTION;
 
 	/**
-	 * The number of operations of the '<em>Main Vault</em>' class.
+	 * The number of structural features of the '<em>Treasury</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAIN_VAULT_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
+	int TREASURY_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Treasury</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREASURY_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.worldreservesystem.impl.TransferVaultImpl <em>Transfer Vault</em>}' class.
@@ -279,6 +306,15 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSFER_VAULT__ASSETS = ABSTRACT_VAULT__ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Transaction</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULT__TRANSACTION = ABSTRACT_VAULT__TRANSACTION;
 
 	/**
 	 * The number of structural features of the '<em>Transfer Vault</em>' class.
@@ -346,13 +382,13 @@ public interface WorldreservesystemPackage extends EPackage {
 	int GENESIS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Mainvault</b></em>' reference.
+	 * The feature id for the '<em><b>Treasury</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENESIS__MAINVAULT = 0;
+	int GENESIS__TREASURY = 0;
 
 	/**
 	 * The number of structural features of the '<em>Genesis</em>' class.
@@ -752,34 +788,6 @@ public interface WorldreservesystemPackage extends EPackage {
 	int LEGAL_ENTITY_OPERATION_COUNT = IDENTITY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.worldreservesystem.impl.NewEClass17Impl <em>New EClass17</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.worldreservesystem.impl.NewEClass17Impl
-	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getNewEClass17()
-	 * @generated
-	 */
-	int NEW_ECLASS17 = 16;
-
-	/**
-	 * The number of structural features of the '<em>New EClass17</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_ECLASS17_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>New EClass17</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_ECLASS17_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.worldreservesystem.impl.IdentitiesImpl <em>Identities</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -787,7 +795,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getIdentities()
 	 * @generated
 	 */
-	int IDENTITIES = 17;
+	int IDENTITIES = 16;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -817,14 +825,14 @@ public interface WorldreservesystemPackage extends EPackage {
 	int IDENTITIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.worldreservesystem.impl.WalletImpl <em>Wallet</em>}' class.
+	 * The meta object id for the '{@link org.worldreservesystem.impl.AccountImpl <em>Account</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.worldreservesystem.impl.WalletImpl
-	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getWallet()
+	 * @see org.worldreservesystem.impl.AccountImpl
+	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getAccount()
 	 * @generated
 	 */
-	int WALLET = 18;
+	int ACCOUNT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -833,7 +841,16 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WALLET__ASSETS = ABSTRACT_VAULT__ASSETS;
+	int ACCOUNT__ASSETS = ABSTRACT_VAULT__ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Transaction</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__TRANSACTION = ABSTRACT_VAULT__TRANSACTION;
 
 	/**
 	 * The feature id for the '<em><b>Public Key</b></em>' attribute.
@@ -842,7 +859,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WALLET__PUBLIC_KEY = ABSTRACT_VAULT_FEATURE_COUNT + 0;
+	int ACCOUNT__PUBLIC_KEY = ABSTRACT_VAULT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
@@ -851,25 +868,25 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WALLET__BELONGS_TO = ABSTRACT_VAULT_FEATURE_COUNT + 1;
+	int ACCOUNT__BELONGS_TO = ABSTRACT_VAULT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Wallet</em>' class.
+	 * The number of structural features of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WALLET_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 2;
+	int ACCOUNT_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Wallet</em>' class.
+	 * The number of operations of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WALLET_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
+	int ACCOUNT_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.worldreservesystem.impl.SupplyControlImpl <em>Supply Control</em>}' class.
@@ -879,7 +896,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getSupplyControl()
 	 * @generated
 	 */
-	int SUPPLY_CONTROL = 19;
+	int SUPPLY_CONTROL = 18;
 
 	/**
 	 * The feature id for the '<em><b>Genesis</b></em>' reference.
@@ -909,14 +926,14 @@ public interface WorldreservesystemPackage extends EPackage {
 	int SUPPLY_CONTROL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.worldreservesystem.impl.WalletsImpl <em>Wallets</em>}' class.
+	 * The meta object id for the '{@link org.worldreservesystem.impl.AccountsImpl <em>Accounts</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.worldreservesystem.impl.WalletsImpl
-	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getWallets()
+	 * @see org.worldreservesystem.impl.AccountsImpl
+	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getAccounts()
 	 * @generated
 	 */
-	int WALLETS = 20;
+	int ACCOUNTS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
@@ -925,25 +942,25 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WALLETS__CHILDREN = 0;
+	int ACCOUNTS__CHILDREN = 0;
 
 	/**
-	 * The number of structural features of the '<em>Wallets</em>' class.
+	 * The number of structural features of the '<em>Accounts</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WALLETS_FEATURE_COUNT = 1;
+	int ACCOUNTS_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Wallets</em>' class.
+	 * The number of operations of the '<em>Accounts</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WALLETS_OPERATION_COUNT = 0;
+	int ACCOUNTS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.worldreservesystem.impl.TransactionImpl <em>Transaction</em>}' class.
@@ -953,7 +970,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getTransaction()
 	 * @generated
 	 */
-	int TRANSACTION = 21;
+	int TRANSACTION = 20;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference.
@@ -965,22 +982,22 @@ public interface WorldreservesystemPackage extends EPackage {
 	int TRANSACTION__ASSETS = 0;
 
 	/**
-	 * The feature id for the '<em><b>From</b></em>' reference.
+	 * The feature id for the '<em><b>Transactions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION__FROM = 1;
+	int TRANSACTION__TRANSACTIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>To</b></em>' reference.
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION__TO = 2;
+	int TRANSACTION__DATA = 2;
 
 	/**
 	 * The number of structural features of the '<em>Transaction</em>' class.
@@ -1008,7 +1025,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getRegisteredAsstets()
 	 * @generated
 	 */
-	int REGISTERED_ASSTETS = 22;
+	int REGISTERED_ASSTETS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
@@ -1045,7 +1062,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getTransactionCollection()
 	 * @generated
 	 */
-	int TRANSACTION_COLLECTION = 24;
+	int TRANSACTION_COLLECTION = 23;
 
 	/**
 	 * The number of structural features of the '<em>Transaction Collection</em>' class.
@@ -1066,6 +1083,89 @@ public interface WorldreservesystemPackage extends EPackage {
 	int TRANSACTION_COLLECTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.worldreservesystem.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.worldreservesystem.impl.NodeImpl
+	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Worldreservesystem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__WORLDRESERVESYSTEM = 0;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__WEIGHT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Networkengine</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NETWORKENGINE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.worldreservesystem.impl.NetworkEngineImpl <em>Network Engine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.worldreservesystem.impl.NetworkEngineImpl
+	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getNetworkEngine()
+	 * @generated
+	 */
+	int NETWORK_ENGINE = 25;
+
+	/**
+	 * The number of structural features of the '<em>Network Engine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Network Engine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.worldreservesystem.AssetType <em>Asset Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1073,7 +1173,7 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getAssetType()
 	 * @generated
 	 */
-	int ASSET_TYPE = 25;
+	int ASSET_TYPE = 26;
 
 	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.WorldReserveSystem <em>World Reserve System</em>}'.
@@ -1152,14 +1252,24 @@ public interface WorldreservesystemPackage extends EPackage {
 	EReference getWorldReserveSystem_Registeredasstets();
 
 	/**
-	 * Returns the meta object for class '{@link org.worldreservesystem.MainVault <em>Main Vault</em>}'.
+	 * Returns the meta object for the '{@link org.worldreservesystem.WorldReserveSystem#createIdentity() <em>Create Identity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Main Vault</em>'.
-	 * @see org.worldreservesystem.MainVault
+	 * @return the meta object for the '<em>Create Identity</em>' operation.
+	 * @see org.worldreservesystem.WorldReserveSystem#createIdentity()
 	 * @generated
 	 */
-	EClass getMainVault();
+	EOperation getWorldReserveSystem__CreateIdentity();
+
+	/**
+	 * Returns the meta object for class '{@link org.worldreservesystem.Treasury <em>Treasury</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Treasury</em>'.
+	 * @see org.worldreservesystem.Treasury
+	 * @generated
+	 */
+	EClass getTreasury();
 
 	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.TransferVault <em>Transfer Vault</em>}'.
@@ -1203,15 +1313,15 @@ public interface WorldreservesystemPackage extends EPackage {
 	EClass getGenesis();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.worldreservesystem.Genesis#getMainvault <em>Mainvault</em>}'.
+	 * Returns the meta object for the reference '{@link org.worldreservesystem.Genesis#getTreasury <em>Treasury</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Mainvault</em>'.
-	 * @see org.worldreservesystem.Genesis#getMainvault()
+	 * @return the meta object for the reference '<em>Treasury</em>'.
+	 * @see org.worldreservesystem.Genesis#getTreasury()
 	 * @see #getGenesis()
 	 * @generated
 	 */
-	EReference getGenesis_Mainvault();
+	EReference getGenesis_Treasury();
 
 	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.Asset <em>Asset</em>}'.
@@ -1422,16 +1532,6 @@ public interface WorldreservesystemPackage extends EPackage {
 	EClass getLegalEntity();
 
 	/**
-	 * Returns the meta object for class '{@link org.worldreservesystem.NewEClass17 <em>New EClass17</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New EClass17</em>'.
-	 * @see org.worldreservesystem.NewEClass17
-	 * @generated
-	 */
-	EClass getNewEClass17();
-
-	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.Identities <em>Identities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1453,36 +1553,36 @@ public interface WorldreservesystemPackage extends EPackage {
 	EReference getIdentities_Children();
 
 	/**
-	 * Returns the meta object for class '{@link org.worldreservesystem.Wallet <em>Wallet</em>}'.
+	 * Returns the meta object for class '{@link org.worldreservesystem.Account <em>Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wallet</em>'.
-	 * @see org.worldreservesystem.Wallet
+	 * @return the meta object for class '<em>Account</em>'.
+	 * @see org.worldreservesystem.Account
 	 * @generated
 	 */
-	EClass getWallet();
+	EClass getAccount();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.worldreservesystem.Wallet#getPublicKey <em>Public Key</em>}'.
+	 * Returns the meta object for the attribute '{@link org.worldreservesystem.Account#getPublicKey <em>Public Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Public Key</em>'.
-	 * @see org.worldreservesystem.Wallet#getPublicKey()
-	 * @see #getWallet()
+	 * @see org.worldreservesystem.Account#getPublicKey()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EAttribute getWallet_PublicKey();
+	EAttribute getAccount_PublicKey();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.worldreservesystem.Wallet#getBelongsTo <em>Belongs To</em>}'.
+	 * Returns the meta object for the reference '{@link org.worldreservesystem.Account#getBelongsTo <em>Belongs To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Belongs To</em>'.
-	 * @see org.worldreservesystem.Wallet#getBelongsTo()
-	 * @see #getWallet()
+	 * @see org.worldreservesystem.Account#getBelongsTo()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EReference getWallet_BelongsTo();
+	EReference getAccount_BelongsTo();
 
 	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.SupplyControl <em>Supply Control</em>}'.
@@ -1506,25 +1606,25 @@ public interface WorldreservesystemPackage extends EPackage {
 	EReference getSupplyControl_Genesis();
 
 	/**
-	 * Returns the meta object for class '{@link org.worldreservesystem.Wallets <em>Wallets</em>}'.
+	 * Returns the meta object for class '{@link org.worldreservesystem.Accounts <em>Accounts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wallets</em>'.
-	 * @see org.worldreservesystem.Wallets
+	 * @return the meta object for class '<em>Accounts</em>'.
+	 * @see org.worldreservesystem.Accounts
 	 * @generated
 	 */
-	EClass getWallets();
+	EClass getAccounts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.worldreservesystem.Wallets#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the reference list '{@link org.worldreservesystem.Accounts#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Children</em>'.
-	 * @see org.worldreservesystem.Wallets#getChildren()
-	 * @see #getWallets()
+	 * @see org.worldreservesystem.Accounts#getChildren()
+	 * @see #getAccounts()
 	 * @generated
 	 */
-	EReference getWallets_Children();
+	EReference getAccounts_Children();
 
 	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.Transaction <em>Transaction</em>}'.
@@ -1548,26 +1648,26 @@ public interface WorldreservesystemPackage extends EPackage {
 	EReference getTransaction_Assets();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.worldreservesystem.Transaction#getFrom <em>From</em>}'.
+	 * Returns the meta object for the reference list '{@link org.worldreservesystem.Transaction#getTransactions <em>Transactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>From</em>'.
-	 * @see org.worldreservesystem.Transaction#getFrom()
+	 * @return the meta object for the reference list '<em>Transactions</em>'.
+	 * @see org.worldreservesystem.Transaction#getTransactions()
 	 * @see #getTransaction()
 	 * @generated
 	 */
-	EReference getTransaction_From();
+	EReference getTransaction_Transactions();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.worldreservesystem.Transaction#getTo <em>To</em>}'.
+	 * Returns the meta object for the attribute '{@link org.worldreservesystem.Transaction#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>To</em>'.
-	 * @see org.worldreservesystem.Transaction#getTo()
+	 * @return the meta object for the attribute '<em>Data</em>'.
+	 * @see org.worldreservesystem.Transaction#getData()
 	 * @see #getTransaction()
 	 * @generated
 	 */
-	EReference getTransaction_To();
+	EAttribute getTransaction_Data();
 
 	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.RegisteredAsstets <em>Registered Asstets</em>}'.
@@ -1612,6 +1712,17 @@ public interface WorldreservesystemPackage extends EPackage {
 	EReference getAbstractVault_Assets();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.worldreservesystem.AbstractVault#getTransaction <em>Transaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Transaction</em>'.
+	 * @see org.worldreservesystem.AbstractVault#getTransaction()
+	 * @see #getAbstractVault()
+	 * @generated
+	 */
+	EReference getAbstractVault_Transaction();
+
+	/**
 	 * Returns the meta object for class '{@link org.worldreservesystem.TransactionCollection <em>Transaction Collection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1620,6 +1731,59 @@ public interface WorldreservesystemPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTransactionCollection();
+
+	/**
+	 * Returns the meta object for class '{@link org.worldreservesystem.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see org.worldreservesystem.Node
+	 * @generated
+	 */
+	EClass getNode();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.worldreservesystem.Node#getWorldreservesystem <em>Worldreservesystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Worldreservesystem</em>'.
+	 * @see org.worldreservesystem.Node#getWorldreservesystem()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Worldreservesystem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.worldreservesystem.Node#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see org.worldreservesystem.Node#getWeight()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_Weight();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.worldreservesystem.Node#getNetworkengine <em>Networkengine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Networkengine</em>'.
+	 * @see org.worldreservesystem.Node#getNetworkengine()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Networkengine();
+
+	/**
+	 * Returns the meta object for class '{@link org.worldreservesystem.NetworkEngine <em>Network Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Engine</em>'.
+	 * @see org.worldreservesystem.NetworkEngine
+	 * @generated
+	 */
+	EClass getNetworkEngine();
 
 	/**
 	 * Returns the meta object for enum '{@link org.worldreservesystem.AssetType <em>Asset Type</em>}'.
@@ -1713,14 +1877,22 @@ public interface WorldreservesystemPackage extends EPackage {
 		EReference WORLD_RESERVE_SYSTEM__REGISTEREDASSTETS = eINSTANCE.getWorldReserveSystem_Registeredasstets();
 
 		/**
-		 * The meta object literal for the '{@link org.worldreservesystem.impl.MainVaultImpl <em>Main Vault</em>}' class.
+		 * The meta object literal for the '<em><b>Create Identity</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.worldreservesystem.impl.MainVaultImpl
-		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getMainVault()
 		 * @generated
 		 */
-		EClass MAIN_VAULT = eINSTANCE.getMainVault();
+		EOperation WORLD_RESERVE_SYSTEM___CREATE_IDENTITY = eINSTANCE.getWorldReserveSystem__CreateIdentity();
+
+		/**
+		 * The meta object literal for the '{@link org.worldreservesystem.impl.TreasuryImpl <em>Treasury</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.worldreservesystem.impl.TreasuryImpl
+		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getTreasury()
+		 * @generated
+		 */
+		EClass TREASURY = eINSTANCE.getTreasury();
 
 		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.TransferVaultImpl <em>Transfer Vault</em>}' class.
@@ -1761,12 +1933,12 @@ public interface WorldreservesystemPackage extends EPackage {
 		EClass GENESIS = eINSTANCE.getGenesis();
 
 		/**
-		 * The meta object literal for the '<em><b>Mainvault</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Treasury</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GENESIS__MAINVAULT = eINSTANCE.getGenesis_Mainvault();
+		EReference GENESIS__TREASURY = eINSTANCE.getGenesis_Treasury();
 
 		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.AssetImpl <em>Asset</em>}' class.
@@ -1951,16 +2123,6 @@ public interface WorldreservesystemPackage extends EPackage {
 		EClass LEGAL_ENTITY = eINSTANCE.getLegalEntity();
 
 		/**
-		 * The meta object literal for the '{@link org.worldreservesystem.impl.NewEClass17Impl <em>New EClass17</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.worldreservesystem.impl.NewEClass17Impl
-		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getNewEClass17()
-		 * @generated
-		 */
-		EClass NEW_ECLASS17 = eINSTANCE.getNewEClass17();
-
-		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.IdentitiesImpl <em>Identities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1979,14 +2141,14 @@ public interface WorldreservesystemPackage extends EPackage {
 		EReference IDENTITIES__CHILDREN = eINSTANCE.getIdentities_Children();
 
 		/**
-		 * The meta object literal for the '{@link org.worldreservesystem.impl.WalletImpl <em>Wallet</em>}' class.
+		 * The meta object literal for the '{@link org.worldreservesystem.impl.AccountImpl <em>Account</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.worldreservesystem.impl.WalletImpl
-		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getWallet()
+		 * @see org.worldreservesystem.impl.AccountImpl
+		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getAccount()
 		 * @generated
 		 */
-		EClass WALLET = eINSTANCE.getWallet();
+		EClass ACCOUNT = eINSTANCE.getAccount();
 
 		/**
 		 * The meta object literal for the '<em><b>Public Key</b></em>' attribute feature.
@@ -1994,7 +2156,7 @@ public interface WorldreservesystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WALLET__PUBLIC_KEY = eINSTANCE.getWallet_PublicKey();
+		EAttribute ACCOUNT__PUBLIC_KEY = eINSTANCE.getAccount_PublicKey();
 
 		/**
 		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
@@ -2002,7 +2164,7 @@ public interface WorldreservesystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WALLET__BELONGS_TO = eINSTANCE.getWallet_BelongsTo();
+		EReference ACCOUNT__BELONGS_TO = eINSTANCE.getAccount_BelongsTo();
 
 		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.SupplyControlImpl <em>Supply Control</em>}' class.
@@ -2023,14 +2185,14 @@ public interface WorldreservesystemPackage extends EPackage {
 		EReference SUPPLY_CONTROL__GENESIS = eINSTANCE.getSupplyControl_Genesis();
 
 		/**
-		 * The meta object literal for the '{@link org.worldreservesystem.impl.WalletsImpl <em>Wallets</em>}' class.
+		 * The meta object literal for the '{@link org.worldreservesystem.impl.AccountsImpl <em>Accounts</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.worldreservesystem.impl.WalletsImpl
-		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getWallets()
+		 * @see org.worldreservesystem.impl.AccountsImpl
+		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getAccounts()
 		 * @generated
 		 */
-		EClass WALLETS = eINSTANCE.getWallets();
+		EClass ACCOUNTS = eINSTANCE.getAccounts();
 
 		/**
 		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
@@ -2038,7 +2200,7 @@ public interface WorldreservesystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WALLETS__CHILDREN = eINSTANCE.getWallets_Children();
+		EReference ACCOUNTS__CHILDREN = eINSTANCE.getAccounts_Children();
 
 		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.TransactionImpl <em>Transaction</em>}' class.
@@ -2059,20 +2221,20 @@ public interface WorldreservesystemPackage extends EPackage {
 		EReference TRANSACTION__ASSETS = eINSTANCE.getTransaction_Assets();
 
 		/**
-		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Transactions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSACTION__FROM = eINSTANCE.getTransaction_From();
+		EReference TRANSACTION__TRANSACTIONS = eINSTANCE.getTransaction_Transactions();
 
 		/**
-		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSACTION__TO = eINSTANCE.getTransaction_To();
+		EAttribute TRANSACTION__DATA = eINSTANCE.getTransaction_Data();
 
 		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.RegisteredAsstetsImpl <em>Registered Asstets</em>}' class.
@@ -2111,6 +2273,14 @@ public interface WorldreservesystemPackage extends EPackage {
 		EReference ABSTRACT_VAULT__ASSETS = eINSTANCE.getAbstractVault_Assets();
 
 		/**
+		 * The meta object literal for the '<em><b>Transaction</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_VAULT__TRANSACTION = eINSTANCE.getAbstractVault_Transaction();
+
+		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.impl.TransactionCollectionImpl <em>Transaction Collection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2119,6 +2289,50 @@ public interface WorldreservesystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRANSACTION_COLLECTION = eINSTANCE.getTransactionCollection();
+
+		/**
+		 * The meta object literal for the '{@link org.worldreservesystem.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.worldreservesystem.impl.NodeImpl
+		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getNode()
+		 * @generated
+		 */
+		EClass NODE = eINSTANCE.getNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Worldreservesystem</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__WORLDRESERVESYSTEM = eINSTANCE.getNode_Worldreservesystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__WEIGHT = eINSTANCE.getNode_Weight();
+
+		/**
+		 * The meta object literal for the '<em><b>Networkengine</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__NETWORKENGINE = eINSTANCE.getNode_Networkengine();
+
+		/**
+		 * The meta object literal for the '{@link org.worldreservesystem.impl.NetworkEngineImpl <em>Network Engine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.worldreservesystem.impl.NetworkEngineImpl
+		 * @see org.worldreservesystem.impl.WorldreservesystemPackageImpl#getNetworkEngine()
+		 * @generated
+		 */
+		EClass NETWORK_ENGINE = eINSTANCE.getNetworkEngine();
 
 		/**
 		 * The meta object literal for the '{@link org.worldreservesystem.AssetType <em>Asset Type</em>}' enum.

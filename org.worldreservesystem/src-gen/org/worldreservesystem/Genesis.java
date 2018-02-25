@@ -14,7 +14,7 @@ import org.eclipse.emf.cdo.CDOObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.worldreservesystem.Genesis#getMainvault <em>Mainvault</em>}</li>
+ *   <li>{@link org.worldreservesystem.Genesis#getTreasury <em>Treasury</em>}</li>
  * </ul>
  *
  * @see org.worldreservesystem.WorldreservesystemPackage#getGenesis()
@@ -24,29 +24,29 @@ import org.eclipse.emf.cdo.CDOObject;
  */
 public interface Genesis extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Mainvault</b></em>' reference.
+	 * Returns the value of the '<em><b>Treasury</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Mainvault</em>' reference isn't clear,
+	 * If the meaning of the '<em>Treasury</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mainvault</em>' reference.
-	 * @see #setMainvault(MainVault)
-	 * @see org.worldreservesystem.WorldreservesystemPackage#getGenesis_Mainvault()
+	 * @return the value of the '<em>Treasury</em>' reference.
+	 * @see #setTreasury(Treasury)
+	 * @see org.worldreservesystem.WorldreservesystemPackage#getGenesis_Treasury()
 	 * @model required="true"
 	 * @generated
 	 */
-	MainVault getMainvault();
+	Treasury getTreasury();
 
 	/**
-	 * Sets the value of the '{@link org.worldreservesystem.Genesis#getMainvault <em>Mainvault</em>}' reference.
+	 * Sets the value of the '{@link org.worldreservesystem.Genesis#getTreasury <em>Treasury</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mainvault</em>' reference.
-	 * @see #getMainvault()
+	 * @param value the new value of the '<em>Treasury</em>' reference.
+	 * @see #getTreasury()
 	 * @generated
 	 */
-	void setMainvault(MainVault value);
+	void setTreasury(Treasury value);
 
 } // Genesis

@@ -5,23 +5,23 @@ package org.worldreservesystem.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.worldreservesystem.MainVault;
+import org.worldreservesystem.Treasury;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Main Vault</b></em>'.
+ * An implementation of the model object '<em><b>Treasury</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class MainVaultImpl extends AbstractVaultImpl implements MainVault {
+public class TreasuryImpl extends AbstractVaultImpl implements Treasury {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MainVaultImpl() {
+	protected TreasuryImpl() {
 		super();
 	}
 
@@ -32,7 +32,7 @@ public class MainVaultImpl extends AbstractVaultImpl implements MainVault {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WorldreservesystemPackage.Literals.MAIN_VAULT;
+		return WorldreservesystemPackage.Literals.TREASURY;
 	}
 
-} //MainVaultImpl
+} //TreasuryImpl

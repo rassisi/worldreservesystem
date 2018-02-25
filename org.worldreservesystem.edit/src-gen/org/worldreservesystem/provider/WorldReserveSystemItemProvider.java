@@ -257,14 +257,14 @@ public class WorldReserveSystemItemProvider extends IdentityItemProvider {
 						WorldreservesystemFactory.eINSTANCE.createTransferVaults()));
 
 		newChildDescriptors.add(createChildParameter(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__MAINVAULT,
-				WorldreservesystemFactory.eINSTANCE.createMainVault()));
+				WorldreservesystemFactory.eINSTANCE.createTreasury()));
 
 		newChildDescriptors
 				.add(createChildParameter(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__IDENTITIES,
 						WorldreservesystemFactory.eINSTANCE.createIdentities()));
 
 		newChildDescriptors.add(createChildParameter(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__WALLETS,
-				WorldreservesystemFactory.eINSTANCE.createWallets()));
+				WorldreservesystemFactory.eINSTANCE.createAccounts()));
 	}
 
 }

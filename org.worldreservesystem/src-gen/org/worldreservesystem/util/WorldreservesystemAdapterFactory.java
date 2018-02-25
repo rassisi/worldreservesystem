@@ -73,8 +73,8 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMainVault(MainVault object) {
-			return createMainVaultAdapter();
+		public Adapter caseTreasury(Treasury object) {
+			return createTreasuryAdapter();
 		}
 
 		@Override
@@ -148,18 +148,13 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseNewEClass17(NewEClass17 object) {
-			return createNewEClass17Adapter();
-		}
-
-		@Override
 		public Adapter caseIdentities(Identities object) {
 			return createIdentitiesAdapter();
 		}
 
 		@Override
-		public Adapter caseWallet(Wallet object) {
-			return createWalletAdapter();
+		public Adapter caseAccount(Account object) {
+			return createAccountAdapter();
 		}
 
 		@Override
@@ -168,8 +163,8 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseWallets(Wallets object) {
-			return createWalletsAdapter();
+		public Adapter caseAccounts(Accounts object) {
+			return createAccountsAdapter();
 		}
 
 		@Override
@@ -190,6 +185,16 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseTransactionCollection(TransactionCollection object) {
 			return createTransactionCollectionAdapter();
+		}
+
+		@Override
+		public Adapter caseNode(Node object) {
+			return createNodeAdapter();
+		}
+
+		@Override
+		public Adapter caseNetworkEngine(NetworkEngine object) {
+			return createNetworkEngineAdapter();
 		}
 
 		@Override
@@ -226,16 +231,16 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.MainVault <em>Main Vault</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Treasury <em>Treasury</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.worldreservesystem.MainVault
+	 * @see org.worldreservesystem.Treasury
 	 * @generated
 	 */
-	public Adapter createMainVaultAdapter() {
+	public Adapter createTreasuryAdapter() {
 		return null;
 	}
 
@@ -436,20 +441,6 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.NewEClass17 <em>New EClass17</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.worldreservesystem.NewEClass17
-	 * @generated
-	 */
-	public Adapter createNewEClass17Adapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Identities <em>Identities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -464,16 +455,16 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Wallet <em>Wallet</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Account <em>Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.worldreservesystem.Wallet
+	 * @see org.worldreservesystem.Account
 	 * @generated
 	 */
-	public Adapter createWalletAdapter() {
+	public Adapter createAccountAdapter() {
 		return null;
 	}
 
@@ -492,16 +483,16 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Wallets <em>Wallets</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Accounts <em>Accounts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.worldreservesystem.Wallets
+	 * @see org.worldreservesystem.Accounts
 	 * @generated
 	 */
-	public Adapter createWalletsAdapter() {
+	public Adapter createAccountsAdapter() {
 		return null;
 	}
 
@@ -558,6 +549,34 @@ public class WorldreservesystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransactionCollectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.worldreservesystem.Node
+	 * @generated
+	 */
+	public Adapter createNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.worldreservesystem.NetworkEngine <em>Network Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.worldreservesystem.NetworkEngine
+	 * @generated
+	 */
+	public Adapter createNetworkEngineAdapter() {
 		return null;
 	}
 

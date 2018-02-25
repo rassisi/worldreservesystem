@@ -13,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -21,15 +20,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.worldreservesystem.WorldreservesystemPackage;
-
 /**
- * This is the item provider adapter for a {@link org.worldreservesystem.Wallets} object.
+ * This is the item provider adapter for a {@link org.worldreservesystem.NetworkEngine} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class WalletsItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
+public class NetworkEngineItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -37,7 +34,7 @@ public class WalletsItemProvider extends CDOItemProviderAdapter implements IEdit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WalletsItemProvider(AdapterFactory adapterFactory) {
+	public NetworkEngineItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -52,35 +49,19 @@ public class WalletsItemProvider extends CDOItemProviderAdapter implements IEdit
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addChildrenPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Children feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addChildrenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Wallets_children_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Wallets_children_feature",
-								"_UI_Wallets_type"),
-						WorldreservesystemPackage.Literals.WALLETS__CHILDREN, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns Wallets.gif.
+	 * This returns NetworkEngine.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Wallets"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/NetworkEngine"));
 	}
 
 	/**
@@ -101,7 +82,7 @@ public class WalletsItemProvider extends CDOItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Wallets_type");
+		return getString("_UI_NetworkEngine_type");
 	}
 
 	/**

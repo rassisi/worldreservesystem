@@ -60,8 +60,8 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 		switch (eClass.getClassifierID()) {
 		case WorldreservesystemPackage.WORLD_RESERVE_SYSTEM:
 			return (EObject) createWorldReserveSystem();
-		case WorldreservesystemPackage.MAIN_VAULT:
-			return (EObject) createMainVault();
+		case WorldreservesystemPackage.TREASURY:
+			return (EObject) createTreasury();
 		case WorldreservesystemPackage.TRANSFER_VAULT:
 			return (EObject) createTransferVault();
 		case WorldreservesystemPackage.TRANSFER_VAULTS:
@@ -88,16 +88,14 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 			return (EObject) createIndividual();
 		case WorldreservesystemPackage.LEGAL_ENTITY:
 			return (EObject) createLegalEntity();
-		case WorldreservesystemPackage.NEW_ECLASS17:
-			return (EObject) createNewEClass17();
 		case WorldreservesystemPackage.IDENTITIES:
 			return (EObject) createIdentities();
-		case WorldreservesystemPackage.WALLET:
-			return (EObject) createWallet();
+		case WorldreservesystemPackage.ACCOUNT:
+			return (EObject) createAccount();
 		case WorldreservesystemPackage.SUPPLY_CONTROL:
 			return (EObject) createSupplyControl();
-		case WorldreservesystemPackage.WALLETS:
-			return (EObject) createWallets();
+		case WorldreservesystemPackage.ACCOUNTS:
+			return (EObject) createAccounts();
 		case WorldreservesystemPackage.TRANSACTION:
 			return (EObject) createTransaction();
 		case WorldreservesystemPackage.REGISTERED_ASSTETS:
@@ -106,6 +104,10 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 			return (EObject) createAbstractVault();
 		case WorldreservesystemPackage.TRANSACTION_COLLECTION:
 			return (EObject) createTransactionCollection();
+		case WorldreservesystemPackage.NODE:
+			return (EObject) createNode();
+		case WorldreservesystemPackage.NETWORK_ENGINE:
+			return (EObject) createNetworkEngine();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -156,9 +158,9 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MainVault createMainVault() {
-		MainVaultImpl mainVault = new MainVaultImpl();
-		return mainVault;
+	public Treasury createTreasury() {
+		TreasuryImpl treasury = new TreasuryImpl();
+		return treasury;
 	}
 
 	/**
@@ -296,16 +298,6 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewEClass17 createNewEClass17() {
-		NewEClass17Impl newEClass17 = new NewEClass17Impl();
-		return newEClass17;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Identities createIdentities() {
 		IdentitiesImpl identities = new IdentitiesImpl();
 		return identities;
@@ -316,9 +308,9 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Wallet createWallet() {
-		WalletImpl wallet = new WalletImpl();
-		return wallet;
+	public Account createAccount() {
+		AccountImpl account = new AccountImpl();
+		return account;
 	}
 
 	/**
@@ -336,9 +328,9 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Wallets createWallets() {
-		WalletsImpl wallets = new WalletsImpl();
-		return wallets;
+	public Accounts createAccounts() {
+		AccountsImpl accounts = new AccountsImpl();
+		return accounts;
 	}
 
 	/**
@@ -379,6 +371,26 @@ public class WorldreservesystemFactoryImpl extends EFactoryImpl implements World
 	public TransactionCollection createTransactionCollection() {
 		TransactionCollectionImpl transactionCollection = new TransactionCollectionImpl();
 		return transactionCollection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node createNode() {
+		NodeImpl node = new NodeImpl();
+		return node;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetworkEngine createNetworkEngine() {
+		NetworkEngineImpl networkEngine = new NetworkEngineImpl();
+		return networkEngine;
 	}
 
 	/**

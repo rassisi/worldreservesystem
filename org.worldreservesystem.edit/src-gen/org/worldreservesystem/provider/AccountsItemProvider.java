@@ -21,18 +21,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.worldreservesystem.Transaction;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
- * This is the item provider adapter for a {@link org.worldreservesystem.Transaction} object.
+ * This is the item provider adapter for a {@link org.worldreservesystem.Accounts} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransactionItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
+public class AccountsItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -40,7 +37,7 @@ public class TransactionItemProvider extends CDOItemProviderAdapter implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransactionItemProvider(AdapterFactory adapterFactory) {
+	public AccountsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -55,69 +52,35 @@ public class TransactionItemProvider extends CDOItemProviderAdapter implements I
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAssetsPropertyDescriptor(object);
-			addTransactionsPropertyDescriptor(object);
-			addDataPropertyDescriptor(object);
+			addChildrenPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Assets feature.
+	 * This adds a property descriptor for the Children feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAssetsPropertyDescriptor(Object object) {
+	protected void addChildrenPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Transaction_assets_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Transaction_assets_feature",
-								"_UI_Transaction_type"),
-						WorldreservesystemPackage.Literals.TRANSACTION__ASSETS, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Accounts_children_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Accounts_children_feature",
+								"_UI_Accounts_type"),
+						WorldreservesystemPackage.Literals.ACCOUNTS__CHILDREN, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Transactions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTransactionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Transaction_transactions_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Transaction_transactions_feature",
-								"_UI_Transaction_type"),
-						WorldreservesystemPackage.Literals.TRANSACTION__TRANSACTIONS, true, false, true, null, null,
-						null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Data feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDataPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Transaction_data_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Transaction_data_feature",
-								"_UI_Transaction_type"),
-						WorldreservesystemPackage.Literals.TRANSACTION__DATA, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns Transaction.gif.
+	 * This returns Accounts.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Transaction"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Accounts"));
 	}
 
 	/**
@@ -138,9 +101,7 @@ public class TransactionItemProvider extends CDOItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Transaction) object).getData();
-		return label == null || label.length() == 0 ? getString("_UI_Transaction_type")
-				: getString("_UI_Transaction_type") + " " + label;
+		return getString("_UI_Accounts_type");
 	}
 
 	/**
@@ -153,12 +114,6 @@ public class TransactionItemProvider extends CDOItemProviderAdapter implements I
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Transaction.class)) {
-		case WorldreservesystemPackage.TRANSACTION__DATA:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

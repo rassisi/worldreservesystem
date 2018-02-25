@@ -5,31 +5,31 @@ package org.worldreservesystem.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.worldreservesystem.Account;
 import org.worldreservesystem.Identity;
-import org.worldreservesystem.Wallet;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Wallet</b></em>'.
+ * An implementation of the model object '<em><b>Account</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.worldreservesystem.impl.WalletImpl#getPublicKey <em>Public Key</em>}</li>
- *   <li>{@link org.worldreservesystem.impl.WalletImpl#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.AccountImpl#getPublicKey <em>Public Key</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.AccountImpl#getBelongsTo <em>Belongs To</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WalletImpl extends AbstractVaultImpl implements Wallet {
+public class AccountImpl extends AbstractVaultImpl implements Account {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WalletImpl() {
+	protected AccountImpl() {
 		super();
 	}
 
@@ -40,7 +40,7 @@ public class WalletImpl extends AbstractVaultImpl implements Wallet {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WorldreservesystemPackage.Literals.WALLET;
+		return WorldreservesystemPackage.Literals.ACCOUNT;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class WalletImpl extends AbstractVaultImpl implements Wallet {
 	 * @generated
 	 */
 	public String getPublicKey() {
-		return (String) eGet(WorldreservesystemPackage.Literals.WALLET__PUBLIC_KEY, true);
+		return (String) eGet(WorldreservesystemPackage.Literals.ACCOUNT__PUBLIC_KEY, true);
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class WalletImpl extends AbstractVaultImpl implements Wallet {
 	 * @generated
 	 */
 	public void setPublicKey(String newPublicKey) {
-		eSet(WorldreservesystemPackage.Literals.WALLET__PUBLIC_KEY, newPublicKey);
+		eSet(WorldreservesystemPackage.Literals.ACCOUNT__PUBLIC_KEY, newPublicKey);
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class WalletImpl extends AbstractVaultImpl implements Wallet {
 	 * @generated
 	 */
 	public Identity getBelongsTo() {
-		return (Identity) eGet(WorldreservesystemPackage.Literals.WALLET__BELONGS_TO, true);
+		return (Identity) eGet(WorldreservesystemPackage.Literals.ACCOUNT__BELONGS_TO, true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class WalletImpl extends AbstractVaultImpl implements Wallet {
 	 * @generated
 	 */
 	public void setBelongsTo(Identity newBelongsTo) {
-		eSet(WorldreservesystemPackage.Literals.WALLET__BELONGS_TO, newBelongsTo);
+		eSet(WorldreservesystemPackage.Literals.ACCOUNT__BELONGS_TO, newBelongsTo);
 	}
 
-} //WalletImpl
+} //AccountImpl

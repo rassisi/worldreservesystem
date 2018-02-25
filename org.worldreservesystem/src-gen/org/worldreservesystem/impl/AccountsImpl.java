@@ -9,30 +9,30 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
-import org.worldreservesystem.Wallet;
-import org.worldreservesystem.Wallets;
+import org.worldreservesystem.Account;
+import org.worldreservesystem.Accounts;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Wallets</b></em>'.
+ * An implementation of the model object '<em><b>Accounts</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.worldreservesystem.impl.WalletsImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.AccountsImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WalletsImpl extends CDOObjectImpl implements Wallets {
+public class AccountsImpl extends CDOObjectImpl implements Accounts {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WalletsImpl() {
+	protected AccountsImpl() {
 		super();
 	}
 
@@ -43,7 +43,7 @@ public class WalletsImpl extends CDOObjectImpl implements Wallets {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WorldreservesystemPackage.Literals.WALLETS;
+		return WorldreservesystemPackage.Literals.ACCOUNTS;
 	}
 
 	/**
@@ -62,8 +62,8 @@ public class WalletsImpl extends CDOObjectImpl implements Wallets {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Wallet> getChildren() {
-		return (EList<Wallet>) eGet(WorldreservesystemPackage.Literals.WALLETS__CHILDREN, true);
+	public EList<Account> getChildren() {
+		return (EList<Account>) eGet(WorldreservesystemPackage.Literals.ACCOUNTS__CHILDREN, true);
 	}
 
-} //WalletsImpl
+} //AccountsImpl

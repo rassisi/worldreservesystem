@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.worldreservesystem.Genesis;
-import org.worldreservesystem.MainVault;
+import org.worldreservesystem.Treasury;
 import org.worldreservesystem.WorldreservesystemPackage;
 
 /**
@@ -19,7 +19,7 @@ import org.worldreservesystem.WorldreservesystemPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.worldreservesystem.impl.GenesisImpl#getMainvault <em>Mainvault</em>}</li>
+ *   <li>{@link org.worldreservesystem.impl.GenesisImpl#getTreasury <em>Treasury</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,8 +59,8 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MainVault getMainvault() {
-		return (MainVault) eGet(WorldreservesystemPackage.Literals.GENESIS__MAINVAULT, true);
+	public Treasury getTreasury() {
+		return (Treasury) eGet(WorldreservesystemPackage.Literals.GENESIS__TREASURY, true);
 	}
 
 	/**
@@ -68,8 +68,8 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMainvault(MainVault newMainvault) {
-		eSet(WorldreservesystemPackage.Literals.GENESIS__MAINVAULT, newMainvault);
+	public void setTreasury(Treasury newTreasury) {
+		eSet(WorldreservesystemPackage.Literals.GENESIS__TREASURY, newTreasury);
 	}
 
 } //GenesisImpl

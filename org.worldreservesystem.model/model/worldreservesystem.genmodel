@@ -67,7 +67,6 @@
     </genClasses>
     <genClasses ecoreClass="worldreservesystem.ecore#//Individual"/>
     <genClasses ecoreClass="worldreservesystem.ecore#//LegalEntity"/>
-    <genClasses ecoreClass="worldreservesystem.ecore#//NewEClass17"/>
     <genClasses ecoreClass="worldreservesystem.ecore#//Identities">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Identities/children"/>
     </genClasses>
@@ -97,8 +96,8 @@
     <genClasses ecoreClass="worldreservesystem.ecore#//Node">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Node/worldreservesystem"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute worldreservesystem.ecore#//Node/weight"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Node/connections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference worldreservesystem.ecore#//Node/networkengine"/>
     </genClasses>
-    <genClasses ecoreClass="worldreservesystem.ecore#//Connection"/>
+    <genClasses ecoreClass="worldreservesystem.ecore#//NetworkEngine"/>
   </genPackages>
 </genmodel:GenModel>

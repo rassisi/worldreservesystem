@@ -13,8 +13,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.worldreservesystem.AbstractVault;
+import org.worldreservesystem.Account;
 import org.worldreservesystem.Accountant;
 import org.worldreservesystem.Accountants;
+import org.worldreservesystem.Accounts;
 import org.worldreservesystem.Asset;
 import org.worldreservesystem.AssetType;
 import org.worldreservesystem.FiatCurrency;
@@ -23,19 +25,18 @@ import org.worldreservesystem.Identities;
 import org.worldreservesystem.Identity;
 import org.worldreservesystem.Individual;
 import org.worldreservesystem.LegalEntity;
-import org.worldreservesystem.MainVault;
 import org.worldreservesystem.Material;
 import org.worldreservesystem.Nation;
 import org.worldreservesystem.NationalEconomies;
-import org.worldreservesystem.NewEClass17;
+import org.worldreservesystem.NetworkEngine;
+import org.worldreservesystem.Node;
 import org.worldreservesystem.RegisteredAsstets;
 import org.worldreservesystem.SupplyControl;
 import org.worldreservesystem.Transaction;
 import org.worldreservesystem.TransactionCollection;
 import org.worldreservesystem.TransferVault;
 import org.worldreservesystem.TransferVaults;
-import org.worldreservesystem.Wallet;
-import org.worldreservesystem.Wallets;
+import org.worldreservesystem.Treasury;
 import org.worldreservesystem.WorldEconomy;
 import org.worldreservesystem.WorldReserveSystem;
 import org.worldreservesystem.WorldreservesystemFactory;
@@ -60,7 +61,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mainVaultEClass = null;
+	private EClass treasuryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,13 +166,6 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass newEClass17EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass identitiesEClass = null;
 
 	/**
@@ -179,7 +173,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass walletEClass = null;
+	private EClass accountEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,7 +187,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass walletsEClass = null;
+	private EClass accountsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,6 +216,20 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * @generated
 	 */
 	private EClass transactionCollectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass networkEngineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -362,8 +370,17 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMainVault() {
-		return mainVaultEClass;
+	public EOperation getWorldReserveSystem__CreateIdentity() {
+		return worldReserveSystemEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTreasury() {
+		return treasuryEClass;
 	}
 
 	/**
@@ -407,7 +424,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGenesis_Mainvault() {
+	public EReference getGenesis_Treasury() {
 		return (EReference) genesisEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -596,15 +613,6 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNewEClass17() {
-		return newEClass17EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIdentities() {
 		return identitiesEClass;
 	}
@@ -623,8 +631,8 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWallet() {
-		return walletEClass;
+	public EClass getAccount() {
+		return accountEClass;
 	}
 
 	/**
@@ -632,8 +640,8 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getWallet_PublicKey() {
-		return (EAttribute) walletEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAccount_PublicKey() {
+		return (EAttribute) accountEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -641,8 +649,8 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWallet_BelongsTo() {
-		return (EReference) walletEClass.getEStructuralFeatures().get(1);
+	public EReference getAccount_BelongsTo() {
+		return (EReference) accountEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -668,8 +676,8 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWallets() {
-		return walletsEClass;
+	public EClass getAccounts() {
+		return accountsEClass;
 	}
 
 	/**
@@ -677,8 +685,8 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWallets_Children() {
-		return (EReference) walletsEClass.getEStructuralFeatures().get(0);
+	public EReference getAccounts_Children() {
+		return (EReference) accountsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -704,7 +712,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransaction_From() {
+	public EReference getTransaction_Transactions() {
 		return (EReference) transactionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -713,8 +721,8 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransaction_To() {
-		return (EReference) transactionEClass.getEStructuralFeatures().get(2);
+	public EAttribute getTransaction_Data() {
+		return (EAttribute) transactionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -758,8 +766,62 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAbstractVault_Transaction() {
+		return (EReference) abstractVaultEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTransactionCollection() {
 		return transactionCollectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNode() {
+		return nodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_Worldreservesystem() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNode_Weight() {
+		return (EAttribute) nodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_Networkengine() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNetworkEngine() {
+		return networkEngineEClass;
 	}
 
 	/**
@@ -807,8 +869,9 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		createEReference(worldReserveSystemEClass, WORLD_RESERVE_SYSTEM__SUPPLYCONTROL);
 		createEReference(worldReserveSystemEClass, WORLD_RESERVE_SYSTEM__WALLETS);
 		createEReference(worldReserveSystemEClass, WORLD_RESERVE_SYSTEM__REGISTEREDASSTETS);
+		createEOperation(worldReserveSystemEClass, WORLD_RESERVE_SYSTEM___CREATE_IDENTITY);
 
-		mainVaultEClass = createEClass(MAIN_VAULT);
+		treasuryEClass = createEClass(TREASURY);
 
 		transferVaultEClass = createEClass(TRANSFER_VAULT);
 
@@ -816,7 +879,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		createEReference(transferVaultsEClass, TRANSFER_VAULTS__CHILDREN);
 
 		genesisEClass = createEClass(GENESIS);
-		createEReference(genesisEClass, GENESIS__MAINVAULT);
+		createEReference(genesisEClass, GENESIS__TREASURY);
 
 		assetEClass = createEClass(ASSET);
 		createEAttribute(assetEClass, ASSET__ASSET_TYPE);
@@ -849,33 +912,39 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 
 		legalEntityEClass = createEClass(LEGAL_ENTITY);
 
-		newEClass17EClass = createEClass(NEW_ECLASS17);
-
 		identitiesEClass = createEClass(IDENTITIES);
 		createEReference(identitiesEClass, IDENTITIES__CHILDREN);
 
-		walletEClass = createEClass(WALLET);
-		createEAttribute(walletEClass, WALLET__PUBLIC_KEY);
-		createEReference(walletEClass, WALLET__BELONGS_TO);
+		accountEClass = createEClass(ACCOUNT);
+		createEAttribute(accountEClass, ACCOUNT__PUBLIC_KEY);
+		createEReference(accountEClass, ACCOUNT__BELONGS_TO);
 
 		supplyControlEClass = createEClass(SUPPLY_CONTROL);
 		createEReference(supplyControlEClass, SUPPLY_CONTROL__GENESIS);
 
-		walletsEClass = createEClass(WALLETS);
-		createEReference(walletsEClass, WALLETS__CHILDREN);
+		accountsEClass = createEClass(ACCOUNTS);
+		createEReference(accountsEClass, ACCOUNTS__CHILDREN);
 
 		transactionEClass = createEClass(TRANSACTION);
 		createEReference(transactionEClass, TRANSACTION__ASSETS);
-		createEReference(transactionEClass, TRANSACTION__FROM);
-		createEReference(transactionEClass, TRANSACTION__TO);
+		createEReference(transactionEClass, TRANSACTION__TRANSACTIONS);
+		createEAttribute(transactionEClass, TRANSACTION__DATA);
 
 		registeredAsstetsEClass = createEClass(REGISTERED_ASSTETS);
 		createEReference(registeredAsstetsEClass, REGISTERED_ASSTETS__CHILDREN);
 
 		abstractVaultEClass = createEClass(ABSTRACT_VAULT);
 		createEReference(abstractVaultEClass, ABSTRACT_VAULT__ASSETS);
+		createEReference(abstractVaultEClass, ABSTRACT_VAULT__TRANSACTION);
 
 		transactionCollectionEClass = createEClass(TRANSACTION_COLLECTION);
+
+		nodeEClass = createEClass(NODE);
+		createEReference(nodeEClass, NODE__WORLDRESERVESYSTEM);
+		createEAttribute(nodeEClass, NODE__WEIGHT);
+		createEReference(nodeEClass, NODE__NETWORKENGINE);
+
+		networkEngineEClass = createEClass(NETWORK_ENGINE);
 
 		// Create enums
 		assetTypeEEnum = createEEnum(ASSET_TYPE);
@@ -911,12 +980,12 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 
 		// Add supertypes to classes
 		worldReserveSystemEClass.getESuperTypes().add(this.getIdentity());
-		mainVaultEClass.getESuperTypes().add(this.getAbstractVault());
+		treasuryEClass.getESuperTypes().add(this.getAbstractVault());
 		transferVaultEClass.getESuperTypes().add(this.getAbstractVault());
 		materialEClass.getESuperTypes().add(this.getIdentity());
 		individualEClass.getESuperTypes().add(this.getIdentity());
 		legalEntityEClass.getESuperTypes().add(this.getIdentity());
-		walletEClass.getESuperTypes().add(this.getAbstractVault());
+		accountEClass.getESuperTypes().add(this.getAbstractVault());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(worldReserveSystemEClass, WorldReserveSystem.class, "WorldReserveSystem", !IS_ABSTRACT,
@@ -924,7 +993,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		initEReference(getWorldReserveSystem_Transfervaults(), this.getTransferVaults(), null, "transfervaults", null,
 				1, 1, WorldReserveSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorldReserveSystem_Mainvault(), this.getMainVault(), null, "mainvault", null, 1, 1,
+		initEReference(getWorldReserveSystem_Mainvault(), this.getTreasury(), null, "mainvault", null, 1, 1,
 				WorldReserveSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorldReserveSystem_Identities(), this.getIdentities(), null, "identities", null, 1, 1,
@@ -933,14 +1002,16 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		initEReference(getWorldReserveSystem_Supplycontrol(), this.getSupplyControl(), null, "supplycontrol", null, 1,
 				1, WorldReserveSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorldReserveSystem_Wallets(), this.getWallets(), null, "wallets", null, 1, 1,
+		initEReference(getWorldReserveSystem_Wallets(), this.getAccounts(), null, "wallets", null, 1, 1,
 				WorldReserveSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorldReserveSystem_Registeredasstets(), this.getRegisteredAsstets(), null,
 				"registeredasstets", null, 1, 1, WorldReserveSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mainVaultEClass, MainVault.class, "MainVault", !IS_ABSTRACT, !IS_INTERFACE,
+		initEOperation(getWorldReserveSystem__CreateIdentity(), null, "createIdentity", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(treasuryEClass, Treasury.class, "Treasury", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(transferVaultEClass, TransferVault.class, "TransferVault", !IS_ABSTRACT, !IS_INTERFACE,
@@ -953,7 +1024,7 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(genesisEClass, Genesis.class, "Genesis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGenesis_Mainvault(), this.getMainVault(), null, "mainvault", null, 1, 1, Genesis.class,
+		initEReference(getGenesis_Treasury(), this.getTreasury(), null, "treasury", null, 1, 1, Genesis.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1011,19 +1082,16 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		initEClass(legalEntityEClass, LegalEntity.class, "LegalEntity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(newEClass17EClass, NewEClass17.class, "NewEClass17", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(identitiesEClass, Identities.class, "Identities", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIdentities_Children(), this.getIdentity(), null, "children", null, 0, -1, Identities.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(walletEClass, Wallet.class, "Wallet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWallet_PublicKey(), ecorePackage.getEString(), "publicKey", null, 0, 1, Wallet.class,
+		initEClass(accountEClass, Account.class, "Account", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAccount_PublicKey(), ecorePackage.getEString(), "publicKey", null, 0, 1, Account.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWallet_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, Wallet.class,
+		initEReference(getAccount_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, Account.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1033,8 +1101,9 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(walletsEClass, Wallets.class, "Wallets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWallets_Children(), this.getWallet(), null, "children", null, 0, -1, Wallets.class,
+		initEClass(accountsEClass, Accounts.class, "Accounts", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAccounts_Children(), this.getAccount(), null, "children", null, 0, -1, Accounts.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1043,12 +1112,11 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		initEReference(getTransaction_Assets(), this.getAsset(), null, "assets", null, 0, 1, Transaction.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransaction_From(), this.getAbstractVault(), null, "from", null, 0, 1, Transaction.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransaction_To(), this.getAbstractVault(), null, "to", null, 0, 1, Transaction.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransaction_Transactions(), this.getAbstractVault(), null, "transactions", null, 0, -1,
+				Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransaction_Data(), ecorePackage.getEString(), "data", "", 0, 1, Transaction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(registeredAsstetsEClass, RegisteredAsstets.class, "RegisteredAsstets", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1061,16 +1129,32 @@ public class WorldreservesystemPackageImpl extends EPackageImpl implements World
 		initEReference(getAbstractVault_Assets(), this.getAsset(), null, "assets", null, 0, -1, AbstractVault.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractVault_Transaction(), this.getTransaction(), null, "transaction", null, 0, 1,
+				AbstractVault.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionCollectionEClass, TransactionCollection.class, "TransactionCollection", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNode_Worldreservesystem(), this.getWorldReserveSystem(), null, "worldreservesystem", null, 0,
+				1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Weight(), ecorePackage.getEDouble(), "weight", null, 0, 1, Node.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Networkengine(), this.getNetworkEngine(), null, "networkengine", null, 1, 1, Node.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(networkEngineEClass, NetworkEngine.class, "NetworkEngine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(assetTypeEEnum, AssetType.class, "AssetType");
 		addEEnumLiteral(assetTypeEEnum, AssetType.GOLD);
 		addEEnumLiteral(assetTypeEEnum, AssetType.SILVER);
 		addEEnumLiteral(assetTypeEEnum, AssetType.CRYPTO);
-		addEEnumLiteral(assetTypeEEnum, AssetType.UDOLLAR);
+		addEEnumLiteral(assetTypeEEnum, AssetType.TRUST);
 		addEEnumLiteral(assetTypeEEnum, AssetType.MATERIAL);
 		addEEnumLiteral(assetTypeEEnum, AssetType.INTELLECTUAL_PROPERTY);
 

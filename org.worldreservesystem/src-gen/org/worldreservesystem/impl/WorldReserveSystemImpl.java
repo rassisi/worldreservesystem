@@ -3,14 +3,16 @@
  */
 package org.worldreservesystem.impl;
 
+import java.lang.reflect.InvocationTargetException;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.worldreservesystem.Accounts;
 import org.worldreservesystem.Identities;
-import org.worldreservesystem.MainVault;
 import org.worldreservesystem.RegisteredAsstets;
 import org.worldreservesystem.SupplyControl;
 import org.worldreservesystem.TransferVaults;
-import org.worldreservesystem.Wallets;
+import org.worldreservesystem.Treasury;
 import org.worldreservesystem.WorldReserveSystem;
 import org.worldreservesystem.WorldreservesystemPackage;
 
@@ -75,8 +77,8 @@ public class WorldReserveSystemImpl extends IdentityImpl implements WorldReserve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MainVault getMainvault() {
-		return (MainVault) eGet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__MAINVAULT, true);
+	public Treasury getMainvault() {
+		return (Treasury) eGet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__MAINVAULT, true);
 	}
 
 	/**
@@ -84,7 +86,7 @@ public class WorldReserveSystemImpl extends IdentityImpl implements WorldReserve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMainvault(MainVault newMainvault) {
+	public void setMainvault(Treasury newMainvault) {
 		eSet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__MAINVAULT, newMainvault);
 	}
 
@@ -129,8 +131,8 @@ public class WorldReserveSystemImpl extends IdentityImpl implements WorldReserve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Wallets getWallets() {
-		return (Wallets) eGet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__WALLETS, true);
+	public Accounts getWallets() {
+		return (Accounts) eGet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__WALLETS, true);
 	}
 
 	/**
@@ -138,7 +140,7 @@ public class WorldReserveSystemImpl extends IdentityImpl implements WorldReserve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWallets(Wallets newWallets) {
+	public void setWallets(Accounts newWallets) {
 		eSet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__WALLETS, newWallets);
 	}
 
@@ -159,6 +161,32 @@ public class WorldReserveSystemImpl extends IdentityImpl implements WorldReserve
 	 */
 	public void setRegisteredasstets(RegisteredAsstets newRegisteredasstets) {
 		eSet(WorldreservesystemPackage.Literals.WORLD_RESERVE_SYSTEM__REGISTEREDASSTETS, newRegisteredasstets);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createIdentity() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case WorldreservesystemPackage.WORLD_RESERVE_SYSTEM___CREATE_IDENTITY:
+			createIdentity();
+			return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //WorldReserveSystemImpl

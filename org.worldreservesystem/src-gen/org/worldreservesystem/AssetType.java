@@ -50,23 +50,22 @@ public enum AssetType implements Enumerator {
 	CRYPTO(2, "CRYPTO", "CRYPTO"),
 
 	/**
-	 * The '<em><b>UDOLLAR</b></em>' literal object.
+	 * The '<em><b>TRUST</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UDOLLAR_VALUE
+	 * @see #TRUST_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UDOLLAR(3, "UDOLLAR", "UDOLLAR"),
-
+	TRUST(3, "TRUST", "TRUST"),
 	/**
-	 * The '<em><b>MATERIAL</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MATERIAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
+	* The '<em><b>MATERIAL</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #MATERIAL_VALUE
+	* @generated
+	* @ordered
+	*/
 	MATERIAL(4, "MATERIAL", "MATERIAL"),
 
 	/**
@@ -125,19 +124,19 @@ public enum AssetType implements Enumerator {
 	public static final int CRYPTO_VALUE = 2;
 
 	/**
-	 * The '<em><b>UDOLLAR</b></em>' literal value.
+	 * The '<em><b>TRUST</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>UDOLLAR</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>TRUST</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #UDOLLAR
+	 * @see #TRUST
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UDOLLAR_VALUE = 3;
+	public static final int TRUST_VALUE = 3;
 
 	/**
 	 * The '<em><b>MATERIAL</b></em>' literal value.
@@ -175,7 +174,7 @@ public enum AssetType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final AssetType[] VALUES_ARRAY = new AssetType[] { GOLD, SILVER, CRYPTO, UDOLLAR, MATERIAL,
+	private static final AssetType[] VALUES_ARRAY = new AssetType[] { GOLD, SILVER, CRYPTO, TRUST, MATERIAL,
 			INTELLECTUAL_PROPERTY, };
 
 	/**
@@ -238,8 +237,8 @@ public enum AssetType implements Enumerator {
 			return SILVER;
 		case CRYPTO_VALUE:
 			return CRYPTO;
-		case UDOLLAR_VALUE:
-			return UDOLLAR;
+		case TRUST_VALUE:
+			return TRUST;
 		case MATERIAL_VALUE:
 			return MATERIAL;
 		case INTELLECTUAL_PROPERTY_VALUE:

@@ -97,26 +97,26 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.MainVault} instances.
+	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Treasury} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MainVaultItemProvider mainVaultItemProvider;
+	protected TreasuryItemProvider treasuryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.worldreservesystem.MainVault}.
+	 * This creates an adapter for a {@link org.worldreservesystem.Treasury}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMainVaultAdapter() {
-		if (mainVaultItemProvider == null) {
-			mainVaultItemProvider = new MainVaultItemProvider(this);
+	public Adapter createTreasuryAdapter() {
+		if (treasuryItemProvider == null) {
+			treasuryItemProvider = new TreasuryItemProvider(this);
 		}
 
-		return mainVaultItemProvider;
+		return treasuryItemProvider;
 	}
 
 	/**
@@ -419,29 +419,6 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.NewEClass17} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NewEClass17ItemProvider newEClass17ItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.worldreservesystem.NewEClass17}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNewEClass17Adapter() {
-		if (newEClass17ItemProvider == null) {
-			newEClass17ItemProvider = new NewEClass17ItemProvider(this);
-		}
-
-		return newEClass17ItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Identities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -465,26 +442,26 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Wallet} instances.
+	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Account} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WalletItemProvider walletItemProvider;
+	protected AccountItemProvider accountItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.worldreservesystem.Wallet}.
+	 * This creates an adapter for a {@link org.worldreservesystem.Account}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createWalletAdapter() {
-		if (walletItemProvider == null) {
-			walletItemProvider = new WalletItemProvider(this);
+	public Adapter createAccountAdapter() {
+		if (accountItemProvider == null) {
+			accountItemProvider = new AccountItemProvider(this);
 		}
 
-		return walletItemProvider;
+		return accountItemProvider;
 	}
 
 	/**
@@ -511,26 +488,26 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Wallets} instances.
+	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Accounts} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WalletsItemProvider walletsItemProvider;
+	protected AccountsItemProvider accountsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.worldreservesystem.Wallets}.
+	 * This creates an adapter for a {@link org.worldreservesystem.Accounts}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createWalletsAdapter() {
-		if (walletsItemProvider == null) {
-			walletsItemProvider = new WalletsItemProvider(this);
+	public Adapter createAccountsAdapter() {
+		if (accountsItemProvider == null) {
+			accountsItemProvider = new AccountsItemProvider(this);
 		}
 
-		return walletsItemProvider;
+		return accountsItemProvider;
 	}
 
 	/**
@@ -623,6 +600,52 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 		}
 
 		return transactionCollectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.Node} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeItemProvider nodeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.worldreservesystem.Node}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeAdapter() {
+		if (nodeItemProvider == null) {
+			nodeItemProvider = new NodeItemProvider(this);
+		}
+
+		return nodeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.worldreservesystem.NetworkEngine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NetworkEngineItemProvider networkEngineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.worldreservesystem.NetworkEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNetworkEngineAdapter() {
+		if (networkEngineItemProvider == null) {
+			networkEngineItemProvider = new NetworkEngineItemProvider(this);
+		}
+
+		return networkEngineItemProvider;
 	}
 
 	/**
@@ -726,8 +749,8 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 	public void dispose() {
 		if (worldReserveSystemItemProvider != null)
 			worldReserveSystemItemProvider.dispose();
-		if (mainVaultItemProvider != null)
-			mainVaultItemProvider.dispose();
+		if (treasuryItemProvider != null)
+			treasuryItemProvider.dispose();
 		if (transferVaultItemProvider != null)
 			transferVaultItemProvider.dispose();
 		if (transferVaultsItemProvider != null)
@@ -754,16 +777,14 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 			individualItemProvider.dispose();
 		if (legalEntityItemProvider != null)
 			legalEntityItemProvider.dispose();
-		if (newEClass17ItemProvider != null)
-			newEClass17ItemProvider.dispose();
 		if (identitiesItemProvider != null)
 			identitiesItemProvider.dispose();
-		if (walletItemProvider != null)
-			walletItemProvider.dispose();
+		if (accountItemProvider != null)
+			accountItemProvider.dispose();
 		if (supplyControlItemProvider != null)
 			supplyControlItemProvider.dispose();
-		if (walletsItemProvider != null)
-			walletsItemProvider.dispose();
+		if (accountsItemProvider != null)
+			accountsItemProvider.dispose();
 		if (transactionItemProvider != null)
 			transactionItemProvider.dispose();
 		if (registeredAsstetsItemProvider != null)
@@ -772,6 +793,10 @@ public class WorldreservesystemItemProviderAdapterFactory extends Worldreservesy
 			abstractVaultItemProvider.dispose();
 		if (transactionCollectionItemProvider != null)
 			transactionCollectionItemProvider.dispose();
+		if (nodeItemProvider != null)
+			nodeItemProvider.dispose();
+		if (networkEngineItemProvider != null)
+			networkEngineItemProvider.dispose();
 	}
 
 }
