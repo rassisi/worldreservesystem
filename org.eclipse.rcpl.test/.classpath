@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/joffice_core.jar"/>
-	<classpathentry kind="lib" path="lib/joffice_libs.jar"/>
-	<classpathentry kind="lib" path="lib/joffice.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.rcpl.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.rcpl.batik"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.rcpl.libs"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

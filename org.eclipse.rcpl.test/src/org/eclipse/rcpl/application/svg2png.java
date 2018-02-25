@@ -1,11 +1,12 @@
 package org.eclipse.rcpl.application;
 
-import java.io.*;
-import org.apache.batik.transcoder.image.PNGTranscoder;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
-import java.nio.file.Paths;
-import java.nio.file.Path;
+import org.apache.batik.transcoder.image.PNGTranscoder;
 
 public class svg2png {
 	public static void main(String[] args) throws Exception {
