@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Images
+Bundle-SymbolicName: org.eclipse.rcpl.resources
+Bundle-Version: 0.1.1.2
+Bundle-Vendor: WWINDOWS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .
+Export-Package: org.eclipse.rcpl.ui.resources

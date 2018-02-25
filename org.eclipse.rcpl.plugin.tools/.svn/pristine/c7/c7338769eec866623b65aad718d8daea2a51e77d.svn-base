@@ -1,0 +1,18 @@
+package org.eclipse.rcpl.client.uc.tools.parts;
+
+import org.eclipse.fxrcplight.IUseCase;
+import org.eclipse.fxrcplight.JOAbstractMigration;
+
+public class EToolsMigration extends JOAbstractMigration {
+
+	public EToolsMigration(IUseCase useCase) {
+		super(useCase);
+	}
+
+	@Override
+	protected void migrate() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

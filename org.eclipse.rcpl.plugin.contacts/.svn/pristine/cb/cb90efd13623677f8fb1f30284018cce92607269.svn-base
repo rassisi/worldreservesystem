@@ -1,0 +1,71 @@
+package org.eclipse.rcpl.contacts.plugin;
+
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.fxrcplight.JO;
+import org.eclipse.fxrcplight.RcplPlugin;
+import org.eclipse.rcpl.ui.parts.contacts.EContactsModelManager;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+
+/**
+ * @author ramin
+ *
+ */
+public class UCContactsPlugin implements BundleActivator {
+
+	private static BundleContext context;
+
+	private static UCContactsPlugin instance;
+
+	private EContactsModelManager modelManager;
+
+	static BundleContext getContext() {
+		return context;
+	}
+
+	public UCContactsPlugin() {
+		instance = this;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext
+	 * )
+	 */
+	public void start(BundleContext bundleContext) throws Exception {
+		UCContactsPlugin.context = bundleContext;
+		JO.UIC.registerUseCase(RcplContactsPlugin.class);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
+	 */
+	public void stop(BundleContext bundleContext) throws Exception {
+		UCContactsPlugin.context = null;
+	}
+
+	public static UCContactsPlugin getDefault() {
+
+		// This is for Standalone
+		if (instance == null) {
+			instance = new UCContactsPlugin();
+		}
+		return instance;
+	}
+
+	public EContactsModelManager getModelManager() {
+		if (modelManager == null) {
+			modelManager = EContactsModelManager.FACTORY.newInstance();
+		}
+		return modelManager;
+	}
+
+	public static EditingDomain getEditingDomain() {
+		return getDefault().getModelManager().getEditingDomain();
+	}
+}

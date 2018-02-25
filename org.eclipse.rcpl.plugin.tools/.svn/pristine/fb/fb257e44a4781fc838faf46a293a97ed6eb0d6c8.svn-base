@@ -1,0 +1,44 @@
+package org.eclipse.rcpl.client.uc.tools.parts;
+
+import org.eclipse.fxrcplight.EViewController;
+import org.eclipse.fxrcplight.IUseCase;
+import org.eclipse.fxrcplight.JOAbstractMigration;
+import org.eclipse.fxrcplight.JOAbstractUseCase;
+
+/**
+ * @author Ramin
+ * 
+ */
+public class EToolsUseCase extends JOAbstractUseCase implements IUseCase {
+
+	public static final String USE_CASE_ID = "USE_CASE_TOOLS";
+
+	public EToolsUseCase() {
+		super(USE_CASE_ID);
+	}
+
+	public EToolsUseCaseController getController() {
+		return (EToolsUseCaseController) super.getController();
+	}
+
+	@Override
+	public void init() {
+		super.init();
+	}
+
+	@Override
+	public String getDisplayName() {
+		return "Setup Tools";
+	}
+
+	@Override
+	protected EViewController createController() {
+		return new EToolsUseCaseController();
+	}
+
+	@Override
+	protected JOAbstractMigration getMigration() {
+		return new EToolsMigration(this);
+	}
+
+}

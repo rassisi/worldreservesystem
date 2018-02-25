@@ -1,0 +1,63 @@
+package org.eclipse.rcpl.ui.parts.contacts;
+
+import org.eclipse.emf.common.command.BasicCommandStack;
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+import org.eclipse.fxrcplight.JO;
+import org.eclipse.fxrcplight.model.cdo.client.JOSession;
+import org.eclipse.rcpl.model_1_0_0.jo.provider.JoItemProviderAdapterFactory;
+
+/**
+ * @author Ramin
+ * 
+ */
+public class EContactsModelManagerImpl implements EContactsModelManager {
+
+	public static EditingDomain editingDomain;
+
+	public static ComposedAdapterFactory adapterFactory;
+
+	public EContactsModelManagerImpl() {
+		if (adapterFactory == null) {
+			adapterFactory = new ComposedAdapterFactory(
+					ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+			adapterFactory
+					.addAdapterFactory(new ResourceItemProviderAdapterFactory());
+			adapterFactory
+					.addAdapterFactory(new JoItemProviderAdapterFactory());
+
+			adapterFactory
+					.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
+		}
+
+	}
+
+	public AdapterFactory getAdapterFactory() {
+		return adapterFactory;
+	}
+
+	public EditingDomain getEditingDomain() {
+		if (editingDomain == null) {
+			{
+				BasicCommandStack commandStack = new BasicCommandStack();
+				editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
+						commandStack);
+			}
+
+			try {
+				editingDomain.getResourceSet().getResources()
+						.add(JOSession.INSTANCE.getResource());
+			} catch (Exception ex) {
+				// System. out.println();
+			}
+
+		}
+		return editingDomain;
+	}
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="JOfficeGluonApplication/lib/joffice.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/com.joffice.rcpl.application/build_jar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=com.joffice.rcpl.application/src"/>
+        <folder path="/com.joffice.rcpl.plugin.office/META-INF"/>
+        <folder path="/com.joffice.rcpl.application/META-INF"/>
+        <file path="/com.joffice.rcpl.plugin.office/build.properties"/>
+        <file path="/com.joffice.rcpl.plugin.office/.project"/>
+        <file path="/com.joffice.rcpl.plugin.office/TODO.txt"/>
+        <javaElement handleIdentifier="=com.joffice.rcpl.plugin.office/src"/>
+        <folder path="/com.joffice.rcpl.plugin.office/.settings"/>
+        <file path="/com.joffice.rcpl.plugin.office/.classpath"/>
+    </selectedElements>
+</jardesc>

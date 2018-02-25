@@ -1,0 +1,1078 @@
+/* Main CSS-File */
+#joffice_tooltip {
+	-fx-font-size: 11.0pt;
+	-fx-background-color: lightyellow;
+	-fx-text-fill: darkblue;
+}
+
+#joEditor .tab-pane {
+	-fx-font-size: 8.0pt;
+	-fx-background-color: derive(-fx-base, -50.0%);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Decoration Area                                                             *
+ *                                                                             *
+ ******************************************************************************/
+#decorationArea {
+	-fx-background-color: derive(-fx-base, -0.0%);
+}
+
+#mainTopArea {
+	/* -fx-background-color: red; */
+	
+}
+
+#mainBackground {
+	-fx-fill: derive(-fx-base, 70.0%);
+}
+
+#mainEditorArea {
+	-fx-fill: derive(-fx-base, -50.0%);
+	-fx-background-color: gray;
+}
+
+#mainLeftArea {
+	-fx-font-size: 8.0pt;
+	-fx-background-color: transparent;
+	/*radial-gradient(radius 100.0%, derive(-fx-base,20.0%), derive(-fx-base,-20.0%)); */
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#mainBottomArea {
+	-fx-font-size: 8.0pt;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#verticalGradientPane {
+	-fx-font-size: 8.0pt;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+.ttip {
+	-fx-font-size: 12.0pt;
+	-fx-background-color: cornsilk;
+	-fx-fill: darkblue;
+	-fx-text-fill: darkblue;
+}
+
+#useCaseHeader {
+	-fx-font: bold 12pt "Arial";
+	/* -fx-background-color: cornsilk; */
+	-fx-fill: derive(-fx-base, -60.0%);
+	-fx-text-fill: derive(-fx-base, -60.0%);
+}
+
+#useCaseSectionHeader {
+	-fx-font: italic 10pt "Arial";
+	/* -fx-background-color: cornsilk; */
+	-fx-fill: derive(-fx-base, -60.0%);
+	-fx-text-fill: derive(-fx-base, -60.0%);
+}
+
+#mainTopStack {
+	/*-fx-background-color: green;*/
+	
+}
+
+#sideToolButton {
+	
+}
+
+#groupVBox {
+	-fx-font-size: 10.0pt;
+	/*
+    -fx-background-color: radial-gradient(radius 100.0%, derive(fx-base,70.0%), derive(-fx-base,-30.0%));
+    */
+	-fx-background-color: transparent;
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+	-fx-spacing: 10;
+}
+
+#toolsStackPane {
+	-fx-font-size: 10.0pt;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 70.0%),
+		derive(-fx-base, -30.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#test {
+	-fx-background-color: aqua;
+	-fx-background-color: linear-gradient(to bottom, derive(green, -30.0%),
+		derive(green, -60.0%)),
+		linear-gradient(to bottom, -light-black 2.0%, -dark-black 98.0%);
+}
+
+#window-resize-button {
+	-fx-background-image: url("images/window-corner.png");
+	-fx-background-position: right 1.0px bottom 1.0px;
+	-fx-background-repeat: no-repeat;
+}
+
+#start_button {
+	-fx-background-image: url("images/start_button.png");
+	-fx-background-repeat: no-repeat;
+}
+
+#start_button:hover {
+	-fx-background-image: url("images/start_button_highlight.png");
+	-fx-background-repeat: no-repeat;
+}
+
+#window-resize-button-not-visible {
+	
+}
+
+#window_close {
+	-fx-background-color: null;
+	-fx-background-image: url("images/close_2.png");
+	-fx-background-repeat: no-repeat;
+}
+
+#collapse_all {
+	-fx-background-color: null;
+	-fx-background-image: url("images/collapse_all.png");
+	-fx-background-repeat: no-repeat;
+}
+
+#collapse_all:hover {
+	-fx-background-image: url("images/collapse_all_hover.png");
+}
+
+#window_min {
+	-fx-background-color: null;
+	-fx-background-image: url("images/minimize_2.png");
+	-fx-background-repeat: no-repeat;
+}
+
+#window_max {
+	-fx-background-color: null;
+	-fx-background-image: url("images/maximize_2.png");
+	-fx-background-repeat: no-repeat;
+}
+
+#window_close:hover {
+	-fx-background-image: url("images/close_2_hover.png");
+}
+
+#window_min:hover {
+	-fx-background-image: url("images/minimize_2_hover.png");
+}
+
+#window_max:hover {
+	-fx-background-image: url("images/maximize_2_hover.png");
+}
+
+#topCollapseButton {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/downarrow.gif");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#perspectiveSettings {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/setup.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#perspectiveWord {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/word.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#perspectiveSpreadsheet {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/spreadsheet.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#perspectivePresentation {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/presentation.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#perspectiveWebbrowser {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/webbrowser.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#openDocument {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/open.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#openLastDocument {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/open.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#saveDocument {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/save.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#saveDocumentAs {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/save_as.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#leftCollapseButton {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/downarrow.gif");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#allCollapseButton {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/downarrow.gif");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#addWebBrowserTab {
+	/* -fx-background-image: url("images/add_webbrowser.png");
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: left;
+  */
+	-fx-font: bold italic 14pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+	-fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+	-fx-padding: 0.083333em 1em 0.083333em 0.5em;
+}
+
+#openExample_2 {
+	-fx-background-image: url("images/add_spreadsheet.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-font: bold italic 14pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+	-fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+	-fx-padding: 0.083333em 1em 0.083333em 0.5em;
+}
+
+#openExample_3 {
+	-fx-background-image: url("images/add_presentation.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-font: bold italic 14pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+	-fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+	-fx-padding: 0.083333em 1em 0.083333em 0.5em;
+}
+
+#addWordTab {
+	-fx-background-image: url("images/add_word.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-font: bold italic 14pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+	-fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+	-fx-padding: 0.083333em 1em 0.083333em 0.5em;
+}
+
+#addSpreadsheetTab {
+	-fx-background-image: url("images/add_spreadsheet.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-font: bold italic 14pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+	-fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+	-fx-padding: 0.083333em 1em 0.083333em 0.5em;
+}
+
+#addPresentationTab {
+	-fx-background-image: url("images/add_presentation.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-font: bold italic 14pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+	-fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+	-fx-padding: 0.083333em 1em 0.083333em 0.5em;
+}
+
+#openExample_1 {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/ecma.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#homeTab {
+	-fx-background-image: url("images/home.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-font: bold 10pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+
+	/*-fx-background-insets: 0, 9 9 0 9;*/
+
+	/*
+  -fx-background-insets: 0 5em 0 0, 1 5em 1 1, 2 5em 0 0;
+  -fx-padding: 0.083333em 1em 0.083333em 0.5em;
+*/
+}
+
+#webBrowserTab {
+	/*
+    -fx-background-image: url("images/webbrowser.png");
+	  -fx-background-repeat: no-repeat;
+	  */
+	-fx-background-position: left;
+}
+
+#wordTab {
+	-fx-background-image: url("images/word.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+}
+
+/* 
+    Document   : tabs
+    Created on : Mar 23, 2012, 2:12:26 PM
+    Description:
+        Style the Ribbon Bar.
+*/
+
+/**
+ * This style creates the gradient effect across the entire "Ribbon Strip"
+ * background. This is an HBox in FX application. You will find the HBox 
+ * container in the HomeTab.java and InsertTab.java classes.
+ */
+#container {
+	-fx-padding: 3.0px;
+	-fx-background-color: linear-gradient(#ffffff 0.0%, derive(-fx-base, 4.0%),
+		derive(-fx-base, 17.0%), derive(-fx-base, 12.0%),
+		derive(-fx-base, 100.0%));
+}
+
+/*
+ *         linear-gradient(#ffffff 0%, #ced3da 4%, #c1c6cf 17%, #b4bbc5 18%, #e5ebeb 100%);
+ 
+ */
+.toolbarContainer {
+	-fx-background-color: linear-gradient(derive(-fx-base, 0.0%),
+		derive(-fx-base, 14.0%), derive(-fx-base, 15.0%),
+		derive(-fx-base, 49.0%)),
+		linear-gradient(#bdbfc1 0.0%, #9a9c9f 14.0%, #888b90 15.0%, #838686
+		49.0%), linear-gradient(#eef1f6 0.0%, derive(-fx-base, 14.0%),
+		derive(-fx-base, 15.0%), derive(-fx-base, 29.0%),
+		derive(-fx-base, 29.0%), derive(-fx-base, 49.0%));
+	-fx-background-radius: 5.0, 4.0, 2.4;
+	-fx-padding: 4.0 8.0 0.0 8.0;
+}
+
+.ribbonLabel {
+	-fx-text-fill: -fx-dark-text-color;
+	-fx-fill: -fx-dark-text-color;
+}
+
+.ribbonToggleButton {
+	-fx-text-fill: #000000;
+	-fx-background-color: linear-gradient(derive(-fx-base, 0.0%),
+		derive(-fx-base, 14.0%), derive(-fx-base, 15.0%),
+		derive(-fx-base, 100.0%)),
+		linear-gradient(#bdbfc1 0.0%, #9a9c9f 14.0%, #888b90 15.0%, #838686
+		100.0%), linear-gradient(#eef1f6 0.0%, derive(-fx-base, 14.0%),
+		derive(-fx-base, 15.0%), derive(-fx-base, 79.0%),
+		derive(-fx-base, 79.0%), derive(-fx-base, 100.0%));
+	/* 
+        linear-gradient(#dae0e7 0%, #ced4dd 14%, #c8ced7 15%, #dfe5e6 100%),
+        linear-gradient(#bdbfc1 0%, #9a9c9f 14%, #888b90 15%, #838686 100%),
+        linear-gradient(#eef1f6 0%, #e1e6ee 14%, #d5dbe7 15%, #eef4f4 79%, 
+        #ced4e6 79%, #afb6c8 100%);
+*/
+	-fx-background-insets: 1.0 0.0 1.0 1.0, 1.0, 2.0;
+	-fx-background-radius: 5.0, 4.0, 3.0;
+	-fx-padding: 5.0 6.0 5.0 6.0;
+}
+
+.ribbonToggleButton:hover {
+	-fx-background-color: linear-gradient(#dae0e7 0.0%, #ced4dd 14.0%, #c8ced7 15.0%, #dfe5e6
+		100.0%),
+		linear-gradient(#bdbfc1 0.0%, #9a9c9f 14.0%, #888b90 15.0%, #838686
+		100.0%),
+		linear-gradient(#fef7d5 0.0%, #fae5a8 14.0%, #ffd048 15.0%, #ffe59f
+		78.0%, #ffe498 79.0%, #fff9cc 100.0%);
+}
+
+.ribbonToggleButton:selected {
+	-fx-background-color: linear-gradient(#dae0e7 0.0%, #ced4dd 14.0%, #c8ced7 15.0%, #dfe5e6
+		100.0%),
+		linear-gradient(#bdbfc1 0.0%, #9a9c9f 14.0%, #888b90 15.0%, #838686
+		100.0%),
+		linear-gradient(#fbdbb5 0.0%, #fec778 14.0%, #ffa636 15.0%, #fdeb9f
+		78.0%, #dfcd82 79.0%, #f0e7bf 100.0%);
+}
+
+.middleToggleButton {
+	-fx-background-insets: 0.0 0.0 0.0 1.0, 1.0 0.0 1.0 0.0, 2.0 0.0 2.0 0.0;
+	-fx-background-radius: 0.0 0.0 0.0 0.0, 0.0 0.0 0.0 0.0, 0.0 0.0 0.0 0.0;
+}
+
+.leftToggleButton {
+	-fx-background-insets: 0.0 0.0 0.0 1.0, 1.0 0.0 1.0 1.0, 2.0 0.0 2.0 2.0;
+	-fx-background-radius: 0.0 0.0 0.0 5.0, 4.0 0.0 0.0 4.0, 3.0 0.0 0.0 3.0;
+}
+
+.rightToggleButton {
+	-fx-background-insets: 0.0 1.0 0.0 0.0, 1.0 1.0 1.0 0.0, 2.0 2.0 2.0 0.0;
+	-fx-background-radius: 0.0 5.0 0.0 0.0, 0.0 4.0 4.0 0.0, 0.0 3.0 3.0 0.0;
+}
+
+#fontFamilyChoiceBox {
+	-fx-padding: 3.0 5.0 3.0 5.0;
+}
+
+#fontSizeChoiceBox {
+	-fx-padding: 3.0 5.0 3.0 5.0;
+}
+
+#window-resize-button {
+	-fx-background-image: url("images/window-corner.png");
+	-fx-background-position: right 1.0px bottom 1.0px;
+	-fx-background-repeat: no-repeat;
+}
+
+#topBarHBox {
+	
+}
+
+#sideToolsVbox {
+	-fx-background-color: -fx-base;
+}
+
+#themeWIndows7 {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/theme_darkblue.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#themeDefault {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/theme_lightblue.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#themeSilver {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/theme_lightgray.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#themeDark {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/theme_black.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#showOutline {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/outline_paragraph.png");
+	-fx-padding: 6.0 6.0 4.0 6.0;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#ribbonSubGroup {
+	-fx-border-style: solid;
+	-fx-border-color: derive(-fx-base, -20.0%);
+	-fx-border-width: 1;
+	-fx-border-radius: 3;
+}
+
+#ribbonSubGroupSeparator {
+	-fx-opacity: 0.5;
+}
+
+#sideToolBarHeaderLabel {
+	-fx-alignment: center;
+	-fx-background-color: derive(-fx-base, -20.0%);
+	-fx-graphic-text-gap: 6;
+	-fx-border-radius: 5;
+	/* -fx-effect: dropshadow( one-pass-box , -fx-base , 4 , 0.0 , 2 , 0 ); */
+}
+
+#sideToolBarHeaderLabelText {
+	-fx-font-size: 11.0pt;
+	-fx-fill: derive(-fx-base, -60.0%);
+}
+
+#fontNameComboLabel {
+	-fx-text-fill: derive(-fx-base, -60.0%);
+	-fx-background-color: derive(-fx-base, 60.0%);
+}
+
+#fontNameTool .combo-box {
+	-fx-background-color: derive(-fx-base, 0.0%);
+}
+
+#joffice-glass {
+	/* -fx-effect: dropshadow(one-pass-box ,derive(-fx-base, -60.0%) , 8 , 0.0 , 2 , 0); */
+	-fx-background-color: derive(-fx-base, -3%);
+
+	/* 
+  -fx-background-insets: 2; 
+  -fx-background-radius: 2;
+  */
+}
+
+.joffice-content {
+	/* -fx-padding: 20; */
+	/* -fx-spacing: 5; */
+	-fx-alignment: center;
+	-fx-background-color: linear-gradient(to bottom, derive(-fx-base, 20%),
+		-fx-base);
+	/*
+  -fx-border-color: derive(-fx-base, -20%);
+  -fx-border-width: 2;
+
+  */
+	-fx-background-insets: 2;
+	/*
+  -fx-border-insets: 2;
+  -fx-border-radius: 3;
+  */
+	-fx-background-radius: 3;
+}
+
+#back_button .button {
+	-fx-background-color: white, white;
+	-fx-background-radius: 16.4, 15;
+	-fx-background-insets: -1.4, 0;
+	-fx-border-radius: 15;
+	-fx-border-width: 2;
+	-fx-border-color: dimgrey;
+	-fx-padding: 0;
+	-fx-font-size: 14;
+}
+
+#foreward_button .button {
+	-fx-background-color: white, white;
+	-fx-background-radius: 16.4, 15;
+	-fx-background-insets: -1.4, 0;
+	-fx-border-radius: 15;
+	-fx-border-width: 2;
+	-fx-border-color: dimgrey;
+	-fx-padding: 0;
+	-fx-font-size: 14;
+}
+
+#progressIndicator {
+	-fx-font-size: 8;
+}
+
+#joffice_title_version {
+	-fx-font: normal 10pt "Arial";
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+}
+
+#joffice_version {
+	/* -fx-font-family: "Times New Roman"; */
+	-fx-font-size: 10pt;
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 0, 0.0,
+		0, 1);
+}
+
+#status_button {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/setup.png");
+	/* -fx-padding: 6.0 6.0 4.0 6.0; */
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#status_button_2_pages {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/two_pages.png");
+	/*-fx-padding: 6.0 6.0 4.0 6.0;*/
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#status_button_multi_pages {
+	-fx-font-size: 1.0px;
+	-fx-background-color: null;
+	-fx-background-image: url("images/multi_pages.png");
+	/* -fx-padding: 6.0 6.0 4.0 6.0; */
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#splashScreen {
+	-fx-padding: 5;
+	-fx-background-color: derive(-fx-base, -0%);
+	-fx-border-width: 5;
+	-fx-border-color: linear-gradient(to bottom, chocolate, derive(-fx-base, -30%));
+}
+
+#sideBarAccordion {
+	-fx-background-color: derive(-fx-base, -30%);
+}
+
+#pageInfoLabel {
+	-fx-background-radius: 3, 3;
+	-fx-font-size: 10.0pt;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+	-fx-border-style: solid;
+	-fx-border-color: derive(-fx-base, -20.0%);
+	-fx-border-width: 1;
+	-fx-border-radius: 3;
+}
+
+#textart1 {
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart2 {
+	-fx-fill: linear-gradient(#ffd65b, #e68400),
+		linear-gradient(#ffea6a, #efaa22),
+		linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+		linear-gradient(from 0% 0% to 15% 50%, rgba(255, 255, 255, 0.9),
+		rgba(255, 255, 255, 0));
+	-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.9), 1, 0.0, 0, 2, 2);
+}
+
+#textart3 {
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart4 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart5 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart6 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart7 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart8 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart9 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart10 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart11 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart12 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart13 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart14 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart15 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart16 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart17 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart18 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart19 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart20 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart21 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart22 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart23 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart24 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart25 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart26 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart27 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart28 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart29 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#textart30 {
+	-fx-font: 32px Tahoma;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+#accordionColorTitlePane_0 {
+	-fx-font: 24px Arial;
+	-fx-background-color: -fx-outer-border, -fx-inner-border,
+		derive(-fx-color, 0%);
+	-fx-effect: innershadow(two-pass-box, rgba(0, 0, 0, 0.6), 4, 0.0, 0, 0);
+}
+
+/*
+.titled-pane > .title{
+   -fx-padding: 0 0 0 -4;
+}
+*/
+.titled-pane {
+	/* -fx-padding: 0 0 0 0; */
+	
+}
+
+#editorPlaceholder {
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#samplesPage {
+	-fx-font-size: 14.0pt;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#spreadsheetColumnHeader {
+	-fx-font: 8.0pt Arial;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#spreadsheetRowHeader {
+	-fx-font: 8.0pt Arial;
+	-fx-background-color: derive(-fx-base, 50.0%);
+}
+
+#homeHeaderText {
+	/*
+	-fx-fill:linear-gradient(orange, derive(-fx-base, 60.0%));
+	*/
+	
+}
+
+#homeHeader {
+	-fx-background-color: radial-gradient(radius 100.0%, white, derive(-fx-base, -20.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+	-fx-font: 12.0pt Arial;
+}
+
+.modal-dialog-glass {
+	-fx-effect: dropshadow(three-pass-box, derive(cadetblue, -20%), 10, 0, 4,
+		4);
+	-fx-background-color: derive(cadetblue, -20%);
+	-fx-background-insets: 12;
+	-fx-background-radius: 6;
+}
+
+.modal-dialog-content {
+	-fx-padding: 20;
+	-fx-spacing: 10;
+	-fx-alignment: center;
+	-fx-font-size: 20;
+	-fx-background-color: linear-gradient(to bottom, derive(cadetblue, 20%),
+		cadetblue);
+	-fx-border-color: derive(cadetblue, -20%);
+	-fx-border-width: 5;
+	-fx-background-insets: 12;
+	-fx-border-insets: 10;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+}
+
+.progress-bar>.bar {
+	-fx-background-color: linear-gradient(from 0px .75em to .75em 0px, repeat, -fx-accent 0%,
+		-fx-accent 49%, derive(-fx-accent, 30%) 50%, derive(-fx-accent, 30%)
+		99%);
+}
+
+#loginPage {
+	-fx-font-size: 8.0pt;
+	-fx-background-color: radial-gradient(radius 100.0%, derive(-fx-base, 20.0%),
+		derive(silver, 80.0%));
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+}
+
+#loginHeader {
+	-fx-fill: linear-gradient(#ffd65b, #e68400),
+		linear-gradient(#ffea6a, #efaa22),
+		linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+		linear-gradient(from 0% 0% to 15% 50%, rgba(255, 255, 255, 0.9),
+		rgba(255, 255, 255, 0));
+	-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.9), 1, 0.0, 0, 10);
+}
+
+#loginHeaderText {
+	-fx-fill: darkslategray; /*linear-gradient(blue, lightblue); */
+}
+
+#loginGridPane {
+	-fx-background-color:  linear-gradient(derive(-fx-base, 40.0%), derive(-fx-base, -20%));
+	-fx-border-color: derive(darkslategray, 60%);
+	-fx-border-radius: 5;
+	-fx-padding: 10 10 10 10;
+	-fx-background-radius: 5;
+}
+
+#loginBorderPane {
+	/*  -fx-background-color:  linear-gradient(gray,DimGrey ); */
+	
+}
+
+#buttonLogin {
+	-fx-font: bold 10pt "Arial";
+	-fx-font-size: 10.0pt;
+	-fx-background-radius: 3, 3, 2, 2;
+	-fx-padding: 3px 10px 3px 10px;
+	-fx-background-color: linear-gradient(lightgray, silver);
+}
+
+#buttonRegister {
+	-fx-font: bold 10pt "Arial";
+	-fx-font-size: 10.0pt;
+	-fx-background-radius: 3, 3, 2, 2;
+	-fx-padding: 3px 10px 3px 10px;
+	-fx-background-color: linear-gradient(blue, silver);
+}
+
+#loginLabel {
+	-fx-font: bold 10pt "Arial";
+	-fx-text-fill: darkslategray;
+}
+
+#loginTextField {
+	-fx-font: bold 10pt "Arial";
+}
+
+#mainTopArea {
+	-fx-border-radius: 0 10 0 0;
+	-fx-border-color: transparent derive(-fx-base, -10.0%) transparent transparent;
+}
+
+#startButtonArea_2 {
+	-fx-border-radius: 0 10 0 0;
+	-fx-border-color: derive(-fx-base, -10.0%) derive(-fx-base, -10.0%) -fx-base -fx-base;
+}
+
+#startButtonArea_3 {
+	-fx-background-color: derive(-fx-base, 0.0%);
+}
+
+
+#sideBarVBox {
+  -fx-border-color: transparent derive(-fx-base, -10.0%) transparent transparent ;
+  -fx-border-width: 1;
+}
+
+
+#emfTreeView {
+		-fx-font: normal 9pt "Arial";
+}
+
