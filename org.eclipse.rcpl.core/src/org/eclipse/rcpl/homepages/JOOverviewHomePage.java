@@ -197,7 +197,7 @@ public class JOOverviewHomePage extends JOAbstractHomePage {
 
 		detailsArea = new StackPane();
 		splitPane.getItems().add(detailsArea);
-		splitPane.setDividerPositions(1f, 0.0f);
+		splitPane.setDividerPositions(0.3f);
 
 		uic.getTopToolBarControl().show((String) null);
 
