@@ -20,6 +20,7 @@ import org.eclipse.rcpl.IButton;
 import org.eclipse.rcpl.IButtonListener;
 import org.eclipse.rcpl.IEditor;
 import org.eclipse.rcpl.INavigatorPlugin;
+import org.eclipse.rcpl.IRcplConstants;
 import org.eclipse.rcpl.IRcplPlugin;
 import org.eclipse.rcpl.ISideToolBar;
 import org.eclipse.rcpl.ITool;
@@ -29,6 +30,7 @@ import org.eclipse.rcpl.model.RCPLModel;
 import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.GroupType;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Perspective;
+import org.eclipse.rcpl.model_2_0_0.rcpl.SideToolBar;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroup;
 import org.eclipse.rcpl.model_2_0_0.rcpl.ToolType;
@@ -500,9 +502,7 @@ public class RcplSideToolBar implements ISideToolBar {
 		Perspective perspective = JOSession.getDefault().findPerspective(perspectiveId);
 		if (perspective != null) {
 			ToolBar groupsToolBar = new ToolBar();
-			if (JOSession.PERSPECTIVE_OVERVIEW.getId().equals(perspectiveId)) {
-				StackPane.setMargin(groupsToolBar, new Insets(40, 0, 0, 0));
-			}
+			StackPane.setMargin(groupsToolBar, new Insets(40, 0, 0, 0));
 			groupsToolBar.setOrientation(Orientation.VERTICAL);
 			groupsToolBar.setMinWidth(WIDTH_COLLAPSED);
 			groupsToolBar.setId("groupVBox");
@@ -827,10 +827,20 @@ public class RcplSideToolBar implements ISideToolBar {
 		showSideTools(id, true);
 	}
 
+	
 	private boolean showSideTools(final String groupId, boolean restoreTab) {
 
+		String groupIdKey = groupId;
+	
+		if (groupId.startsWith(IRcplConstants.SWITCH_TO_PERSPECTIVE_KEY_PREFIX)) {
+			String newPerspectiveId = groupId.substring(IRcplConstants.SWITCH_TO_PERSPECTIVE_KEY_PREFIX.length());
+			Rcpl.UIC.showPerspective(newPerspectiveId, false);
+			groupIdKey = newPerspectiveId;
+		}
+
+		
 		try {
-			if (groupId == null || groupId.length() == 0) {
+			if (groupIdKey == null || groupIdKey.length() == 0) {
 				return false;
 			}
 			if (!JOSession.PERSPECTIVE_OVERVIEW.getId().equals(Rcpl.UIC.getPerspective().getId())) {
@@ -840,11 +850,14 @@ public class RcplSideToolBar implements ISideToolBar {
 				}
 			}
 
-			Pane pane = toolPaneStackRegistry.get(getKey(Rcpl.UIC.getPerspective().getId(), groupId));
+			Perspective actualPerspective = Rcpl.UIC.getPerspective();
+			String perspectiveId = actualPerspective.getId();
+
+			Pane pane = toolPaneStackRegistry.get(getKey(perspectiveId, groupIdKey));
 			if (pane != null) {
 				pane.setVisible(true);
 				activeToolPane = pane;
-				activeGroupId = groupId;
+				activeGroupId = groupIdKey;
 
 				final Timeline timeline = new Timeline(
 						new KeyFrame(Duration.millis(10), new EventHandler<ActionEvent>() {

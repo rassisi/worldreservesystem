@@ -32,7 +32,8 @@
         name="SETTINGS"
         id="SETTINGS">
       <sideToolBar
-          leaf="true"/>
+          leaf="true"
+          toolGroups="//@allTools/@toolgroupChildren.0 //@allTools/@toolgroupChildren.3"/>
       <topToolBar
           leaf="true"/>
       <quickTools

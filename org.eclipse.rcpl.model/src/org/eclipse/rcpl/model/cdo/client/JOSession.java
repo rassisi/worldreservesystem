@@ -98,7 +98,7 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.provider.RcplItemProviderAdapterFactory
  */
 public class JOSession {
 
-	public static boolean FORCE_NEW_XMI = false;
+	public static boolean FORCE_NEW_XMI = true;
 	public static final String USER_TEMPLATES = "templates";
 	public static final String USER_ADMINISTRATOR = "Administrator";
 	public static final String USER_COMPANY_1 = "user1@company.com";
@@ -151,14 +151,12 @@ public class JOSession {
 
 	public final static String SWITCH_TO_PERSPECTIVE_AND_CREATE_DOCUMENT_IF_NEEDED = "SWITCH_TO_PERSPECTIVE_AND_CREATE_DOCUMENT_IF_NEEDED";
 
-
-
 	public static void println(String msg) {
 		System.out.println(msg);
 	}
 
 	private static String BASE_URL = "http://joffice.eu/";
-	
+
 	public static String codeBase = BASE_URL;
 
 	public String CDO_SERVER;
@@ -238,18 +236,18 @@ public class JOSession {
 	public static JOSession getDefault() {
 		return getDefault(codeBase);
 	}
-	
+
 	public static JOSession getDefault(String url) {
 		if (INSTANCE == null) {
 			INSTANCE = new JOSession(url);
 		}
 		return INSTANCE;
 	}
-	
+
 	public JOSession() throws SecurityException {
 		this(codeBase);
 	}
-	
+
 	/**
 	 * @param port
 	 * @param ePackage
@@ -753,15 +751,19 @@ public class JOSession {
 			}
 		}
 
+		// the overview perspective is not loaded from the XMI. Instead it will be
+		// constructed here.
+
 		if (PERSPECTIVE_OVERVIEW.getId().equals(id)) {
-			if (PERSPECTIVE_OVERVIEW.getSideToolBar().getToolGroups().isEmpty()) {
-				for (Perspective p2 : rcpl.getAllPerspectives().getChildren()) {
-					ToolGroup pt = RcplFactory.eINSTANCE.createToolGroup();
-					pt.setId(SWITCH_TO_PERSPECTIVE_AND_CREATE_DOCUMENT_IF_NEEDED + p2.getId());
-					pt.setImage(p2.getId().toLowerCase());
-					pt.setDescription(p2.getDescription());
-					PERSPECTIVE_OVERVIEW.getSideToolBar().getToolGroups().add(pt);
-				}
+
+			PERSPECTIVE_OVERVIEW.getSideToolBar().getToolGroups().clear();
+
+			for (Perspective p2 : rcpl.getAllPerspectives().getChildren()) {
+				ToolGroup pt = RcplFactory.eINSTANCE.createToolGroup();
+				pt.setId(SWITCH_TO_PERSPECTIVE_AND_CREATE_DOCUMENT_IF_NEEDED + p2.getId());
+				pt.setImage(p2.getId().toLowerCase());
+				pt.setDescription(p2.getDescription());
+				PERSPECTIVE_OVERVIEW.getSideToolBar().getToolGroups().add(pt);
 			}
 
 			ToolGroup pt = RcplFactory.eINSTANCE.createToolGroup();
@@ -1306,7 +1308,9 @@ public class JOSession {
 
 			File localXMIFile = new File(RCPLModel.mobileProvider.getApplicationDir(),
 					RCPLModel.XMIName + RCPLModel.XMI_EXTENSION);
-			// localXMIFile.delete();
+			if (FORCE_NEW_XMI) {
+				localXMIFile.delete();
+			}
 
 			if (FORCE_NEW_XMI || !localXMIFile.exists()) {
 
