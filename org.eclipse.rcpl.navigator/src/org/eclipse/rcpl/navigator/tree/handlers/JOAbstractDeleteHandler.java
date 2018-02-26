@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.DeleteCommand;
 import org.eclipse.rcpl.model.cdo.client.JOSession;
-import org.eclipse.rcpl.navigator.tree.parts.EEmfTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 
 public abstract class JOAbstractDeleteHandler<T> extends JOAbstractEmfHandler<T> {
 
-	public JOAbstractDeleteHandler(EEmfTreeTreePart treePart) {
+	public JOAbstractDeleteHandler(DefaultTreeTreePart treePart) {
 		super(treePart);
 	}
 

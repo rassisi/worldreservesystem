@@ -12,12 +12,12 @@
 package org.eclipse.rcpl.navigator.tree.handlers;
 
 import org.eclipse.rcpl.model_2_0_0.rcpl.Resource;
-import org.eclipse.rcpl.navigator.tree.parts.EEmfTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 
 public class DeleteOfficeDocumentHandler extends
 		JOAbstractDeleteHandler<Resource> {
 
-	public DeleteOfficeDocumentHandler(EEmfTreeTreePart treePart) {
+	public DeleteOfficeDocumentHandler(DefaultTreeTreePart treePart) {
 		super(treePart);
 	}
 

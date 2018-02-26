@@ -20,13 +20,13 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.RcplPackage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroup;
 import org.eclipse.rcpl.navigator.RcplNavigatorPlugin;
-import org.eclipse.rcpl.navigator.tree.parts.EEmfTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 
 public class AddEmfTreeHandler {
 
-	private EEmfTreeTreePart eEmfTreeTreePart;
+	private DefaultTreeTreePart eEmfTreeTreePart;
 
-	public AddEmfTreeHandler(EEmfTreeTreePart eEmfTreeTreePart) {
+	public AddEmfTreeHandler(DefaultTreeTreePart eEmfTreeTreePart) {
 		this.eEmfTreeTreePart = eEmfTreeTreePart;
 	}
 

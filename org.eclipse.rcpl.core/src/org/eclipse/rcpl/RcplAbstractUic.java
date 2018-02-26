@@ -1133,7 +1133,7 @@ public abstract class RcplAbstractUic implements IRcplUic {
 	@Override
 	public INavigatorPlugin getNavigator() {
 		IRcplPlugin rcplPlugin = Rcpl.rcplApplicationProvider
-				.findRcplPlugin("org.eclipse.rcpl.navigator.tree.parts.NavigatorRcplPlugin");
+				.findRcplPlugin(INavigatorPlugin.class);
 		if (rcplPlugin instanceof INavigatorPlugin) {
 			Parent parent = rcplPlugin.getNode().getParent();
 			if (parent instanceof Pane) {

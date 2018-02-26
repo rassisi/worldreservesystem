@@ -29,6 +29,8 @@ public interface IRcplApplicationProvider {
 
 	IRcplPlugin findRcplPlugin(String className);
 
+	IRcplPlugin findRcplPlugin(Class<? extends IRcplPlugin> plugin);
+
 	void registerService(Class<? extends RcplService> serviceClass);
 
 	void start(Stage primaryStage);

@@ -13,11 +13,11 @@ package org.eclipse.rcpl.navigator.tree.handlers;
 
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.rcpl.navigator.tree.parts.EEmfTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 
 public abstract class JOAbstractAddHandler<T> extends JOAbstractEmfHandler<T> {
 
-	public JOAbstractAddHandler(EEmfTreeTreePart treePart) {
+	public JOAbstractAddHandler(DefaultTreeTreePart treePart) {
 		super(treePart);
 	}
 

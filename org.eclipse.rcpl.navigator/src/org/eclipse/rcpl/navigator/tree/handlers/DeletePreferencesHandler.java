@@ -13,7 +13,7 @@ package org.eclipse.rcpl.navigator.tree.handlers;
 
 import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Preferences;
-import org.eclipse.rcpl.navigator.tree.parts.EEmfTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 
 /**
  * @author ramin
@@ -21,7 +21,7 @@ import org.eclipse.rcpl.navigator.tree.parts.EEmfTreeTreePart;
  */
 public class DeletePreferencesHandler extends JOAbstractDeleteHandler<Preferences> {
 
-	public DeletePreferencesHandler(EEmfTreeTreePart treePart) {
+	public DeletePreferencesHandler(DefaultTreeTreePart treePart) {
 		super(treePart);
 	}
 

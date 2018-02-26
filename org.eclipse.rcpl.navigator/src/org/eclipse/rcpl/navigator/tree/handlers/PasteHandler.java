@@ -12,6 +12,7 @@
 package org.eclipse.rcpl.navigator.tree.handlers;
 
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.rcpl.Activator;
 import org.eclipse.rcpl.navigator.RcplNavigatorPlugin;
 
 public class PasteHandler {

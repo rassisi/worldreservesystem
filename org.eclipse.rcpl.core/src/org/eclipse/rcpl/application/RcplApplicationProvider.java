@@ -21,9 +21,9 @@ import org.eclipse.rcpl.IApplicationStarter;
 import org.eclipse.rcpl.IMonitor;
 import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.RcplAbstractService;
 import org.eclipse.rcpl.RcplLogin;
-import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.impl.RcplMonitor;
 import org.eclipse.rcpl.internal.services.RcplService;
 import org.eclipse.rcpl.model.RCPLModel;
@@ -34,7 +34,6 @@ import javafx.concurrent.Task;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -411,6 +410,19 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 	@Override
 	public IRcplPlugin findRcplPlugin(String className) {
 		return rcplPlugins.get(className);
+	}
+
+	public IRcplPlugin findRcplPlugin(Class<? extends IRcplPlugin> pl) {
+		for (IRcplPlugin p : rcplPlugins.values()) {
+			
+			for (Class<?> inf : p.getClass().getInterfaces()) {
+				if(inf.getName().equals(pl.getName())) {
+					return p;
+				}
+			}
+			
+		}
+		return null;
 	}
 
 	@Override

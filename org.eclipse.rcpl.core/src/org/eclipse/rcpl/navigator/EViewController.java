@@ -10,44 +10,33 @@
  *******************************************************************************/
 package org.eclipse.rcpl.navigator;
 
-import java.io.File;
-import java.net.URL;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.rcpl.AbstractRcplPlugin;
-import org.eclipse.rcpl.IButton;
-import org.eclipse.rcpl.IEditor;
 import org.eclipse.rcpl.IRcplPlugin;
 import org.eclipse.rcpl.IRcplPluginControler;
 import org.eclipse.rcpl.ISideToolBar;
 import org.eclipse.rcpl.ITopToolbar;
-import org.eclipse.rcpl.IUndoRedoListener;
 import org.eclipse.rcpl.emf.util.EMFEditFXProperties;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Perspective;
 
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.scene.web.WebView;
-import javafx.stage.Stage;
 
 /**
  * @author Ramin
