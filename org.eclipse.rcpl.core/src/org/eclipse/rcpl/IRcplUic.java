@@ -146,6 +146,8 @@ public interface IRcplUic {
 
 	void showNewPage();
 
+	void showPerspectivePage();
+	
 	void showOverviewPage();
 
 	boolean showPerspective(String id, boolean asEditor);

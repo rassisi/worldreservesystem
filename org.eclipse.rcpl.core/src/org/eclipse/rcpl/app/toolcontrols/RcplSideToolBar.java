@@ -828,16 +828,20 @@ public class RcplSideToolBar implements ISideToolBar {
 	}
 
 	
-	private boolean showSideTools(final String groupId, boolean restoreTab) {
-
+	public static String getNormalizedGroupId(String groupId) {
 		String groupIdKey = groupId;
-	
 		if (groupId.startsWith(IRcplConstants.SWITCH_TO_PERSPECTIVE_KEY_PREFIX)) {
 			String newPerspectiveId = groupId.substring(IRcplConstants.SWITCH_TO_PERSPECTIVE_KEY_PREFIX.length());
 			Rcpl.UIC.showPerspective(newPerspectiveId, false);
 			groupIdKey = newPerspectiveId;
 		}
+		return groupIdKey;
+	}
+	
+	private boolean showSideTools(final String groupId, boolean restoreTab) {
 
+		String groupIdKey = getNormalizedGroupId(groupId);
+	
 		
 		try {
 			if (groupIdKey == null || groupIdKey.length() == 0) {

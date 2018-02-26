@@ -3,6 +3,7 @@ package org.worldreservesystem.navigator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.INavigatorListener;
 import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.app.toolcontrols.RcplSideToolBar;
 import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Folder;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
@@ -47,8 +48,8 @@ public class NavigatorTreePart extends DefaultTreeTreePart {
 		super.defineDetailNode(eObject);
 
 		if (eObject instanceof Folder) {
-			String id = ((Folder) eObject).getId();
-			if ("OVERVIEW".equals(id)) {
+			String id = RcplSideToolBar.getNormalizedGroupId(((Folder) eObject).getId());
+			if (NavigatorConstants.WRS_NETWORK_OVERVIEW.equals(id)) {
 				setDetailNode(overviewPage.getRoot());
 			} else {
 				setDetailNode(null);

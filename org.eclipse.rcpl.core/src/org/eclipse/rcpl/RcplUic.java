@@ -21,6 +21,7 @@ import javax.annotation.PreDestroy;
 import org.eclipse.rcpl.homepages.JOAboutHomePage;
 import org.eclipse.rcpl.homepages.JONewHomePage;
 import org.eclipse.rcpl.homepages.JOSamplesHomePage;
+import org.eclipse.rcpl.homepages.PerspectiveHomePage;
 import org.eclipse.rcpl.internal.fx.figures.JOButton;
 import org.eclipse.rcpl.internal.tools.URLAddressTool;
 import org.eclipse.rcpl.model.IImage;
@@ -79,6 +80,8 @@ public class RcplUic extends RcplAbstractUic {
 	protected URLAddressTool urlAddressTool;
 
 	protected IHomePage samplesPage;
+
+	protected IHomePage perspectivePage;
 
 	protected IHomePage newPage;
 
@@ -220,6 +223,8 @@ public class RcplUic extends RcplAbstractUic {
 
 			overviewPage = Rcpl.getFactory().createOverviewHomePage(RcplUic.this, "My JOffice Cloud", "internet_cloud");
 
+			perspectivePage = createPerspectivePage();
+			
 			samplesPage = createSamplesHomePage();
 			newPage = createNewHomePage();
 
@@ -251,6 +256,10 @@ public class RcplUic extends RcplAbstractUic {
 
 	protected IHomePage createSamplesHomePage() {
 		return new JOSamplesHomePage(RcplUic.this, "office_samples");
+	}
+
+	protected IHomePage createPerspectivePage() {
+		return new PerspectiveHomePage(RcplUic.this);
 	}
 
 	protected IHomePage createNewHomePage() {
@@ -879,6 +888,16 @@ public class RcplUic extends RcplAbstractUic {
 		updateButtons(true);
 	}
 
+	@Override
+	public void showPerspectivePage() {
+		createPages();
+		setContent(perspectivePage.getNode());
+		updateButtons(true);
+	}
+	
+	
+	
+	
 	@Override
 	public boolean isHome() {
 		if (overviewPage == null) {
