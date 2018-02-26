@@ -3095,11 +3095,14 @@
   <allResources>
     <children
         name="Network"
-        id="NETWORK">
+        id="WRS_NETWORK">
       <folders
           name="Overview"
-          id="OVERVIEW"/>
+          id="WRS_NETWORK_OVERVIEW"/>
     </children>
+    <children
+        name="My Accounts"
+        id="WRS_MY_ACCOUNTS"/>
   </allResources>
   <allPersons>
     <children>

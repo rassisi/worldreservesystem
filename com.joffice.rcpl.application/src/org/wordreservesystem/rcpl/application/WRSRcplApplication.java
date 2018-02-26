@@ -31,12 +31,11 @@ public class WRSRcplApplication extends Application {
 	public void start(final Stage primaryStage) {
 		Rcpl.rcplApplicationProvider = new RcplApplicationProvider(this);
 		Rcpl.setMobile(false);
-		Rcpl.rcplApplicationProvider.registerRcplPluginClass("com.joffice.rcpl.plugin.office.JORcplPlugin");
-		
+//		Rcpl.rcplApplicationProvider.registerRcplPluginClass("com.joffice.rcpl.plugin.office.JORcplPlugin");
 		Rcpl.rcplApplicationProvider
-			.registerRcplPluginClass("org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorPlugin");
+//			.registerRcplPluginClass("org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorPlugin");
 		
-//		.registerRcplPluginClass("org.worldreservesystem.navigator.NavigatorPlugin");
+		.registerRcplPluginClass("org.worldreservesystem.navigator.NavigatorPlugin");
 		Rcpl.rcplApplicationProvider.start(primaryStage);
 
 	}

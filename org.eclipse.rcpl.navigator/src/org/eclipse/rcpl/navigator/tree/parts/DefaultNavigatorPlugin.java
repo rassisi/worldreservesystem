@@ -35,10 +35,14 @@ public class DefaultNavigatorPlugin extends AbstractRcplPlugin implements INavig
 	@Override
 	public void setTool(Tool tool) {
 		super.setTool(tool);
-		DefaultNavigatorTreePart part = new DefaultNavigatorTreePart(tool, true);
+		DefaultTreeTreePart part = createPart(tool);
 		getNode().setCenter(part.getNode());
 	}
 
+	protected DefaultTreeTreePart createPart(Tool tool) {
+		return new DefaultNavigatorTreePart(tool, true);
+	}
+	
 	@Override
 	public void init() {
 		super.init();
