@@ -5,6 +5,10 @@ import javafx.scene.layout.Pane;
 
 public interface IHomePage {
 
+	void setTitle(String title);
+	
+	void setImage(String image);
+	
 	Pane getContentPane();
 
 	Node getNode();

@@ -1008,7 +1008,7 @@ public abstract class RcplAbstractUic implements IRcplUic {
 		if (perspective != null) {
 			Rcpl.UIC.setPerspective(perspective);
 			getSideToolBarControl().showPerspective(perspective, false);
-			showPerspectivePage();
+			showPerspectivePage(perspective);
 		}
 		return false;
 	}

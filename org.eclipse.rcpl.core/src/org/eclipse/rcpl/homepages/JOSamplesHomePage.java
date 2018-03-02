@@ -57,4 +57,16 @@ public class JOSamplesHomePage implements IHomePage {
 		homePage.refresh();
 	}
 
+	@Override
+	public void setTitle(String title) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setImage(String image) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

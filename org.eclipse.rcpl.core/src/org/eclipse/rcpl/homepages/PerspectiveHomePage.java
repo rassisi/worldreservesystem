@@ -56,4 +56,14 @@ public class PerspectiveHomePage implements IHomePage {
 		homePage.refresh();
 	}
 
+	@Override
+	public void setTitle(String title) {
+		homePage.setTitle(title);
+	}
+
+	@Override
+	public void setImage(String image) {
+		setImage(image);
+	}
+
 }

@@ -57,4 +57,16 @@ public class JONewHomePage implements IHomePage {
 	public void refresh() {
 		homePage.refresh();
 	}
+
+	@Override
+	public void setTitle(String title) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setImage(String image) {
+		// TODO Auto-generated method stub
+		
+	}
 }

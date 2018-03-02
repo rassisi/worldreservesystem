@@ -889,7 +889,7 @@ public class RcplUic extends RcplAbstractUic {
 	}
 
 	@Override
-	public void showPerspectivePage() {
+	public void showPerspectivePage(Perspective perspective) {
 		createPages();
 		setContent(perspectivePage.getNode());
 		updateButtons(true);

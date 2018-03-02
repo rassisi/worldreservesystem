@@ -146,7 +146,7 @@ public interface IRcplUic {
 
 	void showNewPage();
 
-	void showPerspectivePage();
+	void showPerspectivePage(Perspective perspective);
 	
 	void showOverviewPage();
 

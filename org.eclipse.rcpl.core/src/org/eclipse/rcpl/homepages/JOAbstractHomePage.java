@@ -44,17 +44,15 @@ public abstract class JOAbstractHomePage implements IHomePage {
 
 	private int row = 0;
 
-	private String title;
-
-	private String image;
-
 	private StackPane contentPane;
+
+	private Text titleText;
+
+	private HBox imageViewPane;
 
 	public JOAbstractHomePage(final IRcplUic uic, String title, String image, Pane controlPane) {
 		uic.getHomepages().add(this);
 		this.uic = uic;
-		this.title = title;
-		this.image = image;
 
 		vBox = new VBox();
 		vBox.setId("homeHeader");
@@ -79,11 +77,11 @@ public abstract class JOAbstractHomePage implements IHomePage {
 
 			HBox header = new HBox();
 			header.setPrefHeight(80);
-			if (image != null) {
-				Node imageView = Rcpl.resources().getImage(image, 32, 32).getNode();
-				header.getChildren().add(imageView);
-				HBox.setMargin(imageView, new Insets(15, 0, 0, 20));
-			}
+			imageViewPane = new HBox();
+			header.getChildren().add(imageViewPane);
+			HBox.setMargin(imageViewPane, new Insets(15, 0, 0, 20));
+
+			setImage(image);
 
 			header.setStyle("-fx-background-color: white");
 			TextFlow samplesHeaderTextFlow = new TextFlow();
@@ -91,18 +89,20 @@ public abstract class JOAbstractHomePage implements IHomePage {
 			InnerShadow is = new InnerShadow();
 			is.setOffsetX(2.0f);
 			is.setOffsetY(2.0f);
-			Text t = new Text(title.substring(0, 1).toUpperCase());
-			samplesHeaderTextFlow.getChildren().add(t);
-			t.setCache(true);
-			t.setFont(Font.font(null, FontWeight.NORMAL, 28));
-			t.setId("homeHeaderText");
-			t.setEffect(is);
-			t = new Text(title.substring(1).toUpperCase());
-			samplesHeaderTextFlow.getChildren().add(t);
-			t.setCache(true);
-			t.setFont(Font.font(null, FontWeight.NORMAL, 20));
-			t.setId("homeHeaderText");
-			t.setEffect(is);
+
+			// titleText = new Text(title.substring(0, 1).toUpperCase());
+			// samplesHeaderTextFlow.getChildren().add(titleText);
+			// titleText.setCache(true);
+			// titleText.setFont(Font.font(null, FontWeight.NORMAL, 28));
+			// titleText.setId("homeHeaderText");
+			// titleText.setEffect(is);
+
+			titleText = new Text(title.substring(1).toUpperCase());
+			samplesHeaderTextFlow.getChildren().add(titleText);
+			titleText.setCache(true);
+			titleText.setFont(Font.font(null, FontWeight.NORMAL, 20));
+			titleText.setId("homeHeaderText");
+			titleText.setEffect(is);
 			samplesHeaderTextFlow.layout();
 
 			HBox.setMargin(samplesHeaderTextFlow, new Insets(12, 0, 0, 20));
@@ -161,4 +161,21 @@ public abstract class JOAbstractHomePage implements IHomePage {
 	@Override
 	public void refresh() {
 	}
+
+	@Override
+	public void setTitle(String title) {
+		titleText.setText(title);
+
+	}
+
+	@Override
+	public void setImage(String image) {
+		if (image != null) {
+			Node imageView = Rcpl.resources().getImage(image, 32, 32).getNode();
+			imageViewPane.getChildren().clear();
+			imageViewPane.getChildren().add(imageView);
+		}
+
+	}
+
 }
