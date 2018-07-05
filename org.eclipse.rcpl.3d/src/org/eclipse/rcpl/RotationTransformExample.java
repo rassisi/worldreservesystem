@@ -12,14 +12,19 @@ import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBoxBuilder;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
@@ -149,8 +154,11 @@ public class RotationTransformExample extends Application {
 		displayPane.setMouseTransparent(true);
 
 		final StackPane layout = new StackPane();
-		layout.getChildren().addAll(VBoxBuilder.create().spacing(10).alignment(Pos.TOP_CENTER)
-				.children(xPivotControl, yPivotControl, zPivotControl, axisControl).build(), displayPane);
+
+		VBox vBox = new VBox();
+
+//		layout.getChildren().addAll(VBoxBuilder.create().spacing(10).alignment(Pos.TOP_CENTER)
+//				.children(xPivotControl, yPivotControl, zPivotControl, axisControl).build(), displayPane);
 		layout.setStyle(
 				"-fx-background-color: linear-gradient(to bottom, cornsilk, midnightblue); -fx-padding:10; -fx-font-size: 16");
 		final Scene scene = new Scene(layout, 480, 550);
@@ -161,10 +169,8 @@ public class RotationTransformExample extends Application {
 	/**
 	 * Generate a new slider control initialized to the given value.
 	 * 
-	 * @param value
-	 *            the initial value of the slider.
-	 * @param helpText
-	 *            the tool tip text to use for the slider.
+	 * @param value    the initial value of the slider.
+	 * @param helpText the tool tip text to use for the slider.
 	 * @return the new slider.
 	 */
 	private Slider createSlider(final double value, final String helpText) {
@@ -179,8 +185,8 @@ public class RotationTransformExample extends Application {
 	}
 
 	/**
-	 * Create a toggle group of buttons where one toggle will always remain
-	 * switched on.
+	 * Create a toggle group of buttons where one toggle will always remain switched
+	 * on.
 	 */
 	class PersistentButtonToggleGroup extends ToggleGroup {
 		PersistentButtonToggleGroup() {
@@ -192,12 +198,12 @@ public class RotationTransformExample extends Application {
 						for (final Toggle addedToggle : c.getAddedSubList()) {
 							((ToggleButton) addedToggle).addEventFilter(MouseEvent.MOUSE_RELEASED,
 									new EventHandler<MouseEvent>() {
-								@Override
-								public void handle(MouseEvent mouseEvent) {
-									if (addedToggle.equals(getSelectedToggle()))
-										mouseEvent.consume();
-								}
-							});
+										@Override
+										public void handle(MouseEvent mouseEvent) {
+											if (addedToggle.equals(getSelectedToggle()))
+												mouseEvent.consume();
+										}
+									});
 						}
 					}
 				}

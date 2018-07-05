@@ -19,6 +19,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -63,20 +64,28 @@ public class ClipMorph extends Application {
 		final ProgressIndicator animationIndicator = new ProgressIndicator();
 		animationIndicator.maxHeightProperty().bind(animateButton.heightProperty());
 
-		final HBox animationControl = HBoxBuilder.create().spacing(10).children(animateButton, animationIndicator)
-				.build();
+		final HBox animationControl = new HBox();
+
+//		animationControl.
+//		anim
+//				
+//				
+//				HBox.bu.spacing(10).children(animateButton, animationIndicator)
+//				.build();
 		animationIndicator.setVisible(false);
 		animationControl.setAlignment(Pos.CENTER);
 
 		// layout the controls.
-		final VBox controls = VBoxBuilder.create().spacing(5).children(createLabeledSlider("From X         ", fromX),
-				createLabeledSlider("  To X         ", toX), createLabeledSlider("From Width     ", fromWidth),
-				createLabeledSlider("  To Width     ", toWidth), createLabeledSlider("From Y         ", fromY),
-				createLabeledSlider("  To Y         ", toY), createLabeledSlider("From Height    ", fromHeight),
-				createLabeledSlider("  To Height    ", toHeight), createLabeledSlider("From ArcWidth  ", fromArcWidth),
-				createLabeledSlider("  To ArcWidth  ", toArcWidth),
-				createLabeledSlider("From ArcHeight ", fromArcHeight),
-				createLabeledSlider("  To ArcHeight ", toArcHeight), animationControl).build();
+		final VBox controls = new VBox();
+
+//				VBoxBuilder.create().spacing(5).children(createLabeledSlider("From X         ", fromX),
+//				createLabeledSlider("  To X         ", toX), createLabeledSlider("From Width     ", fromWidth),
+//				createLabeledSlider("  To Width     ", toWidth), createLabeledSlider("From Y         ", fromY),
+//				createLabeledSlider("  To Y         ", toY), createLabeledSlider("From Height    ", fromHeight),
+//				createLabeledSlider("  To Height    ", toHeight), createLabeledSlider("From ArcWidth  ", fromArcWidth),
+//				createLabeledSlider("  To ArcWidth  ", toArcWidth),
+//				createLabeledSlider("From ArcHeight ", fromArcHeight),
+//				createLabeledSlider("  To ArcHeight ", toArcHeight), animationControl).build();
 		controls.setAlignment(Pos.CENTER);
 		VBox.setMargin(animationControl, new Insets(15));
 		controls.setMaxWidth(Region.USE_PREF_SIZE);
@@ -121,7 +130,7 @@ public class ClipMorph extends Application {
 		// layout the Scene.
 		VBox layout = new VBox();
 		layout.setAlignment(Pos.TOP_CENTER);
-		Pane logoPane = StackPaneBuilder.create().children(logo).build();
+		Pane logoPane = new StackPane(); // StackPaneBuilder.create().children(logo).build();
 		layout.getChildren().addAll(controls, logoPane);
 		VBox.setVgrow(logoPane, Priority.ALWAYS);
 		layout.setStyle("-fx-background-color: slategray; -fx-padding: 30; -fx-font-size: 16px;");
@@ -138,6 +147,7 @@ public class ClipMorph extends Application {
 				"-fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-family: monospace; -fx-font-size: 12px;");
 		slider.setPrefWidth(200);
 
-		return HBoxBuilder.create().children(label, slider).alignment(Pos.BASELINE_CENTER).build();
+		return new HBox(); // HBoxBuilder.create().children(label,
+							// slider).alignment(Pos.BASELINE_CENTER).build();
 	}
 }
