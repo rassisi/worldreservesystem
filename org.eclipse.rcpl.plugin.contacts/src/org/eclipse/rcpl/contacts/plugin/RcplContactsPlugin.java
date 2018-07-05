@@ -1,12 +1,11 @@
 package org.eclipse.rcpl.contacts.plugin;
 
-import org.eclipse.fxrcplight.EViewController;
-import org.eclipse.fxrcplight.IApplicationStarter;
-import org.eclipse.fxrcplight.IRcplApplication;
-import org.eclipse.fxrcplight.IRcplPlugin;
-import org.eclipse.fxrcplight.JOAbstractMigration;
-import org.eclipse.fxrcplight.AbstractRcplPlugin;
-import org.eclipse.fxrcplight.RcplPlugin;
+import org.eclipse.rcpl.AbstractRcplPlugin;
+import org.eclipse.rcpl.IApplicationStarter;
+import org.eclipse.rcpl.IRcplApplicationProvider;
+import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.RcplPlugin;
+import org.eclipse.rcpl.navigator.EViewController;
 import org.eclipse.rcpl.ui.parts.contacts.EContactsMigration;
 import org.eclipse.rcpl.ui.parts.contacts.EContactsPluginController;
 
@@ -20,7 +19,7 @@ public class RcplContactsPlugin extends AbstractRcplPlugin implements IRcplPlugi
 	public static final String ID = "USE_CASE_CONTACTS";
 
 	public RcplContactsPlugin() {
-		super(ID);
+		// super(ID);
 	}
 
 	@Override
@@ -28,6 +27,7 @@ public class RcplContactsPlugin extends AbstractRcplPlugin implements IRcplPlugi
 		return new EContactsPluginController();
 	}
 
+	@Override
 	public EContactsPluginController getController() {
 		return (EContactsPluginController) super.getController();
 	}
@@ -50,6 +50,12 @@ public class RcplContactsPlugin extends AbstractRcplPlugin implements IRcplPlugi
 	@Override
 	public boolean isCustomApplication() {
 		return false;
+	}
+
+	@Override
+	public IApplicationStarter createApplicationStarter(IRcplApplicationProvider rcplApplication) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

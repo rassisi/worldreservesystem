@@ -15,7 +15,11 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -98,12 +102,12 @@ public class ClipMorph extends Application {
 						new KeyValue(clip.arcHeightProperty(), fromArcHeight.getValue())),
 						new KeyFrame(Duration.seconds(2), new EventHandler<ActionEvent>() { // finish
 																							// animation
-					@Override
-					public void handle(ActionEvent event) {
-						controls.setDisable(false);
-						animationIndicator.setVisible(false);
-					}
-				}, new KeyValue(clip.xProperty(), toX.getValue()),
+							@Override
+							public void handle(ActionEvent event) {
+								controls.setDisable(false);
+								animationIndicator.setVisible(false);
+							}
+						}, new KeyValue(clip.xProperty(), toX.getValue()),
 								new KeyValue(clip.widthProperty(), toWidth.getValue()),
 								new KeyValue(clip.yProperty(), toY.getValue()),
 								new KeyValue(clip.heightProperty(), toHeight.getValue()),

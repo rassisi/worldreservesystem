@@ -14,8 +14,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.rcpl.model;bundle-version="0.1.1",
  org.eclipse.rcpl.model_2_0_0;bundle-version="0.1.1",
  org.eclipse.rcpl.model_2_0_0.edit;bundle-version="0.1.1",
- org.eclipse.rcpl.common;bundle-version="1.0.0",
- org.eclipse.fx.ui.controls;bundle-version="2.1.0"
+ org.eclipse.fx.ui.controls;bundle-version="2.1.0",
+ org.eclipse.rcpl.core;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.rcpl.contacts.plugin,
  org.eclipse.rcpl.ui.parts.contacts
