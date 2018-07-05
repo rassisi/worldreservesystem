@@ -12,6 +12,9 @@ package org.eclipse.fxrcplight.application;
 
 import org.eclipse.equinox.app.IApplicationContext;
 import org.eclipse.fx.osgi.util.AbstractJFXApplication;
+import org.eclipse.rcpl.IRcplApplicationProvider;
+import org.eclipse.rcpl.IRcplUic;
+import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.model.cdo.client.JOSession;
 
 import javafx.application.Application;
@@ -22,7 +25,7 @@ import javafx.stage.Stage;
  * 
  */
 public abstract class AbstractRcplApplication extends AbstractJFXApplication
-		implements IRcplApplication {
+		implements IRcplApplicationProvider {
 
 	protected void jfxStart(IApplicationContext applicationContext,
 			Application jfxApplication, Stage stage) {
@@ -43,7 +46,7 @@ public abstract class AbstractRcplApplication extends AbstractJFXApplication
 	@Override
 	protected Object jfxStop() {
 		try {
-			JOSession.INSTANCE.close(true, true);
+			JOSession.getDefault().close(true, true);
 		} catch (Exception ex) {
 			// TODO: ignore: Bug Fix CDO
 		}
