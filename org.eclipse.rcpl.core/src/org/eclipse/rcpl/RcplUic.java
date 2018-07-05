@@ -16,8 +16,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PreDestroy;
-
 import org.eclipse.rcpl.homepages.JOAboutHomePage;
 import org.eclipse.rcpl.homepages.JONewHomePage;
 import org.eclipse.rcpl.homepages.JOSamplesHomePage;
@@ -224,7 +222,7 @@ public class RcplUic extends RcplAbstractUic {
 			overviewPage = Rcpl.getFactory().createOverviewHomePage(RcplUic.this, "My JOffice Cloud", "internet_cloud");
 
 			perspectivePage = createPerspectivePage();
-			
+
 			samplesPage = createSamplesHomePage();
 			newPage = createNewHomePage();
 
@@ -374,6 +372,9 @@ public class RcplUic extends RcplAbstractUic {
 
 	@Override
 	protected void doCreateContent() {
+
+		Rcpl.progressMessage("Rcpl.doCreateContent()");
+
 		URL location = getClass().getResource("/org/eclipse/rcpl/RcplUic.fxml");
 		FXMLLoader fxmlLoader = new FXMLLoader(location);
 		fxmlLoader.setController(Rcpl.UIC);
@@ -813,7 +814,6 @@ public class RcplUic extends RcplAbstractUic {
 	}
 
 	@Override
-	@PreDestroy
 	public void preDestroy() {
 		try {
 			JOSession.getDefault().close(true, true);
@@ -894,10 +894,7 @@ public class RcplUic extends RcplAbstractUic {
 		setContent(perspectivePage.getNode());
 		updateButtons(true);
 	}
-	
-	
-	
-	
+
 	@Override
 	public boolean isHome() {
 		if (overviewPage == null) {

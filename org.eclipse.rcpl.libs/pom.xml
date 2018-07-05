@@ -27,12 +27,6 @@
 		</plugins>
 	</build>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.jfxtras</groupId>
-			<artifactId>jfxtras-all</artifactId>
-			<version>9.0-r1</version>
-		</dependency>
-	</dependencies>
+
 
 </project>

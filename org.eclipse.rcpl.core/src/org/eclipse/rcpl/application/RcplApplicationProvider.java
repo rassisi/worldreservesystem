@@ -30,6 +30,7 @@ import org.eclipse.rcpl.model.RCPLModel;
 import org.eclipse.rcpl.model.cdo.client.JOSession;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -208,9 +209,11 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 		final IApplicationStarter applicationsStarter = getRcplApplicationStarter();
 		if (applicationsStarter != null) {
 			Rcpl.progressMessage("Application Starter found: " + applicationsStarter.getClass().getSimpleName());
-			final Task<Void> task = new Task<Void>() {
+
+			Platform.runLater(new Runnable() {
+
 				@Override
-				public Void call() {
+				public void run() {
 					boolean success = applicationsStarter.start(joLogin, primaryStage);
 					if (!success) {
 						joLogin.getController().setErrorInUserId();
@@ -220,11 +223,26 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 								"Application " + applicationsStarter.getClass().getSimpleName() + "started");
 						joLogin.getController().setHeaderText("RCPL is starting.");
 					}
-					return null;
 				}
-			};
+			});
 
-			new Thread(task).start();
+//			final Task<Void> task = new Task<Void>() {
+//				@Override
+//				public Void call() {
+//					boolean success = applicationsStarter.start(joLogin, primaryStage);
+//					if (!success) {
+//						joLogin.getController().setErrorInUserId();
+//						reStart();
+//					} else {
+//						Rcpl.progressMessage(
+//								"Application " + applicationsStarter.getClass().getSimpleName() + "started");
+//						joLogin.getController().setHeaderText("RCPL is starting.");
+//					}
+//					return null;
+//				}
+//			};
+//
+//			new Thread(task).start();
 		}
 
 	}
@@ -346,11 +364,13 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 		LOGIN_DEBUG = true;
 	}
 
+	@Override
 	public boolean isLoginDebug() {
 		return LOGIN_DEBUG;
 	}
 
 	private void startMobile() {
+		Rcpl.progressMessage("Start Mobile Application");
 		Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
 		RCPLModel.log(this, "Screen bounds: " + bounds.getWidth() + "/" + bounds.getHeight());
 		primaryStage.setScene(new Scene(mainStackPane, Color.YELLOW));
@@ -367,6 +387,8 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 	}
 
 	private void startPc() {
+		Rcpl.progressMessage("Start Desktop Application");
+
 		final Undecorator undecorator = new Undecorator(primaryStage, mainStackPane);
 		undecorator.getStylesheets().addAll("skin/undecorator.css", "/css/msoffice.css", "/css/default.css"); // ,
 		// ,
@@ -412,15 +434,16 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 		return rcplPlugins.get(className);
 	}
 
+	@Override
 	public IRcplPlugin findRcplPlugin(Class<? extends IRcplPlugin> pl) {
 		for (IRcplPlugin p : rcplPlugins.values()) {
-			
+
 			for (Class<?> inf : p.getClass().getInterfaces()) {
-				if(inf.getName().equals(pl.getName())) {
+				if (inf.getName().equals(pl.getName())) {
 					return p;
 				}
 			}
-			
+
 		}
 		return null;
 	}

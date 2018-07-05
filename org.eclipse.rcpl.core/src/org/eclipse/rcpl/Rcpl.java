@@ -683,27 +683,29 @@ public class Rcpl {
 
 		isProgressVisible = show;
 
-		if (Platform.isFxApplicationThread()) {
-			progressText.setVisible(show);
-			progressBar.setVisible(show && showProgressBar);
-			progressIndicator.setVisible(show && !showProgressBar);
-			progressBar.toFront();
-			progressIndicator.toFront();
-			progressText.toFront();
+		if (progressText != null) {
 
-		} else {
-			Platform.runLater(new Runnable() {
+			if (Platform.isFxApplicationThread()) {
+				progressText.setVisible(show);
+				progressBar.setVisible(show && showProgressBar);
+				progressIndicator.setVisible(show && !showProgressBar);
+				progressBar.toFront();
+				progressIndicator.toFront();
+				progressText.toFront();
+			} else {
+				Platform.runLater(new Runnable() {
 
-				@Override
-				public void run() {
-					progressText.setVisible(show);
-					progressBar.setVisible(show && showProgressBar);
-					progressIndicator.setVisible(show && !showProgressBar);
-					progressBar.toFront();
-					progressIndicator.toFront();
-					progressText.toFront();
-				}
-			});
+					@Override
+					public void run() {
+						progressText.setVisible(show);
+						progressBar.setVisible(show && showProgressBar);
+						progressIndicator.setVisible(show && !showProgressBar);
+						progressBar.toFront();
+						progressIndicator.toFront();
+						progressText.toFront();
+					}
+				});
+			}
 		}
 	}
 

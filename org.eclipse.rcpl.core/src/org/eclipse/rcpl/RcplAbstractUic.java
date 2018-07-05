@@ -16,7 +16,6 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PreDestroy;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -435,6 +434,8 @@ public abstract class RcplAbstractUic implements IRcplUic {
 	@Override
 	public void createContent() {
 
+		Rcpl.progressMessage(this.getClass().getName() + ".createContent()");
+
 		internalHtmlEditor = new HTMLEditor();
 		internalHtmlEditor.setPrefSize(2000, 2000);
 
@@ -816,7 +817,6 @@ public abstract class RcplAbstractUic implements IRcplUic {
 		return internalRemoteCDOServer;
 	}
 
-	@PreDestroy
 	public void preDestroy() {
 		try {
 			JOSession.getDefault().close(true, true);
@@ -1133,8 +1133,7 @@ public abstract class RcplAbstractUic implements IRcplUic {
 
 	@Override
 	public INavigatorPlugin getNavigator() {
-		IRcplPlugin rcplPlugin = Rcpl.rcplApplicationProvider
-				.findRcplPlugin(INavigatorPlugin.class);
+		IRcplPlugin rcplPlugin = Rcpl.rcplApplicationProvider.findRcplPlugin(INavigatorPlugin.class);
 		if (rcplPlugin instanceof INavigatorPlugin) {
 			Parent parent = rcplPlugin.getNode().getParent();
 			if (parent instanceof Pane) {

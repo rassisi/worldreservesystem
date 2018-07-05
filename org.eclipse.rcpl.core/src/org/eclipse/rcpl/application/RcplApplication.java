@@ -30,7 +30,7 @@ public class RcplApplication extends Application {
 	@Override
 	public void start(final Stage primaryStage) {
 		Rcpl.rcplApplicationProvider = new RcplApplicationProvider(this);
-		Rcpl.setMobile(true);
+		Rcpl.setMobile(false);
 		Rcpl.rcplApplicationProvider.registerRcplPluginClass("org.eclipse.rcpl.application.DefaultRcplPlugin.class");
 		Rcpl.rcplApplicationProvider.start(primaryStage);
 	}
