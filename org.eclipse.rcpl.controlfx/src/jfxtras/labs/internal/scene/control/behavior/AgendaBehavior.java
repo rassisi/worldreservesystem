@@ -28,8 +28,10 @@ package jfxtras.labs.internal.scene.control.behavior;
 
 import java.util.ArrayList;
 
+import javax.swing.text.JTextComponent.KeyBinding;
+
 import com.sun.javafx.scene.control.behavior.BehaviorBase;
-import com.sun.javafx.scene.control.behavior.KeyBinding;
+import com.sun.javafx.scene.control.inputmap.InputMap;
 
 import jfxtras.labs.scene.control.Agenda;
 
@@ -38,17 +40,21 @@ import jfxtras.labs.scene.control.Agenda;
  * @author Tom Eugelink
  *
  */
-public class AgendaBehavior extends BehaviorBase<Agenda>
-{
+public class AgendaBehavior extends BehaviorBase<Agenda> {
 	// ==================================================================================================================
 	// CONSTRUCTOR
-	
+
 	/**
 	 * 
 	 * @param control
 	 */
-	public AgendaBehavior(Agenda control)
-	{
+	public AgendaBehavior(Agenda control) {
 		super(control, new ArrayList<KeyBinding>());
+	}
+
+	@Override
+	public InputMap<Agenda> getInputMap() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
