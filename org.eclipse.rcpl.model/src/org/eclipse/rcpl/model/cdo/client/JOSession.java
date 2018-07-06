@@ -98,7 +98,7 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.provider.RcplItemProviderAdapterFactory
  */
 public class JOSession {
 
-	public static boolean FORCE_NEW_XMI = true;
+	public static boolean FORCE_NEW_XMI = false;
 	public static final String USER_TEMPLATES = "templates";
 	public static final String USER_ADMINISTRATOR = "Administrator";
 	public static final String USER_COMPANY_1 = "user1@company.com";

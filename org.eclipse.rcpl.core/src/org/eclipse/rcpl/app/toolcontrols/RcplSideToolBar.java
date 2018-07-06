@@ -30,7 +30,6 @@ import org.eclipse.rcpl.model.RCPLModel;
 import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.GroupType;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Perspective;
-import org.eclipse.rcpl.model_2_0_0.rcpl.SideToolBar;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroup;
 import org.eclipse.rcpl.model_2_0_0.rcpl.ToolType;
@@ -596,8 +595,13 @@ public class RcplSideToolBar implements ISideToolBar {
 				for (ToolGroup toolGroup_0 : toolGroups) {
 
 					EList<ToolGroup> mainGroups = toolGroup_0.getToolGroups();
+					
+					
+					// Es kann auch nur ein Tool geben
 					if (mainGroups.isEmpty()) {
-						continue;
+						
+//						System.out.println();
+//						continue;
 					}
 
 					try {
@@ -664,6 +668,12 @@ public class RcplSideToolBar implements ISideToolBar {
 
 	private void processTools(ToolGroup toolGroup, Accordion accordion, int hierarchy) {
 
+		if("sideBar/file".equals(toolGroup.getId())){
+			System.out.println();
+		}
+		
+		
+		
 		try {
 			final StackPane stackPane = new StackPane();
 
@@ -677,7 +687,9 @@ public class RcplSideToolBar implements ISideToolBar {
 			StackPane.setMargin(scrollPane, new Insets(0));
 			stackPane.getChildren().add(scrollPane);
 
-			if (toolGroup.getTools().size() == 1 && ToolType.NAVIGATOR.equals(toolGroup.getTools().get(0).getType())) {
+			ToolType mainSideToolGroupType = toolGroup.getTools().get(0).getType();
+			
+			if (toolGroup.getTools().size() == 1 && ToolType.NAVIGATOR.equals(mainSideToolGroupType)) {
 
 				try {
 					INavigatorPlugin navigatorPlugin = Rcpl.UIC.getNavigator();

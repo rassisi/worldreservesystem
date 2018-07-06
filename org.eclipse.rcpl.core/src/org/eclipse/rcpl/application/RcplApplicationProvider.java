@@ -282,6 +282,16 @@ public class RcplApplicationProvider implements IRcplApplicationProvider {
 		if (rcplPluginClassName.endsWith(".class")) {
 			className = rcplPluginClassName.substring(0, rcplPluginClassName.length() - 6);
 		}
+		
+		try {
+			Class.forName(rcplPluginClassName);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 		rcplPluginClassNames.add(className);
 	}
 
