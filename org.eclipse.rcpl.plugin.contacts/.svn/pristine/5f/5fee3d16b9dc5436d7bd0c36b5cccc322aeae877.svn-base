@@ -1,4 +1,0 @@
-@RcplPlugin
-package org.eclipse.rcpl.ui.parts.contacts;
-
-import org.eclipse.fxrcplight.RcplPlugin;
