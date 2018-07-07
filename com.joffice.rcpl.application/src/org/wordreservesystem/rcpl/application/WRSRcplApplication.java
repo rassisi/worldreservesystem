@@ -13,7 +13,7 @@ package org.wordreservesystem.rcpl.application;
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.application.RcplApplicationProvider;
 import org.eclipse.rcpl.model.RCPLModel;
-import org.worldreservesystem.xmi.WRSUiModel;
+import org.worldreservesystem.core.WRS;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -32,7 +32,7 @@ public class WRSRcplApplication extends Application {
 	@Override
 	public void start(final Stage primaryStage) {
 		Rcpl.rcplApplicationProvider = new RcplApplicationProvider(this);
-		RCPLModel.modelClass = WRSUiModel.class;
+		RCPLModel.modelClass = WRS.class;
 		RCPLModel.XMIName = "rcpl";
 		Rcpl.setMobile(false);
 //		Rcpl.rcplApplicationProvider.registerRcplPluginClass("com.joffice.rcpl.plugin.office.JORcplPlugin");

@@ -1,5 +1,7 @@
 package org.worldreservesystem.core;
 
-public class WRS {
+import org.eclipse.rcpl.model.RCPLModel;
+
+public class WRS extends RCPLModel{
 
 }
