@@ -1,10 +1,10 @@
 package com.rcpl.rcpl.plugin.demo.homepages;
 
-import org.eclipse.fxrcplight.model.JOModel;
 import org.eclipse.rcpl.IRcplPlugin;
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.RcplUic;
 import org.eclipse.rcpl.homepages.JONewHomePage;
+import org.eclipse.rcpl.model.RCPLModel;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -65,7 +65,7 @@ public class NewHomePage extends JONewHomePage {
 		b.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				((RcplUic) uic).showPerspective(RcplModel.USE_CASE_CONTACTS_ID, true);
+				((RcplUic) uic).showPerspective(RCPLModel.USE_CASE_CONTACTS_ID, true);
 			}
 		});
 		gridPane.add(b, 0, row++);
@@ -77,7 +77,7 @@ public class NewHomePage extends JONewHomePage {
 			b.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
-					((RcplUic) uic).showPerspective(JOModel.USE_CASE_IT_ID, true);
+					((RcplUic) uic).showPerspective(RCPLModel.USE_CASE_IT_ID, true);
 				}
 			});
 			gridPane.add(b, 0, row++);
@@ -90,7 +90,7 @@ public class NewHomePage extends JONewHomePage {
 			b.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
-					((RcplUic) uic).showPerspective(JOModel.USE_CASE_TOOLS_ID, true);
+					((RcplUic) uic).showPerspective(RCPLModel.USE_CASE_TOOLS_ID, true);
 				}
 			});
 			gridPane.add(b, 0, row++);

@@ -3,7 +3,6 @@ package com.eclipse.rcpl.plugin.demo.application;
 import java.io.File;
 import java.net.URL;
 
-
 import org.eclipse.rcpl.IButtonListener;
 import org.eclipse.rcpl.IDocument;
 import org.eclipse.rcpl.IEditor;
@@ -22,17 +21,14 @@ import com.rcpl.rcpl.plugin.demo.homepages.SamplesHomePage;
 import javafx.event.ActionEvent;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.Separator;
 import javafx.scene.control.Tab;
-import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 
 public class DemoUic extends RcplUic {
 
-	public DemoUic(RcplApplicationStarter rcp, JOProgressTask task, ProgressBar startProgressbar,
-			Text progressMessage) {
-		super(rcp, task, startProgressbar, progressMessage);
+	public DemoUic(RcplApplicationStarter rcp, String progressMessage) {
+		super(rcp, progressMessage);
 		// new JOPointToPixelCalculator().init();
 
 	}
@@ -142,45 +138,46 @@ public class DemoUic extends RcplUic {
 		sep2.setVisible(false);
 		quickToolsArea.getChildren().addAll(
 
-		Rcpl.factory.createButton("", "", "Open Document", "open", false, new IButtonListener() {
+				Rcpl.getFactory().createButton("", "", "Open Document", "open", false, new IButtonListener() {
 
-			@Override
-			public void doAction() {
-				actionOpen();
+					@Override
+					public void doAction() {
+						actionOpen();
 
-			}
-		}, true).getNode(),
+					}
+				}, true).getNode(),
 
-		Rcpl.factory.createButton("", "", "Open Last Document", "open_last_document", false, new IButtonListener() {
+				Rcpl.getFactory()
+						.createButton("", "", "Open Last Document", "open_last_document", false, new IButtonListener() {
 
-			@Override
-			public void doAction() {
-				actionOpenLast();
+							@Override
+							public void doAction() {
+								actionOpenLast();
 
-			}
-		}, true).getNode(),
+							}
+						}, true).getNode(),
 
-		sep2,
+				sep2,
 
-		// JO.factory.createButton("", "", "New Browser Tab",
-		// "webbrowser", false, new IButtonListener() {
-		//
-		// @Override
-		// public void doAction() {
-		// actionAddWebBrowserTab();
-		//
-		// }
-		// }).getNode(),
+				// JO.factory.createButton("", "", "New Browser Tab",
+				// "webbrowser", false, new IButtonListener() {
+				//
+				// @Override
+				// public void doAction() {
+				// actionAddWebBrowserTab();
+				//
+				// }
+				// }).getNode(),
 
-		Rcpl.factory.createButton("", "", "New Word Document", "word", false, new IButtonListener() {
+				Rcpl.getFactory().createButton("", "", "New Word Document", "word", false, new IButtonListener() {
 
-			@Override
-			public void doAction() {
-				actionAddWordTab();
+					@Override
+					public void doAction() {
+						actionAddWordTab();
 
-			}
-		}, true).getNode(),
-				Rcpl.factory.createButton("", "", "New Spreadsheet", "spreadsheet", false, new IButtonListener() {
+					}
+				}, true).getNode(),
+				Rcpl.getFactory().createButton("", "", "New Spreadsheet", "spreadsheet", false, new IButtonListener() {
 
 					@Override
 					public void doAction() {
@@ -188,19 +185,20 @@ public class DemoUic extends RcplUic {
 					}
 				}, true).getNode(),
 
-		Rcpl.factory.createButton("", "", "New Presentation", "presentation", false, new IButtonListener() {
+				Rcpl.getFactory()
+						.createButton("", "", "New Presentation", "presentation", false, new IButtonListener() {
 
-			@Override
-			public void doAction() {
-				// actionAddPresentationTab();
-			}
-		}, true).getNode(),
+							@Override
+							public void doAction() {
+								// actionAddPresentationTab();
+							}
+						}, true).getNode(),
 
-		sep12,
+				sep12,
 
-		buttonLogout.getNode(),
+				buttonLogout.getNode(),
 
-		sep13
+				sep13
 
 		)
 
@@ -262,7 +260,7 @@ public class DemoUic extends RcplUic {
 
 	}
 
-	protected Tab openTemplate(String name, String tabName) {
+	protected void openTemplate(String name, String tabName) {
 
 		if (name.endsWith(".docx")) {
 			actionPerspectiveWord();
@@ -295,20 +293,10 @@ public class DemoUic extends RcplUic {
 		return newTab;
 	}
 
-	@Override
-	protected void registerFactories() {
-//		JO.factory.registerFactory(JOfficeFactory.class.getSimpleName(), new JOFactory());
-	}
 
 	@Override
 	protected void registerServices() {
 		super.registerServices();
 //		JO.service().registerService(EnServiceId.COLOR_SERVICE, new JOColorService());
-//		JO.service().registerService(EnServiceId.FONT_SERVICE, new JOFontService());
-//		JO.service().registerService(EnServiceId.INSERT_SERVICE, new JOInsertService());
-//		JO.service().registerService(EnServiceId.LAYOUT_SERVICE, new JOLayoutService());
-//		JO.service().registerService(EnServiceId.PARAGRAPH_SERVICE, new JOParagraphService());
-//		JO.service().registerService(EnServiceId.PICTURE_SERVICE, new JOPictureService());
-//		JO.service().registerService(EnServiceId.TABLE_SERVICE, new JOTableService());
 	}
 }
