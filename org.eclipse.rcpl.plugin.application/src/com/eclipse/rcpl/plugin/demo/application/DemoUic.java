@@ -1,24 +1,23 @@
-package com.joffice.rcpl.plugin.demo.application;
+package com.eclipse.rcpl.plugin.demo.application;
 
 import java.io.File;
 import java.net.URL;
 
-import org.eclipse.fxrcplight.IButtonListener;
-import org.eclipse.fxrcplight.IDocument;
-import org.eclipse.fxrcplight.IEditor;
-import org.eclipse.fxrcplight.IHomePage;
-import org.eclipse.fxrcplight.IOfficeUIC;
-import org.eclipse.fxrcplight.Rcpl;
-import org.eclipse.fxrcplight.JOProgressTask;
-import org.eclipse.fxrcplight.RcplUic;
-import org.eclipse.fxrcplight.application.RcplApplicationStarter;
-import org.eclipse.fxrcplight.model.cdo.client.JOKey;
-import org.eclipse.fxrcplight.model.cdo.client.JOSession;
-import org.eclipse.fxrcplight.util.JOUtil2;
 
-import com.joffice.rcpl.plugin.demo.homepages.JODocumentHomePage;
-import com.joffice.rcpl.plugin.demo.homepages.JOOfficeNewHomePage;
-import com.joffice.rcpl.plugin.demo.homepages.JOOfficeSamplesHomePage;
+import org.eclipse.rcpl.IButtonListener;
+import org.eclipse.rcpl.IDocument;
+import org.eclipse.rcpl.IEditor;
+import org.eclipse.rcpl.IHomePage;
+import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.RcplUic;
+import org.eclipse.rcpl.application.RcplApplicationStarter;
+import org.eclipse.rcpl.model.cdo.client.JOKey;
+import org.eclipse.rcpl.model.cdo.client.JOSession;
+import org.eclipse.rcpl.util.JOUtil2;
+
+import com.rcpl.rcpl.plugin.demo.homepages.DocumentHomePage;
+import com.rcpl.rcpl.plugin.demo.homepages.NewHomePage;
+import com.rcpl.rcpl.plugin.demo.homepages.SamplesHomePage;
 
 import javafx.event.ActionEvent;
 import javafx.geometry.Orientation;
@@ -29,7 +28,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 
-public class DemoUic extends RcplUic implements IOfficeUIC {
+public class DemoUic extends RcplUic {
 
 	public DemoUic(RcplApplicationStarter rcp, JOProgressTask task, ProgressBar startProgressbar,
 			Text progressMessage) {
@@ -55,7 +54,7 @@ public class DemoUic extends RcplUic implements IOfficeUIC {
 		fileChooser.getExtensionFilters().add(extFilter);
 
 		try {
-			File dir = JOSession.INSTANCE.getSystemPreferences().getFile(JOKey.FILE_DIALOG_DIR);
+			File dir = JOSession.getDefault().getSystemPreferences().getFile(JOKey.FILE_DIALOG_DIR);
 			if (dir != null && dir.exists()) {
 				fileChooser.setInitialDirectory(dir);
 			}
@@ -63,12 +62,12 @@ public class DemoUic extends RcplUic implements IOfficeUIC {
 			// System. out.println();
 		}
 		File file = fileChooser.showOpenDialog(getStage());
-		JOSession.INSTANCE.commit();
+		JOSession.getDefault().commit();
 		if (file != null) {
-			JOSession.INSTANCE.getSystemPreferences().put(JOKey.FILE_DIALOG_DIR, file.getParentFile());
+			JOSession.getDefault().getSystemPreferences().put(JOKey.FILE_DIALOG_DIR, file.getParentFile());
 			lastDocumentFile = file;
-			JOSession.INSTANCE.getSystemPreferences().setLastDocument(file.getAbsolutePath());
-			JOSession.INSTANCE.commit();
+			JOSession.getDefault().getSystemPreferences().setLastDocument(file.getAbsolutePath());
+			JOSession.getDefault().commit();
 			openDocument(file);
 		}
 		updateButtons(false);
@@ -115,12 +114,12 @@ public class DemoUic extends RcplUic implements IOfficeUIC {
 
 	@Override
 	protected IHomePage createNewHomePage() {
-		return new JOOfficeNewHomePage(this, "64_48/office_new");
+		return new NewHomePage(this, "64_48/office_new");
 	}
 
 	@Override
 	protected IHomePage createSamplesHomePage() {
-		return new JOOfficeSamplesHomePage(this, "64_48/office_samples");
+		return new SamplesHomePage(this, "64_48/office_samples");
 	}
 
 	@Override
@@ -220,8 +219,8 @@ public class DemoUic extends RcplUic implements IOfficeUIC {
 			Node n = internalBorderPane.getCenter();
 			if (n != null) {
 				Object o = n.getUserData();
-				if (o instanceof JODocumentHomePage) {
-					return ((JODocumentHomePage) o).getDocument().getEditor();
+				if (o instanceof DocumentHomePage) {
+					return ((DocumentHomePage) o).getDocument().getEditor();
 				}
 			}
 		}

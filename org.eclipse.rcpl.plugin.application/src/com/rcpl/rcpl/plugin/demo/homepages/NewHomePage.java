@@ -1,10 +1,10 @@
-package com.joffice.rcpl.plugin.demo.homepages;
+package com.rcpl.rcpl.plugin.demo.homepages;
 
-import org.eclipse.fxrcplight.IRcplPlugin;
-import org.eclipse.fxrcplight.Rcpl;
-import org.eclipse.fxrcplight.RcplUic;
-import org.eclipse.fxrcplight.homepages.JONewHomePage;
 import org.eclipse.fxrcplight.model.JOModel;
+import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.RcplUic;
+import org.eclipse.rcpl.homepages.JONewHomePage;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,9 +14,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
-public class JOOfficeNewHomePage extends JONewHomePage {
+public class NewHomePage extends JONewHomePage {
 
-	public JOOfficeNewHomePage(RcplUic uic, String image) {
+	public NewHomePage(RcplUic uic, String image) {
 		super(uic, image);
 	}
 
@@ -35,7 +35,7 @@ public class JOOfficeNewHomePage extends JONewHomePage {
 		int buttonWidth = 300;
 		Button b = new Button("Open Document");
 		b.setAlignment(Pos.CENTER_LEFT);
-		b.setGraphic(Rcpl.resources().getImageView("64_48/open"));
+		b.setGraphic(Rcpl.resources().getImage("64_48/open", 64,48).getNode());
 		b.setPrefWidth(buttonWidth);
 		b.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -48,7 +48,7 @@ public class JOOfficeNewHomePage extends JONewHomePage {
 
 		b = new Button("Open Last Document");
 		b.setAlignment(Pos.CENTER_LEFT);
-		b.setGraphic(Rcpl.resources().getImageView("64_48/open_last_document"));
+		b.setGraphic(Rcpl.resources().getImage("64_48/open_last_document", 64,48).getNode());
 		b.setPrefWidth(buttonWidth);
 		b.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -65,7 +65,7 @@ public class JOOfficeNewHomePage extends JONewHomePage {
 		b.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				((RcplUic) uic).showPerspective(JOModel.USE_CASE_CONTACTS_ID, true);
+				((RcplUic) uic).showPerspective(RcplModel.USE_CASE_CONTACTS_ID, true);
 			}
 		});
 		gridPane.add(b, 0, row++);

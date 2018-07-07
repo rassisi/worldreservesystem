@@ -1,7 +1,7 @@
-package com.joffice.rcpl.plugin.demo.homepages;
+package com.rcpl.rcpl.plugin.demo.homepages;
 
-import org.eclipse.fxrcplight.RcplUic;
-import org.eclipse.fxrcplight.homepages.JONewHomePage;
+import org.eclipse.rcpl.RcplUic;
+import org.eclipse.rcpl.homepages.JONewHomePage;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,9 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
-public class JOOfficeSamplesHomePage extends JONewHomePage {
+public class SamplesHomePage extends JONewHomePage {
 
-	public JOOfficeSamplesHomePage(RcplUic uic, String image) {
+	public SamplesHomePage(RcplUic uic, String image) {
 		super(uic, image);
 	}
 

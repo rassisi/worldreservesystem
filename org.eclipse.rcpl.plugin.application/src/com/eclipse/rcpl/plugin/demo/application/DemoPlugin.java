@@ -1,12 +1,12 @@
-package com.joffice.rcpl.plugin.demo.application;
+package com.eclipse.rcpl.plugin.demo.application;
 
-import org.eclipse.fxrcplight.AbstractRcplPlugin;
-import org.eclipse.fxrcplight.EViewController;
-import org.eclipse.fxrcplight.IApplicationStarter;
-import org.eclipse.fxrcplight.IRcplApplication;
-import org.eclipse.fxrcplight.IRcplPlugin;
-import org.eclipse.fxrcplight.JOAbstractMigration;
-import org.eclipse.fxrcplight.RcplPlugin;
+import org.eclipse.rcpl.AbstractRcplPlugin;
+import org.eclipse.rcpl.IApplicationStarter;
+import org.eclipse.rcpl.IRcplApplicationProvider;
+import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.RcplAbstractMigration;
+import org.eclipse.rcpl.RcplPlugin;
+import org.eclipse.rcpl.navigator.EViewController;
 
 /**
  * @author Ramin
@@ -17,9 +17,7 @@ public class DemoPlugin extends AbstractRcplPlugin implements IRcplPlugin {
 
 	public static final String ID = "DEMO_APPLICATION";
 
-	public DemoPlugin() {
-		super(ID);
-	}
+
 
 
 
@@ -29,14 +27,14 @@ public class DemoPlugin extends AbstractRcplPlugin implements IRcplPlugin {
 	}
 
 	@Override
-	protected JOAbstractMigration getMigration() {
+	protected RcplAbstractMigration getMigration() {
 		return null; // new EContactsMigration(this);
 	}
 
 
 
 	@Override
-	public IApplicationStarter createApplicationStarter(IRcplApplication rcplApplication) {
+	public IApplicationStarter createApplicationStarter(IRcplApplicationProvider rcplApplication) {
 		return new DemoApplicationStarter(rcplApplication);
 	}
 
@@ -51,4 +49,6 @@ public class DemoPlugin extends AbstractRcplPlugin implements IRcplPlugin {
 	public boolean isCustomApplication() {
 		return false;
 	}
+
+
 }
