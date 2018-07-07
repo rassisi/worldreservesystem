@@ -26,6 +26,7 @@ import org.eclipse.rcpl.model_2_0_0.JOfficeModelGeneratedPlugin;
 import org.eclipse.rcpl.util.JOUtil2;
 
 import javafx.scene.Node;
+import javafx.scene.image.ImageView;
 
 /**
  * @author Ramin Assisi
@@ -146,6 +147,11 @@ public class JOResources implements IResources, IImageProvider, ITextProvider {
 	@Override
 	public Node getImageNode(String id, double width, double height) {
 		return getImage(id, width, height).getNode();
+	}
+
+	@Override
+	public ImageView getImageView(String imageName) {
+		return (ImageView)getImageNode(imageName, 16, 16);
 	}
 
 }
