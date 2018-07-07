@@ -4,6 +4,7 @@ import org.eclipse.rcpl.AbstractRcplPlugin;
 import org.eclipse.rcpl.IApplicationStarter;
 import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.RcplAbstractMigration;
 import org.eclipse.rcpl.RcplPlugin;
 import org.eclipse.rcpl.navigator.EViewController;
 import org.eclipse.rcpl.ui.parts.contacts.EContactsMigration;
@@ -38,12 +39,12 @@ public class RcplContactsPlugin extends AbstractRcplPlugin implements IRcplPlugi
 	}
 
 	@Override
-	protected JOAbstractMigration getMigration() {
+	protected RcplAbstractMigration getMigration() {
 		return new EContactsMigration(this);
 	}
 
 	@Override
-	public IApplicationStarter createApplicationStarter(IRcplApplication application) {
+	public IApplicationStarter createApplicationStarter(IRcplApplicationProvider application) {
 		return null;
 	}
 
@@ -52,10 +53,5 @@ public class RcplContactsPlugin extends AbstractRcplPlugin implements IRcplPlugi
 		return false;
 	}
 
-	@Override
-	public IApplicationStarter createApplicationStarter(IRcplApplicationProvider rcplApplication) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

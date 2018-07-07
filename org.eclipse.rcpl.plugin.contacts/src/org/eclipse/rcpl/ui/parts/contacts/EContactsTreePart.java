@@ -12,11 +12,11 @@ import org.eclipse.fx.emf.edit.ui.AdapterFactoryTreeCellFactory;
 import org.eclipse.fx.emf.edit.ui.AdapterFactoryTreeItem;
 import org.eclipse.fx.emf.edit.ui.EAttributeCellEditHandler;
 import org.eclipse.fx.emf.edit.ui.dnd.CellDragAdapter;
-import org.eclipse.fxrcplight.model.cdo.client.JOSession;
 import org.eclipse.net4j.util.event.IEvent;
 import org.eclipse.net4j.util.event.IListener;
 import org.eclipse.rcpl.contacts.plugin.OsgiContactsPlugin;
 import org.eclipse.rcpl.contacts.plugin.RcplContactsPlugin;
+import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Person;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Persons;
 import org.eclipse.rcpl.model_2_0_0.rcpl.RcplPackage;
@@ -53,11 +53,11 @@ public class EContactsTreePart {
 
 		// TreeView
 		treeView = new TreeView<>();
-		rootGroup = JOSession.INSTANCE.getRcpl().getAllPersons();
+		rootGroup = JOSession.getDefault().getRcpl().getAllPersons();
 
-		if (JOSession.INSTANCE.getSession() != null) {
+		if (JOSession.getDefault().getSession() != null) {
 
-			JOSession.INSTANCE.getSession().addListener(new IListener() {
+			JOSession.getDefault().getSession().addListener(new IListener() {
 
 				@Override
 				public void notifyEvent(IEvent event) {
@@ -157,7 +157,7 @@ public class EContactsTreePart {
 
 	private void refresh() {
 
-		if (JOSession.INSTANCE.isValid()) {
+		if (JOSession.getDefault().isValid()) {
 			try {
 				if (adapterFactory == null) {
 					adapterFactory = new AdapterFactoryTreeItem(rootGroup,

@@ -1,23 +1,32 @@
 package org.eclipse.rcpl.ui.parts.contacts;
 
-import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.fxrcplight.EViewController;
-import org.eclipse.fxrcplight.AbstractRcplPlugin;
-import org.eclipse.osgi.internal.signedcontent.Base64;
+import org.eclipse.rcpl.AbstractRcplPlugin;
+import org.eclipse.rcpl.IEditor;
+import org.eclipse.rcpl.IHomePage;
+import org.eclipse.rcpl.INavigatorPlugin;
+import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.RcplLogin;
 import org.eclipse.rcpl.contacts.plugin.RcplContactsPlugin;
-import org.eclipse.rcpl.model_2_0_0.rcpl.Person;
+import org.eclipse.rcpl.model_2_0_0.rcpl.Perspective;
+import org.eclipse.rcpl.navigator.EViewController;
 
 import javafx.beans.property.Property;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
 /**
  * @author ramin
@@ -151,6 +160,384 @@ public class EContactsPluginController extends EViewController {
 		Node node1 = new EContactsTreePart((RcplContactsPlugin) uc).getNode();
 		getViewerBox().getChildren().add(node1);
 
+	}
+
+	@Override
+	public void actionAddPresentationTab() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionLogout() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionOpen() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionOpenLast() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addtoApplicationStack(StackPane contentGroup) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void collapseAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createContent() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void expandAllToolBars() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void expandBottomAra(boolean expand) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void expandLeftAra(boolean expand) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void expandTopAra(boolean epand) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public IRcplPlugin findRcplPlugins(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public WebView getBrowser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IEditor getEditor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Node getFocusOwner() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<IHomePage> getHomepages() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public INavigatorPlugin getNavigator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Perspective getPerspective() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Stage getStage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IRcplPlugin getUseCase() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void handleThemeDefault(ActionEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void init(BorderPane parent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean initSession(RcplLogin login) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void initStyles() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isViewer() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void openDocument(File file) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void openTemplate(String name, String tabName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void recreateSideBar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void recreateTopBar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void restorePerspective() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void restoreTab() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setPerspective(Perspective perspective, IRcplPlugin useCase) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setUseCase(IRcplPlugin useCase) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setContent(IEditor editor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setContent(Node node) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setDebugText(String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setInhibitUI(boolean inhibitUI) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setLeftTrimBar(StackPane perspectiveToolSideBarStackPane) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setPerspective(Perspective perspective) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setStatusText(String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setTopAreaHeight(double height) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setTopContent(Node content) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setViewer(boolean viewer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showAboutPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean showBrowser() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void showContactUsPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showDonationPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showErrorPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showHomePage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean showHtmlEditor() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void showNewPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showPerspectivePage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showOverviewPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean showPerspective(String id, boolean asEditor) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void showPreferencesPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showSamplesPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showStartMenuButton(boolean show) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showTabPane() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showTutorialsPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showWebView(String url) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showWhatsNewPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateStartMenuButton() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void init(IRcplPlugin rcplPlugin) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

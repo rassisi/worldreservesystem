@@ -5,6 +5,15 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.fx.emf.edit.ui.AdapterFactoryCellFactory.ICellUpdateListener;
+import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.contacts.handlers.AddContactHandler;
+import org.eclipse.rcpl.contacts.handlers.AddGroupHandler;
+import org.eclipse.rcpl.contacts.handlers.CopyHandler;
+import org.eclipse.rcpl.contacts.handlers.CutHandler;
+import org.eclipse.rcpl.contacts.handlers.DeleteContactHandler;
+import org.eclipse.rcpl.contacts.handlers.PasteHandler;
+
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,15 +29,6 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.WindowEvent;
-
-import org.eclipse.fx.emf.edit.ui.AdapterFactoryCellFactory.ICellUpdateListener;
-import org.eclipse.fxrcplight.Rcpl;
-import org.eclipse.rcpl.contacts.handlers.AddContactHandler;
-import org.eclipse.rcpl.contacts.handlers.AddGroupHandler;
-import org.eclipse.rcpl.contacts.handlers.CopyHandler;
-import org.eclipse.rcpl.contacts.handlers.CutHandler;
-import org.eclipse.rcpl.contacts.handlers.DeleteContactHandler;
-import org.eclipse.rcpl.contacts.handlers.PasteHandler;
 
 public class EContactsContextMenuProvider implements ICellUpdateListener {
 
@@ -185,8 +185,8 @@ public class EContactsContextMenuProvider implements ICellUpdateListener {
 			Image image = new Image(url.toExternalForm());
 			return new ImageView(image);
 		} catch (MalformedURLException e) {
-			return new ImageView(Rcpl.resources().getFxImage(
-					"shape_16_point_star"));
+			return new ImageView(Rcpl.resources().getImage(
+					"shape_16_point_star", 16, 16).getImage());
 		}
 	}
 
