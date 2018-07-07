@@ -1,9 +1,9 @@
 package org.eclipse.rcpl.plugin.tools.parts;
 
-import org.eclipse.fxrcplight.IRcplPlugin;
-import org.eclipse.fxrcplight.JOAbstractMigration;
+import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.RcplAbstractMigration;
 
-public class EToolsMigration extends JOAbstractMigration {
+public class EToolsMigration extends RcplAbstractMigration {
 
 	public EToolsMigration(IRcplPlugin useCase) {
 		super(useCase);

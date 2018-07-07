@@ -1,14 +1,15 @@
 package org.eclipse.rcpl.plugin.tools;
 
-import org.eclipse.fxrcplight.IRcplApplication;
-import org.eclipse.fxrcplight.JOAbstractMigration;
 import org.eclipse.rcpl.AbstractRcplPlugin;
 import org.eclipse.rcpl.IApplicationStarter;
+import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplPlugin;
+import org.eclipse.rcpl.IRcplPluginControler;
+import org.eclipse.rcpl.RcplAbstractMigration;
 import org.eclipse.rcpl.RcplPlugin;
-import org.eclipse.rcpl.navigator.EViewController;
-import org.eclipse.rcpl.plugin.tools.parts.EToolsMigration;
 import org.eclipse.rcpl.plugin.tools.parts.EToolsPluginController;
+
+
 
 /**
  * @author Ramin
@@ -38,18 +39,10 @@ public class EToolsPlugin extends AbstractRcplPlugin implements IRcplPlugin {
 		return "Setup Tools";
 	}
 
-	@Override
-	protected EViewController createController() {
-		return new EToolsPluginController();
-	}
+
 
 	@Override
-	protected JOAbstractMigration getMigration() {
-		return new EToolsMigration(this);
-	}
-
-	@Override
-	public IApplicationStarter createApplicationStarter(IRcplApplication application) {
+	public IApplicationStarter createApplicationStarter(IRcplApplicationProvider application) {
 		return null;
 	}
 
@@ -57,5 +50,18 @@ public class EToolsPlugin extends AbstractRcplPlugin implements IRcplPlugin {
 	public boolean isCustomApplication() {
 		return false;
 	}
+
+	@Override
+	protected RcplAbstractMigration getMigration() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected IRcplPluginControler createController() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

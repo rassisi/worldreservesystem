@@ -8,7 +8,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
-import org.eclipse.fxrcplight.model.cdo.client.JOSession;
+import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.provider.RcplItemProviderAdapterFactory;
 
 /**
@@ -43,11 +43,11 @@ public class EToolsModelManagerImpl implements EToolsModelManager {
 	public EditingDomain getEditingDomain() {
 		if (editingDomain == null) {
 			editingDomain = AdapterFactoryEditingDomain
-					.getEditingDomainFor(JOSession.INSTANCE.getRcpl()
+					.getEditingDomainFor(JOSession.getDefault().getRcpl()
 							.getAllTools());
 			if (editingDomain != null) {
 				try {
-					Resource resource = JOSession.INSTANCE.getResource();
+					Resource resource = JOSession.getDefault().getResource();
 					editingDomain.getResourceSet().getResources().add(resource);
 				} catch (Exception ex) {
 					// System. out.println();
@@ -59,7 +59,7 @@ public class EToolsModelManagerImpl implements EToolsModelManager {
 				editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
 						commandStack);
 
-				Resource cdoResource = JOSession.INSTANCE.getResource();
+				Resource cdoResource = JOSession.getDefault().getResource();
 
 				try {
 					editingDomain.getResourceSet().getResources()

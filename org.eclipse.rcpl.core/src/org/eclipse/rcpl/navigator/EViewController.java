@@ -10,7 +10,9 @@
  *******************************************************************************/
 package org.eclipse.rcpl.navigator;
 
+import java.math.BigDecimal;
 import java.util.List;
+
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -22,6 +24,8 @@ import org.eclipse.rcpl.ISideToolBar;
 import org.eclipse.rcpl.ITopToolbar;
 import org.eclipse.rcpl.emf.util.EMFEditFXProperties;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Perspective;
+
+import com.sun.javafx.scene.control.IntegerField;
 
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -37,6 +41,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import jfxtras.labs.scene.control.BigDecimalField;
 
 /**
  * @author Ramin
@@ -159,80 +164,78 @@ abstract public class EViewController implements ITreePartControler, IRcplPlugin
 
 	}
 
-	// protected Property<BigDecimal> rebind(BigDecimalField textField,
-	// Property<BigDecimal> oldProperty, EObject eObject,
-	// EStructuralFeature feature, EditingDomain editingDomain) {
-	// try {
-	// if (oldProperty != null)
-	// textField.numberProperty().unbindBidirectional(oldProperty);
-	//
-	// Property<BigDecimal> property = null;
-	// if (eObject != null) {
-	// property = EMFEditFXProperties.value(editingDomain, eObject, feature);
-	// textField.numberProperty().bindBidirectional(property);
-	// }
-	//
-	// textField.setDisable(eObject == null);
-	//
-	// // if (eObject == null)
-	// // textField.clear();
-	//
-	// return property;
-	// } catch (IllegalArgumentException ex) {
-	// // ignore
-	// }
-	// return null;
-	// }
-	//
-	// protected Property<Integer> rebind(IntegerField textField,
-	// Property<Integer> oldProperty, EObject eObject,
-	// EStructuralFeature feature, EditingDomain editingDomain) {
-	// try {
-	// if (oldProperty != null)
-	// textField.numberProperty().unbindBidirectional(oldProperty);
-	//
-	// Property<Integer> property = null;
-	// if (eObject != null) {
-	// property = EMFEditFXProperties.value(editingDomain, eObject, feature);
-	// textField.numberProperty().bindBidirectional(property);
-	// }
-	//
-	// textField.setDisable(eObject == null);
-	//
-	// // if (eObject == null)
-	// // textField.clear();
-	//
-	// return property;
-	// } catch (IllegalArgumentException ex) {
-	// // ignore
-	// }
-	// return null;
-	// }
+	protected Property<BigDecimal> rebind(BigDecimalField textField, Property<BigDecimal> oldProperty, EObject eObject,
+			EStructuralFeature feature, EditingDomain editingDomain) {
+		try {
+			if (oldProperty != null)
+				textField.numberProperty().unbindBidirectional(oldProperty);
 
-	// protected Property<Integer> rebind(BigDecimalField field,
-	// Property<Integer> oldProperty, EObject eObject,
-	// EStructuralFeature feature, EditingDomain editingDomain, boolean in) {
-	// try {
-	// if (oldProperty != null)
-	// field.numberProperty().unbindBidirectional(oldProperty);
-	//
-	// Property<Integer> property = null;
-	// if (eObject != null) {
-	// property = EMFEditFXProperties.value(editingDomain, eObject, feature);
-	// field.numberProperty().bindBidirectional(property);
-	// }
-	//
-	// field.setDisable(eObject == null);
-	//
-	// // if (eObject == null)
-	// // textField.clear();
-	//
-	// return property;
-	// } catch (IllegalArgumentException ex) {
-	// // ignore
-	// }
-	// return null;
-	// }
+			Property<BigDecimal> property = null;
+			
+			if (eObject != null) {
+				property = EMFEditFXProperties.value(editingDomain, eObject, feature);
+				textField.numberProperty().bindBidirectional(property);
+			}
+
+			textField.setDisable(eObject == null);
+
+			// if (eObject == null)
+			// textField.clear();
+
+			return property;
+		} catch (IllegalArgumentException ex) {
+			// ignore
+		}
+		return null;
+	}
+
+	protected Property<Number> rebind(IntegerField textField, Property<Number> oldProperty, EObject eObject,
+			EStructuralFeature feature, EditingDomain editingDomain) {
+		try {
+			if (oldProperty != null)
+				textField.valueProperty().unbindBidirectional(oldProperty);
+
+			Property<Number> property = null;
+			if (eObject != null) {
+				property = EMFEditFXProperties.value(editingDomain, eObject, feature);
+				textField.valueProperty().bindBidirectional(property);
+			}
+
+			textField.setDisable(eObject == null);
+
+			// if (eObject == null)
+			// textField.clear();
+
+			return property;
+		} catch (IllegalArgumentException ex) {
+			// ignore
+		}
+		return null;
+	}
+
+	protected Property<BigDecimal> rebind(BigDecimalField field, Property<BigDecimal> oldProperty, EObject eObject,
+			EStructuralFeature feature, EditingDomain editingDomain, boolean in) {
+		try {
+			if (oldProperty != null)
+				field.numberProperty().unbindBidirectional(oldProperty);
+
+			Property<BigDecimal> property = null;
+			if (eObject != null) {
+				property = EMFEditFXProperties.value(editingDomain, eObject, feature);
+				field.numberProperty().bindBidirectional(property);
+			}
+
+			field.setDisable(eObject == null);
+
+			// if (eObject == null)
+			// textField.clear();
+
+			return property;
+		} catch (IllegalArgumentException ex) {
+			// ignore
+		}
+		return null;
+	}
 
 	protected Property<Boolean> rebind(CheckBox checkBox, Property<Boolean> oldProperty, EObject eObject,
 			EStructuralFeature feature, EditingDomain editingDomain) {

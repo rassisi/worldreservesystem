@@ -5,6 +5,18 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.fx.emf.edit.ui.AdapterFactoryCellFactory.ICellUpdateListener;
+import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
+import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroup;
+import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroups;
+import org.eclipse.rcpl.plugin.tools.handlers.AddToolGroupHandler;
+import org.eclipse.rcpl.plugin.tools.handlers.AddToolHandler;
+import org.eclipse.rcpl.plugin.tools.handlers.CopyHandler;
+import org.eclipse.rcpl.plugin.tools.handlers.CutHandler;
+import org.eclipse.rcpl.plugin.tools.handlers.DeleteToolHandler;
+import org.eclipse.rcpl.plugin.tools.handlers.PasteHandler;
+
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,18 +32,6 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.WindowEvent;
-
-import org.eclipse.fx.emf.edit.ui.AdapterFactoryCellFactory.ICellUpdateListener;
-import org.eclipse.fxrcplight.Rcpl;
-import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
-import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroup;
-import org.eclipse.rcpl.model_2_0_0.rcpl.ToolGroups;
-import org.eclipse.rcpl.plugin.tools.handlers.AddToolGroupHandler;
-import org.eclipse.rcpl.plugin.tools.handlers.AddToolHandler;
-import org.eclipse.rcpl.plugin.tools.handlers.CopyHandler;
-import org.eclipse.rcpl.plugin.tools.handlers.CutHandler;
-import org.eclipse.rcpl.plugin.tools.handlers.DeleteToolHandler;
-import org.eclipse.rcpl.plugin.tools.handlers.PasteHandler;
 
 public class EToolsContextMenuProvider implements ICellUpdateListener {
 
@@ -241,8 +241,8 @@ public class EToolsContextMenuProvider implements ICellUpdateListener {
 			Image image = new Image(url.toExternalForm());
 			return new ImageView(image);
 		} catch (MalformedURLException e) {
-			return new ImageView(Rcpl.resources().getFxImage(
-					"shape_16_point_star"));
+			return new ImageView(Rcpl.resources().getImage(
+					"shape_16_point_star",16,16).getImage());
 		}
 	}
 

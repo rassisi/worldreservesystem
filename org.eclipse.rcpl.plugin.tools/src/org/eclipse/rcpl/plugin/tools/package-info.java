@@ -1,4 +1,4 @@
 @RcplPlugin
 package org.eclipse.rcpl.plugin.tools;
 
-import org.eclipse.fxrcplight.RcplPlugin;
+import org.eclipse.rcpl.RcplPlugin;
