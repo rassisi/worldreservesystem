@@ -1,6 +1,0 @@
-package org.eclipse.rcpl.client.uc.tools.model;
-
-public enum FolderTypes {
-
-	ACCORDION_ITEM, GRID_PANE, FLOW_PANE;
-}

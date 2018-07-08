@@ -1,4 +1,0 @@
-@RcplPlugin
-package org.eclipse.rcpl.client.uc.tools.parts;
-
-import org.eclipse.fxrcplight.RcplPlugin;

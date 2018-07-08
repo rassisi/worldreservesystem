@@ -1,8 +1,0 @@
-package org.eclipse.rcpl.client.uc.tools.parts;
-
-public class EToolsModelFactory {
-
-	public EToolsModelManager newInstance() {
-		return new EToolsModelManagerImpl();
-	}
-}
