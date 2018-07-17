@@ -18,7 +18,7 @@ import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplPluginControler;
 import org.eclipse.rcpl.RcplAbstractMigration;
 import org.eclipse.rcpl.RcplPlugin;
-import org.eclipse.rcpl.model.cdo.client.JOSession;
+import org.eclipse.rcpl.model.cdo.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.RCPL;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorMigration;
@@ -73,7 +73,7 @@ public class NavigatorPlugin extends DefaultNavigatorPlugin implements INavigato
 	public DefaultTreeTreePart create(Pane detailPane, Tool tool, EObject root, boolean showRoot) {
 
 		if (root == null) {
-			RCPL rcpl = JOSession.getDefault().getRcpl();
+			RCPL rcpl = RcplSession.getDefault().getRcpl();
 			if (rcpl != null) {
 				root = rcpl.getAllResources();
 			}

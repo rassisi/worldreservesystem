@@ -4,14 +4,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.INavigatorListener;
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.app.toolcontrols.RcplSideToolBar;
-import org.eclipse.rcpl.model.cdo.client.JOSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Folder;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 import org.worldreservesystem.navigator.detailpages.OverviewDetailPage;
 
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 
 /**
