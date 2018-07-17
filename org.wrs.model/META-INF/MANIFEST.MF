@@ -17,10 +17,9 @@ Export-Package: org.worldreservesystem,
  org.wrs.model.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.cdo;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport,
+ org.worldreservesystem.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport,
+ org.eclipse.emf.cdo.edit;bundle-version="4.4.200"
 Bundle-ActivationPolicy: lazy
