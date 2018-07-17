@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: WRS Application
-Bundle-SymbolicName: org.wrs.rcpl.ui.application
+Bundle-SymbolicName: org.wrs.application
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.wrs.rcpl.ui.application
 Bundle-RequiredExecutionEnvironment: JavaSE-10
