@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Navigator
-Bundle-SymbolicName: org.worldreservesystem.navigator
+Bundle-SymbolicName: org.wrs.ui.navigator
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.rcpl.navigator;bundle-version="1.0.0",
