@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ (c) 2018 World Resource Systems, Ramin Assisi
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated wrs -->
+      <package
+            uri="http://org.worldreservesystem"
+            class="org.worldreservesystem.WorldreservesystemPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated wrs -->
+      <factory
+            uri="http://org.worldreservesystem"
+            class="org.worldreservesystem.provider.WorldreservesystemItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated wrs -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.worldreservesystem.presentation.WorldreservesystemModelWizardID"
+            name="%_UI_WorldreservesystemModelWizard_label"
+            class="org.worldreservesystem.presentation.WorldreservesystemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WorldreservesystemModelFile.gif">
+         <description>%_UI_WorldreservesystemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated wrs -->
+      <editor
+            id="org.worldreservesystem.presentation.WorldreservesystemEditorID"
+            name="%_UI_WorldreservesystemEditor_label"
+            icon="icons/full/obj16/WorldreservesystemModelFile.gif"
+            extensions="worldreservesystem"
+            class="org.worldreservesystem.presentation.WorldreservesystemEditor"
+            contributorClass="org.worldreservesystem.presentation.WorldreservesystemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
