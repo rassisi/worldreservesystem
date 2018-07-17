@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.wrs.model/src" modelPluginID="org.wrs.model"
+    modelName="Org" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
+    complianceLevel="8.0" copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>org.wrs.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Wrs" basePackage="org.wrs" disposableProviderFactory="true"
+      ecorePackage="org.wrs.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="org.wrs.ecore#//AssetType">
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/GOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/SILVER"/>
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/CRYPTO"/>
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/TRUST"/>
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/PHYSICAL"/>
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/INTELLECTUAL_PROPERTY"/>
+      <genEnumLiterals ecoreEnumLiteral="org.wrs.ecore#//AssetType/UDOLLAR"/>
+    </genEnums>
+    <genClasses ecoreClass="org.wrs.ecore#//wrs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//wrs/transfervaults"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//wrs/mainvault"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//wrs/identities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//wrs/supplycontrol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//wrs/wallets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//wrs/registeredasstets"/>
+      <genOperations ecoreOperation="org.wrs.ecore#//wrs/createIdentity"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Treasury"/>
+    <genClasses ecoreClass="org.wrs.ecore#//TransferVault"/>
+    <genClasses ecoreClass="org.wrs.ecore#//TransferVaults">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//TransferVaults/children"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Genesis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Genesis/treasury"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Asset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute org.wrs.ecore#//Asset/assetType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Asset/materials"/>
+      <genOperations ecoreOperation="org.wrs.ecore#//Asset/register"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//WorldEconomy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//WorldEconomy/nationaleconomies"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//NationalEconomies">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//NationalEconomies/children"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Nation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Nation/fiatcurrency"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//FiatCurrency"/>
+    <genClasses ecoreClass="org.wrs.ecore#//Accountants">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Accountants/children"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Accountant"/>
+    <genClasses image="false" ecoreClass="org.wrs.ecore#//Identity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute org.wrs.ecore#//Identity/UUID"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Material">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Material/belongsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Individual"/>
+    <genClasses ecoreClass="org.wrs.ecore#//LegalEntity"/>
+    <genClasses ecoreClass="org.wrs.ecore#//Identities">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Identities/children"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Account">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute org.wrs.ecore#//Account/publicKey"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Account/belongsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//SupplyControl">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//SupplyControl/genesis"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Accounts">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Accounts/children"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//Transaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Transaction/assets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Transaction/transactions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute org.wrs.ecore#//Transaction/data"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//RegisteredAssets">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//RegisteredAssets/children"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//AbstractVault">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//AbstractVault/assets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//AbstractVault/transaction"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//TransactionCollection"/>
+    <genClasses ecoreClass="org.wrs.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Node/wrs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute org.wrs.ecore#//Node/weight"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference org.wrs.ecore#//Node/networkengine"/>
+    </genClasses>
+    <genClasses ecoreClass="org.wrs.ecore#//NetworkEngine"/>
+  </genPackages>
+</genmodel:GenModel>

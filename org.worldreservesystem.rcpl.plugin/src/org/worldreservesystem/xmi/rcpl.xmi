@@ -1,0 +1,3115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rcpl:RCPL xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:rcpl="http://rcpl/1.0">
+  <allPlugins>
+    <children
+        name="Configure Tools"
+        id="USE_CASE_TOOLS"
+        leaf="true"
+        className="org.eclipse.rcpl.client.uc.tools.parts.EToolsUseCase"/>
+    <children
+        name="EMF Tree Browser"
+        id="USE_CASE_EMF_TREE"
+        leaf="true"/>
+  </allPlugins>
+  <allPerspectives>
+    <children
+        name="WRS Network"
+        id="WRS_NETWORK"
+        image="network">
+      <sideToolBar
+          leaf="true"
+          toolGroups="//@allTools/@toolgroupChildren.0"/>
+      <topToolBar
+          leaf="true"
+          toolGroups="//@allTools/@toolgroupChildren.16 //@allTools/@toolgroupChildren.21 //@allTools/@toolgroupChildren.22"/>
+      <quickTools
+          leaf="true"/>
+    </children>
+    <children
+        name="SETTINGS"
+        id="SETTINGS">
+      <sideToolBar
+          leaf="true"
+          toolGroups="//@allTools/@toolgroupChildren.0 //@allTools/@toolgroupChildren.3"/>
+      <topToolBar
+          leaf="true"/>
+      <quickTools
+          leaf="true"/>
+    </children>
+  </allPerspectives>
+  <allPreferences/>
+  <allTools>
+    <toolgroupChildren
+        name="File"
+        id="sideBar/file"
+        image="internet_cloud">
+      <tools
+          type="NAVIGATOR"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Paragraph &amp; Font"
+        id="sideBar/paragraphandFont"
+        image="styles"
+        width="250.0"
+        height="550.0">
+      <toolGroups
+          name="Font"
+          id="paragraphFont"
+          image="font"
+          toolTip="Font Styles"
+          grid="true">
+        <toolGroups
+            name="Font1"
+            type="GRIDPANE">
+          <tools
+              name="Bold"
+              id="bold"
+              image="bold"/>
+          <tools
+              name="Italic"
+              id="italic"
+              image="italic"
+              gridX="1"/>
+          <tools
+              name="Underline"
+              id="underline"
+              image="underline"
+              gridX="2"/>
+          <tools
+              name="Striketrough"
+              id="strikethrough"
+              image="strikethrough"
+              gridX="3"/>
+        </toolGroups>
+        <toolGroups
+            name="Font2"
+            id="font2"
+            gridY="1"
+            type="GRIDPANE">
+          <tools
+              name="Subscript"
+              id="subscript"
+              image="subscript"/>
+          <tools
+              name="Superscript"
+              id="superscript"
+              image="superscript"
+              gridX="1"
+              format=""/>
+          <tools
+              name="Change Case"
+              id="changeCase"
+              image="change_case"
+              gridX="2"
+              format=""/>
+        </toolGroups>
+        <tools
+            name="Separator"
+            gridY="2"
+            type="SEPARATOR_HORIZONTAL"/>
+        <tools
+            name="Font Name"
+            id="fontName"
+            gridY="3"
+            service=""
+            format="fontName"
+            type="COMBO"/>
+        <tools
+            name="Font Size"
+            id="fontSize"
+            gridY="4"
+            format="fontSize"
+            type="COMBO"/>
+      </toolGroups>
+      <toolGroups
+          name="Paragraph"
+          id="paragraphProperties"
+          image="paragraph">
+        <tools
+            name="Align Text Left"
+            id="alignTextLeft"
+            image="align_text_left"
+            notImplemented="true"/>
+        <tools
+            name="Align Text Center"
+            id="alignTextCenter"
+            image="align_text_center"
+            notImplemented="true"/>
+        <tools
+            name="Align Text Right"
+            id="alignTextRight"
+            image="align_text_right"
+            notImplemented="true"/>
+        <tools
+            name="Align Text Justified"
+            id="alignTextJustified"
+            image="align_text_justified"
+            notImplemented="true"/>
+        <tools
+            name="Line Spacing"
+            id="splitmenubuttonlineSpacing"
+            image="line_spacing_2"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Bullets"
+            id="splitmenubuttonBullets"
+            image="bullets"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Numbering"
+            id="splitmenubuttonoNumbering"
+            image="numbering_onoff"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Multilevel List"
+            id="splitmenubuttonMultilevelList"
+            image="multilevel_list"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Sort"
+            id="splitmenubuttonSort"
+            image="sort"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Decrease Indent"
+            id="decreaseIndent"
+            image="decrease_indent"
+            notImplemented="true"/>
+        <tools
+            name="Increase Indent"
+            id="increaseIndent"
+            image="increase_indent"
+            notImplemented="true"/>
+        <tools
+            name="Paragraph On/Off"
+            id="paragraphOnOff"
+            image="paragraph_2"
+            notImplemented="true"/>
+      </toolGroups>
+      <toolGroups
+          name="Paragraph Styles"
+          id="paragraphStyles"
+          image="paragraph_styles"
+          grid="true">
+        <tools
+            name="Paragraph Styles"
+            id="paragraphStyleList"
+            format="styleListTool"
+            type="LISTVIEW"/>
+      </toolGroups>
+      <toolGroups
+          name="Character Styles"
+          id="characterStyles"
+          image="character_styles"
+          grid="true">
+        <tools
+            name="Character Styles"
+            id="characterStyles"
+            format="characterListTool"
+            type="LISTVIEW"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Paragraph"
+        id="topBar/paragraphProperties"
+        image="paragraph"
+        toolTip="Paragraph Properties"
+        gridX="1"
+        grid="true">
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group">
+        <tools
+            name="Align Text Left"
+            id="align_text_left"
+            image="align_text_left"
+            notImplemented="true"/>
+        <tools
+            name="Align Text Center"
+            id="align_text_center"
+            image="align_text_center"
+            gridX="1"
+            notImplemented="true"/>
+        <tools
+            name="Align Text Right"
+            id="align_text_right"
+            image="align_text_right"
+            gridX="2"
+            notImplemented="true"/>
+        <tools
+            name="Align Text Justified"
+            id="align_text_justified"
+            image="align_text_justified"
+            gridX="3"
+            notImplemented="true"/>
+      </toolGroups>
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridX="1">
+        <tools
+            name="Decrease Indent"
+            id="decrease_indent"
+            image="decrease_indent"
+            notImplemented="true"/>
+        <tools
+            name="Increase Indent"
+            id="increase_indent"
+            image="increase_indent"
+            notImplemented="true"/>
+      </toolGroups>
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridY="1">
+        <tools
+            name="Line Spacing"
+            id="line_spacing_2"
+            image="line_spacing_2"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Bullets"
+            id="bullets"
+            image="bullets"
+            notImplemented="true"
+            type="SPLITMENUBUTTON"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Page"
+        id="page"
+        image="page"
+        width="250.0"
+        height="550.0"
+        service="JOPictureService">
+      <toolGroups
+          name="Size &amp; Orientation"
+          id="pageSizeAndOrientation"
+          image="size"
+          grid="true">
+        <tools
+            name="Set to Landscape"
+            id="setPageSizeToLandscape"
+            labeled="true"
+            notImplemented="true"
+            type="RADIOBUTTON"/>
+        <tools
+            name="Set to Portait"
+            id="setPageSizeToPortrait"
+            gridY="1"
+            labeled="true"
+            notImplemented="true"
+            type="RADIOBUTTON"/>
+        <tools
+            name="Page Size"
+            id="pageSize"
+            gridY="2"
+            labeled="true"
+            notImplemented="true"
+            type="COMBO"/>
+        <tools
+            name="Page Size Width"
+            id="pageSizeWidth"
+            gridY="3"
+            labeled="true"
+            notImplemented="true"
+            type="TEXTFIELD"/>
+        <tools
+            name="Page Size Height"
+            id="pageSizeHeight"
+            gridY="4"
+            labeled="true"
+            notImplemented="true"
+            type="TEXTFIELD"/>
+      </toolGroups>
+      <toolGroups
+          name="Margins"
+          id="pageMargins"
+          image="margins"
+          grid="true">
+        <toolGroups
+            name="Margins"
+            id="margins"
+            spanX="2"
+            service=""
+            grid="true"
+            type="GRIDPANE">
+          <tools
+              name="Top"
+              id="topMargin"
+              image="top_margin"
+              labeled="true"
+              format="w=75"
+              type="TEXTFIELD"/>
+          <tools
+              name="Bottom"
+              id="bottomMargin"
+              image="bottom_margin"
+              gridY="1"
+              labeled="true"
+              format="w=75"
+              type="TEXTFIELD"/>
+          <tools
+              name="Left"
+              id="leftMargin"
+              image="left_margin"
+              gridY="2"
+              labeled="true"
+              format="w=75"
+              type="TEXTFIELD"/>
+          <tools
+              name="Right"
+              id="rightMargin"
+              image="right_margin"
+              gridY="3"
+              labeled="true"
+              format="w=75"
+              type="TEXTFIELD"/>
+        </toolGroups>
+        <toolGroups
+            name="Margin Templates"
+            id="marginTemplates"
+            image="margin_"
+            gridY="3"
+            spanX="2"
+            grid="true"
+            type="GRIDPANE">
+          <tools
+              name="Custom"
+              id="marginCustom"
+              image="margin_custom_40"/>
+          <tools
+              name="Normal"
+              id="marginNormal"
+              image="margin_normal_40"
+              gridX="1"/>
+          <tools
+              name="Narrow"
+              id="marginNarrow"
+              image="margin_narrow_40"
+              gridX="2"/>
+          <tools
+              name="Moderate"
+              id="marginModerate"
+              image="margin_moderate_40"
+              gridX="3"/>
+          <tools
+              name="Wide"
+              id="marginWide"
+              image="margin_wide_40"
+              gridX="4"/>
+          <tools
+              name="Mirrored"
+              id="marginMirrored"
+              image="margin_mirrored_28"
+              gridX="5"/>
+        </toolGroups>
+        <tools
+            name="Apply to"
+            gridY="1"
+            type="LABEL"/>
+        <tools
+            name="Apply to"
+            id="marginApplyTo"
+            gridX="1"
+            gridY="1"
+            format="Whole Document,From this Point Foreward"
+            type="COMBO"/>
+        <tools
+            name="Templates"
+            id="marginTemplateLabel"
+            gridY="2"
+            spanX="2"
+            type="LABEL"/>
+        <tools
+            name="Separator"
+            id="marginSeparator"
+            gridX="1"
+            gridY="2"
+            type="SEPARATOR_HORIZONTAL"/>
+      </toolGroups>
+      <toolGroups
+          name="Columns"
+          id="pageColumns"
+          image="columns"
+          grid="true">
+        <toolGroups
+            spanX="3"
+            type="GRIDPANE">
+          <tools
+              name="Columns"
+              id="pageColumns"
+              type="COMBO"/>
+          <tools
+              name="1 Column"
+              id="pageColumn1"
+              image="column_1"
+              gridX="1"/>
+          <tools
+              name="2 Column"
+              id="pageColumn2"
+              image="column_2"
+              gridX="2"/>
+          <tools
+              name="3 Column"
+              id="pageColumn3"
+              image="column_3"
+              gridX="3"/>
+          <tools
+              name="left Column"
+              id="pageColumnLeft"
+              image="column_left"
+              gridX="4"/>
+          <tools
+              name="right Column"
+              id="pageColumnRight"
+              image="column_right"
+              gridX="5"/>
+        </toolGroups>
+        <toolGroups
+            gridY="2"
+            spanX="3"
+            grid="true"
+            type="GRIDPANE">
+          <tools
+              name="Col #:"
+              id="labelCol"
+              type="LABEL"/>
+          <tools
+              name="Width:"
+              id="labelWidth"
+              gridX="1"
+              type="LABEL"/>
+          <tools
+              name="Spacing:"
+              id="labelSpacing"
+              gridX="2"
+              type="LABEL"/>
+          <tools
+              name="1:"
+              id="label1"
+              gridY="1"
+              type="LABEL"/>
+          <tools
+              name="width1"
+              id="width1"
+              gridX="1"
+              gridY="1"
+              type="COMBO"/>
+          <tools
+              name="spacing 1"
+              id="spacing1"
+              gridX="2"
+              gridY="1"
+              type="COMBO"/>
+          <tools
+              name="2:"
+              id="label2"
+              gridY="2"
+              type="LABEL"/>
+          <tools
+              name="width 2"
+              gridX="1"
+              gridY="2"
+              type="COMBO"/>
+          <tools
+              name="spacing 2"
+              gridX="2"
+              gridY="2"
+              type="COMBO"/>
+          <tools
+              name="3:"
+              id="label3"
+              gridY="3"
+              type="LABEL"/>
+          <tools
+              name="width 3"
+              gridX="1"
+              gridY="3"
+              type="COMBO"/>
+          <tools
+              name="spacing 3"
+              gridX="2"
+              gridY="3"
+              type="COMBO"/>
+        </toolGroups>
+        <tools
+            name="Width and Spacing"
+            id="separatorWidthAndSpacing"
+            gridY="1"
+            spanX="3"
+            labeled="true"
+            type="SEPARATOR_HORIZONTAL"/>
+        <tools
+            name="Equal Column Width"
+            id="equalColumnWidth"
+            gridY="3"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Apply to:"
+            id="applyTo"
+            gridY="4"
+            labeled="true"
+            type="COMBO"/>
+        <tools
+            name="Start new Column"
+            id="checkboxSStartNewColumn"
+            gridX="1"
+            gridY="4"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Preview"
+            id="preview"
+            gridY="5"
+            labeled="true"
+            type="IMAGEVIEW"/>
+      </toolGroups>
+      <toolGroups
+          name="Background"
+          id="background">
+        <toolGroups
+            name="Watermark"
+            id="backgroundWatermark"
+            image="watermark"
+            grid="true">
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              gridY="4"
+              spanX="3"
+              type="GRIDPANE">
+            <tools
+                name="Language:"
+                id="textWatermarkLanguage"
+                spanX="2"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Text:"
+                id="textWatermarkText"
+                gridY="1"
+                labeled="true"
+                format="{w=10}"
+                type="COMBO"/>
+            <tools
+                name="Font:"
+                id="textWatermarkFont"
+                gridY="2"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Size:"
+                id="textWatermarkSize"
+                gridY="3"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Color:"
+                id="textWatermarkColor"
+                gridY="4"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Semitransparent"
+                id="textWatermarkSemitransparent"
+                gridX="2"
+                gridY="4"
+                labeled="true"
+                type="CHECKBOX"/>
+            <tools
+                name="Layout:"
+                id="textWatermarkLabelLayout"
+                gridY="5"
+                type="LABEL"/>
+            <tools
+                name="Diagonal"
+                id="textWatermarkDiagonal"
+                gridX="1"
+                gridY="5"
+                labeled="true"/>
+            <tools
+                name="Horizontal"
+                id="textWatermarkHorizontal"
+                gridX="2"
+                gridY="5"
+                labeled="true"/>
+          </toolGroups>
+          <tools
+              name="Listview Watermark"
+              id="listviewWatermark"
+              spanX="3"
+              type="LISTVIEW"/>
+          <tools
+              name="No Watermark"
+              id="noWatermarkRadioButton"
+              gridY="1"
+              labeled="true"
+              type="RADIOBUTTON"/>
+          <tools
+              name="Picture Watermark"
+              id="pictureWatermarkRadioButton"
+              gridY="2"
+              labeled="true"
+              type="RADIOBUTTON"/>
+          <tools
+              name="Select Picture..."
+              id="PictureWatermarkSelectPicture"
+              gridX="2"
+              gridY="2"
+              format="{DISPLAY_NAME}"/>
+          <tools
+              name="Text Watermark"
+              id="textWatermarkRadioButton"
+              gridY="3"
+              labeled="true"
+              type="RADIOBUTTON"/>
+        </toolGroups>
+        <toolGroups
+            name="Page Border"
+            id="backgroundPageBorder"
+            image="page_borders"
+            grid="true">
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              gridY="1"
+              spanX="2"
+              type="GRIDPANE">
+            <tools
+                name="None"
+                id="pageBorderNone"
+                image="border_none_header"
+                gridY="1"/>
+            <tools
+                name="Box"
+                id="pageBorderBox"
+                image="border_box_header"
+                gridX="1"
+                gridY="1"/>
+            <tools
+                name="Shadow"
+                id="pageBorderShadow"
+                image="border_shadow_header"
+                gridX="2"
+                gridY="1"/>
+            <tools
+                name="3D"
+                id="pageBorder3D"
+                image="border_3d_header"
+                gridX="3"
+                gridY="1"/>
+            <tools
+                name="Custom"
+                id="pageBorderCustom"
+                image="border_custom_header"
+                gridX="4"
+                gridY="1"/>
+          </toolGroups>
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              gridY="3"
+              spanX="2"
+              type="GRIDPANE">
+            <tools
+                name="Style Listview"
+                id="pageBorderStyleListview"
+                spanX="2"
+                spanY="5"
+                type="LISTVIEW"/>
+            <tools
+                name="Color"
+                id="pageBorderColor"
+                gridX="2"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Width"
+                id="pageBorderWidth"
+                gridX="2"
+                gridY="2"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Art"
+                id="pageBorderArt"
+                gridX="2"
+                gridY="4"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Border All"
+                id="pageBorderBorderAll"
+                image="border_all"
+                gridX="5"/>
+            <tools
+                name="Border Top"
+                id="pageBorderBorderTop"
+                image="border_top"
+                gridX="5"
+                gridY="1"/>
+            <tools
+                name="Border Bottom"
+                id="pageBorderBorderBottom"
+                image="border_bottom"
+                gridX="5"
+                gridY="2"/>
+            <tools
+                name="Border Left"
+                id="pageBorderBorderLeft"
+                image="border_left"
+                gridX="5"
+                gridY="3"/>
+            <tools
+                name="Border Right"
+                id="pageBorderBorderRight"
+                image="border_right"
+                gridX="5"
+                gridY="4"/>
+          </toolGroups>
+          <tools
+              name="Setting"
+              id="pageBorderSettingSeparator"
+              labeled="true"
+              type="SEPARATOR_HORIZONTAL"/>
+          <tools
+              name="Style"
+              id="pageBorderStyleSeparator"
+              gridY="2"
+              labeled="true"
+              type="SEPARATOR_HORIZONTAL"/>
+          <tools
+              name="Apply to"
+              id="pageBorderApplyTo"
+              gridY="4"
+              labeled="true"
+              format="Whole Document, This Section, This Section - First Page Only, This Section - All except first Page"
+              type="COMBO"/>
+        </toolGroups>
+        <toolGroups
+            name="Page Color"
+            id="backgroundPageColor"
+            image="page_color"
+            grid="true">
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              spanX="2"
+              type="GRIDPANE">
+            <tools
+                name="Color Chooser"
+                id="pageColorColorChooser"
+                type="COLOR_CHOOSER"/>
+          </toolGroups>
+          <tools
+              name="No Color"
+              id="pageColorNoColor"
+              gridY="1"
+              labeled="true"
+              type="CHECKBOX"/>
+        </toolGroups>
+        <toolGroups
+            name="Effects"
+            id="pageBackgroungEffects"
+            image="page_effects"
+            grid="true">
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              gridY="1"
+              spanX="2"
+              grid="true"
+              type="GRIDPANE">
+            <tools
+                name="One Color"
+                id="PageBackgroundEffectsOneColor"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Two Color"
+                id="PageBackgroundEffectsTwoColor"
+                gridX="2"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Preset"
+                id="PageBackgroundEffectsPreset"
+                gridX="4"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Color 1"
+                id="PageBackgroundEffectsColor1"
+                gridY="1"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Color 2"
+                id="PageBackgroundEffectsColor2"
+                gridX="2"
+                gridY="1"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Preset Colors"
+                id="PageBackgroundEffectsPresetColors"
+                gridX="4"
+                gridY="1"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Horizontal"
+                id="PageBackgroundEffectsShadingStylesHorizontal"
+                gridY="2"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Vertical"
+                id="PageBackgroundEffectsShadingStylesVertical"
+                gridY="3"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Diagonal Up"
+                id="PageBackgroundEffectsShadingStylesDiagonalUp"
+                gridY="4"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Diagonal Down"
+                id="PageBackgroundEffectsShadingStylesDiagonalDown"
+                gridY="5"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="From Corner"
+                id="PageBackgroundEffectsShadingStylesFromCorner"
+                gridY="6"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="From Center"
+                id="PageBackgroundEffectsShadingStylesFromCenter"
+                gridY="7"
+                labeled="true"
+                type="RADIOBUTTON"/>
+            <tools
+                name="Variant 1"
+                id="PageBackgroundEffectsVariant1"
+                image="page_effect_variant_1_64"
+                gridX="2"
+                gridY="2"
+                spanX="2"
+                spanY="3"/>
+            <tools
+                name="Variant 2"
+                id="PageBackgroundEffectsVariant2"
+                image="page_effect_variant_2_64"
+                gridX="4"
+                gridY="2"
+                spanY="3"/>
+            <tools
+                name="Variant 3"
+                id="PageBackgroundEffectsVariant3"
+                image="page_effect_variant_3_64"
+                gridX="2"
+                gridY="5"
+                spanX="2"
+                spanY="3"/>
+            <tools
+                name="Variant 4"
+                id="PageBackgroundEffectsVariant4"
+                image="page_effect_variant_4_64"
+                gridX="4"
+                gridY="5"
+                spanY="3"/>
+          </toolGroups>
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              gridY="3"
+              spanX="2"
+              type="GRIDPANE">
+            <tools
+                name="Texture Listview"
+                id="backgroundEffectsTextureListview"
+                type="LISTVIEW"/>
+          </toolGroups>
+          <toolGroups
+              name="New Tool Group"
+              id="New Tool Group"
+              gridY="5"
+              spanX="2"
+              type="GRIDPANE">
+            <tools
+                name="Pattern Listview"
+                id="backgroundEffectsPatternListview"
+                spanX="4"
+                type="LISTVIEW"/>
+            <tools
+                name="Foreground Color"
+                id="backgroundEffectsPatternForegroundColor"
+                gridY="1"
+                labeled="true"
+                type="COMBO"/>
+            <tools
+                name="Background Color"
+                id="backgroundEffectsPatternBackgroundColor"
+                gridX="2"
+                gridY="1"
+                labeled="true"
+                type="COMBO"/>
+          </toolGroups>
+          <tools
+              name="Gradient"
+              id="PageBackgroundEffectsGradientSeparator"
+              labeled="true"
+              type="SEPARATOR_HORIZONTAL"/>
+          <tools
+              name="Texture"
+              id="PageBackgroundEffectsTexture"
+              gridY="2"
+              labeled="true"
+              type="SEPARATOR_HORIZONTAL"/>
+          <tools
+              name="Pattern"
+              id="PageBackgroundEffectsPattern"
+              gridY="4"
+              labeled="true"
+              type="SEPARATOR_HORIZONTAL"/>
+        </toolGroups>
+      </toolGroups>
+      <toolGroups
+          name="Header &amp; Footer"
+          id="pageHeaderAndFooter"
+          image="header_and_footer">
+        <tools
+            name="Header"
+            id="pageHeader"
+            image="header_24"/>
+        <tools
+            name="Footer"
+            id="pageFooter"
+            image="footer_24"/>
+        <tools
+            name="Date and Time"
+            id="dateAndTime"
+            image="date_and_time_24"/>
+        <tools
+            name="Page Numbers"
+            id="pageNumbers"
+            image="page_number_24"/>
+        <tools/>
+        <tools/>
+        <tools/>
+        <tools/>
+        <tools/>
+        <tools/>
+      </toolGroups>
+      <toolGroups
+          name="Footnote"
+          id="pageFootnote"/>
+      <toolGroups
+          name="Table of Contents"
+          id="pageTableOfContents"
+          image="table_of_contents"
+          grid="true">
+        <tools
+            name="Print Preview"
+            id="printPreview"
+            labeled="true"/>
+        <tools
+            name="Web Preview"
+            id="webPreview"
+            gridX="1"
+            labeled="true"/>
+        <tools
+            name="Show Page numbers"
+            id="checkboxShowPageNumbers"
+            gridY="1"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Use Hyperlinks instead of Page numbers"
+            id="checkboxUseHyperlinksInsteadOfPageNumbers"
+            gridX="1"
+            gridY="1"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Right Align Page numbers"
+            id="checkboxRightAlignPageNumbers"
+            gridY="2"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Tab leader"
+            id="comboTabLeader"
+            gridY="3"
+            labeled="true"
+            type="COMBO"/>
+        <tools
+            name="General"
+            id="separtorGeneral"
+            gridY="4"
+            spanX="2"
+            labeled="true"
+            type="SEPARATOR_HORIZONTAL"/>
+        <tools
+            name="Formats"
+            id="comboFormats"
+            gridY="5"
+            labeled="true"
+            type="COMBO"/>
+        <tools
+            name="Show Levels"
+            id="showLevels"
+            gridY="6"
+            labeled="true"
+            type="COMBO"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Colors"
+        id="sideBar/colors"
+        image="colors"
+        width="250.0"
+        height="550.0"
+        grid="true">
+      <toolGroups
+          name="Foreground Color"
+          id="Colors"
+          grid="true">
+        <tools
+            name="Foreground Color"
+            id="foregroundColor"
+            format="0.0,0.0,0.0"
+            type="COLOR_CHOOSER"/>
+      </toolGroups>
+      <toolGroups
+          name="Background Color"
+          id="New Tool Group">
+        <tools
+            name="Background Color"
+            id="backgroundColor"
+            gridY="1"
+            format="0.0,0.0,0.0"
+            type="COLOR_CHOOSER"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Object Properties"
+        id="sideBar/object_properties"
+        image="object_properties"
+        width="250.0"
+        height="600.0">
+      <toolGroups
+          name="Lines and Borders"
+          id="linesAndBorders"
+          image="line_width">
+        <tools
+            name="Width"
+            id="lineWidth"
+            image="line_width"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Dashes"
+            id="lineDashes"
+            image="line_dashes"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Arrows"
+            id="lineArrows"
+            image="line_arrows"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Patterns"
+            id="linePattern"
+            image="line_patterns"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Border Bottom"
+            id="objectBorderBottom"
+            image="border_bottom"/>
+        <tools
+            name="Border Top"
+            id="objectBorderTop"
+            image="border_top"/>
+        <tools
+            name="Border Left"
+            id="objectBorderLeft"
+            image="border_left"/>
+        <tools
+            name="Border Right"
+            id="objectBorderRight"
+            image="border_right"/>
+        <tools
+            name="Border All"
+            id="objectBorderAll"
+            image="border_all"/>
+      </toolGroups>
+      <toolGroups
+          name="Shadows"
+          id="shadows"
+          image="object_shadow_style_4">
+        <tools
+            name="Shadow Style 1"
+            id="objectShadowStyle1"
+            image="object_shadow_style_1"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 2"
+            id="objectShadowStyle2"
+            image="object_shadow_style_2"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 3"
+            id="objectShadowStyle3"
+            image="object_shadow_style_3"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 4"
+            id="objectShadowStyle4"
+            image="object_shadow_style_4"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 5"
+            id="objectShadowStyle14"
+            image="object_shadow_style_14"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 6"
+            id="objectShadowStyle15"
+            image="object_shadow_style_15"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 7"
+            id="objectShadowStyle16"
+            image="object_shadow_style_16"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 8"
+            id="objectShadowStyle17"
+            image="object_shadow_style_17"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 9"
+            id="objectShadowStyle18"
+            image="object_shadow_style_18"
+            labeled="true"/>
+        <tools
+            name="Shadow Style 10"
+            id="objectShadowStyle19"
+            image="object_shadow_style_19"
+            labeled="true"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Arrange"
+        id="arange"
+        image="align_and_distribute"
+        width="250.0"
+        height="600.0">
+      <tools
+          name="Send to Back"
+          id="arrangeSendToBack"
+          image="object_send_to_back"
+          labeled="true"/>
+      <tools
+          name="Sent Backwards"
+          id="arrangeSentBackwards"
+          image="object_send_backward"
+          labeled="true"/>
+      <tools
+          name="Bring Forward"
+          id="arrangeBringForward"
+          image="object_bring_forward"
+          labeled="true"/>
+      <tools
+          name="Bring to Front"
+          id="arrangeBringToFront"
+          image="object_bring_to_front"
+          labeled="true"/>
+      <tools
+          name="Bring in Front of Text"
+          id="arrangeBringInFrontOfText"
+          image="object_bring_in_front_of_text"
+          labeled="true"/>
+      <tools
+          name="Send Behind Text"
+          id="arrangeSendBehindText"
+          image="object_send_behind_text"
+          labeled="true"/>
+      <tools
+          name="AlignLeft"
+          id="arrangeAlignLeft"
+          image="align_left"
+          labeled="true"/>
+      <tools
+          name="Align Vertical Center"
+          id="arrangeAlignVerticalCenter"
+          image="align_vertical_center"
+          labeled="true"/>
+      <tools
+          name="Align Right"
+          id="arrangeAlignRight"
+          image="align_right"
+          labeled="true"/>
+      <tools
+          name="Align Top"
+          id="arrangeAlignTop"
+          image="align_top"
+          labeled="true"/>
+      <tools
+          name="Align Horizontal Center"
+          id="arrangeAlignHorizontalCenter"
+          image="align_horizontal_center"
+          labeled="true"/>
+      <tools
+          name="Align Bottom"
+          id="arrangeAlignBottom"
+          image="align_bottom"
+          labeled="true"/>
+      <tools
+          name="Distribute Left"
+          id="arrangeDistributeLeft"
+          image="distribute_left"
+          labeled="true"/>
+      <tools
+          name="Distribute Horizontal Center"
+          id="arrangeDistributeHorizontalCenter"
+          image="distribute_horizontal_center"
+          labeled="true"/>
+      <tools
+          name="Distribute Right"
+          id="arrangeDistributeRight"
+          image="distribute_right"
+          labeled="true"/>
+      <tools
+          name="Distribute Horizontal Gapes"
+          id="arrangeDistributeHorizontalGapes"
+          image="distribute_horizontal_gapes"
+          labeled="true"/>
+      <tools
+          name="Distribute Random"
+          id="arrangeDistributeRandom"
+          image="distribute_random"
+          labeled="true"/>
+      <tools
+          name="Distribute Top"
+          id="arrangeDistributeTop"
+          image="distribute_top"
+          labeled="true"/>
+      <tools
+          name="Distribute Vertical Center"
+          id="arrangeDistributeVerticalCenter"
+          image="distribute_vertical_center"
+          labeled="true"/>
+      <tools
+          name="Distribute Bottom"
+          id="arrangeDistributeBottom"
+          image="distribute_bottom"
+          labeled="true"/>
+      <tools
+          name="Distribute Vertical Gapes"
+          id="arrangeDistributeVerticalGapes"
+          image="distribute_vertical_gapes"
+          labeled="true"/>
+      <tools
+          name="Rotate 90 Anticlockwise"
+          id="arrangeRotate90Anticlockwise"
+          image="object_rotate_90_anticlockwise"
+          labeled="true"/>
+      <tools
+          name="Rotate 90 Clockwise"
+          id="arrangeRotate90Clockwise"
+          image="object_rotate_90_clockwise"
+          labeled="true"/>
+      <tools
+          name="Flip Horizontal"
+          id="arrangeFlipHorizontal"
+          image="object_flip_horizontally"
+          labeled="true"/>
+      <tools
+          name="Flip Vertically"
+          id="arrangeFlipVertically"
+          image="object_flip_vertically"
+          labeled="true"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Tables"
+        id="tables"
+        image="tables"
+        width="250.0"
+        height="600.0"
+        grid="true">
+      <tools
+          name="Insert Rows Above"
+          id="tableInsertRowsAbove"
+          image="insert_rows_above"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Insert Rows Below"
+          id="tableInsertRowsBelow"
+          image="insert_rows_below"
+          gridX="1"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Insert Columns Left"
+          id="tableInsertColumnsLeft"
+          image="insert_columns_left"
+          gridX="2"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Insert Columns Right"
+          id="tableInsertColumnsRight"
+          image="insert_columns_right"
+          gridX="3"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Delete Cells"
+          id="tableDeleteCells"
+          image="delete_cells"
+          gridY="1"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Delete Columns"
+          id="tableDeleteColumns"
+          image="delete_columns"
+          gridX="1"
+          gridY="1"
+          service="TABLE_SERVICE"
+          format=""/>
+      <tools
+          name="Delete Rows"
+          id="tableDeleteRows"
+          image="delete_rows"
+          gridX="2"
+          gridY="1"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Delete Table"
+          id="tableDeleteTable"
+          image="delete_table"
+          gridX="3"
+          gridY="1"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Merge Cells"
+          id="tableMergeCells"
+          image="merge_cells"
+          gridY="2"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Split Cells"
+          id="tableSplitCells"
+          image="split_cells"
+          gridX="1"
+          gridY="2"
+          service="TABLE_SERVICE"/>
+      <tools
+          name="Insert Table"
+          id="insertTable"
+          gridY="3"
+          spanX="4"
+          service="TABLE_SERVICE"
+          type="LISTVIEW"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Images"
+        id="images"
+        image="images"
+        width="250.0"
+        height="600.0"
+        grid="true">
+      <toolGroups
+          name="Search Images"
+          id="searchImages"
+          image="search"
+          grid="true">
+        <tools
+            name="Engine Combo"
+            id="imageSearchEngine"
+            format="Google{IMAGE=google;SEARCH=https://www.google.de/imghp?rlz=1C1CHFX_deDE530DE530&amp;ie=UTF-8&amp;hl=en&amp;tab=wi&amp;ei=CG_JUpvLJY3Msgb5koGoCQ&amp;ved=0CAMQqi4oAg},Yahoo{IMAGE=yahoo;SEARCH=http://de.images.search.yahoo.com/images},Wikimedia{IMAGE=wikimedia;SEARCH=http://commons.wikimedia.org/wiki/Main_Page},Openclipart{IMAGE=openclipart;SEARCH=http://openclipart.org/}}"
+            type="COMBO"/>
+        <tools
+            name="Search Images..."
+            id="searchEngineTextfield"
+            gridX="1"
+            type="TEXTFIELD"/>
+        <tools
+            name="Search Button"
+            id="imageSearchEngineButton"
+            image="search"
+            gridX="2"/>
+        <tools
+            gridY="1"
+            spanX="3"
+            spanY="2"
+            format="http://www.google.de/search?q=horse&amp;tbm=isch"
+            type="WEBVIEW"/>
+      </toolGroups>
+      <toolGroups
+          name="Search Videos"
+          id="searchVideos"
+          image="search"
+          grid="true">
+        <tools
+            name="Video Combo"
+            id="imageSearchVideos"
+            format="Youtube,Yahoo Videos,Google Videos,"
+            type="COMBO"/>
+        <tools
+            name="Search Videos..."
+            id="searchVideosTextfield"
+            gridX="1"
+            type="TEXTFIELD"/>
+        <tools
+            name="Search Button"
+            id="imageSearchVideosButton"
+            image="search"
+            gridX="2"/>
+        <tools
+            gridY="1"
+            spanX="3"
+            spanY="2"
+            labeled="true"
+            format="http://youtube.com"
+            type="WEBVIEW"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Shapes"
+        id="sideBar/shapes"
+        image="shapes"
+        width="250.0"
+        height="550.0"
+        service="JOPictureService">
+      <toolGroups
+          name="Standard Shapes"
+          id="standard_shapes"
+          image="shape_rectangle">
+        <toolGroups
+            name="Basics"
+            id="basic_shapes"
+            image="shape_circle">
+          <tools
+              name="Rectangle"
+              id="insert_shape_rectangle"
+              image="shape_rectangle"
+              toolTip="Rectangle"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="rounded Rectangle"
+              id="insert_shape_rounded_rectangle"
+              image="shape_rounded_rectangle"
+              toolTip="Rounded Rectangle"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Square"
+              id="shapeSquare"
+              image="shape_flowchart_process"
+              labeled="true"/>
+          <tools
+              name="Circle"
+              id="shapeCircle"
+              image="shape_circle"
+              labeled="true"/>
+          <tools
+              name="Oval"
+              id="shapeOval"
+              image="shape_oval"
+              labeled="true"/>
+          <tools
+              name="Circle Pie"
+              id="shapeCirclePie"
+              image="shape_circle"
+              labeled="true"/>
+          <tools
+              name="Isosceles Triangel"
+              id="shapeIsoscelesTriangel"
+              image="shape_isosceles_triangle"
+              labeled="true"/>
+          <tools
+              name="RightTriangle"
+              id="shapeRightTriangle"
+              image="shape_right_triangle"
+              labeled="true"/>
+          <tools
+              name="Trapezoid"
+              id="shapeTrapezoid"
+              image="shape_trapezoid"
+              labeled="true"/>
+          <tools
+              name="Diamond"
+              id="shapeDiamond"
+              image="shape_diamond"
+              labeled="true"/>
+          <tools
+              name="Parallelogram"
+              id="shapeParallelogram"
+              image="shape_parallelogram"
+              labeled="true"/>
+          <tools
+              name="Regular Pentagon"
+              id="shapeRegularPentagon"
+              image="shape_regular_pentagon"
+              labeled="true"/>
+          <tools
+              name="Hexagon"
+              id="shapeHexagon"
+              image="shape_hexagon"
+              labeled="true"/>
+          <tools
+              name="Cross"
+              id="shapeCross"
+              image="shape_cross"
+              labeled="true"/>
+          <tools
+              name="Donut"
+              id="shapeDonut"
+              image="shape_donut"
+              labeled="true"/>
+          <tools
+              name="Block Arc"
+              id="shapeBlockArc"
+              image="shape_block_arc"
+              labeled="true"/>
+          <tools
+              name="Can"
+              id="shapeCan"
+              image="shape_can"
+              labeled="true"/>
+          <tools
+              name="Cube"
+              id="shapeCube"
+              image="shape_cube"
+              labeled="true"/>
+          <tools
+              name="Folded Corner"
+              id="shapeFoldedCorner"
+              image="shape_folded_corner"
+              labeled="true"/>
+          <tools
+              name="Plaque"
+              id="shapePlaque"
+              image="shape_plaque"
+              labeled="true"/>
+        </toolGroups>
+        <toolGroups
+            name="Line"
+            id="line_shapes"
+            image="shape_line">
+          <tools
+              name="Line"
+              id="shapeLine"
+              image="shape_line"
+              labeled="true"/>
+          <tools
+              name="Freeform Line"
+              id="shapeFreeformLine"
+              image="shape_freeform_line"
+              labeled="true"/>
+          <tools
+              name="Polygon"
+              id="shapePolygon"
+              image="shape_polygon"
+              labeled="true"/>
+          <tools
+              name="Curve"
+              id="shapeCurve"
+              image="shape_curve"
+              labeled="true"/>
+          <tools
+              name="Arc"
+              id="shapeArc"
+              image="shape_arc"
+              labeled="true"/>
+        </toolGroups>
+        <toolGroups
+            name="Symbols"
+            id="symbol_shapes"
+            image="shape_smiley_face">
+          <tools
+              name="Smiley Face"
+              id="shapeSmileyFace"
+              image="shape_smiley_face"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Sun"
+              id="shapeSun"
+              image="shape_sun"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Moon"
+              id="shapeMoon"
+              image="shape_moon"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Lightning Bolt"
+              id="shapeLightningBolt"
+              image="shape_lightning_bolt"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Heart"
+              id="shapeHeart"
+              image="shape_heart"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Cloud"
+              id="shapeCloud"
+              image="shape_cloud"
+              labeled="true"/>
+          <tools
+              name="No Symbol"
+              id="shapeNoSymbol"
+              image="shape_no_symbol"
+              labeled="true"/>
+          <tools
+              name="Puzzle"
+              id="shapePuzzle"
+              image="shape_puzzle"
+              labeled="true"/>
+          <tools
+              name="Left Bracket"
+              id="shapeLeftBracket"
+              image="shape_left_bracket"
+              labeled="true"/>
+          <tools
+              name="Right Bracket"
+              id="shapeRightBracket"
+              image="shape_right_bracket"
+              labeled="true"/>
+          <tools
+              name="Double Brace"
+              id="shapeDoubleBrace"
+              image="shape_double_brace"
+              labeled="true"/>
+          <tools
+              name="Left Brace"
+              id="shapeLeftBrace"
+              image="shape_left_brace"
+              labeled="true"/>
+          <tools
+              name="Right Brace"
+              id="shapeRightBrace"
+              image="shape_right_brace"
+              labeled="true"/>
+          <tools
+              name="Bevel"
+              id="shapeBevel"
+              image="shape_bevel"
+              labeled="true"/>
+        </toolGroups>
+        <toolGroups
+            name="Arrows"
+            id="arrow_shapes"
+            image="shape_right_arrow">
+          <tools
+              name="Left Arrow"
+              id="shape_left_arrow"
+              image="shape_left_arrow"
+              toolTip="Left Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Right Arrow"
+              id="shape_right_arrow"
+              image="shape_right_arrow"
+              toolTip="Right Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Up Arrow"
+              id="shapeUpArrow"
+              image="shape_up_arrow"
+              toolTip="Up Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Down Arrow"
+              id="shapeDownArrow"
+              image="shape_down_arrow"
+              toolTip="Down Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Left and Right Arrow"
+              id="shapeLeftAndRightArrow"
+              image="shape_left_right_arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Up and Down Arrow"
+              id="shapeUpDownArrow"
+              image="shape_up_down_arrow"
+              toolTip="Up and Down Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Left Right and Up Arrow"
+              id="shapeLeftRightUpArrow"
+              image="shape_left_right_up_arrow"
+              labeled="true"/>
+          <tools
+              name="Bent Up Arrow"
+              id="insert_shape_bent_up_arrow"
+              image="shape_bent_up_arrow"
+              toolTip="Bent Up Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Striped Right Arrow"
+              id="insert_shape_striped_right_arrow"
+              image="shape_striped_right_arrow"
+              toolTip="Striped Right Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Notched Right Arrow"
+              id="insert_shape_notched_right_arrow"
+              image="shape_notched_right_arrow"
+              toolTip="Notched Right Arrow"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Pentagon"
+              id="shapePentagon"
+              image="shape_pentagon"
+              labeled="true"/>
+          <tools
+              name="Chevron"
+              id="shapeChevron"
+              image="shape_chevron"
+              labeled="true"/>
+          <tools
+              name="Right Arrow Callout"
+              id="shapeRightArrowCallout"
+              image="shape_right_arrow_callout"
+              labeled="true"/>
+          <tools
+              name="Left Arrow Callout"
+              id="shapeLeftArrowCallout"
+              image="shape_left_arrow_callout"
+              labeled="true"/>
+          <tools
+              name="Up Arrow Callout"
+              id="shapeUpArrowCallout"
+              image="shape_up_arrow_callout"
+              labeled="true"/>
+          <tools
+              name="Down Arrow Callout"
+              id="shapeDownArrowCallout"
+              image="shape_down_arrow_callout"
+              labeled="true"/>
+          <tools
+              name="Left and Right Arrow Callout"
+              id="shapeLeftRightArrowCallout"
+              image="shape_left_right_arrow_callout"
+              labeled="true"/>
+          <tools
+              name="4-Way Arrow Callout"
+              id="shape4WayArrowCallout"
+              image="shape_quad_arrow_callout"
+              labeled="true"/>
+          <tools
+              name="Circular Arrow"
+              id="shapeCircularArrow"
+              image="shape_circular_arrow"
+              labeled="true"/>
+        </toolGroups>
+        <toolGroups
+            name="FlowCharts"
+            id="flowchart_shapes"
+            image="shape_flowchart_internal_storage">
+          <tools
+              name="Flowchart Process"
+              id="shapeFlowchartProcess"
+              image="shape_flowchart_process"
+              labeled="true"/>
+          <tools
+              name="Flowchart Alternate Process"
+              id="shapeFlowchartAlternateProcess"
+              image="shape_flowchart_alternate_process"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Decision"
+              id="shapeFlowchartDecision"
+              image="shape_flowchart_decision"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Data"
+              id="shapeFlowchartData"
+              image="shape_flowchart_data"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Predefined Process"
+              id="shapeFlowchartPredefinedProcess"
+              image="shape_flowchart_predefined_process"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Internal Storage"
+              id="shapeFlowchartInternalStorage"
+              image="shape_flowchart_internal_storage"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Document"
+              id="shapeFlowchartDocument"
+              image="shape_flowchart_document"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Multidocument"
+              id="shapeFlowchartMultidocument"
+              image="shape_flowchart_multidocument"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Terminator"
+              id="shapeFlowchartTerminator"
+              image="shape_flowchart_terminator"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Preparation"
+              id="shapeFlowchartPreparation"
+              image="shape_flowchart_preparation"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Manual Input"
+              id="shapeFlowchartManualInput"
+              image="shape_flowchart_manual_input"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="FlowchartManualOperation"
+              id="shapeFlowchartManualOperation"
+              image="shape_flowchart_manual_operation"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Connector"
+              id="shapeFlowchartConnector"
+              image="shape_flowchart_connector"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Off Page Connector"
+              id="shapeFlowchartOffPageConnector"
+              image="shape_flowchart_off_page_connector"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Card"
+              id="shapeFlowchartCard"
+              image="shape_flowchart_card"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Punched Tape"
+              id="shapeFlowchartPunchedTape"
+              image="shape_flowchart_punched_tape"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Summing Junction"
+              id="shapeFlowchartSummingJunction"
+              image="shape_flowchart_summing_junction"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Or"
+              id="shapeFlowchartOr"
+              image="shape_flowchart_or"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Collate"
+              id="shapeFlowchartCollate"
+              image="shape_flowchart_collate"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Sort"
+              id="shapeFlowchartSort"
+              image="shape_flowchart_sort"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="FlowchartExtract"
+              id="shapeFlowchartExtract"
+              image="shape_flowchart_extract"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Merge"
+              id="shapeFlowchartMerge"
+              image="shape_flowchart_merge"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Stored Data"
+              id="shapeFlowchartStoredData"
+              image="shape_flowchart_stored_data"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Delay"
+              id="shapeFlowchartDelay"
+              image="shape_flowchart_delay"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Sequential Access Storage"
+              id="shapeFlowchartSequentialAccessStorage"
+              image="shape_flowchart_sequential_access_storage"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Magnetic Disk"
+              id="shapeFlowchartMagneticDisk"
+              image="shape_flowchart_magnetic_disk"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Direct Access Storage"
+              id="shapeFlowchartDirectAccessStorage"
+              image="shape_flowchart_direct_access_storage"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+          <tools
+              name="Flowchart Display"
+              id="shapeFlowchartDisplay"
+              image="shape_flowchart_display"
+              spanX="0"
+              spanY="0"
+              labeled="true"/>
+        </toolGroups>
+        <toolGroups
+            name="Callouts"
+            id="callouts_shapes"
+            image="shape_oval_callout">
+          <tools
+              name="RectangularCallout"
+              id="shapeRectangularCallout"
+              image="shape_rectangular_callout"
+              labeled="true"/>
+          <tools
+              name="Rounded Rectangular Callout"
+              id="shapeRoundedRectangularCallout"
+              image="shape_rounded_rectangular_callout"
+              labeled="true"/>
+          <tools
+              name="Oval Callout"
+              id="shapeOvalCallout"
+              image="shape_oval_callout"
+              labeled="true"/>
+          <tools
+              name="Cloud Callout"
+              id="shapeCloudCallout"
+              image="shape_cloud_callout"
+              labeled="true"/>
+          <tools
+              name="Line Callout 1"
+              id="shapeLineCallout1"
+              image="shape_line_callout_1"
+              labeled="true"/>
+          <tools
+              name="Line Callout 2"
+              id="shapeLineCallout2"
+              image="shape_line_callout_2"
+              labeled="true"/>
+          <tools
+              name="Line Callout 3"
+              id="shapeLineCallout2"
+              image="shape_line_callout_3"
+              labeled="true"/>
+        </toolGroups>
+        <toolGroups
+            name="Star and Banners"
+            id="star_and_banners_shapes"
+            image="shape_5_point_star">
+          <tools
+              name="Explosion"
+              id="shapeExplosion"
+              image="shape_explosion"
+              labeled="true"/>
+          <tools
+              name="4-Point Star"
+              id="shape4PointStar"
+              image="shape_4_point_star"
+              labeled="true"/>
+          <tools
+              name="5-Point Star"
+              id="shape5PointStar"
+              image="shape_5_point_star"
+              labeled="true"/>
+          <tools
+              name="8-Point Star"
+              id="shape8PointStar"
+              image="shape_8_point_star"
+              labeled="true"/>
+          <tools
+              name="12-Point Star"
+              id="shape12PointStar"
+              image="shape_12_point_star"
+              labeled="true"/>
+          <tools
+              name="16-Point Star"
+              id="shape16PointStar"
+              image="shape_16_point_star"
+              labeled="true"/>
+          <tools
+              name="24-Point Star"
+              id="shape24PointStar"
+              image="shape_24_point_star"
+              labeled="true"/>
+          <tools
+              name="6-Point Star Concave"
+              id="shape6PointStarConcave"
+              image="shape_6_point_star_concave"
+              labeled="true"/>
+          <tools
+              name="Horizontal Scroll"
+              id="shapeHorizontalScroll"
+              image="shape_horizontal_scroll"
+              labeled="true"/>
+        </toolGroups>
+      </toolGroups>
+      <toolGroups
+          name="Scientific Shapes"
+          id="scientific_shapes"
+          image="science">
+        <toolGroups
+            name="Common Shapes"
+            id="common_shapes"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Textbox"
+        id="sideBar/textbox"
+        image="textbox"
+        width="250.0"
+        height="550.0">
+      <tools
+          name="Textbox List"
+          id="insertTextbox"
+          labeled="true"
+          type="LISTVIEW"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Textart"
+        id="sideBar/textart"
+        image="textart"
+        width="250.0"
+        height="550.0"
+        grid="true">
+      <tools
+          name="textStyleListTool"
+          id="textStyleListTool"
+          toolTip="textStyleListTool"
+          format="TEXT_STYLE_TOOL"
+          type="OTHER"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Symbols"
+        id="sideBar/symbols"
+        image="symbols"
+        width="250.0"
+        height="550.0"
+        grid="true">
+      <tools
+          id="symbolTool"
+          format="SYMBOL_TOOL"
+          type="OTHER"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Equations"
+        id="sideBar/equations"
+        image="equations">
+      <tools
+          name="Equations"
+          id="equationsListview"
+          format="{IMAGE_equations_area_of_a_circle_300_75}"
+          type="LISTVIEW"/>
+      <tools
+          name="Insert New Equation"
+          id="equationsInsertNewEquations"
+          image="pi"/>
+      <tools
+          name="Save Selected to Equation Gallery"
+          id="equationsSaveSelectedToEquationGallery"
+          image="save_equation"/>
+      <tools
+          name="Fraction"
+          id="equationsFraction"
+          image="equation_fraction"/>
+      <tools
+          name="Script"
+          id="equationsScript"
+          image="equation_script"/>
+      <tools
+          name="Radical"
+          id="equationsRadical"
+          image="equation_radical"/>
+      <tools
+          name="Integral"
+          id="equationsIntegral"
+          image="equation_integral"/>
+      <tools
+          name="Large Operator"
+          id="equationsLargeOperator"
+          image="equation_large_operator"/>
+      <tools
+          name="Bracket"
+          id="equationsBracket"
+          image="equation_bracket"/>
+      <tools
+          name="Function"
+          id="equationsFunction"
+          image="equation_function"/>
+      <tools
+          name="Accent"
+          id="equationsAccent"
+          image="equation_accent"/>
+      <tools
+          name="Limit and Log"
+          id="equationsLimitAndLog"
+          image="equation_limit_and_log"/>
+      <tools
+          name="Operator"
+          id="equationsOperator"
+          image="equation_operator"/>
+      <tools
+          name="Matrix"
+          id="equationsMatrix"
+          image="equation_matrix"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Mailing"
+        id="sideBar/mail"
+        image="mail">
+      <tools
+          name="Envelopes"
+          id="mailingsEnvelopes"
+          image="envelopes"/>
+      <tools
+          name="Labels"
+          id="mailingsLabels"
+          image="labels"/>
+      <tools
+          name="Start Mail Merge"
+          id="mailingsStartMailMerge"
+          image="start_mail_merge"/>
+      <tools
+          name="Select Recipients"
+          id="mailingsSelectRecipients"
+          image="select_recipients"/>
+      <tools
+          name="Edit Recipient List"
+          id="mailingsEditRecipientList"
+          image="edit_recipient_list"/>
+      <tools
+          name="Highlight Merge Fields"
+          id="mailingsHighlightMergeFields"
+          image="highlight_merge_fields"/>
+      <tools
+          name="Address Block"
+          id="mailingsAddressBlock"
+          image="address_block"/>
+      <tools
+          name="Greeting Line"
+          id="mailingsGreetingLine"
+          image="greeting_line"/>
+      <tools
+          name="Insert Merge Field"
+          id="mailingsInsertMergeField"
+          image="insert_merge_field"/>
+      <tools
+          name="Rules"
+          id="mailingsRules"
+          image="rules"/>
+      <tools
+          name="Match Fields"
+          id="mailingsMatchFields"
+          image="match_fields"/>
+      <tools
+          name="Update Labels"
+          id="mailingsUpdateLabels"
+          image="update_labels"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Review"
+        id="sideBar/review"
+        image="review_2">
+      <tools
+          name="Set Language"
+          id="reviewSetLanguage"
+          image="set_language"/>
+      <tools
+          name="Thesaurus"
+          id="reviewThesaurus"
+          image="thesaurus"/>
+      <tools
+          name="Research"
+          id="reviewResearch"
+          image="research"/>
+      <tools
+          name="Translate"
+          id="reviewTranslate"
+          image="translate"/>
+      <tools
+          name="Spelling &amp; Grammar"
+          id="reviewSpellingAndGrammar"
+          image="spelling_and_grammar_24"/>
+      <tools
+          name="Word Count"
+          id="reviewWordCount"
+          image="word_count"/>
+      <tools
+          name="Protect Document"
+          id="reviewProtectDocument"
+          image="protect_document"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Clipboard"
+        id="sideBar/clipboard"
+        image="clipboard"
+        grid="true">
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridY="2"
+          spanX="3"
+          type="GRIDPANE">
+        <tools
+            name="Paste Options"
+            id="clipboardPasteOptionsSeparator"
+            labeled="true"
+            type="SEPARATOR_HORIZONTAL"/>
+        <tools
+            name="Show Clipboard When Ctrl + C Pressed Twice"
+            id="clipboardPasteOptionOne"
+            gridY="1"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Collect Copies, even when Clipboard is not showing"
+            id="clipboardPasteOptionTwo"
+            gridY="2"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Show Status near Taskbar when Copying"
+            id="clipboardPasteOptionThree"
+            gridY="3"
+            labeled="true"
+            type="CHECKBOX"/>
+      </toolGroups>
+      <tools
+          name="Paste"
+          id="clipboardPasteListview"
+          image="paste_24"
+          spanX="3"
+          type="LISTVIEW"/>
+      <tools
+          name="Copy"
+          id="clipboardCopy"
+          image="copy_24"
+          gridY="1"/>
+      <tools
+          name="Cut"
+          id="clipboardCut"
+          image="cut_24"
+          gridX="1"
+          gridY="1"/>
+      <tools
+          name="Format Painter"
+          id="clipboardFormatPainter"
+          image="format_painter_24"
+          gridX="2"
+          gridY="1"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Tools"
+        id="sideBar/tools"
+        image="tools">
+      <tools/>
+      <tools/>
+      <tools/>
+      <tools/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="View"
+        id="sideBar/view"
+        image="view_3"
+        grid="true">
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridY="1"
+          spanX="2"
+          type="GRIDPANE">
+        <tools
+            name="Print Layout"
+            id="viewPrintLayout"
+            image="print_layout"/>
+        <tools
+            name="Full Screen Reading"
+            id="viewFullScreenReading"
+            image="full_screen_reading"
+            gridX="1"/>
+        <tools
+            name="Web Layout"
+            id="viewWebLayout"
+            image="web_layout"
+            gridX="2"/>
+        <tools
+            name="Outline"
+            id="viewOutline"
+            image="outline"
+            gridX="3"/>
+        <tools
+            name="Draft"
+            id="viewDraft"
+            image="draft"
+            gridX="4"/>
+      </toolGroups>
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridY="3"
+          spanX="2"
+          grid="true"
+          type="GRIDPANE">
+        <tools
+            name="100%"
+            id="view100Percent"
+            image="zoom_100_3"/>
+        <tools
+            name="One Page"
+            id="viewOnePage"
+            image="one_page"
+            gridX="1"/>
+        <tools
+            name="Two Pages"
+            id="viewTwoPages"
+            image="two_pages"
+            gridX="2"/>
+        <tools
+            name="Page Width"
+            id="viewPageWidth"
+            image="page_width"
+            gridX="3"/>
+        <tools
+            name="Zoom"
+            id="viewZoomSlider"
+            gridY="1"
+            spanX="5"
+            type="SLIDER_HORIZONTAL"/>
+      </toolGroups>
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridY="5"
+          spanX="2"
+          type="GRIDPANE">
+        <tools
+            name="Ruler"
+            id="viewRuler"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Document Map"
+            id="viewDocumentMap"
+            gridX="2"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Gridlines"
+            id="viewGridlines"
+            gridY="1"
+            labeled="true"
+            type="CHECKBOX"/>
+        <tools
+            name="Thumbnails"
+            id="viewThumbnails"
+            gridX="2"
+            gridY="1"
+            labeled="true"
+            type="CHECKBOX"/>
+      </toolGroups>
+      <tools
+          name="Document Views"
+          id="viewDocumentViewsSeparator"
+          spanX="5"
+          labeled="true"
+          type="SEPARATOR_HORIZONTAL"/>
+      <tools
+          name="Zoom"
+          id="viewZoomSeparator"
+          gridY="2"
+          labeled="true"
+          type="SEPARATOR_HORIZONTAL"/>
+      <tools
+          name="Show/Hide"
+          id="viewShowAndHide"
+          gridY="4"
+          labeled="true"
+          type="SEPARATOR_HORIZONTAL"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Search"
+        id="sideBar/search"
+        image="view_2"
+        width="250.0"
+        height="550.0"
+        grid="true">
+      <tools
+          name="Find What"
+          id="searchFindWhat"
+          spanX="2"
+          labeled="true"
+          type="TEXTFIELD"/>
+      <tools
+          name="Find Previous"
+          id="searchFindPrevious"
+          image="search_previous"
+          gridY="1"/>
+      <tools
+          name="Find Next"
+          id="searchFindNext"
+          image="search_next"
+          gridX="1"
+          gridY="1"/>
+      <tools
+          name="Match Case"
+          id="searchMatchCase"
+          gridY="2"
+          labeled="true"
+          type="CHECKBOX"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="General"
+        id="topBar/general"
+        image="clipboard"
+        width="250.0"
+        height="550.0"
+        grid="true">
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group">
+        <tools
+            name="Paste"
+            id="paste"
+            image="paste"
+            toolTip="Paste"
+            spanY="2"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Cut"
+            id="cut"
+            image="cut"
+            gridX="1"/>
+        <tools
+            name="Copy"
+            id="copy"
+            image="copy"
+            gridX="2"/>
+      </toolGroups>
+      <toolGroups
+          name="New Tool Group"
+          id="New Tool Group"
+          gridY="1">
+        <tools
+            name="Show Outline"
+            id="showOutline"
+            image="paragraph"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Select Object"
+            id="select_object"
+            image="select_object"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Format Painter"
+            id="format_painter"
+            image="format_painter"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Font"
+        id="topBar/font"
+        image="font"
+        width="250.0"
+        height="550.0">
+      <toolGroups
+          name="fontNameAndSize"
+          id="fontNameAndSize">
+        <tools
+            name="Font Name"
+            id="fontName"
+            toolTip="Font Name"
+            spanX="0"
+            spanY="0"
+            format="fontName"
+            type="COMBO"/>
+        <tools
+            name="Font Size"
+            id="fontSize"
+            toolTip="Font Size"
+            gridY="1"
+            spanX="0"
+            spanY="0"
+            format="fontSize"
+            type="COMBO"/>
+      </toolGroups>
+      <toolGroups
+          name="characterStyle"
+          id="characterStyle"
+          gridY="1">
+        <tools
+            name="Bold"
+            id="bold"
+            image="bold"
+            toolTip="Bold"
+            spanX="0"
+            spanY="0"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Italic"
+            id="italic"
+            image="italic"
+            toolTip="Italic"
+            spanX="0"
+            spanY="0"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Underline"
+            id="underline"
+            image="underline"
+            toolTip="Underline"
+            spanX="0"
+            spanY="0"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Strikethrough"
+            id="strikethrough"
+            image="strikethrough"
+            toolTip="Strikethrough"
+            spanX="0"
+            spanY="0"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Subscript"
+            id="subscript"
+            image="subscript"
+            toolTip="Subscript"
+            spanX="0"
+            spanY="0"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Superscript"
+            id="superscript"
+            image="superscript"
+            toolTip="Superscript"
+            spanX="0"
+            spanY="0"
+            type="TOGGLEBUTTON"/>
+        <tools
+            name="Change Case"
+            id="changeCase"
+            image="change_case_2"
+            toolTip="Change Case"
+            spanX="0"
+            spanY="0"
+            type="SPLITMENUBUTTON"/>
+        <tools
+            name="Font Color"
+            id="foregroundColor"
+            image="font_color_2"
+            toolTip="Font Color"
+            spanX="0"
+            spanY="0"
+            type="SPLITMENUBUTTON"/>
+      </toolGroups>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Styles"
+        id="topBar/styles"
+        image="styles"
+        width="250.0"
+        height="550.0">
+      <tools
+          name="Normal"
+          id="Normal"
+          image="style_normal_big"
+          toolTip="Normal"
+          type="TOGGLEBUTTON"/>
+      <tools
+          name="Heading_1"
+          id="Heading1"
+          image="style_heading_1_big"
+          toolTip="Heading_1"
+          gridX="1"
+          type="TOGGLEBUTTON"/>
+      <tools
+          name="Heading_2"
+          id="Heading2"
+          image="style_heading_2_big"
+          toolTip="Heading_2"
+          gridX="2"
+          type="TOGGLEBUTTON"/>
+      <tools
+          name="Title"
+          id="Title"
+          image="style_title_big"
+          toolTip="Title"
+          gridX="3"
+          type="TOGGLEBUTTON"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Favorites"
+        id="favorites"
+        image="favorites_2"
+        width="250.0"
+        height="550.0">
+      <toolGroups
+          name="My Favorites"
+          id="my_favorites"
+          image="favorites_2_24"
+          width="250.0"
+          height="550.0">
+        <tools
+            name="My Favorites Browser"
+            id="myFavorites"
+            image="navigator"
+            toolTip="My Favorites Browser"
+            spanX="0"
+            spanY="0"
+            type="NAVIGATOR"/>
+      </toolGroups>
+      <toolGroups
+          name="Recent Documents"
+          id="recent_documents"
+          image="setup_history">
+        <tools
+            name="My Recent Documents"
+            id="myHistory"
+            image="navigator"
+            toolTip="My Recent Documents"
+            spanX="0"
+            spanY="0"
+            type="NAVIGATOR"/>
+      </toolGroups>
+      <tools
+          id="favoritesSet"
+          format="defaul,set1"
+          type="COMBO"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="URL"
+        id="topBar/URL_ADDRESS_TOOL_COMPONENT"
+        image="clipboard"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="Setup Editor"
+        id="sideBar/setup_editor"
+        image="setup"
+        width="250.0"
+        height="550.0">
+      <toolGroups
+          name="Setup Editing option"
+          id="setup_editing_options"
+          image="setup_editing_options"
+          width="250.0"
+          height="550.0"
+          grid="true">
+        <tools
+            name="Setup Tools"
+            id="USE_CASE_TOOLS"
+            image="setup_editing_options"
+            toolTip="Setup Tools"
+            labeled="true"/>
+        <tools
+            name="Setup Contacts"
+            id="USE_CASE_CONTACTS"
+            image="setup_personalisation"
+            toolTip="Setup Contacts"
+            gridX="1"
+            labeled="true"/>
+        <tools
+            name="Test"
+            image="rectangle"
+            gridY="1"
+            labeled="true"/>
+        <tools
+            name="Test2"
+            gridY="2"
+            labeled="true"
+            type="TEXTFIELD"/>
+      </toolGroups>
+      <toolGroups
+          name="Setup Colors"
+          id="setup_colors"
+          image="colors"/>
+      <toolGroups
+          name="Setup Save"
+          id="setup_save"
+          image="save"/>
+      <toolGroups
+          name="Setup Display"
+          id="setup_display"
+          image="display"/>
+      <toolGroups
+          name="Personalisation"
+          id="setup_personalisation"
+          image="setup_personalisation"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Setup Web Browser"
+        id="sideBar/setup_web_browser"
+        image="setup"
+        width="250.0"
+        height="550.0">
+      <toolGroups
+          name="General"
+          id="setup_general"
+          image="setup_general"/>
+      <toolGroups
+          name="Setup Tabs"
+          id="setup_tabs"
+          image="setup_tabs"/>
+      <toolGroups
+          name="Setup History"
+          id="setup_history"
+          image="setup_history"/>
+      <toolGroups
+          name="Setup Security"
+          id="setup_security"
+          image="setup_security"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Clipboard"
+        id="topBar/clipboard"
+        image="clipboard"
+        width="250.0"
+        height="550.0">
+      <tools
+          name="Paste"
+          id="paste"
+          image="paste"
+          spanY="2"
+          type="SPLITMENUBUTTON"/>
+      <tools
+          name="Cut"
+          id="cut"
+          image="cut"
+          gridX="1"/>
+      <tools
+          name="Copy"
+          id="copy"
+          image="copy"
+          gridX="2"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="SideBar Tools"
+        id="sideBar/USE_CASE_TOOLS"
+        image="setup"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="SideBar Contacts"
+        id="sideBar/USE_CASE_CONTACTS"
+        image="setup_personalisation"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="Contacts"
+        id="topBar/contacts"
+        image="contacts_24"
+        width="250.0"
+        height="550.0">
+      <tools
+          name="Add Contact"
+          id="addContact"
+          image="contact"
+          toolTip="Add Contact"/>
+      <tools
+          name="Delete Contact"
+          id="addContact"
+          image="delete"
+          toolTip="Delete Contact"
+          gridX="2"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="History"
+        id="my_history"
+        image="history"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="My Downloads"
+        id="my_downloads"
+        image="downloads"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="My Archive"
+        id="my_archive"
+        image="archive"
+        width="250.0"
+        height="550.0">
+      <toolGroups
+          name="History"
+          id="my_history"
+          image="history_24"
+          width="250.0"
+          height="550.0"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Search"
+        id="my_search"
+        image="search"
+        width="250.0"
+        height="550.0">
+      <tools
+          name="Find What"
+          labeled="true"
+          type="LABEL"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="My Downloads"
+        id="my_downloads"
+        image="downloads"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="My Archive"
+        id="my_archive"
+        image="navigator"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="Search"
+        id="my_search"
+        image="24_search"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="My Favorites"
+        id="my_favorites"
+        image="favorites_2"
+        width="250.0"
+        height="550.0">
+      <tools
+          id="myFavorites"
+          type="NAVIGATOR"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="History"
+        id="my_history"
+        image="history"
+        width="250.0"
+        height="550.0">
+      <tools
+          id="myHistory"
+          type="NAVIGATOR"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="My Downloads"
+        id="my_downloads"
+        image="downloads"
+        width="250.0"
+        height="550.0">
+      <tools
+          id="myDownloads"
+          type="NAVIGATOR"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="My Archive"
+        id="my_archive"
+        image="archive_2"
+        width="250.0"
+        height="550.0">
+      <tools
+          id="myArchive"
+          type="NAVIGATOR"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Search"
+        id="my_search"
+        image="search"
+        width="250.0"
+        height="550.0"/>
+    <toolgroupChildren
+        name="Add Contact"
+        id="addContact_419"
+        image="contacts">
+      <tools
+          name="Add Contact"
+          id="addContact_420"
+          image="contacts_48"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Add IT Project"
+        id="addItProject"
+        image="contacts">
+      <tools
+          id="addITProject"
+          image="contacts_48"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Add Contact Group"
+        id="addContactsGroup"
+        image="addContactsGroup"/>
+    <toolgroupChildren
+        name="Add Company"
+        id="addCompany"
+        image="contacts"/>
+    <toolgroupChildren
+        name="Overview"
+        id="overview"
+        image="overview"/>
+    <toolgroupChildren
+        name="Navigator"
+        id="navigator"
+        image="favorites_2">
+      <tools
+          name="IT Navigator"
+          id="itTreePart"
+          type="NAVIGATOR"/>
+    </toolgroupChildren>
+    <toolgroupChildren
+        name="Add StakeHolder"
+        id="addStakeHolder"
+        image="add_stake_holder"/>
+    <toolgroupChildren
+        name="Add Solution"
+        id="addSolution"
+        image="add_solution"/>
+    <toolgroupChildren
+        name="Add Document"
+        id="addDocument"
+        image="add_document"/>
+    <toolgroupChildren
+        name="Add Task"
+        id="addTask"
+        image="add_task"/>
+    <toolgroupChildren
+        name="Company"
+        id="itCompany"
+        image="company"/>
+    <toolgroupChildren
+        name="Navigator"
+        id="itProject"
+        image="navigator"/>
+    <toolgroupChildren
+        name="Tasks"
+        id="tasks"
+        image="tasks"/>
+    <toolgroupChildren
+        name="Documents"
+        id="documents"
+        image="documents"/>
+    <toolgroupChildren
+        name="Solution"
+        id="solution"
+        image="solution"/>
+    <toolgroupChildren
+        name="Stakeholders"
+        id="stakeHolders"
+        image="stakeholders"/>
+    <toolgroupChildren
+        name="Solutions"
+        id="solutions"
+        image="solutions"/>
+  </allTools>
+  <allFavorites/>
+  <allResources>
+    <children
+        name="Network"
+        id="WRS_NETWORK">
+      <folders
+          name="Overview"
+          id="WRS_NETWORK_OVERVIEW"/>
+    </children>
+    <children
+        name="My Accounts"
+        id="WRS_MY_ACCOUNTS"/>
+  </allResources>
+  <allPersons>
+    <children>
+      <persons
+          xsi:type="rcpl:NPerson"
+          leaf="true"/>
+    </children>
+  </allPersons>
+</rcpl:RCPL>

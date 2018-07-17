@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    copyrightText="(c) 2018 World Resource Systems, Ramin Assisi" modelDirectory="/org.wrs.model/src-gen"
-    creationIcons="false" editDirectory="/org.wrs.model/src-gen" editorDirectory="/org.wrs.model/src-gen"
-    modelPluginID="wrsmodel" modelName="Worldreservesystem" editPluginClass="org.wrs.model.provider.WorldreservesystemEditPlugin"
-    editorPluginClass="org.wrs.presentation.WrsEditorPlugin" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
-    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" reflectiveDelegation="true"
-    codeFormatting="true" testSuiteClass="org.wrs.tests.WorldreservesystemAllTests"
+    copyrightText="(c) 2018 World Resource Systems, Ramin Assisi" modelDirectory="/org.worldreservesystem/src-gen"
+    creationIcons="false" editDirectory="/org.worldreservesystem.edit/src-gen" editorDirectory="/org.worldreservesystem.editor/src-gen"
+    modelPluginID="worldreservesystem" modelName="Worldreservesystem" editPluginClass="org.worldreservesystem.provider.WorldreservesystemEditPlugin"
+    editorPluginClass="org.worldreservesystem.presentation.WorldreservesystemEditorPlugin"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" codeFormatting="true" testSuiteClass="org.worldreservesystem.tests.WorldreservesystemAllTests"
     importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="8.0"
-    copyrightFields="false" binaryCompatibleReflectiveMethods="true" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
-    editPluginID="wrsmodel" editorPluginID="wrsmodel" testsPluginID="wrs.tests" operationReflection="true"
-    importOrganizing="true" pluginKey="wrs">
+    copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
+    editPluginID="org.worldreservesystem.edit" editorPluginID="org.worldreservesystem.editor"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>worldreservesystem.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <testsDirectory xsi:nil="true"/>

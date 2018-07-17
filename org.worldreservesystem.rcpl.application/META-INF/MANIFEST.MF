@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Application
+Bundle-SymbolicName: org.wordreservesystem.ui.node
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.rcpl.core;bundle-version="1.0.0",
+ org.worldreservesystem.rcpl.plugin;bundle-version="1.0.0",
+ org.eclipse.rcpl.model_2_0_0;bundle-version="0.1.1",
+ org.eclipse.fx.core;bundle-version="2.0.0",
+ org.eclipse.rcpl.navigator;bundle-version="1.0.0",
+ org.worldreservesystem.navigator;bundle-version="1.0.0",
+ org.worldreservesystem.model;bundle-version="0.1.0"
