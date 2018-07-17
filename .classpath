@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="org.eclipse.rcpl.core/src"/>
+	<classpathentry kind="src" path="org.worldreservesystem.core/src"/>
+	<classpathentry kind="src" path="org.worldreservesystem.navigator/src"/>
+	<classpathentry kind="src" path="org.worldreservesystem.rcpl.application/src"/>
+	<classpathentry kind="src" path="org.worldreservesystem.rcpl.plugin/src"/>
+	<classpathentry kind="src" path="org.wrs.model.edit/src"/>
+	<classpathentry kind="src" path="org.wrs.model.editor/src"/>
+	<classpathentry kind="src" path="org.wrs.model.tests/src"/>
+	<classpathentry kind="src" path="org.wrs.model/src"/>
+	<classpathentry kind="src" path="org.wrs.rcpl.ui.application/src"/>
+	<classpathentry kind="output" path="org.worldreservesystem.core/target/classes"/>
+</classpath>
