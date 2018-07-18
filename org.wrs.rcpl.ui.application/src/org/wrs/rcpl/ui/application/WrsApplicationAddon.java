@@ -6,13 +6,13 @@ import org.eclipse.rcpl.IRcplAddon;
 import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplPluginControler;
 import org.eclipse.rcpl.RcplAbstractMigration;
-import org.eclipse.rcpl.RcplPlugin;
+import org.eclipse.rcpl.RcplAddon;
 
 /**
  * @author Ramin
  * 
  */
-@RcplPlugin
+@RcplAddon
 public class WrsApplicationAddon extends AbstractRcplAddon implements IRcplAddon {
 
 	public WrsApplicationAddon() {

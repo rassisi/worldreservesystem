@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:rcpl="http://rcpl/1.0">
-  <allPlugins>
+  <allAddons>
     <children
         name="Contacts"
         id="USE_CASE_CONTACTS"
@@ -22,7 +22,7 @@
         name="IT Architecture"
         id="itTreePart"
         leaf="true"/>
-  </allPlugins>
+  </allAddons>
   <allPerspectives>
     <children
         name="WORD"
