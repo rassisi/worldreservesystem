@@ -22,7 +22,7 @@
   <allPerspectives>
     <children
         name="Account"
-        id="wrs_account"
+        id="account"
         image="account">
       <sideToolBar
           leaf="true"
