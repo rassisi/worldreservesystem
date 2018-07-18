@@ -18,18 +18,15 @@
         name="EMF Tree Browser"
         id="USE_CASE_EMF_TREE"
         leaf="true"/>
-    <children
-        name="IT Architecture"
-        id="itTreePart"
-        leaf="true"/>
   </allPlugins>
   <allPerspectives>
     <children
-        name="WORD"
-        id="WORD">
+        name="Account"
+        id="wrs_account"
+        image="account">
       <sideToolBar
           leaf="true"
-          toolGroups="//@allTools/@toolgroupChildren.0 //@allTools/@toolgroupChildren.3 //@allTools/@toolgroupChildren.4 //@allTools/@toolgroupChildren.1 //@allTools/@toolgroupChildren.5 //@allTools/@toolgroupChildren.6 //@allTools/@toolgroupChildren.7 //@allTools/@toolgroupChildren.10 //@allTools/@toolgroupChildren.8 //@allTools/@toolgroupChildren.9 //@allTools/@toolgroupChildren.11 //@allTools/@toolgroupChildren.12 //@allTools/@toolgroupChildren.13"/>
+          toolGroups="//@allTools/@toolgroupChildren.0 //@allTools/@toolgroupChildren.3 //@allTools/@toolgroupChildren.4"/>
       <topToolBar
           leaf="true"
           toolGroups="//@allTools/@toolgroupChildren.16 //@allTools/@toolgroupChildren.21 //@allTools/@toolgroupChildren.22"/>
@@ -37,41 +34,15 @@
           leaf="true"/>
     </children>
     <children
-        name="SPREADSHEET"
-        id="SPREADSHEET">
-      <sideToolBar
-          leaf="true"/>
-      <topToolBar
-          leaf="true"/>
-      <quickTools
-          leaf="true"/>
-    </children>
-    <children
-        name="PRESENTATION"
-        id="PRESENTATION">
-      <sideToolBar
-          leaf="true"/>
-      <topToolBar
-          leaf="true"/>
-      <quickTools
-          leaf="true"/>
-    </children>
-    <children
         name="SETTINGS"
         id="SETTINGS">
       <sideToolBar
-          leaf="true"/>
+          leaf="true"
+          toolGroups="//@allTools/@toolgroupChildren.0"/>
       <topToolBar
           leaf="true"/>
       <quickTools
           leaf="true"/>
-    </children>
-    <children
-        name="TEST"
-        id="TEST">
-      <sideToolBar/>
-      <topToolBar/>
-      <quickTools/>
     </children>
   </allPerspectives>
   <allPreferences/>
