@@ -5,7 +5,7 @@ import org.eclipse.rcpl.IRcplFactory;
 import org.eclipse.rcpl.IToolFactory;
 import org.eclipse.rcpl.IWindowAdvisor;
 import org.eclipse.rcpl.RcplUic;
-import org.eclipse.rcpl.application.RcplApplicationStarter;
+import org.eclipse.rcpl.application.DefaultApplicationStarter;
 import org.eclipse.rcpl.application.RcplWindowAdvisor;
 import org.eclipse.rcpl.login.RcplLogin;
 import org.eclipse.rcpl.model.RCPLModel;
@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * @author Ramin
  *
  */
-public class WrsApplicationStarter extends RcplApplicationStarter {
+public class WrsApplicationStarter extends DefaultApplicationStarter {
 
 	public WrsApplicationStarter(IRcplApplicationProvider applicationProvider) {
 		super(applicationProvider);

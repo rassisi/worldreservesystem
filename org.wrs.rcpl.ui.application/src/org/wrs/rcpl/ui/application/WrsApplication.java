@@ -11,18 +11,16 @@
 package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.application.RcplApplication;
 import org.eclipse.rcpl.application.RcplApplicationProvider;
 import org.eclipse.rcpl.model.RCPLModel;
 import org.eclipse.rcpl.model.cdo.client.RcplSession;
-
-import javafx.application.Application;
-import javafx.stage.Stage;
 
 /**
  * @author ramin
  *
  */
-public class WrsApplication extends Application {
+public class WrsApplication extends RcplApplication {
 
 	public static void main(String[] args) {
 		RcplApplicationProvider.init(args);
@@ -30,7 +28,7 @@ public class WrsApplication extends Application {
 	}
 
 	@Override
-	public void start(final Stage primaryStage) {
+	protected void initApplication() {
 		RcplSession.addAdditionalCodebases(
 				"https://raw.githubusercontent.com/rassisi/worldreservesystem/master/org.wrs.resources/svg/");
 		Rcpl.rcplApplicationProvider = new RcplApplicationProvider(this);
@@ -40,6 +38,5 @@ public class WrsApplication extends Application {
 		Rcpl.rcplApplicationProvider.registerRcplAddonClass(WrsApplicationAddon.class.getName());
 		Rcpl.rcplApplicationProvider
 				.registerRcplAddonClass("org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorPlugin");
-		Rcpl.rcplApplicationProvider.start(primaryStage);
 	}
 }
