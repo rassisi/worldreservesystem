@@ -12,6 +12,10 @@ import org.eclipse.rcpl.model.RCPLModel;
 
 import javafx.stage.Stage;
 
+/**
+ * @author Ramin
+ *
+ */
 public class WrsApplicationStarter extends RcplApplicationStarter {
 
 	public WrsApplicationStarter(IRcplApplicationProvider applicationProvider) {
