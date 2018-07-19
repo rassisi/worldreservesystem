@@ -4,12 +4,11 @@ import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplFactory;
 import org.eclipse.rcpl.IToolFactory;
 import org.eclipse.rcpl.IWindowAdvisor;
-import org.eclipse.rcpl.RcplLogin;
 import org.eclipse.rcpl.RcplUic;
 import org.eclipse.rcpl.application.RcplApplicationStarter;
 import org.eclipse.rcpl.application.RcplWindowAdvisor;
+import org.eclipse.rcpl.login.RcplLogin;
 import org.eclipse.rcpl.model.RCPLModel;
-
 
 import javafx.stage.Stage;
 
@@ -27,8 +26,6 @@ public class WrsApplicationStarter extends RcplApplicationStarter {
 	@Override
 	public boolean start(RcplLogin login, Stage primaryStage) {
 		RCPLModel.mobileProvider.appendLog("register Services");
-
-
 
 		RCPLModel.mobileProvider.appendLog("super.start(login, primaryStage)");
 
