@@ -3,22 +3,6 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:rcpl="http://rcpl/1.0">
-  <allPlugins>
-    <children
-        name="Contacts"
-        id="USE_CASE_CONTACTS"
-        leaf="true"
-        className="org.eclipse.rcpl.ui.parts.contacts.EContactsUseCase"/>
-    <children
-        name="Configure Tools"
-        id="USE_CASE_TOOLS"
-        leaf="true"
-        className="org.eclipse.rcpl.client.uc.tools.parts.EToolsUseCase"/>
-    <children
-        name="EMF Tree Browser"
-        id="USE_CASE_EMF_TREE"
-        leaf="true"/>
-  </allPlugins>
   <allPerspectives>
     <children
         name="Account"
@@ -30,8 +14,7 @@
       <topToolBar
           leaf="true"
           toolGroups="//@allTools/@toolgroupChildren.16 //@allTools/@toolgroupChildren.21 //@allTools/@toolgroupChildren.22"/>
-      <quickTools
-          leaf="true"/>
+      <ribbonToolBar/>
     </children>
     <children
         name="SETTINGS"
@@ -41,8 +24,7 @@
           toolGroups="//@allTools/@toolgroupChildren.0"/>
       <topToolBar
           leaf="true"/>
-      <quickTools
-          leaf="true"/>
+      <ribbonToolBar/>
     </children>
   </allPerspectives>
   <allPreferences/>
