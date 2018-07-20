@@ -6,7 +6,7 @@ import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.app.toolcontrols.RcplSideToolBar;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Folder;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorTreePart;
 import org.worldreservesystem.navigator.detailpages.OverviewDetailPage;
 
 import javafx.scene.Node;
@@ -16,7 +16,7 @@ import javafx.scene.layout.Pane;
  * @author Ramin
  *
  */
-public class NavigatorTreePart extends DefaultTreeTreePart {
+public class NavigatorTreePart extends DefaultNavigatorTreePart {
 
 	OverviewDetailPage overviewPage;
 

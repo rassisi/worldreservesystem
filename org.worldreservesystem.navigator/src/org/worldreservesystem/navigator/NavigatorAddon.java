@@ -23,7 +23,7 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.RCPL;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorMigration;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorTreePart;
 
 import javafx.scene.layout.Pane;
 
@@ -39,7 +39,7 @@ public class NavigatorAddon extends DefaultNavigatorAddon implements INavigatorA
 	}
 
 	@Override
-	protected DefaultTreeTreePart createPart(Tool tool) {
+	protected DefaultNavigatorTreePart createPart(Tool tool) {
 		// Pane detailPane, Tool tool, EObject eObject, boolean showRoot
 		return new NavigatorTreePart(null, tool, null, true);
 	}
@@ -70,7 +70,7 @@ public class NavigatorAddon extends DefaultNavigatorAddon implements INavigatorA
 	}
 
 	@Override
-	public DefaultTreeTreePart create(Pane detailPane, Tool tool, EObject root, boolean showRoot) {
+	public DefaultNavigatorTreePart create(Pane detailPane, Tool tool, EObject root, boolean showRoot) {
 
 		if (root == null) {
 			RCPL rcpl = RcplSession.getDefault().getRcpl();
