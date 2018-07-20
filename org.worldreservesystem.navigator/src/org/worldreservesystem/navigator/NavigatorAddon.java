@@ -22,7 +22,7 @@ import org.eclipse.rcpl.model.cdo.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.RCPL;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorMigration;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorPlugin;
+import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultTreeTreePart;
 
 import javafx.scene.layout.Pane;
@@ -32,7 +32,7 @@ import javafx.scene.layout.Pane;
  * 
  */
 @RcplAddon
-public class NavigatorAddon extends DefaultNavigatorPlugin implements INavigatorAddon {
+public class NavigatorAddon extends DefaultNavigatorAddon implements INavigatorAddon {
 
 	public NavigatorAddon() {
 		super();
