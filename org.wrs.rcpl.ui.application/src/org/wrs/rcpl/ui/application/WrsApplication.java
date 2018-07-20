@@ -10,11 +10,10 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.application;
 
-import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.application.RcplApplication;
 import org.eclipse.rcpl.application.RcplApplicationProvider;
 import org.eclipse.rcpl.model.RCPLModel;
-import org.eclipse.rcpl.model.cdo.client.RcplSession;
 
 /**
  * @author ramin
@@ -28,15 +27,35 @@ public class WrsApplication extends RcplApplication {
 	}
 
 	@Override
-	protected void initApplication() {
-		RcplSession.addAdditionalCodebases(
-				"https://raw.githubusercontent.com/rassisi/worldreservesystem/master/org.wrs.resources/svg/");
-		Rcpl.rcplApplicationProvider = new RcplApplicationProvider(this);
-		Rcpl.setMobile(false);
-		RCPLModel.modelClass = WrsModel.class;
-		RCPLModel.XMIName = "wrs";
-		Rcpl.rcplApplicationProvider.registerRcplAddonClass(WrsApplicationAddon.class.getName());
-		Rcpl.rcplApplicationProvider
-				.registerRcplAddonClass("org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorPlugin");
+	protected IRcplApplicationProvider createApplicationProvider() {
+		return new RcplApplicationProvider(this);
 	}
+
+	@Override
+	protected boolean isMobile() {
+		return false;
+	}
+
+	@Override
+	protected String[] getRcplAddonClassNames() {
+		return new String[] { WrsApplicationAddon.class.getName(),
+				"org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon" };
+	}
+
+	@Override
+	protected Class<? extends RCPLModel> getRcplModel() {
+		return WrsModel.class;
+	}
+
+	@Override
+	protected String getXmiName() {
+		return "wrs";
+	}
+
+	@Override
+	protected String[] getAdditionalImageCodeBases() {
+		return new String[] {
+				"https://raw.githubusercontent.com/rassisi/worldreservesystem/master/org.wrs.resources/svg/" };
+	}
+
 }
