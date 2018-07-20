@@ -10,6 +10,7 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.application;
 
+import org.eclipse.rcpl.IApplicationStarter;
 import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.application.RcplApplication;
 import org.eclipse.rcpl.application.RcplApplicationProvider;
@@ -28,18 +29,17 @@ public class WrsApplication extends RcplApplication {
 
 	@Override
 	protected IRcplApplicationProvider createApplicationProvider() {
-		return new RcplApplicationProvider(this);
+		return new WrsApplicationProvider(this);
+	}
+
+	@Override
+	public IApplicationStarter createApplicationStarter(IRcplApplicationProvider rcplApplication) {
+		return new WrsApplicationStarter(getApplicationProvider());
 	}
 
 	@Override
 	protected boolean isMobile() {
 		return false;
-	}
-
-	@Override
-	protected String[] getRcplAddonClassNames() {
-		return new String[] { WrsApplicationAddon.class.getName(),
-				"org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon" };
 	}
 
 	@Override

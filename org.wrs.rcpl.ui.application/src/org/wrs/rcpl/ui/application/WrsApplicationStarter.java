@@ -30,9 +30,7 @@ public class WrsApplicationStarter extends DefaultApplicationStarter {
 	@Override
 	public boolean start(RcplLogin login, Stage primaryStage) {
 		RCPLModel.mobileProvider.appendLog("register Services");
-
 		RCPLModel.mobileProvider.appendLog("super.start(login, primaryStage)");
-
 		return super.start(login, primaryStage);
 	}
 

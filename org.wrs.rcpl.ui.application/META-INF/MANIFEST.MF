@@ -7,8 +7,6 @@ Automatic-Module-Name: org.wrs.rcpl.ui.application
 Bundle-RequiredExecutionEnvironment: JavaSE-10
 Require-Bundle: org.eclipse.rcpl.3d;bundle-version="1.0.0",
  org.eclipse.rcpl.addon.application;bundle-version="1.0.0",
- org.eclipse.rcpl.addon.contacts;bundle-version="0.1.1",
- org.eclipse.rcpl.addon.tools;bundle-version="0.1.1",
  org.eclipse.rcpl.batik;bundle-version="1.0.0",
  org.eclipse.rcpl.controlfx;bundle-version="8.1.0",
  org.eclipse.rcpl.core;bundle-version="1.0.0",

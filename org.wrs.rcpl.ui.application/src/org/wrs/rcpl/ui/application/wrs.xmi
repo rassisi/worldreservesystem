@@ -3,6 +3,15 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:rcpl="http://rcpl/1.0">
+  <allAddons
+      name="">
+    <children
+        name="Navigator"
+        className="org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon"/>
+    <children
+        name="WRS Application"
+        className="org.wrs.rcpl.ui.application.WrsApplicationAddon"/>
+  </allAddons>
   <allPerspectives>
     <children
         name="Account"
@@ -14,6 +23,8 @@
       <topToolBar
           leaf="true"
           toolGroups="//@allTools/@toolgroupChildren.16 //@allTools/@toolgroupChildren.21 //@allTools/@toolgroupChildren.22"/>
+      <quickToolBar
+          tools="//@allTools/@toolChildren.0 //@allTools/@toolChildren.1"/>
       <ribbonToolBar/>
     </children>
     <children
@@ -24,6 +35,7 @@
           toolGroups="//@allTools/@toolgroupChildren.0"/>
       <topToolBar
           leaf="true"/>
+      <quickToolBar/>
       <ribbonToolBar/>
     </children>
   </allPerspectives>
@@ -34,6 +46,7 @@
         id="sideBar/file"
         image="internet_cloud">
       <tools
+          name="File Navigator"
           type="NAVIGATOR"/>
     </toolgroupChildren>
     <toolgroupChildren
@@ -3078,6 +3091,15 @@
         name="Solutions"
         id="solutions"
         image="solutions"/>
+    <toolChildren
+        name="Open File"
+        id="FILE"
+        image="file"
+        toolTip="Open File"/>
+    <toolChildren
+        name="Save File"
+        id="SAVE_FILE"
+        image="save"/>
   </allTools>
   <allFavorites/>
   <allResources>
@@ -3239,4 +3261,5 @@
           leaf="true"/>
     </children>
   </allPersons>
+  <homepages/>
 </rcpl:RCPL>
