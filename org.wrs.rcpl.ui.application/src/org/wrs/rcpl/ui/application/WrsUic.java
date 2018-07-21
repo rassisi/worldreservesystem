@@ -6,9 +6,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.IHomePage;
 import org.eclipse.rcpl.INavigatorListener;
 import org.eclipse.rcpl.Rcpl;
-import org.eclipse.rcpl.RcplUic;
 import org.eclipse.rcpl.application.RcplApplicationStarter;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Resource;
+import org.eclipse.rcpl.ui.controler.RcplUic;
 import org.wrs.rcpl.ui.homepages.WrsNewHomePage;
 import org.wrs.rcpl.ui.homepages.WrsSamplesHomePage;
 

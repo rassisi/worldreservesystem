@@ -1,7 +1,7 @@
 package org.wrs.rcpl.ui.homepages;
 
-import org.eclipse.rcpl.RcplUic;
 import org.eclipse.rcpl.homepages.DefaultNewHomePage;
+import org.eclipse.rcpl.ui.controler.RcplUic;
 
 public class WrsNewHomePage extends DefaultNewHomePage {
 
