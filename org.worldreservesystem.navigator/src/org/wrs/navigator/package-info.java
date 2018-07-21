@@ -5,4 +5,4 @@
  * @author Ramin
  *
  */
-package org.worldreservesystem.navigator;
+package org.wrs.navigator;

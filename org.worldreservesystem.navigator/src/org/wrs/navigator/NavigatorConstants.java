@@ -1,4 +1,4 @@
-package org.worldreservesystem.navigator;
+package org.wrs.navigator;
 
 public interface NavigatorConstants {
 

@@ -12,10 +12,15 @@
       name="">
     <children
         name="Navigator"
-        className="org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon"/>
+        className="org.eclipse.rcpl.navigator.addon.DefaultNavigatorAddon"/>
     <children
         name="WRS Application"
         className="org.wrs.rcpl.ui.application.WrsApplicationAddon"/>
+    <children
+        name="WRS Browser"
+        id="WRS_BROWSER"
+        image="navigator"
+        className="org.wrs.navigator.WrsNavigatorAddon"/>
   </allAddons>
   <allPerspectives>
     <children

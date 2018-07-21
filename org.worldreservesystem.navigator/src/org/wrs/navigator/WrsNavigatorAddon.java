@@ -9,37 +9,27 @@
  *     Ramin Assisi - initial implementation
  *******************************************************************************/
 
-package org.worldreservesystem.navigator;
+package org.wrs.navigator;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.INavigatorAddon;
+import org.eclipse.rcpl.INavigatorTreeManager;
 import org.eclipse.rcpl.IRcplPluginControler;
+import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.RcplAddon;
 import org.eclipse.rcpl.migration.RcplAbstractMigration;
-import org.eclipse.rcpl.model.cdo.client.RcplSession;
-import org.eclipse.rcpl.model_2_0_0.rcpl.RCPL;
-import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorAddon;
+import org.eclipse.rcpl.navigator.addon.AbstractNavigatorAddon;
+import org.eclipse.rcpl.navigator.tree.model.manager.UCEmfTreeModelManagerImpl;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorMigration;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorTreePart;
-
-import javafx.scene.layout.Pane;
 
 /**
  * @author Ramin
  * 
  */
 @RcplAddon
-public class NavigatorAddon extends DefaultNavigatorAddon implements INavigatorAddon {
+public class WrsNavigatorAddon extends AbstractNavigatorAddon implements INavigatorAddon {
 
-	public NavigatorAddon() {
+	public WrsNavigatorAddon() {
 		super();
-	}
-
-	@Override
-	protected DefaultNavigatorTreePart createPart(Tool tool) {
-		// Pane detailPane, Tool tool, EObject eObject, boolean showRoot
-		return new NavigatorTreePart(null, tool, null, true);
 	}
 
 	@Override
@@ -63,16 +53,13 @@ public class NavigatorAddon extends DefaultNavigatorAddon implements INavigatorA
 	}
 
 	@Override
-	public DefaultNavigatorTreePart create(Pane detailPane, Tool tool, EObject root, boolean showRoot) {
+	public ITreePart createTreePart() {
+		return new WrsNavigatorTreePart();
+	}
 
-		if (root == null) {
-			RCPL rcpl = RcplSession.getDefault().getRcpl();
-			if (rcpl != null) {
-				root = rcpl.getAllResources();
-			}
-		}
-		return new NavigatorTreePart(detailPane, tool, root, showRoot);
-
+	@Override
+	public INavigatorTreeManager createNavigatorTreemanager() {
+		return new UCEmfTreeModelManagerImpl();
 	}
 
 }
