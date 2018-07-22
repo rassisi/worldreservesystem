@@ -3,14 +3,11 @@ package org.wrs.rcpl.ui.application;
 import java.io.File;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.rcpl.IHomePage;
 import org.eclipse.rcpl.INavigatorListener;
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.application.RcplApplicationStarter;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Resource;
 import org.eclipse.rcpl.ui.controler.RcplUic;
-import org.wrs.rcpl.ui.homepages.WrsNewHomePage;
-import org.wrs.rcpl.ui.homepages.WrsSamplesHomePage;
 
 import javafx.event.ActionEvent;
 import javafx.geometry.Orientation;
@@ -42,15 +39,9 @@ public class WrsUic extends RcplUic {
 		});
 	}
 
-
-
-
-
 	public void actionAddWordTab() {
 		openTemplate("blank_A4.docx", " New Document");
 	}
-
-
 
 	public void actionOpenExample_1(ActionEvent event) {
 		// openTemplate("ecma_376_fundamentals_4.docx", null);
@@ -78,11 +69,6 @@ public class WrsUic extends RcplUic {
 		}
 	}
 
-	@Override
-	protected IHomePage createAboutHomePage() {
-		return super.createAboutHomePage();
-	}
-
 	// protected Tab openTemplate(String name, String tabName) {
 	// Tab newTab = super.openTemplate(name, tabName);
 	// if (getEditor() != null) {
@@ -92,16 +78,6 @@ public class WrsUic extends RcplUic {
 	// addGeneralQuickTools_1();
 	// return newTab;
 	// }
-
-	@Override
-	protected IHomePage createNewHomePage() {
-		return new WrsNewHomePage(this, "office_new");
-	}
-
-	@Override
-	protected IHomePage createSamplesHomePage() {
-		return new WrsSamplesHomePage(this, "office_samples");
-	}
 
 	@Override
 	protected void doCreateContent() {
@@ -172,18 +148,10 @@ public class WrsUic extends RcplUic {
 
 	}
 
-
-
-
-
 	@Override
 	public void openTemplate(final String docName, String tabName) {
 
 	}
-
-
-
-
 
 	@Override
 	protected void registerServices() {
