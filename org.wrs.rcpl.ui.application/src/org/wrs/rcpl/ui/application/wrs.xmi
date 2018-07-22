@@ -3271,5 +3271,11 @@
           leaf="true"/>
     </children>
   </allPersons>
-  <homepages/>
+  <homepages>
+    <children
+        name="Overview"
+        type="OVERVIEW"/>
+  </homepages>
+  <documents/>
+  <keyvalues/>
 </rcpl:RCPL>
