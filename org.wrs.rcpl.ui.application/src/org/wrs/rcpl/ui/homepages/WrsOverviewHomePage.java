@@ -204,8 +204,6 @@ public class WrsOverviewHomePage extends DefaultOverviewHomePage {
 		splitPane.getItems().add(detailsArea);
 		splitPane.setDividerPositions(0.3f);
 
-		uic.getTopToolBarControl().show((String) null);
-
 		if (!Rcpl.isMobile()) {
 			showSplash(1);
 		}
