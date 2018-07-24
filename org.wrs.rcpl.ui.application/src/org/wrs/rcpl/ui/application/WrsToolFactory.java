@@ -4,11 +4,12 @@ import org.eclipse.rcpl.EnCommandId;
 import org.eclipse.rcpl.EnCustomToolIds;
 import org.eclipse.rcpl.EnServiceId;
 import org.eclipse.rcpl.ITool;
-import org.eclipse.rcpl.internal.impl.RcplToolFactory;
 import org.eclipse.rcpl.internal.tools.CharacterStyleListTool;
 import org.eclipse.rcpl.internal.tools.FontNameTool;
 import org.eclipse.rcpl.internal.tools.FontSizeTool;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
+
+import com.joffice.rcpl.addon.office.internal.impl.JOfficeToolFactory;
 
 import javafx.scene.control.Control;
 
@@ -16,7 +17,7 @@ import javafx.scene.control.Control;
  * @author ramin
  *
  */
-public class WrsToolFactory extends RcplToolFactory {
+public class WrsToolFactory extends JOfficeToolFactory {
 
 	@Override
 	public ITool createTool(final Tool eTool) {

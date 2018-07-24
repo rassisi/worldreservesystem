@@ -52,10 +52,4 @@ public class WrsApplication extends RcplApplication {
 		return "wrs";
 	}
 
-	@Override
-	protected String[] getAdditionalImageCodeBases() {
-		return new String[] {
-				"https://raw.githubusercontent.com/rassisi/worldreservesystem/master/org.wrs.resources/svg/" };
-	}
-
 }
