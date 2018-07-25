@@ -5,7 +5,6 @@ import org.eclipse.rcpl.IRcplUic;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 import org.wrs.rcpl.ui.homepages.AccountHomePage;
-import org.wrs.rcpl.ui.homepages.WrsPreferencesHomePage;
 
 import com.joffice.rcpl.addon.office.internal.JOFactory;
 
@@ -53,8 +52,6 @@ public class WrsFactory extends JOFactory {
 			break;
 		case POWERPOINT:
 			break;
-		case PREFERENCES:
-			return new WrsPreferencesHomePage(uic, model);
 		case SAMPLES:
 			break;
 		case TEMPLATES:

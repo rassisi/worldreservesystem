@@ -94,7 +94,8 @@
       <preferences
           name="Preference 1"
           id="pref1"
-          value="value1"/>
+          value="value1"
+          type="java.lang.String"/>
     </children>
   </allPreferences>
   <allTools>
@@ -3346,6 +3347,11 @@
         image="info"
         type="ABOUT"
         showHomePageButtons="true"/>
+    <children
+        name="Tools Editor"
+        id="toolseditor"
+        image="tools"
+        type="TOOLS_EDITOR"/>
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>

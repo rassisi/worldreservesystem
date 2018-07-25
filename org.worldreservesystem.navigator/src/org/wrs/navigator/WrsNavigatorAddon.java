@@ -18,7 +18,7 @@ import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.RcplAddon;
 import org.eclipse.rcpl.migration.RcplAbstractMigration;
 import org.eclipse.rcpl.navigator.addon.AbstractNavigatorAddon;
-import org.eclipse.rcpl.navigator.tree.model.manager.UCEmfTreeModelManagerImpl;
+import org.eclipse.rcpl.navigator.tree.model.manager.NavigatorTreeManagerImpl;
 import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorMigration;
 
 /**
@@ -59,7 +59,7 @@ public class WrsNavigatorAddon extends AbstractNavigatorAddon implements INaviga
 
 	@Override
 	public INavigatorTreeManager createNavigatorTreemanager() {
-		return new UCEmfTreeModelManagerImpl();
+		return new NavigatorTreeManagerImpl();
 	}
 
 }
