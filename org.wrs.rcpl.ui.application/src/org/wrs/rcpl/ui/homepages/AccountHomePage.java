@@ -10,23 +10,35 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.homepages;
 
+import org.eclipse.rcpl.IHomePage;
 import org.eclipse.rcpl.IRcplUic;
-import org.eclipse.rcpl.homepages.DefaultPreferencesHomePage;
+import org.eclipse.rcpl.homepages.AbstractHomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
+import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
+
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
 
 /**
  * @author ramin
- *
+ * 
  */
-public class WrsPreferencesHomePage extends DefaultPreferencesHomePage {
+public class AccountHomePage extends AbstractHomePage implements IHomePage {
 
-	/**
-	 * @param uic
-	 * @param title
-	 * @param image
-	 */
-	public WrsPreferencesHomePage(IRcplUic uic, HomePage modelHomePage) {
+	public AccountHomePage(IRcplUic uic, HomePage modelHomePage) {
 		super(uic, modelHomePage);
 	}
 
+	@Override
+	protected void doCreateContent(StackPane contentPane) {
+		Label l = new Label("Account");
+		l.setAlignment(Pos.CENTER);
+		getContentPane().getChildren().add(l);
+	}
+
+	@Override
+	public HomePageType getId() {
+		return HomePageType.CUSTOM;
+	}
 }

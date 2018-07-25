@@ -87,7 +87,16 @@
       <ribbonToolBar/>
     </children>
   </allPerspectives>
-  <allPreferences/>
+  <allPreferences
+      image="folder">
+    <children
+        image="folder">
+      <preferences
+          name="Preference 1"
+          id="pref1"
+          value="value1"/>
+    </children>
+  </allPreferences>
   <allTools>
     <toolgroupChildren
         name="File"
@@ -3314,8 +3323,9 @@
         showHomePageButtons="true"/>
     <children
         name="Account"
-        id="ACCOUNT"
+        id="HOME_PAGE_ACCOUNT"
         image="account"
+        type="CUSTOM"
         showHomePageButtons="true"/>
     <children
         name="Preferences"
