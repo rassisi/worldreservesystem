@@ -38,8 +38,7 @@
         name="Overview"
         id="OVERVIEW"
         image="internet_cloud">
-      <sideToolBar
-          tools="//@allTools/@toolChildren.0"/>
+      <sideToolBar/>
       <topToolBar/>
       <quickToolBar/>
       <ribbonToolBar/>
@@ -3311,12 +3310,16 @@
         image="internet_cloud"
         toolTip="Overview"
         type="OVERVIEW"
-        perspective="//@allPerspectives/@children.0"/>
+        perspective="//@allPerspectives/@children.0"
+        showHomePageButtons="true"/>
     <children
-        name="Samples"
-        id="HOME_PAGE_SAMPLES"
-        image="office_samples"
-        type="SAMPLES"/>
+        name="Account"/>
+    <children
+        name="Preferences"
+        id="HOME_PAGE_PREFERENCES"
+        image="preferences_clipart"
+        type="PREFERENCES"
+        navigator="true"/>
     <children
         name="What´s new"
         id="HOME_PAGE_WHATS_NEW"
@@ -3327,18 +3330,7 @@
         id="HOME_PAGE_ABOUT"
         image="info"
         type="ABOUT"/>
-    <children
-        name="Templates"
-        id="HOME_PAGE_TEMPLATES"
-        image="templates"
-        type="TEMPLATES"/>
-    <children
-        name="Preferences"
-        id="HOME_PAGE_PREFERENCES"
-        image="preferences_clipart"
-        type="PREFERENCES"/>
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>
 </rcpl:RCPL>
- 

@@ -27,7 +27,7 @@ public class WrsWebHomePage extends DefaultWebHomePage {
 	private WebView webView;
 
 	public WrsWebHomePage(IRcplUic uic, HomePage modelHomePage, Pane pane, String url) {
-		super(uic, modelHomePage, pane, "");
+		super(uic, modelHomePage, "");
 		webView.getEngine().load(url);
 	}
 

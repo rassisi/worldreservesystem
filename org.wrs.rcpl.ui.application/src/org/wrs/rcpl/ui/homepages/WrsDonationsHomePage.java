@@ -17,7 +17,6 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 /**
@@ -26,8 +25,8 @@ import javafx.scene.layout.StackPane;
  */
 public class WrsDonationsHomePage extends DefaultDonationsHomePage implements IHomePage {
 
-	public WrsDonationsHomePage(IRcplUic uic, HomePage modelHomePage, Pane controlPane) {
-		super(uic, modelHomePage, controlPane);
+	public WrsDonationsHomePage(IRcplUic uic, HomePage modelHomePage) {
+		super(uic, modelHomePage);
 	}
 
 	@Override

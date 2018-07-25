@@ -17,7 +17,6 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 /**
@@ -28,8 +27,8 @@ public class WrsSamplesHomePage extends DefaultSamplesHomePage implements IHomeP
 
 	protected IHomePage homePage;
 
-	public WrsSamplesHomePage(IRcplUic uic, HomePage modelHomePage, Pane pane) {
-		super(uic, modelHomePage, pane);
+	public WrsSamplesHomePage(IRcplUic uic, HomePage modelHomePage) {
+		super(uic, modelHomePage);
 	}
 
 	@Override

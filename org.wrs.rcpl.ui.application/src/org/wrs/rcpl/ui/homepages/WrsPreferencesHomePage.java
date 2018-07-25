@@ -18,7 +18,6 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import javafx.scene.Node;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.MediaView;
 
@@ -41,8 +40,8 @@ public class WrsPreferencesHomePage extends DefaultPreferencesHomePage {
 	 * @param title
 	 * @param image
 	 */
-	public WrsPreferencesHomePage(IRcplUic uic, HomePage modelHomePage, Pane pane) {
-		super(uic, modelHomePage, pane);
+	public WrsPreferencesHomePage(IRcplUic uic, HomePage modelHomePage) {
+		super(uic, modelHomePage);
 
 	}
 

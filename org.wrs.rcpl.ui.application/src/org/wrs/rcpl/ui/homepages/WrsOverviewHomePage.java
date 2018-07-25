@@ -15,7 +15,6 @@ import org.eclipse.rcpl.homepages.DefaultOverviewHomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 
 import javafx.scene.Node;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 /**
@@ -29,8 +28,8 @@ public class WrsOverviewHomePage extends DefaultOverviewHomePage {
 	 * @param title
 	 * @param image
 	 */
-	public WrsOverviewHomePage(IRcplUic uic, HomePage modelHomePage, Pane pane) {
-		super(uic, modelHomePage, pane);
+	public WrsOverviewHomePage(IRcplUic uic, HomePage modelHomePage) {
+		super(uic, modelHomePage);
 	}
 
 	@Override
