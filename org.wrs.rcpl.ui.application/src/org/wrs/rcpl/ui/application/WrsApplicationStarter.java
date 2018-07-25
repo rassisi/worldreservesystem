@@ -3,15 +3,16 @@ package org.wrs.rcpl.ui.application;
 import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplFactory;
 import org.eclipse.rcpl.IToolFactory;
-import org.eclipse.rcpl.application.DefaultApplicationStarter;
 import org.eclipse.rcpl.login.RcplLogin;
 import org.eclipse.rcpl.ui.controler.RcplUic;
+
+import com.joffice.rcpl.addon.office.application.JOApplicationStarter;
 
 /**
  * @author Ramin
  *
  */
-public class WrsApplicationStarter extends DefaultApplicationStarter {
+public class WrsApplicationStarter extends JOApplicationStarter {
 
 	public WrsApplicationStarter(IRcplApplicationProvider applicationProvider) {
 		super(applicationProvider);
