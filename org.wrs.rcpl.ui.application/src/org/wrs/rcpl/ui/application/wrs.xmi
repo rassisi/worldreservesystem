@@ -3313,23 +3313,29 @@
         perspective="//@allPerspectives/@children.0"
         showHomePageButtons="true"/>
     <children
-        name="Account"/>
+        name="Account"
+        id="ACCOUNT"
+        image="account"
+        showHomePageButtons="true"/>
     <children
         name="Preferences"
         id="HOME_PAGE_PREFERENCES"
         image="preferences_clipart"
         type="PREFERENCES"
-        navigator="true"/>
+        navigator="true"
+        showHomePageButtons="true"/>
     <children
         name="What´s new"
         id="HOME_PAGE_WHATS_NEW"
         image="office_whatsnew"
-        type="WHATS_NEW"/>
+        type="WHATS_NEW"
+        showHomePageButtons="true"/>
     <children
         name="About"
         id="HOME_PAGE_ABOUT"
         image="info"
-        type="ABOUT"/>
+        type="ABOUT"
+        showHomePageButtons="true"/>
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>
