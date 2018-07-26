@@ -3350,7 +3350,7 @@
     <children
         name="Tools Editor"
         id="toolseditor"
-        image="tools"
+        image="tool"
         type="TOOLS_EDITOR"/>
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>

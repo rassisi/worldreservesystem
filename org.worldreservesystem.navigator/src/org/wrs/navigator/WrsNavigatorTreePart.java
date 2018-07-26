@@ -2,7 +2,7 @@ package org.wrs.navigator;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.model.cdo.client.RcplSession;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorTreePart;
+import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorTreePart;
 
 /**
  * @author Ramin

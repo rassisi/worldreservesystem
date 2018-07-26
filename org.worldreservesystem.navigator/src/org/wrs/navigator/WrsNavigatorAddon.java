@@ -18,8 +18,8 @@ import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.RcplAddon;
 import org.eclipse.rcpl.migration.RcplAbstractMigration;
 import org.eclipse.rcpl.navigator.addon.AbstractNavigatorAddon;
-import org.eclipse.rcpl.navigator.tree.model.manager.NavigatorTreeManagerImpl;
-import org.eclipse.rcpl.navigator.tree.parts.DefaultNavigatorMigration;
+import org.eclipse.rcpl.navigator.details.NavigatorTreeManagerImpl;
+import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorMigration;
 
 /**
  * @author Ramin
