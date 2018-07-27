@@ -11,27 +11,10 @@
     versionDescription="Reengineering 80 %">
   <allAddons>
     <children
-        name="Configure Tools"
-        id="SETUP_TOOLS_ADDON"
-        image="setup"
-        leaf="true"
-        className="org.eclipse.rcpl.tools.addon.EToolsAddon"/>
-    <children
-        name="JOffice Browser"
-        id="JOFFICE_NAVIGATOR_ADDON"
-        image="navigator"
-        leaf="true"
-        className="com.joffice.rcpl.addon.navigator.JONavigatorAddon"/>
-    <children
         name="JOffice Addon"
         id="JOFFICE_ADDON"
         image="joffice"
         className="com.joffice.rcpl.addon.office.JORcplAddon"/>
-    <children
-        name="Default Navigator"
-        id="DEFAULT_EMF_NAVIGATOR"
-        image="navigator"
-        className="org.eclipse.rcpl.navigator.addon.DefaultNavigatorAddon"/>
   </allAddons>
   <allPerspectives>
     <children
