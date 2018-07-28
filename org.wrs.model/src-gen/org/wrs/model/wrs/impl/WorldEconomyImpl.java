@@ -4,15 +4,15 @@ package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.NationalEconomies;
+import org.wrs.model.wrs.StatisticsSource;
 import org.wrs.model.wrs.WorldEconomy;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -25,21 +25,12 @@ import org.wrs.model.wrs.WrsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getNationaleconomies <em>Nationaleconomies</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getStatisticssource <em>Statisticssource</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WorldEconomyImpl extends MinimalEObjectImpl.Container implements WorldEconomy {
-	/**
-	 * The cached value of the '{@link #getNationaleconomies() <em>Nationaleconomies</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNationaleconomies()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<NationalEconomies> nationaleconomies;
-
+public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,12 +55,65 @@ public class WorldEconomyImpl extends MinimalEObjectImpl.Container implements Wo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<NationalEconomies> getNationaleconomies() {
-		if (nationaleconomies == null) {
-			nationaleconomies = new EObjectResolvingEList<NationalEconomies>(NationalEconomies.class, this,
-					WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES);
+		return (EList<NationalEconomies>) eDynamicGet(WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES,
+				WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatisticsSource getStatisticssource() {
+		return (StatisticsSource) eDynamicGet(WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE,
+				WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStatisticssource(StatisticsSource newStatisticssource, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newStatisticssource, WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE,
+				msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatisticssource(StatisticsSource newStatisticssource) {
+		eDynamicSet(WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE, WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE,
+				newStatisticssource);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
+			return basicSetStatisticssource(null, msgs);
 		}
-		return nationaleconomies;
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -82,6 +126,8 @@ public class WorldEconomyImpl extends MinimalEObjectImpl.Container implements Wo
 		switch (featureID) {
 		case WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES:
 			return getNationaleconomies();
+		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
+			return getStatisticssource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -99,6 +145,9 @@ public class WorldEconomyImpl extends MinimalEObjectImpl.Container implements Wo
 			getNationaleconomies().clear();
 			getNationaleconomies().addAll((Collection<? extends NationalEconomies>) newValue);
 			return;
+		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
+			setStatisticssource((StatisticsSource) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -114,6 +163,9 @@ public class WorldEconomyImpl extends MinimalEObjectImpl.Container implements Wo
 		case WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES:
 			getNationaleconomies().clear();
 			return;
+		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
+			setStatisticssource((StatisticsSource) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -127,7 +179,9 @@ public class WorldEconomyImpl extends MinimalEObjectImpl.Container implements Wo
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES:
-			return nationaleconomies != null && !nationaleconomies.isEmpty();
+			return !getNationaleconomies().isEmpty();
+		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
+			return getStatisticssource() != null;
 		}
 		return super.eIsSet(featureID);
 	}

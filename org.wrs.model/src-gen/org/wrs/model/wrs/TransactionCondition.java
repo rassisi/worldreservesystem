@@ -2,9 +2,8 @@
  */
 package org.wrs.model.wrs;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +20,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getTransactionCondition()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface TransactionCondition extends EObject {
+public interface TransactionCondition extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Formula</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -2,14 +2,8 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.Statistics;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,17 +21,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class StatisticDatasImpl extends MinimalEObjectImpl.Container implements StatisticDatas {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected Statistics children;
-
+public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,17 +46,19 @@ public class StatisticDatasImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Statistics getChildren() {
-		if (children != null && children.eIsProxy()) {
-			InternalEObject oldChildren = (InternalEObject) children;
-			children = (Statistics) eResolveProxy(oldChildren);
-			if (children != oldChildren) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.STATISTIC_DATAS__CHILDREN,
-							oldChildren, children));
-			}
-		}
-		return children;
+		return (Statistics) eDynamicGet(WrsPackage.STATISTIC_DATAS__CHILDREN,
+				WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, true, true);
 	}
 
 	/**
@@ -81,7 +67,8 @@ public class StatisticDatasImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public Statistics basicGetChildren() {
-		return children;
+		return (Statistics) eDynamicGet(WrsPackage.STATISTIC_DATAS__CHILDREN,
+				WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, false, true);
 	}
 
 	/**
@@ -90,11 +77,7 @@ public class StatisticDatasImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void setChildren(Statistics newChildren) {
-		Statistics oldChildren = children;
-		children = newChildren;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.STATISTIC_DATAS__CHILDREN, oldChildren,
-					children));
+		eDynamicSet(WrsPackage.STATISTIC_DATAS__CHILDREN, WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, newChildren);
 	}
 
 	/**
@@ -152,7 +135,7 @@ public class StatisticDatasImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.STATISTIC_DATAS__CHILDREN:
-			return children != null;
+			return basicGetChildren() != null;
 		}
 		return super.eIsSet(featureID);
 	}

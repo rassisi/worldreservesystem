@@ -7,9 +7,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.wrs.model.wrs.Individual;
 import org.wrs.model.wrs.LegalEntity;
 import org.wrs.model.wrs.WrsPackage;
@@ -29,26 +26,6 @@ import org.wrs.model.wrs.WrsPackage;
  * @generated
  */
 public class IndividualImpl extends IdentityImpl implements Individual {
-	/**
-	 * The cached value of the '{@link #getWorksFor() <em>Works For</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWorksFor()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LegalEntity> worksFor;
-
-	/**
-	 * The cached value of the '{@link #getLegalPartnerOf() <em>Legal Partner Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLegalPartnerOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LegalEntity> legalPartnerOf;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,12 +50,10 @@ public class IndividualImpl extends IdentityImpl implements Individual {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<LegalEntity> getWorksFor() {
-		if (worksFor == null) {
-			worksFor = new EObjectResolvingEList<LegalEntity>(LegalEntity.class, this,
-					WrsPackage.INDIVIDUAL__WORKS_FOR);
-		}
-		return worksFor;
+		return (EList<LegalEntity>) eDynamicGet(WrsPackage.INDIVIDUAL__WORKS_FOR,
+				WrsPackage.Literals.INDIVIDUAL__WORKS_FOR, true, true);
 	}
 
 	/**
@@ -86,12 +61,10 @@ public class IndividualImpl extends IdentityImpl implements Individual {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<LegalEntity> getLegalPartnerOf() {
-		if (legalPartnerOf == null) {
-			legalPartnerOf = new EObjectResolvingEList<LegalEntity>(LegalEntity.class, this,
-					WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF);
-		}
-		return legalPartnerOf;
+		return (EList<LegalEntity>) eDynamicGet(WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF,
+				WrsPackage.Literals.INDIVIDUAL__LEGAL_PARTNER_OF, true, true);
 	}
 
 	/**
@@ -158,9 +131,9 @@ public class IndividualImpl extends IdentityImpl implements Individual {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.INDIVIDUAL__WORKS_FOR:
-			return worksFor != null && !worksFor.isEmpty();
+			return !getWorksFor().isEmpty();
 		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
-			return legalPartnerOf != null && !legalPartnerOf.isEmpty();
+			return !getLegalPartnerOf().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

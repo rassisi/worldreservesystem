@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getAbstractTransaction()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface AbstractTransaction extends EObject {
+public interface AbstractTransaction extends CDOObject {
 } // AbstractTransaction

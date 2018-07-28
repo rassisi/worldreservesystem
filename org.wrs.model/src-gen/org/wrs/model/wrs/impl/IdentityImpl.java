@@ -2,13 +2,8 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -25,7 +20,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public abstract class IdentityImpl extends MinimalEObjectImpl.Container implements Identity {
+public abstract class IdentityImpl extends CDOObjectImpl implements Identity {
 	/**
 	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,16 +30,6 @@ public abstract class IdentityImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected static final String UUID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected String uuid = UUID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +55,18 @@ public abstract class IdentityImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getUUID() {
-		return uuid;
+		return (String) eDynamicGet(WrsPackage.IDENTITY__UUID, WrsPackage.Literals.IDENTITY__UUID, true, true);
 	}
 
 	/**
@@ -80,10 +75,7 @@ public abstract class IdentityImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public void setUUID(String newUUID) {
-		String oldUUID = uuid;
-		uuid = newUUID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.IDENTITY__UUID, oldUUID, uuid));
+		eDynamicSet(WrsPackage.IDENTITY__UUID, WrsPackage.Literals.IDENTITY__UUID, newUUID);
 	}
 
 	/**
@@ -139,26 +131,9 @@ public abstract class IdentityImpl extends MinimalEObjectImpl.Container implemen
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.IDENTITY__UUID:
-			return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
+			return UUID_EDEFAULT == null ? getUUID() != null : !UUID_EDEFAULT.equals(getUUID());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (UUID: ");
-		result.append(uuid);
-		result.append(')');
-		return result.toString();
 	}
 
 } //IdentityImpl

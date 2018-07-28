@@ -2,15 +2,11 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.WrsPackage;
@@ -28,17 +24,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class CountriesImpl extends MinimalEObjectImpl.Container implements Countries {
-	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountry()
-	 * @generated
-	 * @ordered
-	 */
-	protected Country country;
-
+public class CountriesImpl extends CDOObjectImpl implements Countries {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,8 +49,18 @@ public class CountriesImpl extends MinimalEObjectImpl.Container implements Count
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Country getCountry() {
-		return country;
+		return (Country) eDynamicGet(WrsPackage.COUNTRIES__COUNTRY, WrsPackage.Literals.COUNTRIES__COUNTRY, true, true);
 	}
 
 	/**
@@ -73,16 +69,7 @@ public class CountriesImpl extends MinimalEObjectImpl.Container implements Count
 	 * @generated
 	 */
 	public NotificationChain basicSetCountry(Country newCountry, NotificationChain msgs) {
-		Country oldCountry = country;
-		country = newCountry;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.COUNTRIES__COUNTRY, oldCountry, newCountry);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newCountry, WrsPackage.COUNTRIES__COUNTRY, msgs);
 		return msgs;
 	}
 
@@ -92,20 +79,7 @@ public class CountriesImpl extends MinimalEObjectImpl.Container implements Count
 	 * @generated
 	 */
 	public void setCountry(Country newCountry) {
-		if (newCountry != country) {
-			NotificationChain msgs = null;
-			if (country != null)
-				msgs = ((InternalEObject) country).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.COUNTRIES__COUNTRY, null, msgs);
-			if (newCountry != null)
-				msgs = ((InternalEObject) newCountry).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.COUNTRIES__COUNTRY, null, msgs);
-			msgs = basicSetCountry(newCountry, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.COUNTRIES__COUNTRY, newCountry,
-					newCountry));
+		eDynamicSet(WrsPackage.COUNTRIES__COUNTRY, WrsPackage.Literals.COUNTRIES__COUNTRY, newCountry);
 	}
 
 	/**
@@ -175,7 +149,7 @@ public class CountriesImpl extends MinimalEObjectImpl.Container implements Count
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.COUNTRIES__COUNTRY:
-			return country != null;
+			return getCountry() != null;
 		}
 		return super.eIsSet(featureID);
 	}

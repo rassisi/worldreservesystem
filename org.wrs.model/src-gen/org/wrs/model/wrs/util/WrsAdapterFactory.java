@@ -237,6 +237,11 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseStatisticsSource(StatisticsSource object) {
+			return createStatisticsSourceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -728,6 +733,20 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCountryRegionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.StatisticsSource <em>Statistics Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.StatisticsSource
+	 * @generated
+	 */
+	public Adapter createStatisticsSourceAdapter() {
 		return null;
 	}
 

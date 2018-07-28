@@ -3,9 +3,7 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractTransaction;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -16,7 +14,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AbstractTransactionImpl extends MinimalEObjectImpl.Container implements AbstractTransaction {
+public class AbstractTransactionImpl extends CDOObjectImpl implements AbstractTransaction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,6 +32,16 @@ public class AbstractTransactionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.ABSTRACT_TRANSACTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 } //AbstractTransactionImpl

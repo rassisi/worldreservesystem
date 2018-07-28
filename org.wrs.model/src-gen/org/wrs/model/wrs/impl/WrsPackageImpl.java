@@ -37,6 +37,7 @@ import org.wrs.model.wrs.RegisteredAssets;
 import org.wrs.model.wrs.SignedInput;
 import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.Statistics;
+import org.wrs.model.wrs.StatisticsSource;
 import org.wrs.model.wrs.SupplyControl;
 import org.wrs.model.wrs.Thing;
 import org.wrs.model.wrs.Transaction;
@@ -294,6 +295,13 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	private EClass countryRegionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass statisticsSourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -594,6 +602,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EReference getWorldEconomy_Nationaleconomies() {
 		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorldEconomy_Statisticssource() {
+		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1141,6 +1158,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStatisticsSource() {
+		return statisticsSourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getAssetType() {
 		return assetTypeEEnum;
 	}
@@ -1221,6 +1247,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		worldEconomyEClass = createEClass(WORLD_ECONOMY);
 		createEReference(worldEconomyEClass, WORLD_ECONOMY__NATIONALECONOMIES);
+		createEReference(worldEconomyEClass, WORLD_ECONOMY__STATISTICSSOURCE);
 
 		nationalEconomiesEClass = createEClass(NATIONAL_ECONOMIES);
 
@@ -1309,6 +1336,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEReference(statisticDatasEClass, STATISTIC_DATAS__CHILDREN);
 
 		countryRegionEClass = createEClass(COUNTRY_REGION);
+
+		statisticsSourceEClass = createEClass(STATISTICS_SOURCE);
 
 		// Create enums
 		assetTypeEEnum = createEEnum(ASSET_TYPE);
@@ -1421,6 +1450,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getWorldEconomy_Nationaleconomies(), this.getNationalEconomies(), null, "nationaleconomies",
 				null, 1, -1, WorldEconomy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorldEconomy_Statisticssource(), this.getStatisticsSource(), null, "statisticssource", null,
+				0, 1, WorldEconomy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nationalEconomiesEClass, NationalEconomies.class, "NationalEconomies", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1587,6 +1619,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(countryRegionEClass, CountryRegion.class, "CountryRegion", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(statisticsSourceEClass, StatisticsSource.class, "StatisticsSource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals

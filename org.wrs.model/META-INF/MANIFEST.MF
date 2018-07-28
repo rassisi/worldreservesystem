@@ -12,6 +12,7 @@ Export-Package: org.wrs.model.wrs,
  org.wrs.model.wrs.impl,
  org.wrs.model.wrs.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.cdo;visibility:=reexport,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;bundle-version="2.14.0"
 Bundle-ActivationPolicy: lazy

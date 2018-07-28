@@ -2,9 +2,8 @@
  */
 package org.wrs.model.wrs;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getNodes()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Nodes extends EObject {
+public interface Nodes extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Children</b></em>' reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.Node}.

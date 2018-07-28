@@ -57,71 +57,73 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		case WrsPackage.WRS:
-			return createWRS();
+			return (EObject) createWRS();
 		case WrsPackage.TREASURY:
-			return createTreasury();
+			return (EObject) createTreasury();
 		case WrsPackage.TRANSFER_VAULT:
-			return createTransferVault();
+			return (EObject) createTransferVault();
 		case WrsPackage.GENESIS:
-			return createGenesis();
+			return (EObject) createGenesis();
 		case WrsPackage.ASSET:
-			return createAsset();
+			return (EObject) createAsset();
 		case WrsPackage.WORLD_ECONOMY:
-			return createWorldEconomy();
+			return (EObject) createWorldEconomy();
 		case WrsPackage.NATIONAL_ECONOMIES:
-			return createNationalEconomies();
+			return (EObject) createNationalEconomies();
 		case WrsPackage.COUNTRY:
-			return createCountry();
+			return (EObject) createCountry();
 		case WrsPackage.FIAT_CURRENCY:
-			return createFiatCurrency();
+			return (EObject) createFiatCurrency();
 		case WrsPackage.THING:
-			return createThing();
+			return (EObject) createThing();
 		case WrsPackage.INDIVIDUAL:
-			return createIndividual();
+			return (EObject) createIndividual();
 		case WrsPackage.LEGAL_ENTITY:
-			return createLegalEntity();
+			return (EObject) createLegalEntity();
 		case WrsPackage.ACCOUNT:
-			return createAccount();
+			return (EObject) createAccount();
 		case WrsPackage.SUPPLY_CONTROL:
-			return createSupplyControl();
+			return (EObject) createSupplyControl();
 		case WrsPackage.ACCOUNTS:
-			return createAccounts();
+			return (EObject) createAccounts();
 		case WrsPackage.TRANSACTION:
-			return createTransaction();
+			return (EObject) createTransaction();
 		case WrsPackage.REGISTERED_ASSETS:
-			return createRegisteredAssets();
+			return (EObject) createRegisteredAssets();
 		case WrsPackage.ABSTRACT_ACCOUNT:
-			return createAbstractAccount();
+			return (EObject) createAbstractAccount();
 		case WrsPackage.TRANSACTION_COLLECTION:
-			return createTransactionCollection();
+			return (EObject) createTransactionCollection();
 		case WrsPackage.NODE:
-			return createNode();
+			return (EObject) createNode();
 		case WrsPackage.NETWORK_ENGINE:
-			return createNetworkEngine();
+			return (EObject) createNetworkEngine();
 		case WrsPackage.COUNTRIES:
-			return createCountries();
+			return (EObject) createCountries();
 		case WrsPackage.NODES:
-			return createNodes();
+			return (EObject) createNodes();
 		case WrsPackage.IDENTITIES:
-			return createIdentities();
+			return (EObject) createIdentities();
 		case WrsPackage.TRANSACTIONS:
-			return createTransactions();
+			return (EObject) createTransactions();
 		case WrsPackage.ABSTRACT_TRANSACTION:
-			return createAbstractTransaction();
+			return (EObject) createAbstractTransaction();
 		case WrsPackage.NODE_ACCOUNT:
-			return createNodeAccount();
+			return (EObject) createNodeAccount();
 		case WrsPackage.TRANSACTION_CONDITIONS:
-			return createTransactionConditions();
+			return (EObject) createTransactionConditions();
 		case WrsPackage.TRANSACTION_CONDITION:
-			return createTransactionCondition();
+			return (EObject) createTransactionCondition();
 		case WrsPackage.SIGNED_INPUT:
-			return createSignedInput();
+			return (EObject) createSignedInput();
 		case WrsPackage.STATISTICS:
-			return createStatistics();
+			return (EObject) createStatistics();
 		case WrsPackage.STATISTIC_DATAS:
-			return createStatisticDatas();
+			return (EObject) createStatisticDatas();
 		case WrsPackage.COUNTRY_REGION:
-			return createCountryRegion();
+			return (EObject) createCountryRegion();
+		case WrsPackage.STATISTICS_SOURCE:
+			return (EObject) createStatisticsSource();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -493,6 +495,16 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public CountryRegion createCountryRegion() {
 		CountryRegionImpl countryRegion = new CountryRegionImpl();
 		return countryRegion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatisticsSource createStatisticsSource() {
+		StatisticsSourceImpl statisticsSource = new StatisticsSourceImpl();
+		return statisticsSource;
 	}
 
 	/**

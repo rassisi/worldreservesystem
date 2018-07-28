@@ -52,6 +52,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="WorldEconomy">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationaleconomies" lowerBound="1"
         upperBound="-1" eType="#//NationalEconomies"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticssource" eType="#//StatisticsSource"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NationalEconomies"/>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
@@ -162,4 +164,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" eType="#//Statistics"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CountryRegion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticsSource"/>
 </ecore:EPackage>

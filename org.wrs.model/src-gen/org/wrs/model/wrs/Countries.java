@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getCountries()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Countries extends EObject {
+public interface Countries extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Country</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

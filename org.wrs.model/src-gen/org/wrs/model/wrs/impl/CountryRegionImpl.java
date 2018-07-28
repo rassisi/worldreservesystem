@@ -3,9 +3,7 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.CountryRegion;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -16,7 +14,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class CountryRegionImpl extends MinimalEObjectImpl.Container implements CountryRegion {
+public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,6 +32,16 @@ public class CountryRegionImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.COUNTRY_REGION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 } //CountryRegionImpl

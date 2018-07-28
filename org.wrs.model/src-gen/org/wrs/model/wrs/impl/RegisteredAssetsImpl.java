@@ -10,12 +10,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.RegisteredAssets;
 import org.wrs.model.wrs.WrsPackage;
@@ -33,17 +30,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class RegisteredAssetsImpl extends MinimalEObjectImpl.Container implements RegisteredAssets {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Asset> children;
-
+public class RegisteredAssetsImpl extends CDOObjectImpl implements RegisteredAssets {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,11 +55,20 @@ public class RegisteredAssetsImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<Asset> getChildren() {
-		if (children == null) {
-			children = new EObjectContainmentEList<Asset>(Asset.class, this, WrsPackage.REGISTERED_ASSETS__CHILDREN);
-		}
-		return children;
+		return (EList<Asset>) eDynamicGet(WrsPackage.REGISTERED_ASSETS__CHILDREN,
+				WrsPackage.Literals.REGISTERED_ASSETS__CHILDREN, true, true);
 	}
 
 	/**
@@ -144,7 +140,7 @@ public class RegisteredAssetsImpl extends MinimalEObjectImpl.Container implement
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.REGISTERED_ASSETS__CHILDREN:
-			return children != null && !children.isEmpty();
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

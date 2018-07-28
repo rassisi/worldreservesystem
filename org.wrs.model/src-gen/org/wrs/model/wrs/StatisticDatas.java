@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getStatisticDatas()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface StatisticDatas extends EObject {
+public interface StatisticDatas extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Children</b></em>' reference.
 	 * <!-- begin-user-doc -->

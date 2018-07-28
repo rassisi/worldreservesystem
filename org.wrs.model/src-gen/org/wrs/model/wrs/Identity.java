@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getIdentity()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface Identity extends EObject {
+public interface Identity extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>UUID</b></em>' attribute.
 	 * <!-- begin-user-doc -->

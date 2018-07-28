@@ -2,13 +2,7 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.Thing;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,16 +21,6 @@ import org.wrs.model.wrs.WrsPackage;
  * @generated
  */
 public class ThingImpl extends IdentityImpl implements Thing {
-	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBelongsTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected Identity belongsTo;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,16 +46,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * @generated
 	 */
 	public Identity getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject) belongsTo;
-			belongsTo = (Identity) eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.THING__BELONGS_TO,
-							oldBelongsTo, belongsTo));
-			}
-		}
-		return belongsTo;
+		return (Identity) eDynamicGet(WrsPackage.THING__BELONGS_TO, WrsPackage.Literals.THING__BELONGS_TO, true, true);
 	}
 
 	/**
@@ -80,7 +55,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * @generated
 	 */
 	public Identity basicGetBelongsTo() {
-		return belongsTo;
+		return (Identity) eDynamicGet(WrsPackage.THING__BELONGS_TO, WrsPackage.Literals.THING__BELONGS_TO, false, true);
 	}
 
 	/**
@@ -89,11 +64,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * @generated
 	 */
 	public void setBelongsTo(Identity newBelongsTo) {
-		Identity oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.THING__BELONGS_TO, oldBelongsTo,
-					belongsTo));
+		eDynamicSet(WrsPackage.THING__BELONGS_TO, WrsPackage.Literals.THING__BELONGS_TO, newBelongsTo);
 	}
 
 	/**
@@ -151,7 +122,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.THING__BELONGS_TO:
-			return belongsTo != null;
+			return basicGetBelongsTo() != null;
 		}
 		return super.eIsSet(featureID);
 	}

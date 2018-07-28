@@ -3,18 +3,9 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.Transaction;
@@ -37,26 +28,6 @@ import org.wrs.model.wrs.WrsPackage;
  */
 public class TransactionImpl extends AbstractTransactionImpl implements Transaction {
 	/**
-	 * The cached value of the '{@link #getAssets() <em>Assets</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssets()
-	 * @generated
-	 * @ordered
-	 */
-	protected Asset assets;
-
-	/**
-	 * The cached value of the '{@link #getTransactions() <em>Transactions</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTransactions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<AbstractAccount> transactions;
-
-	/**
 	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,16 +36,6 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @ordered
 	 */
 	protected static final String DATA_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getData()
-	 * @generated
-	 * @ordered
-	 */
-	protected String data = DATA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,16 +62,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @generated
 	 */
 	public Asset getAssets() {
-		if (assets != null && assets.eIsProxy()) {
-			InternalEObject oldAssets = (InternalEObject) assets;
-			assets = (Asset) eResolveProxy(oldAssets);
-			if (assets != oldAssets) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.TRANSACTION__ASSETS, oldAssets,
-							assets));
-			}
-		}
-		return assets;
+		return (Asset) eDynamicGet(WrsPackage.TRANSACTION__ASSETS, WrsPackage.Literals.TRANSACTION__ASSETS, true, true);
 	}
 
 	/**
@@ -119,7 +71,8 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @generated
 	 */
 	public Asset basicGetAssets() {
-		return assets;
+		return (Asset) eDynamicGet(WrsPackage.TRANSACTION__ASSETS, WrsPackage.Literals.TRANSACTION__ASSETS, false,
+				true);
 	}
 
 	/**
@@ -128,10 +81,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @generated
 	 */
 	public void setAssets(Asset newAssets) {
-		Asset oldAssets = assets;
-		assets = newAssets;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.TRANSACTION__ASSETS, oldAssets, assets));
+		eDynamicSet(WrsPackage.TRANSACTION__ASSETS, WrsPackage.Literals.TRANSACTION__ASSETS, newAssets);
 	}
 
 	/**
@@ -139,12 +89,10 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<AbstractAccount> getTransactions() {
-		if (transactions == null) {
-			transactions = new EObjectResolvingEList<AbstractAccount>(AbstractAccount.class, this,
-					WrsPackage.TRANSACTION__TRANSACTIONS);
-		}
-		return transactions;
+		return (EList<AbstractAccount>) eDynamicGet(WrsPackage.TRANSACTION__TRANSACTIONS,
+				WrsPackage.Literals.TRANSACTION__TRANSACTIONS, true, true);
 	}
 
 	/**
@@ -153,7 +101,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @generated
 	 */
 	public String getData() {
-		return data;
+		return (String) eDynamicGet(WrsPackage.TRANSACTION__DATA, WrsPackage.Literals.TRANSACTION__DATA, true, true);
 	}
 
 	/**
@@ -162,10 +110,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @generated
 	 */
 	public void setData(String newData) {
-		String oldData = data;
-		data = newData;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.TRANSACTION__DATA, oldData, data));
+		eDynamicSet(WrsPackage.TRANSACTION__DATA, WrsPackage.Literals.TRANSACTION__DATA, newData);
 	}
 
 	/**
@@ -241,30 +186,13 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.TRANSACTION__ASSETS:
-			return assets != null;
+			return basicGetAssets() != null;
 		case WrsPackage.TRANSACTION__TRANSACTIONS:
-			return transactions != null && !transactions.isEmpty();
+			return !getTransactions().isEmpty();
 		case WrsPackage.TRANSACTION__DATA:
-			return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
+			return DATA_EDEFAULT == null ? getData() != null : !DATA_EDEFAULT.equals(getData());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (data: ");
-		result.append(data);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TransactionImpl

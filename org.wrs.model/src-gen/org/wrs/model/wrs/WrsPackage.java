@@ -480,13 +480,22 @@ public interface WrsPackage extends EPackage {
 	int WORLD_ECONOMY__NATIONALECONOMIES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Statisticssource</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__STATISTICSSOURCE = 1;
+
+	/**
 	 * The number of structural features of the '<em>World Economy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY_FEATURE_COUNT = 1;
+	int WORLD_ECONOMY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>World Economy</em>' class.
@@ -1596,6 +1605,34 @@ public interface WrsPackage extends EPackage {
 	int COUNTRY_REGION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.wrs.model.wrs.impl.StatisticsSourceImpl <em>Statistics Source</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.model.wrs.impl.StatisticsSourceImpl
+	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getStatisticsSource()
+	 * @generated
+	 */
+	int STATISTICS_SOURCE = 34;
+
+	/**
+	 * The number of structural features of the '<em>Statistics Source</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Statistics Source</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.AssetType <em>Asset Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1603,7 +1640,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getAssetType()
 	 * @generated
 	 */
-	int ASSET_TYPE = 34;
+	int ASSET_TYPE = 35;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.LegalEntityType <em>Legal Entity Type</em>}' enum.
@@ -1613,7 +1650,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getLegalEntityType()
 	 * @generated
 	 */
-	int LEGAL_ENTITY_TYPE = 35;
+	int LEGAL_ENTITY_TYPE = 36;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.InputValueType <em>Input Value Type</em>}' enum.
@@ -1623,7 +1660,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getInputValueType()
 	 * @generated
 	 */
-	int INPUT_VALUE_TYPE = 36;
+	int INPUT_VALUE_TYPE = 37;
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.WRS <em>WRS</em>}'.
@@ -1880,6 +1917,17 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWorldEconomy_Nationaleconomies();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.model.wrs.WorldEconomy#getStatisticssource <em>Statisticssource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Statisticssource</em>'.
+	 * @see org.wrs.model.wrs.WorldEconomy#getStatisticssource()
+	 * @see #getWorldEconomy()
+	 * @generated
+	 */
+	EReference getWorldEconomy_Statisticssource();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.NationalEconomies <em>National Economies</em>}'.
@@ -2514,6 +2562,16 @@ public interface WrsPackage extends EPackage {
 	EClass getCountryRegion();
 
 	/**
+	 * Returns the meta object for class '{@link org.wrs.model.wrs.StatisticsSource <em>Statistics Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistics Source</em>'.
+	 * @see org.wrs.model.wrs.StatisticsSource
+	 * @generated
+	 */
+	EClass getStatisticsSource();
+
+	/**
 	 * Returns the meta object for enum '{@link org.wrs.model.wrs.AssetType <em>Asset Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2769,6 +2827,14 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WORLD_ECONOMY__NATIONALECONOMIES = eINSTANCE.getWorldEconomy_Nationaleconomies();
+
+		/**
+		 * The meta object literal for the '<em><b>Statisticssource</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORLD_ECONOMY__STATISTICSSOURCE = eINSTANCE.getWorldEconomy_Statisticssource();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.NationalEconomiesImpl <em>National Economies</em>}' class.
@@ -3305,6 +3371,16 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COUNTRY_REGION = eINSTANCE.getCountryRegion();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.StatisticsSourceImpl <em>Statistics Source</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.model.wrs.impl.StatisticsSourceImpl
+		 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getStatisticsSource()
+		 * @generated
+		 */
+		EClass STATISTICS_SOURCE = eINSTANCE.getStatisticsSource();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.model.wrs.AssetType <em>Asset Type</em>}' enum.

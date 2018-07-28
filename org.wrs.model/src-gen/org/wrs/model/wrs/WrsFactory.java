@@ -319,6 +319,15 @@ public interface WrsFactory extends EFactory {
 	CountryRegion createCountryRegion();
 
 	/**
+	 * Returns a new object of class '<em>Statistics Source</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistics Source</em>'.
+	 * @generated
+	 */
+	StatisticsSource createStatisticsSource();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

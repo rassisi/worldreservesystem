@@ -3,20 +3,13 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.CountryRegion;
 import org.wrs.model.wrs.FiatCurrency;
@@ -38,37 +31,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class CountryImpl extends MinimalEObjectImpl.Container implements Country {
-	/**
-	 * The cached value of the '{@link #getFiatcurrency() <em>Fiatcurrency</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFiatcurrency()
-	 * @generated
-	 * @ordered
-	 */
-	protected FiatCurrency fiatcurrency;
-
-	/**
-	 * The cached value of the '{@link #getNationaleconomies() <em>Nationaleconomies</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNationaleconomies()
-	 * @generated
-	 * @ordered
-	 */
-	protected NationalEconomies nationaleconomies;
-
-	/**
-	 * The cached value of the '{@link #getRegions() <em>Regions</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRegions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CountryRegion> regions;
-
+public class CountryImpl extends CDOObjectImpl implements Country {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +56,19 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FiatCurrency getFiatcurrency() {
-		return fiatcurrency;
+		return (FiatCurrency) eDynamicGet(WrsPackage.COUNTRY__FIATCURRENCY, WrsPackage.Literals.COUNTRY__FIATCURRENCY,
+				true, true);
 	}
 
 	/**
@@ -103,16 +77,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * @generated
 	 */
 	public NotificationChain basicSetFiatcurrency(FiatCurrency newFiatcurrency, NotificationChain msgs) {
-		FiatCurrency oldFiatcurrency = fiatcurrency;
-		fiatcurrency = newFiatcurrency;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.COUNTRY__FIATCURRENCY, oldFiatcurrency, newFiatcurrency);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newFiatcurrency, WrsPackage.COUNTRY__FIATCURRENCY, msgs);
 		return msgs;
 	}
 
@@ -122,20 +87,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * @generated
 	 */
 	public void setFiatcurrency(FiatCurrency newFiatcurrency) {
-		if (newFiatcurrency != fiatcurrency) {
-			NotificationChain msgs = null;
-			if (fiatcurrency != null)
-				msgs = ((InternalEObject) fiatcurrency).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.COUNTRY__FIATCURRENCY, null, msgs);
-			if (newFiatcurrency != null)
-				msgs = ((InternalEObject) newFiatcurrency).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.COUNTRY__FIATCURRENCY, null, msgs);
-			msgs = basicSetFiatcurrency(newFiatcurrency, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.COUNTRY__FIATCURRENCY, newFiatcurrency,
-					newFiatcurrency));
+		eDynamicSet(WrsPackage.COUNTRY__FIATCURRENCY, WrsPackage.Literals.COUNTRY__FIATCURRENCY, newFiatcurrency);
 	}
 
 	/**
@@ -144,7 +96,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * @generated
 	 */
 	public NationalEconomies getNationaleconomies() {
-		return nationaleconomies;
+		return (NationalEconomies) eDynamicGet(WrsPackage.COUNTRY__NATIONALECONOMIES,
+				WrsPackage.Literals.COUNTRY__NATIONALECONOMIES, true, true);
 	}
 
 	/**
@@ -153,16 +106,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * @generated
 	 */
 	public NotificationChain basicSetNationaleconomies(NationalEconomies newNationaleconomies, NotificationChain msgs) {
-		NationalEconomies oldNationaleconomies = nationaleconomies;
-		nationaleconomies = newNationaleconomies;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.COUNTRY__NATIONALECONOMIES, oldNationaleconomies, newNationaleconomies);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newNationaleconomies, WrsPackage.COUNTRY__NATIONALECONOMIES, msgs);
 		return msgs;
 	}
 
@@ -172,20 +116,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * @generated
 	 */
 	public void setNationaleconomies(NationalEconomies newNationaleconomies) {
-		if (newNationaleconomies != nationaleconomies) {
-			NotificationChain msgs = null;
-			if (nationaleconomies != null)
-				msgs = ((InternalEObject) nationaleconomies).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.COUNTRY__NATIONALECONOMIES, null, msgs);
-			if (newNationaleconomies != null)
-				msgs = ((InternalEObject) newNationaleconomies).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.COUNTRY__NATIONALECONOMIES, null, msgs);
-			msgs = basicSetNationaleconomies(newNationaleconomies, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.COUNTRY__NATIONALECONOMIES,
-					newNationaleconomies, newNationaleconomies));
+		eDynamicSet(WrsPackage.COUNTRY__NATIONALECONOMIES, WrsPackage.Literals.COUNTRY__NATIONALECONOMIES,
+				newNationaleconomies);
 	}
 
 	/**
@@ -193,11 +125,10 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<CountryRegion> getRegions() {
-		if (regions == null) {
-			regions = new EObjectResolvingEList<CountryRegion>(CountryRegion.class, this, WrsPackage.COUNTRY__REGIONS);
-		}
-		return regions;
+		return (EList<CountryRegion>) eDynamicGet(WrsPackage.COUNTRY__REGIONS, WrsPackage.Literals.COUNTRY__REGIONS,
+				true, true);
 	}
 
 	/**
@@ -287,11 +218,11 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
-			return fiatcurrency != null;
+			return getFiatcurrency() != null;
 		case WrsPackage.COUNTRY__NATIONALECONOMIES:
-			return nationaleconomies != null;
+			return getNationaleconomies() != null;
 		case WrsPackage.COUNTRY__REGIONS:
-			return regions != null && !regions.isEmpty();
+			return !getRegions().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

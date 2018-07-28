@@ -2,14 +2,8 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Genesis;
 import org.wrs.model.wrs.Treasury;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,17 +21,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class GenesisImpl extends MinimalEObjectImpl.Container implements Genesis {
-	/**
-	 * The cached value of the '{@link #getTreasury() <em>Treasury</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTreasury()
-	 * @generated
-	 * @ordered
-	 */
-	protected Treasury treasury;
-
+public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,17 +46,18 @@ public class GenesisImpl extends MinimalEObjectImpl.Container implements Genesis
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Treasury getTreasury() {
-		if (treasury != null && treasury.eIsProxy()) {
-			InternalEObject oldTreasury = (InternalEObject) treasury;
-			treasury = (Treasury) eResolveProxy(oldTreasury);
-			if (treasury != oldTreasury) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.GENESIS__TREASURY, oldTreasury,
-							treasury));
-			}
-		}
-		return treasury;
+		return (Treasury) eDynamicGet(WrsPackage.GENESIS__TREASURY, WrsPackage.Literals.GENESIS__TREASURY, true, true);
 	}
 
 	/**
@@ -81,7 +66,7 @@ public class GenesisImpl extends MinimalEObjectImpl.Container implements Genesis
 	 * @generated
 	 */
 	public Treasury basicGetTreasury() {
-		return treasury;
+		return (Treasury) eDynamicGet(WrsPackage.GENESIS__TREASURY, WrsPackage.Literals.GENESIS__TREASURY, false, true);
 	}
 
 	/**
@@ -90,10 +75,7 @@ public class GenesisImpl extends MinimalEObjectImpl.Container implements Genesis
 	 * @generated
 	 */
 	public void setTreasury(Treasury newTreasury) {
-		Treasury oldTreasury = treasury;
-		treasury = newTreasury;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.GENESIS__TREASURY, oldTreasury, treasury));
+		eDynamicSet(WrsPackage.GENESIS__TREASURY, WrsPackage.Literals.GENESIS__TREASURY, newTreasury);
 	}
 
 	/**
@@ -151,7 +133,7 @@ public class GenesisImpl extends MinimalEObjectImpl.Container implements Genesis
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.GENESIS__TREASURY:
-			return treasury != null;
+			return basicGetTreasury() != null;
 		}
 		return super.eIsSet(featureID);
 	}

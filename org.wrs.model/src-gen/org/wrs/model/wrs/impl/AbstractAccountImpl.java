@@ -3,19 +3,10 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.Identity;
@@ -37,37 +28,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements AbstractAccount {
-	/**
-	 * The cached value of the '{@link #getAssets() <em>Assets</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Asset> assets;
-
-	/**
-	 * The cached value of the '{@link #getTransaction() <em>Transaction</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTransaction()
-	 * @generated
-	 * @ordered
-	 */
-	protected Transaction transaction;
-
-	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBelongsTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected Identity belongsTo;
-
+public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccount {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,11 +53,20 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<Asset> getAssets() {
-		if (assets == null) {
-			assets = new EObjectResolvingEList<Asset>(Asset.class, this, WrsPackage.ABSTRACT_ACCOUNT__ASSETS);
-		}
-		return assets;
+		return (EList<Asset>) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__ASSETS,
+				WrsPackage.Literals.ABSTRACT_ACCOUNT__ASSETS, true, true);
 	}
 
 	/**
@@ -105,16 +75,8 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public Transaction getTransaction() {
-		if (transaction != null && transaction.eIsProxy()) {
-			InternalEObject oldTransaction = (InternalEObject) transaction;
-			transaction = (Transaction) eResolveProxy(oldTransaction);
-			if (transaction != oldTransaction) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
-							oldTransaction, transaction));
-			}
-		}
-		return transaction;
+		return (Transaction) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
+				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION, true, true);
 	}
 
 	/**
@@ -123,7 +85,8 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public Transaction basicGetTransaction() {
-		return transaction;
+		return (Transaction) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
+				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION, false, true);
 	}
 
 	/**
@@ -132,11 +95,8 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void setTransaction(Transaction newTransaction) {
-		Transaction oldTransaction = transaction;
-		transaction = newTransaction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
-					oldTransaction, transaction));
+		eDynamicSet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION, WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION,
+				newTransaction);
 	}
 
 	/**
@@ -145,16 +105,8 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public Identity getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject) belongsTo;
-			belongsTo = (Identity) eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO,
-							oldBelongsTo, belongsTo));
-			}
-		}
-		return belongsTo;
+		return (Identity) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO,
+				WrsPackage.Literals.ABSTRACT_ACCOUNT__BELONGS_TO, true, true);
 	}
 
 	/**
@@ -163,7 +115,8 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public Identity basicGetBelongsTo() {
-		return belongsTo;
+		return (Identity) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO,
+				WrsPackage.Literals.ABSTRACT_ACCOUNT__BELONGS_TO, false, true);
 	}
 
 	/**
@@ -172,11 +125,8 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void setBelongsTo(Identity newBelongsTo) {
-		Identity oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO, oldBelongsTo,
-					belongsTo));
+		eDynamicSet(WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO, WrsPackage.Literals.ABSTRACT_ACCOUNT__BELONGS_TO,
+				newBelongsTo);
 	}
 
 	/**
@@ -254,11 +204,11 @@ public class AbstractAccountImpl extends MinimalEObjectImpl.Container implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.ABSTRACT_ACCOUNT__ASSETS:
-			return assets != null && !assets.isEmpty();
+			return !getAssets().isEmpty();
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
-			return transaction != null;
+			return basicGetTransaction() != null;
 		case WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO:
-			return belongsTo != null;
+			return basicGetBelongsTo() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -7,11 +7,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Node;
 import org.wrs.model.wrs.Nodes;
 import org.wrs.model.wrs.WrsPackage;
@@ -29,17 +25,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class NodesImpl extends MinimalEObjectImpl.Container implements Nodes {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Node> children;
-
+public class NodesImpl extends CDOObjectImpl implements Nodes {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,11 +50,19 @@ public class NodesImpl extends MinimalEObjectImpl.Container implements Nodes {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<Node> getChildren() {
-		if (children == null) {
-			children = new EObjectResolvingEList<Node>(Node.class, this, WrsPackage.NODES__CHILDREN);
-		}
-		return children;
+		return (EList<Node>) eDynamicGet(WrsPackage.NODES__CHILDREN, WrsPackage.Literals.NODES__CHILDREN, true, true);
 	}
 
 	/**
@@ -126,7 +120,7 @@ public class NodesImpl extends MinimalEObjectImpl.Container implements Nodes {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.NODES__CHILDREN:
-			return children != null && !children.isEmpty();
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

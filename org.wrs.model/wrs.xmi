@@ -5,7 +5,9 @@
   <supplycontrol/>
   <accounts/>
   <registeredasstets/>
-  <worldeconomy/>
+  <worldeconomy>
+    <statisticssource/>
+  </worldeconomy>
   <countries/>
   <nodes/>
 </wrs:WRS>

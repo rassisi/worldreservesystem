@@ -2,12 +2,7 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.wrs.model.wrs.Account;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -36,16 +31,6 @@ public class AccountImpl extends AbstractAccountImpl implements Account {
 	protected static final String PUBLIC_KEY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPublicKey() <em>Public Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPublicKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected String publicKey = PUBLIC_KEY_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -70,7 +55,8 @@ public class AccountImpl extends AbstractAccountImpl implements Account {
 	 * @generated
 	 */
 	public String getPublicKey() {
-		return publicKey;
+		return (String) eDynamicGet(WrsPackage.ACCOUNT__PUBLIC_KEY, WrsPackage.Literals.ACCOUNT__PUBLIC_KEY, true,
+				true);
 	}
 
 	/**
@@ -79,11 +65,7 @@ public class AccountImpl extends AbstractAccountImpl implements Account {
 	 * @generated
 	 */
 	public void setPublicKey(String newPublicKey) {
-		String oldPublicKey = publicKey;
-		publicKey = newPublicKey;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.ACCOUNT__PUBLIC_KEY, oldPublicKey,
-					publicKey));
+		eDynamicSet(WrsPackage.ACCOUNT__PUBLIC_KEY, WrsPackage.Literals.ACCOUNT__PUBLIC_KEY, newPublicKey);
 	}
 
 	/**
@@ -139,26 +121,9 @@ public class AccountImpl extends AbstractAccountImpl implements Account {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.ACCOUNT__PUBLIC_KEY:
-			return PUBLIC_KEY_EDEFAULT == null ? publicKey != null : !PUBLIC_KEY_EDEFAULT.equals(publicKey);
+			return PUBLIC_KEY_EDEFAULT == null ? getPublicKey() != null : !PUBLIC_KEY_EDEFAULT.equals(getPublicKey());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (publicKey: ");
-		result.append(publicKey);
-		result.append(')');
-		return result.toString();
 	}
 
 } //AccountImpl

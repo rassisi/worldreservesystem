@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getStatistics()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Statistics extends EObject {
+public interface Statistics extends CDOObject {
 } // Statistics

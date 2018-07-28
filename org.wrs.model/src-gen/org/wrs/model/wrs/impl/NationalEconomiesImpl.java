@@ -3,9 +3,7 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.NationalEconomies;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -16,7 +14,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class NationalEconomiesImpl extends MinimalEObjectImpl.Container implements NationalEconomies {
+public class NationalEconomiesImpl extends CDOObjectImpl implements NationalEconomies {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,6 +32,16 @@ public class NationalEconomiesImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.NATIONAL_ECONOMIES;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 } //NationalEconomiesImpl

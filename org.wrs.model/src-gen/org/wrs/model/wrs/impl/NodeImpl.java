@@ -2,14 +2,8 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.NetworkEngine;
 import org.wrs.model.wrs.Node;
 import org.wrs.model.wrs.WrsPackage;
@@ -28,7 +22,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
+public class NodeImpl extends CDOObjectImpl implements Node {
 	/**
 	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,26 +32,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @ordered
 	 */
 	protected static final double WEIGHT_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected double weight = WEIGHT_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getNetworkengine() <em>Networkengine</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNetworkengine()
-	 * @generated
-	 * @ordered
-	 */
-	protected NetworkEngine networkengine;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,8 +57,18 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public double getWeight() {
-		return weight;
+		return (Double) eDynamicGet(WrsPackage.NODE__WEIGHT, WrsPackage.Literals.NODE__WEIGHT, true, true);
 	}
 
 	/**
@@ -93,10 +77,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	public void setWeight(double newWeight) {
-		double oldWeight = weight;
-		weight = newWeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.NODE__WEIGHT, oldWeight, weight));
+		eDynamicSet(WrsPackage.NODE__WEIGHT, WrsPackage.Literals.NODE__WEIGHT, newWeight);
 	}
 
 	/**
@@ -105,16 +86,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	public NetworkEngine getNetworkengine() {
-		if (networkengine != null && networkengine.eIsProxy()) {
-			InternalEObject oldNetworkengine = (InternalEObject) networkengine;
-			networkengine = (NetworkEngine) eResolveProxy(oldNetworkengine);
-			if (networkengine != oldNetworkengine) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.NODE__NETWORKENGINE,
-							oldNetworkengine, networkengine));
-			}
-		}
-		return networkengine;
+		return (NetworkEngine) eDynamicGet(WrsPackage.NODE__NETWORKENGINE, WrsPackage.Literals.NODE__NETWORKENGINE,
+				true, true);
 	}
 
 	/**
@@ -123,7 +96,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	public NetworkEngine basicGetNetworkengine() {
-		return networkengine;
+		return (NetworkEngine) eDynamicGet(WrsPackage.NODE__NETWORKENGINE, WrsPackage.Literals.NODE__NETWORKENGINE,
+				false, true);
 	}
 
 	/**
@@ -132,11 +106,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	public void setNetworkengine(NetworkEngine newNetworkengine) {
-		NetworkEngine oldNetworkengine = networkengine;
-		networkengine = newNetworkengine;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.NODE__NETWORKENGINE, oldNetworkengine,
-					networkengine));
+		eDynamicSet(WrsPackage.NODE__NETWORKENGINE, WrsPackage.Literals.NODE__NETWORKENGINE, newNetworkengine);
 	}
 
 	/**
@@ -202,28 +172,11 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.NODE__WEIGHT:
-			return weight != WEIGHT_EDEFAULT;
+			return getWeight() != WEIGHT_EDEFAULT;
 		case WrsPackage.NODE__NETWORKENGINE:
-			return networkengine != null;
+			return basicGetNetworkengine() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (weight: ");
-		result.append(weight);
-		result.append(')');
-		return result.toString();
 	}
 
 } //NodeImpl

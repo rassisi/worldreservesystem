@@ -2,12 +2,7 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.wrs.model.wrs.LegalEntity;
 import org.wrs.model.wrs.LegalEntityType;
 import org.wrs.model.wrs.WrsPackage;
@@ -37,16 +32,6 @@ public class LegalEntityImpl extends IdentityImpl implements LegalEntity {
 	protected static final LegalEntityType TYPE_EDEFAULT = LegalEntityType.COMPANY;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected LegalEntityType type = TYPE_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,7 +56,8 @@ public class LegalEntityImpl extends IdentityImpl implements LegalEntity {
 	 * @generated
 	 */
 	public LegalEntityType getType() {
-		return type;
+		return (LegalEntityType) eDynamicGet(WrsPackage.LEGAL_ENTITY__TYPE, WrsPackage.Literals.LEGAL_ENTITY__TYPE,
+				true, true);
 	}
 
 	/**
@@ -80,10 +66,7 @@ public class LegalEntityImpl extends IdentityImpl implements LegalEntity {
 	 * @generated
 	 */
 	public void setType(LegalEntityType newType) {
-		LegalEntityType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.LEGAL_ENTITY__TYPE, oldType, type));
+		eDynamicSet(WrsPackage.LEGAL_ENTITY__TYPE, WrsPackage.Literals.LEGAL_ENTITY__TYPE, newType);
 	}
 
 	/**
@@ -139,26 +122,9 @@ public class LegalEntityImpl extends IdentityImpl implements LegalEntity {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.LEGAL_ENTITY__TYPE:
-			return type != TYPE_EDEFAULT;
+			return getType() != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LegalEntityImpl

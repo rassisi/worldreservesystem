@@ -2,14 +2,8 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Genesis;
 import org.wrs.model.wrs.SupplyControl;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,17 +21,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class SupplyControlImpl extends MinimalEObjectImpl.Container implements SupplyControl {
-	/**
-	 * The cached value of the '{@link #getGenesis() <em>Genesis</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGenesis()
-	 * @generated
-	 * @ordered
-	 */
-	protected Genesis genesis;
-
+public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,17 +46,19 @@ public class SupplyControlImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Genesis getGenesis() {
-		if (genesis != null && genesis.eIsProxy()) {
-			InternalEObject oldGenesis = (InternalEObject) genesis;
-			genesis = (Genesis) eResolveProxy(oldGenesis);
-			if (genesis != oldGenesis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.SUPPLY_CONTROL__GENESIS,
-							oldGenesis, genesis));
-			}
-		}
-		return genesis;
+		return (Genesis) eDynamicGet(WrsPackage.SUPPLY_CONTROL__GENESIS, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS,
+				true, true);
 	}
 
 	/**
@@ -81,7 +67,8 @@ public class SupplyControlImpl extends MinimalEObjectImpl.Container implements S
 	 * @generated
 	 */
 	public Genesis basicGetGenesis() {
-		return genesis;
+		return (Genesis) eDynamicGet(WrsPackage.SUPPLY_CONTROL__GENESIS, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS,
+				false, true);
 	}
 
 	/**
@@ -90,11 +77,7 @@ public class SupplyControlImpl extends MinimalEObjectImpl.Container implements S
 	 * @generated
 	 */
 	public void setGenesis(Genesis newGenesis) {
-		Genesis oldGenesis = genesis;
-		genesis = newGenesis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.SUPPLY_CONTROL__GENESIS, oldGenesis,
-					genesis));
+		eDynamicSet(WrsPackage.SUPPLY_CONTROL__GENESIS, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS, newGenesis);
 	}
 
 	/**
@@ -152,7 +135,7 @@ public class SupplyControlImpl extends MinimalEObjectImpl.Container implements S
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.SUPPLY_CONTROL__GENESIS:
-			return genesis != null;
+			return basicGetGenesis() != null;
 		}
 		return super.eIsSet(featureID);
 	}

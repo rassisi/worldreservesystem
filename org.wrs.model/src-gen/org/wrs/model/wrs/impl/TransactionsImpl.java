@@ -10,12 +10,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractTransaction;
 import org.wrs.model.wrs.Transactions;
 import org.wrs.model.wrs.WrsPackage;
@@ -33,17 +30,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransactionsImpl extends MinimalEObjectImpl.Container implements Transactions {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<AbstractTransaction> children;
-
+public class TransactionsImpl extends CDOObjectImpl implements Transactions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,12 +55,20 @@ public class TransactionsImpl extends MinimalEObjectImpl.Container implements Tr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<AbstractTransaction> getChildren() {
-		if (children == null) {
-			children = new EObjectContainmentEList<AbstractTransaction>(AbstractTransaction.class, this,
-					WrsPackage.TRANSACTIONS__CHILDREN);
-		}
-		return children;
+		return (EList<AbstractTransaction>) eDynamicGet(WrsPackage.TRANSACTIONS__CHILDREN,
+				WrsPackage.Literals.TRANSACTIONS__CHILDREN, true, true);
 	}
 
 	/**
@@ -145,7 +140,7 @@ public class TransactionsImpl extends MinimalEObjectImpl.Container implements Tr
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.TRANSACTIONS__CHILDREN:
-			return children != null && !children.isEmpty();
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

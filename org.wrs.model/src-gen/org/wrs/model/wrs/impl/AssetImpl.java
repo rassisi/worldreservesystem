@@ -5,18 +5,10 @@ package org.wrs.model.wrs.impl;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.AssetType;
 import org.wrs.model.wrs.Thing;
@@ -36,7 +28,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
+public class AssetImpl extends CDOObjectImpl implements Asset {
 	/**
 	 * The default value of the '{@link #getAssetType() <em>Asset Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,26 +38,6 @@ public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
 	 * @ordered
 	 */
 	protected static final AssetType ASSET_TYPE_EDEFAULT = AssetType.UDOLLAR;
-
-	/**
-	 * The cached value of the '{@link #getAssetType() <em>Asset Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssetType()
-	 * @generated
-	 * @ordered
-	 */
-	protected AssetType assetType = ASSET_TYPE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getMaterials() <em>Materials</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaterials()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Thing> materials;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,8 +63,18 @@ public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AssetType getAssetType() {
-		return assetType;
+		return (AssetType) eDynamicGet(WrsPackage.ASSET__ASSET_TYPE, WrsPackage.Literals.ASSET__ASSET_TYPE, true, true);
 	}
 
 	/**
@@ -101,11 +83,7 @@ public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
 	 * @generated
 	 */
 	public void setAssetType(AssetType newAssetType) {
-		AssetType oldAssetType = assetType;
-		assetType = newAssetType == null ? ASSET_TYPE_EDEFAULT : newAssetType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.ASSET__ASSET_TYPE, oldAssetType,
-					assetType));
+		eDynamicSet(WrsPackage.ASSET__ASSET_TYPE, WrsPackage.Literals.ASSET__ASSET_TYPE, newAssetType);
 	}
 
 	/**
@@ -113,11 +91,10 @@ public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Thing> getMaterials() {
-		if (materials == null) {
-			materials = new EObjectResolvingEList<Thing>(Thing.class, this, WrsPackage.ASSET__MATERIALS);
-		}
-		return materials;
+		return (EList<Thing>) eDynamicGet(WrsPackage.ASSET__MATERIALS, WrsPackage.Literals.ASSET__MATERIALS, true,
+				true);
 	}
 
 	/**
@@ -194,9 +171,9 @@ public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.ASSET__ASSET_TYPE:
-			return assetType != ASSET_TYPE_EDEFAULT;
+			return getAssetType() != ASSET_TYPE_EDEFAULT;
 		case WrsPackage.ASSET__MATERIALS:
-			return materials != null && !materials.isEmpty();
+			return !getMaterials().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -214,23 +191,6 @@ public class AssetImpl extends MinimalEObjectImpl.Container implements Asset {
 			return null;
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (assetType: ");
-		result.append(assetType);
-		result.append(')');
-		return result.toString();
 	}
 
 } //AssetImpl

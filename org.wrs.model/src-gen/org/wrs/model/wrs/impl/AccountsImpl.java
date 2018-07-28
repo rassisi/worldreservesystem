@@ -10,12 +10,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Accounts;
 import org.wrs.model.wrs.WrsPackage;
@@ -33,17 +30,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AccountsImpl extends MinimalEObjectImpl.Container implements Accounts {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<AbstractAccount> children;
-
+public class AccountsImpl extends CDOObjectImpl implements Accounts {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,12 +55,20 @@ public class AccountsImpl extends MinimalEObjectImpl.Container implements Accoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<AbstractAccount> getChildren() {
-		if (children == null) {
-			children = new EObjectContainmentEList<AbstractAccount>(AbstractAccount.class, this,
-					WrsPackage.ACCOUNTS__CHILDREN);
-		}
-		return children;
+		return (EList<AbstractAccount>) eDynamicGet(WrsPackage.ACCOUNTS__CHILDREN,
+				WrsPackage.Literals.ACCOUNTS__CHILDREN, true, true);
 	}
 
 	/**
@@ -145,7 +140,7 @@ public class AccountsImpl extends MinimalEObjectImpl.Container implements Accoun
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.ACCOUNTS__CHILDREN:
-			return children != null && !children.isEmpty();
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

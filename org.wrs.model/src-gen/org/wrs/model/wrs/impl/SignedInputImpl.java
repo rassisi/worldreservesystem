@@ -2,14 +2,8 @@
  */
 package org.wrs.model.wrs.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.InputValueType;
 import org.wrs.model.wrs.SignedInput;
@@ -31,7 +25,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class SignedInputImpl extends MinimalEObjectImpl.Container implements SignedInput {
+public class SignedInputImpl extends CDOObjectImpl implements SignedInput {
 	/**
 	 * The default value of the '{@link #getVariableName() <em>Variable Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,26 +35,6 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @ordered
 	 */
 	protected static final String VARIABLE_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getVariableName() <em>Variable Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVariableName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String variableName = VARIABLE_NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getIdentity() <em>Identity</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdentity()
-	 * @generated
-	 * @ordered
-	 */
-	protected Identity identity;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -73,16 +47,6 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	protected static final String VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected String value = VALUE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,16 +55,6 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @ordered
 	 */
 	protected static final InputValueType TYPE_EDEFAULT = InputValueType.DATE;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected InputValueType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,8 +80,19 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getVariableName() {
-		return variableName;
+		return (String) eDynamicGet(WrsPackage.SIGNED_INPUT__VARIABLE_NAME,
+				WrsPackage.Literals.SIGNED_INPUT__VARIABLE_NAME, true, true);
 	}
 
 	/**
@@ -136,11 +101,8 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public void setVariableName(String newVariableName) {
-		String oldVariableName = variableName;
-		variableName = newVariableName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.SIGNED_INPUT__VARIABLE_NAME,
-					oldVariableName, variableName));
+		eDynamicSet(WrsPackage.SIGNED_INPUT__VARIABLE_NAME, WrsPackage.Literals.SIGNED_INPUT__VARIABLE_NAME,
+				newVariableName);
 	}
 
 	/**
@@ -149,16 +111,8 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public Identity getIdentity() {
-		if (identity != null && identity.eIsProxy()) {
-			InternalEObject oldIdentity = (InternalEObject) identity;
-			identity = (Identity) eResolveProxy(oldIdentity);
-			if (identity != oldIdentity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.SIGNED_INPUT__IDENTITY,
-							oldIdentity, identity));
-			}
-		}
-		return identity;
+		return (Identity) eDynamicGet(WrsPackage.SIGNED_INPUT__IDENTITY, WrsPackage.Literals.SIGNED_INPUT__IDENTITY,
+				true, true);
 	}
 
 	/**
@@ -167,7 +121,8 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public Identity basicGetIdentity() {
-		return identity;
+		return (Identity) eDynamicGet(WrsPackage.SIGNED_INPUT__IDENTITY, WrsPackage.Literals.SIGNED_INPUT__IDENTITY,
+				false, true);
 	}
 
 	/**
@@ -176,11 +131,7 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public void setIdentity(Identity newIdentity) {
-		Identity oldIdentity = identity;
-		identity = newIdentity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.SIGNED_INPUT__IDENTITY, oldIdentity,
-					identity));
+		eDynamicSet(WrsPackage.SIGNED_INPUT__IDENTITY, WrsPackage.Literals.SIGNED_INPUT__IDENTITY, newIdentity);
 	}
 
 	/**
@@ -189,7 +140,8 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public String getValue() {
-		return value;
+		return (String) eDynamicGet(WrsPackage.SIGNED_INPUT__VALUE, WrsPackage.Literals.SIGNED_INPUT__VALUE, true,
+				true);
 	}
 
 	/**
@@ -198,10 +150,7 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.SIGNED_INPUT__VALUE, oldValue, value));
+		eDynamicSet(WrsPackage.SIGNED_INPUT__VALUE, WrsPackage.Literals.SIGNED_INPUT__VALUE, newValue);
 	}
 
 	/**
@@ -210,7 +159,8 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public InputValueType getType() {
-		return type;
+		return (InputValueType) eDynamicGet(WrsPackage.SIGNED_INPUT__TYPE, WrsPackage.Literals.SIGNED_INPUT__TYPE, true,
+				true);
 	}
 
 	/**
@@ -219,10 +169,7 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	 * @generated
 	 */
 	public void setType(InputValueType newType) {
-		InputValueType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.SIGNED_INPUT__TYPE, oldType, type));
+		eDynamicSet(WrsPackage.SIGNED_INPUT__TYPE, WrsPackage.Literals.SIGNED_INPUT__TYPE, newType);
 	}
 
 	/**
@@ -304,36 +251,16 @@ public class SignedInputImpl extends MinimalEObjectImpl.Container implements Sig
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.SIGNED_INPUT__VARIABLE_NAME:
-			return VARIABLE_NAME_EDEFAULT == null ? variableName != null : !VARIABLE_NAME_EDEFAULT.equals(variableName);
+			return VARIABLE_NAME_EDEFAULT == null ? getVariableName() != null
+					: !VARIABLE_NAME_EDEFAULT.equals(getVariableName());
 		case WrsPackage.SIGNED_INPUT__IDENTITY:
-			return identity != null;
+			return basicGetIdentity() != null;
 		case WrsPackage.SIGNED_INPUT__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			return VALUE_EDEFAULT == null ? getValue() != null : !VALUE_EDEFAULT.equals(getValue());
 		case WrsPackage.SIGNED_INPUT__TYPE:
-			return type != TYPE_EDEFAULT;
+			return getType() != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (variableName: ");
-		result.append(variableName);
-		result.append(", value: ");
-		result.append(value);
-		result.append(", type: ");
-		result.append(type);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SignedInputImpl

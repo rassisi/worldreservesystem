@@ -3,18 +3,13 @@
 package org.wrs.model.wrs.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Accounts;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.Identities;
@@ -53,117 +48,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
-	/**
-	 * The cached value of the '{@link #getMainvault() <em>Mainvault</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMainvault()
-	 * @generated
-	 * @ordered
-	 */
-	protected Treasury mainvault;
-
-	/**
-	 * The cached value of the '{@link #getSupplycontrol() <em>Supplycontrol</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSupplycontrol()
-	 * @generated
-	 * @ordered
-	 */
-	protected SupplyControl supplycontrol;
-
-	/**
-	 * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccounts()
-	 * @generated
-	 * @ordered
-	 */
-	protected Accounts accounts;
-
-	/**
-	 * The cached value of the '{@link #getRegisteredasstets() <em>Registeredasstets</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRegisteredasstets()
-	 * @generated
-	 * @ordered
-	 */
-	protected RegisteredAssets registeredasstets;
-
-	/**
-	 * The cached value of the '{@link #getWorldeconomy() <em>Worldeconomy</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWorldeconomy()
-	 * @generated
-	 * @ordered
-	 */
-	protected WorldEconomy worldeconomy;
-
-	/**
-	 * The cached value of the '{@link #getCountries() <em>Countries</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountries()
-	 * @generated
-	 * @ordered
-	 */
-	protected Countries countries;
-
-	/**
-	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNodes()
-	 * @generated
-	 * @ordered
-	 */
-	protected Nodes nodes;
-
-	/**
-	 * The cached value of the '{@link #getIdentities() <em>Identities</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdentities()
-	 * @generated
-	 * @ordered
-	 */
-	protected Identities identities;
-
-	/**
-	 * The cached value of the '{@link #getTransactions() <em>Transactions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTransactions()
-	 * @generated
-	 * @ordered
-	 */
-	protected Transactions transactions;
-
-	/**
-	 * The cached value of the '{@link #getTransactionconditions() <em>Transactionconditions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTransactionconditions()
-	 * @generated
-	 * @ordered
-	 */
-	protected TransactionConditions transactionconditions;
-
-	/**
-	 * The cached value of the '{@link #getStatisticDatas() <em>Statistic Datas</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatisticDatas()
-	 * @generated
-	 * @ordered
-	 */
-	protected StatisticDatas statisticDatas;
-
+public class WRSImpl extends CDOObjectImpl implements WRS {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -173,16 +58,6 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -208,17 +83,18 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Treasury getMainvault() {
-		if (mainvault != null && mainvault.eIsProxy()) {
-			InternalEObject oldMainvault = (InternalEObject) mainvault;
-			mainvault = (Treasury) eResolveProxy(oldMainvault);
-			if (mainvault != oldMainvault) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WrsPackage.WRS__MAINVAULT, oldMainvault,
-							mainvault));
-			}
-		}
-		return mainvault;
+		return (Treasury) eDynamicGet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, true, true);
 	}
 
 	/**
@@ -227,7 +103,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public Treasury basicGetMainvault() {
-		return mainvault;
+		return (Treasury) eDynamicGet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, false, true);
 	}
 
 	/**
@@ -236,10 +112,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setMainvault(Treasury newMainvault) {
-		Treasury oldMainvault = mainvault;
-		mainvault = newMainvault;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__MAINVAULT, oldMainvault, mainvault));
+		eDynamicSet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, newMainvault);
 	}
 
 	/**
@@ -248,7 +121,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public SupplyControl getSupplycontrol() {
-		return supplycontrol;
+		return (SupplyControl) eDynamicGet(WrsPackage.WRS__SUPPLYCONTROL, WrsPackage.Literals.WRS__SUPPLYCONTROL, true,
+				true);
 	}
 
 	/**
@@ -257,16 +131,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetSupplycontrol(SupplyControl newSupplycontrol, NotificationChain msgs) {
-		SupplyControl oldSupplycontrol = supplycontrol;
-		supplycontrol = newSupplycontrol;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.WRS__SUPPLYCONTROL, oldSupplycontrol, newSupplycontrol);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newSupplycontrol, WrsPackage.WRS__SUPPLYCONTROL, msgs);
 		return msgs;
 	}
 
@@ -276,20 +141,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setSupplycontrol(SupplyControl newSupplycontrol) {
-		if (newSupplycontrol != supplycontrol) {
-			NotificationChain msgs = null;
-			if (supplycontrol != null)
-				msgs = ((InternalEObject) supplycontrol).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__SUPPLYCONTROL, null, msgs);
-			if (newSupplycontrol != null)
-				msgs = ((InternalEObject) newSupplycontrol).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__SUPPLYCONTROL, null, msgs);
-			msgs = basicSetSupplycontrol(newSupplycontrol, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__SUPPLYCONTROL, newSupplycontrol,
-					newSupplycontrol));
+		eDynamicSet(WrsPackage.WRS__SUPPLYCONTROL, WrsPackage.Literals.WRS__SUPPLYCONTROL, newSupplycontrol);
 	}
 
 	/**
@@ -298,7 +150,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public Accounts getAccounts() {
-		return accounts;
+		return (Accounts) eDynamicGet(WrsPackage.WRS__ACCOUNTS, WrsPackage.Literals.WRS__ACCOUNTS, true, true);
 	}
 
 	/**
@@ -307,16 +159,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetAccounts(Accounts newAccounts, NotificationChain msgs) {
-		Accounts oldAccounts = accounts;
-		accounts = newAccounts;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__ACCOUNTS,
-					oldAccounts, newAccounts);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newAccounts, WrsPackage.WRS__ACCOUNTS, msgs);
 		return msgs;
 	}
 
@@ -326,19 +169,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setAccounts(Accounts newAccounts) {
-		if (newAccounts != accounts) {
-			NotificationChain msgs = null;
-			if (accounts != null)
-				msgs = ((InternalEObject) accounts).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__ACCOUNTS, null, msgs);
-			if (newAccounts != null)
-				msgs = ((InternalEObject) newAccounts).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__ACCOUNTS, null, msgs);
-			msgs = basicSetAccounts(newAccounts, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__ACCOUNTS, newAccounts, newAccounts));
+		eDynamicSet(WrsPackage.WRS__ACCOUNTS, WrsPackage.Literals.WRS__ACCOUNTS, newAccounts);
 	}
 
 	/**
@@ -347,7 +178,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public RegisteredAssets getRegisteredasstets() {
-		return registeredasstets;
+		return (RegisteredAssets) eDynamicGet(WrsPackage.WRS__REGISTEREDASSTETS,
+				WrsPackage.Literals.WRS__REGISTEREDASSTETS, true, true);
 	}
 
 	/**
@@ -356,16 +188,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetRegisteredasstets(RegisteredAssets newRegisteredasstets, NotificationChain msgs) {
-		RegisteredAssets oldRegisteredasstets = registeredasstets;
-		registeredasstets = newRegisteredasstets;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.WRS__REGISTEREDASSTETS, oldRegisteredasstets, newRegisteredasstets);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newRegisteredasstets, WrsPackage.WRS__REGISTEREDASSTETS, msgs);
 		return msgs;
 	}
 
@@ -375,20 +198,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setRegisteredasstets(RegisteredAssets newRegisteredasstets) {
-		if (newRegisteredasstets != registeredasstets) {
-			NotificationChain msgs = null;
-			if (registeredasstets != null)
-				msgs = ((InternalEObject) registeredasstets).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__REGISTEREDASSTETS, null, msgs);
-			if (newRegisteredasstets != null)
-				msgs = ((InternalEObject) newRegisteredasstets).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__REGISTEREDASSTETS, null, msgs);
-			msgs = basicSetRegisteredasstets(newRegisteredasstets, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__REGISTEREDASSTETS,
-					newRegisteredasstets, newRegisteredasstets));
+		eDynamicSet(WrsPackage.WRS__REGISTEREDASSTETS, WrsPackage.Literals.WRS__REGISTEREDASSTETS,
+				newRegisteredasstets);
 	}
 
 	/**
@@ -397,7 +208,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public WorldEconomy getWorldeconomy() {
-		return worldeconomy;
+		return (WorldEconomy) eDynamicGet(WrsPackage.WRS__WORLDECONOMY, WrsPackage.Literals.WRS__WORLDECONOMY, true,
+				true);
 	}
 
 	/**
@@ -406,16 +218,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetWorldeconomy(WorldEconomy newWorldeconomy, NotificationChain msgs) {
-		WorldEconomy oldWorldeconomy = worldeconomy;
-		worldeconomy = newWorldeconomy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__WORLDECONOMY,
-					oldWorldeconomy, newWorldeconomy);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newWorldeconomy, WrsPackage.WRS__WORLDECONOMY, msgs);
 		return msgs;
 	}
 
@@ -425,20 +228,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setWorldeconomy(WorldEconomy newWorldeconomy) {
-		if (newWorldeconomy != worldeconomy) {
-			NotificationChain msgs = null;
-			if (worldeconomy != null)
-				msgs = ((InternalEObject) worldeconomy).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__WORLDECONOMY, null, msgs);
-			if (newWorldeconomy != null)
-				msgs = ((InternalEObject) newWorldeconomy).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__WORLDECONOMY, null, msgs);
-			msgs = basicSetWorldeconomy(newWorldeconomy, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__WORLDECONOMY, newWorldeconomy,
-					newWorldeconomy));
+		eDynamicSet(WrsPackage.WRS__WORLDECONOMY, WrsPackage.Literals.WRS__WORLDECONOMY, newWorldeconomy);
 	}
 
 	/**
@@ -447,7 +237,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public Countries getCountries() {
-		return countries;
+		return (Countries) eDynamicGet(WrsPackage.WRS__COUNTRIES, WrsPackage.Literals.WRS__COUNTRIES, true, true);
 	}
 
 	/**
@@ -456,16 +246,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetCountries(Countries newCountries, NotificationChain msgs) {
-		Countries oldCountries = countries;
-		countries = newCountries;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__COUNTRIES,
-					oldCountries, newCountries);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newCountries, WrsPackage.WRS__COUNTRIES, msgs);
 		return msgs;
 	}
 
@@ -475,20 +256,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setCountries(Countries newCountries) {
-		if (newCountries != countries) {
-			NotificationChain msgs = null;
-			if (countries != null)
-				msgs = ((InternalEObject) countries).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__COUNTRIES, null, msgs);
-			if (newCountries != null)
-				msgs = ((InternalEObject) newCountries).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__COUNTRIES, null, msgs);
-			msgs = basicSetCountries(newCountries, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__COUNTRIES, newCountries,
-					newCountries));
+		eDynamicSet(WrsPackage.WRS__COUNTRIES, WrsPackage.Literals.WRS__COUNTRIES, newCountries);
 	}
 
 	/**
@@ -497,7 +265,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public Nodes getNodes() {
-		return nodes;
+		return (Nodes) eDynamicGet(WrsPackage.WRS__NODES, WrsPackage.Literals.WRS__NODES, true, true);
 	}
 
 	/**
@@ -506,16 +274,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetNodes(Nodes newNodes, NotificationChain msgs) {
-		Nodes oldNodes = nodes;
-		nodes = newNodes;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__NODES,
-					oldNodes, newNodes);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newNodes, WrsPackage.WRS__NODES, msgs);
 		return msgs;
 	}
 
@@ -525,19 +284,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setNodes(Nodes newNodes) {
-		if (newNodes != nodes) {
-			NotificationChain msgs = null;
-			if (nodes != null)
-				msgs = ((InternalEObject) nodes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__NODES,
-						null, msgs);
-			if (newNodes != null)
-				msgs = ((InternalEObject) newNodes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__NODES,
-						null, msgs);
-			msgs = basicSetNodes(newNodes, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__NODES, newNodes, newNodes));
+		eDynamicSet(WrsPackage.WRS__NODES, WrsPackage.Literals.WRS__NODES, newNodes);
 	}
 
 	/**
@@ -546,7 +293,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public Identities getIdentities() {
-		return identities;
+		return (Identities) eDynamicGet(WrsPackage.WRS__IDENTITIES, WrsPackage.Literals.WRS__IDENTITIES, true, true);
 	}
 
 	/**
@@ -555,16 +302,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetIdentities(Identities newIdentities, NotificationChain msgs) {
-		Identities oldIdentities = identities;
-		identities = newIdentities;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__IDENTITIES,
-					oldIdentities, newIdentities);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newIdentities, WrsPackage.WRS__IDENTITIES, msgs);
 		return msgs;
 	}
 
@@ -574,20 +312,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setIdentities(Identities newIdentities) {
-		if (newIdentities != identities) {
-			NotificationChain msgs = null;
-			if (identities != null)
-				msgs = ((InternalEObject) identities).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__IDENTITIES, null, msgs);
-			if (newIdentities != null)
-				msgs = ((InternalEObject) newIdentities).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__IDENTITIES, null, msgs);
-			msgs = basicSetIdentities(newIdentities, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__IDENTITIES, newIdentities,
-					newIdentities));
+		eDynamicSet(WrsPackage.WRS__IDENTITIES, WrsPackage.Literals.WRS__IDENTITIES, newIdentities);
 	}
 
 	/**
@@ -596,7 +321,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public Transactions getTransactions() {
-		return transactions;
+		return (Transactions) eDynamicGet(WrsPackage.WRS__TRANSACTIONS, WrsPackage.Literals.WRS__TRANSACTIONS, true,
+				true);
 	}
 
 	/**
@@ -605,16 +331,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetTransactions(Transactions newTransactions, NotificationChain msgs) {
-		Transactions oldTransactions = transactions;
-		transactions = newTransactions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__TRANSACTIONS,
-					oldTransactions, newTransactions);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newTransactions, WrsPackage.WRS__TRANSACTIONS, msgs);
 		return msgs;
 	}
 
@@ -624,20 +341,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setTransactions(Transactions newTransactions) {
-		if (newTransactions != transactions) {
-			NotificationChain msgs = null;
-			if (transactions != null)
-				msgs = ((InternalEObject) transactions).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__TRANSACTIONS, null, msgs);
-			if (newTransactions != null)
-				msgs = ((InternalEObject) newTransactions).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__TRANSACTIONS, null, msgs);
-			msgs = basicSetTransactions(newTransactions, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__TRANSACTIONS, newTransactions,
-					newTransactions));
+		eDynamicSet(WrsPackage.WRS__TRANSACTIONS, WrsPackage.Literals.WRS__TRANSACTIONS, newTransactions);
 	}
 
 	/**
@@ -646,7 +350,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public TransactionConditions getTransactionconditions() {
-		return transactionconditions;
+		return (TransactionConditions) eDynamicGet(WrsPackage.WRS__TRANSACTIONCONDITIONS,
+				WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS, true, true);
 	}
 
 	/**
@@ -656,16 +361,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 */
 	public NotificationChain basicSetTransactionconditions(TransactionConditions newTransactionconditions,
 			NotificationChain msgs) {
-		TransactionConditions oldTransactionconditions = transactionconditions;
-		transactionconditions = newTransactionconditions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.WRS__TRANSACTIONCONDITIONS, oldTransactionconditions, newTransactionconditions);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newTransactionconditions, WrsPackage.WRS__TRANSACTIONCONDITIONS,
+				msgs);
 		return msgs;
 	}
 
@@ -675,20 +372,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setTransactionconditions(TransactionConditions newTransactionconditions) {
-		if (newTransactionconditions != transactionconditions) {
-			NotificationChain msgs = null;
-			if (transactionconditions != null)
-				msgs = ((InternalEObject) transactionconditions).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__TRANSACTIONCONDITIONS, null, msgs);
-			if (newTransactionconditions != null)
-				msgs = ((InternalEObject) newTransactionconditions).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__TRANSACTIONCONDITIONS, null, msgs);
-			msgs = basicSetTransactionconditions(newTransactionconditions, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__TRANSACTIONCONDITIONS,
-					newTransactionconditions, newTransactionconditions));
+		eDynamicSet(WrsPackage.WRS__TRANSACTIONCONDITIONS, WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS,
+				newTransactionconditions);
 	}
 
 	/**
@@ -697,7 +382,8 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public StatisticDatas getStatisticDatas() {
-		return statisticDatas;
+		return (StatisticDatas) eDynamicGet(WrsPackage.WRS__STATISTIC_DATAS, WrsPackage.Literals.WRS__STATISTIC_DATAS,
+				true, true);
 	}
 
 	/**
@@ -706,16 +392,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public NotificationChain basicSetStatisticDatas(StatisticDatas newStatisticDatas, NotificationChain msgs) {
-		StatisticDatas oldStatisticDatas = statisticDatas;
-		statisticDatas = newStatisticDatas;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WrsPackage.WRS__STATISTIC_DATAS, oldStatisticDatas, newStatisticDatas);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newStatisticDatas, WrsPackage.WRS__STATISTIC_DATAS, msgs);
 		return msgs;
 	}
 
@@ -725,20 +402,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setStatisticDatas(StatisticDatas newStatisticDatas) {
-		if (newStatisticDatas != statisticDatas) {
-			NotificationChain msgs = null;
-			if (statisticDatas != null)
-				msgs = ((InternalEObject) statisticDatas).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__STATISTIC_DATAS, null, msgs);
-			if (newStatisticDatas != null)
-				msgs = ((InternalEObject) newStatisticDatas).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WrsPackage.WRS__STATISTIC_DATAS, null, msgs);
-			msgs = basicSetStatisticDatas(newStatisticDatas, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__STATISTIC_DATAS, newStatisticDatas,
-					newStatisticDatas));
+		eDynamicSet(WrsPackage.WRS__STATISTIC_DATAS, WrsPackage.Literals.WRS__STATISTIC_DATAS, newStatisticDatas);
 	}
 
 	/**
@@ -747,7 +411,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(WrsPackage.WRS__NAME, WrsPackage.Literals.WRS__NAME, true, true);
 	}
 
 	/**
@@ -756,10 +420,7 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WrsPackage.WRS__NAME, oldName, name));
+		eDynamicSet(WrsPackage.WRS__NAME, WrsPackage.Literals.WRS__NAME, newName);
 	}
 
 	/**
@@ -948,29 +609,29 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.WRS__MAINVAULT:
-			return mainvault != null;
+			return basicGetMainvault() != null;
 		case WrsPackage.WRS__SUPPLYCONTROL:
-			return supplycontrol != null;
+			return getSupplycontrol() != null;
 		case WrsPackage.WRS__ACCOUNTS:
-			return accounts != null;
+			return getAccounts() != null;
 		case WrsPackage.WRS__REGISTEREDASSTETS:
-			return registeredasstets != null;
+			return getRegisteredasstets() != null;
 		case WrsPackage.WRS__WORLDECONOMY:
-			return worldeconomy != null;
+			return getWorldeconomy() != null;
 		case WrsPackage.WRS__COUNTRIES:
-			return countries != null;
+			return getCountries() != null;
 		case WrsPackage.WRS__NODES:
-			return nodes != null;
+			return getNodes() != null;
 		case WrsPackage.WRS__IDENTITIES:
-			return identities != null;
+			return getIdentities() != null;
 		case WrsPackage.WRS__TRANSACTIONS:
-			return transactions != null;
+			return getTransactions() != null;
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-			return transactionconditions != null;
+			return getTransactionconditions() != null;
 		case WrsPackage.WRS__STATISTIC_DATAS:
-			return statisticDatas != null;
+			return getStatisticDatas() != null;
 		case WrsPackage.WRS__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -988,23 +649,6 @@ public class WRSImpl extends MinimalEObjectImpl.Container implements WRS {
 			return null;
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //WRSImpl

@@ -10,12 +10,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.TransactionCondition;
 import org.wrs.model.wrs.TransactionConditions;
 import org.wrs.model.wrs.WrsPackage;
@@ -33,17 +30,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransactionConditionsImpl extends MinimalEObjectImpl.Container implements TransactionConditions {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TransactionCondition> children;
-
+public class TransactionConditionsImpl extends CDOObjectImpl implements TransactionConditions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,12 +55,20 @@ public class TransactionConditionsImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<TransactionCondition> getChildren() {
-		if (children == null) {
-			children = new EObjectContainmentEList<TransactionCondition>(TransactionCondition.class, this,
-					WrsPackage.TRANSACTION_CONDITIONS__CHILDREN);
-		}
-		return children;
+		return (EList<TransactionCondition>) eDynamicGet(WrsPackage.TRANSACTION_CONDITIONS__CHILDREN,
+				WrsPackage.Literals.TRANSACTION_CONDITIONS__CHILDREN, true, true);
 	}
 
 	/**
@@ -145,7 +140,7 @@ public class TransactionConditionsImpl extends MinimalEObjectImpl.Container impl
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.TRANSACTION_CONDITIONS__CHILDREN:
-			return children != null && !children.isEmpty();
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

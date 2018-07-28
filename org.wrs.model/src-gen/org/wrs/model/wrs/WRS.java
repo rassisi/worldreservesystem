@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,9 +29,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getWRS()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface WRS extends EObject {
+public interface WRS extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Mainvault</b></em>' reference.
 	 * <!-- begin-user-doc -->

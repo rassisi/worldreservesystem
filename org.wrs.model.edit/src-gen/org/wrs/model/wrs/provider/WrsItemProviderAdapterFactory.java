@@ -832,6 +832,29 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.StatisticsSource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StatisticsSourceItemProvider statisticsSourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.StatisticsSource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStatisticsSourceAdapter() {
+		if (statisticsSourceItemProvider == null) {
+			statisticsSourceItemProvider = new StatisticsSourceItemProvider(this);
+		}
+
+		return statisticsSourceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -996,6 +1019,8 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			statisticDatasItemProvider.dispose();
 		if (countryRegionItemProvider != null)
 			countryRegionItemProvider.dispose();
+		if (statisticsSourceItemProvider != null)
+			statisticsSourceItemProvider.dispose();
 	}
 
 }
