@@ -6,7 +6,7 @@ import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 import org.wrs.rcpl.ui.homepages.AccountHomePage;
 
-import com.joffice.rcpl.addon.office.internal.JOFactory;
+import com.joffice.rcpl.addon.office.factories.JOFactory;
 
 /**
  * @author ramin
