@@ -13,5 +13,5 @@ package org.wrs.wrs;
  * @model
  * @generated
  */
-public interface Treasury extends AbstractVault {
+public interface Treasury extends AbstractAccount {
 } // Treasury

@@ -13,7 +13,6 @@ import org.eclipse.emf.cdo.CDOObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.wrs.Node#getWrs <em>Wrs</em>}</li>
  *   <li>{@link org.wrs.wrs.Node#getWeight <em>Weight</em>}</li>
  *   <li>{@link org.wrs.wrs.Node#getNetworkengine <em>Networkengine</em>}</li>
  * </ul>
@@ -24,32 +23,6 @@ import org.eclipse.emf.cdo.CDOObject;
  * @generated
  */
 public interface Node extends CDOObject {
-	/**
-	 * Returns the value of the '<em><b>Wrs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Wrs</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wrs</em>' containment reference.
-	 * @see #setWrs(wrs)
-	 * @see org.wrs.wrs.WrsPackage#getNode_Wrs()
-	 * @model containment="true"
-	 * @generated
-	 */
-	wrs getWrs();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.wrs.Node#getWrs <em>Wrs</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wrs</em>' containment reference.
-	 * @see #getWrs()
-	 * @generated
-	 */
-	void setWrs(wrs value);
-
 	/**
 	 * Returns the value of the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->

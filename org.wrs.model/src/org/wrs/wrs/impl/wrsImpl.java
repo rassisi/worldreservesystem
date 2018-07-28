@@ -8,12 +8,18 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.wrs.Accounts;
+import org.wrs.wrs.Countries;
 import org.wrs.wrs.Identities;
+import org.wrs.wrs.Nodes;
 import org.wrs.wrs.RegisteredAssets;
+import org.wrs.wrs.StatisticDatas;
 import org.wrs.wrs.SupplyControl;
-import org.wrs.wrs.TransferVaults;
+import org.wrs.wrs.TransactionConditions;
+import org.wrs.wrs.Transactions;
 import org.wrs.wrs.Treasury;
+import org.wrs.wrs.WorldEconomy;
 import org.wrs.wrs.WrsPackage;
 import org.wrs.wrs.wrs;
 
@@ -25,17 +31,22 @@ import org.wrs.wrs.wrs;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.wrs.impl.wrsImpl#getTransfervaults <em>Transfervaults</em>}</li>
  *   <li>{@link org.wrs.wrs.impl.wrsImpl#getMainvault <em>Mainvault</em>}</li>
- *   <li>{@link org.wrs.wrs.impl.wrsImpl#getIdentities <em>Identities</em>}</li>
  *   <li>{@link org.wrs.wrs.impl.wrsImpl#getSupplycontrol <em>Supplycontrol</em>}</li>
- *   <li>{@link org.wrs.wrs.impl.wrsImpl#getWallets <em>Wallets</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getAccounts <em>Accounts</em>}</li>
  *   <li>{@link org.wrs.wrs.impl.wrsImpl#getRegisteredasstets <em>Registeredasstets</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getWorldeconomy <em>Worldeconomy</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getCountries <em>Countries</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getNodes <em>Nodes</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getIdentities <em>Identities</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getTransactions <em>Transactions</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getTransactionconditions <em>Transactionconditions</em>}</li>
+ *   <li>{@link org.wrs.wrs.impl.wrsImpl#getStatisticDatas <em>Statistic Datas</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class wrsImpl extends IdentityImpl implements wrs {
+public class wrsImpl extends CDOObjectImpl implements wrs {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,17 +71,9 @@ public class wrsImpl extends IdentityImpl implements wrs {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransferVaults getTransfervaults() {
-		return (TransferVaults)eGet(WrsPackage.Literals.WRS__TRANSFERVAULTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransfervaults(TransferVaults newTransfervaults) {
-		eSet(WrsPackage.Literals.WRS__TRANSFERVAULTS, newTransfervaults);
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -114,6 +117,60 @@ public class wrsImpl extends IdentityImpl implements wrs {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Transactions getTransactions() {
+		return (Transactions)eGet(WrsPackage.Literals.WRS__TRANSACTIONS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransactions(Transactions newTransactions) {
+		eSet(WrsPackage.Literals.WRS__TRANSACTIONS, newTransactions);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransactionConditions getTransactionconditions() {
+		return (TransactionConditions)eGet(WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransactionconditions(TransactionConditions newTransactionconditions) {
+		eSet(WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS, newTransactionconditions);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatisticDatas getStatisticDatas() {
+		return (StatisticDatas)eGet(WrsPackage.Literals.WRS__STATISTIC_DATAS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatisticDatas(StatisticDatas newStatisticDatas) {
+		eSet(WrsPackage.Literals.WRS__STATISTIC_DATAS, newStatisticDatas);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SupplyControl getSupplycontrol() {
 		return (SupplyControl)eGet(WrsPackage.Literals.WRS__SUPPLYCONTROL, true);
 	}
@@ -132,8 +189,8 @@ public class wrsImpl extends IdentityImpl implements wrs {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Accounts getWallets() {
-		return (Accounts)eGet(WrsPackage.Literals.WRS__WALLETS, true);
+	public Accounts getAccounts() {
+		return (Accounts)eGet(WrsPackage.Literals.WRS__ACCOUNTS, true);
 	}
 
 	/**
@@ -141,8 +198,8 @@ public class wrsImpl extends IdentityImpl implements wrs {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWallets(Accounts newWallets) {
-		eSet(WrsPackage.Literals.WRS__WALLETS, newWallets);
+	public void setAccounts(Accounts newAccounts) {
+		eSet(WrsPackage.Literals.WRS__ACCOUNTS, newAccounts);
 	}
 
 	/**
@@ -161,6 +218,60 @@ public class wrsImpl extends IdentityImpl implements wrs {
 	 */
 	public void setRegisteredasstets(RegisteredAssets newRegisteredasstets) {
 		eSet(WrsPackage.Literals.WRS__REGISTEREDASSTETS, newRegisteredasstets);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WorldEconomy getWorldeconomy() {
+		return (WorldEconomy)eGet(WrsPackage.Literals.WRS__WORLDECONOMY, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWorldeconomy(WorldEconomy newWorldeconomy) {
+		eSet(WrsPackage.Literals.WRS__WORLDECONOMY, newWorldeconomy);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Countries getCountries() {
+		return (Countries)eGet(WrsPackage.Literals.WRS__COUNTRIES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCountries(Countries newCountries) {
+		eSet(WrsPackage.Literals.WRS__COUNTRIES, newCountries);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Nodes getNodes() {
+		return (Nodes)eGet(WrsPackage.Literals.WRS__NODES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNodes(Nodes newNodes) {
+		eSet(WrsPackage.Literals.WRS__NODES, newNodes);
 	}
 
 	/**

@@ -5,10 +5,7 @@ package org.wrs.wrs.impl;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
-import org.wrs.wrs.AbstractVault;
+import org.wrs.wrs.AbstractAccount;
 import org.wrs.wrs.Asset;
 import org.wrs.wrs.Transaction;
 import org.wrs.wrs.WrsPackage;
@@ -28,7 +25,7 @@ import org.wrs.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransactionImpl extends CDOObjectImpl implements Transaction {
+public class TransactionImpl extends AbstractTransactionImpl implements Transaction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,16 +43,6 @@ public class TransactionImpl extends CDOObjectImpl implements Transaction {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.TRANSACTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -82,8 +69,8 @@ public class TransactionImpl extends CDOObjectImpl implements Transaction {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<AbstractVault> getTransactions() {
-		return (EList<AbstractVault>)eGet(WrsPackage.Literals.TRANSACTION__TRANSACTIONS, true);
+	public EList<AbstractAccount> getTransactions() {
+		return (EList<AbstractAccount>)eGet(WrsPackage.Literals.TRANSACTION__TRANSACTIONS, true);
 	}
 
 	/**

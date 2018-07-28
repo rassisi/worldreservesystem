@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
-import org.wrs.wrs.Account;
+import org.wrs.wrs.AbstractAccount;
 import org.wrs.wrs.Accounts;
 import org.wrs.wrs.WrsPackage;
 
@@ -61,8 +61,8 @@ public class AccountsImpl extends CDOObjectImpl implements Accounts {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Account> getChildren() {
-		return (EList<Account>)eGet(WrsPackage.Literals.ACCOUNTS__CHILDREN, true);
+	public EList<AbstractAccount> getChildren() {
+		return (EList<AbstractAccount>)eGet(WrsPackage.Literals.ACCOUNTS__CHILDREN, true);
 	}
 
 } //AccountsImpl

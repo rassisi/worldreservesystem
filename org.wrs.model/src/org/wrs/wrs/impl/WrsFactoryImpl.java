@@ -60,28 +60,36 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			case WrsPackage.WRS: return (EObject)createwrs();
 			case WrsPackage.TREASURY: return (EObject)createTreasury();
 			case WrsPackage.TRANSFER_VAULT: return (EObject)createTransferVault();
-			case WrsPackage.TRANSFER_VAULTS: return (EObject)createTransferVaults();
 			case WrsPackage.GENESIS: return (EObject)createGenesis();
 			case WrsPackage.ASSET: return (EObject)createAsset();
 			case WrsPackage.WORLD_ECONOMY: return (EObject)createWorldEconomy();
 			case WrsPackage.NATIONAL_ECONOMIES: return (EObject)createNationalEconomies();
-			case WrsPackage.NATION: return (EObject)createNation();
+			case WrsPackage.COUNTRY: return (EObject)createCountry();
 			case WrsPackage.FIAT_CURRENCY: return (EObject)createFiatCurrency();
-			case WrsPackage.ACCOUNTANTS: return (EObject)createAccountants();
-			case WrsPackage.ACCOUNTANT: return (EObject)createAccountant();
-			case WrsPackage.MATERIAL: return (EObject)createMaterial();
+			case WrsPackage.THING: return (EObject)createThing();
 			case WrsPackage.INDIVIDUAL: return (EObject)createIndividual();
 			case WrsPackage.LEGAL_ENTITY: return (EObject)createLegalEntity();
-			case WrsPackage.IDENTITIES: return (EObject)createIdentities();
 			case WrsPackage.ACCOUNT: return (EObject)createAccount();
 			case WrsPackage.SUPPLY_CONTROL: return (EObject)createSupplyControl();
 			case WrsPackage.ACCOUNTS: return (EObject)createAccounts();
 			case WrsPackage.TRANSACTION: return (EObject)createTransaction();
 			case WrsPackage.REGISTERED_ASSETS: return (EObject)createRegisteredAssets();
-			case WrsPackage.ABSTRACT_VAULT: return (EObject)createAbstractVault();
+			case WrsPackage.ABSTRACT_ACCOUNT: return (EObject)createAbstractAccount();
 			case WrsPackage.TRANSACTION_COLLECTION: return (EObject)createTransactionCollection();
 			case WrsPackage.NODE: return (EObject)createNode();
 			case WrsPackage.NETWORK_ENGINE: return (EObject)createNetworkEngine();
+			case WrsPackage.COUNTRIES: return (EObject)createCountries();
+			case WrsPackage.NODES: return (EObject)createNodes();
+			case WrsPackage.IDENTITIES: return (EObject)createIdentities();
+			case WrsPackage.TRANSACTIONS: return (EObject)createTransactions();
+			case WrsPackage.ABSTRACT_TRANSACTION: return (EObject)createAbstractTransaction();
+			case WrsPackage.NODE_ACCOUNT: return (EObject)createNodeAccount();
+			case WrsPackage.TRANSACTION_CONDITIONS: return (EObject)createTransactionConditions();
+			case WrsPackage.TRANSACTION_CONDITION: return (EObject)createTransactionCondition();
+			case WrsPackage.SIGNED_INPUT: return (EObject)createSignedInput();
+			case WrsPackage.STATISTICS: return (EObject)createStatistics();
+			case WrsPackage.STATISTIC_DATAS: return (EObject)createStatisticDatas();
+			case WrsPackage.COUNTRY_REGION: return (EObject)createCountryRegion();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,6 +105,10 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 		switch (eDataType.getClassifierID()) {
 			case WrsPackage.ASSET_TYPE:
 				return createAssetTypeFromString(eDataType, initialValue);
+			case WrsPackage.LEGAL_ENTITY_TYPE:
+				return createLegalEntityTypeFromString(eDataType, initialValue);
+			case WrsPackage.INPUT_VALUE_TYPE:
+				return createInputValueTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -112,6 +124,10 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 		switch (eDataType.getClassifierID()) {
 			case WrsPackage.ASSET_TYPE:
 				return convertAssetTypeToString(eDataType, instanceValue);
+			case WrsPackage.LEGAL_ENTITY_TYPE:
+				return convertLegalEntityTypeToString(eDataType, instanceValue);
+			case WrsPackage.INPUT_VALUE_TYPE:
+				return convertInputValueTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -145,16 +161,6 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public TransferVault createTransferVault() {
 		TransferVaultImpl transferVault = new TransferVaultImpl();
 		return transferVault;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TransferVaults createTransferVaults() {
-		TransferVaultsImpl transferVaults = new TransferVaultsImpl();
-		return transferVaults;
 	}
 
 	/**
@@ -202,9 +208,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Nation createNation() {
-		NationImpl nation = new NationImpl();
-		return nation;
+	public Country createCountry() {
+		CountryImpl country = new CountryImpl();
+		return country;
 	}
 
 	/**
@@ -222,29 +228,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Accountants createAccountants() {
-		AccountantsImpl accountants = new AccountantsImpl();
-		return accountants;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Accountant createAccountant() {
-		AccountantImpl accountant = new AccountantImpl();
-		return accountant;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Material createMaterial() {
-		MaterialImpl material = new MaterialImpl();
-		return material;
+	public Thing createThing() {
+		ThingImpl thing = new ThingImpl();
+		return thing;
 	}
 
 	/**
@@ -275,6 +261,96 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public Identities createIdentities() {
 		IdentitiesImpl identities = new IdentitiesImpl();
 		return identities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Transactions createTransactions() {
+		TransactionsImpl transactions = new TransactionsImpl();
+		return transactions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractTransaction createAbstractTransaction() {
+		AbstractTransactionImpl abstractTransaction = new AbstractTransactionImpl();
+		return abstractTransaction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeAccount createNodeAccount() {
+		NodeAccountImpl nodeAccount = new NodeAccountImpl();
+		return nodeAccount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransactionConditions createTransactionConditions() {
+		TransactionConditionsImpl transactionConditions = new TransactionConditionsImpl();
+		return transactionConditions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransactionCondition createTransactionCondition() {
+		TransactionConditionImpl transactionCondition = new TransactionConditionImpl();
+		return transactionCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignedInput createSignedInput() {
+		SignedInputImpl signedInput = new SignedInputImpl();
+		return signedInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Statistics createStatistics() {
+		StatisticsImpl statistics = new StatisticsImpl();
+		return statistics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatisticDatas createStatisticDatas() {
+		StatisticDatasImpl statisticDatas = new StatisticDatasImpl();
+		return statisticDatas;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CountryRegion createCountryRegion() {
+		CountryRegionImpl countryRegion = new CountryRegionImpl();
+		return countryRegion;
 	}
 
 	/**
@@ -332,9 +408,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractVault createAbstractVault() {
-		AbstractVaultImpl abstractVault = new AbstractVaultImpl();
-		return abstractVault;
+	public AbstractAccount createAbstractAccount() {
+		AbstractAccountImpl abstractAccount = new AbstractAccountImpl();
+		return abstractAccount;
 	}
 
 	/**
@@ -372,6 +448,26 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Countries createCountries() {
+		CountriesImpl countries = new CountriesImpl();
+		return countries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Nodes createNodes() {
+		NodesImpl nodes = new NodesImpl();
+		return nodes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AssetType createAssetTypeFromString(EDataType eDataType, String initialValue) {
 		AssetType result = AssetType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -384,6 +480,46 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * @generated
 	 */
 	public String convertAssetTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LegalEntityType createLegalEntityTypeFromString(EDataType eDataType, String initialValue) {
+		LegalEntityType result = LegalEntityType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLegalEntityTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputValueType createInputValueTypeFromString(EDataType eDataType, String initialValue) {
+		InputValueType result = InputValueType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertInputValueTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

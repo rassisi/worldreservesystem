@@ -13,5 +13,5 @@ package org.wrs.wrs;
  * @model
  * @generated
  */
-public interface TransferVault extends AbstractVault {
+public interface TransferVault extends AbstractAccount {
 } // TransferVault

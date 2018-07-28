@@ -2,28 +2,37 @@
  */
 package org.wrs.wrs.tests;
 
-import junit.textui.TestRunner;
-
 import org.wrs.wrs.WrsFactory;
 import org.wrs.wrs.wrs;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
+
 /**
- * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>wrs</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object
+ * '<em><b>wrs</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.wrs.wrs.wrs#createIdentity() <em>Create Identity</em>}</li>
+ * <li>{@link org.wrs.wrs.wrs#createIdentity() <em>Create Identity</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
-public class wrsTest extends IdentityTest {
+public class wrsTest extends TestCase {
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The fixture for this wrs test case. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
+	 * @generated
+	 */
+	protected wrs fixture = null;
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -31,9 +40,9 @@ public class wrsTest extends IdentityTest {
 	}
 
 	/**
-	 * Constructs a new wrs test case with the given name.
-	 * <!-- begin-user-doc -->
+	 * Constructs a new wrs test case with the given name. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public wrsTest(String name) {
@@ -41,19 +50,18 @@ public class wrsTest extends IdentityTest {
 	}
 
 	/**
-	 * Returns the fixture for this wrs test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the fixture for this wrs test case. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	@Override
-	protected wrs getFixture() {
-		return (wrs)fixture;
+	protected void setFixture(wrs fixture) {
+		this.fixture = fixture;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -63,8 +71,8 @@ public class wrsTest extends IdentityTest {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -74,9 +82,9 @@ public class wrsTest extends IdentityTest {
 	}
 
 	/**
-	 * Tests the '{@link org.wrs.wrs.wrs#createIdentity() <em>Create Identity</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Tests the '{@link org.wrs.wrs.wrs#createIdentity() <em>Create Identity</em>}'
+	 * operation. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see org.wrs.wrs.wrs#createIdentity()
 	 * @generated
 	 */
@@ -86,4 +94,4 @@ public class wrsTest extends IdentityTest {
 		fail();
 	}
 
-} //wrsTest
+} // wrsTest

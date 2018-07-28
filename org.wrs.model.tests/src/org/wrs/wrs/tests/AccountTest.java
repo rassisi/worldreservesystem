@@ -13,7 +13,7 @@ import org.wrs.wrs.WrsFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AccountTest extends AbstractVaultTest {
+public class AccountTest extends AbstractAccountTest {
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -57,7 +57,7 @@ public interface Asset extends CDOObject {
 
 	/**
 	 * Returns the value of the '<em><b>Materials</b></em>' reference list.
-	 * The list contents are of type {@link org.wrs.wrs.Material}.
+	 * The list contents are of type {@link org.wrs.wrs.Thing}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Materials</em>' reference list isn't clear,
@@ -69,7 +69,7 @@ public interface Asset extends CDOObject {
 	 * @model
 	 * @generated
 	 */
-	EList<Material> getMaterials();
+	EList<Thing> getMaterials();
 
 	/**
 	 * <!-- begin-user-doc -->

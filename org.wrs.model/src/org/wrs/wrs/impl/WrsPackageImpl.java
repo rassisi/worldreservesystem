@@ -11,30 +11,40 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.wrs.wrs.AbstractVault;
+import org.wrs.wrs.AbstractAccount;
+import org.wrs.wrs.AbstractTransaction;
 import org.wrs.wrs.Account;
-import org.wrs.wrs.Accountant;
-import org.wrs.wrs.Accountants;
 import org.wrs.wrs.Accounts;
 import org.wrs.wrs.Asset;
 import org.wrs.wrs.AssetType;
+import org.wrs.wrs.Countries;
+import org.wrs.wrs.Country;
+import org.wrs.wrs.CountryRegion;
 import org.wrs.wrs.FiatCurrency;
 import org.wrs.wrs.Genesis;
 import org.wrs.wrs.Identities;
 import org.wrs.wrs.Identity;
 import org.wrs.wrs.Individual;
+import org.wrs.wrs.InputValueType;
 import org.wrs.wrs.LegalEntity;
-import org.wrs.wrs.Material;
-import org.wrs.wrs.Nation;
+import org.wrs.wrs.LegalEntityType;
 import org.wrs.wrs.NationalEconomies;
 import org.wrs.wrs.NetworkEngine;
 import org.wrs.wrs.Node;
+import org.wrs.wrs.NodeAccount;
+import org.wrs.wrs.Nodes;
 import org.wrs.wrs.RegisteredAssets;
+import org.wrs.wrs.SignedInput;
+import org.wrs.wrs.StatisticDatas;
+import org.wrs.wrs.Statistics;
 import org.wrs.wrs.SupplyControl;
+import org.wrs.wrs.Thing;
 import org.wrs.wrs.Transaction;
 import org.wrs.wrs.TransactionCollection;
+import org.wrs.wrs.TransactionCondition;
+import org.wrs.wrs.TransactionConditions;
+import org.wrs.wrs.Transactions;
 import org.wrs.wrs.TransferVault;
-import org.wrs.wrs.TransferVaults;
 import org.wrs.wrs.Treasury;
 import org.wrs.wrs.WorldEconomy;
 import org.wrs.wrs.WrsFactory;
@@ -74,13 +84,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass transferVaultsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass genesisEClass = null;
 
 	/**
@@ -109,7 +112,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass nationEClass = null;
+	private EClass countryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,20 +126,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass accountantsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass accountantEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass identityEClass = null;
 
 	/**
@@ -144,7 +133,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass materialEClass = null;
+	private EClass thingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +155,69 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	private EClass identitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transactionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractTransactionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodeAccountEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transactionConditionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transactionConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass signedInputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass statisticsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass statisticDatasEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass countryRegionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -207,7 +259,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass abstractVaultEClass = null;
+	private EClass abstractAccountEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,7 +287,35 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass countriesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum assetTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum legalEntityTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum inputValueTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -312,7 +392,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getwrs_Transfervaults() {
+	public EReference getwrs_Mainvault() {
 		return (EReference)wrsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -321,8 +401,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getwrs_Mainvault() {
-		return (EReference)wrsEClass.getEStructuralFeatures().get(1);
+	public EReference getwrs_Identities() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -330,8 +410,26 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getwrs_Identities() {
-		return (EReference)wrsEClass.getEStructuralFeatures().get(2);
+	public EReference getwrs_Transactions() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getwrs_Transactionconditions() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getwrs_StatisticDatas() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -340,7 +438,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	public EReference getwrs_Supplycontrol() {
-		return (EReference)wrsEClass.getEStructuralFeatures().get(3);
+		return (EReference)wrsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -348,8 +446,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getwrs_Wallets() {
-		return (EReference)wrsEClass.getEStructuralFeatures().get(4);
+	public EReference getwrs_Accounts() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -358,7 +456,34 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	public EReference getwrs_Registeredasstets() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getwrs_Worldeconomy() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getwrs_Countries() {
 		return (EReference)wrsEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getwrs_Nodes() {
+		return (EReference)wrsEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -386,24 +511,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EClass getTransferVault() {
 		return transferVaultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTransferVaults() {
-		return transferVaultsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTransferVaults_Children() {
-		return (EReference)transferVaultsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -492,8 +599,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNationalEconomies_Children() {
-		return (EReference)nationalEconomiesEClass.getEStructuralFeatures().get(0);
+	public EClass getCountry() {
+		return countryEClass;
 	}
 
 	/**
@@ -501,8 +608,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNation() {
-		return nationEClass;
+	public EReference getCountry_Fiatcurrency() {
+		return (EReference)countryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -510,8 +617,17 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNation_Fiatcurrency() {
-		return (EReference)nationEClass.getEStructuralFeatures().get(0);
+	public EReference getCountry_Nationaleconomies() {
+		return (EReference)countryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCountry_Regions() {
+		return (EReference)countryEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -521,33 +637,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EClass getFiatCurrency() {
 		return fiatCurrencyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAccountants() {
-		return accountantsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAccountants_Children() {
-		return (EReference)accountantsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAccountant() {
-		return accountantEClass;
 	}
 
 	/**
@@ -573,8 +662,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMaterial() {
-		return materialEClass;
+	public EClass getThing() {
+		return thingEClass;
 	}
 
 	/**
@@ -582,8 +671,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMaterial_BelongsTo() {
-		return (EReference)materialEClass.getEStructuralFeatures().get(0);
+	public EReference getThing_BelongsTo() {
+		return (EReference)thingEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -600,8 +689,35 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIndividual_WorksFor() {
+		return (EReference)individualEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIndividual_LegalPartnerOf() {
+		return (EReference)individualEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLegalEntity() {
 		return legalEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLegalEntity_Type() {
+		return (EAttribute)legalEntityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -627,6 +743,168 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTransactions() {
+		return transactionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransactions_Children() {
+		return (EReference)transactionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractTransaction() {
+		return abstractTransactionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNodeAccount() {
+		return nodeAccountEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTransactionConditions() {
+		return transactionConditionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransactionConditions_Children() {
+		return (EReference)transactionConditionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTransactionCondition() {
+		return transactionConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransactionCondition_Formula() {
+		return (EAttribute)transactionConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransactionCondition_SignedInputs() {
+		return (EReference)transactionConditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSignedInput() {
+		return signedInputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSignedInput_VariableName() {
+		return (EAttribute)signedInputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSignedInput_Identity() {
+		return (EReference)signedInputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSignedInput_Value() {
+		return (EAttribute)signedInputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSignedInput_Type() {
+		return (EAttribute)signedInputEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStatistics() {
+		return statisticsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStatisticDatas() {
+		return statisticDatasEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStatisticDatas_Children() {
+		return (EReference)statisticDatasEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCountryRegion() {
+		return countryRegionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAccount() {
 		return accountEClass;
 	}
@@ -638,15 +916,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EAttribute getAccount_PublicKey() {
 		return (EAttribute)accountEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAccount_BelongsTo() {
-		return (EReference)accountEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -744,8 +1013,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAbstractVault() {
-		return abstractVaultEClass;
+	public EClass getAbstractAccount() {
+		return abstractAccountEClass;
 	}
 
 	/**
@@ -753,8 +1022,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractVault_Assets() {
-		return (EReference)abstractVaultEClass.getEStructuralFeatures().get(0);
+	public EReference getAbstractAccount_Assets() {
+		return (EReference)abstractAccountEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -762,8 +1031,17 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractVault_Transaction() {
-		return (EReference)abstractVaultEClass.getEStructuralFeatures().get(1);
+	public EReference getAbstractAccount_Transaction() {
+		return (EReference)abstractAccountEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractAccount_BelongsTo() {
+		return (EReference)abstractAccountEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -789,17 +1067,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNode_Wrs() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getNode_Weight() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -808,7 +1077,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	public EReference getNode_Networkengine() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
+		return (EReference)nodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -825,8 +1094,62 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCountries() {
+		return countriesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCountries_Country() {
+		return (EReference)countriesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNodes() {
+		return nodesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNodes_Children() {
+		return (EReference)nodesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getAssetType() {
 		return assetTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getLegalEntityType() {
+		return legalEntityTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getInputValueType() {
+		return inputValueTypeEEnum;
 	}
 
 	/**
@@ -858,20 +1181,22 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		// Create classes and their features
 		wrsEClass = createEClass(WRS);
-		createEReference(wrsEClass, WRS__TRANSFERVAULTS);
 		createEReference(wrsEClass, WRS__MAINVAULT);
-		createEReference(wrsEClass, WRS__IDENTITIES);
 		createEReference(wrsEClass, WRS__SUPPLYCONTROL);
-		createEReference(wrsEClass, WRS__WALLETS);
+		createEReference(wrsEClass, WRS__ACCOUNTS);
 		createEReference(wrsEClass, WRS__REGISTEREDASSTETS);
+		createEReference(wrsEClass, WRS__WORLDECONOMY);
+		createEReference(wrsEClass, WRS__COUNTRIES);
+		createEReference(wrsEClass, WRS__NODES);
+		createEReference(wrsEClass, WRS__IDENTITIES);
+		createEReference(wrsEClass, WRS__TRANSACTIONS);
+		createEReference(wrsEClass, WRS__TRANSACTIONCONDITIONS);
+		createEReference(wrsEClass, WRS__STATISTIC_DATAS);
 		createEOperation(wrsEClass, WRS___CREATE_IDENTITY);
 
 		treasuryEClass = createEClass(TREASURY);
 
 		transferVaultEClass = createEClass(TRANSFER_VAULT);
-
-		transferVaultsEClass = createEClass(TRANSFER_VAULTS);
-		createEReference(transferVaultsEClass, TRANSFER_VAULTS__CHILDREN);
 
 		genesisEClass = createEClass(GENESIS);
 		createEReference(genesisEClass, GENESIS__TREASURY);
@@ -885,34 +1210,29 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEReference(worldEconomyEClass, WORLD_ECONOMY__NATIONALECONOMIES);
 
 		nationalEconomiesEClass = createEClass(NATIONAL_ECONOMIES);
-		createEReference(nationalEconomiesEClass, NATIONAL_ECONOMIES__CHILDREN);
 
-		nationEClass = createEClass(NATION);
-		createEReference(nationEClass, NATION__FIATCURRENCY);
+		countryEClass = createEClass(COUNTRY);
+		createEReference(countryEClass, COUNTRY__FIATCURRENCY);
+		createEReference(countryEClass, COUNTRY__NATIONALECONOMIES);
+		createEReference(countryEClass, COUNTRY__REGIONS);
 
 		fiatCurrencyEClass = createEClass(FIAT_CURRENCY);
-
-		accountantsEClass = createEClass(ACCOUNTANTS);
-		createEReference(accountantsEClass, ACCOUNTANTS__CHILDREN);
-
-		accountantEClass = createEClass(ACCOUNTANT);
 
 		identityEClass = createEClass(IDENTITY);
 		createEAttribute(identityEClass, IDENTITY__UUID);
 
-		materialEClass = createEClass(MATERIAL);
-		createEReference(materialEClass, MATERIAL__BELONGS_TO);
+		thingEClass = createEClass(THING);
+		createEReference(thingEClass, THING__BELONGS_TO);
 
 		individualEClass = createEClass(INDIVIDUAL);
+		createEReference(individualEClass, INDIVIDUAL__WORKS_FOR);
+		createEReference(individualEClass, INDIVIDUAL__LEGAL_PARTNER_OF);
 
 		legalEntityEClass = createEClass(LEGAL_ENTITY);
-
-		identitiesEClass = createEClass(IDENTITIES);
-		createEReference(identitiesEClass, IDENTITIES__CHILDREN);
+		createEAttribute(legalEntityEClass, LEGAL_ENTITY__TYPE);
 
 		accountEClass = createEClass(ACCOUNT);
 		createEAttribute(accountEClass, ACCOUNT__PUBLIC_KEY);
-		createEReference(accountEClass, ACCOUNT__BELONGS_TO);
 
 		supplyControlEClass = createEClass(SUPPLY_CONTROL);
 		createEReference(supplyControlEClass, SUPPLY_CONTROL__GENESIS);
@@ -928,21 +1248,59 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		registeredAssetsEClass = createEClass(REGISTERED_ASSETS);
 		createEReference(registeredAssetsEClass, REGISTERED_ASSETS__CHILDREN);
 
-		abstractVaultEClass = createEClass(ABSTRACT_VAULT);
-		createEReference(abstractVaultEClass, ABSTRACT_VAULT__ASSETS);
-		createEReference(abstractVaultEClass, ABSTRACT_VAULT__TRANSACTION);
+		abstractAccountEClass = createEClass(ABSTRACT_ACCOUNT);
+		createEReference(abstractAccountEClass, ABSTRACT_ACCOUNT__ASSETS);
+		createEReference(abstractAccountEClass, ABSTRACT_ACCOUNT__TRANSACTION);
+		createEReference(abstractAccountEClass, ABSTRACT_ACCOUNT__BELONGS_TO);
 
 		transactionCollectionEClass = createEClass(TRANSACTION_COLLECTION);
 
 		nodeEClass = createEClass(NODE);
-		createEReference(nodeEClass, NODE__WRS);
 		createEAttribute(nodeEClass, NODE__WEIGHT);
 		createEReference(nodeEClass, NODE__NETWORKENGINE);
 
 		networkEngineEClass = createEClass(NETWORK_ENGINE);
 
+		countriesEClass = createEClass(COUNTRIES);
+		createEReference(countriesEClass, COUNTRIES__COUNTRY);
+
+		nodesEClass = createEClass(NODES);
+		createEReference(nodesEClass, NODES__CHILDREN);
+
+		identitiesEClass = createEClass(IDENTITIES);
+		createEReference(identitiesEClass, IDENTITIES__CHILDREN);
+
+		transactionsEClass = createEClass(TRANSACTIONS);
+		createEReference(transactionsEClass, TRANSACTIONS__CHILDREN);
+
+		abstractTransactionEClass = createEClass(ABSTRACT_TRANSACTION);
+
+		nodeAccountEClass = createEClass(NODE_ACCOUNT);
+
+		transactionConditionsEClass = createEClass(TRANSACTION_CONDITIONS);
+		createEReference(transactionConditionsEClass, TRANSACTION_CONDITIONS__CHILDREN);
+
+		transactionConditionEClass = createEClass(TRANSACTION_CONDITION);
+		createEAttribute(transactionConditionEClass, TRANSACTION_CONDITION__FORMULA);
+		createEReference(transactionConditionEClass, TRANSACTION_CONDITION__SIGNED_INPUTS);
+
+		signedInputEClass = createEClass(SIGNED_INPUT);
+		createEAttribute(signedInputEClass, SIGNED_INPUT__VARIABLE_NAME);
+		createEReference(signedInputEClass, SIGNED_INPUT__IDENTITY);
+		createEAttribute(signedInputEClass, SIGNED_INPUT__VALUE);
+		createEAttribute(signedInputEClass, SIGNED_INPUT__TYPE);
+
+		statisticsEClass = createEClass(STATISTICS);
+
+		statisticDatasEClass = createEClass(STATISTIC_DATAS);
+		createEReference(statisticDatasEClass, STATISTIC_DATAS__CHILDREN);
+
+		countryRegionEClass = createEClass(COUNTRY_REGION);
+
 		// Create enums
 		assetTypeEEnum = createEEnum(ASSET_TYPE);
+		legalEntityTypeEEnum = createEEnum(LEGAL_ENTITY_TYPE);
+		inputValueTypeEEnum = createEEnum(INPUT_VALUE_TYPE);
 	}
 
 	/**
@@ -973,22 +1331,29 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		wrsEClass.getESuperTypes().add(this.getIdentity());
-		treasuryEClass.getESuperTypes().add(this.getAbstractVault());
-		transferVaultEClass.getESuperTypes().add(this.getAbstractVault());
-		materialEClass.getESuperTypes().add(this.getIdentity());
+		treasuryEClass.getESuperTypes().add(this.getAbstractAccount());
+		transferVaultEClass.getESuperTypes().add(this.getAbstractAccount());
+		thingEClass.getESuperTypes().add(this.getIdentity());
 		individualEClass.getESuperTypes().add(this.getIdentity());
 		legalEntityEClass.getESuperTypes().add(this.getIdentity());
-		accountEClass.getESuperTypes().add(this.getAbstractVault());
+		accountEClass.getESuperTypes().add(this.getAbstractAccount());
+		transactionEClass.getESuperTypes().add(this.getAbstractTransaction());
+		transactionCollectionEClass.getESuperTypes().add(this.getAbstractTransaction());
+		nodeAccountEClass.getESuperTypes().add(this.getAbstractAccount());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wrsEClass, wrs.class, "wrs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getwrs_Transfervaults(), this.getTransferVaults(), null, "transfervaults", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getwrs_Mainvault(), this.getTreasury(), null, "mainvault", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getwrs_Identities(), this.getIdentities(), null, "identities", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getwrs_Supplycontrol(), this.getSupplyControl(), null, "supplycontrol", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getwrs_Wallets(), this.getAccounts(), null, "wallets", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getwrs_Registeredasstets(), this.getRegisteredAssets(), null, "registeredasstets", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Mainvault(), this.getTreasury(), null, "mainvault", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Supplycontrol(), this.getSupplyControl(), null, "supplycontrol", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Accounts(), this.getAccounts(), null, "accounts", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Registeredasstets(), this.getRegisteredAssets(), null, "registeredasstets", null, 1, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Worldeconomy(), this.getWorldEconomy(), null, "worldeconomy", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Countries(), this.getCountries(), null, "countries", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Nodes(), this.getNodes(), null, "nodes", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Identities(), this.getIdentities(), null, "identities", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Transactions(), this.getTransactions(), null, "transactions", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_Transactionconditions(), this.getTransactionConditions(), null, "transactionconditions", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getwrs_StatisticDatas(), this.getStatisticDatas(), null, "statisticDatas", null, 0, 1, wrs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getwrs__CreateIdentity(), null, "createIdentity", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -996,77 +1361,105 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		initEClass(transferVaultEClass, TransferVault.class, "TransferVault", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(transferVaultsEClass, TransferVaults.class, "TransferVaults", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransferVaults_Children(), this.getTransferVault(), null, "children", null, 0, -1, TransferVaults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(genesisEClass, Genesis.class, "Genesis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGenesis_Treasury(), this.getTreasury(), null, "treasury", null, 1, 1, Genesis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assetEClass, Asset.class, "Asset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAsset_AssetType(), this.getAssetType(), "assetType", "UDOLLAR", 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAsset_Materials(), this.getMaterial(), null, "materials", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAsset_Materials(), this.getThing(), null, "materials", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getAsset__Register(), null, "register", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(worldEconomyEClass, WorldEconomy.class, "WorldEconomy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorldEconomy_Nationaleconomies(), this.getNationalEconomies(), null, "nationaleconomies", null, 1, 1, WorldEconomy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorldEconomy_Nationaleconomies(), this.getNationalEconomies(), null, "nationaleconomies", null, 1, -1, WorldEconomy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nationalEconomiesEClass, NationalEconomies.class, "NationalEconomies", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNationalEconomies_Children(), this.getNation(), null, "children", null, 0, -1, NationalEconomies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nationEClass, Nation.class, "Nation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNation_Fiatcurrency(), this.getFiatCurrency(), null, "fiatcurrency", null, 1, 1, Nation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(countryEClass, Country.class, "Country", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCountry_Fiatcurrency(), this.getFiatCurrency(), null, "fiatcurrency", null, 1, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCountry_Nationaleconomies(), this.getNationalEconomies(), null, "nationaleconomies", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCountry_Regions(), this.getCountryRegion(), null, "regions", null, 0, -1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fiatCurrencyEClass, FiatCurrency.class, "FiatCurrency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(accountantsEClass, Accountants.class, "Accountants", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAccountants_Children(), this.getAccountant(), null, "children", null, 0, -1, Accountants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(accountantEClass, Accountant.class, "Accountant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(identityEClass, Identity.class, "Identity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentity_UUID(), ecorePackage.getEString(), "UUID", null, 0, 1, Identity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(materialEClass, Material.class, "Material", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMaterial_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, Material.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(thingEClass, Thing.class, "Thing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getThing_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, Thing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(individualEClass, Individual.class, "Individual", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIndividual_WorksFor(), this.getLegalEntity(), null, "worksFor", null, 0, -1, Individual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIndividual_LegalPartnerOf(), this.getLegalEntity(), null, "legalPartnerOf", null, 0, -1, Individual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(legalEntityEClass, LegalEntity.class, "LegalEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(identitiesEClass, Identities.class, "Identities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIdentities_Children(), this.getIdentity(), null, "children", null, 0, -1, Identities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLegalEntity_Type(), this.getLegalEntityType(), "type", null, 0, 1, LegalEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountEClass, Account.class, "Account", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAccount_PublicKey(), ecorePackage.getEString(), "publicKey", null, 0, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAccount_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(supplyControlEClass, SupplyControl.class, "SupplyControl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSupplyControl_Genesis(), this.getGenesis(), null, "genesis", null, 1, 1, SupplyControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountsEClass, Accounts.class, "Accounts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAccounts_Children(), this.getAccount(), null, "children", null, 0, -1, Accounts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAccounts_Children(), this.getAbstractAccount(), null, "children", null, 0, -1, Accounts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionEClass, Transaction.class, "Transaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransaction_Assets(), this.getAsset(), null, "assets", null, 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransaction_Transactions(), this.getAbstractVault(), null, "transactions", null, 0, -1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransaction_Transactions(), this.getAbstractAccount(), null, "transactions", null, 0, -1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransaction_Data(), ecorePackage.getEString(), "data", "", 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(registeredAssetsEClass, RegisteredAssets.class, "RegisteredAssets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRegisteredAssets_Children(), this.getAsset(), null, "children", null, 0, -1, RegisteredAssets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRegisteredAssets_Children(), this.getAsset(), null, "children", null, 0, -1, RegisteredAssets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(abstractVaultEClass, AbstractVault.class, "AbstractVault", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractVault_Assets(), this.getAsset(), null, "assets", null, 0, -1, AbstractVault.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractVault_Transaction(), this.getTransaction(), null, "transaction", null, 0, 1, AbstractVault.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(abstractAccountEClass, AbstractAccount.class, "AbstractAccount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractAccount_Assets(), this.getAsset(), null, "assets", null, 0, -1, AbstractAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractAccount_Transaction(), this.getTransaction(), null, "transaction", null, 0, 1, AbstractAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractAccount_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, AbstractAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionCollectionEClass, TransactionCollection.class, "TransactionCollection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNode_Wrs(), this.getwrs(), null, "wrs", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Weight(), ecorePackage.getEDouble(), "weight", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Networkengine(), this.getNetworkEngine(), null, "networkengine", null, 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(networkEngineEClass, NetworkEngine.class, "NetworkEngine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(countriesEClass, Countries.class, "Countries", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCountries_Country(), this.getCountry(), null, "country", null, 0, 1, Countries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(nodesEClass, Nodes.class, "Nodes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNodes_Children(), this.getNode(), null, "children", null, 0, -1, Nodes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(identitiesEClass, Identities.class, "Identities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIdentities_Children(), this.getIdentity(), null, "children", null, 0, -1, Identities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transactionsEClass, Transactions.class, "Transactions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransactions_Children(), this.getAbstractTransaction(), null, "children", null, 0, -1, Transactions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractTransactionEClass, AbstractTransaction.class, "AbstractTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(nodeAccountEClass, NodeAccount.class, "NodeAccount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(transactionConditionsEClass, TransactionConditions.class, "TransactionConditions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransactionConditions_Children(), this.getTransactionCondition(), null, "children", null, 0, -1, TransactionConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transactionConditionEClass, TransactionCondition.class, "TransactionCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTransactionCondition_Formula(), ecorePackage.getEString(), "formula", null, 0, 1, TransactionCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransactionCondition_SignedInputs(), this.getSignedInput(), null, "signedInputs", null, 0, -1, TransactionCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(signedInputEClass, SignedInput.class, "SignedInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSignedInput_VariableName(), ecorePackage.getEString(), "variableName", null, 0, 1, SignedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignedInput_Identity(), this.getIdentity(), null, "identity", null, 0, 1, SignedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSignedInput_Value(), ecorePackage.getEString(), "value", null, 0, 1, SignedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSignedInput_Type(), this.getInputValueType(), "type", null, 0, 1, SignedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(statisticsEClass, Statistics.class, "Statistics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(statisticDatasEClass, StatisticDatas.class, "StatisticDatas", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStatisticDatas_Children(), this.getStatistics(), null, "children", null, 0, 1, StatisticDatas.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(countryRegionEClass, CountryRegion.class, "CountryRegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(assetTypeEEnum, AssetType.class, "AssetType");
@@ -1077,6 +1470,17 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		addEEnumLiteral(assetTypeEEnum, AssetType.PHYSICAL);
 		addEEnumLiteral(assetTypeEEnum, AssetType.INTELLECTUAL_PROPERTY);
 		addEEnumLiteral(assetTypeEEnum, AssetType.UDOLLAR);
+
+		initEEnum(legalEntityTypeEEnum, LegalEntityType.class, "LegalEntityType");
+		addEEnumLiteral(legalEntityTypeEEnum, LegalEntityType.COMPANY);
+		addEEnumLiteral(legalEntityTypeEEnum, LegalEntityType.ACCOUNTANT);
+		addEEnumLiteral(legalEntityTypeEEnum, LegalEntityType.CHARITY);
+
+		initEEnum(inputValueTypeEEnum, InputValueType.class, "InputValueType");
+		addEEnumLiteral(inputValueTypeEEnum, InputValueType.DATE);
+		addEEnumLiteral(inputValueTypeEEnum, InputValueType.NUMBER);
+		addEEnumLiteral(inputValueTypeEEnum, InputValueType.BOOLEAN);
+		addEEnumLiteral(inputValueTypeEEnum, InputValueType.TEXT);
 
 		// Create resource
 		createResource(eNS_URI);

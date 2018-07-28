@@ -25,19 +25,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Accounts extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' reference list.
-	 * The list contents are of type {@link org.wrs.wrs.Account}.
+	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
+	 * The list contents are of type {@link org.wrs.wrs.AbstractAccount}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Children</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' reference list.
+	 * @return the value of the '<em>Children</em>' containment reference list.
 	 * @see org.wrs.wrs.WrsPackage#getAccounts_Children()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Account> getChildren();
+	EList<AbstractAccount> getChildren();
 
 } // Accounts

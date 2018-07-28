@@ -2,6 +2,7 @@
  */
 package org.wrs.wrs.impl;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
@@ -58,17 +59,9 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NationalEconomies getNationaleconomies() {
-		return (NationalEconomies)eGet(WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNationaleconomies(NationalEconomies newNationaleconomies) {
-		eSet(WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, newNationaleconomies);
+	@SuppressWarnings("unchecked")
+	public EList<NationalEconomies> getNationaleconomies() {
+		return (EList<NationalEconomies>)eGet(WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, true);
 	}
 
 } //WorldEconomyImpl

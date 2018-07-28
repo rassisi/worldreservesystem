@@ -23,7 +23,7 @@ import org.wrs.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AccountItemProvider extends AbstractVaultItemProvider {
+public class AccountItemProvider extends AbstractAccountItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,6 @@ public class AccountItemProvider extends AbstractVaultItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addPublicKeyPropertyDescriptor(object);
-			addBelongsToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,28 +68,6 @@ public class AccountItemProvider extends AbstractVaultItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Belongs To feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBelongsToPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Account_belongsTo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Account_belongsTo_feature", "_UI_Account_type"),
-				 WrsPackage.Literals.ACCOUNT__BELONGS_TO,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

@@ -16,7 +16,7 @@ import org.eclipse.rcpl.application.RcplApplication;
 import org.eclipse.rcpl.application.RcplApplicationProvider;
 import org.eclipse.rcpl.model.ISessionFacory;
 import org.eclipse.rcpl.model.RCPLModel;
-import org.eclipse.rcpl.model.cdo.client.RcplSession;
+import org.eclipse.rcpl.model.client.RcplSession;
 
 /**
  * @author ramin

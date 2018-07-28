@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface RegisteredAssets extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' reference list.
+	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
 	 * The list contents are of type {@link org.wrs.wrs.Asset}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,9 +33,9 @@ public interface RegisteredAssets extends CDOObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' reference list.
+	 * @return the value of the '<em>Children</em>' containment reference list.
 	 * @see org.wrs.wrs.WrsPackage#getRegisteredAssets_Children()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Asset> getChildren();

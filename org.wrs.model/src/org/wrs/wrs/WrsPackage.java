@@ -66,34 +66,17 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getIdentity()
 	 * @generated
 	 */
-	int IDENTITY = 12;
+	int IDENTITY = 9;
 
 	/**
-	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * The meta object id for the '{@link org.wrs.wrs.impl.ThingImpl <em>Thing</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.ThingImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getThing()
 	 * @generated
-	 * @ordered
 	 */
-	int IDENTITY__UUID = 0;
-
-	/**
-	 * The number of structural features of the '<em>Identity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IDENTITY_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Identity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IDENTITY_OPERATION_COUNT = 0;
+	int THING = 10;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.wrsImpl <em>wrs</em>}' class.
@@ -106,31 +89,67 @@ public interface WrsPackage extends EPackage {
 	int WRS = 0;
 
 	/**
-	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * The feature id for the '<em><b>Mainvault</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__UUID = IDENTITY__UUID;
+	int WRS__MAINVAULT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Transfervaults</b></em>' containment reference.
+	 * The feature id for the '<em><b>Supplycontrol</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__TRANSFERVAULTS = IDENTITY_FEATURE_COUNT + 0;
+	int WRS__SUPPLYCONTROL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Mainvault</b></em>' containment reference.
+	 * The feature id for the '<em><b>Accounts</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__MAINVAULT = IDENTITY_FEATURE_COUNT + 1;
+	int WRS__ACCOUNTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Registeredasstets</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__REGISTEREDASSTETS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Worldeconomy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__WORLDECONOMY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Countries</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__COUNTRIES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Nodes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__NODES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Identities</b></em>' containment reference.
@@ -139,34 +158,34 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__IDENTITIES = IDENTITY_FEATURE_COUNT + 2;
+	int WRS__IDENTITIES = 7;
 
 	/**
-	 * The feature id for the '<em><b>Supplycontrol</b></em>' reference.
+	 * The feature id for the '<em><b>Transactions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__SUPPLYCONTROL = IDENTITY_FEATURE_COUNT + 3;
+	int WRS__TRANSACTIONS = 8;
 
 	/**
-	 * The feature id for the '<em><b>Wallets</b></em>' containment reference.
+	 * The feature id for the '<em><b>Transactionconditions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__WALLETS = IDENTITY_FEATURE_COUNT + 4;
+	int WRS__TRANSACTIONCONDITIONS = 9;
 
 	/**
-	 * The feature id for the '<em><b>Registeredasstets</b></em>' reference.
+	 * The feature id for the '<em><b>Statistic Datas</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WRS__REGISTEREDASSTETS = IDENTITY_FEATURE_COUNT + 5;
+	int WRS__STATISTIC_DATAS = 10;
 
 	/**
 	 * The number of structural features of the '<em>wrs</em>' class.
@@ -175,7 +194,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WRS_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 6;
+	int WRS_FEATURE_COUNT = 11;
 
 	/**
 	 * The operation id for the '<em>Create Identity</em>' operation.
@@ -184,7 +203,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WRS___CREATE_IDENTITY = IDENTITY_OPERATION_COUNT + 0;
+	int WRS___CREATE_IDENTITY = 0;
 
 	/**
 	 * The number of operations of the '<em>wrs</em>' class.
@@ -193,17 +212,17 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WRS_OPERATION_COUNT = IDENTITY_OPERATION_COUNT + 1;
+	int WRS_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.wrs.wrs.impl.AbstractVaultImpl <em>Abstract Vault</em>}' class.
+	 * The meta object id for the '{@link org.wrs.wrs.impl.AbstractAccountImpl <em>Abstract Account</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.wrs.wrs.impl.AbstractVaultImpl
-	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAbstractVault()
+	 * @see org.wrs.wrs.impl.AbstractAccountImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAbstractAccount()
 	 * @generated
 	 */
-	int ABSTRACT_VAULT = 22;
+	int ABSTRACT_ACCOUNT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -212,7 +231,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_VAULT__ASSETS = 0;
+	int ABSTRACT_ACCOUNT__ASSETS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Transaction</b></em>' reference.
@@ -221,25 +240,34 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_VAULT__TRANSACTION = 1;
+	int ABSTRACT_ACCOUNT__TRANSACTION = 1;
 
 	/**
-	 * The number of structural features of the '<em>Abstract Vault</em>' class.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_VAULT_FEATURE_COUNT = 2;
+	int ABSTRACT_ACCOUNT__BELONGS_TO = 2;
 
 	/**
-	 * The number of operations of the '<em>Abstract Vault</em>' class.
+	 * The number of structural features of the '<em>Abstract Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_VAULT_OPERATION_COUNT = 0;
+	int ABSTRACT_ACCOUNT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Abstract Account</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACCOUNT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.TreasuryImpl <em>Treasury</em>}' class.
@@ -258,7 +286,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREASURY__ASSETS = ABSTRACT_VAULT__ASSETS;
+	int TREASURY__ASSETS = ABSTRACT_ACCOUNT__ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Transaction</b></em>' reference.
@@ -267,7 +295,16 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREASURY__TRANSACTION = ABSTRACT_VAULT__TRANSACTION;
+	int TREASURY__TRANSACTION = ABSTRACT_ACCOUNT__TRANSACTION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREASURY__BELONGS_TO = ABSTRACT_ACCOUNT__BELONGS_TO;
 
 	/**
 	 * The number of structural features of the '<em>Treasury</em>' class.
@@ -276,7 +313,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREASURY_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 0;
+	int TREASURY_FEATURE_COUNT = ABSTRACT_ACCOUNT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Treasury</em>' class.
@@ -285,7 +322,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREASURY_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
+	int TREASURY_OPERATION_COUNT = ABSTRACT_ACCOUNT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.TransferVaultImpl <em>Transfer Vault</em>}' class.
@@ -304,7 +341,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULT__ASSETS = ABSTRACT_VAULT__ASSETS;
+	int TRANSFER_VAULT__ASSETS = ABSTRACT_ACCOUNT__ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Transaction</b></em>' reference.
@@ -313,7 +350,16 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULT__TRANSACTION = ABSTRACT_VAULT__TRANSACTION;
+	int TRANSFER_VAULT__TRANSACTION = ABSTRACT_ACCOUNT__TRANSACTION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULT__BELONGS_TO = ABSTRACT_ACCOUNT__BELONGS_TO;
 
 	/**
 	 * The number of structural features of the '<em>Transfer Vault</em>' class.
@@ -322,7 +368,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULT_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 0;
+	int TRANSFER_VAULT_FEATURE_COUNT = ABSTRACT_ACCOUNT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Transfer Vault</em>' class.
@@ -331,44 +377,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULT_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.wrs.wrs.impl.TransferVaultsImpl <em>Transfer Vaults</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.wrs.wrs.impl.TransferVaultsImpl
-	 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransferVaults()
-	 * @generated
-	 */
-	int TRANSFER_VAULTS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSFER_VAULTS__CHILDREN = 0;
-
-	/**
-	 * The number of structural features of the '<em>Transfer Vaults</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSFER_VAULTS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Transfer Vaults</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSFER_VAULTS_OPERATION_COUNT = 0;
+	int TRANSFER_VAULT_OPERATION_COUNT = ABSTRACT_ACCOUNT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.GenesisImpl <em>Genesis</em>}' class.
@@ -378,7 +387,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getGenesis()
 	 * @generated
 	 */
-	int GENESIS = 4;
+	int GENESIS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Treasury</b></em>' reference.
@@ -415,7 +424,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAsset()
 	 * @generated
 	 */
-	int ASSET = 5;
+	int ASSET = 4;
 
 	/**
 	 * The feature id for the '<em><b>Asset Type</b></em>' attribute.
@@ -470,10 +479,10 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getWorldEconomy()
 	 * @generated
 	 */
-	int WORLD_ECONOMY = 6;
+	int WORLD_ECONOMY = 5;
 
 	/**
-	 * The feature id for the '<em><b>Nationaleconomies</b></em>' containment reference.
+	 * The feature id for the '<em><b>Nationaleconomies</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -507,16 +516,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getNationalEconomies()
 	 * @generated
 	 */
-	int NATIONAL_ECONOMIES = 7;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NATIONAL_ECONOMIES__CHILDREN = 0;
+	int NATIONAL_ECONOMIES = 6;
 
 	/**
 	 * The number of structural features of the '<em>National Economies</em>' class.
@@ -525,7 +525,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NATIONAL_ECONOMIES_FEATURE_COUNT = 1;
+	int NATIONAL_ECONOMIES_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>National Economies</em>' class.
@@ -537,14 +537,14 @@ public interface WrsPackage extends EPackage {
 	int NATIONAL_ECONOMIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.wrs.wrs.impl.NationImpl <em>Nation</em>}' class.
+	 * The meta object id for the '{@link org.wrs.wrs.impl.CountryImpl <em>Country</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.wrs.wrs.impl.NationImpl
-	 * @see org.wrs.wrs.impl.WrsPackageImpl#getNation()
+	 * @see org.wrs.wrs.impl.CountryImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getCountry()
 	 * @generated
 	 */
-	int NATION = 8;
+	int COUNTRY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Fiatcurrency</b></em>' containment reference.
@@ -553,25 +553,43 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NATION__FIATCURRENCY = 0;
+	int COUNTRY__FIATCURRENCY = 0;
 
 	/**
-	 * The number of structural features of the '<em>Nation</em>' class.
+	 * The feature id for the '<em><b>Nationaleconomies</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NATION_FEATURE_COUNT = 1;
+	int COUNTRY__NATIONALECONOMIES = 1;
 
 	/**
-	 * The number of operations of the '<em>Nation</em>' class.
+	 * The feature id for the '<em><b>Regions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NATION_OPERATION_COUNT = 0;
+	int COUNTRY__REGIONS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Country</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Country</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.FiatCurrencyImpl <em>Fiat Currency</em>}' class.
@@ -581,7 +599,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getFiatCurrency()
 	 * @generated
 	 */
-	int FIAT_CURRENCY = 9;
+	int FIAT_CURRENCY = 8;
 
 	/**
 	 * The number of structural features of the '<em>Fiat Currency</em>' class.
@@ -602,79 +620,31 @@ public interface WrsPackage extends EPackage {
 	int FIAT_CURRENCY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.wrs.wrs.impl.AccountantsImpl <em>Accountants</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.wrs.wrs.impl.AccountantsImpl
-	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAccountants()
-	 * @generated
-	 */
-	int ACCOUNTANTS = 10;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTANTS__CHILDREN = 0;
+	int IDENTITY__UUID = 0;
 
 	/**
-	 * The number of structural features of the '<em>Accountants</em>' class.
+	 * The number of structural features of the '<em>Identity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTANTS_FEATURE_COUNT = 1;
+	int IDENTITY_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Accountants</em>' class.
+	 * The number of operations of the '<em>Identity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTANTS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.wrs.wrs.impl.AccountantImpl <em>Accountant</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.wrs.wrs.impl.AccountantImpl
-	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAccountant()
-	 * @generated
-	 */
-	int ACCOUNTANT = 11;
-
-	/**
-	 * The number of structural features of the '<em>Accountant</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNTANT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Accountant</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNTANT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.wrs.wrs.impl.MaterialImpl <em>Material</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.wrs.wrs.impl.MaterialImpl
-	 * @see org.wrs.wrs.impl.WrsPackageImpl#getMaterial()
-	 * @generated
-	 */
-	int MATERIAL = 13;
+	int IDENTITY_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -683,7 +653,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATERIAL__UUID = IDENTITY__UUID;
+	int THING__UUID = IDENTITY__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
@@ -692,25 +662,25 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATERIAL__BELONGS_TO = IDENTITY_FEATURE_COUNT + 0;
+	int THING__BELONGS_TO = IDENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Material</em>' class.
+	 * The number of structural features of the '<em>Thing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MATERIAL_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 1;
+	int THING_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Material</em>' class.
+	 * The number of operations of the '<em>Thing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MATERIAL_OPERATION_COUNT = IDENTITY_OPERATION_COUNT + 0;
+	int THING_OPERATION_COUNT = IDENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.IndividualImpl <em>Individual</em>}' class.
@@ -720,7 +690,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getIndividual()
 	 * @generated
 	 */
-	int INDIVIDUAL = 14;
+	int INDIVIDUAL = 11;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -732,13 +702,31 @@ public interface WrsPackage extends EPackage {
 	int INDIVIDUAL__UUID = IDENTITY__UUID;
 
 	/**
+	 * The feature id for the '<em><b>Works For</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL__WORKS_FOR = IDENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Legal Partner Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL__LEGAL_PARTNER_OF = IDENTITY_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Individual</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDIVIDUAL_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 0;
+	int INDIVIDUAL_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Individual</em>' class.
@@ -757,7 +745,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getLegalEntity()
 	 * @generated
 	 */
-	int LEGAL_ENTITY = 15;
+	int LEGAL_ENTITY = 12;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -769,13 +757,22 @@ public interface WrsPackage extends EPackage {
 	int LEGAL_ENTITY__UUID = IDENTITY__UUID;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEGAL_ENTITY__TYPE = IDENTITY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Legal Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEGAL_ENTITY_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 0;
+	int LEGAL_ENTITY_FEATURE_COUNT = IDENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Legal Entity</em>' class.
@@ -794,34 +791,87 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getIdentities()
 	 * @generated
 	 */
-	int IDENTITIES = 16;
+	int IDENTITIES = 24;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * The meta object id for the '{@link org.wrs.wrs.impl.TransactionsImpl <em>Transactions</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.TransactionsImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactions()
 	 * @generated
-	 * @ordered
 	 */
-	int IDENTITIES__CHILDREN = 0;
+	int TRANSACTIONS = 25;
 
 	/**
-	 * The number of structural features of the '<em>Identities</em>' class.
+	 * The meta object id for the '{@link org.wrs.wrs.impl.NodeAccountImpl <em>Node Account</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.NodeAccountImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getNodeAccount()
 	 * @generated
-	 * @ordered
 	 */
-	int IDENTITIES_FEATURE_COUNT = 1;
+	int NODE_ACCOUNT = 27;
 
 	/**
-	 * The number of operations of the '<em>Identities</em>' class.
+	 * The meta object id for the '{@link org.wrs.wrs.impl.TransactionConditionsImpl <em>Transaction Conditions</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.TransactionConditionsImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactionConditions()
 	 * @generated
-	 * @ordered
 	 */
-	int IDENTITIES_OPERATION_COUNT = 0;
+	int TRANSACTION_CONDITIONS = 28;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.TransactionConditionImpl <em>Transaction Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.TransactionConditionImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactionCondition()
+	 * @generated
+	 */
+	int TRANSACTION_CONDITION = 29;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.SignedInputImpl <em>Signed Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.SignedInputImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getSignedInput()
+	 * @generated
+	 */
+	int SIGNED_INPUT = 30;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.StatisticsImpl <em>Statistics</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.StatisticsImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getStatistics()
+	 * @generated
+	 */
+	int STATISTICS = 31;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.StatisticDatasImpl <em>Statistic Datas</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.StatisticDatasImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getStatisticDatas()
+	 * @generated
+	 */
+	int STATISTIC_DATAS = 32;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.CountryRegionImpl <em>Country Region</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.CountryRegionImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getCountryRegion()
+	 * @generated
+	 */
+	int COUNTRY_REGION = 33;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.AccountImpl <em>Account</em>}' class.
@@ -831,7 +881,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAccount()
 	 * @generated
 	 */
-	int ACCOUNT = 17;
+	int ACCOUNT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -840,7 +890,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT__ASSETS = ABSTRACT_VAULT__ASSETS;
+	int ACCOUNT__ASSETS = ABSTRACT_ACCOUNT__ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Transaction</b></em>' reference.
@@ -849,16 +899,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT__TRANSACTION = ABSTRACT_VAULT__TRANSACTION;
-
-	/**
-	 * The feature id for the '<em><b>Public Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT__PUBLIC_KEY = ABSTRACT_VAULT_FEATURE_COUNT + 0;
+	int ACCOUNT__TRANSACTION = ABSTRACT_ACCOUNT__TRANSACTION;
 
 	/**
 	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
@@ -867,7 +908,16 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT__BELONGS_TO = ABSTRACT_VAULT_FEATURE_COUNT + 1;
+	int ACCOUNT__BELONGS_TO = ABSTRACT_ACCOUNT__BELONGS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Public Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__PUBLIC_KEY = ABSTRACT_ACCOUNT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Account</em>' class.
@@ -876,7 +926,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_FEATURE_COUNT = ABSTRACT_VAULT_FEATURE_COUNT + 2;
+	int ACCOUNT_FEATURE_COUNT = ABSTRACT_ACCOUNT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Account</em>' class.
@@ -885,7 +935,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_OPERATION_COUNT = ABSTRACT_VAULT_OPERATION_COUNT + 0;
+	int ACCOUNT_OPERATION_COUNT = ABSTRACT_ACCOUNT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.SupplyControlImpl <em>Supply Control</em>}' class.
@@ -895,7 +945,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getSupplyControl()
 	 * @generated
 	 */
-	int SUPPLY_CONTROL = 18;
+	int SUPPLY_CONTROL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Genesis</b></em>' reference.
@@ -932,10 +982,10 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAccounts()
 	 * @generated
 	 */
-	int ACCOUNTS = 19;
+	int ACCOUNTS = 15;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -962,6 +1012,34 @@ public interface WrsPackage extends EPackage {
 	int ACCOUNTS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.AbstractTransactionImpl <em>Abstract Transaction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.AbstractTransactionImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAbstractTransaction()
+	 * @generated
+	 */
+	int ABSTRACT_TRANSACTION = 26;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Transaction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Abstract Transaction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.TransactionImpl <em>Transaction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -969,7 +1047,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransaction()
 	 * @generated
 	 */
-	int TRANSACTION = 20;
+	int TRANSACTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference.
@@ -978,7 +1056,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION__ASSETS = 0;
+	int TRANSACTION__ASSETS = ABSTRACT_TRANSACTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Transactions</b></em>' reference list.
@@ -987,7 +1065,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION__TRANSACTIONS = 1;
+	int TRANSACTION__TRANSACTIONS = ABSTRACT_TRANSACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' attribute.
@@ -996,7 +1074,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION__DATA = 2;
+	int TRANSACTION__DATA = ABSTRACT_TRANSACTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Transaction</em>' class.
@@ -1005,7 +1083,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_FEATURE_COUNT = 3;
+	int TRANSACTION_FEATURE_COUNT = ABSTRACT_TRANSACTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Transaction</em>' class.
@@ -1014,7 +1092,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_OPERATION_COUNT = 0;
+	int TRANSACTION_OPERATION_COUNT = ABSTRACT_TRANSACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.RegisteredAssetsImpl <em>Registered Assets</em>}' class.
@@ -1024,10 +1102,10 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getRegisteredAssets()
 	 * @generated
 	 */
-	int REGISTERED_ASSETS = 21;
+	int REGISTERED_ASSETS = 17;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1061,7 +1139,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactionCollection()
 	 * @generated
 	 */
-	int TRANSACTION_COLLECTION = 23;
+	int TRANSACTION_COLLECTION = 19;
 
 	/**
 	 * The number of structural features of the '<em>Transaction Collection</em>' class.
@@ -1070,7 +1148,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_COLLECTION_FEATURE_COUNT = 0;
+	int TRANSACTION_COLLECTION_FEATURE_COUNT = ABSTRACT_TRANSACTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Transaction Collection</em>' class.
@@ -1079,7 +1157,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_COLLECTION_OPERATION_COUNT = 0;
+	int TRANSACTION_COLLECTION_OPERATION_COUNT = ABSTRACT_TRANSACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.wrs.impl.NodeImpl <em>Node</em>}' class.
@@ -1089,16 +1167,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 24;
-
-	/**
-	 * The feature id for the '<em><b>Wrs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__WRS = 0;
+	int NODE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
@@ -1107,7 +1176,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__WEIGHT = 1;
+	int NODE__WEIGHT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Networkengine</b></em>' reference.
@@ -1116,7 +1185,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__NETWORKENGINE = 2;
+	int NODE__NETWORKENGINE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -1125,7 +1194,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 3;
+	int NODE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -1144,7 +1213,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getNetworkEngine()
 	 * @generated
 	 */
-	int NETWORK_ENGINE = 25;
+	int NETWORK_ENGINE = 21;
 
 	/**
 	 * The number of structural features of the '<em>Network Engine</em>' class.
@@ -1165,6 +1234,359 @@ public interface WrsPackage extends EPackage {
 	int NETWORK_ENGINE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.CountriesImpl <em>Countries</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.CountriesImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getCountries()
+	 * @generated
+	 */
+	int COUNTRIES = 22;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__COUNTRY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Countries</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Countries</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.impl.NodesImpl <em>Nodes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.impl.NodesImpl
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getNodes()
+	 * @generated
+	 */
+	int NODES = 23;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__CHILDREN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Nodes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Nodes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__CHILDREN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Identities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Identities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__CHILDREN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Transactions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Transactions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ACCOUNT__ASSETS = ABSTRACT_ACCOUNT__ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Transaction</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ACCOUNT__TRANSACTION = ABSTRACT_ACCOUNT__TRANSACTION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ACCOUNT__BELONGS_TO = ABSTRACT_ACCOUNT__BELONGS_TO;
+
+	/**
+	 * The number of structural features of the '<em>Node Account</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ACCOUNT_FEATURE_COUNT = ABSTRACT_ACCOUNT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Node Account</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ACCOUNT_OPERATION_COUNT = ABSTRACT_ACCOUNT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITIONS__CHILDREN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Transaction Conditions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITIONS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Transaction Conditions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITIONS_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Formula</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__FORMULA = 0;
+
+	/**
+	 * The feature id for the '<em><b>Signed Inputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__SIGNED_INPUTS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Transaction Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Transaction Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Variable Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__VARIABLE_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Identity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__IDENTITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__VALUE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__TYPE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Signed Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Signed Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Statistics</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Statistics</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__CHILDREN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Statistic Datas</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Statistic Datas</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Country Region</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Country Region</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.wrs.wrs.AssetType <em>Asset Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1172,7 +1594,28 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.wrs.impl.WrsPackageImpl#getAssetType()
 	 * @generated
 	 */
-	int ASSET_TYPE = 26;
+	int ASSET_TYPE = 34;
+
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.LegalEntityType <em>Legal Entity Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.LegalEntityType
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getLegalEntityType()
+	 * @generated
+	 */
+	int LEGAL_ENTITY_TYPE = 35;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.wrs.InputValueType <em>Input Value Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.wrs.InputValueType
+	 * @see org.wrs.wrs.impl.WrsPackageImpl#getInputValueType()
+	 * @generated
+	 */
+	int INPUT_VALUE_TYPE = 36;
 
 
 	/**
@@ -1186,21 +1629,10 @@ public interface WrsPackage extends EPackage {
 	EClass getwrs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getTransfervaults <em>Transfervaults</em>}'.
+	 * Returns the meta object for the reference '{@link org.wrs.wrs.wrs#getMainvault <em>Mainvault</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Transfervaults</em>'.
-	 * @see org.wrs.wrs.wrs#getTransfervaults()
-	 * @see #getwrs()
-	 * @generated
-	 */
-	EReference getwrs_Transfervaults();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getMainvault <em>Mainvault</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mainvault</em>'.
+	 * @return the meta object for the reference '<em>Mainvault</em>'.
 	 * @see org.wrs.wrs.wrs#getMainvault()
 	 * @see #getwrs()
 	 * @generated
@@ -1219,10 +1651,43 @@ public interface WrsPackage extends EPackage {
 	EReference getwrs_Identities();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.wrs.wrs.wrs#getSupplycontrol <em>Supplycontrol</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getTransactions <em>Transactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Supplycontrol</em>'.
+	 * @return the meta object for the containment reference '<em>Transactions</em>'.
+	 * @see org.wrs.wrs.wrs#getTransactions()
+	 * @see #getwrs()
+	 * @generated
+	 */
+	EReference getwrs_Transactions();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getTransactionconditions <em>Transactionconditions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Transactionconditions</em>'.
+	 * @see org.wrs.wrs.wrs#getTransactionconditions()
+	 * @see #getwrs()
+	 * @generated
+	 */
+	EReference getwrs_Transactionconditions();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getStatisticDatas <em>Statistic Datas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Statistic Datas</em>'.
+	 * @see org.wrs.wrs.wrs#getStatisticDatas()
+	 * @see #getwrs()
+	 * @generated
+	 */
+	EReference getwrs_StatisticDatas();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getSupplycontrol <em>Supplycontrol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Supplycontrol</em>'.
 	 * @see org.wrs.wrs.wrs#getSupplycontrol()
 	 * @see #getwrs()
 	 * @generated
@@ -1230,26 +1695,59 @@ public interface WrsPackage extends EPackage {
 	EReference getwrs_Supplycontrol();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getWallets <em>Wallets</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getAccounts <em>Accounts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Wallets</em>'.
-	 * @see org.wrs.wrs.wrs#getWallets()
+	 * @return the meta object for the containment reference '<em>Accounts</em>'.
+	 * @see org.wrs.wrs.wrs#getAccounts()
 	 * @see #getwrs()
 	 * @generated
 	 */
-	EReference getwrs_Wallets();
+	EReference getwrs_Accounts();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.wrs.wrs.wrs#getRegisteredasstets <em>Registeredasstets</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getRegisteredasstets <em>Registeredasstets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Registeredasstets</em>'.
+	 * @return the meta object for the containment reference '<em>Registeredasstets</em>'.
 	 * @see org.wrs.wrs.wrs#getRegisteredasstets()
 	 * @see #getwrs()
 	 * @generated
 	 */
 	EReference getwrs_Registeredasstets();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getWorldeconomy <em>Worldeconomy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Worldeconomy</em>'.
+	 * @see org.wrs.wrs.wrs#getWorldeconomy()
+	 * @see #getwrs()
+	 * @generated
+	 */
+	EReference getwrs_Worldeconomy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getCountries <em>Countries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Countries</em>'.
+	 * @see org.wrs.wrs.wrs#getCountries()
+	 * @see #getwrs()
+	 * @generated
+	 */
+	EReference getwrs_Countries();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.wrs#getNodes <em>Nodes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Nodes</em>'.
+	 * @see org.wrs.wrs.wrs#getNodes()
+	 * @see #getwrs()
+	 * @generated
+	 */
+	EReference getwrs_Nodes();
 
 	/**
 	 * Returns the meta object for the '{@link org.wrs.wrs.wrs#createIdentity() <em>Create Identity</em>}' operation.
@@ -1280,27 +1778,6 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTransferVault();
-
-	/**
-	 * Returns the meta object for class '{@link org.wrs.wrs.TransferVaults <em>Transfer Vaults</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transfer Vaults</em>'.
-	 * @see org.wrs.wrs.TransferVaults
-	 * @generated
-	 */
-	EClass getTransferVaults();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.TransferVaults#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see org.wrs.wrs.TransferVaults#getChildren()
-	 * @see #getTransferVaults()
-	 * @generated
-	 */
-	EReference getTransferVaults_Children();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.Genesis <em>Genesis</em>}'.
@@ -1376,10 +1853,10 @@ public interface WrsPackage extends EPackage {
 	EClass getWorldEconomy();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.WorldEconomy#getNationaleconomies <em>Nationaleconomies</em>}'.
+	 * Returns the meta object for the reference list '{@link org.wrs.wrs.WorldEconomy#getNationaleconomies <em>Nationaleconomies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Nationaleconomies</em>'.
+	 * @return the meta object for the reference list '<em>Nationaleconomies</em>'.
 	 * @see org.wrs.wrs.WorldEconomy#getNationaleconomies()
 	 * @see #getWorldEconomy()
 	 * @generated
@@ -1397,36 +1874,47 @@ public interface WrsPackage extends EPackage {
 	EClass getNationalEconomies();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.NationalEconomies#getChildren <em>Children</em>}'.
+	 * Returns the meta object for class '{@link org.wrs.wrs.Country <em>Country</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see org.wrs.wrs.NationalEconomies#getChildren()
-	 * @see #getNationalEconomies()
+	 * @return the meta object for class '<em>Country</em>'.
+	 * @see org.wrs.wrs.Country
 	 * @generated
 	 */
-	EReference getNationalEconomies_Children();
+	EClass getCountry();
 
 	/**
-	 * Returns the meta object for class '{@link org.wrs.wrs.Nation <em>Nation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Nation</em>'.
-	 * @see org.wrs.wrs.Nation
-	 * @generated
-	 */
-	EClass getNation();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.Nation#getFiatcurrency <em>Fiatcurrency</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.Country#getFiatcurrency <em>Fiatcurrency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Fiatcurrency</em>'.
-	 * @see org.wrs.wrs.Nation#getFiatcurrency()
-	 * @see #getNation()
+	 * @see org.wrs.wrs.Country#getFiatcurrency()
+	 * @see #getCountry()
 	 * @generated
 	 */
-	EReference getNation_Fiatcurrency();
+	EReference getCountry_Fiatcurrency();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.Country#getNationaleconomies <em>Nationaleconomies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Nationaleconomies</em>'.
+	 * @see org.wrs.wrs.Country#getNationaleconomies()
+	 * @see #getCountry()
+	 * @generated
+	 */
+	EReference getCountry_Nationaleconomies();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.wrs.wrs.Country#getRegions <em>Regions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Regions</em>'.
+	 * @see org.wrs.wrs.Country#getRegions()
+	 * @see #getCountry()
+	 * @generated
+	 */
+	EReference getCountry_Regions();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.FiatCurrency <em>Fiat Currency</em>}'.
@@ -1437,37 +1925,6 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFiatCurrency();
-
-	/**
-	 * Returns the meta object for class '{@link org.wrs.wrs.Accountants <em>Accountants</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Accountants</em>'.
-	 * @see org.wrs.wrs.Accountants
-	 * @generated
-	 */
-	EClass getAccountants();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.Accountants#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see org.wrs.wrs.Accountants#getChildren()
-	 * @see #getAccountants()
-	 * @generated
-	 */
-	EReference getAccountants_Children();
-
-	/**
-	 * Returns the meta object for class '{@link org.wrs.wrs.Accountant <em>Accountant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Accountant</em>'.
-	 * @see org.wrs.wrs.Accountant
-	 * @generated
-	 */
-	EClass getAccountant();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.Identity <em>Identity</em>}'.
@@ -1491,25 +1948,25 @@ public interface WrsPackage extends EPackage {
 	EAttribute getIdentity_UUID();
 
 	/**
-	 * Returns the meta object for class '{@link org.wrs.wrs.Material <em>Material</em>}'.
+	 * Returns the meta object for class '{@link org.wrs.wrs.Thing <em>Thing</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Material</em>'.
-	 * @see org.wrs.wrs.Material
+	 * @return the meta object for class '<em>Thing</em>'.
+	 * @see org.wrs.wrs.Thing
 	 * @generated
 	 */
-	EClass getMaterial();
+	EClass getThing();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.wrs.wrs.Material#getBelongsTo <em>Belongs To</em>}'.
+	 * Returns the meta object for the reference '{@link org.wrs.wrs.Thing#getBelongsTo <em>Belongs To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Belongs To</em>'.
-	 * @see org.wrs.wrs.Material#getBelongsTo()
-	 * @see #getMaterial()
+	 * @see org.wrs.wrs.Thing#getBelongsTo()
+	 * @see #getThing()
 	 * @generated
 	 */
-	EReference getMaterial_BelongsTo();
+	EReference getThing_BelongsTo();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.Individual <em>Individual</em>}'.
@@ -1522,6 +1979,28 @@ public interface WrsPackage extends EPackage {
 	EClass getIndividual();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.wrs.wrs.Individual#getWorksFor <em>Works For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Works For</em>'.
+	 * @see org.wrs.wrs.Individual#getWorksFor()
+	 * @see #getIndividual()
+	 * @generated
+	 */
+	EReference getIndividual_WorksFor();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.wrs.wrs.Individual#getLegalPartnerOf <em>Legal Partner Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Legal Partner Of</em>'.
+	 * @see org.wrs.wrs.Individual#getLegalPartnerOf()
+	 * @see #getIndividual()
+	 * @generated
+	 */
+	EReference getIndividual_LegalPartnerOf();
+
+	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.LegalEntity <em>Legal Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1530,6 +2009,17 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLegalEntity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.wrs.wrs.LegalEntity#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.wrs.wrs.LegalEntity#getType()
+	 * @see #getLegalEntity()
+	 * @generated
+	 */
+	EAttribute getLegalEntity_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.Identities <em>Identities</em>}'.
@@ -1553,6 +2043,195 @@ public interface WrsPackage extends EPackage {
 	EReference getIdentities_Children();
 
 	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.Transactions <em>Transactions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transactions</em>'.
+	 * @see org.wrs.wrs.Transactions
+	 * @generated
+	 */
+	EClass getTransactions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.Transactions#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.wrs.wrs.Transactions#getChildren()
+	 * @see #getTransactions()
+	 * @generated
+	 */
+	EReference getTransactions_Children();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.AbstractTransaction <em>Abstract Transaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Transaction</em>'.
+	 * @see org.wrs.wrs.AbstractTransaction
+	 * @generated
+	 */
+	EClass getAbstractTransaction();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.NodeAccount <em>Node Account</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Account</em>'.
+	 * @see org.wrs.wrs.NodeAccount
+	 * @generated
+	 */
+	EClass getNodeAccount();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.TransactionConditions <em>Transaction Conditions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transaction Conditions</em>'.
+	 * @see org.wrs.wrs.TransactionConditions
+	 * @generated
+	 */
+	EClass getTransactionConditions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.TransactionConditions#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.wrs.wrs.TransactionConditions#getChildren()
+	 * @see #getTransactionConditions()
+	 * @generated
+	 */
+	EReference getTransactionConditions_Children();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.TransactionCondition <em>Transaction Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transaction Condition</em>'.
+	 * @see org.wrs.wrs.TransactionCondition
+	 * @generated
+	 */
+	EClass getTransactionCondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.wrs.wrs.TransactionCondition#getFormula <em>Formula</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Formula</em>'.
+	 * @see org.wrs.wrs.TransactionCondition#getFormula()
+	 * @see #getTransactionCondition()
+	 * @generated
+	 */
+	EAttribute getTransactionCondition_Formula();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.TransactionCondition#getSignedInputs <em>Signed Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Signed Inputs</em>'.
+	 * @see org.wrs.wrs.TransactionCondition#getSignedInputs()
+	 * @see #getTransactionCondition()
+	 * @generated
+	 */
+	EReference getTransactionCondition_SignedInputs();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.SignedInput <em>Signed Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signed Input</em>'.
+	 * @see org.wrs.wrs.SignedInput
+	 * @generated
+	 */
+	EClass getSignedInput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.wrs.wrs.SignedInput#getVariableName <em>Variable Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Variable Name</em>'.
+	 * @see org.wrs.wrs.SignedInput#getVariableName()
+	 * @see #getSignedInput()
+	 * @generated
+	 */
+	EAttribute getSignedInput_VariableName();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.wrs.wrs.SignedInput#getIdentity <em>Identity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Identity</em>'.
+	 * @see org.wrs.wrs.SignedInput#getIdentity()
+	 * @see #getSignedInput()
+	 * @generated
+	 */
+	EReference getSignedInput_Identity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.wrs.wrs.SignedInput#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.wrs.wrs.SignedInput#getValue()
+	 * @see #getSignedInput()
+	 * @generated
+	 */
+	EAttribute getSignedInput_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.wrs.wrs.SignedInput#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.wrs.wrs.SignedInput#getType()
+	 * @see #getSignedInput()
+	 * @generated
+	 */
+	EAttribute getSignedInput_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.Statistics <em>Statistics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistics</em>'.
+	 * @see org.wrs.wrs.Statistics
+	 * @generated
+	 */
+	EClass getStatistics();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.StatisticDatas <em>Statistic Datas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistic Datas</em>'.
+	 * @see org.wrs.wrs.StatisticDatas
+	 * @generated
+	 */
+	EClass getStatisticDatas();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.wrs.wrs.StatisticDatas#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Children</em>'.
+	 * @see org.wrs.wrs.StatisticDatas#getChildren()
+	 * @see #getStatisticDatas()
+	 * @generated
+	 */
+	EReference getStatisticDatas_Children();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.CountryRegion <em>Country Region</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Country Region</em>'.
+	 * @see org.wrs.wrs.CountryRegion
+	 * @generated
+	 */
+	EClass getCountryRegion();
+
+	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.Account <em>Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1572,17 +2251,6 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAccount_PublicKey();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.wrs.wrs.Account#getBelongsTo <em>Belongs To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Belongs To</em>'.
-	 * @see org.wrs.wrs.Account#getBelongsTo()
-	 * @see #getAccount()
-	 * @generated
-	 */
-	EReference getAccount_BelongsTo();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.SupplyControl <em>Supply Control</em>}'.
@@ -1616,10 +2284,10 @@ public interface WrsPackage extends EPackage {
 	EClass getAccounts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.wrs.wrs.Accounts#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.Accounts#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Children</em>'.
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
 	 * @see org.wrs.wrs.Accounts#getChildren()
 	 * @see #getAccounts()
 	 * @generated
@@ -1680,10 +2348,10 @@ public interface WrsPackage extends EPackage {
 	EClass getRegisteredAssets();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.wrs.wrs.RegisteredAssets#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.wrs.wrs.RegisteredAssets#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Children</em>'.
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
 	 * @see org.wrs.wrs.RegisteredAssets#getChildren()
 	 * @see #getRegisteredAssets()
 	 * @generated
@@ -1691,36 +2359,47 @@ public interface WrsPackage extends EPackage {
 	EReference getRegisteredAssets_Children();
 
 	/**
-	 * Returns the meta object for class '{@link org.wrs.wrs.AbstractVault <em>Abstract Vault</em>}'.
+	 * Returns the meta object for class '{@link org.wrs.wrs.AbstractAccount <em>Abstract Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Vault</em>'.
-	 * @see org.wrs.wrs.AbstractVault
+	 * @return the meta object for class '<em>Abstract Account</em>'.
+	 * @see org.wrs.wrs.AbstractAccount
 	 * @generated
 	 */
-	EClass getAbstractVault();
+	EClass getAbstractAccount();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.wrs.wrs.AbstractVault#getAssets <em>Assets</em>}'.
+	 * Returns the meta object for the reference list '{@link org.wrs.wrs.AbstractAccount#getAssets <em>Assets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Assets</em>'.
-	 * @see org.wrs.wrs.AbstractVault#getAssets()
-	 * @see #getAbstractVault()
+	 * @see org.wrs.wrs.AbstractAccount#getAssets()
+	 * @see #getAbstractAccount()
 	 * @generated
 	 */
-	EReference getAbstractVault_Assets();
+	EReference getAbstractAccount_Assets();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.wrs.wrs.AbstractVault#getTransaction <em>Transaction</em>}'.
+	 * Returns the meta object for the reference '{@link org.wrs.wrs.AbstractAccount#getTransaction <em>Transaction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Transaction</em>'.
-	 * @see org.wrs.wrs.AbstractVault#getTransaction()
-	 * @see #getAbstractVault()
+	 * @see org.wrs.wrs.AbstractAccount#getTransaction()
+	 * @see #getAbstractAccount()
 	 * @generated
 	 */
-	EReference getAbstractVault_Transaction();
+	EReference getAbstractAccount_Transaction();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.wrs.wrs.AbstractAccount#getBelongsTo <em>Belongs To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Belongs To</em>'.
+	 * @see org.wrs.wrs.AbstractAccount#getBelongsTo()
+	 * @see #getAbstractAccount()
+	 * @generated
+	 */
+	EReference getAbstractAccount_BelongsTo();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.wrs.TransactionCollection <em>Transaction Collection</em>}'.
@@ -1741,17 +2420,6 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNode();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.Node#getWrs <em>Wrs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Wrs</em>'.
-	 * @see org.wrs.wrs.Node#getWrs()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EReference getNode_Wrs();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.wrs.wrs.Node#getWeight <em>Weight</em>}'.
@@ -1786,6 +2454,48 @@ public interface WrsPackage extends EPackage {
 	EClass getNetworkEngine();
 
 	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.Countries <em>Countries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Countries</em>'.
+	 * @see org.wrs.wrs.Countries
+	 * @generated
+	 */
+	EClass getCountries();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.wrs.Countries#getCountry <em>Country</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Country</em>'.
+	 * @see org.wrs.wrs.Countries#getCountry()
+	 * @see #getCountries()
+	 * @generated
+	 */
+	EReference getCountries_Country();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.wrs.Nodes <em>Nodes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Nodes</em>'.
+	 * @see org.wrs.wrs.Nodes
+	 * @generated
+	 */
+	EClass getNodes();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.wrs.wrs.Nodes#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Children</em>'.
+	 * @see org.wrs.wrs.Nodes#getChildren()
+	 * @see #getNodes()
+	 * @generated
+	 */
+	EReference getNodes_Children();
+
+	/**
 	 * Returns the meta object for enum '{@link org.wrs.wrs.AssetType <em>Asset Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1794,6 +2504,26 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getAssetType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.wrs.wrs.LegalEntityType <em>Legal Entity Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Legal Entity Type</em>'.
+	 * @see org.wrs.wrs.LegalEntityType
+	 * @generated
+	 */
+	EEnum getLegalEntityType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.wrs.wrs.InputValueType <em>Input Value Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Input Value Type</em>'.
+	 * @see org.wrs.wrs.InputValueType
+	 * @generated
+	 */
+	EEnum getInputValueType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1829,15 +2559,7 @@ public interface WrsPackage extends EPackage {
 		EClass WRS = eINSTANCE.getwrs();
 
 		/**
-		 * The meta object literal for the '<em><b>Transfervaults</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WRS__TRANSFERVAULTS = eINSTANCE.getwrs_Transfervaults();
-
-		/**
-		 * The meta object literal for the '<em><b>Mainvault</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Mainvault</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1853,7 +2575,31 @@ public interface WrsPackage extends EPackage {
 		EReference WRS__IDENTITIES = eINSTANCE.getwrs_Identities();
 
 		/**
-		 * The meta object literal for the '<em><b>Supplycontrol</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Transactions</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRS__TRANSACTIONS = eINSTANCE.getwrs_Transactions();
+
+		/**
+		 * The meta object literal for the '<em><b>Transactionconditions</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRS__TRANSACTIONCONDITIONS = eINSTANCE.getwrs_Transactionconditions();
+
+		/**
+		 * The meta object literal for the '<em><b>Statistic Datas</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRS__STATISTIC_DATAS = eINSTANCE.getwrs_StatisticDatas();
+
+		/**
+		 * The meta object literal for the '<em><b>Supplycontrol</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1861,20 +2607,44 @@ public interface WrsPackage extends EPackage {
 		EReference WRS__SUPPLYCONTROL = eINSTANCE.getwrs_Supplycontrol();
 
 		/**
-		 * The meta object literal for the '<em><b>Wallets</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Accounts</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WRS__WALLETS = eINSTANCE.getwrs_Wallets();
+		EReference WRS__ACCOUNTS = eINSTANCE.getwrs_Accounts();
 
 		/**
-		 * The meta object literal for the '<em><b>Registeredasstets</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Registeredasstets</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference WRS__REGISTEREDASSTETS = eINSTANCE.getwrs_Registeredasstets();
+
+		/**
+		 * The meta object literal for the '<em><b>Worldeconomy</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRS__WORLDECONOMY = eINSTANCE.getwrs_Worldeconomy();
+
+		/**
+		 * The meta object literal for the '<em><b>Countries</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRS__COUNTRIES = eINSTANCE.getwrs_Countries();
+
+		/**
+		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRS__NODES = eINSTANCE.getwrs_Nodes();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Identity</b></em>' operation.
@@ -1903,24 +2673,6 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRANSFER_VAULT = eINSTANCE.getTransferVault();
-
-		/**
-		 * The meta object literal for the '{@link org.wrs.wrs.impl.TransferVaultsImpl <em>Transfer Vaults</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.wrs.wrs.impl.TransferVaultsImpl
-		 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransferVaults()
-		 * @generated
-		 */
-		EClass TRANSFER_VAULTS = eINSTANCE.getTransferVaults();
-
-		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSFER_VAULTS__CHILDREN = eINSTANCE.getTransferVaults_Children();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.GenesisImpl <em>Genesis</em>}' class.
@@ -1985,7 +2737,7 @@ public interface WrsPackage extends EPackage {
 		EClass WORLD_ECONOMY = eINSTANCE.getWorldEconomy();
 
 		/**
-		 * The meta object literal for the '<em><b>Nationaleconomies</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Nationaleconomies</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2003,22 +2755,14 @@ public interface WrsPackage extends EPackage {
 		EClass NATIONAL_ECONOMIES = eINSTANCE.getNationalEconomies();
 
 		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.CountryImpl <em>Country</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.CountryImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getCountry()
 		 * @generated
 		 */
-		EReference NATIONAL_ECONOMIES__CHILDREN = eINSTANCE.getNationalEconomies_Children();
-
-		/**
-		 * The meta object literal for the '{@link org.wrs.wrs.impl.NationImpl <em>Nation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.wrs.wrs.impl.NationImpl
-		 * @see org.wrs.wrs.impl.WrsPackageImpl#getNation()
-		 * @generated
-		 */
-		EClass NATION = eINSTANCE.getNation();
+		EClass COUNTRY = eINSTANCE.getCountry();
 
 		/**
 		 * The meta object literal for the '<em><b>Fiatcurrency</b></em>' containment reference feature.
@@ -2026,7 +2770,23 @@ public interface WrsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NATION__FIATCURRENCY = eINSTANCE.getNation_Fiatcurrency();
+		EReference COUNTRY__FIATCURRENCY = eINSTANCE.getCountry_Fiatcurrency();
+
+		/**
+		 * The meta object literal for the '<em><b>Nationaleconomies</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COUNTRY__NATIONALECONOMIES = eINSTANCE.getCountry_Nationaleconomies();
+
+		/**
+		 * The meta object literal for the '<em><b>Regions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COUNTRY__REGIONS = eINSTANCE.getCountry_Regions();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.FiatCurrencyImpl <em>Fiat Currency</em>}' class.
@@ -2037,34 +2797,6 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FIAT_CURRENCY = eINSTANCE.getFiatCurrency();
-
-		/**
-		 * The meta object literal for the '{@link org.wrs.wrs.impl.AccountantsImpl <em>Accountants</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.wrs.wrs.impl.AccountantsImpl
-		 * @see org.wrs.wrs.impl.WrsPackageImpl#getAccountants()
-		 * @generated
-		 */
-		EClass ACCOUNTANTS = eINSTANCE.getAccountants();
-
-		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACCOUNTANTS__CHILDREN = eINSTANCE.getAccountants_Children();
-
-		/**
-		 * The meta object literal for the '{@link org.wrs.wrs.impl.AccountantImpl <em>Accountant</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.wrs.wrs.impl.AccountantImpl
-		 * @see org.wrs.wrs.impl.WrsPackageImpl#getAccountant()
-		 * @generated
-		 */
-		EClass ACCOUNTANT = eINSTANCE.getAccountant();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.IdentityImpl <em>Identity</em>}' class.
@@ -2085,14 +2817,14 @@ public interface WrsPackage extends EPackage {
 		EAttribute IDENTITY__UUID = eINSTANCE.getIdentity_UUID();
 
 		/**
-		 * The meta object literal for the '{@link org.wrs.wrs.impl.MaterialImpl <em>Material</em>}' class.
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.ThingImpl <em>Thing</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.wrs.wrs.impl.MaterialImpl
-		 * @see org.wrs.wrs.impl.WrsPackageImpl#getMaterial()
+		 * @see org.wrs.wrs.impl.ThingImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getThing()
 		 * @generated
 		 */
-		EClass MATERIAL = eINSTANCE.getMaterial();
+		EClass THING = eINSTANCE.getThing();
 
 		/**
 		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
@@ -2100,7 +2832,7 @@ public interface WrsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MATERIAL__BELONGS_TO = eINSTANCE.getMaterial_BelongsTo();
+		EReference THING__BELONGS_TO = eINSTANCE.getThing_BelongsTo();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.IndividualImpl <em>Individual</em>}' class.
@@ -2113,6 +2845,22 @@ public interface WrsPackage extends EPackage {
 		EClass INDIVIDUAL = eINSTANCE.getIndividual();
 
 		/**
+		 * The meta object literal for the '<em><b>Works For</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INDIVIDUAL__WORKS_FOR = eINSTANCE.getIndividual_WorksFor();
+
+		/**
+		 * The meta object literal for the '<em><b>Legal Partner Of</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INDIVIDUAL__LEGAL_PARTNER_OF = eINSTANCE.getIndividual_LegalPartnerOf();
+
+		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.LegalEntityImpl <em>Legal Entity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2121,6 +2869,14 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LEGAL_ENTITY = eINSTANCE.getLegalEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEGAL_ENTITY__TYPE = eINSTANCE.getLegalEntity_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.IdentitiesImpl <em>Identities</em>}' class.
@@ -2141,6 +2897,168 @@ public interface WrsPackage extends EPackage {
 		EReference IDENTITIES__CHILDREN = eINSTANCE.getIdentities_Children();
 
 		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.TransactionsImpl <em>Transactions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.TransactionsImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactions()
+		 * @generated
+		 */
+		EClass TRANSACTIONS = eINSTANCE.getTransactions();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSACTIONS__CHILDREN = eINSTANCE.getTransactions_Children();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.AbstractTransactionImpl <em>Abstract Transaction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.AbstractTransactionImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getAbstractTransaction()
+		 * @generated
+		 */
+		EClass ABSTRACT_TRANSACTION = eINSTANCE.getAbstractTransaction();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.NodeAccountImpl <em>Node Account</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.NodeAccountImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getNodeAccount()
+		 * @generated
+		 */
+		EClass NODE_ACCOUNT = eINSTANCE.getNodeAccount();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.TransactionConditionsImpl <em>Transaction Conditions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.TransactionConditionsImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactionConditions()
+		 * @generated
+		 */
+		EClass TRANSACTION_CONDITIONS = eINSTANCE.getTransactionConditions();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSACTION_CONDITIONS__CHILDREN = eINSTANCE.getTransactionConditions_Children();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.TransactionConditionImpl <em>Transaction Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.TransactionConditionImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getTransactionCondition()
+		 * @generated
+		 */
+		EClass TRANSACTION_CONDITION = eINSTANCE.getTransactionCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Formula</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSACTION_CONDITION__FORMULA = eINSTANCE.getTransactionCondition_Formula();
+
+		/**
+		 * The meta object literal for the '<em><b>Signed Inputs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSACTION_CONDITION__SIGNED_INPUTS = eINSTANCE.getTransactionCondition_SignedInputs();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.SignedInputImpl <em>Signed Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.SignedInputImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getSignedInput()
+		 * @generated
+		 */
+		EClass SIGNED_INPUT = eINSTANCE.getSignedInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNED_INPUT__VARIABLE_NAME = eINSTANCE.getSignedInput_VariableName();
+
+		/**
+		 * The meta object literal for the '<em><b>Identity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNED_INPUT__IDENTITY = eINSTANCE.getSignedInput_Identity();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNED_INPUT__VALUE = eINSTANCE.getSignedInput_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNED_INPUT__TYPE = eINSTANCE.getSignedInput_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.StatisticsImpl <em>Statistics</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.StatisticsImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getStatistics()
+		 * @generated
+		 */
+		EClass STATISTICS = eINSTANCE.getStatistics();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.StatisticDatasImpl <em>Statistic Datas</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.StatisticDatasImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getStatisticDatas()
+		 * @generated
+		 */
+		EClass STATISTIC_DATAS = eINSTANCE.getStatisticDatas();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATISTIC_DATAS__CHILDREN = eINSTANCE.getStatisticDatas_Children();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.CountryRegionImpl <em>Country Region</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.CountryRegionImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getCountryRegion()
+		 * @generated
+		 */
+		EClass COUNTRY_REGION = eINSTANCE.getCountryRegion();
+
+		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.AccountImpl <em>Account</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2157,14 +3075,6 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCOUNT__PUBLIC_KEY = eINSTANCE.getAccount_PublicKey();
-
-		/**
-		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACCOUNT__BELONGS_TO = eINSTANCE.getAccount_BelongsTo();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.SupplyControlImpl <em>Supply Control</em>}' class.
@@ -2195,7 +3105,7 @@ public interface WrsPackage extends EPackage {
 		EClass ACCOUNTS = eINSTANCE.getAccounts();
 
 		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2247,7 +3157,7 @@ public interface WrsPackage extends EPackage {
 		EClass REGISTERED_ASSETS = eINSTANCE.getRegisteredAssets();
 
 		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2255,14 +3165,14 @@ public interface WrsPackage extends EPackage {
 		EReference REGISTERED_ASSETS__CHILDREN = eINSTANCE.getRegisteredAssets_Children();
 
 		/**
-		 * The meta object literal for the '{@link org.wrs.wrs.impl.AbstractVaultImpl <em>Abstract Vault</em>}' class.
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.AbstractAccountImpl <em>Abstract Account</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.wrs.wrs.impl.AbstractVaultImpl
-		 * @see org.wrs.wrs.impl.WrsPackageImpl#getAbstractVault()
+		 * @see org.wrs.wrs.impl.AbstractAccountImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getAbstractAccount()
 		 * @generated
 		 */
-		EClass ABSTRACT_VAULT = eINSTANCE.getAbstractVault();
+		EClass ABSTRACT_ACCOUNT = eINSTANCE.getAbstractAccount();
 
 		/**
 		 * The meta object literal for the '<em><b>Assets</b></em>' reference list feature.
@@ -2270,7 +3180,7 @@ public interface WrsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ABSTRACT_VAULT__ASSETS = eINSTANCE.getAbstractVault_Assets();
+		EReference ABSTRACT_ACCOUNT__ASSETS = eINSTANCE.getAbstractAccount_Assets();
 
 		/**
 		 * The meta object literal for the '<em><b>Transaction</b></em>' reference feature.
@@ -2278,7 +3188,15 @@ public interface WrsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ABSTRACT_VAULT__TRANSACTION = eINSTANCE.getAbstractVault_Transaction();
+		EReference ABSTRACT_ACCOUNT__TRANSACTION = eINSTANCE.getAbstractAccount_Transaction();
+
+		/**
+		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_ACCOUNT__BELONGS_TO = eINSTANCE.getAbstractAccount_BelongsTo();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.impl.TransactionCollectionImpl <em>Transaction Collection</em>}' class.
@@ -2299,14 +3217,6 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NODE = eINSTANCE.getNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Wrs</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference NODE__WRS = eINSTANCE.getNode_Wrs();
 
 		/**
 		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
@@ -2335,6 +3245,42 @@ public interface WrsPackage extends EPackage {
 		EClass NETWORK_ENGINE = eINSTANCE.getNetworkEngine();
 
 		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.CountriesImpl <em>Countries</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.CountriesImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getCountries()
+		 * @generated
+		 */
+		EClass COUNTRIES = eINSTANCE.getCountries();
+
+		/**
+		 * The meta object literal for the '<em><b>Country</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COUNTRIES__COUNTRY = eINSTANCE.getCountries_Country();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.impl.NodesImpl <em>Nodes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.impl.NodesImpl
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getNodes()
+		 * @generated
+		 */
+		EClass NODES = eINSTANCE.getNodes();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODES__CHILDREN = eINSTANCE.getNodes_Children();
+
+		/**
 		 * The meta object literal for the '{@link org.wrs.wrs.AssetType <em>Asset Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2343,6 +3289,26 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ASSET_TYPE = eINSTANCE.getAssetType();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.LegalEntityType <em>Legal Entity Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.LegalEntityType
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getLegalEntityType()
+		 * @generated
+		 */
+		EEnum LEGAL_ENTITY_TYPE = eINSTANCE.getLegalEntityType();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.wrs.InputValueType <em>Input Value Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.wrs.InputValueType
+		 * @see org.wrs.wrs.impl.WrsPackageImpl#getInputValueType()
+		 * @generated
+		 */
+		EEnum INPUT_VALUE_TYPE = eINSTANCE.getInputValueType();
 
 	}
 

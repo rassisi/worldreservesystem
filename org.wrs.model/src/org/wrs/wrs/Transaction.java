@@ -2,8 +2,6 @@
  */
 package org.wrs.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -22,10 +20,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.wrs.wrs.WrsPackage#getTransaction()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Transaction extends CDOObject {
+public interface Transaction extends AbstractTransaction {
 	/**
 	 * Returns the value of the '<em><b>Assets</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +51,7 @@ public interface Transaction extends CDOObject {
 
 	/**
 	 * Returns the value of the '<em><b>Transactions</b></em>' reference list.
-	 * The list contents are of type {@link org.wrs.wrs.AbstractVault}.
+	 * The list contents are of type {@link org.wrs.wrs.AbstractAccount}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Transactions</em>' reference list isn't clear,
@@ -66,7 +63,7 @@ public interface Transaction extends CDOObject {
 	 * @model
 	 * @generated
 	 */
-	EList<AbstractVault> getTransactions();
+	EList<AbstractAccount> getTransactions();
 
 	/**
 	 * Returns the value of the '<em><b>Data</b></em>' attribute.

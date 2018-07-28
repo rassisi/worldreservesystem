@@ -3,9 +3,6 @@
 package org.wrs.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.wrs.wrs.TransactionCollection;
 import org.wrs.wrs.WrsPackage;
 
@@ -16,7 +13,7 @@ import org.wrs.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransactionCollectionImpl extends CDOObjectImpl implements TransactionCollection {
+public class TransactionCollectionImpl extends AbstractTransactionImpl implements TransactionCollection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,16 +31,6 @@ public class TransactionCollectionImpl extends CDOObjectImpl implements Transact
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.TRANSACTION_COLLECTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 } //TransactionCollectionImpl

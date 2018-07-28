@@ -3,6 +3,7 @@
 package org.wrs.wrs;
 
 import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,29 +24,19 @@ import org.eclipse.emf.cdo.CDOObject;
  */
 public interface WorldEconomy extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Nationaleconomies</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Nationaleconomies</b></em>' reference list.
+	 * The list contents are of type {@link org.wrs.wrs.NationalEconomies}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nationaleconomies</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nationaleconomies</em>' containment reference.
-	 * @see #setNationaleconomies(NationalEconomies)
+	 * @return the value of the '<em>Nationaleconomies</em>' reference list.
 	 * @see org.wrs.wrs.WrsPackage#getWorldEconomy_Nationaleconomies()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	NationalEconomies getNationaleconomies();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.wrs.WorldEconomy#getNationaleconomies <em>Nationaleconomies</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nationaleconomies</em>' containment reference.
-	 * @see #getNationaleconomies()
-	 * @generated
-	 */
-	void setNationaleconomies(NationalEconomies value);
+	EList<NationalEconomies> getNationaleconomies();
 
 } // WorldEconomy

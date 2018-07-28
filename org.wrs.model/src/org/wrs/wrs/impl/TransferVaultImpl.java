@@ -14,7 +14,7 @@ import org.wrs.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransferVaultImpl extends AbstractVaultImpl implements TransferVault {
+public class TransferVaultImpl extends AbstractAccountImpl implements TransferVault {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

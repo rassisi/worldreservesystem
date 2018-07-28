@@ -2,8 +2,6 @@
  */
 package org.wrs.wrs.tests;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 import org.wrs.wrs.Transaction;
@@ -15,15 +13,7 @@ import org.wrs.wrs.WrsFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransactionTest extends TestCase {
-
-	/**
-	 * The fixture for this Transaction test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Transaction fixture = null;
+public class TransactionTest extends AbstractTransactionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class TransactionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Transaction test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Transaction fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Transaction test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Transaction getFixture() {
-		return fixture;
+		return (Transaction)fixture;
 	}
 
 	/**

@@ -12,7 +12,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.wrs.wrs.Asset;
 import org.wrs.wrs.AssetType;
-import org.wrs.wrs.Material;
+import org.wrs.wrs.Thing;
 import org.wrs.wrs.WrsPackage;
 
 /**
@@ -83,8 +83,8 @@ public class AssetImpl extends CDOObjectImpl implements Asset {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Material> getMaterials() {
-		return (EList<Material>)eGet(WrsPackage.Literals.ASSET__MATERIALS, true);
+	public EList<Thing> getMaterials() {
+		return (EList<Thing>)eGet(WrsPackage.Literals.ASSET__MATERIALS, true);
 	}
 
 	/**

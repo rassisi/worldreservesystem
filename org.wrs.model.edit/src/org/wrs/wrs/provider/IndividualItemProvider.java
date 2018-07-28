@@ -9,9 +9,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.wrs.wrs.Individual;
+import org.wrs.wrs.WrsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.wrs.wrs.Individual} object.
@@ -41,8 +43,54 @@ public class IndividualItemProvider extends IdentityItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addWorksForPropertyDescriptor(object);
+			addLegalPartnerOfPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Works For feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWorksForPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Individual_worksFor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Individual_worksFor_feature", "_UI_Individual_type"),
+				 WrsPackage.Literals.INDIVIDUAL__WORKS_FOR,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Legal Partner Of feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLegalPartnerOfPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Individual_legalPartnerOf_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Individual_legalPartnerOf_feature", "_UI_Individual_type"),
+				 WrsPackage.Literals.INDIVIDUAL__LEGAL_PARTNER_OF,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

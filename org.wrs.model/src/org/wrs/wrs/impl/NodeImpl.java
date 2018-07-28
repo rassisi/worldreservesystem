@@ -9,7 +9,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.wrs.NetworkEngine;
 import org.wrs.wrs.Node;
 import org.wrs.wrs.WrsPackage;
-import org.wrs.wrs.wrs;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +18,6 @@ import org.wrs.wrs.wrs;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.wrs.impl.NodeImpl#getWrs <em>Wrs</em>}</li>
  *   <li>{@link org.wrs.wrs.impl.NodeImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link org.wrs.wrs.impl.NodeImpl#getNetworkengine <em>Networkengine</em>}</li>
  * </ul>
@@ -54,24 +52,6 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 	@Override
 	protected int eStaticFeatureCount() {
 		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public wrs getWrs() {
-		return (wrs)eGet(WrsPackage.Literals.NODE__WRS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWrs(wrs newWrs) {
-		eSet(WrsPackage.Literals.NODE__WRS, newWrs);
 	}
 
 	/**

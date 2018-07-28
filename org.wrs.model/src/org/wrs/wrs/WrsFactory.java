@@ -49,15 +49,6 @@ public interface WrsFactory extends EFactory {
 	TransferVault createTransferVault();
 
 	/**
-	 * Returns a new object of class '<em>Transfer Vaults</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transfer Vaults</em>'.
-	 * @generated
-	 */
-	TransferVaults createTransferVaults();
-
-	/**
 	 * Returns a new object of class '<em>Genesis</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,13 +85,13 @@ public interface WrsFactory extends EFactory {
 	NationalEconomies createNationalEconomies();
 
 	/**
-	 * Returns a new object of class '<em>Nation</em>'.
+	 * Returns a new object of class '<em>Country</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Nation</em>'.
+	 * @return a new object of class '<em>Country</em>'.
 	 * @generated
 	 */
-	Nation createNation();
+	Country createCountry();
 
 	/**
 	 * Returns a new object of class '<em>Fiat Currency</em>'.
@@ -112,31 +103,13 @@ public interface WrsFactory extends EFactory {
 	FiatCurrency createFiatCurrency();
 
 	/**
-	 * Returns a new object of class '<em>Accountants</em>'.
+	 * Returns a new object of class '<em>Thing</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Accountants</em>'.
+	 * @return a new object of class '<em>Thing</em>'.
 	 * @generated
 	 */
-	Accountants createAccountants();
-
-	/**
-	 * Returns a new object of class '<em>Accountant</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Accountant</em>'.
-	 * @generated
-	 */
-	Accountant createAccountant();
-
-	/**
-	 * Returns a new object of class '<em>Material</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Material</em>'.
-	 * @generated
-	 */
-	Material createMaterial();
+	Thing createThing();
 
 	/**
 	 * Returns a new object of class '<em>Individual</em>'.
@@ -164,6 +137,87 @@ public interface WrsFactory extends EFactory {
 	 * @generated
 	 */
 	Identities createIdentities();
+
+	/**
+	 * Returns a new object of class '<em>Transactions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transactions</em>'.
+	 * @generated
+	 */
+	Transactions createTransactions();
+
+	/**
+	 * Returns a new object of class '<em>Abstract Transaction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstract Transaction</em>'.
+	 * @generated
+	 */
+	AbstractTransaction createAbstractTransaction();
+
+	/**
+	 * Returns a new object of class '<em>Node Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node Account</em>'.
+	 * @generated
+	 */
+	NodeAccount createNodeAccount();
+
+	/**
+	 * Returns a new object of class '<em>Transaction Conditions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transaction Conditions</em>'.
+	 * @generated
+	 */
+	TransactionConditions createTransactionConditions();
+
+	/**
+	 * Returns a new object of class '<em>Transaction Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transaction Condition</em>'.
+	 * @generated
+	 */
+	TransactionCondition createTransactionCondition();
+
+	/**
+	 * Returns a new object of class '<em>Signed Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Signed Input</em>'.
+	 * @generated
+	 */
+	SignedInput createSignedInput();
+
+	/**
+	 * Returns a new object of class '<em>Statistics</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistics</em>'.
+	 * @generated
+	 */
+	Statistics createStatistics();
+
+	/**
+	 * Returns a new object of class '<em>Statistic Datas</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistic Datas</em>'.
+	 * @generated
+	 */
+	StatisticDatas createStatisticDatas();
+
+	/**
+	 * Returns a new object of class '<em>Country Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Country Region</em>'.
+	 * @generated
+	 */
+	CountryRegion createCountryRegion();
 
 	/**
 	 * Returns a new object of class '<em>Account</em>'.
@@ -211,13 +265,13 @@ public interface WrsFactory extends EFactory {
 	RegisteredAssets createRegisteredAssets();
 
 	/**
-	 * Returns a new object of class '<em>Abstract Vault</em>'.
+	 * Returns a new object of class '<em>Abstract Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Vault</em>'.
+	 * @return a new object of class '<em>Abstract Account</em>'.
 	 * @generated
 	 */
-	AbstractVault createAbstractVault();
+	AbstractAccount createAbstractAccount();
 
 	/**
 	 * Returns a new object of class '<em>Transaction Collection</em>'.
@@ -245,6 +299,24 @@ public interface WrsFactory extends EFactory {
 	 * @generated
 	 */
 	NetworkEngine createNetworkEngine();
+
+	/**
+	 * Returns a new object of class '<em>Countries</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Countries</em>'.
+	 * @generated
+	 */
+	Countries createCountries();
+
+	/**
+	 * Returns a new object of class '<em>Nodes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Nodes</em>'.
+	 * @generated
+	 */
+	Nodes createNodes();
 
 	/**
 	 * Returns the package supported by this factory.

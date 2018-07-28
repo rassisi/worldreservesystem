@@ -14,7 +14,7 @@ import org.wrs.wrs.WrsPackage;
  *
  * @generated
  */
-public class TreasuryImpl extends AbstractVaultImpl implements Treasury {
+public class TreasuryImpl extends AbstractAccountImpl implements Treasury {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

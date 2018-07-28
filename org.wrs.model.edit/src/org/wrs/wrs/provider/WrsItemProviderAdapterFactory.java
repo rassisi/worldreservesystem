@@ -141,29 +141,6 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.TransferVaults} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TransferVaultsItemProvider transferVaultsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.wrs.wrs.TransferVaults}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTransferVaultsAdapter() {
-		if (transferVaultsItemProvider == null) {
-			transferVaultsItemProvider = new TransferVaultsItemProvider(this);
-		}
-
-		return transferVaultsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Genesis} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,26 +233,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Nation} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Country} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NationItemProvider nationItemProvider;
+	protected CountryItemProvider countryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.wrs.Nation}.
+	 * This creates an adapter for a {@link org.wrs.wrs.Country}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNationAdapter() {
-		if (nationItemProvider == null) {
-			nationItemProvider = new NationItemProvider(this);
+	public Adapter createCountryAdapter() {
+		if (countryItemProvider == null) {
+			countryItemProvider = new CountryItemProvider(this);
 		}
 
-		return nationItemProvider;
+		return countryItemProvider;
 	}
 
 	/**
@@ -302,72 +279,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Accountants} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Thing} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AccountantsItemProvider accountantsItemProvider;
+	protected ThingItemProvider thingItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.wrs.Accountants}.
+	 * This creates an adapter for a {@link org.wrs.wrs.Thing}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAccountantsAdapter() {
-		if (accountantsItemProvider == null) {
-			accountantsItemProvider = new AccountantsItemProvider(this);
+	public Adapter createThingAdapter() {
+		if (thingItemProvider == null) {
+			thingItemProvider = new ThingItemProvider(this);
 		}
 
-		return accountantsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Accountant} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AccountantItemProvider accountantItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.wrs.wrs.Accountant}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAccountantAdapter() {
-		if (accountantItemProvider == null) {
-			accountantItemProvider = new AccountantItemProvider(this);
-		}
-
-		return accountantItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Material} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MaterialItemProvider materialItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.wrs.wrs.Material}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMaterialAdapter() {
-		if (materialItemProvider == null) {
-			materialItemProvider = new MaterialItemProvider(this);
-		}
-
-		return materialItemProvider;
+		return thingItemProvider;
 	}
 
 	/**
@@ -437,6 +368,213 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 		}
 
 		return identitiesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Transactions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransactionsItemProvider transactionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.Transactions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTransactionsAdapter() {
+		if (transactionsItemProvider == null) {
+			transactionsItemProvider = new TransactionsItemProvider(this);
+		}
+
+		return transactionsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.AbstractTransaction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AbstractTransactionItemProvider abstractTransactionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.AbstractTransaction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstractTransactionAdapter() {
+		if (abstractTransactionItemProvider == null) {
+			abstractTransactionItemProvider = new AbstractTransactionItemProvider(this);
+		}
+
+		return abstractTransactionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.NodeAccount} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeAccountItemProvider nodeAccountItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.NodeAccount}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeAccountAdapter() {
+		if (nodeAccountItemProvider == null) {
+			nodeAccountItemProvider = new NodeAccountItemProvider(this);
+		}
+
+		return nodeAccountItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.TransactionConditions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransactionConditionsItemProvider transactionConditionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.TransactionConditions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTransactionConditionsAdapter() {
+		if (transactionConditionsItemProvider == null) {
+			transactionConditionsItemProvider = new TransactionConditionsItemProvider(this);
+		}
+
+		return transactionConditionsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.TransactionCondition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransactionConditionItemProvider transactionConditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.TransactionCondition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTransactionConditionAdapter() {
+		if (transactionConditionItemProvider == null) {
+			transactionConditionItemProvider = new TransactionConditionItemProvider(this);
+		}
+
+		return transactionConditionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.SignedInput} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SignedInputItemProvider signedInputItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.SignedInput}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSignedInputAdapter() {
+		if (signedInputItemProvider == null) {
+			signedInputItemProvider = new SignedInputItemProvider(this);
+		}
+
+		return signedInputItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Statistics} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StatisticsItemProvider statisticsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.Statistics}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStatisticsAdapter() {
+		if (statisticsItemProvider == null) {
+			statisticsItemProvider = new StatisticsItemProvider(this);
+		}
+
+		return statisticsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.StatisticDatas} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StatisticDatasItemProvider statisticDatasItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.StatisticDatas}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStatisticDatasAdapter() {
+		if (statisticDatasItemProvider == null) {
+			statisticDatasItemProvider = new StatisticDatasItemProvider(this);
+		}
+
+		return statisticDatasItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.CountryRegion} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CountryRegionItemProvider countryRegionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.CountryRegion}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCountryRegionAdapter() {
+		if (countryRegionItemProvider == null) {
+			countryRegionItemProvider = new CountryRegionItemProvider(this);
+		}
+
+		return countryRegionItemProvider;
 	}
 
 	/**
@@ -555,26 +693,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.AbstractVault} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.AbstractAccount} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractVaultItemProvider abstractVaultItemProvider;
+	protected AbstractAccountItemProvider abstractAccountItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.wrs.AbstractVault}.
+	 * This creates an adapter for a {@link org.wrs.wrs.AbstractAccount}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAbstractVaultAdapter() {
-		if (abstractVaultItemProvider == null) {
-			abstractVaultItemProvider = new AbstractVaultItemProvider(this);
+	public Adapter createAbstractAccountAdapter() {
+		if (abstractAccountItemProvider == null) {
+			abstractAccountItemProvider = new AbstractAccountItemProvider(this);
 		}
 
-		return abstractVaultItemProvider;
+		return abstractAccountItemProvider;
 	}
 
 	/**
@@ -644,6 +782,52 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 		}
 
 		return networkEngineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Countries} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CountriesItemProvider countriesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.Countries}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCountriesAdapter() {
+		if (countriesItemProvider == null) {
+			countriesItemProvider = new CountriesItemProvider(this);
+		}
+
+		return countriesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.wrs.Nodes} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodesItemProvider nodesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.wrs.Nodes}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodesAdapter() {
+		if (nodesItemProvider == null) {
+			nodesItemProvider = new NodesItemProvider(this);
+		}
+
+		return nodesItemProvider;
 	}
 
 	/**
@@ -748,28 +932,36 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory implements 
 		if (wrsItemProvider != null) wrsItemProvider.dispose();
 		if (treasuryItemProvider != null) treasuryItemProvider.dispose();
 		if (transferVaultItemProvider != null) transferVaultItemProvider.dispose();
-		if (transferVaultsItemProvider != null) transferVaultsItemProvider.dispose();
 		if (genesisItemProvider != null) genesisItemProvider.dispose();
 		if (assetItemProvider != null) assetItemProvider.dispose();
 		if (worldEconomyItemProvider != null) worldEconomyItemProvider.dispose();
 		if (nationalEconomiesItemProvider != null) nationalEconomiesItemProvider.dispose();
-		if (nationItemProvider != null) nationItemProvider.dispose();
+		if (countryItemProvider != null) countryItemProvider.dispose();
 		if (fiatCurrencyItemProvider != null) fiatCurrencyItemProvider.dispose();
-		if (accountantsItemProvider != null) accountantsItemProvider.dispose();
-		if (accountantItemProvider != null) accountantItemProvider.dispose();
-		if (materialItemProvider != null) materialItemProvider.dispose();
+		if (thingItemProvider != null) thingItemProvider.dispose();
 		if (individualItemProvider != null) individualItemProvider.dispose();
 		if (legalEntityItemProvider != null) legalEntityItemProvider.dispose();
-		if (identitiesItemProvider != null) identitiesItemProvider.dispose();
 		if (accountItemProvider != null) accountItemProvider.dispose();
 		if (supplyControlItemProvider != null) supplyControlItemProvider.dispose();
 		if (accountsItemProvider != null) accountsItemProvider.dispose();
 		if (transactionItemProvider != null) transactionItemProvider.dispose();
 		if (registeredAssetsItemProvider != null) registeredAssetsItemProvider.dispose();
-		if (abstractVaultItemProvider != null) abstractVaultItemProvider.dispose();
+		if (abstractAccountItemProvider != null) abstractAccountItemProvider.dispose();
 		if (transactionCollectionItemProvider != null) transactionCollectionItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (networkEngineItemProvider != null) networkEngineItemProvider.dispose();
+		if (countriesItemProvider != null) countriesItemProvider.dispose();
+		if (nodesItemProvider != null) nodesItemProvider.dispose();
+		if (identitiesItemProvider != null) identitiesItemProvider.dispose();
+		if (transactionsItemProvider != null) transactionsItemProvider.dispose();
+		if (abstractTransactionItemProvider != null) abstractTransactionItemProvider.dispose();
+		if (nodeAccountItemProvider != null) nodeAccountItemProvider.dispose();
+		if (transactionConditionsItemProvider != null) transactionConditionsItemProvider.dispose();
+		if (transactionConditionItemProvider != null) transactionConditionItemProvider.dispose();
+		if (signedInputItemProvider != null) signedInputItemProvider.dispose();
+		if (statisticsItemProvider != null) statisticsItemProvider.dispose();
+		if (statisticDatasItemProvider != null) statisticDatasItemProvider.dispose();
+		if (countryRegionItemProvider != null) countryRegionItemProvider.dispose();
 	}
 
 }

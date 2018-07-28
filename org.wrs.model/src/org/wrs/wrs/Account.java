@@ -13,14 +13,13 @@ package org.wrs.wrs;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.wrs.Account#getPublicKey <em>Public Key</em>}</li>
- *   <li>{@link org.wrs.wrs.Account#getBelongsTo <em>Belongs To</em>}</li>
  * </ul>
  *
  * @see org.wrs.wrs.WrsPackage#getAccount()
  * @model
  * @generated
  */
-public interface Account extends AbstractVault {
+public interface Account extends AbstractAccount {
 	/**
 	 * Returns the value of the '<em><b>Public Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,31 +45,5 @@ public interface Account extends AbstractVault {
 	 * @generated
 	 */
 	void setPublicKey(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Belongs To</em>' reference.
-	 * @see #setBelongsTo(Identity)
-	 * @see org.wrs.wrs.WrsPackage#getAccount_BelongsTo()
-	 * @model
-	 * @generated
-	 */
-	Identity getBelongsTo();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.wrs.Account#getBelongsTo <em>Belongs To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Belongs To</em>' reference.
-	 * @see #getBelongsTo()
-	 * @generated
-	 */
-	void setBelongsTo(Identity value);
 
 } // Account
