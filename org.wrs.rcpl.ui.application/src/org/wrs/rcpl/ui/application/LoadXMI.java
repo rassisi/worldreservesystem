@@ -1,5 +1,6 @@
 package org.wrs.rcpl.ui.application;
 
+import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -18,10 +19,15 @@ public class LoadXMI {
 		// Register the XMI resource factory for the .website extension
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> m = reg.getExtensionToFactoryMap();
-		m.put("person", new XMIResourceFactoryImpl());
+		m.put("xmi", new XMIResourceFactoryImpl());
 		ResourceSet resSet = new ResourceSetImpl();
 		Resource resource = resSet.getResource(URI.createURI("mymodel.xmi"), true);
 
+		Iterator i = resource.getAllContents();
+
+		while (i.hasNext()) {
+			System.out.println(i.next().getClass().getName());
+		}
 	}
 
 	public static void main(String[] args) {
