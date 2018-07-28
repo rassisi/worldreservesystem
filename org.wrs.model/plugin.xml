@@ -12,7 +12,7 @@
       <package
             uri="http://org.wrs"
             class="wrs.WrsPackage"
-            genModel="model/wrs2.genmodel"/>
+            genModel="model/wrs.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -20,7 +20,7 @@
       <package
             uri="http://org.wrs"
             class="org.wrs.wrs.WrsPackage"
-            genModel="model/org.wrs.genmodel"/>
+            genModel="model/wrs0.genmodel"/>
    </extension>
 
 </plugin>

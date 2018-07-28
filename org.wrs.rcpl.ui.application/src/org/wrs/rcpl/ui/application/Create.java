@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.wrs.wrs.Accounts;
-import org.wrs.wrs.WrsFactory;
-import org.wrs.wrs.wrs;
-import org.wrs.wrs.impl.WrsPackageImpl;
+
+import wrs.Accounts;
+import wrs.WRS;
+import wrs.impl.WrsPackageImpl;
 
 public class Create {
 	public void create() {
@@ -26,10 +26,10 @@ public class Create {
 
 		// create a resource
 		Resource resource = resSet.createResource(URI.createURI("mymodel.xmi"));
-		wrs w = WrsFactory.eINSTANCE.createwrs();
+		WRS w = wrs.WrsFactory.eINSTANCE.createWRS();
 		resource.getContents().add(w);
 
-		Accounts accounts = WrsFactory.eINSTANCE.createAccounts();
+		Accounts accounts = wrs.WrsFactory.eINSTANCE.createAccounts();
 		w.setAccounts(accounts);
 
 		// now save the content.

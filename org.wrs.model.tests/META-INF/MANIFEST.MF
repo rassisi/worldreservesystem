@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.wrs.wrs.tests
+Export-Package: wrs.tests
 Require-Bundle: org.eclipse.core.runtime,
  org.wrs.model;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

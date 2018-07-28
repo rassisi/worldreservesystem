@@ -34,31 +34,4 @@
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated wrs -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.wrs.wrs.presentation.WrsModelWizardID"
-            name="%_UI_WrsModelWizard_label"
-            class="org.wrs.wrs.presentation.WrsModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/WrsModelFile.gif">
-         <description>%_UI_WrsModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated wrs -->
-      <editor
-            id="org.wrs.wrs.presentation.WrsEditorID"
-            name="%_UI_WrsEditor_label"
-            icon="icons/full/obj16/WrsModelFile.gif"
-            extensions="wrs"
-            class="org.wrs.wrs.presentation.WrsEditor"
-            contributorClass="org.wrs.wrs.presentation.WrsActionBarContributor">
-      </editor>
-   </extension>
 </plugin>

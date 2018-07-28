@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.wrs:wrs xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.wrs="http://org.wrs">
+<wrs:WRS xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:wrs="http://wrs/1.0">
   <accounts/>
-</org.wrs:wrs>
+</wrs:WRS>
