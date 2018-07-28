@@ -5,13 +5,12 @@ Bundle-SymbolicName: org.wrs.model.edit;singleton:=true
 Automatic-Module-Name: org.wrs.model.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: wrs.provider.WrsEditPlugin$Implementation
+Bundle-Activator: org.wrs.model.wrs.provider.WrsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: wrs.provider
+Export-Package: org.wrs.model.wrs.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.wrs.model;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport,
- org.eclipse.emf.cdo.edit;bundle-version="4.4.200"
+ org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

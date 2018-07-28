@@ -5,11 +5,11 @@ Bundle-SymbolicName: org.wrs.model.editor;singleton:=true
 Automatic-Module-Name: org.wrs.model.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: wrs.presentation.WrsEditorPlugin$Implementation
+Bundle-Activator: org.wrs.model.wrs.presentation.WrsEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: wrs.presentation
+Export-Package: org.wrs.model.wrs.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.wrs.model.edit;visibility:=reexport,

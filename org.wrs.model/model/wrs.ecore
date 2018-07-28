@@ -25,6 +25,7 @@
         eType="#//TransactionConditions" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticDatas" eType="#//StatisticDatas"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Treasury" eSuperTypes="#//AbstractAccount"/>
   <eClassifiers xsi:type="ecore:EClass" name="TransferVault" eSuperTypes="#//AbstractAccount"/>

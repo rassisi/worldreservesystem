@@ -2,25 +2,16 @@
 <?eclipse version="3.0"?>
 
 <!--
- (c) 2018 World Resource Systems, Ramin Assisi
 -->
 
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated wrs2 -->
+      <!-- @generated wrs -->
       <package
-            uri="http://org.wrs"
-            class="wrs.WrsPackage"
+            uri="http://wrs/1.0"
+            class="org.wrs.model.wrs.WrsPackage"
             genModel="model/wrs.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated org.wrs -->
-      <package
-            uri="http://org.wrs"
-            class="org.wrs.wrs.WrsPackage"
-            genModel="model/wrs0.genmodel"/>
    </extension>
 
 </plugin>

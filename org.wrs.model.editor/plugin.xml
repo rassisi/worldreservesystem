@@ -7,14 +7,14 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated wrs2 -->
+      <!-- @generated wrs -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="wrs.presentation.WrsModelWizardID"
+            id="org.wrs.model.wrs.presentation.WrsModelWizardID"
             name="%_UI_WrsModelWizard_label"
-            class="wrs.presentation.WrsModelWizard"
+            class="org.wrs.model.wrs.presentation.WrsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/WrsModelFile.gif">
          <description>%_UI_WrsModelWizard_description</description>
@@ -23,14 +23,14 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated wrs2 -->
+      <!-- @generated wrs -->
       <editor
-            id="wrs.presentation.WrsEditorID"
+            id="org.wrs.model.wrs.presentation.WrsEditorID"
             name="%_UI_WrsEditor_label"
             icon="icons/full/obj16/WrsModelFile.gif"
             extensions="wrs"
-            class="wrs.presentation.WrsEditor"
-            contributorClass="wrs.presentation.WrsActionBarContributor">
+            class="org.wrs.model.wrs.presentation.WrsEditor"
+            contributorClass="org.wrs.model.wrs.presentation.WrsActionBarContributor">
       </editor>
    </extension>
 

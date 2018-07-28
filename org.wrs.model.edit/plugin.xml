@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated wrs2 -->
+      <!-- @generated wrs -->
       <factory
-            uri="http://org.wrs"
-            class="wrs.provider.WrsItemProviderAdapterFactory"
+            uri="http://wrs/1.0"
+            class="org.wrs.model.wrs.provider.WrsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

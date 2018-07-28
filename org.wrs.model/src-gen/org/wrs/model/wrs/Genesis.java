@@ -1,0 +1,50 @@
+/**
+ */
+package org.wrs.model.wrs;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Genesis</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.wrs.model.wrs.Genesis#getTreasury <em>Treasury</em>}</li>
+ * </ul>
+ *
+ * @see org.wrs.model.wrs.WrsPackage#getGenesis()
+ * @model
+ * @generated
+ */
+public interface Genesis extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Treasury</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Treasury</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Treasury</em>' reference.
+	 * @see #setTreasury(Treasury)
+	 * @see org.wrs.model.wrs.WrsPackage#getGenesis_Treasury()
+	 * @model required="true"
+	 * @generated
+	 */
+	Treasury getTreasury();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.Genesis#getTreasury <em>Treasury</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Treasury</em>' reference.
+	 * @see #getTreasury()
+	 * @generated
+	 */
+	void setTreasury(Treasury value);
+
+} // Genesis
