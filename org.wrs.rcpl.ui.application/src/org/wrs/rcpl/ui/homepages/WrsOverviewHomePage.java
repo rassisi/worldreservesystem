@@ -12,6 +12,8 @@ package org.wrs.rcpl.ui.homepages;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.IRcplUic;
+import org.eclipse.rcpl.ITreePart;
+import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.homepages.AbstractNavigatorHomePage;
 import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
@@ -48,6 +50,11 @@ public class WrsOverviewHomePage extends AbstractNavigatorHomePage {
 	@Override
 	public HomePageType getId() {
 		return HomePageType.OVERVIEW;
+	}
+
+	@Override
+	protected ITreePart getTreePart() {
+		return Rcpl.UIC.getApplicationTreepart();
 	}
 
 }

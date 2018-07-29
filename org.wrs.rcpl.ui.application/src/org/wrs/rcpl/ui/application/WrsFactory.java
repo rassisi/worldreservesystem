@@ -1,7 +1,9 @@
 package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.IHomePage;
+import org.eclipse.rcpl.INavigatorTreeManager;
 import org.eclipse.rcpl.IRcplUic;
+import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 import org.wrs.rcpl.ui.homepages.AccountHomePage;
@@ -76,4 +78,13 @@ public class WrsFactory extends JOFactory {
 
 	}
 
+	@Override
+	public INavigatorTreeManager createApplicationTreeManager() {
+		return new WrsNavigatorTreeManagerImpl();
+	}
+
+	@Override
+	public ITreePart createApplicationTreePart() {
+		return new WrsNavigatorTreePart();
+	}
 }
