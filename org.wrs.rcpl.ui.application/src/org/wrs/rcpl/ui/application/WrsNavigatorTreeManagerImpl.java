@@ -26,6 +26,8 @@ import org.wrs.model.wrs.provider.WrsItemProviderAdapterFactory;
 public class WrsNavigatorTreeManagerImpl extends AbstractNavigatorTreeManagerImpl implements INavigatorTreeManager {
 
 	public WrsNavigatorTreeManagerImpl() {
+
+		System.out.println();
 	}
 
 	@Override

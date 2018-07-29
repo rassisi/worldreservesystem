@@ -49,7 +49,6 @@ public class WrsFactory extends JOFactory {
 			break;
 		case OVERVIEW:
 			return new WrsOverviewHomePage(uic, model);
-//			break;
 		case PDF:
 			break;
 		case PERSPECTIVES:
