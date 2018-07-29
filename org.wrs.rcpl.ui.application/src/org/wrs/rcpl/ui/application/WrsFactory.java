@@ -5,6 +5,7 @@ import org.eclipse.rcpl.IRcplUic;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 import org.wrs.rcpl.ui.homepages.AccountHomePage;
+import org.wrs.rcpl.ui.homepages.WrsOverviewHomePage;
 
 import com.joffice.rcpl.addon.office.factories.JOFactory;
 
@@ -45,7 +46,8 @@ public class WrsFactory extends JOFactory {
 		case NEWS:
 			break;
 		case OVERVIEW:
-			break;
+			return new WrsOverviewHomePage(uic, model);
+//			break;
 		case PDF:
 			break;
 		case PERSPECTIVES:

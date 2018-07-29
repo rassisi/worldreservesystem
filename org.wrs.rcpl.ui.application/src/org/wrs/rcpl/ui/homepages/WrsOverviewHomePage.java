@@ -10,18 +10,20 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.homepages;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.IRcplUic;
-import org.eclipse.rcpl.homepages.DefaultOverviewHomePage;
+import org.eclipse.rcpl.homepages.AbstractNavigatorHomePage;
+import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
+import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 
 import javafx.scene.Node;
-import javafx.scene.layout.StackPane;
 
 /**
  * @author ramin
  *
  */
-public class WrsOverviewHomePage extends DefaultOverviewHomePage {
+public class WrsOverviewHomePage extends AbstractNavigatorHomePage {
 
 	/**
 	 * @param uic
@@ -33,14 +35,19 @@ public class WrsOverviewHomePage extends DefaultOverviewHomePage {
 	}
 
 	@Override
-	protected void doCreateContent(StackPane contentPane) {
-
-	}
-
-	@Override
 	public Node getNode() {
 		super.getNode().setUserData(this);
 		return super.getNode();
+	}
+
+	@Override
+	protected EObject getRoot() {
+		return RcplSession.getDefault().getApplicationRootObject();
+	}
+
+	@Override
+	public HomePageType getId() {
+		return HomePageType.OVERVIEW;
 	}
 
 }

@@ -35,6 +35,11 @@ public class WrsApplication extends RcplApplication {
 	@Override
 	protected IRcplApplicationProvider createApplicationProvider() {
 		AbstractSession.applicationId = this;
+
+		// TODO:
+
+		AbstractSession.sessionFactory = new WrsSessionFactory();
+
 		return new WrsApplicationProvider(this);
 	}
 
