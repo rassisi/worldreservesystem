@@ -4,35 +4,31 @@
   <eClassifiers xsi:type="ecore:EClass" name="WRS">
     <eOperations name="createIdentity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mainvault" lowerBound="1"
-        eType="#//Treasury"/>
+        eType="#//Treasury" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supplycontrol" lowerBound="1"
         eType="#//SupplyControl" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allAccounts" lowerBound="1"
         eType="#//Accounts" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="registeredasstets" lowerBound="1"
         eType="#//RegisteredAssets" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="worldeconomy" eType="#//WorldEconomy"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="countries" eType="#//Countries"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" eType="#//Nodes"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="identities" eType="#//Identities"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" eType="#//Transactions"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AllTransactions" eType="#//AllTransactions"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="transactionconditions"
-        eType="#//TransactionConditions" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticDatas" eType="#//StatisticDatas"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AllTransactionConditions"
+        eType="#//AllTransactionConditions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transfervaults" eType="#//TransferVaults"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genesisAccount" eType="#//GenesisAccount"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Treasury" eSuperTypes="#//AbstractAccount"/>
   <eClassifiers xsi:type="ecore:EClass" name="TransferVault" eSuperTypes="#//AbstractAccount"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Genesis">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="treasury" lowerBound="1"
-        eType="#//Treasury"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenesisAccount" eSuperTypes="#//AbstractAccount"/>
   <eClassifiers xsi:type="ecore:EEnum" name="AssetType">
     <eLiterals name="GOLD"/>
     <eLiterals name="SILVER" value="1"/>
@@ -42,7 +38,7 @@
     <eLiterals name="INTELLECTUAL_PROPERTY" value="5"/>
     <eLiterals name="UDOLLAR" value="6"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Asset">
+  <eClassifiers xsi:type="ecore:EClass" name="Asset" eSuperTypes="#//Layoutable">
     <eOperations name="register"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="assetType" eType="#//AssetType"
         defaultValueLiteral="UDOLLAR"/>
@@ -51,85 +47,101 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WorldEconomy">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationaleconomies" lowerBound="1"
-        upperBound="-1" eType="#//NationalEconomies"/>
+        upperBound="-1" eType="#//NationalEconomy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticssource" eType="#//StatisticsSource"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticDatas" eType="#//StatisticDatas"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countries" eType="#//Countries"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NationalEconomies"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NationalEconomy"/>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fiatcurrency" lowerBound="1"
         eType="#//FiatCurrency" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nationaleconomies" eType="#//NationalEconomies"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nationaleconomy" eType="#//NationalEconomy"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="regions" upperBound="-1"
-        eType="#//CountryRegion"/>
+        eType="#//CountryRegion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FiatCurrency"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Identity" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Identity" abstract="true" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UUID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AllNodes" eType="#//Nodes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Thing" eSuperTypes="#//Identity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" eType="#//Identity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Individual" eSuperTypes="#//Identity">
+  <eClassifiers xsi:type="ecore:EClass" name="Individual" eSuperTypes="#//HumanEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="worksFor" upperBound="-1"
         eType="#//LegalEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="legalPartnerOf" upperBound="-1"
-        eType="#//LegalEntity"/>
+        eType="#//Individual"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LegalEntity" eSuperTypes="#//Identity">
+  <eClassifiers xsi:type="ecore:EClass" name="LegalEntity" eSuperTypes="#//HumanEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//LegalEntityType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="#//AbstractAccount">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SupplyControl">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="genesis" lowerBound="1"
-        eType="#//Genesis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genesisAccount" eType="#//GenesisAccount"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transferVaults" eType="#//TransferVaults"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="treasury" eType="#//Treasury"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Accounts">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//AbstractAccount" containment="true"/>
+        eType="#//AbstractAccount"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transaction" eSuperTypes="#//AbstractTransaction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assets" eType="#//Asset"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" upperBound="-1"
-        eType="#//AbstractAccount"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nanoTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transactioncondition" eType="#//TransactionCondition"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegisteredAssets">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Asset" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractAccount">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractAccount" abstract="true" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assets" upperBound="-1"
         eType="#//Asset"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" eType="#//Transaction"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" eType="#//Identity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" upperBound="-1"
+        eType="#//Transaction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" eType="#//Transactions"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TransactionCollection" eSuperTypes="#//AbstractTransaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TransactionCollection" eSuperTypes="#//AbstractTransaction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" upperBound="-1"
+        eType="#//Transaction"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="networkengine" lowerBound="1"
         eType="#//NetworkEngine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodeAccounts" upperBound="-1"
+        eType="#//NodeAccount" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NetworkEngine"/>
   <eClassifiers xsi:type="ecore:EClass" name="Countries">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="country" upperBound="-1"
+        eType="#//Country" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Nodes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//Node"/>
+        eType="#//Node" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Identities">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Identity" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Transactions">
+  <eClassifiers xsi:type="ecore:EClass" name="AllTransactions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//AbstractTransaction" containment="true"/>
+        eType="#//AbstractTransaction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractTransaction"/>
   <eClassifiers xsi:type="ecore:EEnum" name="LegalEntityType">
@@ -138,9 +150,9 @@
     <eLiterals name="CHARITY" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NodeAccount" eSuperTypes="#//AbstractAccount"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TransactionConditions">
+  <eClassifiers xsi:type="ecore:EClass" name="AllTransactionConditions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//TransactionCondition" containment="true"/>
+        eType="#//TransactionCondition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransactionCondition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formula" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -159,10 +171,39 @@
     <eLiterals name="BOOLEAN" value="2"/>
     <eLiterals name="TEXT" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statistics"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatisticDatas">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="children" eType="#//Statistics"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Statistics">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticssource" eType="#//StatisticsSource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CountryRegion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatisticsSource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticDatas">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Statistics" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CountryRegion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regionaleconomy" eType="#//regionalEconomy"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticsSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="webserviceUrl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HumanEntity" abstract="true" eSuperTypes="#//Identity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="worldeconomy" eType="#//WorldEconomy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" upperBound="-1"
+        eType="#//Account" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Layoutable" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="h" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="regionalEconomy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TransferVaults">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//TransferVault" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transactions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//AbstractTransaction" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

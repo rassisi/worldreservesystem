@@ -3,15 +3,9 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Accounts;
@@ -69,20 +63,6 @@ public class AccountsImpl extends CDOObjectImpl implements Accounts {
 	public EList<AbstractAccount> getChildren() {
 		return (EList<AbstractAccount>) eDynamicGet(WrsPackage.ACCOUNTS__CHILDREN,
 				WrsPackage.Literals.ACCOUNTS__CHILDREN, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case WrsPackage.ACCOUNTS__CHILDREN:
-			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

@@ -10,35 +10,58 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.homepages;
 
-import org.eclipse.rcpl.IHomePage;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.IRcplUic;
-import org.eclipse.rcpl.homepages.AbstractHomePage;
+import org.eclipse.rcpl.ITreePart;
+import org.eclipse.rcpl.Rcpl;
+import org.eclipse.rcpl.homepages.AbstractNavigatorHomePage;
+import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
+import org.wrs.model.wrs.Identity;
+import org.wrs.model.wrs.WRS;
 
-import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.Node;
 
 /**
  * @author ramin
  * 
  */
-public class AccountHomePage extends AbstractHomePage implements IHomePage {
+public class AccountHomePage extends AbstractNavigatorHomePage {
 
 	public AccountHomePage(IRcplUic uic, HomePage modelHomePage) {
 		super(uic, modelHomePage);
 	}
 
 	@Override
-	protected void doCreateContent(StackPane contentPane) {
-		Label l = new Label("Account");
-		l.setAlignment(Pos.CENTER);
-		getContentPane().getChildren().add(l);
+	public Node getNode() {
+		super.getNode().setUserData(this);
+		return super.getNode();
+	}
+
+	@Override
+	protected EObject getRoot() {
+		WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
+
+		for (Identity identity : wrs.getIdentities().getChildren()) {
+
+			String name = identity.getName();
+
+			if ("Ramin".equals(name)) {
+				return identity;
+			}
+		}
+
+		return wrs;
 	}
 
 	@Override
 	public HomePageType getId() {
 		return HomePageType.CUSTOM;
+	}
+
+	@Override
+	protected ITreePart getTreePart() {
+		return Rcpl.UIC.getApplicationTreepart();
 	}
 }

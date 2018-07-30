@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Transactions extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Children</b></em>' reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.AbstractTransaction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -32,9 +32,9 @@ public interface Transactions extends CDOObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' containment reference list.
+	 * @return the value of the '<em>Children</em>' reference list.
 	 * @see org.wrs.model.wrs.WrsPackage#getTransactions_Children()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<AbstractTransaction> getChildren();

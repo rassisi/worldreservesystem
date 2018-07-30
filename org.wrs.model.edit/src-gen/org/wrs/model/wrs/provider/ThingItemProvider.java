@@ -91,7 +91,7 @@ public class ThingItemProvider extends IdentityItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Thing) object).getUUID();
+		String label = ((Thing) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Thing_type")
 				: getString("_UI_Thing_type") + " " + label;
 	}

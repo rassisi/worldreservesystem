@@ -1,15 +1,86 @@
 <?xml version="1.0" encoding="ASCII"?>
 <wrs:WRS xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:wrs="http://wrs/1.0">
+  <mainvault/>
   <supplycontrol/>
-  <accounts/>
+  <allAccounts/>
   <registeredasstets/>
-  <worldeconomy/>
-  <countries/>
-  <nodes/>
-  <identities/>
-  <transactions/>
-  <transactionconditions/>
-  <statisticDatas/>
+  <worldeconomy>
+    <statisticssource
+        webserviceUrl="http://oecd.org"/>
+    <statisticDatas>
+      <children
+          statisticssource="//@worldeconomy/@statisticssource"/>
+    </statisticDatas>
+    <countries>
+      <country>
+        <fiatcurrency/>
+      </country>
+      <country/>
+      <country/>
+      <country/>
+      <country/>
+      <country/>
+      <country/>
+      <country/>
+    </countries>
+  </worldeconomy>
+  <nodes>
+    <children/>
+    <children/>
+  </nodes>
+  <identities>
+    <children
+        xsi:type="wrs:Thing"
+        name="Car"/>
+    <children
+        xsi:type="wrs:Individual"
+        name="Ramin"
+        worldeconomy="//@worldeconomy"
+        worksFor="//@identities/@children.2"
+        legalPartnerOf="//@identities/@children.3">
+      <accounts
+          name="Account 1">
+        <transactions>
+          <children
+              xsi:type="wrs:Transaction"
+              amount="1000.0">
+            <transactioncondition
+                formula="X=a+b+c"/>
+          </children>
+          <children
+              xsi:type="wrs:Transaction"/>
+          <children
+              xsi:type="wrs:Transaction"/>
+          <children
+              xsi:type="wrs:Transaction"/>
+          <children
+              xsi:type="wrs:Transaction"/>
+          <children
+              xsi:type="wrs:Transaction"/>
+        </transactions>
+      </accounts>
+      <accounts
+          name="Account 2"/>
+    </children>
+    <children
+        xsi:type="wrs:LegalEntity"
+        name="Assisi Consulting"/>
+    <children
+        xsi:type="wrs:Individual"
+        name="Diane"
+        legalPartnerOf="//@identities/@children.1"/>
+  </identities>
+  <AllTransactions/>
+  <AllTransactionConditions
+      children="//@identities/@children.1/@accounts.0/@transactions/@children.0/@transactioncondition"/>
+  <transfervaults>
+    <children
+        name="Vault 1"/>
+    <children
+        name="Vault2"/>
+  </transfervaults>
+  <genesisAccount/>
 </wrs:WRS>

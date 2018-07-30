@@ -70,6 +70,10 @@ public class WrsSwitch<T> extends Switch<T> {
 			WRS wrs = (WRS) theEObject;
 			T result = caseWRS(wrs);
 			if (result == null)
+				result = caseIdentity(wrs);
+			if (result == null)
+				result = caseLayoutable(wrs);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -79,6 +83,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractAccount(treasury);
 			if (result == null)
+				result = caseLayoutable(treasury);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -87,6 +93,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			T result = caseTransferVault(transferVault);
 			if (result == null)
 				result = caseAbstractAccount(transferVault);
+			if (result == null)
+				result = caseLayoutable(transferVault);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -102,6 +110,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			Asset asset = (Asset) theEObject;
 			T result = caseAsset(asset);
 			if (result == null)
+				result = caseLayoutable(asset);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -112,9 +122,9 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WrsPackage.NATIONAL_ECONOMIES: {
-			NationalEconomies nationalEconomies = (NationalEconomies) theEObject;
-			T result = caseNationalEconomies(nationalEconomies);
+		case WrsPackage.NATIONAL_ECONOMY: {
+			NationalEconomy nationalEconomy = (NationalEconomy) theEObject;
+			T result = caseNationalEconomy(nationalEconomy);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -137,6 +147,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			Identity identity = (Identity) theEObject;
 			T result = caseIdentity(identity);
 			if (result == null)
+				result = caseLayoutable(identity);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -146,6 +158,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseIdentity(thing);
 			if (result == null)
+				result = caseLayoutable(thing);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -153,7 +167,11 @@ public class WrsSwitch<T> extends Switch<T> {
 			Individual individual = (Individual) theEObject;
 			T result = caseIndividual(individual);
 			if (result == null)
+				result = caseHumanEntity(individual);
+			if (result == null)
 				result = caseIdentity(individual);
+			if (result == null)
+				result = caseLayoutable(individual);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -162,7 +180,11 @@ public class WrsSwitch<T> extends Switch<T> {
 			LegalEntity legalEntity = (LegalEntity) theEObject;
 			T result = caseLegalEntity(legalEntity);
 			if (result == null)
+				result = caseHumanEntity(legalEntity);
+			if (result == null)
 				result = caseIdentity(legalEntity);
+			if (result == null)
+				result = caseLayoutable(legalEntity);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -172,6 +194,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			T result = caseAccount(account);
 			if (result == null)
 				result = caseAbstractAccount(account);
+			if (result == null)
+				result = caseLayoutable(account);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -209,6 +233,8 @@ public class WrsSwitch<T> extends Switch<T> {
 		case WrsPackage.ABSTRACT_ACCOUNT: {
 			AbstractAccount abstractAccount = (AbstractAccount) theEObject;
 			T result = caseAbstractAccount(abstractAccount);
+			if (result == null)
+				result = caseLayoutable(abstractAccount);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -277,6 +303,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractAccount(nodeAccount);
 			if (result == null)
+				result = caseLayoutable(nodeAccount);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -325,6 +353,24 @@ public class WrsSwitch<T> extends Switch<T> {
 		case WrsPackage.STATISTICS_SOURCE: {
 			StatisticsSource statisticsSource = (StatisticsSource) theEObject;
 			T result = caseStatisticsSource(statisticsSource);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.HUMAN_ENTITY: {
+			HumanEntity humanEntity = (HumanEntity) theEObject;
+			T result = caseHumanEntity(humanEntity);
+			if (result == null)
+				result = caseIdentity(humanEntity);
+			if (result == null)
+				result = caseLayoutable(humanEntity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.LAYOUTABLE: {
+			Layoutable layoutable = (Layoutable) theEObject;
+			T result = caseLayoutable(layoutable);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -425,17 +471,17 @@ public class WrsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>National Economies</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>National Economy</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>National Economies</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>National Economy</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNationalEconomies(NationalEconomies object) {
+	public T caseNationalEconomy(NationalEconomy object) {
 		return null;
 	}
 
@@ -856,6 +902,36 @@ public class WrsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStatisticsSource(StatisticsSource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Human Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Human Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHumanEntity(HumanEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Layoutable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Layoutable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLayoutable(Layoutable object) {
 		return null;
 	}
 

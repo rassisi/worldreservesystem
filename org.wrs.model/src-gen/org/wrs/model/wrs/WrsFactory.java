@@ -76,13 +76,13 @@ public interface WrsFactory extends EFactory {
 	WorldEconomy createWorldEconomy();
 
 	/**
-	 * Returns a new object of class '<em>National Economies</em>'.
+	 * Returns a new object of class '<em>National Economy</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>National Economies</em>'.
+	 * @return a new object of class '<em>National Economy</em>'.
 	 * @generated
 	 */
-	NationalEconomies createNationalEconomies();
+	NationalEconomy createNationalEconomy();
 
 	/**
 	 * Returns a new object of class '<em>Country</em>'.
@@ -173,15 +173,6 @@ public interface WrsFactory extends EFactory {
 	 * @generated
 	 */
 	RegisteredAssets createRegisteredAssets();
-
-	/**
-	 * Returns a new object of class '<em>Abstract Account</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Account</em>'.
-	 * @generated
-	 */
-	AbstractAccount createAbstractAccount();
 
 	/**
 	 * Returns a new object of class '<em>Transaction Collection</em>'.

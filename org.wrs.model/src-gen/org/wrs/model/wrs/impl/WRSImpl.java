@@ -9,13 +9,11 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Accounts;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.Identities;
 import org.wrs.model.wrs.Nodes;
 import org.wrs.model.wrs.RegisteredAssets;
-import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.SupplyControl;
 import org.wrs.model.wrs.TransactionConditions;
 import org.wrs.model.wrs.Transactions;
@@ -34,7 +32,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getMainvault <em>Mainvault</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getSupplycontrol <em>Supplycontrol</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAllAccounts <em>All Accounts</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getRegisteredasstets <em>Registeredasstets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getWorldeconomy <em>Worldeconomy</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getCountries <em>Countries</em>}</li>
@@ -42,23 +40,11 @@ import org.wrs.model.wrs.WrsPackage;
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getIdentities <em>Identities</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getTransactions <em>Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getTransactionconditions <em>Transactionconditions</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getStatisticDatas <em>Statistic Datas</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WRSImpl extends CDOObjectImpl implements WRS {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
+public class WRSImpl extends IdentityImpl implements WRS {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,16 +62,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.WRS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -149,8 +125,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Accounts getAccounts() {
-		return (Accounts) eDynamicGet(WrsPackage.WRS__ACCOUNTS, WrsPackage.Literals.WRS__ACCOUNTS, true, true);
+	public Accounts getAllAccounts() {
+		return (Accounts) eDynamicGet(WrsPackage.WRS__ALL_ACCOUNTS, WrsPackage.Literals.WRS__ALL_ACCOUNTS, true, true);
 	}
 
 	/**
@@ -158,8 +134,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAccounts(Accounts newAccounts, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newAccounts, WrsPackage.WRS__ACCOUNTS, msgs);
+	public NotificationChain basicSetAllAccounts(Accounts newAllAccounts, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newAllAccounts, WrsPackage.WRS__ALL_ACCOUNTS, msgs);
 		return msgs;
 	}
 
@@ -168,8 +144,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAccounts(Accounts newAccounts) {
-		eDynamicSet(WrsPackage.WRS__ACCOUNTS, WrsPackage.Literals.WRS__ACCOUNTS, newAccounts);
+	public void setAllAccounts(Accounts newAllAccounts) {
+		eDynamicSet(WrsPackage.WRS__ALL_ACCOUNTS, WrsPackage.Literals.WRS__ALL_ACCOUNTS, newAllAccounts);
 	}
 
 	/**
@@ -381,53 +357,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StatisticDatas getStatisticDatas() {
-		return (StatisticDatas) eDynamicGet(WrsPackage.WRS__STATISTIC_DATAS, WrsPackage.Literals.WRS__STATISTIC_DATAS,
-				true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetStatisticDatas(StatisticDatas newStatisticDatas, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newStatisticDatas, WrsPackage.WRS__STATISTIC_DATAS, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStatisticDatas(StatisticDatas newStatisticDatas) {
-		eDynamicSet(WrsPackage.WRS__STATISTIC_DATAS, WrsPackage.Literals.WRS__STATISTIC_DATAS, newStatisticDatas);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(WrsPackage.WRS__NAME, WrsPackage.Literals.WRS__NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(WrsPackage.WRS__NAME, WrsPackage.Literals.WRS__NAME, newName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void createIdentity() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -444,8 +373,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		switch (featureID) {
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			return basicSetSupplycontrol(null, msgs);
-		case WrsPackage.WRS__ACCOUNTS:
-			return basicSetAccounts(null, msgs);
+		case WrsPackage.WRS__ALL_ACCOUNTS:
+			return basicSetAllAccounts(null, msgs);
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 			return basicSetRegisteredasstets(null, msgs);
 		case WrsPackage.WRS__WORLDECONOMY:
@@ -460,8 +389,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return basicSetTransactions(null, msgs);
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
 			return basicSetTransactionconditions(null, msgs);
-		case WrsPackage.WRS__STATISTIC_DATAS:
-			return basicSetStatisticDatas(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -480,8 +407,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return basicGetMainvault();
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			return getSupplycontrol();
-		case WrsPackage.WRS__ACCOUNTS:
-			return getAccounts();
+		case WrsPackage.WRS__ALL_ACCOUNTS:
+			return getAllAccounts();
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 			return getRegisteredasstets();
 		case WrsPackage.WRS__WORLDECONOMY:
@@ -496,10 +423,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return getTransactions();
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
 			return getTransactionconditions();
-		case WrsPackage.WRS__STATISTIC_DATAS:
-			return getStatisticDatas();
-		case WrsPackage.WRS__NAME:
-			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -518,8 +441,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			setSupplycontrol((SupplyControl) newValue);
 			return;
-		case WrsPackage.WRS__ACCOUNTS:
-			setAccounts((Accounts) newValue);
+		case WrsPackage.WRS__ALL_ACCOUNTS:
+			setAllAccounts((Accounts) newValue);
 			return;
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 			setRegisteredasstets((RegisteredAssets) newValue);
@@ -542,12 +465,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
 			setTransactionconditions((TransactionConditions) newValue);
 			return;
-		case WrsPackage.WRS__STATISTIC_DATAS:
-			setStatisticDatas((StatisticDatas) newValue);
-			return;
-		case WrsPackage.WRS__NAME:
-			setName((String) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -566,8 +483,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			setSupplycontrol((SupplyControl) null);
 			return;
-		case WrsPackage.WRS__ACCOUNTS:
-			setAccounts((Accounts) null);
+		case WrsPackage.WRS__ALL_ACCOUNTS:
+			setAllAccounts((Accounts) null);
 			return;
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 			setRegisteredasstets((RegisteredAssets) null);
@@ -590,12 +507,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
 			setTransactionconditions((TransactionConditions) null);
 			return;
-		case WrsPackage.WRS__STATISTIC_DATAS:
-			setStatisticDatas((StatisticDatas) null);
-			return;
-		case WrsPackage.WRS__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -612,8 +523,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return basicGetMainvault() != null;
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			return getSupplycontrol() != null;
-		case WrsPackage.WRS__ACCOUNTS:
-			return getAccounts() != null;
+		case WrsPackage.WRS__ALL_ACCOUNTS:
+			return getAllAccounts() != null;
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 			return getRegisteredasstets() != null;
 		case WrsPackage.WRS__WORLDECONOMY:
@@ -628,10 +539,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return getTransactions() != null;
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
 			return getTransactionconditions() != null;
-		case WrsPackage.WRS__STATISTIC_DATAS:
-			return getStatisticDatas() != null;
-		case WrsPackage.WRS__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

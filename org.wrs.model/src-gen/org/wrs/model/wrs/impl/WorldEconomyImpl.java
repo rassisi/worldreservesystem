@@ -11,7 +11,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-import org.wrs.model.wrs.NationalEconomies;
+import org.wrs.model.wrs.NationalEconomy;
+import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.StatisticsSource;
 import org.wrs.model.wrs.WorldEconomy;
 import org.wrs.model.wrs.WrsPackage;
@@ -26,6 +27,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getNationaleconomies <em>Nationaleconomies</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getStatisticssource <em>Statisticssource</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getStatisticDatas <em>Statistic Datas</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,8 +68,8 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<NationalEconomies> getNationaleconomies() {
-		return (EList<NationalEconomies>) eDynamicGet(WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES,
+	public EList<NationalEconomy> getNationaleconomies() {
+		return (EList<NationalEconomy>) eDynamicGet(WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES,
 				WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, true, true);
 	}
 
@@ -107,11 +109,43 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public StatisticDatas getStatisticDatas() {
+		return (StatisticDatas) eDynamicGet(WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS,
+				WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStatisticDatas(StatisticDatas newStatisticDatas, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newStatisticDatas, WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatisticDatas(StatisticDatas newStatisticDatas) {
+		eDynamicSet(WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS, WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS,
+				newStatisticDatas);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
 			return basicSetStatisticssource(null, msgs);
+		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
+			return basicSetStatisticDatas(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -128,6 +162,8 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 			return getNationaleconomies();
 		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
 			return getStatisticssource();
+		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
+			return getStatisticDatas();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,10 +179,13 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 		switch (featureID) {
 		case WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES:
 			getNationaleconomies().clear();
-			getNationaleconomies().addAll((Collection<? extends NationalEconomies>) newValue);
+			getNationaleconomies().addAll((Collection<? extends NationalEconomy>) newValue);
 			return;
 		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
 			setStatisticssource((StatisticsSource) newValue);
+			return;
+		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
+			setStatisticDatas((StatisticDatas) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -166,6 +205,9 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
 			setStatisticssource((StatisticsSource) null);
 			return;
+		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
+			setStatisticDatas((StatisticDatas) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -182,6 +224,8 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 			return !getNationaleconomies().isEmpty();
 		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
 			return getStatisticssource() != null;
+		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
+			return getStatisticDatas() != null;
 		}
 		return super.eIsSet(featureID);
 	}

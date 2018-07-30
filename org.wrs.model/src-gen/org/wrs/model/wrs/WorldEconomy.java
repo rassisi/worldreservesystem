@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.WorldEconomy#getNationaleconomies <em>Nationaleconomies</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WorldEconomy#getStatisticssource <em>Statisticssource</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WorldEconomy#getStatisticDatas <em>Statistic Datas</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getWorldEconomy()
@@ -26,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
 public interface WorldEconomy extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Nationaleconomies</b></em>' reference list.
-	 * The list contents are of type {@link org.wrs.model.wrs.NationalEconomies}.
+	 * The list contents are of type {@link org.wrs.model.wrs.NationalEconomy}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nationaleconomies</em>' reference list isn't clear,
@@ -38,7 +39,7 @@ public interface WorldEconomy extends CDOObject {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<NationalEconomies> getNationaleconomies();
+	EList<NationalEconomy> getNationaleconomies();
 
 	/**
 	 * Returns the value of the '<em><b>Statisticssource</b></em>' containment reference.
@@ -65,5 +66,31 @@ public interface WorldEconomy extends CDOObject {
 	 * @generated
 	 */
 	void setStatisticssource(StatisticsSource value);
+
+	/**
+	 * Returns the value of the '<em><b>Statistic Datas</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Statistic Datas</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Statistic Datas</em>' containment reference.
+	 * @see #setStatisticDatas(StatisticDatas)
+	 * @see org.wrs.model.wrs.WrsPackage#getWorldEconomy_StatisticDatas()
+	 * @model containment="true"
+	 * @generated
+	 */
+	StatisticDatas getStatisticDatas();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.WorldEconomy#getStatisticDatas <em>Statistic Datas</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Statistic Datas</em>' containment reference.
+	 * @see #getStatisticDatas()
+	 * @generated
+	 */
+	void setStatisticDatas(StatisticDatas value);
 
 } // WorldEconomy

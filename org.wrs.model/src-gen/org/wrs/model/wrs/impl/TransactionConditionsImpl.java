@@ -3,15 +3,9 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.TransactionCondition;
 import org.wrs.model.wrs.TransactionConditions;
@@ -69,20 +63,6 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	public EList<TransactionCondition> getChildren() {
 		return (EList<TransactionCondition>) eDynamicGet(WrsPackage.TRANSACTION_CONDITIONS__CHILDREN,
 				WrsPackage.Literals.TRANSACTION_CONDITIONS__CHILDREN, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case WrsPackage.TRANSACTION_CONDITIONS__CHILDREN:
-			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

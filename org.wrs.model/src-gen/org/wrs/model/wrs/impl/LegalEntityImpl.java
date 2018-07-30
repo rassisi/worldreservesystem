@@ -20,7 +20,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class LegalEntityImpl extends IdentityImpl implements LegalEntity {
+public class LegalEntityImpl extends HumanEntityImpl implements LegalEntity {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

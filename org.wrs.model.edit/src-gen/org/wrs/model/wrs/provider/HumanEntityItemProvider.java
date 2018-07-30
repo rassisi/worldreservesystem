@@ -8,28 +8,24 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.wrs.model.wrs.LegalEntity;
-import org.wrs.model.wrs.WrsPackage;
+import org.wrs.model.wrs.HumanEntity;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.LegalEntity} object.
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.HumanEntity} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LegalEntityItemProvider extends HumanEntityItemProvider {
+public class HumanEntityItemProvider extends IdentityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LegalEntityItemProvider(AdapterFactory adapterFactory) {
+	public HumanEntityItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -44,36 +40,19 @@ public class LegalEntityItemProvider extends HumanEntityItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_LegalEntity_type_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LegalEntity_type_feature",
-								"_UI_LegalEntity_type"),
-						WrsPackage.Literals.LEGAL_ENTITY__TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns LegalEntity.gif.
+	 * This returns HumanEntity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LegalEntity"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/HumanEntity"));
 	}
 
 	/**
@@ -94,9 +73,9 @@ public class LegalEntityItemProvider extends HumanEntityItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LegalEntity) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_LegalEntity_type")
-				: getString("_UI_LegalEntity_type") + " " + label;
+		String label = ((HumanEntity) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_HumanEntity_type")
+				: getString("_UI_HumanEntity_type") + " " + label;
 	}
 
 	/**
@@ -109,12 +88,6 @@ public class LegalEntityItemProvider extends HumanEntityItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(LegalEntity.class)) {
-		case WrsPackage.LEGAL_ENTITY__TYPE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

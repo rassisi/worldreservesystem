@@ -3,24 +3,26 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-import org.wrs.model.wrs.NationalEconomies;
+
+import org.wrs.model.wrs.NationalEconomy;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>National Economies</b></em>'.
+ * An implementation of the model object '<em><b>National Economy</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class NationalEconomiesImpl extends CDOObjectImpl implements NationalEconomies {
+public class NationalEconomyImpl extends CDOObjectImpl implements NationalEconomy {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NationalEconomiesImpl() {
+	protected NationalEconomyImpl() {
 		super();
 	}
 
@@ -31,7 +33,7 @@ public class NationalEconomiesImpl extends CDOObjectImpl implements NationalEcon
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WrsPackage.Literals.NATIONAL_ECONOMIES;
+		return WrsPackage.Literals.NATIONAL_ECONOMY;
 	}
 
 	/**
@@ -44,4 +46,4 @@ public class NationalEconomiesImpl extends CDOObjectImpl implements NationalEcon
 		return 0;
 	}
 
-} //NationalEconomiesImpl
+} //NationalEconomyImpl

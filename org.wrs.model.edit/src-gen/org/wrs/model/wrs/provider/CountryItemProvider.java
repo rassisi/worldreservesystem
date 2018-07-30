@@ -88,7 +88,7 @@ public class CountryItemProvider extends CDOItemProviderAdapter implements IEdit
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WrsPackage.Literals.COUNTRY__FIATCURRENCY);
-			childrenFeatures.add(WrsPackage.Literals.COUNTRY__NATIONALECONOMIES);
+			childrenFeatures.add(WrsPackage.Literals.COUNTRY__NATIONALECONOMY);
 		}
 		return childrenFeatures;
 	}
@@ -151,7 +151,7 @@ public class CountryItemProvider extends CDOItemProviderAdapter implements IEdit
 
 		switch (notification.getFeatureID(Country.class)) {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
-		case WrsPackage.COUNTRY__NATIONALECONOMIES:
+		case WrsPackage.COUNTRY__NATIONALECONOMY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -172,8 +172,8 @@ public class CountryItemProvider extends CDOItemProviderAdapter implements IEdit
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.COUNTRY__FIATCURRENCY,
 				WrsFactory.eINSTANCE.createFiatCurrency()));
 
-		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.COUNTRY__NATIONALECONOMIES,
-				WrsFactory.eINSTANCE.createNationalEconomies()));
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.COUNTRY__NATIONALECONOMY,
+				WrsFactory.eINSTANCE.createNationalEconomy()));
 	}
 
 	/**

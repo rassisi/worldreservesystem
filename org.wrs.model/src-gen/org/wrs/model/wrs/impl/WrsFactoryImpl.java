@@ -68,8 +68,8 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createAsset();
 		case WrsPackage.WORLD_ECONOMY:
 			return (EObject) createWorldEconomy();
-		case WrsPackage.NATIONAL_ECONOMIES:
-			return (EObject) createNationalEconomies();
+		case WrsPackage.NATIONAL_ECONOMY:
+			return (EObject) createNationalEconomy();
 		case WrsPackage.COUNTRY:
 			return (EObject) createCountry();
 		case WrsPackage.FIAT_CURRENCY:
@@ -90,8 +90,6 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createTransaction();
 		case WrsPackage.REGISTERED_ASSETS:
 			return (EObject) createRegisteredAssets();
-		case WrsPackage.ABSTRACT_ACCOUNT:
-			return (EObject) createAbstractAccount();
 		case WrsPackage.TRANSACTION_COLLECTION:
 			return (EObject) createTransactionCollection();
 		case WrsPackage.NODE:
@@ -232,9 +230,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NationalEconomies createNationalEconomies() {
-		NationalEconomiesImpl nationalEconomies = new NationalEconomiesImpl();
-		return nationalEconomies;
+	public NationalEconomy createNationalEconomy() {
+		NationalEconomyImpl nationalEconomy = new NationalEconomyImpl();
+		return nationalEconomy;
 	}
 
 	/**
@@ -335,16 +333,6 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public RegisteredAssets createRegisteredAssets() {
 		RegisteredAssetsImpl registeredAssets = new RegisteredAssetsImpl();
 		return registeredAssets;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AbstractAccount createAbstractAccount() {
-		AbstractAccountImpl abstractAccount = new AbstractAccountImpl();
-		return abstractAccount;
 	}
 
 	/**

@@ -4,23 +4,12 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
-
-import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.wrs.model.wrs.WRS;
@@ -33,8 +22,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class WRSItemProvider extends IdentityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -57,7 +45,6 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 			super.getPropertyDescriptors(object);
 
 			addMainvaultPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -77,21 +64,6 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_WRS_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_WRS_name_feature", "_UI_WRS_type"),
-						WrsPackage.Literals.WRS__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -104,7 +76,7 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WrsPackage.Literals.WRS__SUPPLYCONTROL);
-			childrenFeatures.add(WrsPackage.Literals.WRS__ACCOUNTS);
+			childrenFeatures.add(WrsPackage.Literals.WRS__ALL_ACCOUNTS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__REGISTEREDASSTETS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__WORLDECONOMY);
 			childrenFeatures.add(WrsPackage.Literals.WRS__COUNTRIES);
@@ -112,7 +84,6 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 			childrenFeatures.add(WrsPackage.Literals.WRS__IDENTITIES);
 			childrenFeatures.add(WrsPackage.Literals.WRS__TRANSACTIONS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS);
-			childrenFeatures.add(WrsPackage.Literals.WRS__STATISTIC_DATAS);
 		}
 		return childrenFeatures;
 	}
@@ -176,11 +147,8 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WRS.class)) {
-		case WrsPackage.WRS__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
 		case WrsPackage.WRS__SUPPLYCONTROL:
-		case WrsPackage.WRS__ACCOUNTS:
+		case WrsPackage.WRS__ALL_ACCOUNTS:
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 		case WrsPackage.WRS__WORLDECONOMY:
 		case WrsPackage.WRS__COUNTRIES:
@@ -188,7 +156,6 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 		case WrsPackage.WRS__IDENTITIES:
 		case WrsPackage.WRS__TRANSACTIONS:
 		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-		case WrsPackage.WRS__STATISTIC_DATAS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -209,8 +176,8 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__SUPPLYCONTROL,
 				WrsFactory.eINSTANCE.createSupplyControl()));
 
-		newChildDescriptors
-				.add(createChildParameter(WrsPackage.Literals.WRS__ACCOUNTS, WrsFactory.eINSTANCE.createAccounts()));
+		newChildDescriptors.add(
+				createChildParameter(WrsPackage.Literals.WRS__ALL_ACCOUNTS, WrsFactory.eINSTANCE.createAccounts()));
 
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__REGISTEREDASSTETS,
 				WrsFactory.eINSTANCE.createRegisteredAssets()));
@@ -232,20 +199,6 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS,
 				WrsFactory.eINSTANCE.createTransactionConditions()));
-
-		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__STATISTIC_DATAS,
-				WrsFactory.eINSTANCE.createStatisticDatas()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WrsEditPlugin.INSTANCE;
 	}
 
 }

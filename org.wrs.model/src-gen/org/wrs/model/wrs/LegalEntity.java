@@ -18,7 +18,7 @@ package org.wrs.model.wrs;
  * @model
  * @generated
  */
-public interface LegalEntity extends Identity {
+public interface LegalEntity extends HumanEntity {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.wrs.model.wrs.LegalEntityType}.

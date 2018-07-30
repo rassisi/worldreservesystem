@@ -94,7 +94,7 @@ public class AccountItemProvider extends AbstractAccountItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Account) object).getPublicKey();
+		String label = ((Account) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Account_type")
 				: getString("_UI_Account_type") + " " + label;
 	}

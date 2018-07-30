@@ -13,7 +13,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.CountryRegion;
 import org.wrs.model.wrs.FiatCurrency;
-import org.wrs.model.wrs.NationalEconomies;
+import org.wrs.model.wrs.NationalEconomy;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -25,7 +25,7 @@ import org.wrs.model.wrs.WrsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.CountryImpl#getFiatcurrency <em>Fiatcurrency</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.CountryImpl#getNationaleconomies <em>Nationaleconomies</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.CountryImpl#getNationaleconomy <em>Nationaleconomy</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.CountryImpl#getRegions <em>Regions</em>}</li>
  * </ul>
  *
@@ -95,9 +95,9 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NationalEconomies getNationaleconomies() {
-		return (NationalEconomies) eDynamicGet(WrsPackage.COUNTRY__NATIONALECONOMIES,
-				WrsPackage.Literals.COUNTRY__NATIONALECONOMIES, true, true);
+	public NationalEconomy getNationaleconomy() {
+		return (NationalEconomy) eDynamicGet(WrsPackage.COUNTRY__NATIONALECONOMY,
+				WrsPackage.Literals.COUNTRY__NATIONALECONOMY, true, true);
 	}
 
 	/**
@@ -105,8 +105,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNationaleconomies(NationalEconomies newNationaleconomies, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newNationaleconomies, WrsPackage.COUNTRY__NATIONALECONOMIES, msgs);
+	public NotificationChain basicSetNationaleconomy(NationalEconomy newNationaleconomy, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newNationaleconomy, WrsPackage.COUNTRY__NATIONALECONOMY, msgs);
 		return msgs;
 	}
 
@@ -115,9 +115,9 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNationaleconomies(NationalEconomies newNationaleconomies) {
-		eDynamicSet(WrsPackage.COUNTRY__NATIONALECONOMIES, WrsPackage.Literals.COUNTRY__NATIONALECONOMIES,
-				newNationaleconomies);
+	public void setNationaleconomy(NationalEconomy newNationaleconomy) {
+		eDynamicSet(WrsPackage.COUNTRY__NATIONALECONOMY, WrsPackage.Literals.COUNTRY__NATIONALECONOMY,
+				newNationaleconomy);
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 		switch (featureID) {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
 			return basicSetFiatcurrency(null, msgs);
-		case WrsPackage.COUNTRY__NATIONALECONOMIES:
-			return basicSetNationaleconomies(null, msgs);
+		case WrsPackage.COUNTRY__NATIONALECONOMY:
+			return basicSetNationaleconomy(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -157,8 +157,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 		switch (featureID) {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
 			return getFiatcurrency();
-		case WrsPackage.COUNTRY__NATIONALECONOMIES:
-			return getNationaleconomies();
+		case WrsPackage.COUNTRY__NATIONALECONOMY:
+			return getNationaleconomy();
 		case WrsPackage.COUNTRY__REGIONS:
 			return getRegions();
 		}
@@ -177,8 +177,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
 			setFiatcurrency((FiatCurrency) newValue);
 			return;
-		case WrsPackage.COUNTRY__NATIONALECONOMIES:
-			setNationaleconomies((NationalEconomies) newValue);
+		case WrsPackage.COUNTRY__NATIONALECONOMY:
+			setNationaleconomy((NationalEconomy) newValue);
 			return;
 		case WrsPackage.COUNTRY__REGIONS:
 			getRegions().clear();
@@ -199,8 +199,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
 			setFiatcurrency((FiatCurrency) null);
 			return;
-		case WrsPackage.COUNTRY__NATIONALECONOMIES:
-			setNationaleconomies((NationalEconomies) null);
+		case WrsPackage.COUNTRY__NATIONALECONOMY:
+			setNationaleconomy((NationalEconomy) null);
 			return;
 		case WrsPackage.COUNTRY__REGIONS:
 			getRegions().clear();
@@ -219,8 +219,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 		switch (featureID) {
 		case WrsPackage.COUNTRY__FIATCURRENCY:
 			return getFiatcurrency() != null;
-		case WrsPackage.COUNTRY__NATIONALECONOMIES:
-			return getNationaleconomies() != null;
+		case WrsPackage.COUNTRY__NATIONALECONOMY:
+			return getNationaleconomy() != null;
 		case WrsPackage.COUNTRY__REGIONS:
 			return !getRegions().isEmpty();
 		}

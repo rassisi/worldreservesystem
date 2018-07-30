@@ -25,7 +25,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class IndividualImpl extends IdentityImpl implements Individual {
+public class IndividualImpl extends HumanEntityImpl implements Individual {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

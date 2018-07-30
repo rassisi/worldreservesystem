@@ -97,8 +97,8 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseNationalEconomies(NationalEconomies object) {
-			return createNationalEconomiesAdapter();
+		public Adapter caseNationalEconomy(NationalEconomy object) {
+			return createNationalEconomyAdapter();
 		}
 
 		@Override
@@ -242,6 +242,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseHumanEntity(HumanEntity object) {
+			return createHumanEntityAdapter();
+		}
+
+		@Override
+		public Adapter caseLayoutable(Layoutable object) {
+			return createLayoutableAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -345,16 +355,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.NationalEconomies <em>National Economies</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.NationalEconomy <em>National Economy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.wrs.model.wrs.NationalEconomies
+	 * @see org.wrs.model.wrs.NationalEconomy
 	 * @generated
 	 */
-	public Adapter createNationalEconomiesAdapter() {
+	public Adapter createNationalEconomyAdapter() {
 		return null;
 	}
 
@@ -747,6 +757,34 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStatisticsSourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.HumanEntity <em>Human Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.HumanEntity
+	 * @generated
+	 */
+	public Adapter createHumanEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.Layoutable <em>Layoutable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.Layoutable
+	 * @generated
+	 */
+	public Adapter createLayoutableAdapter() {
 		return null;
 	}
 

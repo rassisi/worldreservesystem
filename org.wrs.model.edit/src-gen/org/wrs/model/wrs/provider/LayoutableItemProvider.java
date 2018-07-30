@@ -6,12 +6,12 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -19,18 +19,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.wrs.model.wrs.WorldEconomy;
-import org.wrs.model.wrs.WrsFactory;
+
+import org.wrs.model.wrs.Layoutable;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.WorldEconomy} object.
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.Layoutable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
+public class LayoutableItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +39,7 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorldEconomyItemProvider(AdapterFactory adapterFactory) {
+	public LayoutableItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,82 +54,93 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNationaleconomiesPropertyDescriptor(object);
-			addStatisticssourcePropertyDescriptor(object);
+			addXPropertyDescriptor(object);
+			addYPropertyDescriptor(object);
+			addWPropertyDescriptor(object);
+			addHPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nationaleconomies feature.
+	 * This adds a property descriptor for the X feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNationaleconomiesPropertyDescriptor(Object object) {
+	protected void addXPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_WorldEconomy_nationaleconomies_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_WorldEconomy_nationaleconomies_feature",
-								"_UI_WorldEconomy_type"),
-						WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Layoutable_x_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Layoutable_x_feature",
+								"_UI_Layoutable_type"),
+						WrsPackage.Literals.LAYOUTABLE__X, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Statisticssource feature.
+	 * This adds a property descriptor for the Y feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatisticssourcePropertyDescriptor(Object object) {
+	protected void addYPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_WorldEconomy_statisticssource_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_WorldEconomy_statisticssource_feature",
-								"_UI_WorldEconomy_type"),
-						WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Layoutable_y_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Layoutable_y_feature",
+								"_UI_Layoutable_type"),
+						WrsPackage.Literals.LAYOUTABLE__Y, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the W feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE);
-			childrenFeatures.add(WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS);
-		}
-		return childrenFeatures;
+	protected void addWPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Layoutable_w_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Layoutable_w_feature",
+								"_UI_Layoutable_type"),
+						WrsPackage.Literals.LAYOUTABLE__W, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
+	 * This adds a property descriptor for the H feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addHPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Layoutable_h_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Layoutable_h_feature",
+								"_UI_Layoutable_type"),
+						WrsPackage.Literals.LAYOUTABLE__H, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
-	 * This returns WorldEconomy.gif.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/WorldEconomy"));
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Layoutable_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Layoutable_name_feature",
+								"_UI_Layoutable_type"),
+						WrsPackage.Literals.LAYOUTABLE__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -149,7 +161,9 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_WorldEconomy_type");
+		String label = ((Layoutable) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Layoutable_type")
+				: getString("_UI_Layoutable_type") + " " + label;
 	}
 
 	/**
@@ -163,10 +177,13 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(WorldEconomy.class)) {
-		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
-		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+		switch (notification.getFeatureID(Layoutable.class)) {
+		case WrsPackage.LAYOUTABLE__X:
+		case WrsPackage.LAYOUTABLE__Y:
+		case WrsPackage.LAYOUTABLE__W:
+		case WrsPackage.LAYOUTABLE__H:
+		case WrsPackage.LAYOUTABLE__NAME:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -182,12 +199,6 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE,
-				WrsFactory.eINSTANCE.createStatisticsSource()));
-
-		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS,
-				WrsFactory.eINSTANCE.createStatisticDatas()));
 	}
 
 	/**

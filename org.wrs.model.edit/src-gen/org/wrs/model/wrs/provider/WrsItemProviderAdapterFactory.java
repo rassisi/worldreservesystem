@@ -211,26 +211,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.NationalEconomies} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.NationalEconomy} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NationalEconomiesItemProvider nationalEconomiesItemProvider;
+	protected NationalEconomyItemProvider nationalEconomyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.model.wrs.NationalEconomies}.
+	 * This creates an adapter for a {@link org.wrs.model.wrs.NationalEconomy}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNationalEconomiesAdapter() {
-		if (nationalEconomiesItemProvider == null) {
-			nationalEconomiesItemProvider = new NationalEconomiesItemProvider(this);
+	public Adapter createNationalEconomyAdapter() {
+		if (nationalEconomyItemProvider == null) {
+			nationalEconomyItemProvider = new NationalEconomyItemProvider(this);
 		}
 
-		return nationalEconomiesItemProvider;
+		return nationalEconomyItemProvider;
 	}
 
 	/**
@@ -461,29 +461,6 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 		}
 
 		return registeredAssetsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.AbstractAccount} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AbstractAccountItemProvider abstractAccountItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.wrs.model.wrs.AbstractAccount}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAbstractAccountAdapter() {
-		if (abstractAccountItemProvider == null) {
-			abstractAccountItemProvider = new AbstractAccountItemProvider(this);
-		}
-
-		return abstractAccountItemProvider;
 	}
 
 	/**
@@ -965,8 +942,8 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			assetItemProvider.dispose();
 		if (worldEconomyItemProvider != null)
 			worldEconomyItemProvider.dispose();
-		if (nationalEconomiesItemProvider != null)
-			nationalEconomiesItemProvider.dispose();
+		if (nationalEconomyItemProvider != null)
+			nationalEconomyItemProvider.dispose();
 		if (countryItemProvider != null)
 			countryItemProvider.dispose();
 		if (fiatCurrencyItemProvider != null)
@@ -987,8 +964,6 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			transactionItemProvider.dispose();
 		if (registeredAssetsItemProvider != null)
 			registeredAssetsItemProvider.dispose();
-		if (abstractAccountItemProvider != null)
-			abstractAccountItemProvider.dispose();
 		if (transactionCollectionItemProvider != null)
 			transactionCollectionItemProvider.dispose();
 		if (nodeItemProvider != null)

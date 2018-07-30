@@ -16,6 +16,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.wrs.model.wrs.Transaction#getAssets <em>Assets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.Transaction#getTransactions <em>Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.Transaction#getData <em>Data</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Transaction#getNanoTime <em>Nano Time</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Transaction#getAmount <em>Amount</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Transaction#getTransactioncondition <em>Transactioncondition</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getTransaction()
@@ -91,5 +94,83 @@ public interface Transaction extends AbstractTransaction {
 	 * @generated
 	 */
 	void setData(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nano Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nano Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nano Time</em>' attribute.
+	 * @see #setNanoTime(double)
+	 * @see org.wrs.model.wrs.WrsPackage#getTransaction_NanoTime()
+	 * @model
+	 * @generated
+	 */
+	double getNanoTime();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.Transaction#getNanoTime <em>Nano Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nano Time</em>' attribute.
+	 * @see #getNanoTime()
+	 * @generated
+	 */
+	void setNanoTime(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Amount</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Amount</em>' attribute.
+	 * @see #setAmount(double)
+	 * @see org.wrs.model.wrs.WrsPackage#getTransaction_Amount()
+	 * @model
+	 * @generated
+	 */
+	double getAmount();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.Transaction#getAmount <em>Amount</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Amount</em>' attribute.
+	 * @see #getAmount()
+	 * @generated
+	 */
+	void setAmount(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Transactioncondition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Transactioncondition</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transactioncondition</em>' containment reference.
+	 * @see #setTransactioncondition(TransactionCondition)
+	 * @see org.wrs.model.wrs.WrsPackage#getTransaction_Transactioncondition()
+	 * @model containment="true"
+	 * @generated
+	 */
+	TransactionCondition getTransactioncondition();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.Transaction#getTransactioncondition <em>Transactioncondition</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Transactioncondition</em>' containment reference.
+	 * @see #getTransactioncondition()
+	 * @generated
+	 */
+	void setTransactioncondition(TransactionCondition value);
 
 } // Transaction

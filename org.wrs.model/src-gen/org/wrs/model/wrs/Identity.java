@@ -2,7 +2,7 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,14 +14,14 @@ import org.eclipse.emf.cdo.CDOObject;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.Identity#getUUID <em>UUID</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Identity#getAccounts <em>Accounts</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getIdentity()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface Identity extends CDOObject {
+public interface Identity extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>UUID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,5 +47,21 @@ public interface Identity extends CDOObject {
 	 * @generated
 	 */
 	void setUUID(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Accounts</b></em>' containment reference list.
+	 * The list contents are of type {@link org.wrs.model.wrs.AbstractAccount}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Accounts</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accounts</em>' containment reference list.
+	 * @see org.wrs.model.wrs.WrsPackage#getIdentity_Accounts()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AbstractAccount> getAccounts();
 
 } // Identity

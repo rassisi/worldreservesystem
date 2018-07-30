@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>WRS</b></em>'.
@@ -15,7 +13,7 @@ import org.eclipse.emf.cdo.CDOObject;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.WRS#getMainvault <em>Mainvault</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getSupplycontrol <em>Supplycontrol</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WRS#getAllAccounts <em>All Accounts</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getRegisteredasstets <em>Registeredasstets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getWorldeconomy <em>Worldeconomy</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getCountries <em>Countries</em>}</li>
@@ -23,16 +21,13 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link org.wrs.model.wrs.WRS#getIdentities <em>Identities</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getTransactions <em>Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getTransactionconditions <em>Transactionconditions</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getStatisticDatas <em>Statistic Datas</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getWRS()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface WRS extends CDOObject {
+public interface WRS extends Identity {
 	/**
 	 * Returns the value of the '<em><b>Mainvault</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -86,30 +81,30 @@ public interface WRS extends CDOObject {
 	void setSupplycontrol(SupplyControl value);
 
 	/**
-	 * Returns the value of the '<em><b>Accounts</b></em>' containment reference.
+	 * Returns the value of the '<em><b>All Accounts</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Accounts</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>All Accounts</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accounts</em>' containment reference.
-	 * @see #setAccounts(Accounts)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Accounts()
+	 * @return the value of the '<em>All Accounts</em>' containment reference.
+	 * @see #setAllAccounts(Accounts)
+	 * @see org.wrs.model.wrs.WrsPackage#getWRS_AllAccounts()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Accounts getAccounts();
+	Accounts getAllAccounts();
 
 	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getAccounts <em>Accounts</em>}' containment reference.
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getAllAccounts <em>All Accounts</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Accounts</em>' containment reference.
-	 * @see #getAccounts()
+	 * @param value the new value of the '<em>All Accounts</em>' containment reference.
+	 * @see #getAllAccounts()
 	 * @generated
 	 */
-	void setAccounts(Accounts value);
+	void setAllAccounts(Accounts value);
 
 	/**
 	 * Returns the value of the '<em><b>Registeredasstets</b></em>' containment reference.
@@ -292,58 +287,6 @@ public interface WRS extends CDOObject {
 	 * @generated
 	 */
 	void setTransactionconditions(TransactionConditions value);
-
-	/**
-	 * Returns the value of the '<em><b>Statistic Datas</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Statistic Datas</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Statistic Datas</em>' containment reference.
-	 * @see #setStatisticDatas(StatisticDatas)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_StatisticDatas()
-	 * @model containment="true"
-	 * @generated
-	 */
-	StatisticDatas getStatisticDatas();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getStatisticDatas <em>Statistic Datas</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Statistic Datas</em>' containment reference.
-	 * @see #getStatisticDatas()
-	 * @generated
-	 */
-	void setStatisticDatas(StatisticDatas value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

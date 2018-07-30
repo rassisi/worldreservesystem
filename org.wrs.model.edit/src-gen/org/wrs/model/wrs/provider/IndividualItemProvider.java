@@ -20,7 +20,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IndividualItemProvider extends IdentityItemProvider {
+public class IndividualItemProvider extends HumanEntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -107,7 +107,7 @@ public class IndividualItemProvider extends IdentityItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Individual) object).getUUID();
+		String label = ((Individual) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Individual_type")
 				: getString("_UI_Individual_type") + " " + label;
 	}

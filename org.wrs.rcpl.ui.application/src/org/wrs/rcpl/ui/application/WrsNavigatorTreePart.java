@@ -11,11 +11,9 @@
 
 package org.wrs.rcpl.ui.application;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.rcpl.INavigatorTreeManager;
 import org.eclipse.rcpl.ITreePart;
-import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorContextMenuProvider;
 import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorTreePart;
 import org.eclipse.rcpl.navigator.treeparts.DefaultTreeContextMenuProvider;
@@ -45,9 +43,9 @@ public class WrsNavigatorTreePart extends DefaultNavigatorTreePart implements IT
 		return getApplicationTreeManager();
 	}
 
-	@Override
-	public EObject getRoot() {
-		return RcplSession.getDefault().getApplicationRootObject();
-	}
+//	@Override
+//	public EObject getRoot() {
+//		return RcplSession.getDefault().getApplicationRootObject();
+//	}
 
 }

@@ -20,9 +20,8 @@ import org.eclipse.rcpl.model.RCPLModel;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.Nodes}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.Nodes} object.
+ * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
 public class NodesItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
@@ -54,9 +53,9 @@ public class NodesItemProvider extends CDOItemProviderAdapter implements IEditin
 	}
 
 	/**
-	 * This adds a property descriptor for the Children feature. <!-- begin-user-doc
+	 * This adds a property descriptor for the Children feature.
+	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void addChildrenPropertyDescriptor(Object object) {
@@ -79,7 +78,6 @@ public class NodesItemProvider extends CDOItemProviderAdapter implements IEditin
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -88,9 +86,9 @@ public class NodesItemProvider extends CDOItemProviderAdapter implements IEditin
 	}
 
 	/**
-	 * This returns the label text for the adapted class. <!-- begin-user-doc -->
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -99,10 +97,9 @@ public class NodesItemProvider extends CDOItemProviderAdapter implements IEditin
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update
-	 * any cached children and by creating a viewer notification, which it passes to
-	 * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -112,10 +109,10 @@ public class NodesItemProvider extends CDOItemProviderAdapter implements IEditin
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
-	 * the children that can be created under this object. <!-- begin-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+	 * that can be created under this object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

@@ -3,12 +3,15 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.Transaction;
+import org.wrs.model.wrs.TransactionCondition;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -22,6 +25,9 @@ import org.wrs.model.wrs.WrsPackage;
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getAssets <em>Assets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getTransactions <em>Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getData <em>Data</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getNanoTime <em>Nano Time</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getAmount <em>Amount</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getTransactioncondition <em>Transactioncondition</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,6 +42,25 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * @ordered
 	 */
 	protected static final String DATA_EDEFAULT = "";
+
+	/**
+	 * The default value of the '{@link #getNanoTime() <em>Nano Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNanoTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double NANO_TIME_EDEFAULT = 0.0;
+	/**
+	 * The default value of the '{@link #getAmount() <em>Amount</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAmount()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double AMOUNT_EDEFAULT = 0.0;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,6 +143,90 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getNanoTime() {
+		return (Double) eDynamicGet(WrsPackage.TRANSACTION__NANO_TIME, WrsPackage.Literals.TRANSACTION__NANO_TIME, true,
+				true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNanoTime(double newNanoTime) {
+		eDynamicSet(WrsPackage.TRANSACTION__NANO_TIME, WrsPackage.Literals.TRANSACTION__NANO_TIME, newNanoTime);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getAmount() {
+		return (Double) eDynamicGet(WrsPackage.TRANSACTION__AMOUNT, WrsPackage.Literals.TRANSACTION__AMOUNT, true,
+				true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAmount(double newAmount) {
+		eDynamicSet(WrsPackage.TRANSACTION__AMOUNT, WrsPackage.Literals.TRANSACTION__AMOUNT, newAmount);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransactionCondition getTransactioncondition() {
+		return (TransactionCondition) eDynamicGet(WrsPackage.TRANSACTION__TRANSACTIONCONDITION,
+				WrsPackage.Literals.TRANSACTION__TRANSACTIONCONDITION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTransactioncondition(TransactionCondition newTransactioncondition,
+			NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTransactioncondition,
+				WrsPackage.TRANSACTION__TRANSACTIONCONDITION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransactioncondition(TransactionCondition newTransactioncondition) {
+		eDynamicSet(WrsPackage.TRANSACTION__TRANSACTIONCONDITION, WrsPackage.Literals.TRANSACTION__TRANSACTIONCONDITION,
+				newTransactioncondition);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.TRANSACTION__TRANSACTIONCONDITION:
+			return basicSetTransactioncondition(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -129,6 +238,12 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 			return getTransactions();
 		case WrsPackage.TRANSACTION__DATA:
 			return getData();
+		case WrsPackage.TRANSACTION__NANO_TIME:
+			return getNanoTime();
+		case WrsPackage.TRANSACTION__AMOUNT:
+			return getAmount();
+		case WrsPackage.TRANSACTION__TRANSACTIONCONDITION:
+			return getTransactioncondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,6 +267,15 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 		case WrsPackage.TRANSACTION__DATA:
 			setData((String) newValue);
 			return;
+		case WrsPackage.TRANSACTION__NANO_TIME:
+			setNanoTime((Double) newValue);
+			return;
+		case WrsPackage.TRANSACTION__AMOUNT:
+			setAmount((Double) newValue);
+			return;
+		case WrsPackage.TRANSACTION__TRANSACTIONCONDITION:
+			setTransactioncondition((TransactionCondition) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -173,6 +297,15 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 		case WrsPackage.TRANSACTION__DATA:
 			setData(DATA_EDEFAULT);
 			return;
+		case WrsPackage.TRANSACTION__NANO_TIME:
+			setNanoTime(NANO_TIME_EDEFAULT);
+			return;
+		case WrsPackage.TRANSACTION__AMOUNT:
+			setAmount(AMOUNT_EDEFAULT);
+			return;
+		case WrsPackage.TRANSACTION__TRANSACTIONCONDITION:
+			setTransactioncondition((TransactionCondition) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -191,6 +324,12 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 			return !getTransactions().isEmpty();
 		case WrsPackage.TRANSACTION__DATA:
 			return DATA_EDEFAULT == null ? getData() != null : !DATA_EDEFAULT.equals(getData());
+		case WrsPackage.TRANSACTION__NANO_TIME:
+			return getNanoTime() != NANO_TIME_EDEFAULT;
+		case WrsPackage.TRANSACTION__AMOUNT:
+			return getAmount() != AMOUNT_EDEFAULT;
+		case WrsPackage.TRANSACTION__TRANSACTIONCONDITION:
+			return getTransactioncondition() != null;
 		}
 		return super.eIsSet(featureID);
 	}

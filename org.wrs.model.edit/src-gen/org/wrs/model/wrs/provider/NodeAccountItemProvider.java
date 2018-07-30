@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.wrs.model.wrs.NodeAccount;
 
 /**
  * This is the item provider adapter for a {@link org.wrs.model.wrs.NodeAccount} object.
@@ -71,7 +72,9 @@ public class NodeAccountItemProvider extends AbstractAccountItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_NodeAccount_type");
+		String label = ((NodeAccount) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_NodeAccount_type")
+				: getString("_UI_NodeAccount_type") + " " + label;
 	}
 
 	/**

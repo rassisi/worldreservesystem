@@ -12,12 +12,17 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.wrs.model.wrs.StatisticsSource;
+import org.wrs.model.wrs.WrsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.wrs.model.wrs.StatisticsSource} object.
@@ -48,8 +53,25 @@ public class StatisticsSourceItemProvider extends CDOItemProviderAdapter impleme
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addWebserviceUrlPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Webservice Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWebserviceUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_StatisticsSource_webserviceUrl_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_StatisticsSource_webserviceUrl_feature",
+								"_UI_StatisticsSource_type"),
+						WrsPackage.Literals.STATISTICS_SOURCE__WEBSERVICE_URL, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -81,7 +103,9 @@ public class StatisticsSourceItemProvider extends CDOItemProviderAdapter impleme
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_StatisticsSource_type");
+		String label = ((StatisticsSource) object).getWebserviceUrl();
+		return label == null || label.length() == 0 ? getString("_UI_StatisticsSource_type")
+				: getString("_UI_StatisticsSource_type") + " " + label;
 	}
 
 	/**
@@ -94,6 +118,12 @@ public class StatisticsSourceItemProvider extends CDOItemProviderAdapter impleme
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(StatisticsSource.class)) {
+		case WrsPackage.STATISTICS_SOURCE__WEBSERVICE_URL:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

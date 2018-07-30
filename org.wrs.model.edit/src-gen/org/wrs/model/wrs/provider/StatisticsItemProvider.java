@@ -11,12 +11,14 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.wrs.model.wrs.WrsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.wrs.model.wrs.Statistics} object.
@@ -47,8 +49,24 @@ public class StatisticsItemProvider extends CDOItemProviderAdapter implements IE
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addStatisticssourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Statisticssource feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStatisticssourcePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Statistics_statisticssource_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Statistics_statisticssource_feature",
+								"_UI_Statistics_type"),
+						WrsPackage.Literals.STATISTICS__STATISTICSSOURCE, true, false, true, null, null, null));
 	}
 
 	/**

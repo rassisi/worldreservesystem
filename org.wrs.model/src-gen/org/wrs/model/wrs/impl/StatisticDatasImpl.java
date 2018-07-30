@@ -2,7 +2,12 @@
  */
 package org.wrs.model.wrs.impl;
 
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.Statistics;
@@ -56,8 +61,9 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistics getChildren() {
-		return (Statistics) eDynamicGet(WrsPackage.STATISTIC_DATAS__CHILDREN,
+	@SuppressWarnings("unchecked")
+	public EList<Statistics> getChildren() {
+		return (EList<Statistics>) eDynamicGet(WrsPackage.STATISTIC_DATAS__CHILDREN,
 				WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, true, true);
 	}
 
@@ -66,18 +72,13 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistics basicGetChildren() {
-		return (Statistics) eDynamicGet(WrsPackage.STATISTIC_DATAS__CHILDREN,
-				WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setChildren(Statistics newChildren) {
-		eDynamicSet(WrsPackage.STATISTIC_DATAS__CHILDREN, WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, newChildren);
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.STATISTIC_DATAS__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -89,9 +90,7 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WrsPackage.STATISTIC_DATAS__CHILDREN:
-			if (resolve)
-				return getChildren();
-			return basicGetChildren();
+			return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -101,11 +100,13 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WrsPackage.STATISTIC_DATAS__CHILDREN:
-			setChildren((Statistics) newValue);
+			getChildren().clear();
+			getChildren().addAll((Collection<? extends Statistics>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -120,7 +121,7 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case WrsPackage.STATISTIC_DATAS__CHILDREN:
-			setChildren((Statistics) null);
+			getChildren().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -135,7 +136,7 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.STATISTIC_DATAS__CHILDREN:
-			return basicGetChildren() != null;
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

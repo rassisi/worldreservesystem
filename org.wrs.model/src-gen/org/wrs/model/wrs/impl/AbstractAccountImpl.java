@@ -6,10 +6,8 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Asset;
-import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.Transaction;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -23,12 +21,11 @@ import org.wrs.model.wrs.WrsPackage;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.AbstractAccountImpl#getAssets <em>Assets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.AbstractAccountImpl#getTransaction <em>Transaction</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.AbstractAccountImpl#getBelongsTo <em>Belongs To</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccount {
+public abstract class AbstractAccountImpl extends LayoutableImpl implements AbstractAccount {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -53,16 +50,6 @@ public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	public EList<Asset> getAssets() {
 		return (EList<Asset>) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__ASSETS,
@@ -74,59 +61,10 @@ public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Transaction getTransaction() {
-		return (Transaction) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
+	@SuppressWarnings("unchecked")
+	public EList<Transaction> getTransaction() {
+		return (EList<Transaction>) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
 				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Transaction basicGetTransaction() {
-		return (Transaction) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
-				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransaction(Transaction newTransaction) {
-		eDynamicSet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION, WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION,
-				newTransaction);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Identity getBelongsTo() {
-		return (Identity) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO,
-				WrsPackage.Literals.ABSTRACT_ACCOUNT__BELONGS_TO, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Identity basicGetBelongsTo() {
-		return (Identity) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO,
-				WrsPackage.Literals.ABSTRACT_ACCOUNT__BELONGS_TO, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBelongsTo(Identity newBelongsTo) {
-		eDynamicSet(WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO, WrsPackage.Literals.ABSTRACT_ACCOUNT__BELONGS_TO,
-				newBelongsTo);
 	}
 
 	/**
@@ -140,13 +78,7 @@ public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccoun
 		case WrsPackage.ABSTRACT_ACCOUNT__ASSETS:
 			return getAssets();
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
-			if (resolve)
-				return getTransaction();
-			return basicGetTransaction();
-		case WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO:
-			if (resolve)
-				return getBelongsTo();
-			return basicGetBelongsTo();
+			return getTransaction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,10 +97,8 @@ public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccoun
 			getAssets().addAll((Collection<? extends Asset>) newValue);
 			return;
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
-			setTransaction((Transaction) newValue);
-			return;
-		case WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO:
-			setBelongsTo((Identity) newValue);
+			getTransaction().clear();
+			getTransaction().addAll((Collection<? extends Transaction>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,10 +116,7 @@ public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccoun
 			getAssets().clear();
 			return;
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
-			setTransaction((Transaction) null);
-			return;
-		case WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO:
-			setBelongsTo((Identity) null);
+			getTransaction().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -206,9 +133,7 @@ public class AbstractAccountImpl extends CDOObjectImpl implements AbstractAccoun
 		case WrsPackage.ABSTRACT_ACCOUNT__ASSETS:
 			return !getAssets().isEmpty();
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
-			return basicGetTransaction() != null;
-		case WrsPackage.ABSTRACT_ACCOUNT__BELONGS_TO:
-			return basicGetBelongsTo() != null;
+			return !getTransaction().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

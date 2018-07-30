@@ -2,7 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,10 +19,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.wrs.model.wrs.WrsPackage#getAsset()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Asset extends CDOObject {
+public interface Asset extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>Asset Type</b></em>' attribute.
 	 * The default value is <code>"UDOLLAR"</code>.

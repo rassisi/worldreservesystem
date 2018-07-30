@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.Country#getFiatcurrency <em>Fiatcurrency</em>}</li>
- *   <li>{@link org.wrs.model.wrs.Country#getNationaleconomies <em>Nationaleconomies</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Country#getNationaleconomy <em>Nationaleconomy</em>}</li>
  *   <li>{@link org.wrs.model.wrs.Country#getRegions <em>Regions</em>}</li>
  * </ul>
  *
@@ -52,30 +52,30 @@ public interface Country extends CDOObject {
 	void setFiatcurrency(FiatCurrency value);
 
 	/**
-	 * Returns the value of the '<em><b>Nationaleconomies</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Nationaleconomy</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nationaleconomies</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Nationaleconomy</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nationaleconomies</em>' containment reference.
-	 * @see #setNationaleconomies(NationalEconomies)
-	 * @see org.wrs.model.wrs.WrsPackage#getCountry_Nationaleconomies()
+	 * @return the value of the '<em>Nationaleconomy</em>' containment reference.
+	 * @see #setNationaleconomy(NationalEconomy)
+	 * @see org.wrs.model.wrs.WrsPackage#getCountry_Nationaleconomy()
 	 * @model containment="true"
 	 * @generated
 	 */
-	NationalEconomies getNationaleconomies();
+	NationalEconomy getNationaleconomy();
 
 	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.Country#getNationaleconomies <em>Nationaleconomies</em>}' containment reference.
+	 * Sets the value of the '{@link org.wrs.model.wrs.Country#getNationaleconomy <em>Nationaleconomy</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nationaleconomies</em>' containment reference.
-	 * @see #getNationaleconomies()
+	 * @param value the new value of the '<em>Nationaleconomy</em>' containment reference.
+	 * @see #getNationaleconomy()
 	 * @generated
 	 */
-	void setNationaleconomies(NationalEconomies value);
+	void setNationaleconomy(NationalEconomy value);
 
 	/**
 	 * Returns the value of the '<em><b>Regions</b></em>' reference list.

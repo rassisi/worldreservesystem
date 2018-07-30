@@ -8,7 +8,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.AssetType;
 import org.wrs.model.wrs.Thing;
@@ -28,7 +27,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AssetImpl extends CDOObjectImpl implements Asset {
+public class AssetImpl extends LayoutableImpl implements Asset {
 	/**
 	 * The default value of the '{@link #getAssetType() <em>Asset Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,16 +55,6 @@ public class AssetImpl extends CDOObjectImpl implements Asset {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.ASSET;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

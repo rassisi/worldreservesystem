@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Individual extends Identity {
+public interface Individual extends HumanEntity {
 	/**
 	 * Returns the value of the '<em><b>Works For</b></em>' reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.LegalEntity}.

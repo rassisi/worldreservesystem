@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.wrs.model.wrs.Treasury;
 
 /**
  * This is the item provider adapter for a {@link org.wrs.model.wrs.Treasury} object.
@@ -71,7 +72,9 @@ public class TreasuryItemProvider extends AbstractAccountItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Treasury_type");
+		String label = ((Treasury) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Treasury_type")
+				: getString("_UI_Treasury_type") + " " + label;
 	}
 
 	/**
