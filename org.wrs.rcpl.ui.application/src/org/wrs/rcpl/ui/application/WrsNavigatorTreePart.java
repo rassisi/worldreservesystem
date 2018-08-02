@@ -14,7 +14,7 @@ package org.wrs.rcpl.ui.application;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.rcpl.IDetailPage;
-import org.eclipse.rcpl.INavigatorTreeManager;
+import org.eclipse.rcpl.IModelManager;
 import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorContextMenuProvider;
@@ -44,7 +44,7 @@ public class WrsNavigatorTreePart extends DefaultNavigatorTreePart implements IT
 	}
 
 	@Override
-	protected INavigatorTreeManager getTreeManager() {
+	protected IModelManager getTreeManager() {
 		return getApplicationTreeManager();
 	}
 

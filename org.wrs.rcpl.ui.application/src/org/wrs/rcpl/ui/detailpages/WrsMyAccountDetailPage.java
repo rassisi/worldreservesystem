@@ -1,8 +1,8 @@
 package org.wrs.rcpl.ui.detailpages;
 
 import org.controlsfx.control.spreadsheet.SpreadsheetView;
-import org.eclipse.rcpl.navigator.INavigatorDetailPageControler;
-import org.eclipse.rcpl.navigator.details.AbstractNavigatorDetailPage;
+import org.eclipse.rcpl.navigator.IModelDetailPageControler;
+import org.eclipse.rcpl.navigator.details.AbstractModelDetailPage;
 
 import javafx.scene.layout.StackPane;
 
@@ -10,7 +10,7 @@ import javafx.scene.layout.StackPane;
  * @author ramin
  *
  */
-public class WrsMyAccountDetailPage extends AbstractNavigatorDetailPage {
+public class WrsMyAccountDetailPage extends AbstractModelDetailPage {
 
 	@Override
 	public void create(StackPane stackPane) {
@@ -24,7 +24,7 @@ public class WrsMyAccountDetailPage extends AbstractNavigatorDetailPage {
 	}
 
 	@Override
-	protected INavigatorDetailPageControler createControler() {
+	protected IModelDetailPageControler createControler() {
 		// TODO Auto-generated method stub
 		return null;
 	}
