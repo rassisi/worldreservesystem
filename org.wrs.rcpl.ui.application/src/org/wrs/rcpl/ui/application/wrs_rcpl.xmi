@@ -3145,11 +3145,15 @@
     <toolgroupChildren
         name="My Account"
         id="my_account"
-        image="account"/>
+        image="account"
+        detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsMyAccountDetailPage"
+        type="TOOLBAR"/>
     <toolgroupChildren
-        name="Journal"
-        id="journal"
-        image="account"/>
+        name="My Transactions"
+        id="my_transactions"
+        image="transaction"
+        detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsMyTransactionsDetailPage"
+        type="TOOLBAR"/>
     <toolChildren
         name="New Word Document"
         id="NEW_WORD_DOCUMENT"

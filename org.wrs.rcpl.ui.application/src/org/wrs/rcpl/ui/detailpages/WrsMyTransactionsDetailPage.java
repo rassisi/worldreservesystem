@@ -1,21 +1,21 @@
 package org.wrs.rcpl.ui.detailpages;
 
+import org.controlsfx.control.spreadsheet.SpreadsheetView;
 import org.eclipse.rcpl.navigator.IModelDetailPageControler;
 import org.eclipse.rcpl.navigator.details.AbstractModelDetailPage;
 
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 
 /**
  * @author ramin
  *
  */
-public class WrsMyAccountDetailPage extends AbstractModelDetailPage {
+public class WrsMyTransactionsDetailPage extends AbstractModelDetailPage {
 
 	@Override
 	public void create(StackPane stackPane) {
-		Label l = new Label("My Account");
-		stackPane.getChildren().add(l);
+		SpreadsheetView sv = new SpreadsheetView();
+		stackPane.getChildren().add(sv);
 	}
 
 	@Override
