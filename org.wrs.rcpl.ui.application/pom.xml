@@ -20,7 +20,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
-					<release>10</release>
+					<release>8</release>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -51,6 +51,17 @@
 			<artifactId>OpenViewerFX</artifactId>
 			<version>7.12.28</version>
 		</dependency>
+				<dependency>
+			<groupId>org.controlsfx</groupId>
+			<artifactId>controlsfx</artifactId>
+			<version>8.40.14</version>
+		</dependency>
+		<dependency>
+			<groupId>org.controlsfx</groupId>
+			<artifactId>controlsfx-samples</artifactId>
+			<version>8.40.14</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
