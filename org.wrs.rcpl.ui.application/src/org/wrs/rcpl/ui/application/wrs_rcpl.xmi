@@ -64,7 +64,8 @@
         name="SETTINGS"
         id="SETTINGS">
       <sideToolBar
-          leaf="true"/>
+          leaf="true"
+          toolGroups="//@allTools/@toolgroupChildren.4 //@allTools/@toolgroupChildren.0 //@allTools/@toolgroupChildren.3"/>
       <topToolBar
           leaf="true"/>
       <quickToolBar/>
@@ -166,14 +167,14 @@
             id="fontName"
             gridY="3"
             service=""
-            format="fontName"
-            type="COMBO"/>
+            type="COMBO"
+            format="fontName"/>
         <tools
             name="Font Size"
             id="fontSize"
             gridY="4"
-            format="fontSize"
-            type="COMBO"/>
+            type="COMBO"
+            format="fontSize"/>
       </toolGroups>
       <toolGroups
           name="Paragraph"
@@ -253,8 +254,8 @@
         <tools
             name="Paragraph Styles"
             id="paragraphStyleList"
-            format="styleListTool"
-            type="LISTVIEW"/>
+            type="LISTVIEW"
+            format="styleListTool"/>
       </toolGroups>
       <toolGroups
           name="Character Styles"
@@ -264,8 +265,8 @@
         <tools
             name="Character Styles"
             id="characterStyles"
-            format="characterListTool"
-            type="LISTVIEW"/>
+            type="LISTVIEW"
+            format="characterListTool"/>
       </toolGroups>
     </toolgroupChildren>
     <toolgroupChildren
@@ -392,39 +393,39 @@
             id="margins"
             spanX="2"
             service=""
-            grid="true"
-            type="GRIDPANE">
+            type="GRIDPANE"
+            grid="true">
           <tools
               name="Top"
               id="topMargin"
               image="top_margin"
               labeled="true"
-              format="w=75"
-              type="TEXTFIELD"/>
+              type="TEXTFIELD"
+              format="w=75"/>
           <tools
               name="Bottom"
               id="bottomMargin"
               image="bottom_margin"
               gridY="1"
               labeled="true"
-              format="w=75"
-              type="TEXTFIELD"/>
+              type="TEXTFIELD"
+              format="w=75"/>
           <tools
               name="Left"
               id="leftMargin"
               image="left_margin"
               gridY="2"
               labeled="true"
-              format="w=75"
-              type="TEXTFIELD"/>
+              type="TEXTFIELD"
+              format="w=75"/>
           <tools
               name="Right"
               id="rightMargin"
               image="right_margin"
               gridY="3"
               labeled="true"
-              format="w=75"
-              type="TEXTFIELD"/>
+              type="TEXTFIELD"
+              format="w=75"/>
         </toolGroups>
         <toolGroups
             name="Margin Templates"
@@ -432,8 +433,8 @@
             image="margin_"
             gridY="3"
             spanX="2"
-            grid="true"
-            type="GRIDPANE">
+            type="GRIDPANE"
+            grid="true">
           <tools
               name="Custom"
               id="marginCustom"
@@ -473,8 +474,8 @@
             id="marginApplyTo"
             gridX="1"
             gridY="1"
-            format="Whole Document,From this Point Foreward"
-            type="COMBO"/>
+            type="COMBO"
+            format="Whole Document,From this Point Foreward"/>
         <tools
             name="Templates"
             id="marginTemplateLabel"
@@ -529,8 +530,8 @@
         <toolGroups
             gridY="2"
             spanX="3"
-            grid="true"
-            type="GRIDPANE">
+            type="GRIDPANE"
+            grid="true">
           <tools
               name="Col #:"
               id="labelCol"
@@ -651,8 +652,8 @@
                 id="textWatermarkText"
                 gridY="1"
                 labeled="true"
-                format="{w=10}"
-                type="COMBO"/>
+                type="COMBO"
+                format="{w=10}"/>
             <tools
                 name="Font:"
                 id="textWatermarkFont"
@@ -845,8 +846,8 @@
               id="pageBorderApplyTo"
               gridY="4"
               labeled="true"
-              format="Whole Document, This Section, This Section - First Page Only, This Section - All except first Page"
-              type="COMBO"/>
+              type="COMBO"
+              format="Whole Document, This Section, This Section - First Page Only, This Section - All except first Page"/>
         </toolGroups>
         <toolGroups
             name="Page Color"
@@ -880,8 +881,8 @@
               id="New Tool Group"
               gridY="1"
               spanX="2"
-              grid="true"
-              type="GRIDPANE">
+              type="GRIDPANE"
+              grid="true">
             <tools
                 name="One Color"
                 id="PageBackgroundEffectsOneColor"
@@ -1145,8 +1146,8 @@
         <tools
             name="Foreground Color"
             id="foregroundColor"
-            format="0.0,0.0,0.0"
-            type="COLOR_CHOOSER"/>
+            type="COLOR_CHOOSER"
+            format="0.0,0.0,0.0"/>
       </toolGroups>
       <toolGroups
           name="Background Color"
@@ -1155,8 +1156,8 @@
             name="Background Color"
             id="backgroundColor"
             gridY="1"
-            format="0.0,0.0,0.0"
-            type="COLOR_CHOOSER"/>
+            type="COLOR_CHOOSER"
+            format="0.0,0.0,0.0"/>
       </toolGroups>
     </toolgroupChildren>
     <toolgroupChildren
@@ -1492,8 +1493,8 @@
         <tools
             name="Engine Combo"
             id="imageSearchEngine"
-            format="Google{IMAGE=google;SEARCH=https://www.google.de/imghp?rlz=1C1CHFX_deDE530DE530&amp;ie=UTF-8&amp;hl=en&amp;tab=wi&amp;ei=CG_JUpvLJY3Msgb5koGoCQ&amp;ved=0CAMQqi4oAg},Yahoo{IMAGE=yahoo;SEARCH=http://de.images.search.yahoo.com/images},Wikimedia{IMAGE=wikimedia;SEARCH=http://commons.wikimedia.org/wiki/Main_Page},Openclipart{IMAGE=openclipart;SEARCH=http://openclipart.org/}}"
-            type="COMBO"/>
+            type="COMBO"
+            format="Google{IMAGE=google;SEARCH=https://www.google.de/imghp?rlz=1C1CHFX_deDE530DE530&amp;ie=UTF-8&amp;hl=en&amp;tab=wi&amp;ei=CG_JUpvLJY3Msgb5koGoCQ&amp;ved=0CAMQqi4oAg},Yahoo{IMAGE=yahoo;SEARCH=http://de.images.search.yahoo.com/images},Wikimedia{IMAGE=wikimedia;SEARCH=http://commons.wikimedia.org/wiki/Main_Page},Openclipart{IMAGE=openclipart;SEARCH=http://openclipart.org/}}"/>
         <tools
             name="Search Images..."
             id="searchEngineTextfield"
@@ -1508,8 +1509,8 @@
             gridY="1"
             spanX="3"
             spanY="2"
-            format="http://www.google.de/search?q=horse&amp;tbm=isch"
-            type="WEBVIEW"/>
+            type="WEBVIEW"
+            format="http://www.google.de/search?q=horse&amp;tbm=isch"/>
       </toolGroups>
       <toolGroups
           name="Search Videos"
@@ -1519,8 +1520,8 @@
         <tools
             name="Video Combo"
             id="imageSearchVideos"
-            format="Youtube,Yahoo Videos,Google Videos,"
-            type="COMBO"/>
+            type="COMBO"
+            format="Youtube,Yahoo Videos,Google Videos,"/>
         <tools
             name="Search Videos..."
             id="searchVideosTextfield"
@@ -1536,8 +1537,8 @@
             spanX="3"
             spanY="2"
             labeled="true"
-            format="http://youtube.com"
-            type="WEBVIEW"/>
+            type="WEBVIEW"
+            format="http://youtube.com"/>
       </toolGroups>
     </toolgroupChildren>
     <toolgroupChildren
@@ -2225,8 +2226,8 @@
           name="textStyleListTool"
           id="textStyleListTool"
           toolTip="textStyleListTool"
-          format="TEXT_STYLE_TOOL"
-          type="OTHER"/>
+          type="OTHER"
+          format="TEXT_STYLE_TOOL"/>
     </toolgroupChildren>
     <toolgroupChildren
         name="Symbols"
@@ -2237,8 +2238,8 @@
         grid="true">
       <tools
           id="symbolTool"
-          format="SYMBOL_TOOL"
-          type="OTHER"/>
+          type="OTHER"
+          format="SYMBOL_TOOL"/>
     </toolgroupChildren>
     <toolgroupChildren
         name="Equations"
@@ -2247,8 +2248,8 @@
       <tools
           name="Equations"
           id="equationsListview"
-          format="{IMAGE_equations_area_of_a_circle_300_75}"
-          type="LISTVIEW"/>
+          type="LISTVIEW"
+          format="{IMAGE_equations_area_of_a_circle_300_75}"/>
       <tools
           name="Insert New Equation"
           id="equationsInsertNewEquations"
@@ -2497,8 +2498,8 @@
           id="New Tool Group"
           gridY="3"
           spanX="2"
-          grid="true"
-          type="GRIDPANE">
+          type="GRIDPANE"
+          grid="true">
         <tools
             name="100%"
             id="view100Percent"
@@ -2669,8 +2670,8 @@
             toolTip="Font Name"
             spanX="0"
             spanY="0"
-            format="fontName"
-            type="COMBO"/>
+            type="COMBO"
+            format="fontName"/>
         <tools
             name="Font Size"
             id="fontSize"
@@ -2678,8 +2679,8 @@
             gridY="1"
             spanX="0"
             spanY="0"
-            format="fontSize"
-            type="COMBO"/>
+            type="COMBO"
+            format="fontSize"/>
       </toolGroups>
       <toolGroups
           name="characterStyle"
@@ -2821,8 +2822,8 @@
       </toolGroups>
       <tools
           id="favoritesSet"
-          format="defaul,set1"
-          type="COMBO"/>
+          type="COMBO"
+          format="defaul,set1"/>
     </toolgroupChildren>
     <toolgroupChildren
         name="URL"
@@ -3147,13 +3148,13 @@
         id="my_account"
         image="account"
         detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsMyAccountDetailPage"
-        type="TOOLBAR"/>
+        groupType="EMPTY_GROUP_BUTTON"/>
     <toolgroupChildren
         name="My Transactions"
         id="my_transactions"
         image="transaction"
         detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsMyTransactionsDetailPage"
-        type="TOOLBAR"/>
+        groupType="EMPTY_GROUP_BUTTON"/>
     <toolChildren
         name="New Word Document"
         id="NEW_WORD_DOCUMENT"
@@ -3340,13 +3341,8 @@
         id="HOME_PAGE_PREFERENCES"
         image="preferences_clipart"
         type="PREFERENCES"
+        perspective="//@allPerspectives/@children.4"
         navigator="true"
-        showHomePageButtons="true"/>
-    <children
-        name="What´s new"
-        id="HOME_PAGE_WHATS_NEW"
-        image="office_whatsnew"
-        type="WHATS_NEW"
         showHomePageButtons="true"/>
     <children
         name="About"
@@ -3360,6 +3356,9 @@
         image="tool"
         type="TOOLS_EDITOR"
         showHomePageButtons="true"/>
+    <children
+        id="network"
+        perspective="//@allPerspectives/@children.1"/>
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>

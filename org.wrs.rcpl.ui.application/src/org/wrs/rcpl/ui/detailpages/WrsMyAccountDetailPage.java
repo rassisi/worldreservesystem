@@ -1,10 +1,14 @@
 package org.wrs.rcpl.ui.detailpages;
 
+import java.io.IOException;
+import java.net.URL;
+
 import org.eclipse.rcpl.navigator.IModelDetailPageControler;
 import org.eclipse.rcpl.navigator.details.AbstractModelDetailPage;
 
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 
 /**
  * @author ramin
@@ -14,8 +18,17 @@ public class WrsMyAccountDetailPage extends AbstractModelDetailPage {
 
 	@Override
 	public void create(StackPane stackPane) {
-		Label l = new Label("My Account");
-		stackPane.getChildren().add(l);
+		URL location = getClass().getResource("wrs_my_account_detailpage.fxml");
+		FXMLLoader fxmlLoader = new FXMLLoader(location);
+//		fxmlLoader.setController(getControler());
+
+		try {
+			VBox node = fxmlLoader.load();
+			stackPane.getChildren().add(node);
+		} catch (IOException e) {
+			e.printStackTrace();
+			// System.exit(1);
+		}
 	}
 
 	@Override

@@ -14,4 +14,14 @@ public class WrsApplicationProvider extends JOApplicationProvider {
 		super(rcplApplication);
 	}
 
+	@Override
+	public String getName() {
+		return "My TERRA Wallet by World Reserve System";
+	}
+
+	@Override
+	public String getImage() {
+		return "wrs";
+	}
+
 }
