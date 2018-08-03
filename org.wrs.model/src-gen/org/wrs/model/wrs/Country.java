@@ -78,7 +78,7 @@ public interface Country extends CDOObject {
 	void setNationaleconomy(NationalEconomy value);
 
 	/**
-	 * Returns the value of the '<em><b>Regions</b></em>' reference list.
+	 * Returns the value of the '<em><b>Regions</b></em>' containment reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.CountryRegion}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -86,9 +86,9 @@ public interface Country extends CDOObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Regions</em>' reference list.
+	 * @return the value of the '<em>Regions</em>' containment reference list.
 	 * @see org.wrs.model.wrs.WrsPackage#getCountry_Regions()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<CountryRegion> getRegions();

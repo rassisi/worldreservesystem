@@ -3357,6 +3357,7 @@
         type="TOOLS_EDITOR"
         showHomePageButtons="true"/>
     <children
+        name="Network"
         id="network"
         perspective="//@allPerspectives/@children.1"/>
   </homepages>

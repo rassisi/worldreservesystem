@@ -2,32 +2,38 @@
  */
 package org.wrs.model.wrs.impl;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-import org.wrs.model.wrs.Genesis;
-import org.wrs.model.wrs.Treasury;
+
+import org.wrs.model.wrs.AbstractTransaction;
+import org.wrs.model.wrs.AllTransactions;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Genesis</b></em>'.
+ * An implementation of the model object '<em><b>All Transactions</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.model.wrs.impl.GenesisImpl#getTreasury <em>Treasury</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.AllTransactionsImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GenesisImpl extends CDOObjectImpl implements Genesis {
+public class AllTransactionsImpl extends CDOObjectImpl implements AllTransactions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GenesisImpl() {
+	protected AllTransactionsImpl() {
 		super();
 	}
 
@@ -38,7 +44,7 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WrsPackage.Literals.GENESIS;
+		return WrsPackage.Literals.ALL_TRANSACTIONS;
 	}
 
 	/**
@@ -56,26 +62,10 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Treasury getTreasury() {
-		return (Treasury) eDynamicGet(WrsPackage.GENESIS__TREASURY, WrsPackage.Literals.GENESIS__TREASURY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Treasury basicGetTreasury() {
-		return (Treasury) eDynamicGet(WrsPackage.GENESIS__TREASURY, WrsPackage.Literals.GENESIS__TREASURY, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTreasury(Treasury newTreasury) {
-		eDynamicSet(WrsPackage.GENESIS__TREASURY, WrsPackage.Literals.GENESIS__TREASURY, newTreasury);
+	@SuppressWarnings("unchecked")
+	public EList<AbstractTransaction> getChildren() {
+		return (EList<AbstractTransaction>) eDynamicGet(WrsPackage.ALL_TRANSACTIONS__CHILDREN,
+				WrsPackage.Literals.ALL_TRANSACTIONS__CHILDREN, true, true);
 	}
 
 	/**
@@ -86,10 +76,8 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WrsPackage.GENESIS__TREASURY:
-			if (resolve)
-				return getTreasury();
-			return basicGetTreasury();
+		case WrsPackage.ALL_TRANSACTIONS__CHILDREN:
+			return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -99,11 +87,13 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WrsPackage.GENESIS__TREASURY:
-			setTreasury((Treasury) newValue);
+		case WrsPackage.ALL_TRANSACTIONS__CHILDREN:
+			getChildren().clear();
+			getChildren().addAll((Collection<? extends AbstractTransaction>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -117,8 +107,8 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WrsPackage.GENESIS__TREASURY:
-			setTreasury((Treasury) null);
+		case WrsPackage.ALL_TRANSACTIONS__CHILDREN:
+			getChildren().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -132,10 +122,10 @@ public class GenesisImpl extends CDOObjectImpl implements Genesis {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WrsPackage.GENESIS__TREASURY:
-			return basicGetTreasury() != null;
+		case WrsPackage.ALL_TRANSACTIONS__CHILDREN:
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GenesisImpl
+} //AllTransactionsImpl

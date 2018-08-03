@@ -3,6 +3,7 @@
 package org.wrs.model.wrs;
 
 import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,29 +24,19 @@ import org.eclipse.emf.cdo.CDOObject;
  */
 public interface Countries extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Country</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Country</b></em>' containment reference list.
+	 * The list contents are of type {@link org.wrs.model.wrs.Country}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Country</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' containment reference.
-	 * @see #setCountry(Country)
+	 * @return the value of the '<em>Country</em>' containment reference list.
 	 * @see org.wrs.model.wrs.WrsPackage#getCountries_Country()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Country getCountry();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.Countries#getCountry <em>Country</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' containment reference.
-	 * @see #getCountry()
-	 * @generated
-	 */
-	void setCountry(Country value);
+	EList<Country> getCountry();
 
 } // Countries

@@ -7,31 +7,33 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.wrs.model.wrs.Individual;
-import org.wrs.model.wrs.LegalEntity;
+
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+
+import org.wrs.model.wrs.AllTransactionConditions;
+import org.wrs.model.wrs.TransactionCondition;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Individual</b></em>'.
+ * An implementation of the model object '<em><b>All Transaction Conditions</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.model.wrs.impl.IndividualImpl#getWorksFor <em>Works For</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.IndividualImpl#getLegalPartnerOf <em>Legal Partner Of</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.AllTransactionConditionsImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IndividualImpl extends HumanEntityImpl implements Individual {
+public class AllTransactionConditionsImpl extends CDOObjectImpl implements AllTransactionConditions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IndividualImpl() {
+	protected AllTransactionConditionsImpl() {
 		super();
 	}
 
@@ -42,7 +44,17 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WrsPackage.Literals.INDIVIDUAL;
+		return WrsPackage.Literals.ALL_TRANSACTION_CONDITIONS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -51,20 +63,9 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<LegalEntity> getWorksFor() {
-		return (EList<LegalEntity>) eDynamicGet(WrsPackage.INDIVIDUAL__WORKS_FOR,
-				WrsPackage.Literals.INDIVIDUAL__WORKS_FOR, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Individual> getLegalPartnerOf() {
-		return (EList<Individual>) eDynamicGet(WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF,
-				WrsPackage.Literals.INDIVIDUAL__LEGAL_PARTNER_OF, true, true);
+	public EList<TransactionCondition> getChildren() {
+		return (EList<TransactionCondition>) eDynamicGet(WrsPackage.ALL_TRANSACTION_CONDITIONS__CHILDREN,
+				WrsPackage.Literals.ALL_TRANSACTION_CONDITIONS__CHILDREN, true, true);
 	}
 
 	/**
@@ -75,10 +76,8 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WrsPackage.INDIVIDUAL__WORKS_FOR:
-			return getWorksFor();
-		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
-			return getLegalPartnerOf();
+		case WrsPackage.ALL_TRANSACTION_CONDITIONS__CHILDREN:
+			return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -92,13 +91,9 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WrsPackage.INDIVIDUAL__WORKS_FOR:
-			getWorksFor().clear();
-			getWorksFor().addAll((Collection<? extends LegalEntity>) newValue);
-			return;
-		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
-			getLegalPartnerOf().clear();
-			getLegalPartnerOf().addAll((Collection<? extends Individual>) newValue);
+		case WrsPackage.ALL_TRANSACTION_CONDITIONS__CHILDREN:
+			getChildren().clear();
+			getChildren().addAll((Collection<? extends TransactionCondition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -112,11 +107,8 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WrsPackage.INDIVIDUAL__WORKS_FOR:
-			getWorksFor().clear();
-			return;
-		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
-			getLegalPartnerOf().clear();
+		case WrsPackage.ALL_TRANSACTION_CONDITIONS__CHILDREN:
+			getChildren().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -130,12 +122,10 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WrsPackage.INDIVIDUAL__WORKS_FOR:
-			return !getWorksFor().isEmpty();
-		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
-			return !getLegalPartnerOf().isEmpty();
+		case WrsPackage.ALL_TRANSACTION_CONDITIONS__CHILDREN:
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //IndividualImpl
+} //AllTransactionConditionsImpl

@@ -4,12 +4,19 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
+import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.wrs.model.wrs.WRS;
@@ -22,7 +29,8 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class WRSItemProvider extends IdentityItemProvider {
+public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -45,6 +53,8 @@ public class WRSItemProvider extends IdentityItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addMainvaultPropertyDescriptor(object);
+			addTransfervaultsPropertyDescriptor(object);
+			addGenesisAccountPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -64,6 +74,36 @@ public class WRSItemProvider extends IdentityItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Transfervaults feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTransfervaultsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_WRS_transfervaults_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_WRS_transfervaults_feature",
+								"_UI_WRS_type"),
+						WrsPackage.Literals.WRS__TRANSFERVAULTS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Genesis Account feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenesisAccountPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_WRS_genesisAccount_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_WRS_genesisAccount_feature",
+								"_UI_WRS_type"),
+						WrsPackage.Literals.WRS__GENESIS_ACCOUNT, true, false, true, null, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -75,15 +115,17 @@ public class WRSItemProvider extends IdentityItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(WrsPackage.Literals.WRS__MAINVAULT);
 			childrenFeatures.add(WrsPackage.Literals.WRS__SUPPLYCONTROL);
 			childrenFeatures.add(WrsPackage.Literals.WRS__ALL_ACCOUNTS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__REGISTEREDASSTETS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__WORLDECONOMY);
-			childrenFeatures.add(WrsPackage.Literals.WRS__COUNTRIES);
 			childrenFeatures.add(WrsPackage.Literals.WRS__NODES);
 			childrenFeatures.add(WrsPackage.Literals.WRS__IDENTITIES);
-			childrenFeatures.add(WrsPackage.Literals.WRS__TRANSACTIONS);
-			childrenFeatures.add(WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS);
+			childrenFeatures.add(WrsPackage.Literals.WRS__ALL_TRANSACTIONS);
+			childrenFeatures.add(WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS);
+			childrenFeatures.add(WrsPackage.Literals.WRS__TRANSFERVAULTS);
+			childrenFeatures.add(WrsPackage.Literals.WRS__GENESIS_ACCOUNT);
 		}
 		return childrenFeatures;
 	}
@@ -130,9 +172,7 @@ public class WRSItemProvider extends IdentityItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((WRS) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_WRS_type")
-				: getString("_UI_WRS_type") + " " + label;
+		return getString("_UI_WRS_type");
 	}
 
 	/**
@@ -147,15 +187,17 @@ public class WRSItemProvider extends IdentityItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WRS.class)) {
+		case WrsPackage.WRS__MAINVAULT:
 		case WrsPackage.WRS__SUPPLYCONTROL:
 		case WrsPackage.WRS__ALL_ACCOUNTS:
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 		case WrsPackage.WRS__WORLDECONOMY:
-		case WrsPackage.WRS__COUNTRIES:
 		case WrsPackage.WRS__NODES:
 		case WrsPackage.WRS__IDENTITIES:
-		case WrsPackage.WRS__TRANSACTIONS:
-		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
+		case WrsPackage.WRS__ALL_TRANSACTIONS:
+		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
+		case WrsPackage.WRS__TRANSFERVAULTS:
+		case WrsPackage.WRS__GENESIS_ACCOUNT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -173,6 +215,9 @@ public class WRSItemProvider extends IdentityItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
+		newChildDescriptors
+				.add(createChildParameter(WrsPackage.Literals.WRS__MAINVAULT, WrsFactory.eINSTANCE.createTreasury()));
+
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__SUPPLYCONTROL,
 				WrsFactory.eINSTANCE.createSupplyControl()));
 
@@ -186,19 +231,33 @@ public class WRSItemProvider extends IdentityItemProvider {
 				createChildParameter(WrsPackage.Literals.WRS__WORLDECONOMY, WrsFactory.eINSTANCE.createWorldEconomy()));
 
 		newChildDescriptors
-				.add(createChildParameter(WrsPackage.Literals.WRS__COUNTRIES, WrsFactory.eINSTANCE.createCountries()));
-
-		newChildDescriptors
 				.add(createChildParameter(WrsPackage.Literals.WRS__NODES, WrsFactory.eINSTANCE.createNodes()));
 
 		newChildDescriptors.add(
 				createChildParameter(WrsPackage.Literals.WRS__IDENTITIES, WrsFactory.eINSTANCE.createIdentities()));
 
-		newChildDescriptors.add(
-				createChildParameter(WrsPackage.Literals.WRS__TRANSACTIONS, WrsFactory.eINSTANCE.createTransactions()));
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__ALL_TRANSACTIONS,
+				WrsFactory.eINSTANCE.createAllTransactions()));
 
-		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS,
-				WrsFactory.eINSTANCE.createTransactionConditions()));
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS,
+				WrsFactory.eINSTANCE.createAllTransactionConditions()));
+
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__TRANSFERVAULTS,
+				WrsFactory.eINSTANCE.createTransferVaults()));
+
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__GENESIS_ACCOUNT,
+				WrsFactory.eINSTANCE.createGenesisAccount()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return WrsEditPlugin.INSTANCE;
 	}
 
 }

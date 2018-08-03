@@ -15,8 +15,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.rcpl.IModelManager;
+import org.eclipse.rcpl.detailpages.AbstractModelManagerImpl;
 import org.eclipse.rcpl.model.client.RcplSession;
-import org.eclipse.rcpl.navigator.details.AbstractModelManagerImpl;
 import org.wrs.model.wrs.provider.WrsItemProviderAdapterFactory;
 
 /**

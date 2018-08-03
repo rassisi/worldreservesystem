@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.CountryRegion;
@@ -143,6 +144,8 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 			return basicSetFiatcurrency(null, msgs);
 		case WrsPackage.COUNTRY__NATIONALECONOMY:
 			return basicSetNationaleconomy(null, msgs);
+		case WrsPackage.COUNTRY__REGIONS:
+			return ((InternalEList<?>) getRegions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.AbstractAccount#getAssets <em>Assets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.AbstractAccount#getTransaction <em>Transaction</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.AbstractAccount#getTransactions <em>Transactions</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getAbstractAccount()
@@ -53,5 +54,31 @@ public interface AbstractAccount extends Layoutable {
 	 * @generated
 	 */
 	EList<Transaction> getTransaction();
+
+	/**
+	 * Returns the value of the '<em><b>Transactions</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Transactions</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transactions</em>' containment reference.
+	 * @see #setTransactions(Transactions)
+	 * @see org.wrs.model.wrs.WrsPackage#getAbstractAccount_Transactions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Transactions getTransactions();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.AbstractAccount#getTransactions <em>Transactions</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Transactions</em>' containment reference.
+	 * @see #getTransactions()
+	 * @generated
+	 */
+	void setTransactions(Transactions value);
 
 } // AbstractAccount

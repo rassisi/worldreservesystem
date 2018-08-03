@@ -9,14 +9,16 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Accounts;
-import org.wrs.model.wrs.Countries;
+import org.wrs.model.wrs.AllTransactionConditions;
+import org.wrs.model.wrs.AllTransactions;
+import org.wrs.model.wrs.GenesisAccount;
 import org.wrs.model.wrs.Identities;
 import org.wrs.model.wrs.Nodes;
 import org.wrs.model.wrs.RegisteredAssets;
 import org.wrs.model.wrs.SupplyControl;
-import org.wrs.model.wrs.TransactionConditions;
-import org.wrs.model.wrs.Transactions;
+import org.wrs.model.wrs.TransferVaults;
 import org.wrs.model.wrs.Treasury;
 import org.wrs.model.wrs.WRS;
 import org.wrs.model.wrs.WorldEconomy;
@@ -35,16 +37,17 @@ import org.wrs.model.wrs.WrsPackage;
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAllAccounts <em>All Accounts</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getRegisteredasstets <em>Registeredasstets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getWorldeconomy <em>Worldeconomy</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getCountries <em>Countries</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getIdentities <em>Identities</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getTransactions <em>Transactions</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getTransactionconditions <em>Transactionconditions</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAllTransactions <em>All Transactions</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAllTransactionConditions <em>All Transaction Conditions</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getTransfervaults <em>Transfervaults</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getGenesisAccount <em>Genesis Account</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WRSImpl extends IdentityImpl implements WRS {
+public class WRSImpl extends CDOObjectImpl implements WRS {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,6 +72,16 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Treasury getMainvault() {
 		return (Treasury) eDynamicGet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, true, true);
 	}
@@ -78,8 +91,9 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Treasury basicGetMainvault() {
-		return (Treasury) eDynamicGet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, false, true);
+	public NotificationChain basicSetMainvault(Treasury newMainvault, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newMainvault, WrsPackage.WRS__MAINVAULT, msgs);
+		return msgs;
 	}
 
 	/**
@@ -212,34 +226,6 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Countries getCountries() {
-		return (Countries) eDynamicGet(WrsPackage.WRS__COUNTRIES, WrsPackage.Literals.WRS__COUNTRIES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCountries(Countries newCountries, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newCountries, WrsPackage.WRS__COUNTRIES, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCountries(Countries newCountries) {
-		eDynamicSet(WrsPackage.WRS__COUNTRIES, WrsPackage.Literals.WRS__COUNTRIES, newCountries);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Nodes getNodes() {
 		return (Nodes) eDynamicGet(WrsPackage.WRS__NODES, WrsPackage.Literals.WRS__NODES, true, true);
 	}
@@ -296,9 +282,9 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Transactions getTransactions() {
-		return (Transactions) eDynamicGet(WrsPackage.WRS__TRANSACTIONS, WrsPackage.Literals.WRS__TRANSACTIONS, true,
-				true);
+	public AllTransactions getAllTransactions() {
+		return (AllTransactions) eDynamicGet(WrsPackage.WRS__ALL_TRANSACTIONS,
+				WrsPackage.Literals.WRS__ALL_TRANSACTIONS, true, true);
 	}
 
 	/**
@@ -306,8 +292,8 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTransactions(Transactions newTransactions, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTransactions, WrsPackage.WRS__TRANSACTIONS, msgs);
+	public NotificationChain basicSetAllTransactions(AllTransactions newAllTransactions, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newAllTransactions, WrsPackage.WRS__ALL_TRANSACTIONS, msgs);
 		return msgs;
 	}
 
@@ -316,8 +302,8 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTransactions(Transactions newTransactions) {
-		eDynamicSet(WrsPackage.WRS__TRANSACTIONS, WrsPackage.Literals.WRS__TRANSACTIONS, newTransactions);
+	public void setAllTransactions(AllTransactions newAllTransactions) {
+		eDynamicSet(WrsPackage.WRS__ALL_TRANSACTIONS, WrsPackage.Literals.WRS__ALL_TRANSACTIONS, newAllTransactions);
 	}
 
 	/**
@@ -325,9 +311,9 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransactionConditions getTransactionconditions() {
-		return (TransactionConditions) eDynamicGet(WrsPackage.WRS__TRANSACTIONCONDITIONS,
-				WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS, true, true);
+	public AllTransactionConditions getAllTransactionConditions() {
+		return (AllTransactionConditions) eDynamicGet(WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS,
+				WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS, true, true);
 	}
 
 	/**
@@ -335,10 +321,10 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTransactionconditions(TransactionConditions newTransactionconditions,
+	public NotificationChain basicSetAllTransactionConditions(AllTransactionConditions newAllTransactionConditions,
 			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTransactionconditions, WrsPackage.WRS__TRANSACTIONCONDITIONS,
-				msgs);
+		msgs = eDynamicInverseAdd((InternalEObject) newAllTransactionConditions,
+				WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS, msgs);
 		return msgs;
 	}
 
@@ -347,9 +333,67 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTransactionconditions(TransactionConditions newTransactionconditions) {
-		eDynamicSet(WrsPackage.WRS__TRANSACTIONCONDITIONS, WrsPackage.Literals.WRS__TRANSACTIONCONDITIONS,
-				newTransactionconditions);
+	public void setAllTransactionConditions(AllTransactionConditions newAllTransactionConditions) {
+		eDynamicSet(WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS, WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS,
+				newAllTransactionConditions);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransferVaults getTransfervaults() {
+		return (TransferVaults) eDynamicGet(WrsPackage.WRS__TRANSFERVAULTS, WrsPackage.Literals.WRS__TRANSFERVAULTS,
+				true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTransfervaults(TransferVaults newTransfervaults, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTransfervaults, WrsPackage.WRS__TRANSFERVAULTS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransfervaults(TransferVaults newTransfervaults) {
+		eDynamicSet(WrsPackage.WRS__TRANSFERVAULTS, WrsPackage.Literals.WRS__TRANSFERVAULTS, newTransfervaults);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GenesisAccount getGenesisAccount() {
+		return (GenesisAccount) eDynamicGet(WrsPackage.WRS__GENESIS_ACCOUNT, WrsPackage.Literals.WRS__GENESIS_ACCOUNT,
+				true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGenesisAccount(GenesisAccount newGenesisAccount, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newGenesisAccount, WrsPackage.WRS__GENESIS_ACCOUNT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenesisAccount(GenesisAccount newGenesisAccount) {
+		eDynamicSet(WrsPackage.WRS__GENESIS_ACCOUNT, WrsPackage.Literals.WRS__GENESIS_ACCOUNT, newGenesisAccount);
 	}
 
 	/**
@@ -371,6 +415,8 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case WrsPackage.WRS__MAINVAULT:
+			return basicSetMainvault(null, msgs);
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			return basicSetSupplycontrol(null, msgs);
 		case WrsPackage.WRS__ALL_ACCOUNTS:
@@ -379,16 +425,18 @@ public class WRSImpl extends IdentityImpl implements WRS {
 			return basicSetRegisteredasstets(null, msgs);
 		case WrsPackage.WRS__WORLDECONOMY:
 			return basicSetWorldeconomy(null, msgs);
-		case WrsPackage.WRS__COUNTRIES:
-			return basicSetCountries(null, msgs);
 		case WrsPackage.WRS__NODES:
 			return basicSetNodes(null, msgs);
 		case WrsPackage.WRS__IDENTITIES:
 			return basicSetIdentities(null, msgs);
-		case WrsPackage.WRS__TRANSACTIONS:
-			return basicSetTransactions(null, msgs);
-		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-			return basicSetTransactionconditions(null, msgs);
+		case WrsPackage.WRS__ALL_TRANSACTIONS:
+			return basicSetAllTransactions(null, msgs);
+		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
+			return basicSetAllTransactionConditions(null, msgs);
+		case WrsPackage.WRS__TRANSFERVAULTS:
+			return basicSetTransfervaults(null, msgs);
+		case WrsPackage.WRS__GENESIS_ACCOUNT:
+			return basicSetGenesisAccount(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -402,9 +450,7 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WrsPackage.WRS__MAINVAULT:
-			if (resolve)
-				return getMainvault();
-			return basicGetMainvault();
+			return getMainvault();
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			return getSupplycontrol();
 		case WrsPackage.WRS__ALL_ACCOUNTS:
@@ -413,16 +459,18 @@ public class WRSImpl extends IdentityImpl implements WRS {
 			return getRegisteredasstets();
 		case WrsPackage.WRS__WORLDECONOMY:
 			return getWorldeconomy();
-		case WrsPackage.WRS__COUNTRIES:
-			return getCountries();
 		case WrsPackage.WRS__NODES:
 			return getNodes();
 		case WrsPackage.WRS__IDENTITIES:
 			return getIdentities();
-		case WrsPackage.WRS__TRANSACTIONS:
-			return getTransactions();
-		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-			return getTransactionconditions();
+		case WrsPackage.WRS__ALL_TRANSACTIONS:
+			return getAllTransactions();
+		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
+			return getAllTransactionConditions();
+		case WrsPackage.WRS__TRANSFERVAULTS:
+			return getTransfervaults();
+		case WrsPackage.WRS__GENESIS_ACCOUNT:
+			return getGenesisAccount();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -450,20 +498,23 @@ public class WRSImpl extends IdentityImpl implements WRS {
 		case WrsPackage.WRS__WORLDECONOMY:
 			setWorldeconomy((WorldEconomy) newValue);
 			return;
-		case WrsPackage.WRS__COUNTRIES:
-			setCountries((Countries) newValue);
-			return;
 		case WrsPackage.WRS__NODES:
 			setNodes((Nodes) newValue);
 			return;
 		case WrsPackage.WRS__IDENTITIES:
 			setIdentities((Identities) newValue);
 			return;
-		case WrsPackage.WRS__TRANSACTIONS:
-			setTransactions((Transactions) newValue);
+		case WrsPackage.WRS__ALL_TRANSACTIONS:
+			setAllTransactions((AllTransactions) newValue);
 			return;
-		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-			setTransactionconditions((TransactionConditions) newValue);
+		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
+			setAllTransactionConditions((AllTransactionConditions) newValue);
+			return;
+		case WrsPackage.WRS__TRANSFERVAULTS:
+			setTransfervaults((TransferVaults) newValue);
+			return;
+		case WrsPackage.WRS__GENESIS_ACCOUNT:
+			setGenesisAccount((GenesisAccount) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -492,20 +543,23 @@ public class WRSImpl extends IdentityImpl implements WRS {
 		case WrsPackage.WRS__WORLDECONOMY:
 			setWorldeconomy((WorldEconomy) null);
 			return;
-		case WrsPackage.WRS__COUNTRIES:
-			setCountries((Countries) null);
-			return;
 		case WrsPackage.WRS__NODES:
 			setNodes((Nodes) null);
 			return;
 		case WrsPackage.WRS__IDENTITIES:
 			setIdentities((Identities) null);
 			return;
-		case WrsPackage.WRS__TRANSACTIONS:
-			setTransactions((Transactions) null);
+		case WrsPackage.WRS__ALL_TRANSACTIONS:
+			setAllTransactions((AllTransactions) null);
 			return;
-		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-			setTransactionconditions((TransactionConditions) null);
+		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
+			setAllTransactionConditions((AllTransactionConditions) null);
+			return;
+		case WrsPackage.WRS__TRANSFERVAULTS:
+			setTransfervaults((TransferVaults) null);
+			return;
+		case WrsPackage.WRS__GENESIS_ACCOUNT:
+			setGenesisAccount((GenesisAccount) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -520,7 +574,7 @@ public class WRSImpl extends IdentityImpl implements WRS {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WrsPackage.WRS__MAINVAULT:
-			return basicGetMainvault() != null;
+			return getMainvault() != null;
 		case WrsPackage.WRS__SUPPLYCONTROL:
 			return getSupplycontrol() != null;
 		case WrsPackage.WRS__ALL_ACCOUNTS:
@@ -529,16 +583,18 @@ public class WRSImpl extends IdentityImpl implements WRS {
 			return getRegisteredasstets() != null;
 		case WrsPackage.WRS__WORLDECONOMY:
 			return getWorldeconomy() != null;
-		case WrsPackage.WRS__COUNTRIES:
-			return getCountries() != null;
 		case WrsPackage.WRS__NODES:
 			return getNodes() != null;
 		case WrsPackage.WRS__IDENTITIES:
 			return getIdentities() != null;
-		case WrsPackage.WRS__TRANSACTIONS:
-			return getTransactions() != null;
-		case WrsPackage.WRS__TRANSACTIONCONDITIONS:
-			return getTransactionconditions() != null;
+		case WrsPackage.WRS__ALL_TRANSACTIONS:
+			return getAllTransactions() != null;
+		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
+			return getAllTransactionConditions() != null;
+		case WrsPackage.WRS__TRANSFERVAULTS:
+			return getTransfervaults() != null;
+		case WrsPackage.WRS__GENESIS_ACCOUNT:
+			return getGenesisAccount() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -3,34 +3,42 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-import org.wrs.model.wrs.TransactionCondition;
-import org.wrs.model.wrs.TransactionConditions;
+
+import org.wrs.model.wrs.TransferVault;
+import org.wrs.model.wrs.TransferVaults;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Transaction Conditions</b></em>'.
+ * An implementation of the model object '<em><b>Transfer Vaults</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.model.wrs.impl.TransactionConditionsImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.TransferVaultsImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TransactionConditionsImpl extends CDOObjectImpl implements TransactionConditions {
+public class TransferVaultsImpl extends CDOObjectImpl implements TransferVaults {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TransactionConditionsImpl() {
+	protected TransferVaultsImpl() {
 		super();
 	}
 
@@ -41,7 +49,7 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WrsPackage.Literals.TRANSACTION_CONDITIONS;
+		return WrsPackage.Literals.TRANSFER_VAULTS;
 	}
 
 	/**
@@ -60,9 +68,23 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<TransactionCondition> getChildren() {
-		return (EList<TransactionCondition>) eDynamicGet(WrsPackage.TRANSACTION_CONDITIONS__CHILDREN,
-				WrsPackage.Literals.TRANSACTION_CONDITIONS__CHILDREN, true, true);
+	public EList<TransferVault> getChildren() {
+		return (EList<TransferVault>) eDynamicGet(WrsPackage.TRANSFER_VAULTS__CHILDREN,
+				WrsPackage.Literals.TRANSFER_VAULTS__CHILDREN, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.TRANSFER_VAULTS__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -73,7 +95,7 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WrsPackage.TRANSACTION_CONDITIONS__CHILDREN:
+		case WrsPackage.TRANSFER_VAULTS__CHILDREN:
 			return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -88,9 +110,9 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WrsPackage.TRANSACTION_CONDITIONS__CHILDREN:
+		case WrsPackage.TRANSFER_VAULTS__CHILDREN:
 			getChildren().clear();
-			getChildren().addAll((Collection<? extends TransactionCondition>) newValue);
+			getChildren().addAll((Collection<? extends TransferVault>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -104,7 +126,7 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WrsPackage.TRANSACTION_CONDITIONS__CHILDREN:
+		case WrsPackage.TRANSFER_VAULTS__CHILDREN:
 			getChildren().clear();
 			return;
 		}
@@ -119,10 +141,10 @@ public class TransactionConditionsImpl extends CDOObjectImpl implements Transact
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WrsPackage.TRANSACTION_CONDITIONS__CHILDREN:
+		case WrsPackage.TRANSFER_VAULTS__CHILDREN:
 			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //TransactionConditionsImpl
+} //TransferVaultsImpl

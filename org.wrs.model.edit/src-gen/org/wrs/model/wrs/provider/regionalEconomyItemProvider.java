@@ -6,27 +6,26 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.wrs.model.wrs.WrsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.Genesis} object.
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.regionalEconomy} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class GenesisItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
+public class regionalEconomyItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -34,7 +33,7 @@ public class GenesisItemProvider extends CDOItemProviderAdapter implements IEdit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenesisItemProvider(AdapterFactory adapterFactory) {
+	public regionalEconomyItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -49,35 +48,19 @@ public class GenesisItemProvider extends CDOItemProviderAdapter implements IEdit
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTreasuryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Treasury feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTreasuryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Genesis_treasury_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Genesis_treasury_feature",
-								"_UI_Genesis_type"),
-						WrsPackage.Literals.GENESIS__TREASURY, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns Genesis.gif.
+	 * This returns regionalEconomy.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Genesis"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/regionalEconomy"));
 	}
 
 	/**
@@ -98,7 +81,7 @@ public class GenesisItemProvider extends CDOItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Genesis_type");
+		return getString("_UI_regionalEconomy_type");
 	}
 
 	/**

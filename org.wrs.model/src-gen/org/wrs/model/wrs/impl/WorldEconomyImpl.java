@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.NationalEconomy;
 import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.StatisticsSource;
@@ -28,6 +29,7 @@ import org.wrs.model.wrs.WrsPackage;
  *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getNationaleconomies <em>Nationaleconomies</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getStatisticssource <em>Statisticssource</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getStatisticDatas <em>Statistic Datas</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WorldEconomyImpl#getCountries <em>Countries</em>}</li>
  * </ul>
  *
  * @generated
@@ -139,6 +141,35 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Countries getCountries() {
+		return (Countries) eDynamicGet(WrsPackage.WORLD_ECONOMY__COUNTRIES,
+				WrsPackage.Literals.WORLD_ECONOMY__COUNTRIES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCountries(Countries newCountries, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newCountries, WrsPackage.WORLD_ECONOMY__COUNTRIES, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCountries(Countries newCountries) {
+		eDynamicSet(WrsPackage.WORLD_ECONOMY__COUNTRIES, WrsPackage.Literals.WORLD_ECONOMY__COUNTRIES, newCountries);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -146,6 +177,8 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 			return basicSetStatisticssource(null, msgs);
 		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
 			return basicSetStatisticDatas(null, msgs);
+		case WrsPackage.WORLD_ECONOMY__COUNTRIES:
+			return basicSetCountries(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,6 +197,8 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 			return getStatisticssource();
 		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
 			return getStatisticDatas();
+		case WrsPackage.WORLD_ECONOMY__COUNTRIES:
+			return getCountries();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,6 +222,9 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
 			setStatisticDatas((StatisticDatas) newValue);
 			return;
+		case WrsPackage.WORLD_ECONOMY__COUNTRIES:
+			setCountries((Countries) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -208,6 +246,9 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
 			setStatisticDatas((StatisticDatas) null);
 			return;
+		case WrsPackage.WORLD_ECONOMY__COUNTRIES:
+			setCountries((Countries) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -226,6 +267,8 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 			return getStatisticssource() != null;
 		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
 			return getStatisticDatas() != null;
+		case WrsPackage.WORLD_ECONOMY__COUNTRIES:
+			return getCountries() != null;
 		}
 		return super.eIsSet(featureID);
 	}

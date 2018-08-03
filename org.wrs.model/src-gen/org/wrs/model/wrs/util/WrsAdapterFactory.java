@@ -82,8 +82,8 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseGenesis(Genesis object) {
-			return createGenesisAdapter();
+		public Adapter caseGenesisAccount(GenesisAccount object) {
+			return createGenesisAccountAdapter();
 		}
 
 		@Override
@@ -192,8 +192,8 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTransactions(Transactions object) {
-			return createTransactionsAdapter();
+		public Adapter caseAllTransactions(AllTransactions object) {
+			return createAllTransactionsAdapter();
 		}
 
 		@Override
@@ -207,8 +207,8 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTransactionConditions(TransactionConditions object) {
-			return createTransactionConditionsAdapter();
+		public Adapter caseAllTransactionConditions(AllTransactionConditions object) {
+			return createAllTransactionConditionsAdapter();
 		}
 
 		@Override
@@ -249,6 +249,21 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLayoutable(Layoutable object) {
 			return createLayoutableAdapter();
+		}
+
+		@Override
+		public Adapter caseregionalEconomy(regionalEconomy object) {
+			return createregionalEconomyAdapter();
+		}
+
+		@Override
+		public Adapter caseTransferVaults(TransferVaults object) {
+			return createTransferVaultsAdapter();
+		}
+
+		@Override
+		public Adapter caseTransactions(Transactions object) {
+			return createTransactionsAdapter();
 		}
 
 		@Override
@@ -313,16 +328,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.Genesis <em>Genesis</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.GenesisAccount <em>Genesis Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.wrs.model.wrs.Genesis
+	 * @see org.wrs.model.wrs.GenesisAccount
 	 * @generated
 	 */
-	public Adapter createGenesisAdapter() {
+	public Adapter createGenesisAccountAdapter() {
 		return null;
 	}
 
@@ -621,6 +636,20 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.AllTransactions <em>All Transactions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.AllTransactions
+	 * @generated
+	 */
+	public Adapter createAllTransactionsAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.Transactions <em>Transactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -663,16 +692,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.TransactionConditions <em>Transaction Conditions</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.AllTransactionConditions <em>All Transaction Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.wrs.model.wrs.TransactionConditions
+	 * @see org.wrs.model.wrs.AllTransactionConditions
 	 * @generated
 	 */
-	public Adapter createTransactionConditionsAdapter() {
+	public Adapter createAllTransactionConditionsAdapter() {
 		return null;
 	}
 
@@ -785,6 +814,34 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLayoutableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.regionalEconomy <em>regional Economy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.regionalEconomy
+	 * @generated
+	 */
+	public Adapter createregionalEconomyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.TransferVaults <em>Transfer Vaults</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.TransferVaults
+	 * @generated
+	 */
+	public Adapter createTransferVaultsAdapter() {
 		return null;
 	}
 

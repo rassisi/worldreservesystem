@@ -4,30 +4,28 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.wrs.model.wrs.Identity;
-import org.wrs.model.wrs.WrsPackage;
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import org.wrs.model.wrs.GenesisAccount;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.Identity} object.
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.GenesisAccount} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class IdentityItemProvider extends LayoutableItemProvider {
+public class GenesisAccountItemProvider extends AbstractAccountItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IdentityItemProvider(AdapterFactory adapterFactory) {
+	public GenesisAccountItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -42,41 +40,19 @@ public class IdentityItemProvider extends LayoutableItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUUIDPropertyDescriptor(object);
-			addAllNodesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the UUID feature.
+	 * This returns GenesisAccount.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUUIDPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Identity_UUID_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Identity_UUID_feature",
-								"_UI_Identity_type"),
-						WrsPackage.Literals.IDENTITY__UUID, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the All Nodes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAllNodesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Identity_AllNodes_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Identity_AllNodes_feature",
-								"_UI_Identity_type"),
-						WrsPackage.Literals.IDENTITY__ALL_NODES, true, false, true, null, null, null));
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/GenesisAccount"));
 	}
 
 	/**
@@ -97,9 +73,9 @@ public class IdentityItemProvider extends LayoutableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Identity) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Identity_type")
-				: getString("_UI_Identity_type") + " " + label;
+		String label = ((GenesisAccount) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_GenesisAccount_type")
+				: getString("_UI_GenesisAccount_type") + " " + label;
 	}
 
 	/**
@@ -112,12 +88,6 @@ public class IdentityItemProvider extends LayoutableItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Identity.class)) {
-		case WrsPackage.IDENTITY__UUID:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

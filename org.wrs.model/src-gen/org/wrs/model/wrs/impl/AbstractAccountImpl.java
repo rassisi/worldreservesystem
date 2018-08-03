@@ -3,12 +3,15 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.Transaction;
+import org.wrs.model.wrs.Transactions;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -21,6 +24,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.AbstractAccountImpl#getAssets <em>Assets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.AbstractAccountImpl#getTransaction <em>Transaction</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.AbstractAccountImpl#getTransactions <em>Transactions</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,6 +76,50 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Transactions getTransactions() {
+		return (Transactions) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS,
+				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTIONS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTransactions(Transactions newTransactions, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTransactions, WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransactions(Transactions newTransactions) {
+		eDynamicSet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS, WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTIONS,
+				newTransactions);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS:
+			return basicSetTransactions(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -79,6 +127,8 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 			return getAssets();
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
 			return getTransaction();
+		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS:
+			return getTransactions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -100,6 +150,9 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 			getTransaction().clear();
 			getTransaction().addAll((Collection<? extends Transaction>) newValue);
 			return;
+		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS:
+			setTransactions((Transactions) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -118,6 +171,9 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
 			getTransaction().clear();
 			return;
+		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS:
+			setTransactions((Transactions) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -134,6 +190,8 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 			return !getAssets().isEmpty();
 		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION:
 			return !getTransaction().isEmpty();
+		case WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS:
+			return getTransactions() != null;
 		}
 		return super.eIsSet(featureID);
 	}

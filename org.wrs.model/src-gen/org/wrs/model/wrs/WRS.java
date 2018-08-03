@@ -2,6 +2,8 @@
  */
 package org.wrs.model.wrs;
 
+import org.eclipse.emf.cdo.CDOObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>WRS</b></em>'.
@@ -16,39 +18,41 @@ package org.wrs.model.wrs;
  *   <li>{@link org.wrs.model.wrs.WRS#getAllAccounts <em>All Accounts</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getRegisteredasstets <em>Registeredasstets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getWorldeconomy <em>Worldeconomy</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getCountries <em>Countries</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getNodes <em>Nodes</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getIdentities <em>Identities</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getTransactions <em>Transactions</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getTransactionconditions <em>Transactionconditions</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WRS#getAllTransactions <em>All Transactions</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WRS#getAllTransactionConditions <em>All Transaction Conditions</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WRS#getTransfervaults <em>Transfervaults</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WRS#getGenesisAccount <em>Genesis Account</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getWRS()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface WRS extends Identity {
+public interface WRS extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Mainvault</b></em>' reference.
+	 * Returns the value of the '<em><b>Mainvault</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mainvault</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mainvault</em>' reference.
+	 * @return the value of the '<em>Mainvault</em>' containment reference.
 	 * @see #setMainvault(Treasury)
 	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Mainvault()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Treasury getMainvault();
 
 	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getMainvault <em>Mainvault</em>}' reference.
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getMainvault <em>Mainvault</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mainvault</em>' reference.
+	 * @param value the new value of the '<em>Mainvault</em>' containment reference.
 	 * @see #getMainvault()
 	 * @generated
 	 */
@@ -159,32 +163,6 @@ public interface WRS extends Identity {
 	void setWorldeconomy(WorldEconomy value);
 
 	/**
-	 * Returns the value of the '<em><b>Countries</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Countries</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Countries</em>' containment reference.
-	 * @see #setCountries(Countries)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Countries()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Countries getCountries();
-
-	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getCountries <em>Countries</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Countries</em>' containment reference.
-	 * @see #getCountries()
-	 * @generated
-	 */
-	void setCountries(Countries value);
-
-	/**
 	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -237,56 +215,108 @@ public interface WRS extends Identity {
 	void setIdentities(Identities value);
 
 	/**
-	 * Returns the value of the '<em><b>Transactions</b></em>' containment reference.
+	 * Returns the value of the '<em><b>All Transactions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Transactions</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>All Transactions</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transactions</em>' containment reference.
-	 * @see #setTransactions(Transactions)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Transactions()
+	 * @return the value of the '<em>All Transactions</em>' containment reference.
+	 * @see #setAllTransactions(AllTransactions)
+	 * @see org.wrs.model.wrs.WrsPackage#getWRS_AllTransactions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Transactions getTransactions();
+	AllTransactions getAllTransactions();
 
 	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getTransactions <em>Transactions</em>}' containment reference.
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getAllTransactions <em>All Transactions</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transactions</em>' containment reference.
-	 * @see #getTransactions()
+	 * @param value the new value of the '<em>All Transactions</em>' containment reference.
+	 * @see #getAllTransactions()
 	 * @generated
 	 */
-	void setTransactions(Transactions value);
+	void setAllTransactions(AllTransactions value);
 
 	/**
-	 * Returns the value of the '<em><b>Transactionconditions</b></em>' containment reference.
+	 * Returns the value of the '<em><b>All Transaction Conditions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Transactionconditions</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>All Transaction Conditions</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transactionconditions</em>' containment reference.
-	 * @see #setTransactionconditions(TransactionConditions)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Transactionconditions()
+	 * @return the value of the '<em>All Transaction Conditions</em>' containment reference.
+	 * @see #setAllTransactionConditions(AllTransactionConditions)
+	 * @see org.wrs.model.wrs.WrsPackage#getWRS_AllTransactionConditions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	TransactionConditions getTransactionconditions();
+	AllTransactionConditions getAllTransactionConditions();
 
 	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getTransactionconditions <em>Transactionconditions</em>}' containment reference.
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getAllTransactionConditions <em>All Transaction Conditions</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transactionconditions</em>' containment reference.
-	 * @see #getTransactionconditions()
+	 * @param value the new value of the '<em>All Transaction Conditions</em>' containment reference.
+	 * @see #getAllTransactionConditions()
 	 * @generated
 	 */
-	void setTransactionconditions(TransactionConditions value);
+	void setAllTransactionConditions(AllTransactionConditions value);
+
+	/**
+	 * Returns the value of the '<em><b>Transfervaults</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Transfervaults</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transfervaults</em>' containment reference.
+	 * @see #setTransfervaults(TransferVaults)
+	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Transfervaults()
+	 * @model containment="true"
+	 * @generated
+	 */
+	TransferVaults getTransfervaults();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getTransfervaults <em>Transfervaults</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Transfervaults</em>' containment reference.
+	 * @see #getTransfervaults()
+	 * @generated
+	 */
+	void setTransfervaults(TransferVaults value);
+
+	/**
+	 * Returns the value of the '<em><b>Genesis Account</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Genesis Account</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Genesis Account</em>' containment reference.
+	 * @see #setGenesisAccount(GenesisAccount)
+	 * @see org.wrs.model.wrs.WrsPackage#getWRS_GenesisAccount()
+	 * @model containment="true"
+	 * @generated
+	 */
+	GenesisAccount getGenesisAccount();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getGenesisAccount <em>Genesis Account</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Genesis Account</em>' containment reference.
+	 * @see #getGenesisAccount()
+	 * @generated
+	 */
+	void setGenesisAccount(GenesisAccount value);
 
 	/**
 	 * <!-- begin-user-doc -->

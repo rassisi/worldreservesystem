@@ -49,13 +49,13 @@ public interface WrsFactory extends EFactory {
 	TransferVault createTransferVault();
 
 	/**
-	 * Returns a new object of class '<em>Genesis</em>'.
+	 * Returns a new object of class '<em>Genesis Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Genesis</em>'.
+	 * @return a new object of class '<em>Genesis Account</em>'.
 	 * @generated
 	 */
-	Genesis createGenesis();
+	GenesisAccount createGenesisAccount();
 
 	/**
 	 * Returns a new object of class '<em>Asset</em>'.
@@ -229,6 +229,15 @@ public interface WrsFactory extends EFactory {
 	Identities createIdentities();
 
 	/**
+	 * Returns a new object of class '<em>All Transactions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>All Transactions</em>'.
+	 * @generated
+	 */
+	AllTransactions createAllTransactions();
+
+	/**
 	 * Returns a new object of class '<em>Transactions</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,13 +265,13 @@ public interface WrsFactory extends EFactory {
 	NodeAccount createNodeAccount();
 
 	/**
-	 * Returns a new object of class '<em>Transaction Conditions</em>'.
+	 * Returns a new object of class '<em>All Transaction Conditions</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transaction Conditions</em>'.
+	 * @return a new object of class '<em>All Transaction Conditions</em>'.
 	 * @generated
 	 */
-	TransactionConditions createTransactionConditions();
+	AllTransactionConditions createAllTransactionConditions();
 
 	/**
 	 * Returns a new object of class '<em>Transaction Condition</em>'.
@@ -317,6 +326,24 @@ public interface WrsFactory extends EFactory {
 	 * @generated
 	 */
 	StatisticsSource createStatisticsSource();
+
+	/**
+	 * Returns a new object of class '<em>regional Economy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>regional Economy</em>'.
+	 * @generated
+	 */
+	regionalEconomy createregionalEconomy();
+
+	/**
+	 * Returns a new object of class '<em>Transfer Vaults</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transfer Vaults</em>'.
+	 * @generated
+	 */
+	TransferVaults createTransferVaults();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -3,8 +3,8 @@ package org.wrs.rcpl.ui.detailpages;
 import java.io.IOException;
 import java.net.URL;
 
+import org.eclipse.rcpl.detailpages.AbstractModelDetailPage;
 import org.eclipse.rcpl.navigator.IModelDetailPageControler;
-import org.eclipse.rcpl.navigator.details.AbstractModelDetailPage;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
@@ -35,6 +35,17 @@ public class WrsMyAccountDetailPage extends AbstractModelDetailPage {
 	protected IModelDetailPageControler createControler() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public String getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getName() {
+		return "My Account";
 	}
 
 }

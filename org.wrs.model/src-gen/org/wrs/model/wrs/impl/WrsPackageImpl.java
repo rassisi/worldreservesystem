@@ -15,13 +15,15 @@ import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.AbstractTransaction;
 import org.wrs.model.wrs.Account;
 import org.wrs.model.wrs.Accounts;
+import org.wrs.model.wrs.AllTransactionConditions;
+import org.wrs.model.wrs.AllTransactions;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.AssetType;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.CountryRegion;
 import org.wrs.model.wrs.FiatCurrency;
-import org.wrs.model.wrs.Genesis;
+import org.wrs.model.wrs.GenesisAccount;
 import org.wrs.model.wrs.HumanEntity;
 import org.wrs.model.wrs.Identities;
 import org.wrs.model.wrs.Identity;
@@ -45,13 +47,14 @@ import org.wrs.model.wrs.Thing;
 import org.wrs.model.wrs.Transaction;
 import org.wrs.model.wrs.TransactionCollection;
 import org.wrs.model.wrs.TransactionCondition;
-import org.wrs.model.wrs.TransactionConditions;
 import org.wrs.model.wrs.Transactions;
 import org.wrs.model.wrs.TransferVault;
+import org.wrs.model.wrs.TransferVaults;
 import org.wrs.model.wrs.Treasury;
 import org.wrs.model.wrs.WorldEconomy;
 import org.wrs.model.wrs.WrsFactory;
 import org.wrs.model.wrs.WrsPackage;
+import org.wrs.model.wrs.regionalEconomy;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,7 +89,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass genesisEClass = null;
+	private EClass genesisAccountEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,6 +243,13 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass allTransactionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass transactionsEClass = null;
 
 	/**
@@ -261,7 +271,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass transactionConditionsEClass = null;
+	private EClass allTransactionConditionsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -318,6 +328,20 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	private EClass layoutableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass regionalEconomyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transferVaultsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -463,7 +487,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWRS_Countries() {
+	public EReference getWRS_Nodes() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -472,7 +496,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWRS_Nodes() {
+	public EReference getWRS_Identities() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -481,7 +505,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWRS_Identities() {
+	public EReference getWRS_AllTransactions() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -490,7 +514,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWRS_Transactions() {
+	public EReference getWRS_AllTransactionConditions() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -499,8 +523,17 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWRS_Transactionconditions() {
+	public EReference getWRS_Transfervaults() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWRS_GenesisAccount() {
+		return (EReference) wrsEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -535,17 +568,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGenesis() {
-		return genesisEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGenesis_Treasury() {
-		return (EReference) genesisEClass.getEStructuralFeatures().get(0);
+	public EClass getGenesisAccount() {
+		return genesisAccountEClass;
 	}
 
 	/**
@@ -625,6 +649,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getWorldEconomy_Countries() {
+		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNationalEconomy() {
 		return nationalEconomyEClass;
 	}
@@ -697,7 +730,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIdentity_Accounts() {
+	public EReference getIdentity_AllNodes() {
 		return (EReference) identityEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -796,8 +829,26 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSupplyControl_Genesis() {
+	public EReference getSupplyControl_GenesisAccount() {
 		return (EReference) supplyControlEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSupplyControl_TransferVaults() {
+		return (EReference) supplyControlEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSupplyControl_Treasury() {
+		return (EReference) supplyControlEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -841,17 +892,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransaction_Transactions() {
-		return (EReference) transactionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTransaction_Data() {
-		return (EAttribute) transactionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) transactionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -860,7 +902,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	public EAttribute getTransaction_NanoTime() {
-		return (EAttribute) transactionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) transactionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -869,7 +911,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	public EAttribute getTransaction_Amount() {
-		return (EAttribute) transactionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) transactionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -878,7 +920,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	public EReference getTransaction_Transactioncondition() {
-		return (EReference) transactionEClass.getEStructuralFeatures().get(5);
+		return (EReference) transactionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -931,6 +973,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAbstractAccount_Transactions() {
+		return (EReference) abstractAccountEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTransactionCollection() {
 		return transactionCollectionEClass;
 	}
@@ -969,6 +1020,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EReference getNode_Networkengine() {
 		return (EReference) nodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_NodeAccounts() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1039,6 +1099,24 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAllTransactions() {
+		return allTransactionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAllTransactions_Children() {
+		return (EReference) allTransactionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTransactions() {
 		return transactionsEClass;
 	}
@@ -1075,8 +1153,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTransactionConditions() {
-		return transactionConditionsEClass;
+	public EClass getAllTransactionConditions() {
+		return allTransactionConditionsEClass;
 	}
 
 	/**
@@ -1084,8 +1162,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransactionConditions_Children() {
-		return (EReference) transactionConditionsEClass.getEStructuralFeatures().get(0);
+	public EReference getAllTransactionConditions_Children() {
+		return (EReference) allTransactionConditionsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1210,6 +1288,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCountryRegion_Regionaleconomy() {
+		return (EReference) countryRegionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStatisticsSource() {
 		return statisticsSourceEClass;
 	}
@@ -1230,6 +1317,24 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EClass getHumanEntity() {
 		return humanEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHumanEntity_Worldeconomy() {
+		return (EReference) humanEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHumanEntity_Accounts() {
+		return (EReference) humanEntityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1284,6 +1389,33 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EAttribute getLayoutable_Name() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getregionalEconomy() {
+		return regionalEconomyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTransferVaults() {
+		return transferVaultsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransferVaults_Children() {
+		return (EReference) transferVaultsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1348,19 +1480,19 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEReference(wrsEClass, WRS__ALL_ACCOUNTS);
 		createEReference(wrsEClass, WRS__REGISTEREDASSTETS);
 		createEReference(wrsEClass, WRS__WORLDECONOMY);
-		createEReference(wrsEClass, WRS__COUNTRIES);
 		createEReference(wrsEClass, WRS__NODES);
 		createEReference(wrsEClass, WRS__IDENTITIES);
-		createEReference(wrsEClass, WRS__TRANSACTIONS);
-		createEReference(wrsEClass, WRS__TRANSACTIONCONDITIONS);
+		createEReference(wrsEClass, WRS__ALL_TRANSACTIONS);
+		createEReference(wrsEClass, WRS__ALL_TRANSACTION_CONDITIONS);
+		createEReference(wrsEClass, WRS__TRANSFERVAULTS);
+		createEReference(wrsEClass, WRS__GENESIS_ACCOUNT);
 		createEOperation(wrsEClass, WRS___CREATE_IDENTITY);
 
 		treasuryEClass = createEClass(TREASURY);
 
 		transferVaultEClass = createEClass(TRANSFER_VAULT);
 
-		genesisEClass = createEClass(GENESIS);
-		createEReference(genesisEClass, GENESIS__TREASURY);
+		genesisAccountEClass = createEClass(GENESIS_ACCOUNT);
 
 		assetEClass = createEClass(ASSET);
 		createEAttribute(assetEClass, ASSET__ASSET_TYPE);
@@ -1371,6 +1503,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEReference(worldEconomyEClass, WORLD_ECONOMY__NATIONALECONOMIES);
 		createEReference(worldEconomyEClass, WORLD_ECONOMY__STATISTICSSOURCE);
 		createEReference(worldEconomyEClass, WORLD_ECONOMY__STATISTIC_DATAS);
+		createEReference(worldEconomyEClass, WORLD_ECONOMY__COUNTRIES);
 
 		nationalEconomyEClass = createEClass(NATIONAL_ECONOMY);
 
@@ -1383,7 +1516,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		identityEClass = createEClass(IDENTITY);
 		createEAttribute(identityEClass, IDENTITY__UUID);
-		createEReference(identityEClass, IDENTITY__ACCOUNTS);
+		createEReference(identityEClass, IDENTITY__ALL_NODES);
 
 		thingEClass = createEClass(THING);
 		createEReference(thingEClass, THING__BELONGS_TO);
@@ -1399,14 +1532,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEAttribute(accountEClass, ACCOUNT__PUBLIC_KEY);
 
 		supplyControlEClass = createEClass(SUPPLY_CONTROL);
-		createEReference(supplyControlEClass, SUPPLY_CONTROL__GENESIS);
+		createEReference(supplyControlEClass, SUPPLY_CONTROL__GENESIS_ACCOUNT);
+		createEReference(supplyControlEClass, SUPPLY_CONTROL__TRANSFER_VAULTS);
+		createEReference(supplyControlEClass, SUPPLY_CONTROL__TREASURY);
 
 		accountsEClass = createEClass(ACCOUNTS);
 		createEReference(accountsEClass, ACCOUNTS__CHILDREN);
 
 		transactionEClass = createEClass(TRANSACTION);
 		createEReference(transactionEClass, TRANSACTION__ASSETS);
-		createEReference(transactionEClass, TRANSACTION__TRANSACTIONS);
 		createEAttribute(transactionEClass, TRANSACTION__DATA);
 		createEAttribute(transactionEClass, TRANSACTION__NANO_TIME);
 		createEAttribute(transactionEClass, TRANSACTION__AMOUNT);
@@ -1418,6 +1552,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		abstractAccountEClass = createEClass(ABSTRACT_ACCOUNT);
 		createEReference(abstractAccountEClass, ABSTRACT_ACCOUNT__ASSETS);
 		createEReference(abstractAccountEClass, ABSTRACT_ACCOUNT__TRANSACTION);
+		createEReference(abstractAccountEClass, ABSTRACT_ACCOUNT__TRANSACTIONS);
 
 		transactionCollectionEClass = createEClass(TRANSACTION_COLLECTION);
 		createEReference(transactionCollectionEClass, TRANSACTION_COLLECTION__TRANSACTIONS);
@@ -1425,6 +1560,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__WEIGHT);
 		createEReference(nodeEClass, NODE__NETWORKENGINE);
+		createEReference(nodeEClass, NODE__NODE_ACCOUNTS);
 
 		networkEngineEClass = createEClass(NETWORK_ENGINE);
 
@@ -1437,15 +1573,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		identitiesEClass = createEClass(IDENTITIES);
 		createEReference(identitiesEClass, IDENTITIES__CHILDREN);
 
-		transactionsEClass = createEClass(TRANSACTIONS);
-		createEReference(transactionsEClass, TRANSACTIONS__CHILDREN);
+		allTransactionsEClass = createEClass(ALL_TRANSACTIONS);
+		createEReference(allTransactionsEClass, ALL_TRANSACTIONS__CHILDREN);
 
 		abstractTransactionEClass = createEClass(ABSTRACT_TRANSACTION);
 
 		nodeAccountEClass = createEClass(NODE_ACCOUNT);
 
-		transactionConditionsEClass = createEClass(TRANSACTION_CONDITIONS);
-		createEReference(transactionConditionsEClass, TRANSACTION_CONDITIONS__CHILDREN);
+		allTransactionConditionsEClass = createEClass(ALL_TRANSACTION_CONDITIONS);
+		createEReference(allTransactionConditionsEClass, ALL_TRANSACTION_CONDITIONS__CHILDREN);
 
 		transactionConditionEClass = createEClass(TRANSACTION_CONDITION);
 		createEAttribute(transactionConditionEClass, TRANSACTION_CONDITION__FORMULA);
@@ -1464,11 +1600,14 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEReference(statisticDatasEClass, STATISTIC_DATAS__CHILDREN);
 
 		countryRegionEClass = createEClass(COUNTRY_REGION);
+		createEReference(countryRegionEClass, COUNTRY_REGION__REGIONALECONOMY);
 
 		statisticsSourceEClass = createEClass(STATISTICS_SOURCE);
 		createEAttribute(statisticsSourceEClass, STATISTICS_SOURCE__WEBSERVICE_URL);
 
 		humanEntityEClass = createEClass(HUMAN_ENTITY);
+		createEReference(humanEntityEClass, HUMAN_ENTITY__WORLDECONOMY);
+		createEReference(humanEntityEClass, HUMAN_ENTITY__ACCOUNTS);
 
 		layoutableEClass = createEClass(LAYOUTABLE);
 		createEAttribute(layoutableEClass, LAYOUTABLE__X);
@@ -1476,6 +1615,14 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEAttribute(layoutableEClass, LAYOUTABLE__W);
 		createEAttribute(layoutableEClass, LAYOUTABLE__H);
 		createEAttribute(layoutableEClass, LAYOUTABLE__NAME);
+
+		regionalEconomyEClass = createEClass(REGIONAL_ECONOMY);
+
+		transferVaultsEClass = createEClass(TRANSFER_VAULTS);
+		createEReference(transferVaultsEClass, TRANSFER_VAULTS__CHILDREN);
+
+		transactionsEClass = createEClass(TRANSACTIONS);
+		createEReference(transactionsEClass, TRANSACTIONS__CHILDREN);
 
 		// Create enums
 		assetTypeEEnum = createEEnum(ASSET_TYPE);
@@ -1512,9 +1659,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		wrsEClass.getESuperTypes().add(this.getIdentity());
 		treasuryEClass.getESuperTypes().add(this.getAbstractAccount());
 		transferVaultEClass.getESuperTypes().add(this.getAbstractAccount());
+		genesisAccountEClass.getESuperTypes().add(this.getAbstractAccount());
 		assetEClass.getESuperTypes().add(this.getLayoutable());
 		identityEClass.getESuperTypes().add(this.getLayoutable());
 		thingEClass.getESuperTypes().add(this.getIdentity());
@@ -1531,8 +1678,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEClass(wrsEClass, org.wrs.model.wrs.WRS.class, "WRS", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWRS_Mainvault(), this.getTreasury(), null, "mainvault", null, 1, 1,
-				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWRS_Supplycontrol(), this.getSupplyControl(), null, "supplycontrol", null, 1, 1,
 				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1545,20 +1692,23 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getWRS_Worldeconomy(), this.getWorldEconomy(), null, "worldeconomy", null, 0, 1,
 				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWRS_Countries(), this.getCountries(), null, "countries", null, 0, 1,
-				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWRS_Nodes(), this.getNodes(), null, "nodes", null, 0, 1, org.wrs.model.wrs.WRS.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWRS_Identities(), this.getIdentities(), null, "identities", null, 0, 1,
 				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWRS_Transactions(), this.getTransactions(), null, "transactions", null, 0, 1,
+		initEReference(getWRS_AllTransactions(), this.getAllTransactions(), null, "AllTransactions", null, 0, 1,
 				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWRS_Transactionconditions(), this.getTransactionConditions(), null, "transactionconditions",
-				null, 0, 1, org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getWRS_AllTransactionConditions(), this.getAllTransactionConditions(), null,
+				"AllTransactionConditions", null, 0, 1, org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWRS_Transfervaults(), this.getTransferVaults(), null, "transfervaults", null, 0, 1,
+				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWRS_GenesisAccount(), this.getGenesisAccount(), null, "genesisAccount", null, 0, 1,
+				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getWRS__CreateIdentity(), null, "createIdentity", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1569,10 +1719,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEClass(transferVaultEClass, TransferVault.class, "TransferVault", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(genesisEClass, Genesis.class, "Genesis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGenesis_Treasury(), this.getTreasury(), null, "treasury", null, 1, 1, Genesis.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(genesisAccountEClass, GenesisAccount.class, "GenesisAccount", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(assetEClass, Asset.class, "Asset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAsset_AssetType(), this.getAssetType(), "assetType", "UDOLLAR", 0, 1, Asset.class,
@@ -1594,6 +1742,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getWorldEconomy_StatisticDatas(), this.getStatisticDatas(), null, "statisticDatas", null, 0, 1,
 				WorldEconomy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorldEconomy_Countries(), this.getCountries(), null, "countries", null, 0, 1,
+				WorldEconomy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nationalEconomyEClass, NationalEconomy.class, "NationalEconomy", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1606,7 +1757,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 				Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCountry_Regions(), this.getCountryRegion(), null, "regions", null, 0, -1, Country.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fiatCurrencyEClass, FiatCurrency.class, "FiatCurrency", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1615,8 +1766,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEClass(identityEClass, Identity.class, "Identity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentity_UUID(), ecorePackage.getEString(), "UUID", null, 0, 1, Identity.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIdentity_Accounts(), this.getAbstractAccount(), null, "accounts", null, 0, -1, Identity.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		initEReference(getIdentity_AllNodes(), this.getNodes(), null, "AllNodes", null, 0, 1, Identity.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thingEClass, Thing.class, "Thing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1629,7 +1780,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getIndividual_WorksFor(), this.getLegalEntity(), null, "worksFor", null, 0, -1, Individual.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIndividual_LegalPartnerOf(), this.getLegalEntity(), null, "legalPartnerOf", null, 0, -1,
+		initEReference(getIndividual_LegalPartnerOf(), this.getIndividual(), null, "legalPartnerOf", null, 0, -1,
 				Individual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1644,9 +1795,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		initEClass(supplyControlEClass, SupplyControl.class, "SupplyControl", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSupplyControl_Genesis(), this.getGenesis(), null, "genesis", null, 1, 1, SupplyControl.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSupplyControl_GenesisAccount(), this.getGenesisAccount(), null, "genesisAccount", null, 0, 1,
+				SupplyControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSupplyControl_TransferVaults(), this.getTransferVaults(), null, "transferVaults", null, 0, 1,
+				SupplyControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSupplyControl_Treasury(), this.getTreasury(), null, "treasury", null, 0, 1,
+				SupplyControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountsEClass, Accounts.class, "Accounts", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1659,9 +1816,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getTransaction_Assets(), this.getAsset(), null, "assets", null, 0, 1, Transaction.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransaction_Transactions(), this.getAbstractAccount(), null, "transactions", null, 0, -1,
-				Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransaction_Data(), ecorePackage.getEString(), "data", "", 0, 1, Transaction.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransaction_NanoTime(), ecorePackage.getEDouble(), "nanoTime", null, 0, 1, Transaction.class,
@@ -1686,6 +1840,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getAbstractAccount_Transaction(), this.getTransaction(), null, "transaction", null, 0, -1,
 				AbstractAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractAccount_Transactions(), this.getTransactions(), null, "transactions", null, 0, 1,
+				AbstractAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionCollectionEClass, TransactionCollection.class, "TransactionCollection", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1699,19 +1856,22 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getNode_Networkengine(), this.getNetworkEngine(), null, "networkengine", null, 1, 1, Node.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_NodeAccounts(), this.getNodeAccount(), null, "nodeAccounts", null, 0, -1, Node.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(networkEngineEClass, NetworkEngine.class, "NetworkEngine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(countriesEClass, Countries.class, "Countries", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCountries_Country(), this.getCountry(), null, "country", null, 0, 1, Countries.class,
+		initEReference(getCountries_Country(), this.getCountry(), null, "country", null, 0, -1, Countries.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodesEClass, Nodes.class, "Nodes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNodes_Children(), this.getNode(), null, "children", null, 0, -1, Nodes.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(identitiesEClass, Identities.class, "Identities", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1720,10 +1880,10 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(transactionsEClass, Transactions.class, "Transactions", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(allTransactionsEClass, AllTransactions.class, "AllTransactions", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransactions_Children(), this.getAbstractTransaction(), null, "children", null, 0, -1,
-				Transactions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getAllTransactions_Children(), this.getAbstractTransaction(), null, "children", null, 0, -1,
+				AllTransactions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractTransactionEClass, AbstractTransaction.class, "AbstractTransaction", !IS_ABSTRACT,
@@ -1732,10 +1892,10 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEClass(nodeAccountEClass, NodeAccount.class, "NodeAccount", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(transactionConditionsEClass, TransactionConditions.class, "TransactionConditions", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransactionConditions_Children(), this.getTransactionCondition(), null, "children", null, 0,
-				-1, TransactionConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEClass(allTransactionConditionsEClass, AllTransactionConditions.class, "AllTransactionConditions",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAllTransactionConditions_Children(), this.getTransactionCondition(), null, "children", null,
+				0, -1, AllTransactionConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionConditionEClass, TransactionCondition.class, "TransactionCondition", !IS_ABSTRACT,
@@ -1774,6 +1934,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		initEClass(countryRegionEClass, CountryRegion.class, "CountryRegion", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCountryRegion_Regionaleconomy(), this.getregionalEconomy(), null, "regionaleconomy", null, 0,
+				1, CountryRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statisticsSourceEClass, StatisticsSource.class, "StatisticsSource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1783,6 +1946,12 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		initEClass(humanEntityEClass, HumanEntity.class, "HumanEntity", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHumanEntity_Worldeconomy(), this.getWorldEconomy(), null, "worldeconomy", null, 0, 1,
+				HumanEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHumanEntity_Accounts(), this.getAccount(), null, "accounts", null, 0, -1, HumanEntity.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layoutableEClass, Layoutable.class, "Layoutable", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1796,6 +1965,21 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLayoutable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Layoutable.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(regionalEconomyEClass, regionalEconomy.class, "regionalEconomy", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(transferVaultsEClass, TransferVaults.class, "TransferVaults", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransferVaults_Children(), this.getTransferVault(), null, "children", null, 0, -1,
+				TransferVaults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transactionsEClass, Transactions.class, "Transactions", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransactions_Children(), this.getAbstractTransaction(), null, "children", null, 0, -1,
+				Transactions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(assetTypeEEnum, AssetType.class, "AssetType");

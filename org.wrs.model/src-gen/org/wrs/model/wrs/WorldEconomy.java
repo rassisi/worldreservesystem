@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.wrs.model.wrs.WorldEconomy#getNationaleconomies <em>Nationaleconomies</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WorldEconomy#getStatisticssource <em>Statisticssource</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WorldEconomy#getStatisticDatas <em>Statistic Datas</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WorldEconomy#getCountries <em>Countries</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getWorldEconomy()
@@ -92,5 +93,31 @@ public interface WorldEconomy extends CDOObject {
 	 * @generated
 	 */
 	void setStatisticDatas(StatisticDatas value);
+
+	/**
+	 * Returns the value of the '<em><b>Countries</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Countries</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Countries</em>' containment reference.
+	 * @see #setCountries(Countries)
+	 * @see org.wrs.model.wrs.WrsPackage#getWorldEconomy_Countries()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Countries getCountries();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.WorldEconomy#getCountries <em>Countries</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Countries</em>' containment reference.
+	 * @see #getCountries()
+	 * @generated
+	 */
+	void setCountries(Countries value);
 
 } // WorldEconomy

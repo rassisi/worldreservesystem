@@ -62,8 +62,8 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createTreasury();
 		case WrsPackage.TRANSFER_VAULT:
 			return (EObject) createTransferVault();
-		case WrsPackage.GENESIS:
-			return (EObject) createGenesis();
+		case WrsPackage.GENESIS_ACCOUNT:
+			return (EObject) createGenesisAccount();
 		case WrsPackage.ASSET:
 			return (EObject) createAsset();
 		case WrsPackage.WORLD_ECONOMY:
@@ -102,14 +102,14 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createNodes();
 		case WrsPackage.IDENTITIES:
 			return (EObject) createIdentities();
-		case WrsPackage.TRANSACTIONS:
-			return (EObject) createTransactions();
+		case WrsPackage.ALL_TRANSACTIONS:
+			return (EObject) createAllTransactions();
 		case WrsPackage.ABSTRACT_TRANSACTION:
 			return (EObject) createAbstractTransaction();
 		case WrsPackage.NODE_ACCOUNT:
 			return (EObject) createNodeAccount();
-		case WrsPackage.TRANSACTION_CONDITIONS:
-			return (EObject) createTransactionConditions();
+		case WrsPackage.ALL_TRANSACTION_CONDITIONS:
+			return (EObject) createAllTransactionConditions();
 		case WrsPackage.TRANSACTION_CONDITION:
 			return (EObject) createTransactionCondition();
 		case WrsPackage.SIGNED_INPUT:
@@ -122,6 +122,12 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createCountryRegion();
 		case WrsPackage.STATISTICS_SOURCE:
 			return (EObject) createStatisticsSource();
+		case WrsPackage.REGIONAL_ECONOMY:
+			return (EObject) createregionalEconomy();
+		case WrsPackage.TRANSFER_VAULTS:
+			return (EObject) createTransferVaults();
+		case WrsPackage.TRANSACTIONS:
+			return (EObject) createTransactions();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -200,9 +206,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Genesis createGenesis() {
-		GenesisImpl genesis = new GenesisImpl();
-		return genesis;
+	public GenesisAccount createGenesisAccount() {
+		GenesisAccountImpl genesisAccount = new GenesisAccountImpl();
+		return genesisAccount;
 	}
 
 	/**
@@ -400,6 +406,16 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AllTransactions createAllTransactions() {
+		AllTransactionsImpl allTransactions = new AllTransactionsImpl();
+		return allTransactions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Transactions createTransactions() {
 		TransactionsImpl transactions = new TransactionsImpl();
 		return transactions;
@@ -430,9 +446,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransactionConditions createTransactionConditions() {
-		TransactionConditionsImpl transactionConditions = new TransactionConditionsImpl();
-		return transactionConditions;
+	public AllTransactionConditions createAllTransactionConditions() {
+		AllTransactionConditionsImpl allTransactionConditions = new AllTransactionConditionsImpl();
+		return allTransactionConditions;
 	}
 
 	/**
@@ -493,6 +509,26 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public StatisticsSource createStatisticsSource() {
 		StatisticsSourceImpl statisticsSource = new StatisticsSourceImpl();
 		return statisticsSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public regionalEconomy createregionalEconomy() {
+		regionalEconomyImpl regionalEconomy = new regionalEconomyImpl();
+		return regionalEconomy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransferVaults createTransferVaults() {
+		TransferVaultsImpl transferVaults = new TransferVaultsImpl();
+		return transferVaults;
 	}
 
 	/**

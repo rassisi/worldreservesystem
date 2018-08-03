@@ -103,6 +103,7 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE);
 			childrenFeatures.add(WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS);
+			childrenFeatures.add(WrsPackage.Literals.WORLD_ECONOMY__COUNTRIES);
 		}
 		return childrenFeatures;
 	}
@@ -166,6 +167,7 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 		switch (notification.getFeatureID(WorldEconomy.class)) {
 		case WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE:
 		case WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS:
+		case WrsPackage.WORLD_ECONOMY__COUNTRIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -188,6 +190,9 @@ public class WorldEconomyItemProvider extends CDOItemProviderAdapter implements 
 
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS,
 				WrsFactory.eINSTANCE.createStatisticDatas()));
+
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WORLD_ECONOMY__COUNTRIES,
+				WrsFactory.eINSTANCE.createCountries()));
 	}
 
 	/**

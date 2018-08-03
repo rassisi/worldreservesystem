@@ -2,10 +2,14 @@
  */
 package org.wrs.model.wrs.impl;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-import org.wrs.model.wrs.Genesis;
+import org.wrs.model.wrs.GenesisAccount;
 import org.wrs.model.wrs.SupplyControl;
+import org.wrs.model.wrs.TransferVaults;
+import org.wrs.model.wrs.Treasury;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -16,7 +20,9 @@ import org.wrs.model.wrs.WrsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.model.wrs.impl.SupplyControlImpl#getGenesis <em>Genesis</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.SupplyControlImpl#getGenesisAccount <em>Genesis Account</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.SupplyControlImpl#getTransferVaults <em>Transfer Vaults</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.SupplyControlImpl#getTreasury <em>Treasury</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,8 +62,69 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Genesis getGenesis() {
-		return (Genesis) eDynamicGet(WrsPackage.SUPPLY_CONTROL__GENESIS, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS,
+	public GenesisAccount getGenesisAccount() {
+		return (GenesisAccount) eDynamicGet(WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT,
+				WrsPackage.Literals.SUPPLY_CONTROL__GENESIS_ACCOUNT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGenesisAccount(GenesisAccount newGenesisAccount, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newGenesisAccount, WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT,
+				msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenesisAccount(GenesisAccount newGenesisAccount) {
+		eDynamicSet(WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS_ACCOUNT,
+				newGenesisAccount);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransferVaults getTransferVaults() {
+		return (TransferVaults) eDynamicGet(WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS,
+				WrsPackage.Literals.SUPPLY_CONTROL__TRANSFER_VAULTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransferVaults basicGetTransferVaults() {
+		return (TransferVaults) eDynamicGet(WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS,
+				WrsPackage.Literals.SUPPLY_CONTROL__TRANSFER_VAULTS, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransferVaults(TransferVaults newTransferVaults) {
+		eDynamicSet(WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS, WrsPackage.Literals.SUPPLY_CONTROL__TRANSFER_VAULTS,
+				newTransferVaults);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Treasury getTreasury() {
+		return (Treasury) eDynamicGet(WrsPackage.SUPPLY_CONTROL__TREASURY, WrsPackage.Literals.SUPPLY_CONTROL__TREASURY,
 				true, true);
 	}
 
@@ -66,8 +133,8 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Genesis basicGetGenesis() {
-		return (Genesis) eDynamicGet(WrsPackage.SUPPLY_CONTROL__GENESIS, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS,
+	public Treasury basicGetTreasury() {
+		return (Treasury) eDynamicGet(WrsPackage.SUPPLY_CONTROL__TREASURY, WrsPackage.Literals.SUPPLY_CONTROL__TREASURY,
 				false, true);
 	}
 
@@ -76,8 +143,22 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGenesis(Genesis newGenesis) {
-		eDynamicSet(WrsPackage.SUPPLY_CONTROL__GENESIS, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS, newGenesis);
+	public void setTreasury(Treasury newTreasury) {
+		eDynamicSet(WrsPackage.SUPPLY_CONTROL__TREASURY, WrsPackage.Literals.SUPPLY_CONTROL__TREASURY, newTreasury);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT:
+			return basicSetGenesisAccount(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -88,10 +169,16 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WrsPackage.SUPPLY_CONTROL__GENESIS:
+		case WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT:
+			return getGenesisAccount();
+		case WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS:
 			if (resolve)
-				return getGenesis();
-			return basicGetGenesis();
+				return getTransferVaults();
+			return basicGetTransferVaults();
+		case WrsPackage.SUPPLY_CONTROL__TREASURY:
+			if (resolve)
+				return getTreasury();
+			return basicGetTreasury();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -104,8 +191,14 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WrsPackage.SUPPLY_CONTROL__GENESIS:
-			setGenesis((Genesis) newValue);
+		case WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT:
+			setGenesisAccount((GenesisAccount) newValue);
+			return;
+		case WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS:
+			setTransferVaults((TransferVaults) newValue);
+			return;
+		case WrsPackage.SUPPLY_CONTROL__TREASURY:
+			setTreasury((Treasury) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -119,8 +212,14 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WrsPackage.SUPPLY_CONTROL__GENESIS:
-			setGenesis((Genesis) null);
+		case WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT:
+			setGenesisAccount((GenesisAccount) null);
+			return;
+		case WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS:
+			setTransferVaults((TransferVaults) null);
+			return;
+		case WrsPackage.SUPPLY_CONTROL__TREASURY:
+			setTreasury((Treasury) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -134,8 +233,12 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WrsPackage.SUPPLY_CONTROL__GENESIS:
-			return basicGetGenesis() != null;
+		case WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT:
+			return getGenesisAccount() != null;
+		case WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS:
+			return basicGetTransferVaults() != null;
+		case WrsPackage.SUPPLY_CONTROL__TREASURY:
+			return basicGetTreasury() != null;
 		}
 		return super.eIsSet(featureID);
 	}

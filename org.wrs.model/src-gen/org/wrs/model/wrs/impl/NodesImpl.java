@@ -4,9 +4,12 @@ package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Node;
 import org.wrs.model.wrs.Nodes;
@@ -63,6 +66,20 @@ public class NodesImpl extends CDOObjectImpl implements Nodes {
 	@SuppressWarnings("unchecked")
 	public EList<Node> getChildren() {
 		return (EList<Node>) eDynamicGet(WrsPackage.NODES__CHILDREN, WrsPackage.Literals.NODES__CHILDREN, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.NODES__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

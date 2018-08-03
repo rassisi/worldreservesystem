@@ -141,9 +141,6 @@ public class IdentitiesItemProvider extends CDOItemProviderAdapter implements IE
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(WrsPackage.Literals.IDENTITIES__CHILDREN, WrsFactory.eINSTANCE.createWRS()));
-
 		newChildDescriptors.add(
 				createChildParameter(WrsPackage.Literals.IDENTITIES__CHILDREN, WrsFactory.eINSTANCE.createThing()));
 

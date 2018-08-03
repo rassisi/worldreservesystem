@@ -2,10 +2,16 @@
  */
 package org.wrs.model.wrs.impl;
 
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.NetworkEngine;
 import org.wrs.model.wrs.Node;
+import org.wrs.model.wrs.NodeAccount;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -18,6 +24,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.NodeImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.NodeImpl#getNetworkengine <em>Networkengine</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.NodeImpl#getNodeAccounts <em>Node Accounts</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,6 +121,31 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	public EList<NodeAccount> getNodeAccounts() {
+		return (EList<NodeAccount>) eDynamicGet(WrsPackage.NODE__NODE_ACCOUNTS, WrsPackage.Literals.NODE__NODE_ACCOUNTS,
+				true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.NODE__NODE_ACCOUNTS:
+			return ((InternalEList<?>) getNodeAccounts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -123,6 +155,8 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 			if (resolve)
 				return getNetworkengine();
 			return basicGetNetworkengine();
+		case WrsPackage.NODE__NODE_ACCOUNTS:
+			return getNodeAccounts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -132,6 +166,7 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -140,6 +175,10 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 			return;
 		case WrsPackage.NODE__NETWORKENGINE:
 			setNetworkengine((NetworkEngine) newValue);
+			return;
+		case WrsPackage.NODE__NODE_ACCOUNTS:
+			getNodeAccounts().clear();
+			getNodeAccounts().addAll((Collection<? extends NodeAccount>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,6 +198,9 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 		case WrsPackage.NODE__NETWORKENGINE:
 			setNetworkengine((NetworkEngine) null);
 			return;
+		case WrsPackage.NODE__NODE_ACCOUNTS:
+			getNodeAccounts().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -175,6 +217,8 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 			return getWeight() != WEIGHT_EDEFAULT;
 		case WrsPackage.NODE__NETWORKENGINE:
 			return basicGetNetworkengine() != null;
+		case WrsPackage.NODE__NODE_ACCOUNTS:
+			return !getNodeAccounts().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

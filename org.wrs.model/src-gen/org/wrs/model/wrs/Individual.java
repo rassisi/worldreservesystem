@@ -40,7 +40,7 @@ public interface Individual extends HumanEntity {
 
 	/**
 	 * Returns the value of the '<em><b>Legal Partner Of</b></em>' reference list.
-	 * The list contents are of type {@link org.wrs.model.wrs.LegalEntity}.
+	 * The list contents are of type {@link org.wrs.model.wrs.Individual}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Legal Partner Of</em>' reference list isn't clear,
@@ -52,6 +52,6 @@ public interface Individual extends HumanEntity {
 	 * @model
 	 * @generated
 	 */
-	EList<LegalEntity> getLegalPartnerOf();
+	EList<Individual> getLegalPartnerOf();
 
 } // Individual

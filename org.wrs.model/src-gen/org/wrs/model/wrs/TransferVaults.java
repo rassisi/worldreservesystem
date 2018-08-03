@@ -3,29 +3,30 @@
 package org.wrs.model.wrs;
 
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Transactions</b></em>'.
+ * A representation of the model object '<em><b>Transfer Vaults</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.model.wrs.Transactions#getChildren <em>Children</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.TransferVaults#getChildren <em>Children</em>}</li>
  * </ul>
  *
- * @see org.wrs.model.wrs.WrsPackage#getTransactions()
+ * @see org.wrs.model.wrs.WrsPackage#getTransferVaults()
  * @model
  * @extends CDOObject
  * @generated
  */
-public interface Transactions extends CDOObject {
+public interface TransferVaults extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
-	 * The list contents are of type {@link org.wrs.model.wrs.AbstractTransaction}.
+	 * The list contents are of type {@link org.wrs.model.wrs.TransferVault}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Children</em>' containment reference list isn't clear,
@@ -33,10 +34,10 @@ public interface Transactions extends CDOObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Children</em>' containment reference list.
-	 * @see org.wrs.model.wrs.WrsPackage#getTransactions_Children()
+	 * @see org.wrs.model.wrs.WrsPackage#getTransferVaults_Children()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<AbstractTransaction> getChildren();
+	EList<TransferVault> getChildren();
 
-} // Transactions
+} // TransferVaults

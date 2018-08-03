@@ -142,26 +142,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.Genesis} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.GenesisAccount} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GenesisItemProvider genesisItemProvider;
+	protected GenesisAccountItemProvider genesisAccountItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.model.wrs.Genesis}.
+	 * This creates an adapter for a {@link org.wrs.model.wrs.GenesisAccount}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createGenesisAdapter() {
-		if (genesisItemProvider == null) {
-			genesisItemProvider = new GenesisItemProvider(this);
+	public Adapter createGenesisAccountAdapter() {
+		if (genesisAccountItemProvider == null) {
+			genesisAccountItemProvider = new GenesisAccountItemProvider(this);
 		}
 
-		return genesisItemProvider;
+		return genesisAccountItemProvider;
 	}
 
 	/**
@@ -602,6 +602,29 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.AllTransactions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AllTransactionsItemProvider allTransactionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.AllTransactions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAllTransactionsAdapter() {
+		if (allTransactionsItemProvider == null) {
+			allTransactionsItemProvider = new AllTransactionsItemProvider(this);
+		}
+
+		return allTransactionsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.Transactions} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -671,26 +694,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.TransactionConditions} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.AllTransactionConditions} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TransactionConditionsItemProvider transactionConditionsItemProvider;
+	protected AllTransactionConditionsItemProvider allTransactionConditionsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.model.wrs.TransactionConditions}.
+	 * This creates an adapter for a {@link org.wrs.model.wrs.AllTransactionConditions}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTransactionConditionsAdapter() {
-		if (transactionConditionsItemProvider == null) {
-			transactionConditionsItemProvider = new TransactionConditionsItemProvider(this);
+	public Adapter createAllTransactionConditionsAdapter() {
+		if (allTransactionConditionsItemProvider == null) {
+			allTransactionConditionsItemProvider = new AllTransactionConditionsItemProvider(this);
 		}
 
-		return transactionConditionsItemProvider;
+		return allTransactionConditionsItemProvider;
 	}
 
 	/**
@@ -832,6 +855,52 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.regionalEconomy} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected regionalEconomyItemProvider regionalEconomyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.regionalEconomy}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createregionalEconomyAdapter() {
+		if (regionalEconomyItemProvider == null) {
+			regionalEconomyItemProvider = new regionalEconomyItemProvider(this);
+		}
+
+		return regionalEconomyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.TransferVaults} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransferVaultsItemProvider transferVaultsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.TransferVaults}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTransferVaultsAdapter() {
+		if (transferVaultsItemProvider == null) {
+			transferVaultsItemProvider = new TransferVaultsItemProvider(this);
+		}
+
+		return transferVaultsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -936,8 +1005,8 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			treasuryItemProvider.dispose();
 		if (transferVaultItemProvider != null)
 			transferVaultItemProvider.dispose();
-		if (genesisItemProvider != null)
-			genesisItemProvider.dispose();
+		if (genesisAccountItemProvider != null)
+			genesisAccountItemProvider.dispose();
 		if (assetItemProvider != null)
 			assetItemProvider.dispose();
 		if (worldEconomyItemProvider != null)
@@ -976,14 +1045,14 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			nodesItemProvider.dispose();
 		if (identitiesItemProvider != null)
 			identitiesItemProvider.dispose();
-		if (transactionsItemProvider != null)
-			transactionsItemProvider.dispose();
+		if (allTransactionsItemProvider != null)
+			allTransactionsItemProvider.dispose();
 		if (abstractTransactionItemProvider != null)
 			abstractTransactionItemProvider.dispose();
 		if (nodeAccountItemProvider != null)
 			nodeAccountItemProvider.dispose();
-		if (transactionConditionsItemProvider != null)
-			transactionConditionsItemProvider.dispose();
+		if (allTransactionConditionsItemProvider != null)
+			allTransactionConditionsItemProvider.dispose();
 		if (transactionConditionItemProvider != null)
 			transactionConditionItemProvider.dispose();
 		if (signedInputItemProvider != null)
@@ -996,6 +1065,12 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			countryRegionItemProvider.dispose();
 		if (statisticsSourceItemProvider != null)
 			statisticsSourceItemProvider.dispose();
+		if (regionalEconomyItemProvider != null)
+			regionalEconomyItemProvider.dispose();
+		if (transferVaultsItemProvider != null)
+			transferVaultsItemProvider.dispose();
+		if (transactionsItemProvider != null)
+			transactionsItemProvider.dispose();
 	}
 
 }

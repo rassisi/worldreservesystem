@@ -2,13 +2,9 @@
  */
 package org.wrs.model.wrs.impl;
 
-import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.Transaction;
 import org.wrs.model.wrs.TransactionCondition;
@@ -23,7 +19,6 @@ import org.wrs.model.wrs.WrsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getAssets <em>Assets</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getTransactions <em>Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getData <em>Data</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getNanoTime <em>Nano Time</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.TransactionImpl#getAmount <em>Amount</em>}</li>
@@ -107,17 +102,6 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 */
 	public void setAssets(Asset newAssets) {
 		eDynamicSet(WrsPackage.TRANSACTION__ASSETS, WrsPackage.Literals.TRANSACTION__ASSETS, newAssets);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<AbstractAccount> getTransactions() {
-		return (EList<AbstractAccount>) eDynamicGet(WrsPackage.TRANSACTION__TRANSACTIONS,
-				WrsPackage.Literals.TRANSACTION__TRANSACTIONS, true, true);
 	}
 
 	/**
@@ -234,8 +218,6 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 			if (resolve)
 				return getAssets();
 			return basicGetAssets();
-		case WrsPackage.TRANSACTION__TRANSACTIONS:
-			return getTransactions();
 		case WrsPackage.TRANSACTION__DATA:
 			return getData();
 		case WrsPackage.TRANSACTION__NANO_TIME:
@@ -259,10 +241,6 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 		switch (featureID) {
 		case WrsPackage.TRANSACTION__ASSETS:
 			setAssets((Asset) newValue);
-			return;
-		case WrsPackage.TRANSACTION__TRANSACTIONS:
-			getTransactions().clear();
-			getTransactions().addAll((Collection<? extends AbstractAccount>) newValue);
 			return;
 		case WrsPackage.TRANSACTION__DATA:
 			setData((String) newValue);
@@ -291,9 +269,6 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 		case WrsPackage.TRANSACTION__ASSETS:
 			setAssets((Asset) null);
 			return;
-		case WrsPackage.TRANSACTION__TRANSACTIONS:
-			getTransactions().clear();
-			return;
 		case WrsPackage.TRANSACTION__DATA:
 			setData(DATA_EDEFAULT);
 			return;
@@ -320,8 +295,6 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 		switch (featureID) {
 		case WrsPackage.TRANSACTION__ASSETS:
 			return basicGetAssets() != null;
-		case WrsPackage.TRANSACTION__TRANSACTIONS:
-			return !getTransactions().isEmpty();
 		case WrsPackage.TRANSACTION__DATA:
 			return DATA_EDEFAULT == null ? getData() != null : !DATA_EDEFAULT.equals(getData());
 		case WrsPackage.TRANSACTION__NANO_TIME:

@@ -70,10 +70,6 @@ public class WrsSwitch<T> extends Switch<T> {
 			WRS wrs = (WRS) theEObject;
 			T result = caseWRS(wrs);
 			if (result == null)
-				result = caseIdentity(wrs);
-			if (result == null)
-				result = caseLayoutable(wrs);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -99,9 +95,13 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WrsPackage.GENESIS: {
-			Genesis genesis = (Genesis) theEObject;
-			T result = caseGenesis(genesis);
+		case WrsPackage.GENESIS_ACCOUNT: {
+			GenesisAccount genesisAccount = (GenesisAccount) theEObject;
+			T result = caseGenesisAccount(genesisAccount);
+			if (result == null)
+				result = caseAbstractAccount(genesisAccount);
+			if (result == null)
+				result = caseLayoutable(genesisAccount);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -283,9 +283,9 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WrsPackage.TRANSACTIONS: {
-			Transactions transactions = (Transactions) theEObject;
-			T result = caseTransactions(transactions);
+		case WrsPackage.ALL_TRANSACTIONS: {
+			AllTransactions allTransactions = (AllTransactions) theEObject;
+			T result = caseAllTransactions(allTransactions);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -308,9 +308,9 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WrsPackage.TRANSACTION_CONDITIONS: {
-			TransactionConditions transactionConditions = (TransactionConditions) theEObject;
-			T result = caseTransactionConditions(transactionConditions);
+		case WrsPackage.ALL_TRANSACTION_CONDITIONS: {
+			AllTransactionConditions allTransactionConditions = (AllTransactionConditions) theEObject;
+			T result = caseAllTransactionConditions(allTransactionConditions);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -375,6 +375,27 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case WrsPackage.REGIONAL_ECONOMY: {
+			regionalEconomy regionalEconomy = (regionalEconomy) theEObject;
+			T result = caseregionalEconomy(regionalEconomy);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.TRANSFER_VAULTS: {
+			TransferVaults transferVaults = (TransferVaults) theEObject;
+			T result = caseTransferVaults(transferVaults);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.TRANSACTIONS: {
+			Transactions transactions = (Transactions) theEObject;
+			T result = caseTransactions(transactions);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -426,17 +447,17 @@ public class WrsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Genesis</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Genesis Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Genesis</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Genesis Account</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGenesis(Genesis object) {
+	public T caseGenesisAccount(GenesisAccount object) {
 		return null;
 	}
 
@@ -756,6 +777,21 @@ public class WrsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>All Transactions</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>All Transactions</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAllTransactions(AllTransactions object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Transactions</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -801,17 +837,17 @@ public class WrsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Transaction Conditions</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>All Transaction Conditions</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Transaction Conditions</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>All Transaction Conditions</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTransactionConditions(TransactionConditions object) {
+	public T caseAllTransactionConditions(AllTransactionConditions object) {
 		return null;
 	}
 
@@ -932,6 +968,36 @@ public class WrsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLayoutable(Layoutable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>regional Economy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>regional Economy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseregionalEconomy(regionalEconomy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Transfer Vaults</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Transfer Vaults</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTransferVaults(TransferVaults object) {
 		return null;
 	}
 

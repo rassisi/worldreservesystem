@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Identity</b></em>'.
@@ -14,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.Identity#getUUID <em>UUID</em>}</li>
- *   <li>{@link org.wrs.model.wrs.Identity#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Identity#getAllNodes <em>All Nodes</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getIdentity()
@@ -49,19 +47,29 @@ public interface Identity extends Layoutable {
 	void setUUID(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Accounts</b></em>' containment reference list.
-	 * The list contents are of type {@link org.wrs.model.wrs.AbstractAccount}.
+	 * Returns the value of the '<em><b>All Nodes</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Accounts</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>All Nodes</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accounts</em>' containment reference list.
-	 * @see org.wrs.model.wrs.WrsPackage#getIdentity_Accounts()
-	 * @model containment="true"
+	 * @return the value of the '<em>All Nodes</em>' reference.
+	 * @see #setAllNodes(Nodes)
+	 * @see org.wrs.model.wrs.WrsPackage#getIdentity_AllNodes()
+	 * @model
 	 * @generated
 	 */
-	EList<AbstractAccount> getAccounts();
+	Nodes getAllNodes();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.Identity#getAllNodes <em>All Nodes</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>All Nodes</em>' reference.
+	 * @see #getAllNodes()
+	 * @generated
+	 */
+	void setAllNodes(Nodes value);
 
 } // Identity

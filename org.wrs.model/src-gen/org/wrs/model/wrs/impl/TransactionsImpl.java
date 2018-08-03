@@ -3,9 +3,12 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractTransaction;
 import org.wrs.model.wrs.Transactions;
@@ -63,6 +66,20 @@ public class TransactionsImpl extends CDOObjectImpl implements Transactions {
 	public EList<AbstractTransaction> getChildren() {
 		return (EList<AbstractTransaction>) eDynamicGet(WrsPackage.TRANSACTIONS__CHILDREN,
 				WrsPackage.Literals.TRANSACTIONS__CHILDREN, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.TRANSACTIONS__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
