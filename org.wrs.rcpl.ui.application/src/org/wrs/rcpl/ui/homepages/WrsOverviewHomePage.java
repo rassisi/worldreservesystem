@@ -17,7 +17,6 @@ import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.homepages.AbstractNavigatorHomePage;
 import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
-import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 import org.wrs.model.wrs.WRS;
 
 import javafx.scene.Node;
@@ -47,11 +46,6 @@ public class WrsOverviewHomePage extends AbstractNavigatorHomePage {
 	protected EObject getRoot() {
 		WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
 		return wrs.getWorldeconomy();
-	}
-
-	@Override
-	public HomePageType getId() {
-		return HomePageType.OVERVIEW;
 	}
 
 	@Override

@@ -26,9 +26,9 @@ import javafx.scene.Node;
  * @author ramin
  * 
  */
-public class AccountHomePage extends AbstractNavigatorHomePage {
+public class NetworkHomePage extends AbstractNavigatorHomePage {
 
-	public AccountHomePage(IRcplUic uic, HomePage modelHomePage) {
+	public NetworkHomePage(IRcplUic uic, HomePage modelHomePage) {
 		super(uic, modelHomePage);
 	}
 

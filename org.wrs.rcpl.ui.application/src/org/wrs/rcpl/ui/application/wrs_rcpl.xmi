@@ -81,6 +81,15 @@
       <quickToolBar/>
       <ribbonToolBar/>
     </children>
+    <children
+        name="Network"
+        id="NETWORK">
+      <sideToolBar
+          toolGroups="//@allTools/@toolgroupChildren.62"/>
+      <topToolBar/>
+      <quickToolBar/>
+      <ribbonToolBar/>
+    </children>
   </allPerspectives>
   <allPreferences
       image="folder">
@@ -99,6 +108,7 @@
         id="sideBar/file"
         image="internet_cloud">
       <tools
+          id="fileNavigator"
           type="NAVIGATOR"/>
     </toolgroupChildren>
     <toolgroupChildren
@@ -277,8 +287,9 @@
         gridX="1"
         grid="true">
       <toolGroups
-          name="New Tool Group"
-          id="New Tool Group">
+          name="Paragraph Alignment"
+          id=""
+          image="alignment">
         <tools
             name="Align Text Left"
             id="align_text_left"
@@ -304,8 +315,8 @@
             notImplemented="true"/>
       </toolGroups>
       <toolGroups
-          name="New Tool Group"
-          id="New Tool Group"
+          name="Indent"
+          id="indent"
           gridX="1">
         <tools
             name="Decrease Indent"
@@ -319,7 +330,7 @@
             notImplemented="true"/>
       </toolGroups>
       <toolGroups
-          name="New Tool Group"
+          name="Spacing &amp; Bullets"
           id="New Tool Group"
           gridY="1">
         <tools
@@ -1505,12 +1516,6 @@
             id="imageSearchEngineButton"
             image="search"
             gridX="2"/>
-        <tools
-            gridY="1"
-            spanX="3"
-            spanY="2"
-            type="WEBVIEW"
-            format="http://www.google.de/search?q=horse&amp;tbm=isch"/>
       </toolGroups>
       <toolGroups
           name="Search Videos"
@@ -1532,13 +1537,6 @@
             id="imageSearchVideosButton"
             image="search"
             gridX="2"/>
-        <tools
-            gridY="1"
-            spanX="3"
-            spanY="2"
-            labeled="true"
-            type="WEBVIEW"
-            format="http://youtube.com"/>
       </toolGroups>
     </toolgroupChildren>
     <toolgroupChildren
@@ -2237,6 +2235,7 @@
         height="550.0"
         grid="true">
       <tools
+          name="Symbols"
           id="symbolTool"
           type="OTHER"
           format="SYMBOL_TOOL"/>
@@ -2395,7 +2394,7 @@
         image="clipboard"
         grid="true">
       <toolGroups
-          name="New Tool Group"
+          name="Paste Options"
           id="New Tool Group"
           gridY="2"
           spanX="3"
@@ -2613,48 +2612,7 @@
         image="clipboard"
         width="250.0"
         height="550.0"
-        grid="true">
-      <toolGroups
-          name="New Tool Group"
-          id="New Tool Group">
-        <tools
-            name="Paste"
-            id="paste"
-            image="paste"
-            toolTip="Paste"
-            spanY="2"
-            type="SPLITMENUBUTTON"/>
-        <tools
-            name="Cut"
-            id="cut"
-            image="cut"
-            gridX="1"/>
-        <tools
-            name="Copy"
-            id="copy"
-            image="copy"
-            gridX="2"/>
-      </toolGroups>
-      <toolGroups
-          name="New Tool Group"
-          id="New Tool Group"
-          gridY="1">
-        <tools
-            name="Show Outline"
-            id="showOutline"
-            image="paragraph"
-            type="TOGGLEBUTTON"/>
-        <tools
-            name="Select Object"
-            id="select_object"
-            image="select_object"
-            type="TOGGLEBUTTON"/>
-        <tools
-            name="Format Painter"
-            id="format_painter"
-            image="format_painter"/>
-      </toolGroups>
-    </toolgroupChildren>
+        grid="true"/>
     <toolgroupChildren
         name="Font"
         id="topBar/font"
@@ -2821,6 +2779,7 @@
             type="NAVIGATOR"/>
       </toolGroups>
       <tools
+          name="Favorites Set"
           id="favoritesSet"
           type="COMBO"
           format="defaul,set1"/>
@@ -3022,6 +2981,7 @@
         width="250.0"
         height="550.0">
       <tools
+          name="MyFavorites Navigator"
           id="myFavorites"
           type="NAVIGATOR"/>
     </toolgroupChildren>
@@ -3154,6 +3114,11 @@
         id="my_transactions"
         image="transaction"
         detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsMyTransactionsDetailPage"
+        groupType="EMPTY_GROUP_BUTTON"/>
+    <toolgroupChildren
+        name="Nodes"
+        id="nodes"
+        detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsNodesDetailPage"
         groupType="EMPTY_GROUP_BUTTON"/>
     <toolChildren
         name="New Word Document"
@@ -3357,9 +3322,12 @@
         type="TOOLS_EDITOR"
         showHomePageButtons="true"/>
     <children
-        name="Network"
-        id="network"
-        perspective="//@allPerspectives/@children.1"/>
+        name="World Reserve System Network"
+        id="HOME_PAGE_NETWORK"
+        image="network"
+        type="CUSTOM"
+        perspective="//@allPerspectives/@children.6"
+        showHomePageButtons="true"/>
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>

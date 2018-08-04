@@ -7,6 +7,7 @@ import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
 import org.wrs.rcpl.ui.homepages.AccountHomePage;
+import org.wrs.rcpl.ui.homepages.NetworkHomePage;
 import org.wrs.rcpl.ui.homepages.WrsOverviewHomePage;
 
 import com.joffice.rcpl.addon.office.factories.JOFactory;
@@ -26,6 +27,10 @@ public class WrsFactory extends JOFactory {
 			if ("HOME_PAGE_ACCOUNT".contentEquals(model.getId())) {
 				return new AccountHomePage(uic, model);
 			}
+			if ("HOME_PAGE_NETWORK".contentEquals(model.getId())) {
+				return new NetworkHomePage(uic, model);
+			}
+
 			return super.createHomePage(uic, model);
 		case ABOUT:
 			break;
