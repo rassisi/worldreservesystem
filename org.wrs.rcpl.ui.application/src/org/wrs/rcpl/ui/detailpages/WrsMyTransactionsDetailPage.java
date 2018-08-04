@@ -25,12 +25,6 @@ public class WrsMyTransactionsDetailPage extends AbstractModelDetailPage {
 	}
 
 	@Override
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public String getName() {
 		return "My Transactions";
 	}

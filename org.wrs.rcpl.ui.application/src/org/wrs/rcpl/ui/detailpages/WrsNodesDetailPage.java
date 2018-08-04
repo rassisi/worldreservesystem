@@ -38,12 +38,6 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 	}
 
 	@Override
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public String getName() {
 		return "My Account";
 	}

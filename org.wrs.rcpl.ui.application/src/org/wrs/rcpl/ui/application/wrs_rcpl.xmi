@@ -83,7 +83,8 @@
     </children>
     <children
         name="Network"
-        id="NETWORK">
+        id="NETWORK"
+        image="network">
       <sideToolBar
           toolGroups="//@allTools/@toolgroupChildren.62"/>
       <topToolBar/>
@@ -3322,7 +3323,7 @@
         type="TOOLS_EDITOR"
         showHomePageButtons="true"/>
     <children
-        name="World Reserve System Network"
+        name="Network"
         id="HOME_PAGE_NETWORK"
         image="network"
         type="CUSTOM"
