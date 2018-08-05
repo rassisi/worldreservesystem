@@ -1,8 +1,15 @@
 package org.wrs.rcpl.ui.detailpage.nodes;
 
+import java.sql.SQLException;
+import java.util.List;
+
 import org.controlsfx.control.WorldMapView;
+import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.detailpages.AbstractModelDetailPage;
+import org.eclipse.rcpl.ip2location.IPEntry;
+import org.eclipse.rcpl.ip2location.Ip2LocationFinder;
 import org.eclipse.rcpl.navigator.IModelDetailPageControler;
+import org.eclipse.rcpl.ui.controls.RcplWorldMapView;
 
 import javafx.scene.layout.StackPane;
 
@@ -27,23 +34,25 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 //			// System.exit(1);
 //		}
 
-		WorldMapView worldmapView = new WorldMapView();
+		RcplWorldMapView worldmapView = new RcplWorldMapView();
 
-		worldmapView.getLocations().addAll(new WorldMapView.Location("SFO", 37.619751, -122.374366),
-				new WorldMapView.Location("YYC", 51.128148, -114.010791),
-				new WorldMapView.Location("ORD", 41.975806, -87.905294),
-				new WorldMapView.Location("YOW", 45.321867, -75.668200),
-				new WorldMapView.Location("JFK", 40.642660, -73.781232),
-				new WorldMapView.Location("GRU", -23.427337, -46.478853),
-				new WorldMapView.Location("RKV", 64.131830, -21.945686),
-				new WorldMapView.Location("MAD", 40.483162, -3.579211),
-				new WorldMapView.Location("CDG", 49.014162, 2.541908),
-				new WorldMapView.Location("LHR", 51.471125, -0.461951),
-				new WorldMapView.Location("SVO", 55.972401, 37.412537),
-				new WorldMapView.Location("DEL", 28.555839, 77.100956),
-				new WorldMapView.Location("PEK", 40.077624, 116.605458),
-				new WorldMapView.Location("NRT", 35.766948, 140.385254),
-				new WorldMapView.Location("SYD", -33.939040, 151.174996));
+		Ip2LocationFinder locationFinder = new Ip2LocationFinder(Rcpl.UIC.getH2DB());
+
+		try {
+
+			locationFinder.findMyIPAddress();
+
+			List<IPEntry> entries = locationFinder.findMyLocation();
+
+			for (IPEntry ipEntry : entries) {
+				worldmapView.getLocations()
+						.add(new WorldMapView.Location("WRS Node", ipEntry.getLatitude(), ipEntry.getLongitude()));
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		stackPane.getChildren().add(worldmapView);
 

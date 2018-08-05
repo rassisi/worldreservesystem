@@ -2,8 +2,6 @@ package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.application.RcplApplicationStarter;
 import org.eclipse.rcpl.login.RcplLogin;
-import org.eclipse.rcpl.model.client.RcplSession;
-import org.wrs.model.wrs.WRS;
 
 import com.joffice.rcpl.addon.office.application.JOUic;
 
@@ -21,9 +19,9 @@ public class WrsUic extends JOUic {
 	public boolean initSession(RcplLogin login) {
 		boolean result = super.initSession(login);
 		if (result) {
-			WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
-
-			System.out.println(wrs);
+//			WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
+//
+//			System.out.println(wrs);
 
 		}
 		return result;

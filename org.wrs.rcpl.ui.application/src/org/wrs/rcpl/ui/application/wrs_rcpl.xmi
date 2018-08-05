@@ -3119,7 +3119,7 @@
     <toolgroupChildren
         name="Nodes"
         id="nodes"
-        detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsNodesDetailPage"
+        detailPaneClassName="org.wrs.rcpl.ui.detailpage.nodes.WrsNodesDetailPage"
         groupType="EMPTY_GROUP_BUTTON"/>
     <toolChildren
         name="New Word Document"
