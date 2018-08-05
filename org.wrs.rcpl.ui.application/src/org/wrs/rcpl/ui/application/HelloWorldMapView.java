@@ -3,10 +3,10 @@ package org.wrs.rcpl.ui.application;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.controlsfx.control.WorldMapView;
 import org.eclipse.rcpl.ip2location.IPEntry;
 import org.eclipse.rcpl.ip2location.Ip2LocationFinder;
 import org.eclipse.rcpl.libs.db.H2DB;
+import org.eclipse.rcpl.ui.controls.RcplWorldMapView;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -15,11 +15,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+/**
+ * @author ramin
+ *
+ */
 public class HelloWorldMapView extends Application {
 
 	public Node getPanel(Stage stage) {
 		StackPane stackPane = new StackPane();
-		WorldMapView worldMapView = new WorldMapView();
+		RcplWorldMapView worldMapView = new RcplWorldMapView();
 
 		StackPane.setAlignment(worldMapView, Pos.CENTER);
 		stackPane.getChildren().add(worldMapView);
@@ -30,10 +34,10 @@ public class HelloWorldMapView extends Application {
 			List<IPEntry> entries = locationFinder.findLocation("79.246.92.190");
 
 			for (IPEntry ipEntry : entries) {
-				worldMapView.getLocations()
-						.add(new WorldMapView.Location("WRS Node", ipEntry.getLatitude(), ipEntry.getLongitude()));
+				worldMapView.getLocations().add(new RcplWorldMapView.IPLocation("WRS Node", ipEntry));
 			}
 
+			worldMapView.configureCountryAndLocationViewFactories();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
