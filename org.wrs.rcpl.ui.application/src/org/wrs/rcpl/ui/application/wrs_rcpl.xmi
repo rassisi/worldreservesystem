@@ -91,6 +91,16 @@
       <quickToolBar/>
       <ribbonToolBar/>
     </children>
+    <children
+        name="About"
+        id="ABOUT_PERSPECTIVE"
+        image="about">
+      <sideToolBar
+          toolGroups="//@allTools/@toolgroupChildren.63"/>
+      <topToolBar/>
+      <quickToolBar/>
+      <ribbonToolBar/>
+    </children>
   </allPerspectives>
   <allPreferences
       image="folder">
@@ -3121,6 +3131,12 @@
         id="nodes"
         detailPaneClassName="org.wrs.rcpl.ui.detailpage.nodes.WrsNodesDetailPage"
         groupType="EMPTY_GROUP_BUTTON"/>
+    <toolgroupChildren
+        name="Help"
+        id="wrs_help"
+        image="help"
+        url="http://www.worldreservesystem.com/"
+        groupType="EMPTY_GROUP_BUTTON"/>
     <toolChildren
         name="New Word Document"
         id="NEW_WORD_DOCUMENT"
@@ -3314,13 +3330,8 @@
         name="About"
         id="HOME_PAGE_ABOUT"
         image="info"
-        type="ABOUT"
-        showHomePageButtons="true"/>
-    <children
-        name="Tools Editor"
-        id="toolseditor"
-        image="tool"
-        type="TOOLS_EDITOR"
+        type="CUSTOM"
+        perspective="//@allPerspectives/@children.7"
         showHomePageButtons="true"/>
     <children
         name="Network"

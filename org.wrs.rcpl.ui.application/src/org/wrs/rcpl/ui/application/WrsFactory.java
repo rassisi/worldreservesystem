@@ -1,7 +1,9 @@
 package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.IHomePage;
+import org.eclipse.rcpl.ILogin;
 import org.eclipse.rcpl.IModelManager;
+import org.eclipse.rcpl.IRcplApplicationProvider;
 import org.eclipse.rcpl.IRcplUic;
 import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.libs.db.H2DB;
@@ -96,5 +98,11 @@ public class WrsFactory extends JOFactory {
 	@Override
 	public H2DB createH2DB() {
 		return new H2DB("wrs");
+	}
+
+	@Override
+	public ILogin createLoginDialog(IRcplApplicationProvider applicationProvider) {
+		ILogin login = super.createLoginDialog(applicationProvider);
+		return login;
 	}
 }

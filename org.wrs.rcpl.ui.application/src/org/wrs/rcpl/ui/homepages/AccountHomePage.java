@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2003 - 2014 Ramin Assisi and others.
+ * Copyright (c) 2003 - 2018 Ramin Assisi and others.
  * All rights reserved. This program and the accompanying materials 
  * are made available under the terms of the Common Public License v1.0
  * which accompanies this distribution, and is available at
@@ -10,23 +10,18 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.homepages;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.IRcplUic;
-import org.eclipse.rcpl.ITreePart;
-import org.eclipse.rcpl.Rcpl;
-import org.eclipse.rcpl.homepages.AbstractNavigatorHomePage;
-import org.eclipse.rcpl.model.client.RcplSession;
+import org.eclipse.rcpl.homepages.AbstractHomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
-import org.wrs.model.wrs.Identity;
-import org.wrs.model.wrs.WRS;
 
 import javafx.scene.Node;
+import javafx.scene.layout.StackPane;
 
 /**
  * @author ramin
  * 
  */
-public class AccountHomePage extends AbstractNavigatorHomePage {
+public class AccountHomePage extends AbstractHomePage {
 
 	public AccountHomePage(IRcplUic uic, HomePage modelHomePage) {
 		super(uic, modelHomePage);
@@ -34,28 +29,13 @@ public class AccountHomePage extends AbstractNavigatorHomePage {
 
 	@Override
 	public Node getNode() {
-		super.getNode().setUserData(this);
 		return super.getNode();
 	}
 
 	@Override
-	protected EObject getRoot() {
-		WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
+	protected void doCreateContent(StackPane contentPane) {
+		// TODO Auto-generated method stub
 
-		for (Identity identity : wrs.getIdentities().getChildren()) {
-
-			String name = identity.getName();
-
-			if ("Ramin".equals(name)) {
-				return identity;
-			}
-		}
-
-		return wrs;
 	}
 
-	@Override
-	protected ITreePart getTreePart() {
-		return Rcpl.UIC.getApplicationTreepart();
-	}
 }

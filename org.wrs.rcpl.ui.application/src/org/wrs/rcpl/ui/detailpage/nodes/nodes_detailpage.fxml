@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- 
+<?import jfxtras.labs.scene.control.BigDecimalField?>
+-->
+
+<VBox prefHeight="581.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.7604345340194396" VBox.vgrow="ALWAYS">
+        <items>
+            <StackPane fx:id="mapView" prefHeight="150.0" prefWidth="200.0" />
+            <StackPane fx:id="controlPane" prefHeight="150.0" prefWidth="200.0" />
+        </items>
+      </SplitPane>
+   </children>
+</VBox>

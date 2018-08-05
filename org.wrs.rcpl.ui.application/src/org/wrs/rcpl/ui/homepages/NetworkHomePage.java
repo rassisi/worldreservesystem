@@ -10,52 +10,26 @@
  *******************************************************************************/
 package org.wrs.rcpl.ui.homepages;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcpl.IRcplUic;
-import org.eclipse.rcpl.ITreePart;
-import org.eclipse.rcpl.Rcpl;
-import org.eclipse.rcpl.homepages.AbstractNavigatorHomePage;
-import org.eclipse.rcpl.model.client.RcplSession;
+import org.eclipse.rcpl.homepages.AbstractHomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
-import org.wrs.model.wrs.Identity;
-import org.wrs.model.wrs.WRS;
 
-import javafx.scene.Node;
+import javafx.scene.layout.StackPane;
 
 /**
  * @author ramin
  * 
  */
-public class NetworkHomePage extends AbstractNavigatorHomePage {
+public class NetworkHomePage extends AbstractHomePage {
 
 	public NetworkHomePage(IRcplUic uic, HomePage modelHomePage) {
 		super(uic, modelHomePage);
 	}
 
 	@Override
-	public Node getNode() {
-		super.getNode().setUserData(this);
-		return super.getNode();
+	protected void doCreateContent(StackPane contentPane) {
+		// TODO Auto-generated method stub
+
 	}
 
-	@Override
-	protected EObject getRoot() {
-		WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
-
-		for (Identity identity : wrs.getIdentities().getChildren()) {
-
-			String name = identity.getName();
-
-			if ("Ramin".equals(name)) {
-				return identity;
-			}
-		}
-
-		return wrs;
-	}
-
-	@Override
-	protected ITreePart getTreePart() {
-		return Rcpl.UIC.getApplicationTreepart();
-	}
 }

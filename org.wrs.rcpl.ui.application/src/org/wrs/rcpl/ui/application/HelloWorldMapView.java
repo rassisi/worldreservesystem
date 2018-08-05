@@ -31,7 +31,7 @@ public class HelloWorldMapView extends Application {
 		Ip2LocationFinder locationFinder = new Ip2LocationFinder(new H2DB("wrs"));
 
 		try {
-			List<IPEntry> entries = locationFinder.findLocation("79.246.92.190");
+			List<IPEntry> entries = locationFinder.findMyLocation();
 
 			for (IPEntry ipEntry : entries) {
 				worldMapView.getLocations().add(new RcplWorldMapView.IPLocation("WRS Node", ipEntry));

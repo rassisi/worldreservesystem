@@ -1,9 +1,7 @@
 package org.wrs.rcpl.ui.application;
 
+import org.eclipse.rcpl.ILogin;
 import org.eclipse.rcpl.IRcplApplicationProvider;
-import org.eclipse.rcpl.IRcplFactory;
-import org.eclipse.rcpl.IToolFactory;
-import org.eclipse.rcpl.login.RcplLogin;
 import org.eclipse.rcpl.ui.controler.RcplUic;
 
 import com.joffice.rcpl.addon.office.application.JOApplicationStarter;
@@ -19,17 +17,8 @@ public class WrsApplicationStarter extends JOApplicationStarter {
 	}
 
 	@Override
-	protected RcplUic createUIC(RcplLogin login) {
+	protected RcplUic createUIC(ILogin login) {
 		return new WrsUic(this);
 	}
 
-	@Override
-	protected IToolFactory createToolFactory() {
-		return new WrsToolFactory();
-	}
-
-	@Override
-	protected IRcplFactory createRcplFactory() {
-		return new WrsFactory();
-	}
 }

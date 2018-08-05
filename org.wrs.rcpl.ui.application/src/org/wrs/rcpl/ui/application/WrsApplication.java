@@ -12,8 +12,8 @@ package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.IApplicationStarter;
 import org.eclipse.rcpl.IRcplApplicationProvider;
-import org.eclipse.rcpl.application.RcplApplication;
-import org.eclipse.rcpl.application.RcplApplicationProvider;
+import org.eclipse.rcpl.application.AbstractRcplApplication;
+import org.eclipse.rcpl.application.AbstractApplicationProvider;
 import org.eclipse.rcpl.model.ISessionFacory;
 import org.eclipse.rcpl.model.RCPLModel;
 import org.eclipse.rcpl.model.client.AbstractSession;
@@ -23,12 +23,12 @@ import org.eclipse.rcpl.model.client.RcplSession;
  * @author ramin
  *
  */
-public class WrsApplication extends RcplApplication {
+public class WrsApplication extends AbstractRcplApplication {
 
 	private final static String APPLICATION_ID = "wrs";
 
 	public static void main(String[] args) {
-		RcplApplicationProvider.init(args);
+		AbstractApplicationProvider.init(args);
 		launch(args);
 	}
 
