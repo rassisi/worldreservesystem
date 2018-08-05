@@ -116,8 +116,9 @@
   <allTools>
     <toolgroupChildren
         name="File"
-        id="sideBar/file"
-        image="internet_cloud">
+        id="file"
+        image="internet_cloud"
+        type="NAVIGATOR">
       <tools
           id="fileNavigator"
           type="NAVIGATOR"/>
