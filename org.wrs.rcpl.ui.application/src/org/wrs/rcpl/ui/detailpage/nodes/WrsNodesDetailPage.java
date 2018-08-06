@@ -14,7 +14,6 @@ import org.eclipse.rcpl.ip2location.IPEntry;
 import org.eclipse.rcpl.ip2location.Ip2LocationFinder;
 import org.eclipse.rcpl.navigator.IModelDetailPageControler;
 import org.eclipse.rcpl.ui.controls.RcplWorldMapView;
-import org.wrs.rcpl.ui.detailpage.nodes.HelloTaskProgressView.TaskType;
 
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -105,16 +104,10 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 	}
 
 	class MyTask extends Task<Void> {
-		private TaskType type;
 
 		public MyTask(String title) {
 			updateTitle(title);
 
-			type = TaskType.values()[(int) (Math.random() * 3)];
-		}
-
-		public TaskType getType() {
-			return type;
 		}
 
 		public void message(String msg) {
