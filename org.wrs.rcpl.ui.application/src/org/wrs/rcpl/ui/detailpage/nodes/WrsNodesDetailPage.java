@@ -46,11 +46,9 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 			node = fxmlLoader.load();
 			stackPane.getChildren().add(node);
 		} catch (IOException e) {
-			e.printStackTrace();
-			// System.exit(1);
+			Rcpl.printErrorln("", e);
 		}
 
-		getProgressViewArea().getChildren().add(getTaskProgressView());
 		worldmapView = new RcplWorldMapView();
 		worldmapView.configureCountryAndLocationViewFactories();
 
