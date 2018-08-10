@@ -60,15 +60,11 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 
 	@Override
 	protected void task_1() {
-		updateLocations();
-	}
-
-	private void updateLocations() {
 		Ip2LocationFinder locationFinder = new Ip2LocationFinder(Rcpl.UIC.getH2DB());
 		try {
-			taskMessage("Collect IP-Adresses");
+			taskMessage(1, "Collect IP-Adresses");
 			locationFinder.findMyIPAddress();
-			taskMessage("Find Locations");
+			taskMessage(1, "Find Locations");
 			List<IPEntry> entries = locationFinder.findMyLocation();
 
 			Platform.runLater(new Runnable() {
@@ -83,7 +79,6 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 		} catch (SQLException e) {
 			Rcpl.printErrorln("", e);
 		}
-		Rcpl.showProgress(false);
 	}
 
 	@Override
