@@ -62,9 +62,9 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 	protected void task_1() {
 		Ip2LocationFinder locationFinder = new Ip2LocationFinder(Rcpl.UIC.getH2DB());
 		try {
-			taskMessage(1, "Collect IP-Adresses");
+			taskProgress(1, "Collect IP-Adresses", 0, 0);
 			locationFinder.findMyIPAddress();
-			taskMessage(1, "Find Locations");
+			taskProgress(1, "Find Locations", 0, 0);
 			List<IPEntry> entries = locationFinder.findMyLocation();
 
 			Platform.runLater(new Runnable() {
