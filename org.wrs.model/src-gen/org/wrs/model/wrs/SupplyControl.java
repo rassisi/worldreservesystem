@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Supply Control</b></em>'.
@@ -20,10 +18,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getSupplyControl()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface SupplyControl extends CDOObject {
+public interface SupplyControl extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>Genesis Account</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

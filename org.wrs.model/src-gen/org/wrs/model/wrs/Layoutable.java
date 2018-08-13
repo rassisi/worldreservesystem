@@ -18,6 +18,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link org.wrs.model.wrs.Layoutable#getW <em>W</em>}</li>
  *   <li>{@link org.wrs.model.wrs.Layoutable#getH <em>H</em>}</li>
  *   <li>{@link org.wrs.model.wrs.Layoutable#getName <em>Name</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Layoutable#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getLayoutable()
@@ -155,5 +156,31 @@ public interface Layoutable extends CDOObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see org.wrs.model.wrs.WrsPackage#getLayoutable_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link org.wrs.model.wrs.Layoutable#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Layoutable

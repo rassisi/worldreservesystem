@@ -4,20 +4,10 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
-
-import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -30,8 +20,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SignedInputItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SignedInputItemProvider extends LayoutableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -153,7 +142,7 @@ public class SignedInputItemProvider extends CDOItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SignedInput) object).getVariableName();
+		String label = ((SignedInput) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_SignedInput_type")
 				: getString("_UI_SignedInput_type") + " " + label;
 	}
@@ -189,17 +178,6 @@ public class SignedInputItemProvider extends CDOItemProviderAdapter implements I
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WrsEditPlugin.INSTANCE;
 	}
 
 }

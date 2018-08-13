@@ -9,7 +9,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Accounts;
 import org.wrs.model.wrs.AllTransactionConditions;
 import org.wrs.model.wrs.AllTransactions;
@@ -38,7 +37,7 @@ import org.wrs.model.wrs.WrsPackage;
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getRegisteredasstets <em>Registeredasstets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getWorldeconomy <em>Worldeconomy</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getNodes <em>Nodes</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getIdentities <em>Identities</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAlldentities <em>Alldentities</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAllTransactions <em>All Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getAllTransactionConditions <em>All Transaction Conditions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.WRSImpl#getTransfervaults <em>Transfervaults</em>}</li>
@@ -47,7 +46,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class WRSImpl extends CDOObjectImpl implements WRS {
+public class WRSImpl extends LayoutableImpl implements WRS {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,16 +64,6 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.WRS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -254,8 +243,9 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Identities getIdentities() {
-		return (Identities) eDynamicGet(WrsPackage.WRS__IDENTITIES, WrsPackage.Literals.WRS__IDENTITIES, true, true);
+	public Identities getAlldentities() {
+		return (Identities) eDynamicGet(WrsPackage.WRS__ALLDENTITIES, WrsPackage.Literals.WRS__ALLDENTITIES, true,
+				true);
 	}
 
 	/**
@@ -263,8 +253,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIdentities(Identities newIdentities, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newIdentities, WrsPackage.WRS__IDENTITIES, msgs);
+	public NotificationChain basicSetAlldentities(Identities newAlldentities, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newAlldentities, WrsPackage.WRS__ALLDENTITIES, msgs);
 		return msgs;
 	}
 
@@ -273,8 +263,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentities(Identities newIdentities) {
-		eDynamicSet(WrsPackage.WRS__IDENTITIES, WrsPackage.Literals.WRS__IDENTITIES, newIdentities);
+	public void setAlldentities(Identities newAlldentities) {
+		eDynamicSet(WrsPackage.WRS__ALLDENTITIES, WrsPackage.Literals.WRS__ALLDENTITIES, newAlldentities);
 	}
 
 	/**
@@ -427,8 +417,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return basicSetWorldeconomy(null, msgs);
 		case WrsPackage.WRS__NODES:
 			return basicSetNodes(null, msgs);
-		case WrsPackage.WRS__IDENTITIES:
-			return basicSetIdentities(null, msgs);
+		case WrsPackage.WRS__ALLDENTITIES:
+			return basicSetAlldentities(null, msgs);
 		case WrsPackage.WRS__ALL_TRANSACTIONS:
 			return basicSetAllTransactions(null, msgs);
 		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
@@ -461,8 +451,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return getWorldeconomy();
 		case WrsPackage.WRS__NODES:
 			return getNodes();
-		case WrsPackage.WRS__IDENTITIES:
-			return getIdentities();
+		case WrsPackage.WRS__ALLDENTITIES:
+			return getAlldentities();
 		case WrsPackage.WRS__ALL_TRANSACTIONS:
 			return getAllTransactions();
 		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
@@ -501,8 +491,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		case WrsPackage.WRS__NODES:
 			setNodes((Nodes) newValue);
 			return;
-		case WrsPackage.WRS__IDENTITIES:
-			setIdentities((Identities) newValue);
+		case WrsPackage.WRS__ALLDENTITIES:
+			setAlldentities((Identities) newValue);
 			return;
 		case WrsPackage.WRS__ALL_TRANSACTIONS:
 			setAllTransactions((AllTransactions) newValue);
@@ -546,8 +536,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 		case WrsPackage.WRS__NODES:
 			setNodes((Nodes) null);
 			return;
-		case WrsPackage.WRS__IDENTITIES:
-			setIdentities((Identities) null);
+		case WrsPackage.WRS__ALLDENTITIES:
+			setAlldentities((Identities) null);
 			return;
 		case WrsPackage.WRS__ALL_TRANSACTIONS:
 			setAllTransactions((AllTransactions) null);
@@ -585,8 +575,8 @@ public class WRSImpl extends CDOObjectImpl implements WRS {
 			return getWorldeconomy() != null;
 		case WrsPackage.WRS__NODES:
 			return getNodes() != null;
-		case WrsPackage.WRS__IDENTITIES:
-			return getIdentities() != null;
+		case WrsPackage.WRS__ALLDENTITIES:
+			return getAlldentities() != null;
 		case WrsPackage.WRS__ALL_TRANSACTIONS:
 			return getAllTransactions() != null;
 		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:

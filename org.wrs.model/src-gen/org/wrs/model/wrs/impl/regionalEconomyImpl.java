@@ -3,9 +3,6 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.wrs.model.wrs.WrsPackage;
 import org.wrs.model.wrs.regionalEconomy;
 
@@ -16,7 +13,7 @@ import org.wrs.model.wrs.regionalEconomy;
  *
  * @generated
  */
-public class regionalEconomyImpl extends CDOObjectImpl implements regionalEconomy {
+public class regionalEconomyImpl extends LayoutableImpl implements regionalEconomy {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,16 +31,6 @@ public class regionalEconomyImpl extends CDOObjectImpl implements regionalEconom
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.REGIONAL_ECONOMY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 } //regionalEconomyImpl

@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>WRS</b></em>'.
@@ -19,7 +17,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link org.wrs.model.wrs.WRS#getRegisteredasstets <em>Registeredasstets</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getWorldeconomy <em>Worldeconomy</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getNodes <em>Nodes</em>}</li>
- *   <li>{@link org.wrs.model.wrs.WRS#getIdentities <em>Identities</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.WRS#getAlldentities <em>Alldentities</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getAllTransactions <em>All Transactions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getAllTransactionConditions <em>All Transaction Conditions</em>}</li>
  *   <li>{@link org.wrs.model.wrs.WRS#getTransfervaults <em>Transfervaults</em>}</li>
@@ -28,10 +26,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getWRS()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface WRS extends CDOObject {
+public interface WRS extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>Mainvault</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -189,30 +186,30 @@ public interface WRS extends CDOObject {
 	void setNodes(Nodes value);
 
 	/**
-	 * Returns the value of the '<em><b>Identities</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Alldentities</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Identities</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Alldentities</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Identities</em>' containment reference.
-	 * @see #setIdentities(Identities)
-	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Identities()
+	 * @return the value of the '<em>Alldentities</em>' containment reference.
+	 * @see #setAlldentities(Identities)
+	 * @see org.wrs.model.wrs.WrsPackage#getWRS_Alldentities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Identities getIdentities();
+	Identities getAlldentities();
 
 	/**
-	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getIdentities <em>Identities</em>}' containment reference.
+	 * Sets the value of the '{@link org.wrs.model.wrs.WRS#getAlldentities <em>Alldentities</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Identities</em>' containment reference.
-	 * @see #getIdentities()
+	 * @param value the new value of the '<em>Alldentities</em>' containment reference.
+	 * @see #getAlldentities()
 	 * @generated
 	 */
-	void setIdentities(Identities value);
+	void setAlldentities(Identities value);
 
 	/**
 	 * Returns the value of the '<em><b>All Transactions</b></em>' containment reference.

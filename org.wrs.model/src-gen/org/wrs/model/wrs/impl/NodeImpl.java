@@ -8,7 +8,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.NetworkEngine;
 import org.wrs.model.wrs.Node;
 import org.wrs.model.wrs.NodeAccount;
@@ -29,7 +28,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class NodeImpl extends CDOObjectImpl implements Node {
+public class NodeImpl extends LayoutableImpl implements Node {
 	/**
 	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,16 +56,6 @@ public class NodeImpl extends CDOObjectImpl implements Node {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.NODE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

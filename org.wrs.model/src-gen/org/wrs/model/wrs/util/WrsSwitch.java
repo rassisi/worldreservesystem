@@ -70,6 +70,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			WRS wrs = (WRS) theEObject;
 			T result = caseWRS(wrs);
 			if (result == null)
+				result = caseLayoutable(wrs);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -119,12 +121,16 @@ public class WrsSwitch<T> extends Switch<T> {
 			WorldEconomy worldEconomy = (WorldEconomy) theEObject;
 			T result = caseWorldEconomy(worldEconomy);
 			if (result == null)
+				result = caseLayoutable(worldEconomy);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.NATIONAL_ECONOMY: {
 			NationalEconomy nationalEconomy = (NationalEconomy) theEObject;
 			T result = caseNationalEconomy(nationalEconomy);
+			if (result == null)
+				result = caseLayoutable(nationalEconomy);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -133,12 +139,16 @@ public class WrsSwitch<T> extends Switch<T> {
 			Country country = (Country) theEObject;
 			T result = caseCountry(country);
 			if (result == null)
+				result = caseLayoutable(country);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.FIAT_CURRENCY: {
 			FiatCurrency fiatCurrency = (FiatCurrency) theEObject;
 			T result = caseFiatCurrency(fiatCurrency);
+			if (result == null)
+				result = caseLayoutable(fiatCurrency);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -204,12 +214,18 @@ public class WrsSwitch<T> extends Switch<T> {
 			SupplyControl supplyControl = (SupplyControl) theEObject;
 			T result = caseSupplyControl(supplyControl);
 			if (result == null)
+				result = caseLayoutable(supplyControl);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.ACCOUNTS: {
 			Accounts accounts = (Accounts) theEObject;
 			T result = caseAccounts(accounts);
+			if (result == null)
+				result = caseLayoutableContainer(accounts);
+			if (result == null)
+				result = caseLayoutable(accounts);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -220,12 +236,18 @@ public class WrsSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractTransaction(transaction);
 			if (result == null)
+				result = caseLayoutable(transaction);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.REGISTERED_ASSETS: {
 			RegisteredAssets registeredAssets = (RegisteredAssets) theEObject;
 			T result = caseRegisteredAssets(registeredAssets);
+			if (result == null)
+				result = caseLayoutableContainer(registeredAssets);
+			if (result == null)
+				result = caseLayoutable(registeredAssets);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -245,12 +267,16 @@ public class WrsSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractTransaction(transactionCollection);
 			if (result == null)
+				result = caseLayoutable(transactionCollection);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.NODE: {
 			Node node = (Node) theEObject;
 			T result = caseNode(node);
+			if (result == null)
+				result = caseLayoutable(node);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -259,12 +285,18 @@ public class WrsSwitch<T> extends Switch<T> {
 			NetworkEngine networkEngine = (NetworkEngine) theEObject;
 			T result = caseNetworkEngine(networkEngine);
 			if (result == null)
+				result = caseLayoutable(networkEngine);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.COUNTRIES: {
 			Countries countries = (Countries) theEObject;
 			T result = caseCountries(countries);
+			if (result == null)
+				result = caseLayoutableContainer(countries);
+			if (result == null)
+				result = caseLayoutable(countries);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -273,12 +305,20 @@ public class WrsSwitch<T> extends Switch<T> {
 			Nodes nodes = (Nodes) theEObject;
 			T result = caseNodes(nodes);
 			if (result == null)
+				result = caseLayoutableContainer(nodes);
+			if (result == null)
+				result = caseLayoutable(nodes);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.IDENTITIES: {
 			Identities identities = (Identities) theEObject;
 			T result = caseIdentities(identities);
+			if (result == null)
+				result = caseLayoutableContainer(identities);
+			if (result == null)
+				result = caseLayoutable(identities);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -287,12 +327,18 @@ public class WrsSwitch<T> extends Switch<T> {
 			AllTransactions allTransactions = (AllTransactions) theEObject;
 			T result = caseAllTransactions(allTransactions);
 			if (result == null)
+				result = caseLayoutableContainer(allTransactions);
+			if (result == null)
+				result = caseLayoutable(allTransactions);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.ABSTRACT_TRANSACTION: {
 			AbstractTransaction abstractTransaction = (AbstractTransaction) theEObject;
 			T result = caseAbstractTransaction(abstractTransaction);
+			if (result == null)
+				result = caseLayoutable(abstractTransaction);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -312,12 +358,18 @@ public class WrsSwitch<T> extends Switch<T> {
 			AllTransactionConditions allTransactionConditions = (AllTransactionConditions) theEObject;
 			T result = caseAllTransactionConditions(allTransactionConditions);
 			if (result == null)
+				result = caseLayoutableContainer(allTransactionConditions);
+			if (result == null)
+				result = caseLayoutable(allTransactionConditions);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.TRANSACTION_CONDITION: {
 			TransactionCondition transactionCondition = (TransactionCondition) theEObject;
 			T result = caseTransactionCondition(transactionCondition);
+			if (result == null)
+				result = caseLayoutable(transactionCondition);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -326,12 +378,16 @@ public class WrsSwitch<T> extends Switch<T> {
 			SignedInput signedInput = (SignedInput) theEObject;
 			T result = caseSignedInput(signedInput);
 			if (result == null)
+				result = caseLayoutable(signedInput);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.STATISTICS: {
 			Statistics statistics = (Statistics) theEObject;
 			T result = caseStatistics(statistics);
+			if (result == null)
+				result = caseLayoutable(statistics);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -340,6 +396,10 @@ public class WrsSwitch<T> extends Switch<T> {
 			StatisticDatas statisticDatas = (StatisticDatas) theEObject;
 			T result = caseStatisticDatas(statisticDatas);
 			if (result == null)
+				result = caseLayoutableContainer(statisticDatas);
+			if (result == null)
+				result = caseLayoutable(statisticDatas);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -347,12 +407,16 @@ public class WrsSwitch<T> extends Switch<T> {
 			CountryRegion countryRegion = (CountryRegion) theEObject;
 			T result = caseCountryRegion(countryRegion);
 			if (result == null)
+				result = caseLayoutable(countryRegion);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.STATISTICS_SOURCE: {
 			StatisticsSource statisticsSource = (StatisticsSource) theEObject;
 			T result = caseStatisticsSource(statisticsSource);
+			if (result == null)
+				result = caseLayoutable(statisticsSource);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -379,6 +443,8 @@ public class WrsSwitch<T> extends Switch<T> {
 			regionalEconomy regionalEconomy = (regionalEconomy) theEObject;
 			T result = caseregionalEconomy(regionalEconomy);
 			if (result == null)
+				result = caseLayoutable(regionalEconomy);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -386,12 +452,40 @@ public class WrsSwitch<T> extends Switch<T> {
 			TransferVaults transferVaults = (TransferVaults) theEObject;
 			T result = caseTransferVaults(transferVaults);
 			if (result == null)
+				result = caseLayoutableContainer(transferVaults);
+			if (result == null)
+				result = caseLayoutable(transferVaults);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WrsPackage.TRANSACTIONS: {
 			Transactions transactions = (Transactions) theEObject;
 			T result = caseTransactions(transactions);
+			if (result == null)
+				result = caseLayoutableContainer(transactions);
+			if (result == null)
+				result = caseLayoutable(transactions);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.REGION_IDENTITIES: {
+			RegionIdentities regionIdentities = (RegionIdentities) theEObject;
+			T result = caseRegionIdentities(regionIdentities);
+			if (result == null)
+				result = caseLayoutableContainer(regionIdentities);
+			if (result == null)
+				result = caseLayoutable(regionIdentities);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.LAYOUTABLE_CONTAINER: {
+			LayoutableContainer layoutableContainer = (LayoutableContainer) theEObject;
+			T result = caseLayoutableContainer(layoutableContainer);
+			if (result == null)
+				result = caseLayoutable(layoutableContainer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -803,6 +897,36 @@ public class WrsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTransactions(Transactions object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Region Identities</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Region Identities</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRegionIdentities(RegionIdentities object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Layoutable Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Layoutable Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLayoutableContainer(LayoutableContainer object) {
 		return null;
 	}
 

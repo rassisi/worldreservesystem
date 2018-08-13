@@ -3,16 +3,9 @@
 package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Identities;
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.WrsPackage;
@@ -30,7 +23,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class IdentitiesImpl extends CDOObjectImpl implements Identities {
+public class IdentitiesImpl extends LayoutableContainerImpl implements Identities {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,34 +48,10 @@ public class IdentitiesImpl extends CDOObjectImpl implements Identities {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	public EList<Identity> getChildren() {
 		return (EList<Identity>) eDynamicGet(WrsPackage.IDENTITIES__CHILDREN, WrsPackage.Literals.IDENTITIES__CHILDREN,
 				true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case WrsPackage.IDENTITIES__CHILDREN:
-			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

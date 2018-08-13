@@ -648,6 +648,52 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.RegionIdentities} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RegionIdentitiesItemProvider regionIdentitiesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.RegionIdentities}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRegionIdentitiesAdapter() {
+		if (regionIdentitiesItemProvider == null) {
+			regionIdentitiesItemProvider = new RegionIdentitiesItemProvider(this);
+		}
+
+		return regionIdentitiesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.LayoutableContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LayoutableContainerItemProvider layoutableContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.LayoutableContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLayoutableContainerAdapter() {
+		if (layoutableContainerItemProvider == null) {
+			layoutableContainerItemProvider = new LayoutableContainerItemProvider(this);
+		}
+
+		return layoutableContainerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.AbstractTransaction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1071,6 +1117,10 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			transferVaultsItemProvider.dispose();
 		if (transactionsItemProvider != null)
 			transactionsItemProvider.dispose();
+		if (regionIdentitiesItemProvider != null)
+			regionIdentitiesItemProvider.dispose();
+		if (layoutableContainerItemProvider != null)
+			layoutableContainerItemProvider.dispose();
 	}
 
 }

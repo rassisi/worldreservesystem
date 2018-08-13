@@ -2,7 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -22,10 +21,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.wrs.model.wrs.WrsPackage#getWorldEconomy()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface WorldEconomy extends CDOObject {
+public interface WorldEconomy extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>Nationaleconomies</b></em>' reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.NationalEconomy}.

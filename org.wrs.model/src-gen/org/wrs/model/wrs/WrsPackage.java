@@ -169,132 +169,6 @@ public interface WrsPackage extends EPackage {
 	int IDENTITY = 9;
 
 	/**
-	 * The feature id for the '<em><b>Mainvault</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__MAINVAULT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Supplycontrol</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__SUPPLYCONTROL = 1;
-
-	/**
-	 * The feature id for the '<em><b>All Accounts</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__ALL_ACCOUNTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Registeredasstets</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__REGISTEREDASSTETS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Worldeconomy</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__WORLDECONOMY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Nodes</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__NODES = 5;
-
-	/**
-	 * The feature id for the '<em><b>Identities</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__IDENTITIES = 6;
-
-	/**
-	 * The feature id for the '<em><b>All Transactions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__ALL_TRANSACTIONS = 7;
-
-	/**
-	 * The feature id for the '<em><b>All Transaction Conditions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__ALL_TRANSACTION_CONDITIONS = 8;
-
-	/**
-	 * The feature id for the '<em><b>Transfervaults</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__TRANSFERVAULTS = 9;
-
-	/**
-	 * The feature id for the '<em><b>Genesis Account</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS__GENESIS_ACCOUNT = 10;
-
-	/**
-	 * The number of structural features of the '<em>WRS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS_FEATURE_COUNT = 11;
-
-	/**
-	 * The operation id for the '<em>Create Identity</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS___CREATE_IDENTITY = 0;
-
-	/**
-	 * The number of operations of the '<em>WRS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WRS_OPERATION_COUNT = 1;
-
-	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -340,13 +214,22 @@ public interface WrsPackage extends EPackage {
 	int LAYOUTABLE__NAME = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE__ID = 5;
+
+	/**
 	 * The number of structural features of the '<em>Layoutable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYOUTABLE_FEATURE_COUNT = 5;
+	int LAYOUTABLE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Layoutable</em>' class.
@@ -356,6 +239,186 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYOUTABLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__ID = LAYOUTABLE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Mainvault</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__MAINVAULT = LAYOUTABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Supplycontrol</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__SUPPLYCONTROL = LAYOUTABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>All Accounts</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__ALL_ACCOUNTS = LAYOUTABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Registeredasstets</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__REGISTEREDASSTETS = LAYOUTABLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Worldeconomy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__WORLDECONOMY = LAYOUTABLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Nodes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__NODES = LAYOUTABLE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Alldentities</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__ALLDENTITIES = LAYOUTABLE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>All Transactions</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__ALL_TRANSACTIONS = LAYOUTABLE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>All Transaction Conditions</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__ALL_TRANSACTION_CONDITIONS = LAYOUTABLE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Transfervaults</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__TRANSFERVAULTS = LAYOUTABLE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Genesis Account</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS__GENESIS_ACCOUNT = LAYOUTABLE_FEATURE_COUNT + 10;
+
+	/**
+	 * The number of structural features of the '<em>WRS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Create Identity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS___CREATE_IDENTITY = LAYOUTABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>WRS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRS_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -401,6 +464,15 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSTRACT_ACCOUNT__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACCOUNT__ID = LAYOUTABLE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -493,6 +565,15 @@ public interface WrsPackage extends EPackage {
 	int TREASURY__NAME = ABSTRACT_ACCOUNT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREASURY__ID = ABSTRACT_ACCOUNT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -581,6 +662,15 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSFER_VAULT__NAME = ABSTRACT_ACCOUNT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULT__ID = ABSTRACT_ACCOUNT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
@@ -683,6 +773,15 @@ public interface WrsPackage extends EPackage {
 	int GENESIS_ACCOUNT__NAME = ABSTRACT_ACCOUNT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENESIS_ACCOUNT__ID = ABSTRACT_ACCOUNT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -773,6 +872,15 @@ public interface WrsPackage extends EPackage {
 	int ASSET__NAME = LAYOUTABLE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Asset Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -818,13 +926,67 @@ public interface WrsPackage extends EPackage {
 	int ASSET_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_ECONOMY__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Nationaleconomies</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY__NATIONALECONOMIES = 0;
+	int WORLD_ECONOMY__NATIONALECONOMIES = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Statisticssource</b></em>' containment reference.
@@ -833,7 +995,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY__STATISTICSSOURCE = 1;
+	int WORLD_ECONOMY__STATISTICSSOURCE = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Statistic Datas</b></em>' containment reference.
@@ -842,7 +1004,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY__STATISTIC_DATAS = 2;
+	int WORLD_ECONOMY__STATISTIC_DATAS = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Countries</b></em>' containment reference.
@@ -851,7 +1013,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY__COUNTRIES = 3;
+	int WORLD_ECONOMY__COUNTRIES = LAYOUTABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>World Economy</em>' class.
@@ -860,7 +1022,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY_FEATURE_COUNT = 4;
+	int WORLD_ECONOMY_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>World Economy</em>' class.
@@ -869,7 +1031,61 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_ECONOMY_OPERATION_COUNT = 0;
+	int WORLD_ECONOMY_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NATIONAL_ECONOMY__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NATIONAL_ECONOMY__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NATIONAL_ECONOMY__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NATIONAL_ECONOMY__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NATIONAL_ECONOMY__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NATIONAL_ECONOMY__ID = LAYOUTABLE__ID;
 
 	/**
 	 * The number of structural features of the '<em>National Economy</em>' class.
@@ -878,7 +1094,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NATIONAL_ECONOMY_FEATURE_COUNT = 0;
+	int NATIONAL_ECONOMY_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>National Economy</em>' class.
@@ -887,7 +1103,61 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NATIONAL_ECONOMY_OPERATION_COUNT = 0;
+	int NATIONAL_ECONOMY_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__ID = LAYOUTABLE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Fiatcurrency</b></em>' containment reference.
@@ -896,7 +1166,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY__FIATCURRENCY = 0;
+	int COUNTRY__FIATCURRENCY = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Nationaleconomy</b></em>' containment reference.
@@ -905,7 +1175,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY__NATIONALECONOMY = 1;
+	int COUNTRY__NATIONALECONOMY = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Regions</b></em>' containment reference list.
@@ -914,7 +1184,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY__REGIONS = 2;
+	int COUNTRY__REGIONS = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Country</em>' class.
@@ -923,7 +1193,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY_FEATURE_COUNT = 3;
+	int COUNTRY_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Country</em>' class.
@@ -932,7 +1202,61 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY_OPERATION_COUNT = 0;
+	int COUNTRY_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIAT_CURRENCY__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIAT_CURRENCY__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIAT_CURRENCY__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIAT_CURRENCY__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIAT_CURRENCY__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIAT_CURRENCY__ID = LAYOUTABLE__ID;
 
 	/**
 	 * The number of structural features of the '<em>Fiat Currency</em>' class.
@@ -941,7 +1265,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIAT_CURRENCY_FEATURE_COUNT = 0;
+	int FIAT_CURRENCY_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Fiat Currency</em>' class.
@@ -950,7 +1274,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIAT_CURRENCY_OPERATION_COUNT = 0;
+	int FIAT_CURRENCY_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -996,6 +1320,15 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int IDENTITY__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITY__ID = LAYOUTABLE__ID;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -1087,6 +1420,15 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int THING__NAME = IDENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THING__ID = IDENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -1187,6 +1529,15 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int HUMAN_ENTITY__NAME = IDENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HUMAN_ENTITY__ID = IDENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -1296,6 +1647,15 @@ public interface WrsPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDIVIDUAL__NAME = HUMAN_ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL__ID = HUMAN_ENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
@@ -1425,6 +1785,15 @@ public interface WrsPackage extends EPackage {
 	int LEGAL_ENTITY__NAME = HUMAN_ENTITY__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEGAL_ENTITY__ID = HUMAN_ENTITY__ID;
+
+	/**
 	 * The feature id for the '<em><b>UUID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1543,6 +1912,15 @@ public interface WrsPackage extends EPackage {
 	int ACCOUNT__NAME = ABSTRACT_ACCOUNT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__ID = ABSTRACT_ACCOUNT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1607,13 +1985,67 @@ public interface WrsPackage extends EPackage {
 	int SUPPLY_CONTROL = 14;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLY_CONTROL__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLY_CONTROL__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLY_CONTROL__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLY_CONTROL__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLY_CONTROL__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLY_CONTROL__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Genesis Account</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLY_CONTROL__GENESIS_ACCOUNT = 0;
+	int SUPPLY_CONTROL__GENESIS_ACCOUNT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Transfer Vaults</b></em>' reference.
@@ -1622,7 +2054,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLY_CONTROL__TRANSFER_VAULTS = 1;
+	int SUPPLY_CONTROL__TRANSFER_VAULTS = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Treasury</b></em>' reference.
@@ -1631,7 +2063,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLY_CONTROL__TREASURY = 2;
+	int SUPPLY_CONTROL__TREASURY = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Supply Control</em>' class.
@@ -1640,7 +2072,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLY_CONTROL_FEATURE_COUNT = 3;
+	int SUPPLY_CONTROL_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Supply Control</em>' class.
@@ -1649,7 +2081,89 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLY_CONTROL_OPERATION_COUNT = 0;
+	int SUPPLY_CONTROL_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.model.wrs.impl.LayoutableContainerImpl <em>Layoutable Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.model.wrs.impl.LayoutableContainerImpl
+	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getLayoutableContainer()
+	 * @generated
+	 */
+	int LAYOUTABLE_CONTAINER = 41;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER__ID = LAYOUTABLE__ID;
+
+	/**
+	 * The number of structural features of the '<em>Layoutable Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Layoutable Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUTABLE_CONTAINER_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.AccountsImpl <em>Accounts</em>}' class.
@@ -1662,13 +2176,67 @@ public interface WrsPackage extends EPackage {
 	int ACCOUNTS = 15;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNTS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNTS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNTS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNTS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNTS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNTS__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS__CHILDREN = 0;
+	int ACCOUNTS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Accounts</em>' class.
@@ -1677,7 +2245,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_FEATURE_COUNT = 1;
+	int ACCOUNTS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Accounts</em>' class.
@@ -1686,7 +2254,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_OPERATION_COUNT = 0;
+	int ACCOUNTS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.AbstractTransactionImpl <em>Abstract Transaction</em>}' class.
@@ -1699,13 +2267,67 @@ public interface WrsPackage extends EPackage {
 	int ABSTRACT_TRANSACTION = 26;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TRANSACTION__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Transaction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_TRANSACTION_FEATURE_COUNT = 0;
+	int ABSTRACT_TRANSACTION_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Abstract Transaction</em>' class.
@@ -1714,7 +2336,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_TRANSACTION_OPERATION_COUNT = 0;
+	int ABSTRACT_TRANSACTION_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.TransactionImpl <em>Transaction</em>}' class.
@@ -1725,6 +2347,60 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	int TRANSACTION = 16;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__X = ABSTRACT_TRANSACTION__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__Y = ABSTRACT_TRANSACTION__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__W = ABSTRACT_TRANSACTION__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__H = ABSTRACT_TRANSACTION__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__NAME = ABSTRACT_TRANSACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__ID = ABSTRACT_TRANSACTION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference.
@@ -1800,13 +2476,67 @@ public interface WrsPackage extends EPackage {
 	int REGISTERED_ASSETS = 17;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_ASSETS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_ASSETS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_ASSETS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_ASSETS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_ASSETS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_ASSETS__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_ASSETS__CHILDREN = 0;
+	int REGISTERED_ASSETS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Registered Assets</em>' class.
@@ -1815,7 +2545,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_ASSETS_FEATURE_COUNT = 1;
+	int REGISTERED_ASSETS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Registered Assets</em>' class.
@@ -1824,7 +2554,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_ASSETS_OPERATION_COUNT = 0;
+	int REGISTERED_ASSETS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.TransactionCollectionImpl <em>Transaction Collection</em>}' class.
@@ -1835,6 +2565,60 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	int TRANSACTION_COLLECTION = 19;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_COLLECTION__X = ABSTRACT_TRANSACTION__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_COLLECTION__Y = ABSTRACT_TRANSACTION__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_COLLECTION__W = ABSTRACT_TRANSACTION__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_COLLECTION__H = ABSTRACT_TRANSACTION__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_COLLECTION__NAME = ABSTRACT_TRANSACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_COLLECTION__ID = ABSTRACT_TRANSACTION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Transactions</b></em>' reference list.
@@ -1874,13 +2658,67 @@ public interface WrsPackage extends EPackage {
 	int NODE = 20;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__WEIGHT = 0;
+	int NODE__WEIGHT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Networkengine</b></em>' reference.
@@ -1889,7 +2727,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__NETWORKENGINE = 1;
+	int NODE__NETWORKENGINE = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Node Accounts</b></em>' containment reference list.
@@ -1898,7 +2736,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__NODE_ACCOUNTS = 2;
+	int NODE__NODE_ACCOUNTS = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -1907,7 +2745,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 3;
+	int NODE_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -1916,7 +2754,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = 0;
+	int NODE_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.NetworkEngineImpl <em>Network Engine</em>}' class.
@@ -1929,13 +2767,67 @@ public interface WrsPackage extends EPackage {
 	int NETWORK_ENGINE = 21;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_ENGINE__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The number of structural features of the '<em>Network Engine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NETWORK_ENGINE_FEATURE_COUNT = 0;
+	int NETWORK_ENGINE_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Network Engine</em>' class.
@@ -1944,7 +2836,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETWORK_ENGINE_OPERATION_COUNT = 0;
+	int NETWORK_ENGINE_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.CountriesImpl <em>Countries</em>}' class.
@@ -1957,13 +2849,67 @@ public interface WrsPackage extends EPackage {
 	int COUNTRIES = 22;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' containment reference list.
+	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRIES__COUNTRY = 0;
+	int COUNTRIES__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRIES__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Countries</em>' class.
@@ -1972,7 +2918,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRIES_FEATURE_COUNT = 1;
+	int COUNTRIES_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Countries</em>' class.
@@ -1981,7 +2927,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRIES_OPERATION_COUNT = 0;
+	int COUNTRIES_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.NodesImpl <em>Nodes</em>}' class.
@@ -1994,13 +2940,67 @@ public interface WrsPackage extends EPackage {
 	int NODES = 23;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODES__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODES__CHILDREN = 0;
+	int NODES__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Nodes</em>' class.
@@ -2009,7 +3009,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODES_FEATURE_COUNT = 1;
+	int NODES_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Nodes</em>' class.
@@ -2018,7 +3018,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODES_OPERATION_COUNT = 0;
+	int NODES_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.IdentitiesImpl <em>Identities</em>}' class.
@@ -2031,13 +3031,67 @@ public interface WrsPackage extends EPackage {
 	int IDENTITIES = 24;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTITIES__CHILDREN = 0;
+	int IDENTITIES__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITIES__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Identities</em>' class.
@@ -2046,7 +3100,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTITIES_FEATURE_COUNT = 1;
+	int IDENTITIES_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Identities</em>' class.
@@ -2055,7 +3109,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTITIES_OPERATION_COUNT = 0;
+	int IDENTITIES_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.AllTransactionsImpl <em>All Transactions</em>}' class.
@@ -2068,13 +3122,67 @@ public interface WrsPackage extends EPackage {
 	int ALL_TRANSACTIONS = 25;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTIONS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTIONS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTIONS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTIONS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTIONS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTIONS__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_TRANSACTIONS__CHILDREN = 0;
+	int ALL_TRANSACTIONS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>All Transactions</em>' class.
@@ -2083,7 +3191,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_TRANSACTIONS_FEATURE_COUNT = 1;
+	int ALL_TRANSACTIONS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>All Transactions</em>' class.
@@ -2092,7 +3200,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_TRANSACTIONS_OPERATION_COUNT = 0;
+	int ALL_TRANSACTIONS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.TransactionsImpl <em>Transactions</em>}' class.
@@ -2160,6 +3268,15 @@ public interface WrsPackage extends EPackage {
 	int NODE_ACCOUNT__NAME = ABSTRACT_ACCOUNT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ACCOUNT__ID = ABSTRACT_ACCOUNT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2215,13 +3332,67 @@ public interface WrsPackage extends EPackage {
 	int ALL_TRANSACTION_CONDITIONS = 28;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTION_CONDITIONS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTION_CONDITIONS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTION_CONDITIONS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTION_CONDITIONS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTION_CONDITIONS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALL_TRANSACTION_CONDITIONS__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_TRANSACTION_CONDITIONS__CHILDREN = 0;
+	int ALL_TRANSACTION_CONDITIONS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>All Transaction Conditions</em>' class.
@@ -2230,7 +3401,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_TRANSACTION_CONDITIONS_FEATURE_COUNT = 1;
+	int ALL_TRANSACTION_CONDITIONS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>All Transaction Conditions</em>' class.
@@ -2239,7 +3410,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_TRANSACTION_CONDITIONS_OPERATION_COUNT = 0;
+	int ALL_TRANSACTION_CONDITIONS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.TransactionConditionImpl <em>Transaction Condition</em>}' class.
@@ -2252,13 +3423,67 @@ public interface WrsPackage extends EPackage {
 	int TRANSACTION_CONDITION = 29;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_CONDITION__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Formula</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_CONDITION__FORMULA = 0;
+	int TRANSACTION_CONDITION__FORMULA = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signed Inputs</b></em>' containment reference list.
@@ -2267,7 +3492,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_CONDITION__SIGNED_INPUTS = 1;
+	int TRANSACTION_CONDITION__SIGNED_INPUTS = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Transaction Condition</em>' class.
@@ -2276,7 +3501,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_CONDITION_FEATURE_COUNT = 2;
+	int TRANSACTION_CONDITION_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Transaction Condition</em>' class.
@@ -2285,7 +3510,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_CONDITION_OPERATION_COUNT = 0;
+	int TRANSACTION_CONDITION_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.SignedInputImpl <em>Signed Input</em>}' class.
@@ -2298,13 +3523,67 @@ public interface WrsPackage extends EPackage {
 	int SIGNED_INPUT = 30;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_INPUT__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Variable Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNED_INPUT__VARIABLE_NAME = 0;
+	int SIGNED_INPUT__VARIABLE_NAME = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Identity</b></em>' reference.
@@ -2313,7 +3592,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNED_INPUT__IDENTITY = 1;
+	int SIGNED_INPUT__IDENTITY = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2322,7 +3601,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNED_INPUT__VALUE = 2;
+	int SIGNED_INPUT__VALUE = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2331,7 +3610,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNED_INPUT__TYPE = 3;
+	int SIGNED_INPUT__TYPE = LAYOUTABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Signed Input</em>' class.
@@ -2340,7 +3619,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNED_INPUT_FEATURE_COUNT = 4;
+	int SIGNED_INPUT_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Signed Input</em>' class.
@@ -2349,7 +3628,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNED_INPUT_OPERATION_COUNT = 0;
+	int SIGNED_INPUT_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.StatisticsImpl <em>Statistics</em>}' class.
@@ -2362,13 +3641,67 @@ public interface WrsPackage extends EPackage {
 	int STATISTICS = 31;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Statisticssource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS__STATISTICSSOURCE = 0;
+	int STATISTICS__STATISTICSSOURCE = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Statistics</em>' class.
@@ -2377,7 +3710,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_FEATURE_COUNT = 1;
+	int STATISTICS_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Statistics</em>' class.
@@ -2386,7 +3719,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_OPERATION_COUNT = 0;
+	int STATISTICS_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.StatisticDatasImpl <em>Statistic Datas</em>}' class.
@@ -2399,13 +3732,67 @@ public interface WrsPackage extends EPackage {
 	int STATISTIC_DATAS = 32;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTIC_DATAS__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTIC_DATAS__CHILDREN = 0;
+	int STATISTIC_DATAS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Statistic Datas</em>' class.
@@ -2414,7 +3801,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTIC_DATAS_FEATURE_COUNT = 1;
+	int STATISTIC_DATAS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Statistic Datas</em>' class.
@@ -2423,7 +3810,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTIC_DATAS_OPERATION_COUNT = 0;
+	int STATISTIC_DATAS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.CountryRegionImpl <em>Country Region</em>}' class.
@@ -2436,13 +3823,76 @@ public interface WrsPackage extends EPackage {
 	int COUNTRY_REGION = 33;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Regionaleconomy</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY_REGION__REGIONALECONOMY = 0;
+	int COUNTRY_REGION__REGIONALECONOMY = LAYOUTABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Regionidentities</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY_REGION__REGIONIDENTITIES = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Country Region</em>' class.
@@ -2451,7 +3901,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY_REGION_FEATURE_COUNT = 1;
+	int COUNTRY_REGION_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Country Region</em>' class.
@@ -2460,7 +3910,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY_REGION_OPERATION_COUNT = 0;
+	int COUNTRY_REGION_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.StatisticsSourceImpl <em>Statistics Source</em>}' class.
@@ -2473,13 +3923,67 @@ public interface WrsPackage extends EPackage {
 	int STATISTICS_SOURCE = 34;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_SOURCE__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Webservice Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_SOURCE__WEBSERVICE_URL = 0;
+	int STATISTICS_SOURCE__WEBSERVICE_URL = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Statistics Source</em>' class.
@@ -2488,7 +3992,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_SOURCE_FEATURE_COUNT = 1;
+	int STATISTICS_SOURCE_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Statistics Source</em>' class.
@@ -2497,7 +4001,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_SOURCE_OPERATION_COUNT = 0;
+	int STATISTICS_SOURCE_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.regionalEconomyImpl <em>regional Economy</em>}' class.
@@ -2510,13 +4014,67 @@ public interface WrsPackage extends EPackage {
 	int REGIONAL_ECONOMY = 37;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGIONAL_ECONOMY__X = LAYOUTABLE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGIONAL_ECONOMY__Y = LAYOUTABLE__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGIONAL_ECONOMY__W = LAYOUTABLE__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGIONAL_ECONOMY__H = LAYOUTABLE__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGIONAL_ECONOMY__NAME = LAYOUTABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGIONAL_ECONOMY__ID = LAYOUTABLE__ID;
+
+	/**
 	 * The number of structural features of the '<em>regional Economy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGIONAL_ECONOMY_FEATURE_COUNT = 0;
+	int REGIONAL_ECONOMY_FEATURE_COUNT = LAYOUTABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>regional Economy</em>' class.
@@ -2525,7 +4083,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGIONAL_ECONOMY_OPERATION_COUNT = 0;
+	int REGIONAL_ECONOMY_OPERATION_COUNT = LAYOUTABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.impl.TransferVaultsImpl <em>Transfer Vaults</em>}' class.
@@ -2538,13 +4096,67 @@ public interface WrsPackage extends EPackage {
 	int TRANSFER_VAULTS = 38;
 
 	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULTS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULTS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULTS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULTS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULTS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFER_VAULTS__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULTS__CHILDREN = 0;
+	int TRANSFER_VAULTS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Transfer Vaults</em>' class.
@@ -2553,7 +4165,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULTS_FEATURE_COUNT = 1;
+	int TRANSFER_VAULTS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Transfer Vaults</em>' class.
@@ -2562,7 +4174,61 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFER_VAULTS_OPERATION_COUNT = 0;
+	int TRANSFER_VAULTS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONS__ID = LAYOUTABLE_CONTAINER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -2571,7 +4237,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTIONS__CHILDREN = 0;
+	int TRANSACTIONS__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Transactions</em>' class.
@@ -2580,7 +4246,7 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTIONS_FEATURE_COUNT = 1;
+	int TRANSACTIONS_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Transactions</em>' class.
@@ -2589,7 +4255,98 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTIONS_OPERATION_COUNT = 0;
+	int TRANSACTIONS_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.wrs.model.wrs.impl.RegionIdentitiesImpl <em>Region Identities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.wrs.model.wrs.impl.RegionIdentitiesImpl
+	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getRegionIdentities()
+	 * @generated
+	 */
+	int REGION_IDENTITIES = 40;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__X = LAYOUTABLE_CONTAINER__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__Y = LAYOUTABLE_CONTAINER__Y;
+
+	/**
+	 * The feature id for the '<em><b>W</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__W = LAYOUTABLE_CONTAINER__W;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__H = LAYOUTABLE_CONTAINER__H;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__NAME = LAYOUTABLE_CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__ID = LAYOUTABLE_CONTAINER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES__CHILDREN = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Region Identities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES_FEATURE_COUNT = LAYOUTABLE_CONTAINER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Region Identities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGION_IDENTITIES_OPERATION_COUNT = LAYOUTABLE_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.AssetType <em>Asset Type</em>}' enum.
@@ -2599,7 +4356,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getAssetType()
 	 * @generated
 	 */
-	int ASSET_TYPE = 40;
+	int ASSET_TYPE = 42;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.LegalEntityType <em>Legal Entity Type</em>}' enum.
@@ -2609,7 +4366,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getLegalEntityType()
 	 * @generated
 	 */
-	int LEGAL_ENTITY_TYPE = 41;
+	int LEGAL_ENTITY_TYPE = 43;
 
 	/**
 	 * The meta object id for the '{@link org.wrs.model.wrs.InputValueType <em>Input Value Type</em>}' enum.
@@ -2619,7 +4376,7 @@ public interface WrsPackage extends EPackage {
 	 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getInputValueType()
 	 * @generated
 	 */
-	int INPUT_VALUE_TYPE = 42;
+	int INPUT_VALUE_TYPE = 44;
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.WRS <em>WRS</em>}'.
@@ -2698,15 +4455,15 @@ public interface WrsPackage extends EPackage {
 	EReference getWRS_Nodes();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.wrs.model.wrs.WRS#getIdentities <em>Identities</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.wrs.model.wrs.WRS#getAlldentities <em>Alldentities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Identities</em>'.
-	 * @see org.wrs.model.wrs.WRS#getIdentities()
+	 * @return the meta object for the containment reference '<em>Alldentities</em>'.
+	 * @see org.wrs.model.wrs.WRS#getAlldentities()
 	 * @see #getWRS()
 	 * @generated
 	 */
-	EReference getWRS_Identities();
+	EReference getWRS_Alldentities();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.wrs.model.wrs.WRS#getAllTransactions <em>All Transactions</em>}'.
@@ -3356,15 +5113,15 @@ public interface WrsPackage extends EPackage {
 	EClass getCountries();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.wrs.model.wrs.Countries#getCountry <em>Country</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.wrs.model.wrs.Countries#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Country</em>'.
-	 * @see org.wrs.model.wrs.Countries#getCountry()
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.wrs.model.wrs.Countries#getChildren()
 	 * @see #getCountries()
 	 * @generated
 	 */
-	EReference getCountries_Country();
+	EReference getCountries_Children();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.Nodes <em>Nodes</em>}'.
@@ -3398,10 +5155,10 @@ public interface WrsPackage extends EPackage {
 	EClass getIdentities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.wrs.model.wrs.Identities#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the reference list '{@link org.wrs.model.wrs.Identities#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @return the meta object for the reference list '<em>Children</em>'.
 	 * @see org.wrs.model.wrs.Identities#getChildren()
 	 * @see #getIdentities()
 	 * @generated
@@ -3449,6 +5206,37 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTransactions_Children();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.model.wrs.RegionIdentities <em>Region Identities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Region Identities</em>'.
+	 * @see org.wrs.model.wrs.RegionIdentities
+	 * @generated
+	 */
+	EClass getRegionIdentities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.wrs.model.wrs.RegionIdentities#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.wrs.model.wrs.RegionIdentities#getChildren()
+	 * @see #getRegionIdentities()
+	 * @generated
+	 */
+	EReference getRegionIdentities_Children();
+
+	/**
+	 * Returns the meta object for class '{@link org.wrs.model.wrs.LayoutableContainer <em>Layoutable Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Layoutable Container</em>'.
+	 * @see org.wrs.model.wrs.LayoutableContainer
+	 * @generated
+	 */
+	EClass getLayoutableContainer();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.AbstractTransaction <em>Abstract Transaction</em>}'.
@@ -3641,6 +5429,17 @@ public interface WrsPackage extends EPackage {
 	EReference getCountryRegion_Regionaleconomy();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.wrs.model.wrs.CountryRegion#getRegionidentities <em>Regionidentities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Regionidentities</em>'.
+	 * @see org.wrs.model.wrs.CountryRegion#getRegionidentities()
+	 * @see #getCountryRegion()
+	 * @generated
+	 */
+	EReference getCountryRegion_Regionidentities();
+
+	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.StatisticsSource <em>Statistics Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3757,6 +5556,17 @@ public interface WrsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLayoutable_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.wrs.model.wrs.Layoutable#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.wrs.model.wrs.Layoutable#getId()
+	 * @see #getLayoutable()
+	 * @generated
+	 */
+	EAttribute getLayoutable_Id();
 
 	/**
 	 * Returns the meta object for class '{@link org.wrs.model.wrs.regionalEconomy <em>regional Economy</em>}'.
@@ -3901,12 +5711,12 @@ public interface WrsPackage extends EPackage {
 		EReference WRS__NODES = eINSTANCE.getWRS_Nodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Identities</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Alldentities</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WRS__IDENTITIES = eINSTANCE.getWRS_Identities();
+		EReference WRS__ALLDENTITIES = eINSTANCE.getWRS_Alldentities();
 
 		/**
 		 * The meta object literal for the '<em><b>All Transactions</b></em>' containment reference feature.
@@ -4441,12 +6251,12 @@ public interface WrsPackage extends EPackage {
 		EClass COUNTRIES = eINSTANCE.getCountries();
 
 		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COUNTRIES__COUNTRY = eINSTANCE.getCountries_Country();
+		EReference COUNTRIES__CHILDREN = eINSTANCE.getCountries_Children();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.NodesImpl <em>Nodes</em>}' class.
@@ -4477,7 +6287,7 @@ public interface WrsPackage extends EPackage {
 		EClass IDENTITIES = eINSTANCE.getIdentities();
 
 		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4519,6 +6329,34 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSACTIONS__CHILDREN = eINSTANCE.getTransactions_Children();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.RegionIdentitiesImpl <em>Region Identities</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.model.wrs.impl.RegionIdentitiesImpl
+		 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getRegionIdentities()
+		 * @generated
+		 */
+		EClass REGION_IDENTITIES = eINSTANCE.getRegionIdentities();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REGION_IDENTITIES__CHILDREN = eINSTANCE.getRegionIdentities_Children();
+
+		/**
+		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.LayoutableContainerImpl <em>Layoutable Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.wrs.model.wrs.impl.LayoutableContainerImpl
+		 * @see org.wrs.model.wrs.impl.WrsPackageImpl#getLayoutableContainer()
+		 * @generated
+		 */
+		EClass LAYOUTABLE_CONTAINER = eINSTANCE.getLayoutableContainer();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.AbstractTransactionImpl <em>Abstract Transaction</em>}' class.
@@ -4681,6 +6519,14 @@ public interface WrsPackage extends EPackage {
 		EReference COUNTRY_REGION__REGIONALECONOMY = eINSTANCE.getCountryRegion_Regionaleconomy();
 
 		/**
+		 * The meta object literal for the '<em><b>Regionidentities</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COUNTRY_REGION__REGIONIDENTITIES = eINSTANCE.getCountryRegion_Regionidentities();
+
+		/**
 		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.StatisticsSourceImpl <em>Statistics Source</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4773,6 +6619,14 @@ public interface WrsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LAYOUTABLE__NAME = eINSTANCE.getLayoutable_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAYOUTABLE__ID = eINSTANCE.getLayoutable_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.wrs.model.wrs.impl.regionalEconomyImpl <em>regional Economy</em>}' class.

@@ -9,7 +9,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.AbstractTransaction;
 import org.wrs.model.wrs.Transactions;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,7 +26,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransactionsImpl extends CDOObjectImpl implements Transactions {
+public class TransactionsImpl extends LayoutableContainerImpl implements Transactions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -45,16 +44,6 @@ public class TransactionsImpl extends CDOObjectImpl implements Transactions {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.TRANSACTIONS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

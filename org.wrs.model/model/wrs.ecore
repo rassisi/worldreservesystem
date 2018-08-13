@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wrs" nsURI="http://wrs/1.0" nsPrefix="wrs">
-  <eClassifiers xsi:type="ecore:EClass" name="WRS">
+  <eClassifiers xsi:type="ecore:EClass" name="WRS" eSuperTypes="#//Layoutable">
     <eOperations name="createIdentity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mainvault" lowerBound="1"
         eType="#//Treasury" containment="true"/>
@@ -15,7 +15,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" eType="#//Nodes"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="identities" eType="#//Identities"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Alldentities" eType="#//Identities"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AllTransactions" eType="#//AllTransactions"
         containment="true"/>
@@ -33,7 +33,7 @@
     <eLiterals name="GOLD"/>
     <eLiterals name="SILVER" value="1"/>
     <eLiterals name="CRYPTO" value="2"/>
-    <eLiterals name="TRUST" value="3"/>
+    <eLiterals name="TERRA" value="3"/>
     <eLiterals name="PHYSICAL" value="4"/>
     <eLiterals name="INTELLECTUAL_PROPERTY" value="5"/>
     <eLiterals name="UDOLLAR" value="6"/>
@@ -45,7 +45,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="materials" upperBound="-1"
         eType="#//Thing"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WorldEconomy">
+  <eClassifiers xsi:type="ecore:EClass" name="WorldEconomy" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationaleconomies" lowerBound="1"
         upperBound="-1" eType="#//NationalEconomy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticssource" eType="#//StatisticsSource"
@@ -55,8 +55,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="countries" eType="#//Countries"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NationalEconomy"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Country">
+  <eClassifiers xsi:type="ecore:EClass" name="NationalEconomy" eSuperTypes="#//Layoutable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Country" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fiatcurrency" lowerBound="1"
         eType="#//FiatCurrency" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationaleconomy" eType="#//NationalEconomy"
@@ -64,7 +64,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="regions" upperBound="-1"
         eType="#//CountryRegion" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FiatCurrency"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FiatCurrency" eSuperTypes="#//Layoutable"/>
   <eClassifiers xsi:type="ecore:EClass" name="Identity" abstract="true" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UUID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AllNodes" eType="#//Nodes"/>
@@ -84,13 +84,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="#//AbstractAccount">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplyControl">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplyControl" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="genesisAccount" eType="#//GenesisAccount"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transferVaults" eType="#//TransferVaults"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="treasury" eType="#//Treasury"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Accounts">
+  <eClassifiers xsi:type="ecore:EClass" name="Accounts" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//AbstractAccount"/>
   </eClassifiers>
@@ -103,7 +103,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactioncondition" eType="#//TransactionCondition"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RegisteredAssets">
+  <eClassifiers xsi:type="ecore:EClass" name="RegisteredAssets" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Asset" containment="true"/>
   </eClassifiers>
@@ -119,47 +119,47 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" upperBound="-1"
         eType="#//Transaction"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Node">
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="networkengine" lowerBound="1"
         eType="#//NetworkEngine"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeAccounts" upperBound="-1"
         eType="#//NodeAccount" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NetworkEngine"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Countries">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="country" upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkEngine" eSuperTypes="#//Layoutable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Countries" eSuperTypes="#//LayoutableContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Country" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Nodes">
+  <eClassifiers xsi:type="ecore:EClass" name="Nodes" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Node" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Identities">
+  <eClassifiers xsi:type="ecore:EClass" name="Identities" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//Identity" containment="true"/>
+        eType="#//Identity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllTransactions">
+  <eClassifiers xsi:type="ecore:EClass" name="AllTransactions" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//AbstractTransaction"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractTransaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractTransaction" eSuperTypes="#//Layoutable"/>
   <eClassifiers xsi:type="ecore:EEnum" name="LegalEntityType">
     <eLiterals name="COMPANY"/>
     <eLiterals name="ACCOUNTANT" value="1"/>
     <eLiterals name="CHARITY" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NodeAccount" eSuperTypes="#//AbstractAccount"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AllTransactionConditions">
+  <eClassifiers xsi:type="ecore:EClass" name="AllTransactionConditions" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//TransactionCondition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TransactionCondition">
+  <eClassifiers xsi:type="ecore:EClass" name="TransactionCondition" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formula" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="signedInputs" upperBound="-1"
         eType="#//SignedInput" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SignedInput">
+  <eClassifiers xsi:type="ecore:EClass" name="SignedInput" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="identity" eType="#//Identity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -171,18 +171,20 @@
     <eLiterals name="BOOLEAN" value="2"/>
     <eLiterals name="TEXT" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statistics">
+  <eClassifiers xsi:type="ecore:EClass" name="Statistics" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticssource" eType="#//StatisticsSource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StatisticDatas">
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticDatas" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Statistics" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CountryRegion">
+  <eClassifiers xsi:type="ecore:EClass" name="CountryRegion" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="regionaleconomy" eType="#//regionalEconomy"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regionidentities" eType="#//RegionIdentities"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StatisticsSource">
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticsSource" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="webserviceUrl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HumanEntity" abstract="true" eSuperTypes="#//Identity">
@@ -196,14 +198,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="h" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="regionalEconomy"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TransferVaults">
+  <eClassifiers xsi:type="ecore:EClass" name="regionalEconomy" eSuperTypes="#//Layoutable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TransferVaults" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//TransferVault" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Transactions">
+  <eClassifiers xsi:type="ecore:EClass" name="Transactions" eSuperTypes="#//LayoutableContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//AbstractTransaction" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RegionIdentities" eSuperTypes="#//LayoutableContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Identity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LayoutableContainer" eSuperTypes="#//Layoutable"/>
 </ecore:EPackage>

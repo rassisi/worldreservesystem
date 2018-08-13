@@ -8,7 +8,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.Statistics;
 import org.wrs.model.wrs.WrsPackage;
@@ -26,7 +25,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas {
+public class StatisticDatasImpl extends LayoutableContainerImpl implements StatisticDatas {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -44,16 +43,6 @@ public class StatisticDatasImpl extends CDOObjectImpl implements StatisticDatas 
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.STATISTIC_DATAS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

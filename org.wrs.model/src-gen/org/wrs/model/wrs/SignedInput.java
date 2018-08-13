@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Signed Input</b></em>'.
@@ -21,10 +19,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getSignedInput()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface SignedInput extends CDOObject {
+public interface SignedInput extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>Variable Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -72,11 +72,11 @@
       <ribbonToolBar/>
     </children>
     <children
-        name="Account"
-        id="PERSPECTIVE_ACCOUNT"
+        name="Accounts"
+        id="PERSPECTIVE_ACCOUNTS"
         image="account">
       <sideToolBar
-          toolGroups="//@allTools/@toolgroupChildren.60 //@allTools/@toolgroupChildren.61"/>
+          toolGroups="//@allTools/@toolgroupChildren.60 //@allTools/@toolgroupChildren.61 //@allTools/@toolgroupChildren.4 //@allTools/@toolgroupChildren.6 //@allTools/@toolgroupChildren.7"/>
       <topToolBar/>
       <quickToolBar/>
       <ribbonToolBar/>
@@ -3116,11 +3116,17 @@
         id="solutions"
         image="solutions"/>
     <toolgroupChildren
-        name="My Account"
+        name="My Accounts"
         id="my_account"
         image="account"
-        detailPaneClassName="org.wrs.rcpl.ui.detailpages.WrsMyAccountDetailPage"
-        groupType="EMPTY_GROUP_BUTTON"/>
+        detailPaneClassName=""
+        groupType="EMPTY_GROUP_BUTTON">
+      <tools
+          name="Accounts"
+          id="ACCOUNTS_OVERVIEW"
+          toolTip="All my Accounts"
+          type="OTHER"/>
+    </toolgroupChildren>
     <toolgroupChildren
         name="My Transactions"
         id="my_transactions"

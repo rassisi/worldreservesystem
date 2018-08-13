@@ -4,25 +4,28 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.wrs.model.wrs.Accounts;
+
+import org.wrs.model.wrs.LayoutableContainer;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.Accounts} object.
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.LayoutableContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AccountsItemProvider extends LayoutableContainerItemProvider {
+public class LayoutableContainerItemProvider extends LayoutableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AccountsItemProvider(AdapterFactory adapterFactory) {
+	public LayoutableContainerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -42,14 +45,14 @@ public class AccountsItemProvider extends LayoutableContainerItemProvider {
 	}
 
 	/**
-	 * This returns Accounts.gif.
+	 * This returns LayoutableContainer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Accounts"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LayoutableContainer"));
 	}
 
 	/**
@@ -70,9 +73,9 @@ public class AccountsItemProvider extends LayoutableContainerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Accounts) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Accounts_type")
-				: getString("_UI_Accounts_type") + " " + label;
+		String label = ((LayoutableContainer) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_LayoutableContainer_type")
+				: getString("_UI_LayoutableContainer_type") + " " + label;
 	}
 
 	/**

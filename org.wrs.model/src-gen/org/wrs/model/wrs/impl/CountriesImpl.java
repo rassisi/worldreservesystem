@@ -9,7 +9,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.WrsPackage;
@@ -22,12 +21,12 @@ import org.wrs.model.wrs.WrsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.wrs.model.wrs.impl.CountriesImpl#getCountry <em>Country</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.CountriesImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CountriesImpl extends CDOObjectImpl implements Countries {
+public class CountriesImpl extends LayoutableContainerImpl implements Countries {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,20 +51,10 @@ public class CountriesImpl extends CDOObjectImpl implements Countries {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
-	public EList<Country> getCountry() {
-		return (EList<Country>) eDynamicGet(WrsPackage.COUNTRIES__COUNTRY, WrsPackage.Literals.COUNTRIES__COUNTRY, true,
-				true);
+	public EList<Country> getChildren() {
+		return (EList<Country>) eDynamicGet(WrsPackage.COUNTRIES__CHILDREN, WrsPackage.Literals.COUNTRIES__CHILDREN,
+				true, true);
 	}
 
 	/**
@@ -76,8 +65,8 @@ public class CountriesImpl extends CDOObjectImpl implements Countries {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case WrsPackage.COUNTRIES__COUNTRY:
-			return ((InternalEList<?>) getCountry()).basicRemove(otherEnd, msgs);
+		case WrsPackage.COUNTRIES__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -90,8 +79,8 @@ public class CountriesImpl extends CDOObjectImpl implements Countries {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WrsPackage.COUNTRIES__COUNTRY:
-			return getCountry();
+		case WrsPackage.COUNTRIES__CHILDREN:
+			return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -105,9 +94,9 @@ public class CountriesImpl extends CDOObjectImpl implements Countries {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WrsPackage.COUNTRIES__COUNTRY:
-			getCountry().clear();
-			getCountry().addAll((Collection<? extends Country>) newValue);
+		case WrsPackage.COUNTRIES__CHILDREN:
+			getChildren().clear();
+			getChildren().addAll((Collection<? extends Country>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -121,8 +110,8 @@ public class CountriesImpl extends CDOObjectImpl implements Countries {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WrsPackage.COUNTRIES__COUNTRY:
-			getCountry().clear();
+		case WrsPackage.COUNTRIES__CHILDREN:
+			getChildren().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -136,8 +125,8 @@ public class CountriesImpl extends CDOObjectImpl implements Countries {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WrsPackage.COUNTRIES__COUNTRY:
-			return !getCountry().isEmpty();
+		case WrsPackage.COUNTRIES__CHILDREN:
+			return !getChildren().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

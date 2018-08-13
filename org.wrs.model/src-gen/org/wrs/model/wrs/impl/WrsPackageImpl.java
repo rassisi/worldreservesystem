@@ -30,6 +30,7 @@ import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.Individual;
 import org.wrs.model.wrs.InputValueType;
 import org.wrs.model.wrs.Layoutable;
+import org.wrs.model.wrs.LayoutableContainer;
 import org.wrs.model.wrs.LegalEntity;
 import org.wrs.model.wrs.LegalEntityType;
 import org.wrs.model.wrs.NationalEconomy;
@@ -37,6 +38,7 @@ import org.wrs.model.wrs.NetworkEngine;
 import org.wrs.model.wrs.Node;
 import org.wrs.model.wrs.NodeAccount;
 import org.wrs.model.wrs.Nodes;
+import org.wrs.model.wrs.RegionIdentities;
 import org.wrs.model.wrs.RegisteredAssets;
 import org.wrs.model.wrs.SignedInput;
 import org.wrs.model.wrs.StatisticDatas;
@@ -251,6 +253,20 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	private EClass transactionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass regionIdentitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass layoutableContainerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -496,7 +512,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWRS_Identities() {
+	public EReference getWRS_Alldentities() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1054,7 +1070,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCountries_Country() {
+	public EReference getCountries_Children() {
 		return (EReference) countriesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1128,6 +1144,33 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 */
 	public EReference getTransactions_Children() {
 		return (EReference) transactionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRegionIdentities() {
+		return regionIdentitiesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRegionIdentities_Children() {
+		return (EReference) regionIdentitiesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLayoutableContainer() {
+		return layoutableContainerEClass;
 	}
 
 	/**
@@ -1297,6 +1340,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCountryRegion_Regionidentities() {
+		return (EReference) countryRegionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStatisticsSource() {
 		return statisticsSourceEClass;
 	}
@@ -1396,6 +1448,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLayoutable_Id() {
+		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getregionalEconomy() {
 		return regionalEconomyEClass;
 	}
@@ -1481,7 +1542,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEReference(wrsEClass, WRS__REGISTEREDASSTETS);
 		createEReference(wrsEClass, WRS__WORLDECONOMY);
 		createEReference(wrsEClass, WRS__NODES);
-		createEReference(wrsEClass, WRS__IDENTITIES);
+		createEReference(wrsEClass, WRS__ALLDENTITIES);
 		createEReference(wrsEClass, WRS__ALL_TRANSACTIONS);
 		createEReference(wrsEClass, WRS__ALL_TRANSACTION_CONDITIONS);
 		createEReference(wrsEClass, WRS__TRANSFERVAULTS);
@@ -1565,7 +1626,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		networkEngineEClass = createEClass(NETWORK_ENGINE);
 
 		countriesEClass = createEClass(COUNTRIES);
-		createEReference(countriesEClass, COUNTRIES__COUNTRY);
+		createEReference(countriesEClass, COUNTRIES__CHILDREN);
 
 		nodesEClass = createEClass(NODES);
 		createEReference(nodesEClass, NODES__CHILDREN);
@@ -1601,6 +1662,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		countryRegionEClass = createEClass(COUNTRY_REGION);
 		createEReference(countryRegionEClass, COUNTRY_REGION__REGIONALECONOMY);
+		createEReference(countryRegionEClass, COUNTRY_REGION__REGIONIDENTITIES);
 
 		statisticsSourceEClass = createEClass(STATISTICS_SOURCE);
 		createEAttribute(statisticsSourceEClass, STATISTICS_SOURCE__WEBSERVICE_URL);
@@ -1615,6 +1677,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		createEAttribute(layoutableEClass, LAYOUTABLE__W);
 		createEAttribute(layoutableEClass, LAYOUTABLE__H);
 		createEAttribute(layoutableEClass, LAYOUTABLE__NAME);
+		createEAttribute(layoutableEClass, LAYOUTABLE__ID);
 
 		regionalEconomyEClass = createEClass(REGIONAL_ECONOMY);
 
@@ -1623,6 +1686,11 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		transactionsEClass = createEClass(TRANSACTIONS);
 		createEReference(transactionsEClass, TRANSACTIONS__CHILDREN);
+
+		regionIdentitiesEClass = createEClass(REGION_IDENTITIES);
+		createEReference(regionIdentitiesEClass, REGION_IDENTITIES__CHILDREN);
+
+		layoutableContainerEClass = createEClass(LAYOUTABLE_CONTAINER);
 
 		// Create enums
 		assetTypeEEnum = createEEnum(ASSET_TYPE);
@@ -1659,20 +1727,47 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		wrsEClass.getESuperTypes().add(this.getLayoutable());
 		treasuryEClass.getESuperTypes().add(this.getAbstractAccount());
 		transferVaultEClass.getESuperTypes().add(this.getAbstractAccount());
 		genesisAccountEClass.getESuperTypes().add(this.getAbstractAccount());
 		assetEClass.getESuperTypes().add(this.getLayoutable());
+		worldEconomyEClass.getESuperTypes().add(this.getLayoutable());
+		nationalEconomyEClass.getESuperTypes().add(this.getLayoutable());
+		countryEClass.getESuperTypes().add(this.getLayoutable());
+		fiatCurrencyEClass.getESuperTypes().add(this.getLayoutable());
 		identityEClass.getESuperTypes().add(this.getLayoutable());
 		thingEClass.getESuperTypes().add(this.getIdentity());
 		individualEClass.getESuperTypes().add(this.getHumanEntity());
 		legalEntityEClass.getESuperTypes().add(this.getHumanEntity());
 		accountEClass.getESuperTypes().add(this.getAbstractAccount());
+		supplyControlEClass.getESuperTypes().add(this.getLayoutable());
+		accountsEClass.getESuperTypes().add(this.getLayoutableContainer());
 		transactionEClass.getESuperTypes().add(this.getAbstractTransaction());
+		registeredAssetsEClass.getESuperTypes().add(this.getLayoutableContainer());
 		abstractAccountEClass.getESuperTypes().add(this.getLayoutable());
 		transactionCollectionEClass.getESuperTypes().add(this.getAbstractTransaction());
+		nodeEClass.getESuperTypes().add(this.getLayoutable());
+		networkEngineEClass.getESuperTypes().add(this.getLayoutable());
+		countriesEClass.getESuperTypes().add(this.getLayoutableContainer());
+		nodesEClass.getESuperTypes().add(this.getLayoutableContainer());
+		identitiesEClass.getESuperTypes().add(this.getLayoutableContainer());
+		allTransactionsEClass.getESuperTypes().add(this.getLayoutableContainer());
+		abstractTransactionEClass.getESuperTypes().add(this.getLayoutable());
 		nodeAccountEClass.getESuperTypes().add(this.getAbstractAccount());
+		allTransactionConditionsEClass.getESuperTypes().add(this.getLayoutableContainer());
+		transactionConditionEClass.getESuperTypes().add(this.getLayoutable());
+		signedInputEClass.getESuperTypes().add(this.getLayoutable());
+		statisticsEClass.getESuperTypes().add(this.getLayoutable());
+		statisticDatasEClass.getESuperTypes().add(this.getLayoutableContainer());
+		countryRegionEClass.getESuperTypes().add(this.getLayoutable());
+		statisticsSourceEClass.getESuperTypes().add(this.getLayoutable());
 		humanEntityEClass.getESuperTypes().add(this.getIdentity());
+		regionalEconomyEClass.getESuperTypes().add(this.getLayoutable());
+		transferVaultsEClass.getESuperTypes().add(this.getLayoutableContainer());
+		transactionsEClass.getESuperTypes().add(this.getLayoutableContainer());
+		regionIdentitiesEClass.getESuperTypes().add(this.getLayoutableContainer());
+		layoutableContainerEClass.getESuperTypes().add(this.getLayoutable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wrsEClass, org.wrs.model.wrs.WRS.class, "WRS", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1695,7 +1790,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getWRS_Nodes(), this.getNodes(), null, "nodes", null, 0, 1, org.wrs.model.wrs.WRS.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWRS_Identities(), this.getIdentities(), null, "identities", null, 0, 1,
+		initEReference(getWRS_Alldentities(), this.getIdentities(), null, "Alldentities", null, 0, 1,
 				org.wrs.model.wrs.WRS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWRS_AllTransactions(), this.getAllTransactions(), null, "AllTransactions", null, 0, 1,
@@ -1865,7 +1960,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		initEClass(countriesEClass, Countries.class, "Countries", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCountries_Country(), this.getCountry(), null, "country", null, 0, -1, Countries.class,
+		initEReference(getCountries_Children(), this.getCountry(), null, "children", null, 0, -1, Countries.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1877,7 +1972,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEClass(identitiesEClass, Identities.class, "Identities", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIdentities_Children(), this.getIdentity(), null, "children", null, 0, -1, Identities.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(allTransactionsEClass, AllTransactions.class, "AllTransactions", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1937,6 +2032,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getCountryRegion_Regionaleconomy(), this.getregionalEconomy(), null, "regionaleconomy", null, 0,
 				1, CountryRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCountryRegion_Regionidentities(), this.getRegionIdentities(), null, "regionidentities", null,
+				0, 1, CountryRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statisticsSourceEClass, StatisticsSource.class, "StatisticsSource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1965,6 +2063,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLayoutable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Layoutable.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLayoutable_Id(), ecorePackage.getEString(), "id", null, 0, 1, Layoutable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(regionalEconomyEClass, regionalEconomy.class, "regionalEconomy", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1981,12 +2081,21 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 				Transactions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(regionIdentitiesEClass, RegionIdentities.class, "RegionIdentities", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRegionIdentities_Children(), this.getIdentity(), null, "children", null, 0, -1,
+				RegionIdentities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(layoutableContainerEClass, LayoutableContainer.class, "LayoutableContainer", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(assetTypeEEnum, AssetType.class, "AssetType");
 		addEEnumLiteral(assetTypeEEnum, AssetType.GOLD);
 		addEEnumLiteral(assetTypeEEnum, AssetType.SILVER);
 		addEEnumLiteral(assetTypeEEnum, AssetType.CRYPTO);
-		addEEnumLiteral(assetTypeEEnum, AssetType.TRUST);
+		addEEnumLiteral(assetTypeEEnum, AssetType.TERRA);
 		addEEnumLiteral(assetTypeEEnum, AssetType.PHYSICAL);
 		addEEnumLiteral(assetTypeEEnum, AssetType.INTELLECTUAL_PROPERTY);
 		addEEnumLiteral(assetTypeEEnum, AssetType.UDOLLAR);

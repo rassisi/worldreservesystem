@@ -7,9 +7,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.wrs.model.wrs.AbstractTransaction;
 import org.wrs.model.wrs.AllTransactions;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,7 +24,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AllTransactionsImpl extends CDOObjectImpl implements AllTransactions {
+public class AllTransactionsImpl extends LayoutableContainerImpl implements AllTransactions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -45,16 +42,6 @@ public class AllTransactionsImpl extends CDOObjectImpl implements AllTransaction
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.ALL_TRANSACTIONS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

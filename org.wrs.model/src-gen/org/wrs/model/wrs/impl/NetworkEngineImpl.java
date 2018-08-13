@@ -3,7 +3,6 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.NetworkEngine;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -14,7 +13,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class NetworkEngineImpl extends CDOObjectImpl implements NetworkEngine {
+public class NetworkEngineImpl extends LayoutableImpl implements NetworkEngine {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -32,16 +31,6 @@ public class NetworkEngineImpl extends CDOObjectImpl implements NetworkEngine {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.NETWORK_ENGINE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 } //NetworkEngineImpl

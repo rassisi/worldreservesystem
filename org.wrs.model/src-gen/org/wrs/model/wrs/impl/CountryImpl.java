@@ -10,7 +10,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.CountryRegion;
 import org.wrs.model.wrs.FiatCurrency;
@@ -32,7 +31,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class CountryImpl extends CDOObjectImpl implements Country {
+public class CountryImpl extends LayoutableImpl implements Country {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,16 +49,6 @@ public class CountryImpl extends CDOObjectImpl implements Country {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.COUNTRY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

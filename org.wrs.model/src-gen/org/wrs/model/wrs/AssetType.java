@@ -49,23 +49,22 @@ public enum AssetType implements Enumerator {
 	CRYPTO(2, "CRYPTO", "CRYPTO"),
 
 	/**
-	 * The '<em><b>TRUST</b></em>' literal object.
+	 * The '<em><b>TERRA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #TRUST_VALUE
+	 * @see #TERRA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	TRUST(3, "TRUST", "TRUST"),
-
+	TERRA(3, "TERRA", "TERRA"),
 	/**
-	 * The '<em><b>PHYSICAL</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PHYSICAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
+	* The '<em><b>PHYSICAL</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #PHYSICAL_VALUE
+	* @generated
+	* @ordered
+	*/
 	PHYSICAL(4, "PHYSICAL", "PHYSICAL"),
 
 	/**
@@ -134,19 +133,19 @@ public enum AssetType implements Enumerator {
 	public static final int CRYPTO_VALUE = 2;
 
 	/**
-	 * The '<em><b>TRUST</b></em>' literal value.
+	 * The '<em><b>TERRA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>TRUST</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>TERRA</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TRUST
+	 * @see #TERRA
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TRUST_VALUE = 3;
+	public static final int TERRA_VALUE = 3;
 
 	/**
 	 * The '<em><b>PHYSICAL</b></em>' literal value.
@@ -199,7 +198,7 @@ public enum AssetType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final AssetType[] VALUES_ARRAY = new AssetType[] { GOLD, SILVER, CRYPTO, TRUST, PHYSICAL,
+	private static final AssetType[] VALUES_ARRAY = new AssetType[] { GOLD, SILVER, CRYPTO, TERRA, PHYSICAL,
 			INTELLECTUAL_PROPERTY, UDOLLAR, };
 
 	/**
@@ -262,8 +261,8 @@ public enum AssetType implements Enumerator {
 			return SILVER;
 		case CRYPTO_VALUE:
 			return CRYPTO;
-		case TRUST_VALUE:
-			return TRUST;
+		case TERRA_VALUE:
+			return TERRA;
 		case PHYSICAL_VALUE:
 			return PHYSICAL;
 		case INTELLECTUAL_PROPERTY_VALUE:

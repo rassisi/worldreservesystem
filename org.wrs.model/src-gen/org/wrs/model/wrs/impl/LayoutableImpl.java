@@ -22,6 +22,7 @@ import org.wrs.model.wrs.WrsPackage;
  *   <li>{@link org.wrs.model.wrs.impl.LayoutableImpl#getW <em>W</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.LayoutableImpl#getH <em>H</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.LayoutableImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.LayoutableImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,6 +77,16 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,6 +212,24 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return (String) eDynamicGet(WrsPackage.LAYOUTABLE__ID, WrsPackage.Literals.LAYOUTABLE__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		eDynamicSet(WrsPackage.LAYOUTABLE__ID, WrsPackage.Literals.LAYOUTABLE__ID, newId);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -214,6 +243,8 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 			return getH();
 		case WrsPackage.LAYOUTABLE__NAME:
 			return getName();
+		case WrsPackage.LAYOUTABLE__ID:
+			return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -240,6 +271,9 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 			return;
 		case WrsPackage.LAYOUTABLE__NAME:
 			setName((String) newValue);
+			return;
+		case WrsPackage.LAYOUTABLE__ID:
+			setId((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -268,6 +302,9 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 		case WrsPackage.LAYOUTABLE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case WrsPackage.LAYOUTABLE__ID:
+			setId(ID_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -290,6 +327,8 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 			return getH() != H_EDEFAULT;
 		case WrsPackage.LAYOUTABLE__NAME:
 			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+		case WrsPackage.LAYOUTABLE__ID:
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}

@@ -5,7 +5,6 @@ package org.wrs.model.wrs.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.GenesisAccount;
 import org.wrs.model.wrs.SupplyControl;
 import org.wrs.model.wrs.TransferVaults;
@@ -27,7 +26,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
+public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -45,16 +44,6 @@ public class SupplyControlImpl extends CDOObjectImpl implements SupplyControl {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.SUPPLY_CONTROL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

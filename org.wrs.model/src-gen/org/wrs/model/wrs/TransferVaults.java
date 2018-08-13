@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,10 +18,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.wrs.model.wrs.WrsPackage#getTransferVaults()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface TransferVaults extends CDOObject {
+public interface TransferVaults extends LayoutableContainer {
 	/**
 	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.TransferVault}.

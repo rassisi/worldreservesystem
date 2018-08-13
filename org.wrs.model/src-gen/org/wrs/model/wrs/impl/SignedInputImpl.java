@@ -3,7 +3,6 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.InputValueType;
 import org.wrs.model.wrs.SignedInput;
@@ -25,7 +24,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class SignedInputImpl extends CDOObjectImpl implements SignedInput {
+public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	/**
 	 * The default value of the '{@link #getVariableName() <em>Variable Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,16 +72,6 @@ public class SignedInputImpl extends CDOObjectImpl implements SignedInput {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.SIGNED_INPUT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

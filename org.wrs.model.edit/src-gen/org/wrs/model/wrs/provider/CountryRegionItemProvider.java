@@ -4,21 +4,11 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
-
-import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.wrs.model.wrs.CountryRegion;
 import org.wrs.model.wrs.WrsFactory;
@@ -30,8 +20,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CountryRegionItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CountryRegionItemProvider extends LayoutableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -54,6 +43,7 @@ public class CountryRegionItemProvider extends CDOItemProviderAdapter implements
 			super.getPropertyDescriptors(object);
 
 			addRegionaleconomyPropertyDescriptor(object);
+			addRegionidentitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -74,6 +64,21 @@ public class CountryRegionItemProvider extends CDOItemProviderAdapter implements
 	}
 
 	/**
+	 * This adds a property descriptor for the Regionidentities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRegionidentitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CountryRegion_regionidentities_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CountryRegion_regionidentities_feature",
+								"_UI_CountryRegion_type"),
+						WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES, true, false, true, null, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -86,6 +91,7 @@ public class CountryRegionItemProvider extends CDOItemProviderAdapter implements
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WrsPackage.Literals.COUNTRY_REGION__REGIONALECONOMY);
+			childrenFeatures.add(WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +138,9 @@ public class CountryRegionItemProvider extends CDOItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CountryRegion_type");
+		String label = ((CountryRegion) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_CountryRegion_type")
+				: getString("_UI_CountryRegion_type") + " " + label;
 	}
 
 	/**
@@ -148,6 +156,7 @@ public class CountryRegionItemProvider extends CDOItemProviderAdapter implements
 
 		switch (notification.getFeatureID(CountryRegion.class)) {
 		case WrsPackage.COUNTRY_REGION__REGIONALECONOMY:
+		case WrsPackage.COUNTRY_REGION__REGIONIDENTITIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -167,17 +176,9 @@ public class CountryRegionItemProvider extends CDOItemProviderAdapter implements
 
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.COUNTRY_REGION__REGIONALECONOMY,
 				WrsFactory.eINSTANCE.createregionalEconomy()));
-	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WrsEditPlugin.INSTANCE;
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES,
+				WrsFactory.eINSTANCE.createRegionIdentities()));
 	}
 
 }

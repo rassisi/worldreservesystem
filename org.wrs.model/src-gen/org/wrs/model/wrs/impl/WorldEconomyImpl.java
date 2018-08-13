@@ -10,7 +10,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.NationalEconomy;
 import org.wrs.model.wrs.StatisticDatas;
@@ -34,7 +33,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
+public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,16 +51,6 @@ public class WorldEconomyImpl extends CDOObjectImpl implements WorldEconomy {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.WORLD_ECONOMY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

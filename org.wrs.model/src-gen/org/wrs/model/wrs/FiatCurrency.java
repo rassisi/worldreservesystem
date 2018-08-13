@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Fiat Currency</b></em>'.
@@ -12,8 +10,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getFiatCurrency()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface FiatCurrency extends CDOObject {
+public interface FiatCurrency extends Layoutable {
 } // FiatCurrency

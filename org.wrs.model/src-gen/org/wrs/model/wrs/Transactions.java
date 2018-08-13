@@ -2,7 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -19,10 +18,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.wrs.model.wrs.WrsPackage#getTransactions()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Transactions extends CDOObject {
+public interface Transactions extends LayoutableContainer {
 	/**
 	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
 	 * The list contents are of type {@link org.wrs.model.wrs.AbstractTransaction}.

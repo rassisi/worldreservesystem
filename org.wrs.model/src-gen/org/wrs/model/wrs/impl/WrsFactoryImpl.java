@@ -128,6 +128,10 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createTransferVaults();
 		case WrsPackage.TRANSACTIONS:
 			return (EObject) createTransactions();
+		case WrsPackage.REGION_IDENTITIES:
+			return (EObject) createRegionIdentities();
+		case WrsPackage.LAYOUTABLE_CONTAINER:
+			return (EObject) createLayoutableContainer();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -419,6 +423,26 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public Transactions createTransactions() {
 		TransactionsImpl transactions = new TransactionsImpl();
 		return transactions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RegionIdentities createRegionIdentities() {
+		RegionIdentitiesImpl regionIdentities = new RegionIdentitiesImpl();
+		return regionIdentities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LayoutableContainer createLayoutableContainer() {
+		LayoutableContainerImpl layoutableContainer = new LayoutableContainerImpl();
+		return layoutableContainer;
 	}
 
 	/**

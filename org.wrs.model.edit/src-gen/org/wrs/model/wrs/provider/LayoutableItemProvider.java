@@ -59,6 +59,7 @@ public class LayoutableItemProvider extends CDOItemProviderAdapter implements IE
 			addWPropertyDescriptor(object);
 			addHPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -144,6 +145,22 @@ public class LayoutableItemProvider extends CDOItemProviderAdapter implements IE
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Layoutable_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Layoutable_id_feature",
+								"_UI_Layoutable_type"),
+						WrsPackage.Literals.LAYOUTABLE__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -183,6 +200,7 @@ public class LayoutableItemProvider extends CDOItemProviderAdapter implements IE
 		case WrsPackage.LAYOUTABLE__W:
 		case WrsPackage.LAYOUTABLE__H:
 		case WrsPackage.LAYOUTABLE__NAME:
+		case WrsPackage.LAYOUTABLE__ID:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

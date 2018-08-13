@@ -12,9 +12,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.wrs.model.wrs.TransferVault;
 import org.wrs.model.wrs.TransferVaults;
 import org.wrs.model.wrs.WrsPackage;
@@ -32,7 +29,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransferVaultsImpl extends CDOObjectImpl implements TransferVaults {
+public class TransferVaultsImpl extends LayoutableContainerImpl implements TransferVaults {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,16 +47,6 @@ public class TransferVaultsImpl extends CDOObjectImpl implements TransferVaults 
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.TRANSFER_VAULTS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

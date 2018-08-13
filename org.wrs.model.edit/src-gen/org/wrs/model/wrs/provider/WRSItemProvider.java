@@ -4,19 +4,12 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
-import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.wrs.model.wrs.WRS;
@@ -29,8 +22,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class WRSItemProvider extends LayoutableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -121,7 +113,7 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 			childrenFeatures.add(WrsPackage.Literals.WRS__REGISTEREDASSTETS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__WORLDECONOMY);
 			childrenFeatures.add(WrsPackage.Literals.WRS__NODES);
-			childrenFeatures.add(WrsPackage.Literals.WRS__IDENTITIES);
+			childrenFeatures.add(WrsPackage.Literals.WRS__ALLDENTITIES);
 			childrenFeatures.add(WrsPackage.Literals.WRS__ALL_TRANSACTIONS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS);
 			childrenFeatures.add(WrsPackage.Literals.WRS__TRANSFERVAULTS);
@@ -172,7 +164,9 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_WRS_type");
+		String label = ((WRS) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_WRS_type")
+				: getString("_UI_WRS_type") + " " + label;
 	}
 
 	/**
@@ -193,7 +187,7 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 		case WrsPackage.WRS__REGISTEREDASSTETS:
 		case WrsPackage.WRS__WORLDECONOMY:
 		case WrsPackage.WRS__NODES:
-		case WrsPackage.WRS__IDENTITIES:
+		case WrsPackage.WRS__ALLDENTITIES:
 		case WrsPackage.WRS__ALL_TRANSACTIONS:
 		case WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS:
 		case WrsPackage.WRS__TRANSFERVAULTS:
@@ -234,7 +228,7 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 				.add(createChildParameter(WrsPackage.Literals.WRS__NODES, WrsFactory.eINSTANCE.createNodes()));
 
 		newChildDescriptors.add(
-				createChildParameter(WrsPackage.Literals.WRS__IDENTITIES, WrsFactory.eINSTANCE.createIdentities()));
+				createChildParameter(WrsPackage.Literals.WRS__ALLDENTITIES, WrsFactory.eINSTANCE.createIdentities()));
 
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__ALL_TRANSACTIONS,
 				WrsFactory.eINSTANCE.createAllTransactions()));
@@ -247,17 +241,6 @@ public class WRSItemProvider extends CDOItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.WRS__GENESIS_ACCOUNT,
 				WrsFactory.eINSTANCE.createGenesisAccount()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WrsEditPlugin.INSTANCE;
 	}
 
 }

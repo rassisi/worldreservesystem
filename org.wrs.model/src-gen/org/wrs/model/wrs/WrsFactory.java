@@ -247,6 +247,24 @@ public interface WrsFactory extends EFactory {
 	Transactions createTransactions();
 
 	/**
+	 * Returns a new object of class '<em>Region Identities</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Region Identities</em>'.
+	 * @generated
+	 */
+	RegionIdentities createRegionIdentities();
+
+	/**
+	 * Returns a new object of class '<em>Layoutable Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layoutable Container</em>'.
+	 * @generated
+	 */
+	LayoutableContainer createLayoutableContainer();
+
+	/**
 	 * Returns a new object of class '<em>Abstract Transaction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

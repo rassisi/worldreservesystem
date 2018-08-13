@@ -4,18 +4,10 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
-
-import org.eclipse.emf.cdo.edit.CDOItemProviderAdapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.rcpl.model.RCPLModel;
 import org.wrs.model.wrs.Countries;
@@ -27,8 +19,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
-public class CountriesItemProvider extends CDOItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CountriesItemProvider extends LayoutableContainerItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -65,7 +56,7 @@ public class CountriesItemProvider extends CDOItemProviderAdapter implements IEd
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WrsPackage.Literals.COUNTRIES__COUNTRY);
+			childrenFeatures.add(WrsPackage.Literals.COUNTRIES__CHILDREN);
 		}
 		return childrenFeatures;
 	}
@@ -109,7 +100,9 @@ public class CountriesItemProvider extends CDOItemProviderAdapter implements IEd
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Countries_type");
+		String label = ((Countries) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Countries_type")
+				: getString("_UI_Countries_type") + " " + label;
 	}
 
 	/**
@@ -123,7 +116,7 @@ public class CountriesItemProvider extends CDOItemProviderAdapter implements IEd
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Countries.class)) {
-		case WrsPackage.COUNTRIES__COUNTRY:
+		case WrsPackage.COUNTRIES__CHILDREN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -142,18 +135,7 @@ public class CountriesItemProvider extends CDOItemProviderAdapter implements IEd
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(
-				createChildParameter(WrsPackage.Literals.COUNTRIES__COUNTRY, WrsFactory.eINSTANCE.createCountry()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WrsEditPlugin.INSTANCE;
+				createChildParameter(WrsPackage.Literals.COUNTRIES__CHILDREN, WrsFactory.eINSTANCE.createCountry()));
 	}
 
 }

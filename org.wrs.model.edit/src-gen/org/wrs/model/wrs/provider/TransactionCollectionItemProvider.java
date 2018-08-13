@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.wrs.model.wrs.TransactionCollection;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -89,7 +90,9 @@ public class TransactionCollectionItemProvider extends AbstractTransactionItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_TransactionCollection_type");
+		String label = ((TransactionCollection) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_TransactionCollection_type")
+				: getString("_UI_TransactionCollection_type") + " " + label;
 	}
 
 	/**

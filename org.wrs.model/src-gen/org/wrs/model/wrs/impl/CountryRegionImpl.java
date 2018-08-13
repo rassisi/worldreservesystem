@@ -5,8 +5,8 @@ package org.wrs.model.wrs.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.CountryRegion;
+import org.wrs.model.wrs.RegionIdentities;
 import org.wrs.model.wrs.WrsPackage;
 import org.wrs.model.wrs.regionalEconomy;
 
@@ -19,11 +19,12 @@ import org.wrs.model.wrs.regionalEconomy;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.CountryRegionImpl#getRegionaleconomy <em>Regionaleconomy</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.CountryRegionImpl#getRegionidentities <em>Regionidentities</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
+public class CountryRegionImpl extends LayoutableImpl implements CountryRegion {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -41,16 +42,6 @@ public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.COUNTRY_REGION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -89,11 +80,44 @@ public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RegionIdentities getRegionidentities() {
+		return (RegionIdentities) eDynamicGet(WrsPackage.COUNTRY_REGION__REGIONIDENTITIES,
+				WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRegionidentities(RegionIdentities newRegionidentities, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newRegionidentities, WrsPackage.COUNTRY_REGION__REGIONIDENTITIES,
+				msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRegionidentities(RegionIdentities newRegionidentities) {
+		eDynamicSet(WrsPackage.COUNTRY_REGION__REGIONIDENTITIES, WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES,
+				newRegionidentities);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case WrsPackage.COUNTRY_REGION__REGIONALECONOMY:
 			return basicSetRegionaleconomy(null, msgs);
+		case WrsPackage.COUNTRY_REGION__REGIONIDENTITIES:
+			return basicSetRegionidentities(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -108,6 +132,8 @@ public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 		switch (featureID) {
 		case WrsPackage.COUNTRY_REGION__REGIONALECONOMY:
 			return getRegionaleconomy();
+		case WrsPackage.COUNTRY_REGION__REGIONIDENTITIES:
+			return getRegionidentities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,11 +143,15 @@ public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WrsPackage.COUNTRY_REGION__REGIONALECONOMY:
 			setRegionaleconomy((regionalEconomy) newValue);
+			return;
+		case WrsPackage.COUNTRY_REGION__REGIONIDENTITIES:
+			setRegionidentities((RegionIdentities) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -138,6 +168,9 @@ public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 		case WrsPackage.COUNTRY_REGION__REGIONALECONOMY:
 			setRegionaleconomy((regionalEconomy) null);
 			return;
+		case WrsPackage.COUNTRY_REGION__REGIONIDENTITIES:
+			setRegionidentities((RegionIdentities) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -152,6 +185,8 @@ public class CountryRegionImpl extends CDOObjectImpl implements CountryRegion {
 		switch (featureID) {
 		case WrsPackage.COUNTRY_REGION__REGIONALECONOMY:
 			return getRegionaleconomy() != null;
+		case WrsPackage.COUNTRY_REGION__REGIONIDENTITIES:
+			return getRegionidentities() != null;
 		}
 		return super.eIsSet(featureID);
 	}

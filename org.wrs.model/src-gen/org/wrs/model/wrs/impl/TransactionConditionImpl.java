@@ -10,8 +10,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.SignedInput;
 import org.wrs.model.wrs.TransactionCondition;
 import org.wrs.model.wrs.WrsPackage;
@@ -30,7 +28,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class TransactionConditionImpl extends CDOObjectImpl implements TransactionCondition {
+public class TransactionConditionImpl extends LayoutableImpl implements TransactionCondition {
 	/**
 	 * The default value of the '{@link #getFormula() <em>Formula</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,16 +56,6 @@ public class TransactionConditionImpl extends CDOObjectImpl implements Transacti
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.TRANSACTION_CONDITION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

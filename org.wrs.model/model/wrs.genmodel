@@ -16,7 +16,7 @@
       <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/GOLD"/>
       <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/SILVER"/>
       <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/CRYPTO"/>
-      <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/TRUST"/>
+      <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/TERRA"/>
       <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/PHYSICAL"/>
       <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/INTELLECTUAL_PROPERTY"/>
       <genEnumLiterals ecoreEnumLiteral="wrs.ecore#//AssetType/UDOLLAR"/>
@@ -39,7 +39,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/registeredasstets"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/worldeconomy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/nodes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/identities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/Alldentities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/AllTransactions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/AllTransactionConditions"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference wrs.ecore#//WRS/transfervaults"/>
@@ -117,13 +117,13 @@
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//NetworkEngine"/>
     <genClasses ecoreClass="wrs.ecore#//Countries">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//Countries/country"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//Countries/children"/>
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//Nodes">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference wrs.ecore#//Nodes/children"/>
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//Identities">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//Identities/children"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wrs.ecore#//Identities/children"/>
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//AllTransactions">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wrs.ecore#//AllTransactions/children"/>
@@ -151,6 +151,7 @@
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//CountryRegion">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference wrs.ecore#//CountryRegion/regionaleconomy"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference wrs.ecore#//CountryRegion/regionidentities"/>
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//StatisticsSource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wrs.ecore#//StatisticsSource/webserviceUrl"/>
@@ -165,6 +166,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wrs.ecore#//Layoutable/w"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wrs.ecore#//Layoutable/h"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wrs.ecore#//Layoutable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wrs.ecore#//Layoutable/id"/>
     </genClasses>
     <genClasses ecoreClass="wrs.ecore#//regionalEconomy"/>
     <genClasses ecoreClass="wrs.ecore#//TransferVaults">
@@ -173,5 +175,9 @@
     <genClasses ecoreClass="wrs.ecore#//Transactions">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference wrs.ecore#//Transactions/children"/>
     </genClasses>
+    <genClasses ecoreClass="wrs.ecore#//RegionIdentities">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wrs.ecore#//RegionIdentities/children"/>
+    </genClasses>
+    <genClasses ecoreClass="wrs.ecore#//LayoutableContainer"/>
   </genPackages>
 </genmodel:GenModel>

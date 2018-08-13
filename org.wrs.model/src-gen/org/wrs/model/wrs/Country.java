@@ -2,7 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -21,10 +20,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.wrs.model.wrs.WrsPackage#getCountry()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Country extends CDOObject {
+public interface Country extends Layoutable {
 	/**
 	 * Returns the value of the '<em><b>Fiatcurrency</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

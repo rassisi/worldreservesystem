@@ -3,23 +3,24 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.wrs.model.wrs.AbstractTransaction;
+
+import org.wrs.model.wrs.LayoutableContainer;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Abstract Transaction</b></em>'.
+ * An implementation of the model object '<em><b>Layoutable Container</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class AbstractTransactionImpl extends LayoutableImpl implements AbstractTransaction {
+public class LayoutableContainerImpl extends LayoutableImpl implements LayoutableContainer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractTransactionImpl() {
+	protected LayoutableContainerImpl() {
 		super();
 	}
 
@@ -30,7 +31,7 @@ public class AbstractTransactionImpl extends LayoutableImpl implements AbstractT
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WrsPackage.Literals.ABSTRACT_TRANSACTION;
+		return WrsPackage.Literals.LAYOUTABLE_CONTAINER;
 	}
 
-} //AbstractTransactionImpl
+} //LayoutableContainerImpl

@@ -4,37 +4,40 @@ package org.wrs.model.wrs.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.rcpl.model.RCPLModel;
-import org.wrs.model.wrs.Nodes;
+
+import org.wrs.model.wrs.RegionIdentities;
 import org.wrs.model.wrs.WrsFactory;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.Nodes} object.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.RegionIdentities} object.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  * @generated
  */
-public class NodesItemProvider extends LayoutableContainerItemProvider {
+public class RegionIdentitiesItemProvider extends LayoutableContainerItemProvider {
 	/**
-	 * This constructs an instance from a factory and a notifier. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This constructs an instance from a factory and a notifier.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NodesItemProvider(AdapterFactory adapterFactory) {
+	public RegionIdentitiesItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
 	/**
-	 * This returns the property descriptors for the adapted class. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This returns the property descriptors for the adapted class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -42,23 +45,8 @@ public class NodesItemProvider extends LayoutableContainerItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addChildrenPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Children feature.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addChildrenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Nodes_children_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Nodes_children_feature", "_UI_Nodes_type"),
-						WrsPackage.Literals.NODES__CHILDREN, true, false, true, null, null, null));
 	}
 
 	/**
@@ -73,7 +61,7 @@ public class NodesItemProvider extends LayoutableContainerItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WrsPackage.Literals.NODES__CHILDREN);
+			childrenFeatures.add(WrsPackage.Literals.REGION_IDENTITIES__CHILDREN);
 		}
 		return childrenFeatures;
 	}
@@ -92,17 +80,19 @@ public class NodesItemProvider extends LayoutableContainerItemProvider {
 	}
 
 	/**
-	 * This returns Nodes.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
+	 * This returns RegionIdentities.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return RCPLModel.resources.getImage("folder", 16, 16).getNode();
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/RegionIdentities"));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -118,23 +108,24 @@ public class NodesItemProvider extends LayoutableContainerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Nodes) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Nodes_type")
-				: getString("_UI_Nodes_type") + " " + label;
+		String label = ((RegionIdentities) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_RegionIdentities_type")
+				: getString("_UI_RegionIdentities_type") + " " + label;
 	}
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Nodes.class)) {
-		case WrsPackage.NODES__CHILDREN:
+		switch (notification.getFeatureID(RegionIdentities.class)) {
+		case WrsPackage.REGION_IDENTITIES__CHILDREN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -152,8 +143,14 @@ public class NodesItemProvider extends LayoutableContainerItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(WrsPackage.Literals.NODES__CHILDREN, WrsFactory.eINSTANCE.createNode()));
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.REGION_IDENTITIES__CHILDREN,
+				WrsFactory.eINSTANCE.createThing()));
+
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.REGION_IDENTITIES__CHILDREN,
+				WrsFactory.eINSTANCE.createIndividual()));
+
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.REGION_IDENTITIES__CHILDREN,
+				WrsFactory.eINSTANCE.createLegalEntity()));
 	}
 
 }

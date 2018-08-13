@@ -2,8 +2,6 @@
  */
 package org.wrs.model.wrs;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Statistics Source</b></em>'.
@@ -18,10 +16,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.wrs.model.wrs.WrsPackage#getStatisticsSource()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface StatisticsSource extends CDOObject {
+public interface StatisticsSource extends Layoutable {
 
 	/**
 	 * Returns the value of the '<em><b>Webservice Url</b></em>' attribute.

@@ -267,6 +267,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseRegionIdentities(RegionIdentities object) {
+			return createRegionIdentitiesAdapter();
+		}
+
+		@Override
+		public Adapter caseLayoutableContainer(LayoutableContainer object) {
+			return createLayoutableContainerAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -660,6 +670,34 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransactionsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.RegionIdentities <em>Region Identities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.RegionIdentities
+	 * @generated
+	 */
+	public Adapter createRegionIdentitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.LayoutableContainer <em>Layoutable Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.LayoutableContainer
+	 * @generated
+	 */
+	public Adapter createLayoutableContainerAdapter() {
 		return null;
 	}
 

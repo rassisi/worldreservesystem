@@ -11,8 +11,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.RegisteredAssets;
 import org.wrs.model.wrs.WrsPackage;
@@ -30,7 +28,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class RegisteredAssetsImpl extends CDOObjectImpl implements RegisteredAssets {
+public class RegisteredAssetsImpl extends LayoutableContainerImpl implements RegisteredAssets {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -48,16 +46,6 @@ public class RegisteredAssetsImpl extends CDOObjectImpl implements RegisteredAss
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.REGISTERED_ASSETS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

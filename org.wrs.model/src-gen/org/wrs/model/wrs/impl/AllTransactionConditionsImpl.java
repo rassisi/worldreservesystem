@@ -7,9 +7,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.wrs.model.wrs.AllTransactionConditions;
 import org.wrs.model.wrs.TransactionCondition;
 import org.wrs.model.wrs.WrsPackage;
@@ -27,7 +24,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class AllTransactionConditionsImpl extends CDOObjectImpl implements AllTransactionConditions {
+public class AllTransactionConditionsImpl extends LayoutableContainerImpl implements AllTransactionConditions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -45,16 +42,6 @@ public class AllTransactionConditionsImpl extends CDOObjectImpl implements AllTr
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.ALL_TRANSACTION_CONDITIONS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

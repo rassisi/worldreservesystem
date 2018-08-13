@@ -3,9 +3,6 @@
 package org.wrs.model.wrs.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.wrs.model.wrs.StatisticsSource;
 import org.wrs.model.wrs.WrsPackage;
 
@@ -22,7 +19,7 @@ import org.wrs.model.wrs.WrsPackage;
  *
  * @generated
  */
-public class StatisticsSourceImpl extends CDOObjectImpl implements StatisticsSource {
+public class StatisticsSourceImpl extends LayoutableImpl implements StatisticsSource {
 	/**
 	 * The default value of the '{@link #getWebserviceUrl() <em>Webservice Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,16 +47,6 @@ public class StatisticsSourceImpl extends CDOObjectImpl implements StatisticsSou
 	@Override
 	protected EClass eStaticClass() {
 		return WrsPackage.Literals.STATISTICS_SOURCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
