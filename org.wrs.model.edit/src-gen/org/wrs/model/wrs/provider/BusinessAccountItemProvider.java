@@ -7,25 +7,25 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.wrs.model.wrs.HumanEntity;
-import org.wrs.model.wrs.WrsPackage;
+
+import org.wrs.model.wrs.BusinessAccount;
 
 /**
- * This is the item provider adapter for a {@link org.wrs.model.wrs.HumanEntity} object.
+ * This is the item provider adapter for a {@link org.wrs.model.wrs.BusinessAccount} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class HumanEntityItemProvider extends IdentityItemProvider {
+public class BusinessAccountItemProvider extends AbstractAccountItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HumanEntityItemProvider(AdapterFactory adapterFactory) {
+	public BusinessAccountItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -40,35 +40,19 @@ public class HumanEntityItemProvider extends IdentityItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addWorldeconomyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Worldeconomy feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addWorldeconomyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_HumanEntity_worldeconomy_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_HumanEntity_worldeconomy_feature",
-								"_UI_HumanEntity_type"),
-						WrsPackage.Literals.HUMAN_ENTITY__WORLDECONOMY, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns HumanEntity.gif.
+	 * This returns BusinessAccount.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/HumanEntity"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/BusinessAccount"));
 	}
 
 	/**
@@ -89,9 +73,9 @@ public class HumanEntityItemProvider extends IdentityItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((HumanEntity) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_HumanEntity_type")
-				: getString("_UI_HumanEntity_type") + " " + label;
+		String label = ((BusinessAccount) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_BusinessAccount_type")
+				: getString("_UI_BusinessAccount_type") + " " + label;
 	}
 
 	/**

@@ -80,8 +80,8 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createIndividual();
 		case WrsPackage.LEGAL_ENTITY:
 			return (EObject) createLegalEntity();
-		case WrsPackage.ACCOUNT:
-			return (EObject) createAccount();
+		case WrsPackage.PRIVATE_ACCOUNT:
+			return (EObject) createPrivateAccount();
 		case WrsPackage.SUPPLY_CONTROL:
 			return (EObject) createSupplyControl();
 		case WrsPackage.ACCOUNTS:
@@ -132,6 +132,10 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return (EObject) createRegionIdentities();
 		case WrsPackage.LAYOUTABLE_CONTAINER:
 			return (EObject) createLayoutableContainer();
+		case WrsPackage.BUSINESS_ACCOUNT:
+			return (EObject) createBusinessAccount();
+		case WrsPackage.THING_ACCOUNT:
+			return (EObject) createThingAccount();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -151,6 +155,8 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return createLegalEntityTypeFromString(eDataType, initialValue);
 		case WrsPackage.INPUT_VALUE_TYPE:
 			return createInputValueTypeFromString(eDataType, initialValue);
+		case WrsPackage.ACCOUNT_TYPE:
+			return createAccountTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -170,6 +176,8 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 			return convertLegalEntityTypeToString(eDataType, instanceValue);
 		case WrsPackage.INPUT_VALUE_TYPE:
 			return convertInputValueTypeToString(eDataType, instanceValue);
+		case WrsPackage.ACCOUNT_TYPE:
+			return convertAccountTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -300,9 +308,9 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Account createAccount() {
-		AccountImpl account = new AccountImpl();
-		return account;
+	public PrivateAccount createPrivateAccount() {
+		PrivateAccountImpl privateAccount = new PrivateAccountImpl();
+		return privateAccount;
 	}
 
 	/**
@@ -443,6 +451,26 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	public LayoutableContainer createLayoutableContainer() {
 		LayoutableContainerImpl layoutableContainer = new LayoutableContainerImpl();
 		return layoutableContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BusinessAccount createBusinessAccount() {
+		BusinessAccountImpl businessAccount = new BusinessAccountImpl();
+		return businessAccount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ThingAccount createThingAccount() {
+		ThingAccountImpl thingAccount = new ThingAccountImpl();
+		return thingAccount;
 	}
 
 	/**
@@ -618,6 +646,28 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * @generated
 	 */
 	public String convertInputValueTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccountType createAccountTypeFromString(EDataType eDataType, String initialValue) {
+		AccountType result = AccountType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAccountTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

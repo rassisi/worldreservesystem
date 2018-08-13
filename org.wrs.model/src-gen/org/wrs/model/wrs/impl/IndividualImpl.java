@@ -4,11 +4,15 @@ package org.wrs.model.wrs.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.wrs.model.wrs.Individual;
 import org.wrs.model.wrs.LegalEntity;
+import org.wrs.model.wrs.PrivateAccount;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -21,6 +25,7 @@ import org.wrs.model.wrs.WrsPackage;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.IndividualImpl#getWorksFor <em>Works For</em>}</li>
  *   <li>{@link org.wrs.model.wrs.impl.IndividualImpl#getLegalPartnerOf <em>Legal Partner Of</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.IndividualImpl#getPrivateAccounts <em>Private Accounts</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,6 +77,31 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	public EList<PrivateAccount> getPrivateAccounts() {
+		return (EList<PrivateAccount>) eDynamicGet(WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS,
+				WrsPackage.Literals.INDIVIDUAL__PRIVATE_ACCOUNTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS:
+			return ((InternalEList<?>) getPrivateAccounts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -79,6 +109,8 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 			return getWorksFor();
 		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
 			return getLegalPartnerOf();
+		case WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS:
+			return getPrivateAccounts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -100,6 +132,10 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 			getLegalPartnerOf().clear();
 			getLegalPartnerOf().addAll((Collection<? extends Individual>) newValue);
 			return;
+		case WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS:
+			getPrivateAccounts().clear();
+			getPrivateAccounts().addAll((Collection<? extends PrivateAccount>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -118,6 +154,9 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
 			getLegalPartnerOf().clear();
 			return;
+		case WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS:
+			getPrivateAccounts().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -134,6 +173,8 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 			return !getWorksFor().isEmpty();
 		case WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF:
 			return !getLegalPartnerOf().isEmpty();
+		case WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS:
+			return !getPrivateAccounts().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -71,19 +71,25 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Thing" eSuperTypes="#//Identity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" eType="#//Identity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thingAccounts" upperBound="-1"
+        eType="#//ThingAccount" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Individual" eSuperTypes="#//HumanEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="worksFor" upperBound="-1"
         eType="#//LegalEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="legalPartnerOf" upperBound="-1"
         eType="#//Individual"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="privateAccounts" upperBound="-1"
+        eType="#//PrivateAccount" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LegalEntity" eSuperTypes="#//HumanEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//LegalEntityType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" upperBound="-1"
+        eType="#//AbstractAccount" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessAccounts" upperBound="-1"
+        eType="#//BusinessAccount" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="#//AbstractAccount">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrivateAccount" eSuperTypes="#//AbstractAccount"/>
   <eClassifiers xsi:type="ecore:EClass" name="SupplyControl" eSuperTypes="#//Layoutable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="genesisAccount" eType="#//GenesisAccount"
         containment="true"/>
@@ -189,8 +195,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HumanEntity" abstract="true" eSuperTypes="#//Identity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="worldeconomy" eType="#//WorldEconomy"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" upperBound="-1"
-        eType="#//Account" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layoutable" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -214,4 +218,10 @@
         eType="#//Identity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LayoutableContainer" eSuperTypes="#//Layoutable"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="AccountType">
+    <eLiterals name="PRIVATE"/>
+    <eLiterals name="BUSINESS" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessAccount" eSuperTypes="#//AbstractAccount"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThingAccount"/>
 </ecore:EPackage>

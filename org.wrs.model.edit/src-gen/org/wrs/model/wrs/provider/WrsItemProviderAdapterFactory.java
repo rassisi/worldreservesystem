@@ -349,26 +349,26 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.Account} instances.
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.PrivateAccount} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AccountItemProvider accountItemProvider;
+	protected PrivateAccountItemProvider privateAccountItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.wrs.model.wrs.Account}.
+	 * This creates an adapter for a {@link org.wrs.model.wrs.PrivateAccount}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAccountAdapter() {
-		if (accountItemProvider == null) {
-			accountItemProvider = new AccountItemProvider(this);
+	public Adapter createPrivateAccountAdapter() {
+		if (privateAccountItemProvider == null) {
+			privateAccountItemProvider = new PrivateAccountItemProvider(this);
 		}
 
-		return accountItemProvider;
+		return privateAccountItemProvider;
 	}
 
 	/**
@@ -691,6 +691,52 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 		}
 
 		return layoutableContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.BusinessAccount} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BusinessAccountItemProvider businessAccountItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.BusinessAccount}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBusinessAccountAdapter() {
+		if (businessAccountItemProvider == null) {
+			businessAccountItemProvider = new BusinessAccountItemProvider(this);
+		}
+
+		return businessAccountItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.wrs.model.wrs.ThingAccount} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ThingAccountItemProvider thingAccountItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.wrs.model.wrs.ThingAccount}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createThingAccountAdapter() {
+		if (thingAccountItemProvider == null) {
+			thingAccountItemProvider = new ThingAccountItemProvider(this);
+		}
+
+		return thingAccountItemProvider;
 	}
 
 	/**
@@ -1069,8 +1115,8 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			individualItemProvider.dispose();
 		if (legalEntityItemProvider != null)
 			legalEntityItemProvider.dispose();
-		if (accountItemProvider != null)
-			accountItemProvider.dispose();
+		if (privateAccountItemProvider != null)
+			privateAccountItemProvider.dispose();
 		if (supplyControlItemProvider != null)
 			supplyControlItemProvider.dispose();
 		if (accountsItemProvider != null)
@@ -1121,6 +1167,10 @@ public class WrsItemProviderAdapterFactory extends WrsAdapterFactory
 			regionIdentitiesItemProvider.dispose();
 		if (layoutableContainerItemProvider != null)
 			layoutableContainerItemProvider.dispose();
+		if (businessAccountItemProvider != null)
+			businessAccountItemProvider.dispose();
+		if (thingAccountItemProvider != null)
+			thingAccountItemProvider.dispose();
 	}
 
 }

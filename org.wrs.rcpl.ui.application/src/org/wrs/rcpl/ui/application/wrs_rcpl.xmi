@@ -3119,8 +3119,9 @@
         name="My Accounts"
         id="my_account"
         image="account"
-        detailPaneClassName=""
-        groupType="EMPTY_GROUP_BUTTON">
+        width="250.0"
+        height="600.0"
+        detailPaneClassName="">
       <tools
           name="Accounts"
           id="ACCOUNTS_OVERVIEW"

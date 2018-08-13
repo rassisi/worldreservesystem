@@ -132,8 +132,8 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAccount(Account object) {
-			return createAccountAdapter();
+		public Adapter casePrivateAccount(PrivateAccount object) {
+			return createPrivateAccountAdapter();
 		}
 
 		@Override
@@ -274,6 +274,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLayoutableContainer(LayoutableContainer object) {
 			return createLayoutableContainerAdapter();
+		}
+
+		@Override
+		public Adapter caseBusinessAccount(BusinessAccount object) {
+			return createBusinessAccountAdapter();
+		}
+
+		@Override
+		public Adapter caseThingAccount(ThingAccount object) {
+			return createThingAccountAdapter();
 		}
 
 		@Override
@@ -478,16 +488,16 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.Account <em>Account</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.PrivateAccount <em>Private Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.wrs.model.wrs.Account
+	 * @see org.wrs.model.wrs.PrivateAccount
 	 * @generated
 	 */
-	public Adapter createAccountAdapter() {
+	public Adapter createPrivateAccountAdapter() {
 		return null;
 	}
 
@@ -698,6 +708,34 @@ public class WrsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLayoutableContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.BusinessAccount <em>Business Account</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.BusinessAccount
+	 * @generated
+	 */
+	public Adapter createBusinessAccountAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.wrs.model.wrs.ThingAccount <em>Thing Account</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.wrs.model.wrs.ThingAccount
+	 * @generated
+	 */
+	public Adapter createThingAccountAdapter() {
 		return null;
 	}
 

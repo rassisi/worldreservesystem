@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.wrs.model.wrs.Individual#getWorksFor <em>Works For</em>}</li>
  *   <li>{@link org.wrs.model.wrs.Individual#getLegalPartnerOf <em>Legal Partner Of</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.Individual#getPrivateAccounts <em>Private Accounts</em>}</li>
  * </ul>
  *
  * @see org.wrs.model.wrs.WrsPackage#getIndividual()
@@ -53,5 +54,21 @@ public interface Individual extends HumanEntity {
 	 * @generated
 	 */
 	EList<Individual> getLegalPartnerOf();
+
+	/**
+	 * Returns the value of the '<em><b>Private Accounts</b></em>' containment reference list.
+	 * The list contents are of type {@link org.wrs.model.wrs.PrivateAccount}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Private Accounts</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Private Accounts</em>' containment reference list.
+	 * @see org.wrs.model.wrs.WrsPackage#getIndividual_PrivateAccounts()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PrivateAccount> getPrivateAccounts();
 
 } // Individual

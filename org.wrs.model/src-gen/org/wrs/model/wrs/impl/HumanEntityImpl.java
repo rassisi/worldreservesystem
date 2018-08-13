@@ -2,14 +2,7 @@
  */
 package org.wrs.model.wrs.impl;
 
-import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.InternalEList;
-import org.wrs.model.wrs.Account;
 import org.wrs.model.wrs.HumanEntity;
 import org.wrs.model.wrs.WorldEconomy;
 import org.wrs.model.wrs.WrsPackage;
@@ -23,7 +16,6 @@ import org.wrs.model.wrs.WrsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.HumanEntityImpl#getWorldeconomy <em>Worldeconomy</em>}</li>
- *   <li>{@link org.wrs.model.wrs.impl.HumanEntityImpl#getAccounts <em>Accounts</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,31 +75,6 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<Account> getAccounts() {
-		return (EList<Account>) eDynamicGet(WrsPackage.HUMAN_ENTITY__ACCOUNTS,
-				WrsPackage.Literals.HUMAN_ENTITY__ACCOUNTS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case WrsPackage.HUMAN_ENTITY__ACCOUNTS:
-			return ((InternalEList<?>) getAccounts()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -115,8 +82,6 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 			if (resolve)
 				return getWorldeconomy();
 			return basicGetWorldeconomy();
-		case WrsPackage.HUMAN_ENTITY__ACCOUNTS:
-			return getAccounts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -133,10 +98,6 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 		case WrsPackage.HUMAN_ENTITY__WORLDECONOMY:
 			setWorldeconomy((WorldEconomy) newValue);
 			return;
-		case WrsPackage.HUMAN_ENTITY__ACCOUNTS:
-			getAccounts().clear();
-			getAccounts().addAll((Collection<? extends Account>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -152,9 +113,6 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 		case WrsPackage.HUMAN_ENTITY__WORLDECONOMY:
 			setWorldeconomy((WorldEconomy) null);
 			return;
-		case WrsPackage.HUMAN_ENTITY__ACCOUNTS:
-			getAccounts().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -169,8 +127,6 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 		switch (featureID) {
 		case WrsPackage.HUMAN_ENTITY__WORLDECONOMY:
 			return basicGetWorldeconomy() != null;
-		case WrsPackage.HUMAN_ENTITY__ACCOUNTS:
-			return !getAccounts().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

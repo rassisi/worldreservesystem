@@ -1,4 +1,4 @@
-package org.wrs.rcpl.ui.application;
+package org.wrs.rcpl.ui.factories;
 
 import org.eclipse.rcpl.IHomePage;
 import org.eclipse.rcpl.ILogin;
@@ -9,6 +9,8 @@ import org.eclipse.rcpl.ITreePart;
 import org.eclipse.rcpl.libs.db.H2DB;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePage;
 import org.eclipse.rcpl.model_2_0_0.rcpl.HomePageType;
+import org.wrs.rcpl.ui.application.WrsNavigatorTreeManagerImpl;
+import org.wrs.rcpl.ui.application.WrsNavigatorTreePart;
 import org.wrs.rcpl.ui.homepages.AccountHomePage;
 import org.wrs.rcpl.ui.homepages.NetworkHomePage;
 import org.wrs.rcpl.ui.homepages.WrsOverviewHomePage;

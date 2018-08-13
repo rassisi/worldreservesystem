@@ -58,13 +58,13 @@ public enum AssetType implements Enumerator {
 	 */
 	TERRA(3, "TERRA", "TERRA"),
 	/**
-	* The '<em><b>PHYSICAL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>PHYSICAL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #PHYSICAL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #PHYSICAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	PHYSICAL(4, "PHYSICAL", "PHYSICAL"),
 
 	/**

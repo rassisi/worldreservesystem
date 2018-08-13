@@ -130,13 +130,13 @@ public interface WrsFactory extends EFactory {
 	LegalEntity createLegalEntity();
 
 	/**
-	 * Returns a new object of class '<em>Account</em>'.
+	 * Returns a new object of class '<em>Private Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Account</em>'.
+	 * @return a new object of class '<em>Private Account</em>'.
 	 * @generated
 	 */
-	Account createAccount();
+	PrivateAccount createPrivateAccount();
 
 	/**
 	 * Returns a new object of class '<em>Supply Control</em>'.
@@ -263,6 +263,24 @@ public interface WrsFactory extends EFactory {
 	 * @generated
 	 */
 	LayoutableContainer createLayoutableContainer();
+
+	/**
+	 * Returns a new object of class '<em>Business Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Business Account</em>'.
+	 * @generated
+	 */
+	BusinessAccount createBusinessAccount();
+
+	/**
+	 * Returns a new object of class '<em>Thing Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Thing Account</em>'.
+	 * @generated
+	 */
+	ThingAccount createThingAccount();
 
 	/**
 	 * Returns a new object of class '<em>Abstract Transaction</em>'.

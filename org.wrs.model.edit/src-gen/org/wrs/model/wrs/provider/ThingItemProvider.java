@@ -8,10 +8,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.wrs.model.wrs.Thing;
+import org.wrs.model.wrs.WrsFactory;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -43,6 +46,7 @@ public class ThingItemProvider extends IdentityItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addBelongsToPropertyDescriptor(object);
+			addThingAccountsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -60,6 +64,51 @@ public class ThingItemProvider extends IdentityItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Thing_belongsTo_feature",
 								"_UI_Thing_type"),
 						WrsPackage.Literals.THING__BELONGS_TO, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Thing Accounts feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addThingAccountsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_thingAccounts_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_thingAccounts_feature",
+								"_UI_Thing_type"),
+						WrsPackage.Literals.THING__THING_ACCOUNTS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(WrsPackage.Literals.THING__THING_ACCOUNTS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -106,6 +155,12 @@ public class ThingItemProvider extends IdentityItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Thing.class)) {
+		case WrsPackage.THING__THING_ACCOUNTS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -119,6 +174,9 @@ public class ThingItemProvider extends IdentityItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(WrsPackage.Literals.THING__THING_ACCOUNTS,
+				WrsFactory.eINSTANCE.createThingAccount()));
 	}
 
 }

@@ -13,12 +13,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.wrs.model.wrs.AbstractAccount;
 import org.wrs.model.wrs.AbstractTransaction;
-import org.wrs.model.wrs.Account;
+import org.wrs.model.wrs.AccountType;
 import org.wrs.model.wrs.Accounts;
 import org.wrs.model.wrs.AllTransactionConditions;
 import org.wrs.model.wrs.AllTransactions;
 import org.wrs.model.wrs.Asset;
 import org.wrs.model.wrs.AssetType;
+import org.wrs.model.wrs.BusinessAccount;
 import org.wrs.model.wrs.Countries;
 import org.wrs.model.wrs.Country;
 import org.wrs.model.wrs.CountryRegion;
@@ -38,6 +39,7 @@ import org.wrs.model.wrs.NetworkEngine;
 import org.wrs.model.wrs.Node;
 import org.wrs.model.wrs.NodeAccount;
 import org.wrs.model.wrs.Nodes;
+import org.wrs.model.wrs.PrivateAccount;
 import org.wrs.model.wrs.RegionIdentities;
 import org.wrs.model.wrs.RegisteredAssets;
 import org.wrs.model.wrs.SignedInput;
@@ -46,6 +48,7 @@ import org.wrs.model.wrs.Statistics;
 import org.wrs.model.wrs.StatisticsSource;
 import org.wrs.model.wrs.SupplyControl;
 import org.wrs.model.wrs.Thing;
+import org.wrs.model.wrs.ThingAccount;
 import org.wrs.model.wrs.Transaction;
 import org.wrs.model.wrs.TransactionCollection;
 import org.wrs.model.wrs.TransactionCondition;
@@ -161,7 +164,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass accountEClass = null;
+	private EClass privateAccountEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -267,6 +270,20 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	private EClass layoutableContainerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass businessAccountEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass thingAccountEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -379,6 +396,13 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * @generated
 	 */
 	private EEnum inputValueTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum accountTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -773,6 +797,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getThing_ThingAccounts() {
+		return (EReference) thingEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIndividual() {
 		return individualEClass;
 	}
@@ -800,6 +833,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIndividual_PrivateAccounts() {
+		return (EReference) individualEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLegalEntity() {
 		return legalEntityEClass;
 	}
@@ -818,8 +860,8 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAccount() {
-		return accountEClass;
+	public EReference getLegalEntity_Accounts() {
+		return (EReference) legalEntityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -827,8 +869,17 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAccount_PublicKey() {
-		return (EAttribute) accountEClass.getEStructuralFeatures().get(0);
+	public EReference getLegalEntity_BusinessAccounts() {
+		return (EReference) legalEntityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPrivateAccount() {
+		return privateAccountEClass;
 	}
 
 	/**
@@ -1178,6 +1229,24 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBusinessAccount() {
+		return businessAccountEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getThingAccount() {
+		return thingAccountEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbstractTransaction() {
 		return abstractTransactionEClass;
 	}
@@ -1385,15 +1454,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHumanEntity_Accounts() {
-		return (EReference) humanEntityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getLayoutable() {
 		return layoutableEClass;
 	}
@@ -1511,6 +1571,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getAccountType() {
+		return accountTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public WrsFactory getWrsFactory() {
 		return (WrsFactory) getEFactoryInstance();
 	}
@@ -1581,16 +1650,19 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		thingEClass = createEClass(THING);
 		createEReference(thingEClass, THING__BELONGS_TO);
+		createEReference(thingEClass, THING__THING_ACCOUNTS);
 
 		individualEClass = createEClass(INDIVIDUAL);
 		createEReference(individualEClass, INDIVIDUAL__WORKS_FOR);
 		createEReference(individualEClass, INDIVIDUAL__LEGAL_PARTNER_OF);
+		createEReference(individualEClass, INDIVIDUAL__PRIVATE_ACCOUNTS);
 
 		legalEntityEClass = createEClass(LEGAL_ENTITY);
 		createEAttribute(legalEntityEClass, LEGAL_ENTITY__TYPE);
+		createEReference(legalEntityEClass, LEGAL_ENTITY__ACCOUNTS);
+		createEReference(legalEntityEClass, LEGAL_ENTITY__BUSINESS_ACCOUNTS);
 
-		accountEClass = createEClass(ACCOUNT);
-		createEAttribute(accountEClass, ACCOUNT__PUBLIC_KEY);
+		privateAccountEClass = createEClass(PRIVATE_ACCOUNT);
 
 		supplyControlEClass = createEClass(SUPPLY_CONTROL);
 		createEReference(supplyControlEClass, SUPPLY_CONTROL__GENESIS_ACCOUNT);
@@ -1669,7 +1741,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		humanEntityEClass = createEClass(HUMAN_ENTITY);
 		createEReference(humanEntityEClass, HUMAN_ENTITY__WORLDECONOMY);
-		createEReference(humanEntityEClass, HUMAN_ENTITY__ACCOUNTS);
 
 		layoutableEClass = createEClass(LAYOUTABLE);
 		createEAttribute(layoutableEClass, LAYOUTABLE__X);
@@ -1692,10 +1763,15 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 
 		layoutableContainerEClass = createEClass(LAYOUTABLE_CONTAINER);
 
+		businessAccountEClass = createEClass(BUSINESS_ACCOUNT);
+
+		thingAccountEClass = createEClass(THING_ACCOUNT);
+
 		// Create enums
 		assetTypeEEnum = createEEnum(ASSET_TYPE);
 		legalEntityTypeEEnum = createEEnum(LEGAL_ENTITY_TYPE);
 		inputValueTypeEEnum = createEEnum(INPUT_VALUE_TYPE);
+		accountTypeEEnum = createEEnum(ACCOUNT_TYPE);
 	}
 
 	/**
@@ -1740,7 +1816,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		thingEClass.getESuperTypes().add(this.getIdentity());
 		individualEClass.getESuperTypes().add(this.getHumanEntity());
 		legalEntityEClass.getESuperTypes().add(this.getHumanEntity());
-		accountEClass.getESuperTypes().add(this.getAbstractAccount());
+		privateAccountEClass.getESuperTypes().add(this.getAbstractAccount());
 		supplyControlEClass.getESuperTypes().add(this.getLayoutable());
 		accountsEClass.getESuperTypes().add(this.getLayoutableContainer());
 		transactionEClass.getESuperTypes().add(this.getAbstractTransaction());
@@ -1768,6 +1844,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		transactionsEClass.getESuperTypes().add(this.getLayoutableContainer());
 		regionIdentitiesEClass.getESuperTypes().add(this.getLayoutableContainer());
 		layoutableContainerEClass.getESuperTypes().add(this.getLayoutable());
+		businessAccountEClass.getESuperTypes().add(this.getAbstractAccount());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wrsEClass, org.wrs.model.wrs.WRS.class, "WRS", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1869,6 +1946,9 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getThing_BelongsTo(), this.getIdentity(), null, "belongsTo", null, 0, 1, Thing.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getThing_ThingAccounts(), this.getThingAccount(), null, "thingAccounts", null, 0, -1,
+				Thing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(individualEClass, Individual.class, "Individual", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1878,15 +1958,23 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getIndividual_LegalPartnerOf(), this.getIndividual(), null, "legalPartnerOf", null, 0, -1,
 				Individual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIndividual_PrivateAccounts(), this.getPrivateAccount(), null, "privateAccounts", null, 0, -1,
+				Individual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(legalEntityEClass, LegalEntity.class, "LegalEntity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLegalEntity_Type(), this.getLegalEntityType(), "type", null, 0, 1, LegalEntity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLegalEntity_Accounts(), this.getAbstractAccount(), null, "accounts", null, 0, -1,
+				LegalEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLegalEntity_BusinessAccounts(), this.getBusinessAccount(), null, "businessAccounts", null, 0,
+				-1, LegalEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(accountEClass, Account.class, "Account", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAccount_PublicKey(), ecorePackage.getEString(), "publicKey", null, 0, 1, Account.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(privateAccountEClass, PrivateAccount.class, "PrivateAccount", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(supplyControlEClass, SupplyControl.class, "SupplyControl", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2047,9 +2135,6 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEReference(getHumanEntity_Worldeconomy(), this.getWorldEconomy(), null, "worldeconomy", null, 0, 1,
 				HumanEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHumanEntity_Accounts(), this.getAccount(), null, "accounts", null, 0, -1, HumanEntity.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layoutableEClass, Layoutable.class, "Layoutable", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2090,6 +2175,12 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		initEClass(layoutableContainerEClass, LayoutableContainer.class, "LayoutableContainer", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(businessAccountEClass, BusinessAccount.class, "BusinessAccount", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(thingAccountEClass, ThingAccount.class, "ThingAccount", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(assetTypeEEnum, AssetType.class, "AssetType");
 		addEEnumLiteral(assetTypeEEnum, AssetType.GOLD);
@@ -2110,6 +2201,10 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 		addEEnumLiteral(inputValueTypeEEnum, InputValueType.NUMBER);
 		addEEnumLiteral(inputValueTypeEEnum, InputValueType.BOOLEAN);
 		addEEnumLiteral(inputValueTypeEEnum, InputValueType.TEXT);
+
+		initEEnum(accountTypeEEnum, AccountType.class, "AccountType");
+		addEEnumLiteral(accountTypeEEnum, AccountType.PRIVATE);
+		addEEnumLiteral(accountTypeEEnum, AccountType.BUSINESS);
 
 		// Create resource
 		createResource(eNS_URI);

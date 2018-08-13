@@ -3,6 +3,8 @@ package org.wrs.rcpl.ui.application;
 import org.eclipse.rcpl.IRcplFactory;
 import org.eclipse.rcpl.IToolFactory;
 import org.eclipse.rcpl.application.AbstractRcplApplication;
+import org.wrs.rcpl.ui.factories.WrsFactory;
+import org.wrs.rcpl.ui.factories.WrsToolFactory;
 import org.wrs.rcpl.ui.images.WrsImages;
 
 import com.joffice.rcpl.addon.office.application.JOApplicationProvider;

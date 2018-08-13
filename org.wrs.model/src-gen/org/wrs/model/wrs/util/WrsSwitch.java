@@ -199,13 +199,13 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WrsPackage.ACCOUNT: {
-			Account account = (Account) theEObject;
-			T result = caseAccount(account);
+		case WrsPackage.PRIVATE_ACCOUNT: {
+			PrivateAccount privateAccount = (PrivateAccount) theEObject;
+			T result = casePrivateAccount(privateAccount);
 			if (result == null)
-				result = caseAbstractAccount(account);
+				result = caseAbstractAccount(privateAccount);
 			if (result == null)
-				result = caseLayoutable(account);
+				result = caseLayoutable(privateAccount);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -490,6 +490,24 @@ public class WrsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case WrsPackage.BUSINESS_ACCOUNT: {
+			BusinessAccount businessAccount = (BusinessAccount) theEObject;
+			T result = caseBusinessAccount(businessAccount);
+			if (result == null)
+				result = caseAbstractAccount(businessAccount);
+			if (result == null)
+				result = caseLayoutable(businessAccount);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WrsPackage.THING_ACCOUNT: {
+			ThingAccount thingAccount = (ThingAccount) theEObject;
+			T result = caseThingAccount(thingAccount);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -691,17 +709,17 @@ public class WrsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Account</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Private Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Account</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Private Account</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAccount(Account object) {
+	public T casePrivateAccount(PrivateAccount object) {
 		return null;
 	}
 
@@ -927,6 +945,36 @@ public class WrsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLayoutableContainer(LayoutableContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Business Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Business Account</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBusinessAccount(BusinessAccount object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Thing Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Thing Account</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseThingAccount(ThingAccount object) {
 		return null;
 	}
 

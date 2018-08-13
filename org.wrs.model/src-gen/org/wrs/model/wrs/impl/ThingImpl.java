@@ -2,9 +2,15 @@
  */
 package org.wrs.model.wrs.impl;
 
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.Thing;
+import org.wrs.model.wrs.ThingAccount;
 import org.wrs.model.wrs.WrsPackage;
 
 /**
@@ -16,6 +22,7 @@ import org.wrs.model.wrs.WrsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.wrs.model.wrs.impl.ThingImpl#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link org.wrs.model.wrs.impl.ThingImpl#getThingAccounts <em>Thing Accounts</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,6 +79,31 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	public EList<ThingAccount> getThingAccounts() {
+		return (EList<ThingAccount>) eDynamicGet(WrsPackage.THING__THING_ACCOUNTS,
+				WrsPackage.Literals.THING__THING_ACCOUNTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WrsPackage.THING__THING_ACCOUNTS:
+			return ((InternalEList<?>) getThingAccounts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -79,6 +111,8 @@ public class ThingImpl extends IdentityImpl implements Thing {
 			if (resolve)
 				return getBelongsTo();
 			return basicGetBelongsTo();
+		case WrsPackage.THING__THING_ACCOUNTS:
+			return getThingAccounts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -88,11 +122,16 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WrsPackage.THING__BELONGS_TO:
 			setBelongsTo((Identity) newValue);
+			return;
+		case WrsPackage.THING__THING_ACCOUNTS:
+			getThingAccounts().clear();
+			getThingAccounts().addAll((Collection<? extends ThingAccount>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,6 +148,9 @@ public class ThingImpl extends IdentityImpl implements Thing {
 		case WrsPackage.THING__BELONGS_TO:
 			setBelongsTo((Identity) null);
 			return;
+		case WrsPackage.THING__THING_ACCOUNTS:
+			getThingAccounts().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -123,6 +165,8 @@ public class ThingImpl extends IdentityImpl implements Thing {
 		switch (featureID) {
 		case WrsPackage.THING__BELONGS_TO:
 			return basicGetBelongsTo() != null;
+		case WrsPackage.THING__THING_ACCOUNTS:
+			return !getThingAccounts().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
