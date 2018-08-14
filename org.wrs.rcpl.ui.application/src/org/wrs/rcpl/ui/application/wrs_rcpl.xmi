@@ -76,7 +76,7 @@
         id="PERSPECTIVE_ACCOUNTS"
         image="account">
       <sideToolBar
-          toolGroups="//@allTools/@toolgroupChildren.60 //@allTools/@toolgroupChildren.61 //@allTools/@toolgroupChildren.4 //@allTools/@toolgroupChildren.6 //@allTools/@toolgroupChildren.7"/>
+          toolGroups="//@allTools/@toolgroupChildren.60 //@allTools/@toolgroupChildren.61 //@allTools/@toolgroupChildren.9"/>
       <topToolBar/>
       <quickToolBar/>
       <ribbonToolBar/>
@@ -1553,14 +1553,14 @@
     </toolgroupChildren>
     <toolgroupChildren
         name="Shapes"
-        id="sideBar/shapes"
+        id="TOOLBAR_SHAPES"
         image="shapes"
         width="250.0"
         height="550.0"
         service="JOPictureService">
       <toolGroups
           name="Standard Shapes"
-          id="standard_shapes"
+          id="STANDARD_SHAPES"
           image="shape_rectangle">
         <toolGroups
             name="Basics"
@@ -2206,7 +2206,7 @@
       </toolGroups>
       <toolGroups
           name="Scientific Shapes"
-          id="scientific_shapes"
+          id="SCIENTIFIC_SHAPES"
           image="science">
         <toolGroups
             name="Common Shapes"
