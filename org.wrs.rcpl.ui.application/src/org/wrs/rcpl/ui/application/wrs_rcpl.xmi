@@ -102,7 +102,7 @@
       <ribbonToolBar/>
     </children>
   </allPerspectives>
-  <allPreferences
+  <preferences
       image="folder">
     <children
         image="folder">
@@ -112,7 +112,7 @@
           value="value1"
           type="java.lang.String"/>
     </children>
-  </allPreferences>
+  </preferences>
   <allTools>
     <toolgroupChildren
         name="File"
