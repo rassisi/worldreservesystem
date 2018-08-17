@@ -55,16 +55,16 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 		mapView.getChildren().add(worldmapView);
 		controlPane.getChildren().add(new Button("test"));
 
-		startTask("Loading World Reserve System Nodes...", 1);
+		startTask("Loading World Reserve System Nodes...", 1, null);
 	}
 
 	@Override
-	protected void task_1() {
+	protected Object task_1(RcplTask task, Object[] parameters) {
 		Ip2LocationFinder locationFinder = new Ip2LocationFinder(Rcpl.UIC.getH2DB());
 		try {
-			taskProgress(1, "Collect IP-Adresses", 0, 0);
+			progress(1, "Collect IP-Adresses", 0, 0);
 			locationFinder.findMyIPAddress();
-			taskProgress(1, "Find Locations", 0, 0);
+			progress(1, "Find Locations", 0, 0);
 			List<IPEntry> entries = locationFinder.findMyLocation();
 
 			Platform.runLater(new Runnable() {
@@ -79,11 +79,11 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 		} catch (SQLException e) {
 			Rcpl.printErrorln("", e);
 		}
+		return null;
 	}
 
 	@Override
 	protected IModelDetailPageControler createControler() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
