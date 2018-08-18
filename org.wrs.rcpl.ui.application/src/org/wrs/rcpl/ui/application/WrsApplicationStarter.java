@@ -21,4 +21,9 @@ public class WrsApplicationStarter extends JOApplicationStarter {
 		return new WrsUic(this);
 	}
 
+	@Override
+	protected void doInitApplicationWithModel() {
+		registerServices();
+	}
+
 }

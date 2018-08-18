@@ -3351,4 +3351,68 @@
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>
+  
+   <services>
+    <children
+        name="RCPL Browser Service"
+        id="BROWSER_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplBrowserService"/>
+    <children
+        name="RCPL Command Service"
+        id="COMMAND_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplCommandService"/>
+    <children
+        name="RCPL Context Menu Service"
+        id="CONTEXT_MENU_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplContextMenuGeneralService"/>
+    <children
+        name="RCPL Delete Service"
+        id="DELETE_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplDeleteService"/>
+    <children
+        name="RCPL Document Service"
+        id="DOCUMENT_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplDocumentService"/>
+    <children
+        name="RCPL Setup Service"
+        id="SETUP_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplSetupService"/>
+    <children
+        name="RCPL Editor Service"
+        id="EDITOR_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplEditorService"/>
+    <children
+        name="RCPL Object Service"
+        id="OBJECT_SERVICE"
+        className="org.eclipse.rcpl.internal.services.RcplObjectService"/>
+    <children
+        name="JO Color Service"
+        id="COLOR_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOColorService"/>
+    <children
+        name="JO FontService"
+        id="FONT_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOFontService"/>
+    <children
+        name="JO Insert Service"
+        id="INSERT_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOInsertService"/>
+    <children
+        name="JO Layout Service"
+        id="LAYOUT_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOLayoutService"/>
+    <children
+        name="JO Paragraph Service"
+        id="PARAGRAPH_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOParagraphService"/>
+    <children
+        name="JO Picture Service"
+        id="PICTURE_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOPictureService"/>
+    <children
+        name="JO Table Service"
+        id="TABLE_SERVICE"
+        className="com.joffice.rcpl.addon.office.internal.services.JOTableService"/>
+  </services>
+  
 </rcpl:RCPL>
