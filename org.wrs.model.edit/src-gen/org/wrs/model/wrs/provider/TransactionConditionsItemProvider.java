@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.rcpl.model.RCPLModel;
+import org.eclipse.rcpl.model.RcplModel;
 
 /**
  * This is the item provider adapter for a {@link org.wrs.model.wrs.TransactionConditions} object.
@@ -58,7 +58,7 @@ public class TransactionConditionsItemProvider extends CDOItemProviderAdapter im
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return RCPLModel.resources.getImage("folder", 16, 16).getNode();
+		return RcplModel.resources.getImage("folder", 16, 16).getNode();
 	}
 
 	/**

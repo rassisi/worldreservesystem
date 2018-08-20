@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.rcpl.model.RCPLModel;
+import org.eclipse.rcpl.model.RcplModel;
 import org.wrs.model.wrs.StatisticDatas;
 import org.wrs.model.wrs.WrsFactory;
 import org.wrs.model.wrs.WrsPackage;
@@ -101,7 +101,7 @@ public class StatisticDatasItemProvider extends LayoutableContainerItemProvider 
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return RCPLModel.resources.getImage("folder", 16, 16).getNode();
+		return RcplModel.resources.getImage("folder", 16, 16).getNode();
 	}
 
 	/**

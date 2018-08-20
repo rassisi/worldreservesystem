@@ -1,7 +1,7 @@
 package org.wrs.rcpl.ui.application;
 
-import org.eclipse.rcpl.model.RCPLModel;
+import org.eclipse.rcpl.model.RcplModel;
 
-public class WrsModel extends RCPLModel {
+public class WrsModel extends RcplModel {
 
 }
