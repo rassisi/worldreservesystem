@@ -22,7 +22,8 @@
         id="OVERVIEW"
         image="internet_cloud"
         overview="true">
-      <sideToolBar/>
+      <sideToolBar
+          toolGroups="//@allTools/@toolgroupChildren.64"/>
       <topToolBar/>
       <quickToolBar/>
       <ribbonToolBar/>
@@ -3145,6 +3146,12 @@
         image="help"
         url="http://www.worldreservesystem.com/"
         groupType="EMPTY_GROUP_BUTTON"/>
+    <toolgroupChildren
+        name="Settings"
+        id="SHOW_TOOLS_EDITOR"
+        image="settings"
+        detailPaneClassName="org.eclipse.rcpl.navigator.details.ToolsDetailPage"
+        groupType="EMPTY_GROUP_BUTTON"/>
     <toolChildren
         name="New Word Document"
         id="NEW_WORD_DOCUMENT"
@@ -3351,8 +3358,7 @@
   </homepages>
   <imageUrls>https://upload.wikimedia.org/wikipedia/commons/d/d3/</imageUrls>
   <imageUrls>https://de.m.wikipedia.org/wiki/Datei:</imageUrls>
-  
-   <services>
+  <services>
     <children
         name="RCPL Browser Service"
         id="BROWSER_SERVICE"
@@ -3414,5 +3420,4 @@
         id="TABLE_SERVICE"
         className="com.joffice.rcpl.addon.office.internal.services.JOTableService"/>
   </services>
-  
 </rcpl:RCPL>
