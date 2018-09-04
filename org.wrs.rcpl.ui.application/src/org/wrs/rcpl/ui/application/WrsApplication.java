@@ -12,12 +12,11 @@ package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.IApplicationStarter;
 import org.eclipse.rcpl.IRcplApplicationProvider;
-import org.eclipse.rcpl.application.AbstractRcplApplication;
 import org.eclipse.rcpl.application.AbstractApplicationProvider;
+import org.eclipse.rcpl.application.AbstractRcplApplication;
 import org.eclipse.rcpl.model.ISessionFacory;
 import org.eclipse.rcpl.model.RcplModel;
-import org.eclipse.rcpl.model.client.AbstractSession;
-import org.eclipse.rcpl.model.client.RcplSession;
+import org.wrs.rcpl.ui.factories.WrsSessionFactory;
 
 /**
  * @author ramin
@@ -34,12 +33,6 @@ public class WrsApplication extends AbstractRcplApplication {
 
 	@Override
 	protected IRcplApplicationProvider createApplicationProvider() {
-		AbstractSession.applicationId = this;
-
-		// TODO:
-
-		AbstractSession.sessionFactory = new WrsSessionFactory();
-
 		return new WrsApplicationProvider(this);
 	}
 
@@ -61,7 +54,6 @@ public class WrsApplication extends AbstractRcplApplication {
 	@Override
 	protected ISessionFacory createSessionFactory() {
 		ISessionFacory factory = new WrsSessionFactory();
-		RcplSession.sessionFactory = factory;
 		return factory;
 	}
 

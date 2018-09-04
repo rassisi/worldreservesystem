@@ -36,23 +36,8 @@ public class WrsSession<WRS> extends AbstractSession<EObject> {
 	protected void createInitialApplicationModel(EList<EObject> contents) {
 		org.wrs.model.wrs.WRS wrs = WrsFactory.eINSTANCE.createWRS();
 		contents.add(wrs);
-
 		wrs.getGenesisAccount();
-
-//		wrs.getIdentities().getChildren().add(e)
-//		
-//		wrs.getAllAccounts().getChildren().add(e)
 		commit();
 	}
-
-//	private AbstractAccount createPrivateAccount() {
-//		Account account = WrsFactory.eINSTANCE.createAccount();
-//		return account;
-//	}
-//	
-//	
-//	private Individual createPrivateIndividual() {
-//		
-//	}
 
 }
