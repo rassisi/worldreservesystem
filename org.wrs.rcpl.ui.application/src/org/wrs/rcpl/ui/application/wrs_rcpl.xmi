@@ -3404,10 +3404,6 @@
         id="INSERT_SERVICE"
         className="com.joffice.rcpl.addon.office.internal.services.JOInsertService"/>
     <children
-        name="JO Layout Service"
-        id="LAYOUT_SERVICE"
-        className="com.joffice.rcpl.addon.office.internal.services.JOLayoutService"/>
-    <children
         name="JO Paragraph Service"
         id="PARAGRAPH_SERVICE"
         className="com.joffice.rcpl.addon.office.internal.services.JOParagraphService"/>
