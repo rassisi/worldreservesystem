@@ -15,7 +15,7 @@ import org.wrs.rcpl.ui.homepages.AccountHomePage;
 import org.wrs.rcpl.ui.homepages.NetworkHomePage;
 import org.wrs.rcpl.ui.homepages.WrsOverviewHomePage;
 
-import com.joffice.rcpl.addon.office.factories.JOFactory;
+import com.joffice.rcpl.addon.office.internal.impl.factories.JOFactory;
 
 /**
  * @author ramin

@@ -4,7 +4,7 @@ import org.eclipse.rcpl.ITool;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.wrs.rcpl.ui.tools.AccountsOverviewTool;
 
-import com.joffice.rcpl.addon.office.internal.impl.JOToolFactory;
+import com.joffice.rcpl.addon.office.internal.impl.factories.JOToolFactory;
 
 /**
  * @author ramin
