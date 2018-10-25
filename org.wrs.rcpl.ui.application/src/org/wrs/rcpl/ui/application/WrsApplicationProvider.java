@@ -1,6 +1,7 @@
 package org.wrs.rcpl.ui.application;
 
 import org.eclipse.rcpl.IRcplFactory;
+import org.eclipse.rcpl.IServiceFactory;
 import org.eclipse.rcpl.IToolFactory;
 import org.eclipse.rcpl.application.AbstractRcplApplication;
 import org.wrs.rcpl.ui.factories.WrsFactory;
@@ -42,5 +43,10 @@ public class WrsApplicationProvider extends JOApplicationProvider {
 	@Override
 	public Class<?> getApplicationResourceBaseClass() {
 		return WrsImages.class;
+	}
+
+	@Override
+	protected IServiceFactory createServiceFactory() {
+		return super.createServiceFactory();
 	}
 }

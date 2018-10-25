@@ -15,7 +15,7 @@ public class WrsToolFactory extends JOToolFactory {
 	private final static String ACCOUNTS_OVERVIEW = "ACCOUNTS_OVERVIEW";
 
 	@Override
-	public ITool createTool(final Tool eTool) {
+	public ITool createTool(final Tool eTool, Object... data) {
 
 		switch (eTool.getType()) {
 		case OTHER:
