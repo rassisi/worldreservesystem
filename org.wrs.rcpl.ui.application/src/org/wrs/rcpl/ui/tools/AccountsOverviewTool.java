@@ -11,7 +11,7 @@
 
 package org.wrs.rcpl.ui.tools;
 
-import org.eclipse.rcpl.RcplTool;
+import org.eclipse.rcpl.AbstractRcplTool;
 import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
 import org.wrs.model.wrs.Identity;
@@ -27,7 +27,7 @@ import javafx.scene.layout.GridPane;
  * @author ramin
  *
  */
-public class AccountsOverviewTool extends RcplTool {
+public class AccountsOverviewTool extends AbstractRcplTool {
 
 	public AccountsOverviewTool(Tool tool) {
 		super(tool);
