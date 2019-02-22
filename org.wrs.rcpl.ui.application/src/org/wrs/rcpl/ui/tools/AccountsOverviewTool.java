@@ -14,9 +14,11 @@ package org.wrs.rcpl.ui.tools;
 import org.eclipse.rcpl.AbstractRcplTool;
 import org.eclipse.rcpl.model.client.RcplSession;
 import org.eclipse.rcpl.model_2_0_0.rcpl.Tool;
+import org.eclipse.rcpl.ui.listener.RcplEvent;
 import org.wrs.model.wrs.Identity;
 import org.wrs.model.wrs.WRS;
 
+import javafx.beans.value.ChangeListener;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -68,6 +70,30 @@ public class AccountsOverviewTool extends AbstractRcplTool {
 		}
 
 		return myIdentity;
+	}
+
+	@Override
+	protected ChangeListener createChangeListener() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void doRemoveListener(ChangeListener changeListener) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void doAddListener(ChangeListener changeListener) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void doUpdate(RcplEvent event) {
+		// TODO Auto-generated method stub
+
 	}
 
 }
