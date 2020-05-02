@@ -53,7 +53,7 @@ public class WrsNavigatorTreePart extends DefaultNavigatorTreePart implements IT
 		super.adaptDetailPane(eObject);
 		if (detailPane == null) {
 
-			IDetailPage detailPage = Rcpl.UIC.getDetailPage(eObject.getClass().getName());
+			IDetailPage detailPage = Rcpl.UIC().getDetailPage(eObject.getClass().getName());
 
 			if (detailPage == null) {
 

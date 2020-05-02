@@ -46,7 +46,7 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 			node = fxmlLoader.load();
 			stackPane.getChildren().add(node);
 		} catch (IOException e) {
-			Rcpl.printErrorln("", e);
+			Rcpl.get().printErrorln("", e);
 		}
 
 		worldmapView = new RcplWorldMapView();
@@ -60,7 +60,7 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 
 	@Override
 	protected Object task_1(RcplTask task, Object[] parameters) {
-		Ip2LocationFinder locationFinder = new Ip2LocationFinder(Rcpl.UIC.getH2DB());
+		Ip2LocationFinder locationFinder = new Ip2LocationFinder(Rcpl.UIC().getH2DB());
 		try {
 			progress(1, "Collect IP-Adresses", 0, 0);
 			locationFinder.findMyIPAddress();
@@ -77,7 +77,7 @@ public class WrsNodesDetailPage extends AbstractModelDetailPage {
 				}
 			});
 		} catch (SQLException e) {
-			Rcpl.printErrorln("", e);
+			Rcpl.get().printErrorln("", e);
 		}
 		return null;
 	}

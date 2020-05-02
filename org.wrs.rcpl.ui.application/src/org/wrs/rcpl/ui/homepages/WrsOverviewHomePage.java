@@ -50,7 +50,7 @@ public class WrsOverviewHomePage extends AbstractNavigatorHomePage {
 
 	@Override
 	protected ITreePart getTreePart() {
-		return Rcpl.UIC.getApplicationTreepart();
+		return Rcpl.UIC().getApplicationTreepart();
 	}
 
 }
