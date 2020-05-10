@@ -55,6 +55,7 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Asset> getAssets() {
 		return (EList<Asset>) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__ASSETS,
 				WrsPackage.Literals.ABSTRACT_ACCOUNT__ASSETS, true, true);
@@ -66,6 +67,7 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Transaction> getTransaction() {
 		return (EList<Transaction>) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTION,
 				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTION, true, true);
@@ -76,6 +78,7 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transactions getTransactions() {
 		return (Transactions) eDynamicGet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS,
 				WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTIONS, true, true);
@@ -96,6 +99,7 @@ public abstract class AbstractAccountImpl extends LayoutableImpl implements Abst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransactions(Transactions newTransactions) {
 		eDynamicSet(WrsPackage.ABSTRACT_ACCOUNT__TRANSACTIONS, WrsPackage.Literals.ABSTRACT_ACCOUNT__TRANSACTIONS,
 				newTransactions);

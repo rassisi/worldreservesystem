@@ -56,6 +56,7 @@ public abstract class IdentityImpl extends LayoutableImpl implements Identity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUUID() {
 		return (String) eDynamicGet(WrsPackage.IDENTITY__UUID, WrsPackage.Literals.IDENTITY__UUID, true, true);
 	}
@@ -65,6 +66,7 @@ public abstract class IdentityImpl extends LayoutableImpl implements Identity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUUID(String newUUID) {
 		eDynamicSet(WrsPackage.IDENTITY__UUID, WrsPackage.Literals.IDENTITY__UUID, newUUID);
 	}
@@ -74,6 +76,7 @@ public abstract class IdentityImpl extends LayoutableImpl implements Identity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Nodes getAllNodes() {
 		return (Nodes) eDynamicGet(WrsPackage.IDENTITY__ALL_NODES, WrsPackage.Literals.IDENTITY__ALL_NODES, true, true);
 	}
@@ -93,6 +96,7 @@ public abstract class IdentityImpl extends LayoutableImpl implements Identity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllNodes(Nodes newAllNodes) {
 		eDynamicSet(WrsPackage.IDENTITY__ALL_NODES, WrsPackage.Literals.IDENTITY__ALL_NODES, newAllNodes);
 	}

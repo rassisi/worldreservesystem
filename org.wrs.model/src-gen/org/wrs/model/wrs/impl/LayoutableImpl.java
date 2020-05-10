@@ -122,6 +122,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getX() {
 		return (String) eDynamicGet(WrsPackage.LAYOUTABLE__X, WrsPackage.Literals.LAYOUTABLE__X, true, true);
 	}
@@ -131,6 +132,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setX(String newX) {
 		eDynamicSet(WrsPackage.LAYOUTABLE__X, WrsPackage.Literals.LAYOUTABLE__X, newX);
 	}
@@ -140,6 +142,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getY() {
 		return (Double) eDynamicGet(WrsPackage.LAYOUTABLE__Y, WrsPackage.Literals.LAYOUTABLE__Y, true, true);
 	}
@@ -149,6 +152,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setY(double newY) {
 		eDynamicSet(WrsPackage.LAYOUTABLE__Y, WrsPackage.Literals.LAYOUTABLE__Y, newY);
 	}
@@ -158,6 +162,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getW() {
 		return (Double) eDynamicGet(WrsPackage.LAYOUTABLE__W, WrsPackage.Literals.LAYOUTABLE__W, true, true);
 	}
@@ -167,6 +172,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setW(double newW) {
 		eDynamicSet(WrsPackage.LAYOUTABLE__W, WrsPackage.Literals.LAYOUTABLE__W, newW);
 	}
@@ -176,6 +182,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getH() {
 		return (Double) eDynamicGet(WrsPackage.LAYOUTABLE__H, WrsPackage.Literals.LAYOUTABLE__H, true, true);
 	}
@@ -185,6 +192,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setH(double newH) {
 		eDynamicSet(WrsPackage.LAYOUTABLE__H, WrsPackage.Literals.LAYOUTABLE__H, newH);
 	}
@@ -194,6 +202,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String) eDynamicGet(WrsPackage.LAYOUTABLE__NAME, WrsPackage.Literals.LAYOUTABLE__NAME, true, true);
 	}
@@ -203,6 +212,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eDynamicSet(WrsPackage.LAYOUTABLE__NAME, WrsPackage.Literals.LAYOUTABLE__NAME, newName);
 	}
@@ -212,6 +222,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return (String) eDynamicGet(WrsPackage.LAYOUTABLE__ID, WrsPackage.Literals.LAYOUTABLE__ID, true, true);
 	}
@@ -221,6 +232,7 @@ public abstract class LayoutableImpl extends CDOObjectImpl implements Layoutable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		eDynamicSet(WrsPackage.LAYOUTABLE__ID, WrsPackage.Literals.LAYOUTABLE__ID, newId);
 	}

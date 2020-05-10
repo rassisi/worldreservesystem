@@ -45,6 +45,7 @@ public class StatisticsImpl extends LayoutableImpl implements Statistics {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatisticsSource getStatisticssource() {
 		return (StatisticsSource) eDynamicGet(WrsPackage.STATISTICS__STATISTICSSOURCE,
 				WrsPackage.Literals.STATISTICS__STATISTICSSOURCE, true, true);
@@ -65,6 +66,7 @@ public class StatisticsImpl extends LayoutableImpl implements Statistics {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatisticssource(StatisticsSource newStatisticssource) {
 		eDynamicSet(WrsPackage.STATISTICS__STATISTICSSOURCE, WrsPackage.Literals.STATISTICS__STATISTICSSOURCE,
 				newStatisticssource);

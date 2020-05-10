@@ -53,6 +53,7 @@ public class NodesImpl extends LayoutableContainerImpl implements Nodes {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Node> getChildren() {
 		return (EList<Node>) eDynamicGet(WrsPackage.NODES__CHILDREN, WrsPackage.Literals.NODES__CHILDREN, true, true);
 	}

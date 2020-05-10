@@ -11,17 +11,12 @@
 
 package org.wrs.rcpl.ui.application;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.rcpl.IDetailPage;
 import org.eclipse.rcpl.IModelManager;
 import org.eclipse.rcpl.ITreePart;
-import org.eclipse.rcpl.Rcpl;
 import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorContextMenuProvider;
 import org.eclipse.rcpl.navigator.treeparts.DefaultNavigatorTreePart;
 import org.eclipse.rcpl.navigator.treeparts.DefaultTreeContextMenuProvider;
-import org.wrs.model.wrs.Account;
-import org.wrs.rcpl.ui.detailpages.WrsMyAccountDetailPage;
 
 /**
  * @author ramin
@@ -48,20 +43,18 @@ public class WrsNavigatorTreePart extends DefaultNavigatorTreePart implements IT
 		return getApplicationTreeManager();
 	}
 
-	@Override
-	protected void adaptDetailPane(EObject eObject) {
-		super.adaptDetailPane(eObject);
-		if (detailPane == null) {
-
-			IDetailPage detailPage = Rcpl.UIC().getDetailPage(eObject.getClass().getName());
-
-			if (detailPage == null) {
-
-				if (eObject instanceof Account) {
-					this.detailPane = new WrsMyAccountDetailPage();
-				}
-			}
-		}
-	}
+//	@Override
+//	protected boolean adaptDetailPane(EObject eObject) {
+//		boolean adapted = super.adaptDetailPane(eObject);
+//		if (detailPane == null) {
+//			IDetailPage detailPage = Rcpl.UIC().getDetailPage(eObject.getClass().getName());
+//
+//			if (detailPage == null) {
+//				if (eObject instanceof Account) {
+//					this.detailPane = new WrsMyAccountDetailPage();
+//				}
+//			}
+//		}
+//	}
 
 }

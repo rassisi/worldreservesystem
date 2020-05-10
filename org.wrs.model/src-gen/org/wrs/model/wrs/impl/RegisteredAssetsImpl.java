@@ -54,6 +54,7 @@ public class RegisteredAssetsImpl extends LayoutableContainerImpl implements Reg
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Asset> getChildren() {
 		return (EList<Asset>) eDynamicGet(WrsPackage.REGISTERED_ASSETS__CHILDREN,
 				WrsPackage.Literals.REGISTERED_ASSETS__CHILDREN, true, true);

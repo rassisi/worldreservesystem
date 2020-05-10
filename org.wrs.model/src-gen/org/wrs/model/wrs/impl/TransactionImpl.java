@@ -81,6 +81,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asset getAssets() {
 		return (Asset) eDynamicGet(WrsPackage.TRANSACTION__ASSETS, WrsPackage.Literals.TRANSACTION__ASSETS, true, true);
 	}
@@ -100,6 +101,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssets(Asset newAssets) {
 		eDynamicSet(WrsPackage.TRANSACTION__ASSETS, WrsPackage.Literals.TRANSACTION__ASSETS, newAssets);
 	}
@@ -109,6 +111,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getData() {
 		return (String) eDynamicGet(WrsPackage.TRANSACTION__DATA, WrsPackage.Literals.TRANSACTION__DATA, true, true);
 	}
@@ -118,6 +121,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setData(String newData) {
 		eDynamicSet(WrsPackage.TRANSACTION__DATA, WrsPackage.Literals.TRANSACTION__DATA, newData);
 	}
@@ -127,6 +131,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getNanoTime() {
 		return (Double) eDynamicGet(WrsPackage.TRANSACTION__NANO_TIME, WrsPackage.Literals.TRANSACTION__NANO_TIME, true,
 				true);
@@ -137,6 +142,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNanoTime(double newNanoTime) {
 		eDynamicSet(WrsPackage.TRANSACTION__NANO_TIME, WrsPackage.Literals.TRANSACTION__NANO_TIME, newNanoTime);
 	}
@@ -146,6 +152,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getAmount() {
 		return (Double) eDynamicGet(WrsPackage.TRANSACTION__AMOUNT, WrsPackage.Literals.TRANSACTION__AMOUNT, true,
 				true);
@@ -156,6 +163,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmount(double newAmount) {
 		eDynamicSet(WrsPackage.TRANSACTION__AMOUNT, WrsPackage.Literals.TRANSACTION__AMOUNT, newAmount);
 	}
@@ -165,6 +173,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransactionCondition getTransactioncondition() {
 		return (TransactionCondition) eDynamicGet(WrsPackage.TRANSACTION__TRANSACTIONCONDITION,
 				WrsPackage.Literals.TRANSACTION__TRANSACTIONCONDITION, true, true);
@@ -187,6 +196,7 @@ public class TransactionImpl extends AbstractTransactionImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransactioncondition(TransactionCondition newTransactioncondition) {
 		eDynamicSet(WrsPackage.TRANSACTION__TRANSACTIONCONDITION, WrsPackage.Literals.TRANSACTION__TRANSACTIONCONDITION,
 				newTransactioncondition);

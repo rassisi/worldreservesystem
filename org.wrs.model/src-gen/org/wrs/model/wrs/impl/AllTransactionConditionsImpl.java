@@ -50,6 +50,7 @@ public class AllTransactionConditionsImpl extends LayoutableContainerImpl implem
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TransactionCondition> getChildren() {
 		return (EList<TransactionCondition>) eDynamicGet(WrsPackage.ALL_TRANSACTION_CONDITIONS__CHILDREN,
 				WrsPackage.Literals.ALL_TRANSACTION_CONDITIONS__CHILDREN, true, true);

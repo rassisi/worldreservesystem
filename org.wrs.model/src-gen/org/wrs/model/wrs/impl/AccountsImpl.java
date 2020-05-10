@@ -49,6 +49,7 @@ public class AccountsImpl extends LayoutableContainerImpl implements Accounts {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AbstractAccount> getChildren() {
 		return (EList<AbstractAccount>) eDynamicGet(WrsPackage.ACCOUNTS__CHILDREN,
 				WrsPackage.Literals.ACCOUNTS__CHILDREN, true, true);

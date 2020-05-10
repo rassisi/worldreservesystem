@@ -62,6 +62,7 @@ public class AssetImpl extends LayoutableImpl implements Asset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssetType getAssetType() {
 		return (AssetType) eDynamicGet(WrsPackage.ASSET__ASSET_TYPE, WrsPackage.Literals.ASSET__ASSET_TYPE, true, true);
 	}
@@ -71,6 +72,7 @@ public class AssetImpl extends LayoutableImpl implements Asset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssetType(AssetType newAssetType) {
 		eDynamicSet(WrsPackage.ASSET__ASSET_TYPE, WrsPackage.Literals.ASSET__ASSET_TYPE, newAssetType);
 	}
@@ -81,6 +83,7 @@ public class AssetImpl extends LayoutableImpl implements Asset {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Thing> getMaterials() {
 		return (EList<Thing>) eDynamicGet(WrsPackage.ASSET__MATERIALS, WrsPackage.Literals.ASSET__MATERIALS, true,
 				true);
@@ -91,6 +94,7 @@ public class AssetImpl extends LayoutableImpl implements Asset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void register() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

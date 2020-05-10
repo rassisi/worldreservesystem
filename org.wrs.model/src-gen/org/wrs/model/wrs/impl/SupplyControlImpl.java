@@ -51,6 +51,7 @@ public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GenesisAccount getGenesisAccount() {
 		return (GenesisAccount) eDynamicGet(WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT,
 				WrsPackage.Literals.SUPPLY_CONTROL__GENESIS_ACCOUNT, true, true);
@@ -72,6 +73,7 @@ public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGenesisAccount(GenesisAccount newGenesisAccount) {
 		eDynamicSet(WrsPackage.SUPPLY_CONTROL__GENESIS_ACCOUNT, WrsPackage.Literals.SUPPLY_CONTROL__GENESIS_ACCOUNT,
 				newGenesisAccount);
@@ -82,6 +84,7 @@ public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransferVaults getTransferVaults() {
 		return (TransferVaults) eDynamicGet(WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS,
 				WrsPackage.Literals.SUPPLY_CONTROL__TRANSFER_VAULTS, true, true);
@@ -102,6 +105,7 @@ public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransferVaults(TransferVaults newTransferVaults) {
 		eDynamicSet(WrsPackage.SUPPLY_CONTROL__TRANSFER_VAULTS, WrsPackage.Literals.SUPPLY_CONTROL__TRANSFER_VAULTS,
 				newTransferVaults);
@@ -112,6 +116,7 @@ public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Treasury getTreasury() {
 		return (Treasury) eDynamicGet(WrsPackage.SUPPLY_CONTROL__TREASURY, WrsPackage.Literals.SUPPLY_CONTROL__TREASURY,
 				true, true);
@@ -132,6 +137,7 @@ public class SupplyControlImpl extends LayoutableImpl implements SupplyControl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTreasury(Treasury newTreasury) {
 		eDynamicSet(WrsPackage.SUPPLY_CONTROL__TREASURY, WrsPackage.Literals.SUPPLY_CONTROL__TREASURY, newTreasury);
 	}

@@ -49,6 +49,7 @@ public class IdentitiesImpl extends LayoutableContainerImpl implements Identitie
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Identity> getChildren() {
 		return (EList<Identity>) eDynamicGet(WrsPackage.IDENTITIES__CHILDREN, WrsPackage.Literals.IDENTITIES__CHILDREN,
 				true, true);

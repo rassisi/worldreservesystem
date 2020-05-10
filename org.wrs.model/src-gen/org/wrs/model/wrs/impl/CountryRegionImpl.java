@@ -49,6 +49,7 @@ public class CountryRegionImpl extends LayoutableImpl implements CountryRegion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public regionalEconomy getRegionaleconomy() {
 		return (regionalEconomy) eDynamicGet(WrsPackage.COUNTRY_REGION__REGIONALECONOMY,
 				WrsPackage.Literals.COUNTRY_REGION__REGIONALECONOMY, true, true);
@@ -70,6 +71,7 @@ public class CountryRegionImpl extends LayoutableImpl implements CountryRegion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegionaleconomy(regionalEconomy newRegionaleconomy) {
 		eDynamicSet(WrsPackage.COUNTRY_REGION__REGIONALECONOMY, WrsPackage.Literals.COUNTRY_REGION__REGIONALECONOMY,
 				newRegionaleconomy);
@@ -80,6 +82,7 @@ public class CountryRegionImpl extends LayoutableImpl implements CountryRegion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegionIdentities getRegionidentities() {
 		return (RegionIdentities) eDynamicGet(WrsPackage.COUNTRY_REGION__REGIONIDENTITIES,
 				WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES, true, true);
@@ -101,6 +104,7 @@ public class CountryRegionImpl extends LayoutableImpl implements CountryRegion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegionidentities(RegionIdentities newRegionidentities) {
 		eDynamicSet(WrsPackage.COUNTRY_REGION__REGIONIDENTITIES, WrsPackage.Literals.COUNTRY_REGION__REGIONIDENTITIES,
 				newRegionidentities);

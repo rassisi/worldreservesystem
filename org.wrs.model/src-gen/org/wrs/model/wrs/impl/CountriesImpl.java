@@ -52,6 +52,7 @@ public class CountriesImpl extends LayoutableContainerImpl implements Countries 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Country> getChildren() {
 		return (EList<Country>) eDynamicGet(WrsPackage.COUNTRIES__CHILDREN, WrsPackage.Literals.COUNTRIES__CHILDREN,
 				true, true);

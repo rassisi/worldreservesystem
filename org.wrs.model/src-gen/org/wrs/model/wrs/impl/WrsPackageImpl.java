@@ -473,6 +473,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWRS() {
 		return wrsEClass;
 	}
@@ -482,6 +483,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Mainvault() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(0);
 	}
@@ -491,6 +493,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Supplycontrol() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(1);
 	}
@@ -500,6 +503,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_AllAccounts() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(2);
 	}
@@ -509,6 +513,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Registeredasstets() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(3);
 	}
@@ -518,6 +523,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Worldeconomy() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(4);
 	}
@@ -527,6 +533,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Nodes() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(5);
 	}
@@ -536,6 +543,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Alldentities() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(6);
 	}
@@ -545,6 +553,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_AllTransactions() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(7);
 	}
@@ -554,6 +563,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_AllTransactionConditions() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(8);
 	}
@@ -563,6 +573,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_Transfervaults() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(9);
 	}
@@ -572,6 +583,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWRS_GenesisAccount() {
 		return (EReference) wrsEClass.getEStructuralFeatures().get(10);
 	}
@@ -581,6 +593,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getWRS__CreateIdentity() {
 		return wrsEClass.getEOperations().get(0);
 	}
@@ -590,6 +603,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTreasury() {
 		return treasuryEClass;
 	}
@@ -599,6 +613,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransferVault() {
 		return transferVaultEClass;
 	}
@@ -608,6 +623,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGenesisAccount() {
 		return genesisAccountEClass;
 	}
@@ -617,6 +633,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAsset() {
 		return assetEClass;
 	}
@@ -626,6 +643,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAsset_AssetType() {
 		return (EAttribute) assetEClass.getEStructuralFeatures().get(0);
 	}
@@ -635,6 +653,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAsset_Materials() {
 		return (EReference) assetEClass.getEStructuralFeatures().get(1);
 	}
@@ -644,6 +663,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__Register() {
 		return assetEClass.getEOperations().get(0);
 	}
@@ -653,6 +673,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWorldEconomy() {
 		return worldEconomyEClass;
 	}
@@ -662,6 +683,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorldEconomy_Nationaleconomies() {
 		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(0);
 	}
@@ -671,6 +693,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorldEconomy_Statisticssource() {
 		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(1);
 	}
@@ -680,6 +703,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorldEconomy_StatisticDatas() {
 		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(2);
 	}
@@ -689,6 +713,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorldEconomy_Countries() {
 		return (EReference) worldEconomyEClass.getEStructuralFeatures().get(3);
 	}
@@ -698,6 +723,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNationalEconomy() {
 		return nationalEconomyEClass;
 	}
@@ -707,6 +733,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCountry() {
 		return countryEClass;
 	}
@@ -716,6 +743,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCountry_Fiatcurrency() {
 		return (EReference) countryEClass.getEStructuralFeatures().get(0);
 	}
@@ -725,6 +753,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCountry_Nationaleconomy() {
 		return (EReference) countryEClass.getEStructuralFeatures().get(1);
 	}
@@ -734,6 +763,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCountry_Regions() {
 		return (EReference) countryEClass.getEStructuralFeatures().get(2);
 	}
@@ -743,6 +773,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFiatCurrency() {
 		return fiatCurrencyEClass;
 	}
@@ -752,6 +783,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentity() {
 		return identityEClass;
 	}
@@ -761,6 +793,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIdentity_UUID() {
 		return (EAttribute) identityEClass.getEStructuralFeatures().get(0);
 	}
@@ -770,6 +803,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIdentity_AllNodes() {
 		return (EReference) identityEClass.getEStructuralFeatures().get(1);
 	}
@@ -779,6 +813,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThing() {
 		return thingEClass;
 	}
@@ -788,6 +823,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getThing_BelongsTo() {
 		return (EReference) thingEClass.getEStructuralFeatures().get(0);
 	}
@@ -797,6 +833,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getThing_ThingAccounts() {
 		return (EReference) thingEClass.getEStructuralFeatures().get(1);
 	}
@@ -806,6 +843,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIndividual() {
 		return individualEClass;
 	}
@@ -815,6 +853,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIndividual_WorksFor() {
 		return (EReference) individualEClass.getEStructuralFeatures().get(0);
 	}
@@ -824,6 +863,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIndividual_LegalPartnerOf() {
 		return (EReference) individualEClass.getEStructuralFeatures().get(1);
 	}
@@ -833,6 +873,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIndividual_PrivateAccounts() {
 		return (EReference) individualEClass.getEStructuralFeatures().get(2);
 	}
@@ -842,6 +883,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLegalEntity() {
 		return legalEntityEClass;
 	}
@@ -851,6 +893,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLegalEntity_Type() {
 		return (EAttribute) legalEntityEClass.getEStructuralFeatures().get(0);
 	}
@@ -860,6 +903,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLegalEntity_Accounts() {
 		return (EReference) legalEntityEClass.getEStructuralFeatures().get(1);
 	}
@@ -869,6 +913,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLegalEntity_BusinessAccounts() {
 		return (EReference) legalEntityEClass.getEStructuralFeatures().get(2);
 	}
@@ -878,6 +923,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrivateAccount() {
 		return privateAccountEClass;
 	}
@@ -887,6 +933,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSupplyControl() {
 		return supplyControlEClass;
 	}
@@ -896,6 +943,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSupplyControl_GenesisAccount() {
 		return (EReference) supplyControlEClass.getEStructuralFeatures().get(0);
 	}
@@ -905,6 +953,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSupplyControl_TransferVaults() {
 		return (EReference) supplyControlEClass.getEStructuralFeatures().get(1);
 	}
@@ -914,6 +963,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSupplyControl_Treasury() {
 		return (EReference) supplyControlEClass.getEStructuralFeatures().get(2);
 	}
@@ -923,6 +973,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAccounts() {
 		return accountsEClass;
 	}
@@ -932,6 +983,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAccounts_Children() {
 		return (EReference) accountsEClass.getEStructuralFeatures().get(0);
 	}
@@ -941,6 +993,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransaction() {
 		return transactionEClass;
 	}
@@ -950,6 +1003,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransaction_Assets() {
 		return (EReference) transactionEClass.getEStructuralFeatures().get(0);
 	}
@@ -959,6 +1013,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_Data() {
 		return (EAttribute) transactionEClass.getEStructuralFeatures().get(1);
 	}
@@ -968,6 +1023,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_NanoTime() {
 		return (EAttribute) transactionEClass.getEStructuralFeatures().get(2);
 	}
@@ -977,6 +1033,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_Amount() {
 		return (EAttribute) transactionEClass.getEStructuralFeatures().get(3);
 	}
@@ -986,6 +1043,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransaction_Transactioncondition() {
 		return (EReference) transactionEClass.getEStructuralFeatures().get(4);
 	}
@@ -995,6 +1053,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRegisteredAssets() {
 		return registeredAssetsEClass;
 	}
@@ -1004,6 +1063,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRegisteredAssets_Children() {
 		return (EReference) registeredAssetsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1013,6 +1073,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractAccount() {
 		return abstractAccountEClass;
 	}
@@ -1022,6 +1083,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractAccount_Assets() {
 		return (EReference) abstractAccountEClass.getEStructuralFeatures().get(0);
 	}
@@ -1031,6 +1093,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractAccount_Transaction() {
 		return (EReference) abstractAccountEClass.getEStructuralFeatures().get(1);
 	}
@@ -1040,6 +1103,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractAccount_Transactions() {
 		return (EReference) abstractAccountEClass.getEStructuralFeatures().get(2);
 	}
@@ -1049,6 +1113,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransactionCollection() {
 		return transactionCollectionEClass;
 	}
@@ -1058,6 +1123,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransactionCollection_Transactions() {
 		return (EReference) transactionCollectionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1067,6 +1133,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -1076,6 +1143,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNode_Weight() {
 		return (EAttribute) nodeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1085,6 +1153,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNode_Networkengine() {
 		return (EReference) nodeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1094,6 +1163,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNode_NodeAccounts() {
 		return (EReference) nodeEClass.getEStructuralFeatures().get(2);
 	}
@@ -1103,6 +1173,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNetworkEngine() {
 		return networkEngineEClass;
 	}
@@ -1112,6 +1183,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCountries() {
 		return countriesEClass;
 	}
@@ -1121,6 +1193,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCountries_Children() {
 		return (EReference) countriesEClass.getEStructuralFeatures().get(0);
 	}
@@ -1130,6 +1203,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNodes() {
 		return nodesEClass;
 	}
@@ -1139,6 +1213,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNodes_Children() {
 		return (EReference) nodesEClass.getEStructuralFeatures().get(0);
 	}
@@ -1148,6 +1223,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentities() {
 		return identitiesEClass;
 	}
@@ -1157,6 +1233,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIdentities_Children() {
 		return (EReference) identitiesEClass.getEStructuralFeatures().get(0);
 	}
@@ -1166,6 +1243,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAllTransactions() {
 		return allTransactionsEClass;
 	}
@@ -1175,6 +1253,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAllTransactions_Children() {
 		return (EReference) allTransactionsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1184,6 +1263,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransactions() {
 		return transactionsEClass;
 	}
@@ -1193,6 +1273,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransactions_Children() {
 		return (EReference) transactionsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1202,6 +1283,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRegionIdentities() {
 		return regionIdentitiesEClass;
 	}
@@ -1211,6 +1293,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRegionIdentities_Children() {
 		return (EReference) regionIdentitiesEClass.getEStructuralFeatures().get(0);
 	}
@@ -1220,6 +1303,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLayoutableContainer() {
 		return layoutableContainerEClass;
 	}
@@ -1229,6 +1313,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBusinessAccount() {
 		return businessAccountEClass;
 	}
@@ -1238,6 +1323,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThingAccount() {
 		return thingAccountEClass;
 	}
@@ -1247,6 +1333,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractTransaction() {
 		return abstractTransactionEClass;
 	}
@@ -1256,6 +1343,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNodeAccount() {
 		return nodeAccountEClass;
 	}
@@ -1265,6 +1353,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAllTransactionConditions() {
 		return allTransactionConditionsEClass;
 	}
@@ -1274,6 +1363,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAllTransactionConditions_Children() {
 		return (EReference) allTransactionConditionsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1283,6 +1373,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransactionCondition() {
 		return transactionConditionEClass;
 	}
@@ -1292,6 +1383,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransactionCondition_Formula() {
 		return (EAttribute) transactionConditionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1301,6 +1393,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransactionCondition_SignedInputs() {
 		return (EReference) transactionConditionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1310,6 +1403,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSignedInput() {
 		return signedInputEClass;
 	}
@@ -1319,6 +1413,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSignedInput_VariableName() {
 		return (EAttribute) signedInputEClass.getEStructuralFeatures().get(0);
 	}
@@ -1328,6 +1423,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSignedInput_Identity() {
 		return (EReference) signedInputEClass.getEStructuralFeatures().get(1);
 	}
@@ -1337,6 +1433,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSignedInput_Value() {
 		return (EAttribute) signedInputEClass.getEStructuralFeatures().get(2);
 	}
@@ -1346,6 +1443,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSignedInput_Type() {
 		return (EAttribute) signedInputEClass.getEStructuralFeatures().get(3);
 	}
@@ -1355,6 +1453,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatistics() {
 		return statisticsEClass;
 	}
@@ -1364,6 +1463,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStatistics_Statisticssource() {
 		return (EReference) statisticsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1373,6 +1473,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatisticDatas() {
 		return statisticDatasEClass;
 	}
@@ -1382,6 +1483,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStatisticDatas_Children() {
 		return (EReference) statisticDatasEClass.getEStructuralFeatures().get(0);
 	}
@@ -1391,6 +1493,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCountryRegion() {
 		return countryRegionEClass;
 	}
@@ -1400,6 +1503,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCountryRegion_Regionaleconomy() {
 		return (EReference) countryRegionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1409,6 +1513,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCountryRegion_Regionidentities() {
 		return (EReference) countryRegionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1418,6 +1523,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatisticsSource() {
 		return statisticsSourceEClass;
 	}
@@ -1427,6 +1533,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStatisticsSource_WebserviceUrl() {
 		return (EAttribute) statisticsSourceEClass.getEStructuralFeatures().get(0);
 	}
@@ -1436,6 +1543,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getHumanEntity() {
 		return humanEntityEClass;
 	}
@@ -1445,6 +1553,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHumanEntity_Worldeconomy() {
 		return (EReference) humanEntityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1454,6 +1563,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLayoutable() {
 		return layoutableEClass;
 	}
@@ -1463,6 +1573,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLayoutable_X() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(0);
 	}
@@ -1472,6 +1583,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLayoutable_Y() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(1);
 	}
@@ -1481,6 +1593,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLayoutable_W() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(2);
 	}
@@ -1490,6 +1603,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLayoutable_H() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(3);
 	}
@@ -1499,6 +1613,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLayoutable_Name() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(4);
 	}
@@ -1508,6 +1623,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLayoutable_Id() {
 		return (EAttribute) layoutableEClass.getEStructuralFeatures().get(5);
 	}
@@ -1517,6 +1633,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getregionalEconomy() {
 		return regionalEconomyEClass;
 	}
@@ -1526,6 +1643,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransferVaults() {
 		return transferVaultsEClass;
 	}
@@ -1535,6 +1653,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransferVaults_Children() {
 		return (EReference) transferVaultsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1544,6 +1663,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAssetType() {
 		return assetTypeEEnum;
 	}
@@ -1553,6 +1673,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLegalEntityType() {
 		return legalEntityTypeEEnum;
 	}
@@ -1562,6 +1683,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getInputValueType() {
 		return inputValueTypeEEnum;
 	}
@@ -1571,6 +1693,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAccountType() {
 		return accountTypeEEnum;
 	}
@@ -1580,6 +1703,7 @@ public class WrsPackageImpl extends EPackageImpl implements WrsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WrsFactory getWrsFactory() {
 		return (WrsFactory) getEFactoryInstance();
 	}

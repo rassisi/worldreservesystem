@@ -45,7 +45,10 @@ public class WrsOverviewHomePage extends AbstractNavigatorHomePage {
 	@Override
 	protected EObject getRoot() {
 		WRS wrs = (WRS) RcplSession.getDefault().getApplicationRootObject();
-		return wrs.getWorldeconomy();
+		if (wrs != null) {
+			return wrs.getWorldeconomy();
+		}
+		return null;
 	}
 
 	@Override

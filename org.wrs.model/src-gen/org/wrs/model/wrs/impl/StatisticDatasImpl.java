@@ -51,6 +51,7 @@ public class StatisticDatasImpl extends LayoutableContainerImpl implements Stati
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Statistics> getChildren() {
 		return (EList<Statistics>) eDynamicGet(WrsPackage.STATISTIC_DATAS__CHILDREN,
 				WrsPackage.Literals.STATISTIC_DATAS__CHILDREN, true, true);

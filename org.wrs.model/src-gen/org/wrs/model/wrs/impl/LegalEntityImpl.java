@@ -64,6 +64,7 @@ public class LegalEntityImpl extends HumanEntityImpl implements LegalEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LegalEntityType getType() {
 		return (LegalEntityType) eDynamicGet(WrsPackage.LEGAL_ENTITY__TYPE, WrsPackage.Literals.LEGAL_ENTITY__TYPE,
 				true, true);
@@ -74,6 +75,7 @@ public class LegalEntityImpl extends HumanEntityImpl implements LegalEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(LegalEntityType newType) {
 		eDynamicSet(WrsPackage.LEGAL_ENTITY__TYPE, WrsPackage.Literals.LEGAL_ENTITY__TYPE, newType);
 	}
@@ -84,6 +86,7 @@ public class LegalEntityImpl extends HumanEntityImpl implements LegalEntity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AbstractAccount> getAccounts() {
 		return (EList<AbstractAccount>) eDynamicGet(WrsPackage.LEGAL_ENTITY__ACCOUNTS,
 				WrsPackage.Literals.LEGAL_ENTITY__ACCOUNTS, true, true);
@@ -95,6 +98,7 @@ public class LegalEntityImpl extends HumanEntityImpl implements LegalEntity {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<BusinessAccount> getBusinessAccounts() {
 		return (EList<BusinessAccount>) eDynamicGet(WrsPackage.LEGAL_ENTITY__BUSINESS_ACCOUNTS,
 				WrsPackage.Literals.LEGAL_ENTITY__BUSINESS_ACCOUNTS, true, true);

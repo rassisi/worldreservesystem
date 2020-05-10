@@ -52,6 +52,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identity getBelongsTo() {
 		return (Identity) eDynamicGet(WrsPackage.THING__BELONGS_TO, WrsPackage.Literals.THING__BELONGS_TO, true, true);
 	}
@@ -70,6 +71,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBelongsTo(Identity newBelongsTo) {
 		eDynamicSet(WrsPackage.THING__BELONGS_TO, WrsPackage.Literals.THING__BELONGS_TO, newBelongsTo);
 	}
@@ -80,6 +82,7 @@ public class ThingImpl extends IdentityImpl implements Thing {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ThingAccount> getThingAccounts() {
 		return (EList<ThingAccount>) eDynamicGet(WrsPackage.THING__THING_ACCOUNTS,
 				WrsPackage.Literals.THING__THING_ACCOUNTS, true, true);

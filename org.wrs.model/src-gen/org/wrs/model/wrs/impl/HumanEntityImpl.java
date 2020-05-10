@@ -45,6 +45,7 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WorldEconomy getWorldeconomy() {
 		return (WorldEconomy) eDynamicGet(WrsPackage.HUMAN_ENTITY__WORLDECONOMY,
 				WrsPackage.Literals.HUMAN_ENTITY__WORLDECONOMY, true, true);
@@ -65,6 +66,7 @@ public abstract class HumanEntityImpl extends IdentityImpl implements HumanEntit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWorldeconomy(WorldEconomy newWorldeconomy) {
 		eDynamicSet(WrsPackage.HUMAN_ENTITY__WORLDECONOMY, WrsPackage.Literals.HUMAN_ENTITY__WORLDECONOMY,
 				newWorldeconomy);

@@ -63,6 +63,7 @@ public class NodeImpl extends LayoutableImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getWeight() {
 		return (Double) eDynamicGet(WrsPackage.NODE__WEIGHT, WrsPackage.Literals.NODE__WEIGHT, true, true);
 	}
@@ -72,6 +73,7 @@ public class NodeImpl extends LayoutableImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWeight(double newWeight) {
 		eDynamicSet(WrsPackage.NODE__WEIGHT, WrsPackage.Literals.NODE__WEIGHT, newWeight);
 	}
@@ -81,6 +83,7 @@ public class NodeImpl extends LayoutableImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NetworkEngine getNetworkengine() {
 		return (NetworkEngine) eDynamicGet(WrsPackage.NODE__NETWORKENGINE, WrsPackage.Literals.NODE__NETWORKENGINE,
 				true, true);
@@ -101,6 +104,7 @@ public class NodeImpl extends LayoutableImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNetworkengine(NetworkEngine newNetworkengine) {
 		eDynamicSet(WrsPackage.NODE__NETWORKENGINE, WrsPackage.Literals.NODE__NETWORKENGINE, newNetworkengine);
 	}
@@ -111,6 +115,7 @@ public class NodeImpl extends LayoutableImpl implements Node {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<NodeAccount> getNodeAccounts() {
 		return (EList<NodeAccount>) eDynamicGet(WrsPackage.NODE__NODE_ACCOUNTS, WrsPackage.Literals.NODE__NODE_ACCOUNTS,
 				true, true);

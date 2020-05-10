@@ -79,6 +79,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getVariableName() {
 		return (String) eDynamicGet(WrsPackage.SIGNED_INPUT__VARIABLE_NAME,
 				WrsPackage.Literals.SIGNED_INPUT__VARIABLE_NAME, true, true);
@@ -89,6 +90,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariableName(String newVariableName) {
 		eDynamicSet(WrsPackage.SIGNED_INPUT__VARIABLE_NAME, WrsPackage.Literals.SIGNED_INPUT__VARIABLE_NAME,
 				newVariableName);
@@ -99,6 +101,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identity getIdentity() {
 		return (Identity) eDynamicGet(WrsPackage.SIGNED_INPUT__IDENTITY, WrsPackage.Literals.SIGNED_INPUT__IDENTITY,
 				true, true);
@@ -119,6 +122,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentity(Identity newIdentity) {
 		eDynamicSet(WrsPackage.SIGNED_INPUT__IDENTITY, WrsPackage.Literals.SIGNED_INPUT__IDENTITY, newIdentity);
 	}
@@ -128,6 +132,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return (String) eDynamicGet(WrsPackage.SIGNED_INPUT__VALUE, WrsPackage.Literals.SIGNED_INPUT__VALUE, true,
 				true);
@@ -138,6 +143,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		eDynamicSet(WrsPackage.SIGNED_INPUT__VALUE, WrsPackage.Literals.SIGNED_INPUT__VALUE, newValue);
 	}
@@ -147,6 +153,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputValueType getType() {
 		return (InputValueType) eDynamicGet(WrsPackage.SIGNED_INPUT__TYPE, WrsPackage.Literals.SIGNED_INPUT__TYPE, true,
 				true);
@@ -157,6 +164,7 @@ public class SignedInputImpl extends LayoutableImpl implements SignedInput {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(InputValueType newType) {
 		eDynamicSet(WrsPackage.SIGNED_INPUT__TYPE, WrsPackage.Literals.SIGNED_INPUT__TYPE, newType);
 	}

@@ -49,6 +49,7 @@ public class TransactionCollectionImpl extends AbstractTransactionImpl implement
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Transaction> getTransactions() {
 		return (EList<Transaction>) eDynamicGet(WrsPackage.TRANSACTION_COLLECTION__TRANSACTIONS,
 				WrsPackage.Literals.TRANSACTION_COLLECTION__TRANSACTIONS, true, true);

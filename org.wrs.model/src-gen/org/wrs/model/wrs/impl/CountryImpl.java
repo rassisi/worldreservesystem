@@ -56,6 +56,7 @@ public class CountryImpl extends LayoutableImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FiatCurrency getFiatcurrency() {
 		return (FiatCurrency) eDynamicGet(WrsPackage.COUNTRY__FIATCURRENCY, WrsPackage.Literals.COUNTRY__FIATCURRENCY,
 				true, true);
@@ -76,6 +77,7 @@ public class CountryImpl extends LayoutableImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFiatcurrency(FiatCurrency newFiatcurrency) {
 		eDynamicSet(WrsPackage.COUNTRY__FIATCURRENCY, WrsPackage.Literals.COUNTRY__FIATCURRENCY, newFiatcurrency);
 	}
@@ -85,6 +87,7 @@ public class CountryImpl extends LayoutableImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NationalEconomy getNationaleconomy() {
 		return (NationalEconomy) eDynamicGet(WrsPackage.COUNTRY__NATIONALECONOMY,
 				WrsPackage.Literals.COUNTRY__NATIONALECONOMY, true, true);
@@ -105,6 +108,7 @@ public class CountryImpl extends LayoutableImpl implements Country {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNationaleconomy(NationalEconomy newNationaleconomy) {
 		eDynamicSet(WrsPackage.COUNTRY__NATIONALECONOMY, WrsPackage.Literals.COUNTRY__NATIONALECONOMY,
 				newNationaleconomy);
@@ -116,6 +120,7 @@ public class CountryImpl extends LayoutableImpl implements Country {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<CountryRegion> getRegions() {
 		return (EList<CountryRegion>) eDynamicGet(WrsPackage.COUNTRY__REGIONS, WrsPackage.Literals.COUNTRY__REGIONS,
 				true, true);

@@ -56,6 +56,7 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<LegalEntity> getWorksFor() {
 		return (EList<LegalEntity>) eDynamicGet(WrsPackage.INDIVIDUAL__WORKS_FOR,
 				WrsPackage.Literals.INDIVIDUAL__WORKS_FOR, true, true);
@@ -67,6 +68,7 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Individual> getLegalPartnerOf() {
 		return (EList<Individual>) eDynamicGet(WrsPackage.INDIVIDUAL__LEGAL_PARTNER_OF,
 				WrsPackage.Literals.INDIVIDUAL__LEGAL_PARTNER_OF, true, true);
@@ -78,6 +80,7 @@ public class IndividualImpl extends HumanEntityImpl implements Individual {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<PrivateAccount> getPrivateAccounts() {
 		return (EList<PrivateAccount>) eDynamicGet(WrsPackage.INDIVIDUAL__PRIVATE_ACCOUNTS,
 				WrsPackage.Literals.INDIVIDUAL__PRIVATE_ACCOUNTS, true, true);

@@ -54,6 +54,7 @@ public class StatisticsSourceImpl extends LayoutableImpl implements StatisticsSo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getWebserviceUrl() {
 		return (String) eDynamicGet(WrsPackage.STATISTICS_SOURCE__WEBSERVICE_URL,
 				WrsPackage.Literals.STATISTICS_SOURCE__WEBSERVICE_URL, true, true);
@@ -64,6 +65,7 @@ public class StatisticsSourceImpl extends LayoutableImpl implements StatisticsSo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWebserviceUrl(String newWebserviceUrl) {
 		eDynamicSet(WrsPackage.STATISTICS_SOURCE__WEBSERVICE_URL, WrsPackage.Literals.STATISTICS_SOURCE__WEBSERVICE_URL,
 				newWebserviceUrl);

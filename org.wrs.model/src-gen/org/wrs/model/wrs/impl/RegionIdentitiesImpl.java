@@ -56,6 +56,7 @@ public class RegionIdentitiesImpl extends LayoutableContainerImpl implements Reg
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Identity> getChildren() {
 		return (EList<Identity>) eDynamicGet(WrsPackage.REGION_IDENTITIES__CHILDREN,
 				WrsPackage.Literals.REGION_IDENTITIES__CHILDREN, true, true);

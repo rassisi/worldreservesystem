@@ -59,6 +59,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<NationalEconomy> getNationaleconomies() {
 		return (EList<NationalEconomy>) eDynamicGet(WrsPackage.WORLD_ECONOMY__NATIONALECONOMIES,
 				WrsPackage.Literals.WORLD_ECONOMY__NATIONALECONOMIES, true, true);
@@ -69,6 +70,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatisticsSource getStatisticssource() {
 		return (StatisticsSource) eDynamicGet(WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE,
 				WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE, true, true);
@@ -90,6 +92,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatisticssource(StatisticsSource newStatisticssource) {
 		eDynamicSet(WrsPackage.WORLD_ECONOMY__STATISTICSSOURCE, WrsPackage.Literals.WORLD_ECONOMY__STATISTICSSOURCE,
 				newStatisticssource);
@@ -100,6 +103,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatisticDatas getStatisticDatas() {
 		return (StatisticDatas) eDynamicGet(WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS,
 				WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS, true, true);
@@ -120,6 +124,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatisticDatas(StatisticDatas newStatisticDatas) {
 		eDynamicSet(WrsPackage.WORLD_ECONOMY__STATISTIC_DATAS, WrsPackage.Literals.WORLD_ECONOMY__STATISTIC_DATAS,
 				newStatisticDatas);
@@ -130,6 +135,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Countries getCountries() {
 		return (Countries) eDynamicGet(WrsPackage.WORLD_ECONOMY__COUNTRIES,
 				WrsPackage.Literals.WORLD_ECONOMY__COUNTRIES, true, true);
@@ -150,6 +156,7 @@ public class WorldEconomyImpl extends LayoutableImpl implements WorldEconomy {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCountries(Countries newCountries) {
 		eDynamicSet(WrsPackage.WORLD_ECONOMY__COUNTRIES, WrsPackage.Literals.WORLD_ECONOMY__COUNTRIES, newCountries);
 	}

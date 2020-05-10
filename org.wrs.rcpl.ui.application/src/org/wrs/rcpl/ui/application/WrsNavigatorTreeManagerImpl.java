@@ -37,7 +37,7 @@ public class WrsNavigatorTreeManagerImpl extends AbstractModelManagerImpl implem
 
 	@Override
 	public Resource getResource() {
-		return RcplSession.getDefault().getApplicationEmfResource();
+		return RcplSession.getDefault().getRcplResource();
 	}
 
 	@Override

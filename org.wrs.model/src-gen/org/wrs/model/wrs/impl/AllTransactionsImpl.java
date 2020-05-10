@@ -50,6 +50,7 @@ public class AllTransactionsImpl extends LayoutableContainerImpl implements AllT
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AbstractTransaction> getChildren() {
 		return (EList<AbstractTransaction>) eDynamicGet(WrsPackage.ALL_TRANSACTIONS__CHILDREN,
 				WrsPackage.Literals.ALL_TRANSACTIONS__CHILDREN, true, true);

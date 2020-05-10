@@ -55,6 +55,7 @@ public class TransferVaultsImpl extends LayoutableContainerImpl implements Trans
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TransferVault> getChildren() {
 		return (EList<TransferVault>) eDynamicGet(WrsPackage.TRANSFER_VAULTS__CHILDREN,
 				WrsPackage.Literals.TRANSFER_VAULTS__CHILDREN, true, true);

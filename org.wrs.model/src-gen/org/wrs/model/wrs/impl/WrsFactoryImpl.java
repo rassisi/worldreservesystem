@@ -188,6 +188,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WRS createWRS() {
 		WRSImpl wrs = new WRSImpl();
 		return wrs;
@@ -198,6 +199,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Treasury createTreasury() {
 		TreasuryImpl treasury = new TreasuryImpl();
 		return treasury;
@@ -208,6 +210,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransferVault createTransferVault() {
 		TransferVaultImpl transferVault = new TransferVaultImpl();
 		return transferVault;
@@ -218,6 +221,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GenesisAccount createGenesisAccount() {
 		GenesisAccountImpl genesisAccount = new GenesisAccountImpl();
 		return genesisAccount;
@@ -228,6 +232,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asset createAsset() {
 		AssetImpl asset = new AssetImpl();
 		return asset;
@@ -238,6 +243,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WorldEconomy createWorldEconomy() {
 		WorldEconomyImpl worldEconomy = new WorldEconomyImpl();
 		return worldEconomy;
@@ -248,6 +254,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NationalEconomy createNationalEconomy() {
 		NationalEconomyImpl nationalEconomy = new NationalEconomyImpl();
 		return nationalEconomy;
@@ -258,6 +265,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Country createCountry() {
 		CountryImpl country = new CountryImpl();
 		return country;
@@ -268,6 +276,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FiatCurrency createFiatCurrency() {
 		FiatCurrencyImpl fiatCurrency = new FiatCurrencyImpl();
 		return fiatCurrency;
@@ -278,6 +287,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Thing createThing() {
 		ThingImpl thing = new ThingImpl();
 		return thing;
@@ -288,6 +298,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Individual createIndividual() {
 		IndividualImpl individual = new IndividualImpl();
 		return individual;
@@ -298,6 +309,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LegalEntity createLegalEntity() {
 		LegalEntityImpl legalEntity = new LegalEntityImpl();
 		return legalEntity;
@@ -308,6 +320,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrivateAccount createPrivateAccount() {
 		PrivateAccountImpl privateAccount = new PrivateAccountImpl();
 		return privateAccount;
@@ -318,6 +331,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyControl createSupplyControl() {
 		SupplyControlImpl supplyControl = new SupplyControlImpl();
 		return supplyControl;
@@ -328,6 +342,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Accounts createAccounts() {
 		AccountsImpl accounts = new AccountsImpl();
 		return accounts;
@@ -338,6 +353,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transaction createTransaction() {
 		TransactionImpl transaction = new TransactionImpl();
 		return transaction;
@@ -348,6 +364,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegisteredAssets createRegisteredAssets() {
 		RegisteredAssetsImpl registeredAssets = new RegisteredAssetsImpl();
 		return registeredAssets;
@@ -358,6 +375,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransactionCollection createTransactionCollection() {
 		TransactionCollectionImpl transactionCollection = new TransactionCollectionImpl();
 		return transactionCollection;
@@ -368,6 +386,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node createNode() {
 		NodeImpl node = new NodeImpl();
 		return node;
@@ -378,6 +397,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NetworkEngine createNetworkEngine() {
 		NetworkEngineImpl networkEngine = new NetworkEngineImpl();
 		return networkEngine;
@@ -388,6 +408,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Countries createCountries() {
 		CountriesImpl countries = new CountriesImpl();
 		return countries;
@@ -398,6 +419,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Nodes createNodes() {
 		NodesImpl nodes = new NodesImpl();
 		return nodes;
@@ -408,6 +430,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identities createIdentities() {
 		IdentitiesImpl identities = new IdentitiesImpl();
 		return identities;
@@ -418,6 +441,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllTransactions createAllTransactions() {
 		AllTransactionsImpl allTransactions = new AllTransactionsImpl();
 		return allTransactions;
@@ -428,6 +452,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transactions createTransactions() {
 		TransactionsImpl transactions = new TransactionsImpl();
 		return transactions;
@@ -438,6 +463,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegionIdentities createRegionIdentities() {
 		RegionIdentitiesImpl regionIdentities = new RegionIdentitiesImpl();
 		return regionIdentities;
@@ -448,6 +474,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LayoutableContainer createLayoutableContainer() {
 		LayoutableContainerImpl layoutableContainer = new LayoutableContainerImpl();
 		return layoutableContainer;
@@ -458,6 +485,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BusinessAccount createBusinessAccount() {
 		BusinessAccountImpl businessAccount = new BusinessAccountImpl();
 		return businessAccount;
@@ -468,6 +496,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThingAccount createThingAccount() {
 		ThingAccountImpl thingAccount = new ThingAccountImpl();
 		return thingAccount;
@@ -478,6 +507,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTransaction createAbstractTransaction() {
 		AbstractTransactionImpl abstractTransaction = new AbstractTransactionImpl();
 		return abstractTransaction;
@@ -488,6 +518,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NodeAccount createNodeAccount() {
 		NodeAccountImpl nodeAccount = new NodeAccountImpl();
 		return nodeAccount;
@@ -498,6 +529,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllTransactionConditions createAllTransactionConditions() {
 		AllTransactionConditionsImpl allTransactionConditions = new AllTransactionConditionsImpl();
 		return allTransactionConditions;
@@ -508,6 +540,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransactionCondition createTransactionCondition() {
 		TransactionConditionImpl transactionCondition = new TransactionConditionImpl();
 		return transactionCondition;
@@ -518,6 +551,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SignedInput createSignedInput() {
 		SignedInputImpl signedInput = new SignedInputImpl();
 		return signedInput;
@@ -528,6 +562,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statistics createStatistics() {
 		StatisticsImpl statistics = new StatisticsImpl();
 		return statistics;
@@ -538,6 +573,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatisticDatas createStatisticDatas() {
 		StatisticDatasImpl statisticDatas = new StatisticDatasImpl();
 		return statisticDatas;
@@ -548,6 +584,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CountryRegion createCountryRegion() {
 		CountryRegionImpl countryRegion = new CountryRegionImpl();
 		return countryRegion;
@@ -558,6 +595,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatisticsSource createStatisticsSource() {
 		StatisticsSourceImpl statisticsSource = new StatisticsSourceImpl();
 		return statisticsSource;
@@ -568,6 +606,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public regionalEconomy createregionalEconomy() {
 		regionalEconomyImpl regionalEconomy = new regionalEconomyImpl();
 		return regionalEconomy;
@@ -578,6 +617,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransferVaults createTransferVaults() {
 		TransferVaultsImpl transferVaults = new TransferVaultsImpl();
 		return transferVaults;
@@ -676,6 +716,7 @@ public class WrsFactoryImpl extends EFactoryImpl implements WrsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WrsPackage getWrsPackage() {
 		return (WrsPackage) getEPackage();
 	}

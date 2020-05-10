@@ -71,6 +71,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Treasury getMainvault() {
 		return (Treasury) eDynamicGet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, true, true);
 	}
@@ -90,6 +91,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMainvault(Treasury newMainvault) {
 		eDynamicSet(WrsPackage.WRS__MAINVAULT, WrsPackage.Literals.WRS__MAINVAULT, newMainvault);
 	}
@@ -99,6 +101,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyControl getSupplycontrol() {
 		return (SupplyControl) eDynamicGet(WrsPackage.WRS__SUPPLYCONTROL, WrsPackage.Literals.WRS__SUPPLYCONTROL, true,
 				true);
@@ -119,6 +122,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSupplycontrol(SupplyControl newSupplycontrol) {
 		eDynamicSet(WrsPackage.WRS__SUPPLYCONTROL, WrsPackage.Literals.WRS__SUPPLYCONTROL, newSupplycontrol);
 	}
@@ -128,6 +132,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Accounts getAllAccounts() {
 		return (Accounts) eDynamicGet(WrsPackage.WRS__ALL_ACCOUNTS, WrsPackage.Literals.WRS__ALL_ACCOUNTS, true, true);
 	}
@@ -147,6 +152,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllAccounts(Accounts newAllAccounts) {
 		eDynamicSet(WrsPackage.WRS__ALL_ACCOUNTS, WrsPackage.Literals.WRS__ALL_ACCOUNTS, newAllAccounts);
 	}
@@ -156,6 +162,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegisteredAssets getRegisteredasstets() {
 		return (RegisteredAssets) eDynamicGet(WrsPackage.WRS__REGISTEREDASSTETS,
 				WrsPackage.Literals.WRS__REGISTEREDASSTETS, true, true);
@@ -176,6 +183,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegisteredasstets(RegisteredAssets newRegisteredasstets) {
 		eDynamicSet(WrsPackage.WRS__REGISTEREDASSTETS, WrsPackage.Literals.WRS__REGISTEREDASSTETS,
 				newRegisteredasstets);
@@ -186,6 +194,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WorldEconomy getWorldeconomy() {
 		return (WorldEconomy) eDynamicGet(WrsPackage.WRS__WORLDECONOMY, WrsPackage.Literals.WRS__WORLDECONOMY, true,
 				true);
@@ -206,6 +215,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWorldeconomy(WorldEconomy newWorldeconomy) {
 		eDynamicSet(WrsPackage.WRS__WORLDECONOMY, WrsPackage.Literals.WRS__WORLDECONOMY, newWorldeconomy);
 	}
@@ -215,6 +225,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Nodes getNodes() {
 		return (Nodes) eDynamicGet(WrsPackage.WRS__NODES, WrsPackage.Literals.WRS__NODES, true, true);
 	}
@@ -234,6 +245,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNodes(Nodes newNodes) {
 		eDynamicSet(WrsPackage.WRS__NODES, WrsPackage.Literals.WRS__NODES, newNodes);
 	}
@@ -243,6 +255,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identities getAlldentities() {
 		return (Identities) eDynamicGet(WrsPackage.WRS__ALLDENTITIES, WrsPackage.Literals.WRS__ALLDENTITIES, true,
 				true);
@@ -263,6 +276,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlldentities(Identities newAlldentities) {
 		eDynamicSet(WrsPackage.WRS__ALLDENTITIES, WrsPackage.Literals.WRS__ALLDENTITIES, newAlldentities);
 	}
@@ -272,6 +286,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllTransactions getAllTransactions() {
 		return (AllTransactions) eDynamicGet(WrsPackage.WRS__ALL_TRANSACTIONS,
 				WrsPackage.Literals.WRS__ALL_TRANSACTIONS, true, true);
@@ -292,6 +307,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllTransactions(AllTransactions newAllTransactions) {
 		eDynamicSet(WrsPackage.WRS__ALL_TRANSACTIONS, WrsPackage.Literals.WRS__ALL_TRANSACTIONS, newAllTransactions);
 	}
@@ -301,6 +317,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllTransactionConditions getAllTransactionConditions() {
 		return (AllTransactionConditions) eDynamicGet(WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS,
 				WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS, true, true);
@@ -323,6 +340,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllTransactionConditions(AllTransactionConditions newAllTransactionConditions) {
 		eDynamicSet(WrsPackage.WRS__ALL_TRANSACTION_CONDITIONS, WrsPackage.Literals.WRS__ALL_TRANSACTION_CONDITIONS,
 				newAllTransactionConditions);
@@ -333,6 +351,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransferVaults getTransfervaults() {
 		return (TransferVaults) eDynamicGet(WrsPackage.WRS__TRANSFERVAULTS, WrsPackage.Literals.WRS__TRANSFERVAULTS,
 				true, true);
@@ -353,6 +372,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransfervaults(TransferVaults newTransfervaults) {
 		eDynamicSet(WrsPackage.WRS__TRANSFERVAULTS, WrsPackage.Literals.WRS__TRANSFERVAULTS, newTransfervaults);
 	}
@@ -362,6 +382,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GenesisAccount getGenesisAccount() {
 		return (GenesisAccount) eDynamicGet(WrsPackage.WRS__GENESIS_ACCOUNT, WrsPackage.Literals.WRS__GENESIS_ACCOUNT,
 				true, true);
@@ -382,6 +403,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGenesisAccount(GenesisAccount newGenesisAccount) {
 		eDynamicSet(WrsPackage.WRS__GENESIS_ACCOUNT, WrsPackage.Literals.WRS__GENESIS_ACCOUNT, newGenesisAccount);
 	}
@@ -391,6 +413,7 @@ public class WRSImpl extends LayoutableImpl implements WRS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void createIdentity() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

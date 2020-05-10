@@ -63,6 +63,7 @@ public class TransactionConditionImpl extends LayoutableImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFormula() {
 		return (String) eDynamicGet(WrsPackage.TRANSACTION_CONDITION__FORMULA,
 				WrsPackage.Literals.TRANSACTION_CONDITION__FORMULA, true, true);
@@ -73,6 +74,7 @@ public class TransactionConditionImpl extends LayoutableImpl implements Transact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormula(String newFormula) {
 		eDynamicSet(WrsPackage.TRANSACTION_CONDITION__FORMULA, WrsPackage.Literals.TRANSACTION_CONDITION__FORMULA,
 				newFormula);
@@ -84,6 +86,7 @@ public class TransactionConditionImpl extends LayoutableImpl implements Transact
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<SignedInput> getSignedInputs() {
 		return (EList<SignedInput>) eDynamicGet(WrsPackage.TRANSACTION_CONDITION__SIGNED_INPUTS,
 				WrsPackage.Literals.TRANSACTION_CONDITION__SIGNED_INPUTS, true, true);
