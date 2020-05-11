@@ -11,7 +11,6 @@
 
 package org.wrs.rcpl.ui.application;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.rcpl.IModelManager;
 import org.eclipse.rcpl.ITreePart;
@@ -42,21 +41,6 @@ public class WrsNavigatorTreePart extends DefaultNavigatorTreePart implements IT
 	@Override
 	protected IModelManager getTreeManager() {
 		return getApplicationTreeManager();
-	}
-
-	@Override
-	protected boolean adaptDetailPane(EObject eObject) {
-		boolean adapted = super.adaptDetailPane(eObject);
-//		if (detailPane == null) {
-//			IDetailPage detailPage = Rcpl.UIC().getDetailPage(eObject.getClass().getName());
-//			if (detailPage == null) {
-//				if (eObject instanceof Account) {
-//					this.detailPane = new WrsMyAccountDetailPage();
-//					return true;
-//				}
-//			}
-//		}
-		return adapted;
 	}
 
 }
